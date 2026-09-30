@@ -687,7 +687,7 @@ def mail_html(base, preview, icon, title, body, button, link, note="", unsub="",
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0 0"><tr><td bgcolor="#7E6FB8" style="border-radius:999px;background:#7E6FB8;box-shadow:0 10px 24px -8px rgba(126,111,184,.7)">
 <a href="%(link)s" style="display:inline-block;padding:16px 32px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">%(button)s &rarr;</a></td></tr></table>
 %(extra)s%(note)s
-<p style="margin:26px 0 0;font-size:15px;line-height:1.6;color:#586380">Viel Erfolg! 🍀<br><b style="color:#282E3E">Команда EPDeutsch</b></p>
+<p style="margin:26px 0 0;font-size:15px;line-height:1.6;color:#586380"><b style="color:#282E3E">Команда EPDeutsch</b></p>
 <div style="margin:24px 0 0;padding:14px 16px;border:1px dashed #D9DDE8;border-radius:14px;font-size:12.5px;line-height:1.5;color:#8A93AD">Кнопка не нажимается? Скопируй ссылку в браузер:<br><a href="%(link)s" style="color:#6C5CAC;word-break:break-all">%(link)s</a></div>
 </div></td></tr>
 <tr><td style="padding:22px 10px 0;text-align:center;font-size:12.5px;line-height:1.7;color:#8A93AD">
@@ -712,7 +712,7 @@ def reset_email(name, base, link, minutes):
 
 def welcome_email(name, base, link):
     text = ("Привет, %s!\n\nДобро пожаловать в EPDeutsch. Подтверди, пожалуйста, почту, чтобы мы знали, что она твоя:\n\n%s\n\n"
-            "Твой старт: 1) подтверди почту, 2) добавь первую тему на главной, 3) позанимайся 15 минут.\n\nViel Erfolg!\nКоманда EPDeutsch"
+            "Твой старт: 1) подтверди почту, 2) добавь первую тему на главной, 3) позанимайся 15 минут.\n\nКоманда EPDeutsch"
             % (name, link))
     extra = steps_list([("Создать аккаунт", True), ("<b style=\"color:#282E3E\">Подтвердить почту</b>: кнопка выше, это одна секунда", False),
                         ("Добавить первую тему на главной, например «Учёба и наука»", False), ("Позаниматься 15 минут. Дальше мы сами подскажем, что повторить", False)])

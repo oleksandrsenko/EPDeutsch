@@ -914,7 +914,7 @@ dialog.wide{width:min(760px,calc(100vw - 32px))}
 .ld-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:34px 0 20px}
 .ld-hero{position:relative}
 .ld-hero>*{position:relative;z-index:1}
-.ld-hero>.ld-rain{position:absolute;z-index:0;top:-40px;left:calc(50% - 50vw);width:100vw;height:calc(100% + 70px);pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 70%,transparent)}
+.ld-hero>.ld-rain{position:absolute;z-index:0;top:-40px;left:calc(50% - 50vw);width:100vw;height:calc(100% + 40px);pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent,#000 10%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 10%,#000 86%,transparent)}
 #p-land{overflow-x:clip}
 .ld-badge{display:inline-flex;align-items:center;gap:9px;background:var(--primary-soft);color:var(--link);font-weight:800;font-size:13px;padding:7px 14px 7px 12px;border-radius:999px}
 .ld-badge i{width:8px;height:8px;border-radius:50%;background:var(--good);position:relative;flex:none}
@@ -2538,9 +2538,10 @@ function ldPauseOffscreen(el){
   el.querySelectorAll(".ld-art,.ld-uni").forEach(x=>io.observe(x));
 }
 
-// падающие артикли, буквы и фразы за первым экраном лендинга.
-// Три слоя глубины (дальние мельче, бледнее и медленнее), der/die/das — цветными «чипами» рода,
-// над текстом и карточками слова плавно растворяются, курсор мягко расталкивает ближние.
+// падающие артикли, буквы и фразы за первым экраном лендинга (до ленты вузов, дальше не падают).
+// Три слоя глубины (дальние мельче, бледнее и медленнее), der/die/das — цветными «чипами» рода.
+// Слова не пересекаются: новое появляется только на свободном месте, догнавшее — идёт за передним с его скоростью.
+// Над текстом и карточками слова плавно растворяются.
 function ldRain(el){
   const hero=el.querySelector(".ld-hero");if(!hero||hero.querySelector(".ld-rain"))return;
   const c=document.createElement("canvas");c.className="ld-rain";c.setAttribute("aria-hidden","true");hero.prepend(c);
@@ -2548,40 +2549,55 @@ function ldRain(el){
   const ART={der:"--m",die:"--f",das:"--n"},UML=/^[äöüßÄÖÜ]$/;
   const WORDS=["Wörter","Hochschule","Studium","Prüfung","lernen","verstehen","Wortschatz","weil","obwohl","deshalb","trotzdem","B2","C1","Guten Tag!","Viel Erfolg!","Ich schaffe das!","zum Beispiel","Konjunktiv II","Sprache","Deutsch","die Vorlesung","das Referat","der Hörsaal","sprechen","schreiben","lesen","hören","Genau!","Na klar!","Servus!"];
   const PICK=()=>{const r=Math.random();return r<.3?["der","die","das"][Math.random()*3|0]:r<.45?"äöüßÄÖÜ"[Math.random()*7|0]:WORDS[Math.random()*WORDS.length|0]};
-  const font=getComputedStyle(document.body).fontFamily;
-  let W=0,H=0,drops=[],vis=true,col={},zones=[],tick=0,mx=-1e4,my=-1e4;
-  const mk=(y,z=Math.random()**1.4)=>{const t=PICK(); // z: 0 — дальний слой, 1 — ближний
-    return{t,z,x:Math.random()*W,y:y??-40,v:.12+z*.5,s:(t.length>3?10:13)+z*(t.length>3?9:16),a:.1+z*.32,
-      r:(Math.random()-.5)*.3,w:(Math.random()-.5)*.002,ph:Math.random()*6.3,sw:.2+Math.random()*.5,f:1,ox:0,
-      g:Math.random()<.5?"p":Math.random()<.5?"pl":"m"}};
+  const font=getComputedStyle(document.body).fontFamily,GAP=10,SW=6; // GAP — зазор между словами, SW — размах покачивания
+  let W=0,H=0,drops=[],N=0,vis=true,col={},zones=[],tick=0;
+  const fontOf=d=>`${ART[d.t]?800:UML.test(d.t)?700:d.z>.55?700:500} ${d.s}px ${UML.test(d.t)?"Georgia,serif":font}`;
+  // рамка слова с запасом на покачивание и «чип» артикля
+  const box=d=>[d.x-SW-d.s*.5-GAP/2,d.y-d.s*1.15-GAP/2,d.x+d.tw+SW+d.s*.5+GAP/2,d.y+d.s*.45+GAP/2];
+  const hit=(a,b)=>a[0]<b[2]&&a[2]>b[0]&&a[1]<b[3]&&a[3]>b[1];
+  // место свободно, если слово ни с кем не пересекается сейчас и не догонит никого до низа блока
+  const free=d=>{const b=box(d);return !drops.some(o=>{if(!o.on)return false;const q=box(o);if(hit(b,q))return true;
+    if(b[2]<=q[0]||b[0]>=q[2])return false; // разные колонки
+    const [top,bot,vt,vb]=o.y>d.y?[d,o,d.v0,o.v0]:[o,d,o.v0,d.v0];if(vt<=vb)return false; // верхний не быстрее нижнего
+    const tb=top===d?b:q,bb=top===d?q:b;return (bb[1]-tb[3])/(vt-vb)<(H+bot.s*1.2-bot.y)/vb})};
+  const mk=(y,z=Math.random()**1.4)=>{const t=PICK(),d={t,z,y,v0:.12+z*.45,s:(t.length>3?10:13)+z*(t.length>3?9:16),a:.1+z*.32,
+      r:(Math.random()-.5)*(t.length>3?.06:.3),ph:Math.random()*6.3,sw:.2+Math.random()*.5,f:1,g:Math.random()<.5?"p":Math.random()<.5?"pl":"m",on:false};
+    d.v=d.v0;x.font=fontOf(d);d.tw=x.measureText(t).width;return d};
+  // ставим слово на свободное место (несколько попыток), иначе оно подождёт следующего кадра
+  const place=(d,yFn)=>{for(let k=0;k<24;k++){d.x=Math.random()*Math.max(1,W-d.tw);d.y=yFn();if(free(d)){d.on=true;return true}}return false};
   const measure=()=>{const cr=c.getBoundingClientRect();
     zones=[...hero.querySelectorAll(".ld-badge,h1,.ld-lead,.ld-cta,.ld-nums,.ld-fc,.ld-pill")].map(e=>{const r=e.getBoundingClientRect();return[r.left-cr.left-14,r.top-cr.top-10,r.right-cr.left+14,r.bottom-cr.top+10]})};
   const fit=()=>{const d=Math.min(2,devicePixelRatio||1);W=c.offsetWidth;H=c.offsetHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
-    drops=Array.from({length:Math.min(80,Math.round(W*H/16000))},()=>mk(Math.random()*H)).sort((a,b)=>a.z-b.z);measure()};
+    N=Math.min(70,Math.round(W*H/17000));drops=[];
+    for(let i=0;i<N;i++){const d=mk(0);if(place(d,()=>Math.random()*H))drops.push(d)}
+    drops.sort((a,b)=>a.z-b.z);measure()};
   const colors=()=>{col={p:cv("--primary"),pl:cv("--pl"),m:cv("--m"),v:cv("--v"),mu:cv("--muted"),"--m":cv("--m"),"--f":cv("--f"),"--n":cv("--n")}};
-  const inZone=(px,py,w,h)=>zones.some(q=>px+w>q[0]&&px<q[2]&&py>q[1]&&py-h<q[3]);
+  const inZone=b=>zones.some(q=>hit(b,q));
   const rr=(X,Y,w,h,r)=>{x.beginPath();x.moveTo(X+r,Y);x.arcTo(X+w,Y,X+w,Y+h,r);x.arcTo(X+w,Y+h,X,Y+h,r);x.arcTo(X,Y+h,X,Y,r);x.arcTo(X,Y,X+w,Y,r);x.closePath()};
-  const frame=move=>{x.clearRect(0,0,W,H);if(move&&++tick%45===0)measure();const now=performance.now()/1000;
-    for(let i=0;i<drops.length;i++){let d=drops[i];
-      if(move){d.y+=d.v;d.r+=d.w;if(d.y>H+40)d=drops[i]=mk(undefined,d.z); // слой сохраняем, чтобы не сбить порядок отрисовки
-        // курсор расталкивает ближние слова
-        const dx=d.x+d.ox-mx,dy=d.y-my,dist=Math.hypot(dx,dy),push=dist<120&&d.z>.35?(120-dist)/120*38*Math.sign(dx||1):0;d.ox+=(push-d.ox)*.06}
-      const art=ART[d.t],px=d.x+d.ox+Math.sin(now*d.sw+d.ph)*8*(.4+d.z);
-      x.font=`${art?800:UML.test(d.t)?700:d.z>.55?700:500} ${d.s}px ${UML.test(d.t)?"Georgia,serif":font}`;
-      const tw=x.measureText(d.t).width;
-      const tg=inZone(px,d.y,tw,d.s)?0:1;d.f=move?d.f+(tg-d.f)*.07:tg;if(d.f<.02)continue;
-      x.save();x.translate(px,d.y);x.rotate(d.r);x.globalAlpha=d.a*d.f;
-      if(art){const cc=col[art],pw=tw+d.s*.9,ph=d.s*1.5;
-        x.globalAlpha=d.a*d.f*.55;x.fillStyle=cc;rr(-d.s*.45,-d.s*1.08,pw,ph,ph/2);x.globalAlpha=d.a*d.f*.25;x.fill();
-        x.globalAlpha=Math.min(1,d.a*d.f*1.8);x.fillStyle=cc;x.fillText(d.t,0,0)}
-      else if(UML.test(d.t)){x.fillStyle=col.v;x.shadowColor=col.v;x.shadowBlur=d.z*10;x.fillText(d.t,0,0)}
-      else{const gr=x.createLinearGradient(0,0,tw,0);gr.addColorStop(0,col[d.g]);gr.addColorStop(1,d.g==="p"?col.pl:col.p);x.fillStyle=d.z<.3?col.mu:gr;x.fillText(d.t,0,0)}
+  const step=()=>{
+    // догнал переднее слово — идёт за ним с его скоростью, не наезжая
+    for(const d of drops){if(!d.on)continue;const b=box(d);let v=d.v0;
+      for(const o of drops){if(o===d||!o.on||o.y<=d.y)continue;const q=box(o);
+        if(b[0]<q[2]&&b[2]>q[0]&&q[1]-b[3]<d.v0+1)v=Math.min(v,Math.max(0,o.v))}
+      d.v=v}
+    for(let i=0;i<drops.length;i++){const d=drops[i];
+      if(d.on){d.y+=d.v;if(d.y-d.s*1.2>H){const n=mk(-8,d.z);drops[i]=n}} // слой сохраняем, чтобы не сбить порядок отрисовки
+      else place(d,()=>-8-Math.random()*20)}
+    while(drops.length<N){const n=mk(-8);drops.splice(drops.findIndex(o=>o.z>n.z)>>>0,0,n)}};
+  const frame=move=>{x.clearRect(0,0,W,H);if(move){step();if(++tick%45===0)measure()}const now=performance.now()/1000;
+    for(const d of drops){if(!d.on)continue;
+      const px=d.x+Math.sin(now*d.sw+d.ph)*SW,tg=inZone(box(d))?0:1;d.f=move?d.f+(tg-d.f)*.07:tg;if(d.f<.02)continue;
+      const art=ART[d.t];x.font=fontOf(d);
+      x.save();x.translate(px,d.y);x.rotate(d.r);
+      if(art){const cc=col[art],pw=d.tw+d.s*.9,ph=d.s*1.5;
+        x.fillStyle=cc;rr(-d.s*.45,-d.s*1.08,pw,ph,ph/2);x.globalAlpha=d.a*d.f*.25;x.fill();
+        x.globalAlpha=Math.min(1,d.a*d.f*1.8);x.fillText(d.t,0,0)}
+      else if(UML.test(d.t)){x.globalAlpha=d.a*d.f;x.fillStyle=col.v;x.shadowColor=col.v;x.shadowBlur=d.z*10;x.fillText(d.t,0,0)}
+      else{x.globalAlpha=d.a*d.f;const gr=x.createLinearGradient(0,0,d.tw,0);gr.addColorStop(0,col[d.g]);gr.addColorStop(1,d.g==="p"?col.pl:col.p);x.fillStyle=d.z<.3?col.mu:gr;x.fillText(d.t,0,0)}
       x.restore()}};
   colors();fit();frame(false);
   const ro=new ResizeObserver(()=>{fit();frame(false)});ro.observe(c);
   const mo=new MutationObserver(()=>{colors();frame(false)});mo.observe(document.documentElement,{attributes:true,attributeFilter:["data-theme","data-accent"]});
-  const pm=e=>{const r=c.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top};
-  hero.addEventListener("pointermove",pm,{passive:true});hero.addEventListener("pointerleave",()=>{mx=my=-1e4});
   if("IntersectionObserver" in window)new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(c);
   (function loop(){if(!c.isConnected){ro.disconnect();mo.disconnect();return}if(!reduced()&&vis&&!document.hidden)frame(true);requestAnimationFrame(loop)})();
 }

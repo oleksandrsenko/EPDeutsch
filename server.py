@@ -430,6 +430,13 @@ def init_db():
         c.execute("""CREATE TRIGGER IF NOT EXISTS owner_keep_role BEFORE UPDATE OF role ON users
                      WHEN OLD.role='owner' AND NEW.role<>'owner' AND (SELECT COUNT(*) FROM users WHERE role='owner' AND id<>OLD.id)=0
                      BEGIN SELECT RAISE(ABORT, 'last owner'); END""")
+        scols = {r[1] for r in c.execute("PRAGMA table_info(stats)")}
+        if "studied" not in scols:
+            c.execute("ALTER TABLE stats ADD COLUMN answers INTEGER NOT NULL DEFAULT 0")
+            c.execute("ALTER TABLE stats ADD COLUMN studied INTEGER NOT NULL DEFAULT 0")
+            for r in c.execute("SELECT user_id,data,updated FROM progress").fetchall():
+                c.execute("UPDATE stats SET answers=?, studied=? WHERE user_id=?",
+                          (progress_summary(json.loads(r["data"]))["answers"], r["updated"], r["user_id"]))
         if "what" not in {r[1] for r in c.execute("PRAGMA table_info(presence)")}:
             c.execute("ALTER TABLE presence ADD COLUMN what TEXT")
         # посещения храним 13 месяцев, «онлайн» — сутки
@@ -820,7 +827,7 @@ def send_welcome(c, uid, name, email, base):
 
 
 def reminder_loop():
-    """Раз в час: тем, кто не занимался 3–30 дней, одно напоминание за каждый такой перерыв.
+    """Раз в час: тем, кто не отвечал на карточки 3–30 дней (stats.studied), одно напоминание за каждый такой перерыв.
     Только при настроенном SMTP и SITE_URL; в каждом письме ссылка «Отписаться»."""
     time.sleep(60)
     while True:
@@ -828,13 +835,13 @@ def reminder_loop():
             if smtp_conf() and SITE_URL:
                 now = int(time.time())
                 with db() as c:
-                    rows = c.execute("""SELECT u.id,u.name,u.email,s.updated,s.streak FROM users u JOIN stats s ON s.user_id=u.id
-                                        WHERE u.news=1 AND u.verified=1 AND s.updated BETWEEN ? AND ?
-                                        AND (u.last_nudge IS NULL OR u.last_nudge<s.updated) LIMIT 50""",
+                    rows = c.execute("""SELECT u.id,u.name,u.email,s.studied,s.streak FROM users u JOIN stats s ON s.user_id=u.id
+                                        WHERE u.news=1 AND u.verified=1 AND s.studied BETWEEN ? AND ?
+                                        AND (u.last_nudge IS NULL OR u.last_nudge<s.studied) LIMIT 50""",
                                      (now - 30 * 86400, now - 3 * 86400)).fetchall()
                     for r in rows:
                         un = unsub_link(SITE_URL, r["id"])
-                        text, html = nudge_email(r["name"], SITE_URL, (now - r["updated"]) // 86400, r["streak"] or 0, un, pick_word(c, r["id"]))
+                        text, html = nudge_email(r["name"], SITE_URL, (now - r["studied"]) // 86400, r["streak"] or 0, un, pick_word(c, r["id"]))
                         send_mail(r["email"], "EPDeutsch: слова скучают по тебе", text, html, unsub=un)
                         c.execute("UPDATE users SET last_nudge=? WHERE id=?", (now, r["id"]))
         except Exception as e:  # noqa: BLE001
@@ -1256,6 +1263,14 @@ class Handler(BaseHTTPRequestHandler):
             c.execute("INSERT INTO progress(user_id,data,updated) VALUES(?,?,?) "
                       "ON CONFLICT(user_id) DO UPDATE SET data=excluded.data, updated=excluded.updated",
                       (u["id"], json.dumps(data, ensure_ascii=False), now))
+            # «последний раз занимался» двигаем, только когда стало больше ответов на карточки (а не при смене темы или настроек)
+            ans = progress_summary(data)["answers"]
+            old = c.execute("SELECT answers FROM stats WHERE user_id=?", (u["id"],)).fetchone()
+            if old is None or ans > old["answers"]:
+                c.execute("INSERT INTO stats(user_id,answers,studied) VALUES(?,?,?) ON CONFLICT(user_id) DO UPDATE SET answers=excluded.answers, studied=excluded.studied",
+                          (u["id"], ans, now if ans else 0))
+            elif ans < old["answers"]:  # прогресс сбросили или загрузили старый: запоминаем новое число, дату не трогаем
+                c.execute("UPDATE stats SET answers=? WHERE user_id=?", (ans, u["id"]))
             st = d.get("stats") or {}
             c.execute("""INSERT INTO stats(user_id,xp,week_xp,streak,learned,acc,today,level,updated) VALUES(?,?,?,?,?,?,?,?,?)
                          ON CONFLICT(user_id) DO UPDATE SET xp=excluded.xp,week_xp=excluded.week_xp,streak=excluded.streak,

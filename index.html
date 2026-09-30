@@ -348,6 +348,10 @@ body.at-home #dueBtn{display:none}
 .lnk-del:hover{color:var(--bad);background:var(--bad-soft)}
 .sugg{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
 .sg .btn{flex:none}
+.btn.soft{background:var(--primary-soft);border-color:transparent;color:var(--link)}
+.btn.soft:hover{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.more-btn{display:flex;align-items:center;gap:6px;margin:14px auto 0;border:0;background:none;padding:8px 16px;border-radius:99px;font:inherit;font-size:14.5px;font-weight:700;color:var(--link);cursor:pointer;transition:background .15s}
+.more-btn:hover{background:var(--primary-soft)}
 .chip.tog svg{transition:transform .25s}.chip.tog[aria-expanded="false"] svg{transform:rotate(-90deg)}
 .sg{display:flex;align-items:center;gap:14px;background:var(--panel);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh);border:2px dashed var(--line);animation:cardIn .3s}
 .sg-ic{width:44px;height:44px;border-radius:14px;background:var(--primary-soft);color:var(--link);display:flex;align-items:center;justify-content:center;flex:none}
@@ -584,6 +588,7 @@ mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:5px;font-s
 .ac .ae{font-size:38px;line-height:1;display:block;margin-bottom:8px}
 .ac b{display:block;font-size:14px;font-weight:800}
 .ac small{display:block;font-size:12px;color:var(--muted);font-weight:600;line-height:1.35;margin-top:2px}
+.ach-more{grid-column:1/-1;margin-top:2px}
 .ac.lock{opacity:.5}.ac.lock .ae{filter:grayscale(1)}
 .voice{background:var(--panel);border-radius:var(--r);padding:16px;box-shadow:var(--sh)}
 .voice select{flex:1;min-width:0;max-width:100%}
@@ -647,7 +652,7 @@ input.e-name{font-size:18px}
 .owner{display:inline-flex;align-items:center;gap:4px;margin-left:8px;padding:2px 9px 2px 7px;border-radius:999px;background:linear-gradient(135deg,#FFD66B,#F2A93B);color:#4A3200;font-size:11.5px;font-weight:800;letter-spacing:.03em;vertical-align:middle;white-space:nowrap}
 #acctBtn{position:relative}
 .own-dot{position:absolute;right:-3px;bottom:-3px;width:18px;height:18px;border-radius:50%;background:#F2B73B;color:#4A3200;display:flex;align-items:center;justify-content:center;border:2px solid var(--panel)}
-.lv-me{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line2);font-size:14px;min-width:0}
+.lv-me{display:none!important;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line2);font-size:14px;min-width:0}
 .lv-me b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .lv-me .owner{margin-left:auto}
 .acc-h{font-weight:700;margin:16px 0 8px}
@@ -715,7 +720,13 @@ div.plbl{flex-direction:row;align-items:center;flex-wrap:wrap}
 /* ---------- тренер ---------- */
 .coach{background:var(--panel);border-radius:var(--r);box-shadow:var(--sh);padding:16px 18px}
 .co-v{font-weight:800;font-size:15.5px;margin-bottom:10px}
-.co-v.up{color:var(--good)}.co-v.down{color:var(--bad)}.co-v.mid{color:var(--mid)}
+.co-v.up{color:var(--good)}.co-v.down,.co-v.mid{color:var(--link)}
+.danger-z{margin-top:40px}.danger-z>summary{cursor:pointer;width:max-content;font-size:14px;font-weight:600;color:var(--muted);padding:6px 0;list-style:none}.danger-z>summary::-webkit-details-marker{display:none}.danger-z>summary:hover{color:var(--bad)}.danger-z .acard{margin-top:10px;animation:cardIn .25s}
+.acc-link{display:flex;align-items:center;gap:14px;margin-top:24px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.acc-link:hover{transform:translateY(-2px)}
+.acc-link>svg:first-child{color:var(--link);flex:none}
+.acc-link span{flex:1;min-width:0}.acc-link b{display:block}.acc-link small{color:var(--muted);font-weight:600;font-size:13.5px}
+.acc-link>svg:last-child{transform:rotate(-90deg);color:var(--muted);flex:none}
 .co-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .co-l li{display:flex;align-items:center;gap:12px;background:var(--bg);border-radius:14px;padding:10px 12px}
 .co-n{width:28px;height:28px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:13.5px;display:flex;align-items:center;justify-content:center;flex:none}
@@ -891,6 +902,7 @@ body.guest .tright{margin-left:auto}
   body:not(.guest):not(.focus) .toasts{bottom:calc(76px + env(safe-area-inset-bottom))}
   .rc-open{padding:14px 8px 14px 14px;gap:12px}.ric{width:46px;height:46px;border-radius:14px}
   .sugg{grid-template-columns:1fr}
+  .rep-g{grid-template-columns:1fr 1fr}.rep-g b{font-size:19px}
   .sg{flex-wrap:wrap}.sg .btn{margin-left:auto}
   .grid{grid-template-columns:1fr 1fr;gap:10px}.setcard{min-height:140px;padding:14px 14px 12px}.sc-t{font-size:15px}
   dialog{padding:20px;max-height:calc(100dvh - 32px)}
@@ -1517,8 +1529,7 @@ body.focus .app-foot{display:none}
       <textarea id="impTxt" placeholder='{"v":1, …}' style="font-family:ui-monospace,monospace;font-size:12px"></textarea>
       <div class="row" style="margin-top:8px"><button class="btn" id="impBtn">Загрузить прогресс</button><span class="muted" id="impMsg"></span></div>
       </details>
-      <h2>Сброс</h2>
-      <p><button class="btn danger" id="resetBtn">Удалить весь прогресс</button></p>
+      <details class="danger-z"><summary>Начать с нуля</summary><div class="acard"><p class="muted" style="margin-top:0">Весь прогресс, серия и достижения обнулятся. Свои наборы и папки останутся.</p><button class="btn danger" id="resetBtn">Удалить весь прогресс</button></div></details>
     </section>
     <footer class="app-foot ld-foot" id="appFoot"></footer>
   </main>
@@ -1860,7 +1871,7 @@ function renderHome(){
   ph.classList.toggle("still",!homeAnim);if(homeAnim)homeIntro(ph);homeAnim=false;
   if(justOpenF){const fr=$("#fr-"+justOpenF);if(fr)fr.classList.add("justopen");justOpenF=null}
 }
-let homeAnim=true,justOpenF=null;
+let homeAnim=true,justOpenF=null,sugAll=false;
 // «подтверди почту»: показываем, только когда письма реально отправляются
 function verifyBanner(){return ME&&!ME.verified&&MAIL?'<div class="vbanner">'+ic("mail",20)+'<span><b>Подтверди почту</b><small>Мы отправили письмо на '+esc(ME.email)+'. Нажми на кнопку в нём, так ты сможешь вернуть доступ, если забудешь пароль.</small></span><button class="btn sm" data-verresend>Отправить ещё раз</button></div>':""}
 document.addEventListener("click",e=>{if(e.target.closest("[data-verresend]"))api("POST","/verify/resend").then(()=>toast("✉️ Письмо отправлено","Проверь «Входящие» и «Спам»"),er=>toast("⚠️ "+er.message))});
@@ -1906,8 +1917,10 @@ function homeFolders(empty){
   if(sg.length){
     const sh=!empty&&!!S.sugHide;
     h+='<h2 class="h-sec">'+ic("spark")+"Предложения от сайта<small>"+sg.length+" "+plural(sg.length,"папка","папки","папок")+'</small>'+(empty?"":'<span class="h-act"><button class="chip tog" data-sugtog aria-expanded="'+!sh+'">'+ic("chev",16)+(sh?"Показать":"Скрыть")+"</button></span>")+'</h2>'+
-      (sh?"":'<div class="sugg">')+(sh?"":sg.map(x=>{const n=x.secs.reduce((a,id)=>a+cntSec(SECS[id])[1],0);
-        return'<div class="sg"><span class="sg-ic">'+ic("folder",22)+'</span><span class="sg-t"><b>'+esc(x.name)+"</b><small>"+esc(x.desc)+"</small><small>"+x.secs.length+" "+plural(x.secs.length,"набор","набора","наборов")+" · "+terms(n)+'</small></span><button class="btn sm primary" data-sugadd="'+x.key+'">'+ic("plus",16)+"Добавить</button></div>"}).join("")+"</div>");
+      // по умолчанию четыре предложения: длинная стена одинаковых кнопок пугает больше, чем помогает
+      (sh?"":'<div class="sugg">')+(sh?"":sg.slice(0,empty||sugAll?sg.length:4).map(x=>{const n=x.secs.reduce((a,id)=>a+cntSec(SECS[id])[1],0);
+        return'<div class="sg"><span class="sg-ic">'+ic("folder",22)+'</span><span class="sg-t"><b>'+esc(x.name)+"</b>"+(/^Глава из книги/.test(x.desc)?"":"<small>"+esc(x.desc)+"</small>")+"<small>"+x.secs.length+" "+plural(x.secs.length,"набор","набора","наборов")+" · "+terms(n)+'</small></span><button class="btn sm'+(empty?" primary":" soft")+'" data-sugadd="'+x.key+'">'+ic("plus",16)+"Добавить</button></div>"}).join("")+"</div>"+
+        (!empty&&!sugAll&&sg.length>4?'<button class="more-btn" data-sugmore>Показать ещё '+(sg.length-4)+ic("chev",16)+"</button>":""));
   }
   return h;
 }
@@ -2478,7 +2491,7 @@ function edSave(){
 // ---------- план ----------
 function renderPlan(){
   const opt=BOOK.map(s=>'<option value="'+s.id+'">'+esc(secName(s))+"</option>").join("");
-  $("#p-plan").innerHTML=planTop()+'<details class="guide"'+(S.plan?"":" open")+'><summary>'+ic("chev",18)+'Как устроен тренажёр, советы и ловушки разделов</summary><h2>Как устроен тренажёр</h2><p>Каждое слово лежит в «коробке» от 0 до 5. <b>«Знаю»</b> (кнопка, клавиша → или свайп вправо) переносит его на коробку выше. <b>«Не знаю»</b> (←, свайп влево) возвращает новое слово в ноль, а выученное на коробку 1; карточка вернётся через 3 позиции. Слово считается выученным с коробки 3. Круг заканчивается, когда по каждой карточке нажато «Знаю».</p>'+
+  $("#p-plan").innerHTML=planTop()+'<details class="guide"><summary>'+ic("chev",18)+'Как устроен тренажёр, советы и ловушки разделов</summary><h2>Как устроен тренажёр</h2><p>Каждое слово лежит в «коробке» от 0 до 5. <b>«Знаю»</b> (кнопка, клавиша → или свайп вправо) переносит его на коробку выше. <b>«Не знаю»</b> (←, свайп влево) возвращает новое слово в ноль, а выученное на коробку 1; карточка вернётся через 3 позиции. Слово считается выученным с коробки 3. Круг заканчивается, когда по каждой карточке нажато «Знаю».</p>'+
   '<p><b>Интервальное повторение.</b> После «Знаю» карточка получает дату следующего показа: коробка 1 через 1 день, 2 через 3 дня, 3 через 7, 4 через 14, 5 через 30. Синяя кнопка «Повторить» вверху собирает из всех разделов карточки, у которых подошёл срок. <b>Начинай каждое занятие с неё.</b></p>'+
   '<p><b>Умный режим</b> запоминает, в каких режимах ты отвечаешь лучше. Новые слова он подаёт так, как тебе легче, а знакомые так, где ты слабее. После ошибки даёт то же слово в режиме полегче. За раз получается урок из 20 самых нужных карточек.</p>'+
   '<p><b>Игра.</b> За «Знаю» с первого раза 10 XP, после ошибки 5 XP. 5 правильных подряд дают ×1,5, 10 подряд ×2. Выполнил цель дня, и день идёт в серию 🔥.</p>'+
@@ -2557,15 +2570,18 @@ function planTop(){
   }
   const st=planStatus(),sc=st.sc;
   let h='<div class="plan-hero"><div><h1>Мой план</h1><p class="muted" style="margin:0">'+(ME?ic("cloud",16).replace("<svg",'<svg style="display:inline;vertical-align:-3px;margin-right:4px"')+"Сохраняется в аккаунте и одинаковый на всех устройствах":"Хранится в этом браузере. Войди в аккаунт, чтобы план был на всех устройствах")+'</p></div><button class="btn sm" id="planEdit">'+ic("pencil",16)+"Изменить план</button></div>"+
-    '<div class="acard">'+planSummary()+"</div>";
+    '<div class="acard">'+planSummary()+"</div>"+'<h2>Сегодня по шагам</h2>'+coachHTML();
   if(sc.days.length){
-    h+='<h2>Ближайшие занятия</h2><div class="prows">'+sc.days.slice(0,14).map((d,i)=>'<button class="prow'+(d.t===today()?" now":"")+'" data-plantask="'+i+'"><span class="pd">'+(d.t===today()?"Сегодня":esc(fmtDay(d.t)))+'</span><span class="pt">'+esc(planTask(d.task))+'</span><span class="pk '+d.task.kind+'">'+(d.task.kind==="review"?"повторение":"новое")+"</span></button>").join("")+"</div>"+
-      (sc.days.length>14?'<p class="muted">…и ещё '+(sc.days.length-14)+" "+plural(sc.days.length-14,"занятие","занятия","занятий")+" до "+esc(fmtDay(sc.finish))+".</p>":"");
+    h+='<h2>Ближайшие занятия</h2><div class="prows">'+sc.days.slice(0,planAll?14:5).map((d,i)=>'<button class="prow'+(d.t===today()?" now":"")+'" data-plantask="'+i+'"><span class="pd">'+(d.t===today()?"Сегодня":esc(fmtDay(d.t)))+'</span><span class="pt">'+esc(planTask(d.task))+'</span><span class="pk '+d.task.kind+'">'+(d.task.kind==="review"?"повторение":"новое")+"</span></button>").join("")+"</div>"+
+      (!planAll&&sc.days.length>5?'<button class="more-btn" data-planall>Показать ещё '+(Math.min(sc.days.length,14)-5)+ic("chev",16)+"</button>":"")+
+      (planAll&&sc.days.length>14?'<p class="muted">…и ещё '+(sc.days.length-14)+" "+plural(sc.days.length-14,"занятие","занятия","занятий")+" до "+esc(fmtDay(sc.finish))+".</p>":"");
   }
   return h;
 }
+let planAll=false;
 function bindPlan(){
   const el=$("#p-plan");
+  const pa=el.querySelector("[data-planall]");if(pa)pa.onclick=()=>{planAll=true;renderPlan()};
   if($("#planEdit"))$("#planEdit").onclick=()=>{planEditing=true;renderPlan();window.scrollTo(0,0)};
   if(!$("#plSave"))return;
   el.querySelectorAll("[data-wd]").forEach(b=>b.onclick=()=>b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true"));
@@ -2587,11 +2603,9 @@ function bindPlan(){
 
 // ---------- тренер: что сделать сегодня и хватит ли этого ----------
 function coachData(){
-  const t=today(),d=dayRec(t),mins=Math.round((d.ms||0)/60000),mg=S.minGoal||30,due=CARDS.filter(c=>isDue(c.id)).length,P=S.plan,sc=P?planSchedule():null,items=[];
+  const t=today(),d=dayRec(t),mins=Math.round((d.ms||0)/60000),mg=S.minGoal||30,due=CARDS.filter(c=>isDue(c.id)).length,items=[];
   items.push({ok:!due,t:due?"Повтори карточки, у которых подошёл срок. Осталось "+due:"Повторение по сроку сделано",b:due?'<button class="btn sm primary" data-due>Повторить</button>':""});
-  if(!P)items.push({ok:false,t:"Составь личный план, и я каждый день буду подсказывать, что именно учить",b:'<button class="btn sm" data-tab="plan">Составить план</button>'});
-  else if(sc&&sc.days.length){const off=!P.days.includes(wday(t));
-    items.push(off?{ok:true,t:"По плану сегодня выходной, можно просто повторить"}:{ok:sc.todayDone,t:sc.todayDone?"Задание по плану выполнено":"Задание по плану: "+planTask(sc.days[0].task),b:sc.todayDone?"":'<button class="btn sm primary" data-plantask="0">Начать</button>'})}
+  // задание по плану уже стоит карточкой прямо над тренером, здесь его не повторяем
   items.push({ok:goalN(d)>=S.goal,t:"Цель дня: "+Math.min(goalN(d),S.goal)+" из "+S.goal+" разных карточек"+(goalN(d)<S.goal?", осталось "+(S.goal-goalN(d)):"")});
   items.push({ok:mins>=mg,t:"Время: "+mins+" из "+mg+" мин"+(mins<mg?", нужно ещё примерно "+(mg-mins)+" мин":"")});
   const w=modeProfile().sort((a,b)=>a.acc-b.acc)[0];
@@ -2599,10 +2613,10 @@ function coachData(){
   const miss=(d.miss||[]).filter(id=>BYID[id]&&box(id)===0);
   if(miss.length)items.push({ok:false,t:"Сегодня ошибся в "+miss.length+" "+plural(miss.length,"слове","словах","словах")+". Пройди их ещё раз",b:'<button class="btn sm" data-todaymiss>Повторить ошибки</button>'});
   const main=items.slice(0,4).every(x=>x.ok);let v;
-  if(!d.a)v=["eq","Сегодня ты ещё не занимался. Сделай пункты ниже по порядку, на всё нужно около "+mg+" мин."];
-  else if(main&&mins>=mg)v=["up","Отлично, норма на сегодня выполнена! Можно закончить или добить слабое место."];
-  else if(mins<mg*.5||d.a<S.goal*.5)v=["down","Мало поработал сегодня: "+mins+" мин и "+d.a+" "+plural(d.a,"карточка","карточки","карточек")+". Нужно ещё примерно "+Math.max(mg-mins,5)+" мин. Вот что осталось:"];
-  else v=["mid","Хороший темп: "+mins+" мин. Осталось ещё примерно "+Math.max(mg-mins,0)+" мин и несделанные пункты:"];
+  if(!d.a)v=["eq","Начнём? Пройди шаги по порядку, на всё около "+mg+" мин."];
+  else if(main&&mins>=mg)v=["up","Отлично, на сегодня всё сделано! Можно отдохнуть или добить слабое место."];
+  else if(mins<mg*.5||d.a<S.goal*.5)v=["eq","Хорошее начало"+(mins?": "+mins+" мин":"")+"! Ещё примерно "+Math.max(mg-mins,5)+" мин, и день закрыт:"];
+  else v=["mid","Хороший темп: "+mins+" мин. Осталось совсем немного:"];
   return{v,items,mins,mg};
 }
 function coachHTML(){
@@ -2626,8 +2640,13 @@ function renderProg(){
   const p=modeProfile();
   $("#profile").innerHTML=(p.length?p.sort((a,b)=>b.acc-a.acc).map(x=>'<div class="pr"><span>'+MN[x.k]+'</span><span class="bar"><i style="width:'+Math.round(x.acc*100)+'%"></i></span><span>'+Math.round(x.acc*100)+"% · "+x.n+"</span></div>").join(""):'<p class="muted" style="margin:0">Пока мало данных: ответь хотя бы на 5 карточек в двух режимах.</p>')+'<p class="muted" style="margin:12px 0 0">'+esc(recommendText())+"</p>";
   const got=ACH.filter(a=>S.ach[a[0]]).length;$("#achN").textContent=got+" из "+ACH.length;
-  $("#ach").innerHTML=ACH.map(a=>'<div class="ac'+(S.ach[a[0]]?"":" lock")+'"><span class="ae">'+a[1]+"</span><b>"+a[2]+"</b><small>"+a[3]+"</small></div>").join("");
+  // полученные награды и три ближайшие цели; остальные серые плитки — по кнопке
+  const lockN=ACH.length-got,shown=achAll?ACH:ACH.filter(a=>S.ach[a[0]]).concat(ACH.filter(a=>!S.ach[a[0]]).slice(0,3));
+  $("#ach").innerHTML=shown.map(a=>'<div class="ac'+(S.ach[a[0]]?"":" lock")+'"><span class="ae">'+a[1]+"</span><b>"+a[2]+"</b><small>"+a[3]+"</small></div>").join("")+
+    (!achAll&&lockN>3?'<button class="more-btn ach-more" data-achall>Показать все '+ACH.length+ic("chev",16)+"</button>":"");
 }
+let achAll=false;
+$("#ach").addEventListener("click",e=>{if(e.target.closest("[data-achall]")){achAll=true;renderProg()}});
 $("#goalSel").onclick=e=>{const b=e.target.closest("[data-goal]");if(!b)return;S.goal=+b.dataset.goal;save();renderProg();renderTotals()};
 function renderVoice(){
   const cur=pickVoice(),sorted=VOICES.slice().sort((a,b)=>vScore(b)-vScore(a));
@@ -2778,14 +2797,13 @@ function renderAcct(){
   el.innerHTML='<h1>Аккаунт</h1><div class="acard"><div class="prof-card">'+uava(ME,72)+'<div class="pc-t"><b>'+esc(ME.name)+ownerTag(ME)+"</b><small>"+esc(ME.email)+'</small><small>Код друга: <b class="fcode">'+esc(ME.code)+'</b></small></div><div class="pc-act">'+(isAdmin()?'<button class="btn sm primary" data-tab="admin">'+ic("shield",16)+"Админ-панель</button>":"")+'<button class="btn sm" id="syncBtn" title="Сохранить прогресс в аккаунт сейчас">'+ic("refresh",16)+'Синхронизировать</button><button class="btn sm" id="logoutBtn">'+ic("logout",16)+"Выйти</button></div></div>"+
     '<p class="pc-sync '+(syncErr?"aerr":"muted")+'">'+ic("cloud",16)+"<span>"+(syncErr?"Не удалось сохранить: "+esc(syncErr):syncAt?"Прогресс сохранён в аккаунте · "+new Date(syncAt*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):"Прогресс сохраняется в аккаунт сам, через пару секунд после каждого ответа.")+"</span></p>"+
     '<div class="pc-edit"><label class="aform" style="max-width:420px">Имя<input type="text" id="pName" maxlength="40" value="'+esc(ME.name)+'"></label><p class="acc-h">Цвет аватара</p><div class="avs">'+AV.map((c,i)=>'<button class="avc'+(+ME.avatar===i?" on":"")+'" data-av="'+i+'" style="background:'+c+'" aria-label="Цвет '+(i+1)+'"></button>').join("")+'</div><p class="acc-h">Цвет оформления</p><div class="accs">'+ACCENTS.map(a=>'<button class="accb" data-acc="'+a[0]+'" aria-pressed="'+((S.accent||"violet")===a[0])+'"><i style="background:'+a[2]+'"></i>'+a[1]+"</button>").join("")+'</div><label class="acheck pc-news"><input type="checkbox" id="pNews"'+(ME.news?" checked":"")+'><span>Присылать мне напоминания, новости платформы и советы по подготовке к EPD</span></label><button class="btn primary" id="pSave">Сохранить профиль</button></div></div>'+
-    '<h2>Тренер на сегодня</h2>'+coachHTML()+
-    '<h2>Мой план</h2><div class="acard">'+planSummary()+(S.plan?'<button class="btn sm" data-tab="plan" style="margin-top:12px">'+ic("calendar",16)+"Открыть план</button>":"")+'</div>';
+    '<a href="#" class="acard acc-link" data-tab="plan">'+ic("calendar",20)+"<span><b>"+(S.plan?"Мой план":"Составить личный план")+"</b><small>"+(S.plan?"Что учить сегодня и до экзамена":"Укажи дату экзамена, и расписание построится само")+"</small></span>"+ic("chev",18)+"</a>";
   let av=+ME.avatar;
   el.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{av=+b.dataset.av;el.querySelectorAll("[data-av]").forEach(x=>x.classList.toggle("on",x===b))});
   el.querySelectorAll("[data-acc]").forEach(b=>b.onclick=()=>{S.accent=b.dataset.acc==="violet"?"":b.dataset.acc;save();applyTheme();el.querySelectorAll("[data-acc]").forEach(x=>x.setAttribute("aria-pressed",x===b))});
   $("#pSave").onclick=async()=>{try{const j=await api("PATCH","/profile",{name:$("#pName").value.trim(),avatar:av,news:$("#pNews").checked});ME=j.user;renderAcctBtn();renderAcct();toast("✅ Профиль сохранён")}catch(e){toast("⚠️ "+e.message)}};
   $("#syncBtn").onclick=async()=>{await pushProgress();toast(syncErr?"⚠️ "+syncErr:"☁️ Прогресс синхронизирован")};
-  el.insertAdjacentHTML("beforeend",'<h2>Удаление аккаунта</h2><div class="acard"><p style="margin-top:0" class="muted">Аккаунт и все данные (прогресс, статистика, свои наборы, друзья и общие ссылки) будут удалены навсегда. Отменить это нельзя.</p><button class="btn danger" id="delAcct">'+ic("trash",16)+"Удалить аккаунт</button></div>");
+  el.insertAdjacentHTML("beforeend",'<details class="danger-z"><summary>Удалить аккаунт</summary><div class="acard"><p style="margin-top:0" class="muted">Аккаунт и все данные (прогресс, статистика, свои наборы, друзья и общие ссылки) будут удалены навсегда. Отменить это нельзя.</p><button class="btn danger" id="delAcct">'+ic("trash",16)+"Удалить аккаунт</button></div></details>");
   const delDlg=err=>ask("Удалить аккаунт?",'<p style="margin-top:0">Будут удалены <b>навсегда</b>: аккаунт '+esc(ME.email)+', прогресс, XP и серия, свои наборы и папки, друзья и общие ссылки. Восстановить их будет нельзя.</p><label class="aform" style="max-width:none">Введи пароль для подтверждения<input type="password" id="delPw" autocomplete="current-password"></label><p class="aerr" role="alert">'+esc(err||"")+"</p>",async()=>{
       const pw=$("#delPw").value;if(!pw)return delDlg("Введи пароль");
       try{await api("DELETE","/account",{password:pw});clearTimeout(syncTimer);ME=null;lsSet("epd_authed",null);lsSet("epd_last",null);friendsCache=null;applying=true;applyState({v:1});applying=false;save();renderAcctBtn();go("land");toast("Аккаунт удалён","Все твои данные удалены с сервера")}
@@ -3485,6 +3503,7 @@ document.addEventListener("click",e=>{
     S.openF=openList().filter(y=>y!==id);save();renderAll();return}
   if(e.target.closest("[data-coachtog]")){S.coachHide=!S.coachHide;save();renderHome();return}
   if(e.target.closest("[data-sugshow]")){S.sugHide=false;const el=$(".sugg");if(el)el.scrollIntoView({behavior:reduced()?"auto":"smooth",block:"start"});return}
+  if(e.target.closest("[data-sugmore]")){sugAll=true;homeAnim=false;renderHome();return}
   if(e.target.closest("[data-sugtog]")){S.sugHide=!S.sugHide;save();renderHome();return}
   const sa=e.target.closest("[data-sugadd]");if(sa){const k=sa.dataset.sugadd,cur0=SUGG.find(x=>x[0]===k);let nid=k;
     if(cur0){const f={id:newId("f"),name:cur0[1],secs:cur0[3].filter(id=>SECS[id]),sug:k};S.folders=(S.folders||[]).concat(f);nid=f.id}

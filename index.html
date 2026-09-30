@@ -428,8 +428,24 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .front{font-size:clamp(24px,4.4vw,34px);font-weight:700;line-height:1.3;max-width:680px;overflow-wrap:anywhere}
 .front.cloze{font-size:clamp(18px,3.2vw,23px);font-weight:500;text-align:left;line-height:1.55}
 .gap{display:inline-block;min-width:4.5em;border-bottom:3px solid var(--primary);margin:0 2px}
-.gapin{font:inherit;font-weight:700;color:var(--link);background:var(--primary-soft);border:0;border-bottom:3px solid var(--primary);border-radius:8px 8px 2px 2px;padding:0 8px;margin:0 2px;min-width:3.5em;max-width:100%;text-align:center;outline:none;transition:background .15s}
-.gapin:focus,.gapin:focus-visible{background:var(--panel2);outline:none;box-shadow:none}
+/* пропуск «по буквам»: видно сколько слов и букв, буквы встают в клетки по мере набора */
+.gbox{position:relative;display:inline-block;max-width:100%;vertical-align:-.35em;margin:0 3px;border-radius:10px;cursor:text}
+.gapin{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px;border:0;padding:0;margin:0;cursor:text;color:transparent;background:none;caret-color:transparent}
+.gslots{display:inline;line-height:1.95}
+.gw{display:inline-flex;flex-wrap:wrap;gap:3px;max-width:100%;vertical-align:bottom}
+.gw:not(:last-child){margin-right:.5em}
+.gs{display:inline-flex;align-items:center;justify-content:center;width:.95em;height:1.4em;font-weight:800;font-size:.95em;color:var(--link);background:var(--panel2);border-radius:7px;box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--primary) 22%,transparent);transition:background .2s,box-shadow .2s}
+.gs.f{background:var(--primary-soft);box-shadow:inset 0 -2.5px 0 var(--primary)}
+.gs.ex{background:none;box-shadow:inset 0 0 0 1.5px var(--line);color:var(--muted)}
+.gcar{width:2px;align-self:stretch;margin:3px 0 3px 1px;border-radius:2px;background:transparent}
+.gbox:focus-within .gcar{background:var(--primary);animation:gcBlink 1s steps(1) infinite}
+@keyframes gcBlink{50%{opacity:0}}
+.gbox:focus-within .gs.cur{background:var(--panel);box-shadow:inset 0 0 0 2px var(--primary);animation:gsBlink 1.1s ease-in-out infinite}
+.gs.new{animation:gsIn .25s cubic-bezier(.3,1.6,.5,1)}
+@keyframes gsIn{0%{transform:translateY(5px) scale(.7)}100%{transform:none}}
+@keyframes gsBlink{50%{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--primary) 25%,transparent)}}
+.gapres.ok{animation:pop .35s cubic-bezier(.3,1.6,.5,1)}
+@media (prefers-reduced-motion:reduce){.gs.new,.gapres.ok{animation:none}.gbox:focus-within .gs.cur,.gbox:focus-within .gcar{animation:none}}
 .gapres{font-weight:800;border-radius:8px;padding:0 6px;margin:0 2px}
 .gapres.ok{background:var(--good-soft);color:var(--good)}
 .gapres.no{background:var(--bad-soft);color:var(--bad);text-decoration:line-through;text-decoration-thickness:2px}
@@ -2018,7 +2034,7 @@ function draw(){
     const html=c.ex.split(/(\[\[.+?\]\])/).map(part=>{
       if(!/^\[\[.+\]\]$/.test(part))return esc(part);
       const i=gi++,a=clz.ans[i],v=clz.vals[i]||"";
-      if(!flipped)return '<input class="gapin" data-gi="'+i+'" value="'+esc(v)+'" size="'+Math.max(a.length+1,4)+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Пропуск '+(i+1)+'">';
+      if(!flipped)return '<span class="gbox"><span class="gslots" aria-hidden="true">'+gapSlots(a,v,-1)+'</span><input class="gapin" data-gi="'+i+'" value="'+esc(v)+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Пропуск '+(i+1)+': '+gapCnt(a)+'"></span>';
       const ok=clz.res&&clz.res[i];
       return ok?'<span class="gapres ok">'+esc(v.trim())+"</span>":(v.trim()?'<span class="gapres no">'+esc(v.trim())+"</span>":"")+'<span class="gapfix">'+esc(a)+"</span>";
     }).join("");
@@ -2074,7 +2090,10 @@ function draw(){
   if(m==="cloze"&&!flipped){
     const ins=[...st.querySelectorAll(".gapin")];
     ins.forEach((el,i)=>{
-      el.oninput=()=>{clz.vals[i]=el.value;el.size=Math.max(el.value.length+1,clz.ans[i].length+1,4)};
+      const sl=el.parentNode.querySelector(".gslots");let prev=el.value.length;
+      const paint=nw=>{sl.innerHTML=gapSlots(clz.ans[i],el.value,el.selectionStart,nw)};
+      el.oninput=()=>{clz.vals[i]=el.value;const L=el.value.length;paint(L>prev&&el.selectionStart===L?L-1:-1);prev=L};
+      el.onfocus=el.onkeyup=el.onclick=el.onselect=()=>setTimeout(()=>paint(-1));el.onblur=()=>paint(-1);
       el.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();if(i<ins.length-1&&!ins[i+1].value)ins[i+1].focus();else clozeCheck()}};
     });
     $("#clozeCheck").onclick=()=>clozeCheck(false);$("#clozeGive").onclick=()=>clozeCheck(true);
@@ -2175,9 +2194,18 @@ function clzAlts(c,gap,gi){
   [...alts].forEach(a=>{if(/(in|innen)$/.test(a)&&!/(in|innen)$/.test(g)&&alts.has(a.replace(/(in|innen)$/,"")))alts.delete(a)});
   return alts;
 }
+// клетки пропуска: по плитке на букву ответа, набранные слова раскладываются по словам ответа; лишние буквы — пунктирные плитки
+function gapSlots(a,v,cur,nw){const A=a.split(" "),V=(v||"").split(" "),n=Math.max(A.length,V.length);let h="",pos=0;
+  for(let j=0;j<n;j++){const aw=A[j]||"",typed=j<V.length,vw=typed?V[j]:"";h+='<span class="gw">';
+    for(let k=0;k<Math.max(aw.length,vw.length);k++){const t=vw[k]||"",i=pos+k;
+      h+='<span class="gs'+(t?" f":"")+(k>=aw.length?" ex":"")+(typed&&i===cur&&k<aw.length?" cur":"")+(typed&&i===nw?" new":"")+'">'+esc(t)+"</span>"}
+    if(typed&&cur===pos+vw.length&&vw.length>=aw.length)h+='<span class="gcar"></span>';
+    h+="</span>";if(typed)pos+=vw.length+1}
+  return h}
+const gapCnt=a=>{const w=a.split(" ");return w.length>1?w.length+" "+plural(w.length,"слово","слова","слов"):a.length+" "+plural(a.length,"буква","буквы","букв")};
 function clozeCheck(give){give=give===true;
   if(!cur||cur.m!=="cloze"||flipped||!clz)return;
-  if(!give&&clz.ans.some((a,i)=>!(clz.vals[i]||"").trim())){const e=[...document.querySelectorAll(".gapin")].find(x=>!x.value.trim());if(e){e.focus();e.animate([{transform:"translateX(0)"},{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}],{duration:260})}return}
+  if(!give&&clz.ans.some((a,i)=>!(clz.vals[i]||"").trim())){const e=[...document.querySelectorAll(".gapin")].find(x=>!x.value.trim());if(e){e.focus();e.parentNode.animate([{transform:"translateX(0)"},{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}],{duration:260})}return}
   clz.syn=[];
   clz.res=clz.ans.map((a,i)=>{if(give)return false;const v=clzNorm(clz.vals[i]||"");if(v===clzNorm(a))return true;if(clzAlts(cur.c,a,i).has(v)){clz.syn[i]=true;return true}return false});
   cur.ok=clz.res.every(Boolean);flipped=true;anim="flip";draw();

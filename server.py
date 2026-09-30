@@ -262,7 +262,7 @@ def admin_overview(c, n):
     # онлайн: был сигнал за последние 2,5 минуты
     pres = c.execute("SELECT * FROM presence WHERE ts>?", (now - 150,)).fetchall()
     names = {u["id"]: u["name"] for u in users}
-    online = [{"uid": r["uid"], "name": names.get(r["uid"]), "tab": r["tab"], "device": r["device"],
+    online = [{"uid": r["uid"], "name": names.get(r["uid"]), "tab": r["tab"], "what": r["what"] or "", "device": r["device"],
                "country": country(r["tz"]), "ago": now - r["ts"]} for r in pres]
     # посещаемость по дням
     hits = c.execute("SELECT day,vkey,uid,path,ref,device,os,browser,tz FROM hits WHERE day>=?", (since,)).fetchall()
@@ -343,7 +343,7 @@ def admin_users(c):
     st = {r["user_id"]: r for r in c.execute("SELECT * FROM stats")}
     owners = owner_emails()
     out = []
-    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang FROM users ORDER BY created DESC"):
+    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until FROM users ORDER BY created DESC"):
         s_ = prog.get(u["id"]) or progress_summary({})
         t = st.get(u["id"])
         out.append({
@@ -354,7 +354,7 @@ def admin_users(c):
             "learned": s_["learned"], "started": s_["started"], "answers": s_["answers"], "acc": s_["acc"],
             "active_days": s_["active_days"], "tour": s_["tour"], "exam": s_["exam"],
             "cur": bw["sec"].get(s_["cur"], "Свой набор" if str(s_["cur"]).startswith("u:") else s_["cur"]),
-            "usets": s_["usets"],
+            "usets": s_["usets"], "news": bool(u["news"]), "plan": u["plan"] or "free", "plan_until": u["plan_until"] or 0,
         })
     return out
 
@@ -400,9 +400,13 @@ def init_db():
         c.execute("DELETE FROM sessions WHERE expires<?", (int(time.time()),))
         c.execute("DELETE FROM resets WHERE expires<?", (int(time.time()),))
         cols = {r[1] for r in c.execute("PRAGMA table_info(users)")}
-        for col, typ in (("last_seen", "INTEGER"), ("tz", "TEXT"), ("device", "TEXT"), ("lang", "TEXT")):
+        # news — согласие на рассылку (0/1, по умолчанию нет); plan/plan_until — тариф на будущее (free / premium до даты)
+        for col, typ in (("last_seen", "INTEGER"), ("tz", "TEXT"), ("device", "TEXT"), ("lang", "TEXT"),
+                         ("news", "INTEGER NOT NULL DEFAULT 0"), ("plan", "TEXT NOT NULL DEFAULT 'free'"), ("plan_until", "INTEGER")):
             if col not in cols:
                 c.execute("ALTER TABLE users ADD COLUMN %s %s" % (col, typ))
+        if "what" not in {r[1] for r in c.execute("PRAGMA table_info(presence)")}:
+            c.execute("ALTER TABLE presence ADD COLUMN what TEXT")
         # посещения храним 13 месяцев, «онлайн» — сутки
         c.execute("DELETE FROM hits WHERE ts<?", (int(time.time()) - 400 * 86400,))
         c.execute("DELETE FROM presence WHERE ts<?", (int(time.time()) - 86400,))
@@ -536,8 +540,6 @@ def pw_problem(pw):
         return "Слишком длинный пароль"
     if not any(ch.isupper() for ch in pw):
         return "Добавь в пароль хотя бы одну заглавную букву"
-    if not any(not ch.isalnum() and not ch.isspace() for ch in pw):
-        return "Добавь в пароль хотя бы один знак, например ! ? # или %"
     return None
 
 
@@ -553,7 +555,39 @@ def smtp_conf():
     return conf if conf.get("host") else None
 
 
-def send_mail(to, subject, text):
+def reset_email(name, link, minutes):
+    """Письмо для сброса пароля: HTML (таблицы и стили в строке, так его понимают почтовые программы) + обычный текст."""
+    esc = lambda s: str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    text = ("Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\n"
+            "Чтобы придумать новый, открой ссылку:\n\n%s\n\n"
+            "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, "
+            "пароль останется прежним.\n\nEPDeutsch" % (name, link, minutes))
+    html = """<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><title>Новый пароль</title></head>
+<body style="margin:0;padding:0;background:#F6F7FB;font-family:Manrope,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#282E3E">
+<div style="display:none;max-height:0;overflow:hidden">Ссылка, чтобы придумать новый пароль. Работает %(min)d минут.</div>
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:#F6F7FB"><tr><td align="center" style="padding:32px 14px">
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="max-width:520px">
+<tr><td style="padding:0 6px 18px"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="background:#7E6FB8;border-radius:10px;width:34px;height:34px;text-align:center;font-weight:800;font-size:19px;color:#fff">D</td>
+<td style="padding-left:10px;font-size:21px;font-weight:800;letter-spacing:-.02em">EP<span style="color:#6C5CAC">Deutsch</span></td></tr></table></td></tr>
+<tr><td style="background:#ffffff;border-radius:22px;box-shadow:0 8px 30px rgba(40,46,62,.08);overflow:hidden">
+<div style="height:6px;background:#7E6FB8;background:linear-gradient(90deg,#7E6FB8,#8B5CF6)"></div>
+<div style="padding:34px 32px 30px">
+<div style="width:52px;height:52px;border-radius:16px;background:#EFEBFA;text-align:center;line-height:52px;font-size:26px">🔑</div>
+<h1 style="margin:18px 0 10px;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.01em">Придумай новый пароль</h1>
+<p style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#586380">Привет, %(name)s! Кто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch. Нажми на кнопку, и откроется страница, где можно задать новый.</p>
+<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:999px;background:#7E6FB8">
+<a href="%(link)s" style="display:inline-block;padding:15px 30px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">Задать новый пароль</a></td></tr></table>
+<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380">Ссылка работает <b style="color:#282E3E">%(min)d минут</b> и только один раз. Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.</p>
+<div style="margin:24px 0 0;padding:14px 16px;background:#F6F7FB;border-radius:14px;font-size:12.5px;line-height:1.5;color:#586380">Кнопка не нажимается? Скопируй ссылку в браузер:<br><a href="%(link)s" style="color:#6C5CAC;word-break:break-all">%(link)s</a></div>
+</div></td></tr>
+<tr><td style="padding:20px 10px 0;text-align:center;font-size:12px;line-height:1.6;color:#8A93AD">Это письмо пришло, потому что на EPDeutsch есть аккаунт с этой почтой.<br>© EPDeutsch · подготовка к Ergänzungsprüfung Deutsch</td></tr>
+</table></td></tr></table></body></html>""" % {"name": esc(name), "link": esc(link), "min": minutes}
+    return text, html
+
+
+def send_mail(to, subject, text, html=None):
     """Отправляет письмо в фоне. Без настроенного SMTP печатает его в консоль сервера."""
     conf = smtp_conf()
     if not conf:
@@ -566,6 +600,8 @@ def send_mail(to, subject, text):
             msg["Subject"], msg["To"] = subject, to
             msg["From"] = conf.get("from") or conf.get("user")
             msg.set_content(text)
+            if html:
+                msg.add_alternative(html, subtype="html")
             port = int(conf.get("port") or 587)
             if port == 465:
                 srv = smtplib.SMTP_SSL(conf["host"], port, context=ssl.create_default_context(), timeout=20)
@@ -579,6 +615,22 @@ def send_mail(to, subject, text):
         except Exception as e:  # noqa: BLE001
             sys.stderr.write("Письмо для %s не отправлено: %r\n" % (to, e))
     threading.Thread(target=run, daemon=True).start()
+
+
+def delete_user(c, uid):
+    """Удаляет аккаунт и всё, что с ним связано: прогресс, статистику, друзей, общие наборы, сессии, ссылки сброса."""
+    for sql in ("DELETE FROM sessions WHERE user_id=?", "DELETE FROM resets WHERE user_id=?", "DELETE FROM progress WHERE user_id=?",
+                "DELETE FROM stats WHERE user_id=?", "DELETE FROM friends WHERE user_id=? OR friend_id=?",
+                "DELETE FROM shares WHERE owner_id=?", "UPDATE presence SET uid=NULL, what='' WHERE uid=?", "DELETE FROM users WHERE id=?"):
+        c.execute(sql, (uid,) * sql.count("?"))
+
+
+def send_reset(c, uid, name, email, base):
+    tok = secrets.token_urlsafe(32)
+    c.execute("DELETE FROM resets WHERE user_id=?", (uid,))
+    c.execute("INSERT INTO resets(token,user_id,expires) VALUES(?,?,?)", (sha(tok), uid, int(time.time()) + RESET_MINUTES * 60))
+    text, html = reset_email(name, "%s/#reset=%s" % (base, tok), RESET_MINUTES)
+    send_mail(email, "EPDeutsch: новый пароль", text, html)
 
 
 def sha(tok):
@@ -653,7 +705,7 @@ def s_str(v, n):
 
 def user_json(u):
     return {"id": u["id"], "name": u["name"], "email": u["email"], "avatar": u["avatar"], "code": u["code"],
-            "owner": u["email"].lower() in owner_emails()}
+            "owner": u["email"].lower() in owner_emails(), "news": bool(u["news"]), "plan": u["plan"] or "free"}
 
 
 def friend_rows(c, uid):
@@ -860,8 +912,9 @@ class Handler(BaseHTTPRequestHandler):
                 raise ApiError(400, "Чтобы создать аккаунт, прими условия использования")
             if c.execute("SELECT 1 FROM users WHERE email=?", (email,)).fetchone():
                 raise ApiError(409, "Аккаунт с этой почтой уже есть, просто войди")
-            cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created) VALUES(?,?,?,?,?,?)",
-                            (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now))
+            cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created,news) VALUES(?,?,?,?,?,?,?)",
+                            (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now,
+                             1 if d.get("news") is True else 0))
             uid = cur.lastrowid
             c.execute("INSERT INTO stats(user_id,updated) VALUES(?,?)", (uid, now))
             cookie = self.start_session(c, uid)
@@ -898,14 +951,7 @@ class Handler(BaseHTTPRequestHandler):
             base = self.site_url()
             host = urlparse(base).hostname or ""
             if u and (SITE_URL or host in ("localhost", "127.0.0.1", "::1")):
-                tok = secrets.token_urlsafe(32)
-                c.execute("DELETE FROM resets WHERE user_id=?", (u["id"],))
-                c.execute("INSERT INTO resets(token,user_id,expires) VALUES(?,?,?)", (sha(tok), u["id"], now + RESET_MINUTES * 60))
-                send_mail(email, "EPDeutsch: новый пароль",
-                          "Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\n"
-                          "Чтобы придумать новый, открой ссылку:\n\n%s/#reset=%s\n\n"
-                          "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, "
-                          "пароль останется прежним.\n\nEPDeutsch" % (u["name"], base, tok, RESET_MINUTES))
+                send_reset(c, u["id"], u["name"], email, base)
             elif u:
                 sys.stderr.write("Сброс пароля для %s не отправлен: задай SITE_URL, чтобы ссылка в письме вела на твой сайт\n" % email)
             return self.send_json(200, {"ok": True})
@@ -959,7 +1005,8 @@ class Handler(BaseHTTPRequestHandler):
             d = self.read_json()
             name = s_str(d.get("name"), 40) or u["name"]
             avatar = s_int(d.get("avatar", u["avatar"]), 0, 7)
-            c.execute("UPDATE users SET name=?, avatar=? WHERE id=?", (name, avatar, u["id"]))
+            news = (1 if d["news"] is True else 0) if "news" in d else u["news"]
+            c.execute("UPDATE users SET name=?, avatar=?, news=? WHERE id=?", (name, avatar, news, u["id"]))
             u = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
             return self.send_json(200, {"user": user_json(u)})
 
@@ -973,11 +1020,7 @@ class Handler(BaseHTTPRequestHandler):
             if not check_pw(pw, u["pw"]):
                 FAILS.setdefault(key, []).append(time.time())
                 raise ApiError(401, "Неверный пароль")
-            uid = u["id"]
-            for sql in ("DELETE FROM sessions WHERE user_id=?", "DELETE FROM progress WHERE user_id=?",
-                        "DELETE FROM stats WHERE user_id=?", "DELETE FROM friends WHERE user_id=? OR friend_id=?",
-                        "DELETE FROM shares WHERE owner_id=?", "DELETE FROM users WHERE id=?"):
-                c.execute(sql, (uid,) * sql.count("?"))
+            delete_user(c, u["id"])
             FAILS.pop(key, None)
             return self.send_json(200, {"ok": True}, self.session_cookie("", 0))
 
@@ -1060,7 +1103,7 @@ class Handler(BaseHTTPRequestHandler):
             uid = u["id"] if u else None
             vkey = visitor_key(self.client_ip(), ua)
             dev, os_, br = parse_ua(ua)
-            tz, tab = s_str(d.get("tz"), 64), s_str(d.get("tab"), 20)
+            tz, tab, what = s_str(d.get("tz"), 64), s_str(d.get("tab"), 20), s_str(d.get("what"), 90)
             if p == "/hit":
                 ref = s_str(d.get("ref"), 300)
                 host = urlparse(ref).netloc.lower() if ref.startswith("http") else ""
@@ -1072,9 +1115,9 @@ class Handler(BaseHTTPRequestHandler):
                 c.execute("INSERT INTO hits(ts,day,vkey,uid,path,ref,device,os,browser,tz,lang) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                           (now, local_day(now), vkey, uid, s_str(d.get("path"), 60) or "/", host, dev, os_, br, tz,
                            s_str(d.get("lang"), 12)))
-            c.execute("INSERT INTO presence(vkey,uid,ts,tab,device,tz) VALUES(?,?,?,?,?,?) ON CONFLICT(vkey) DO UPDATE SET "
-                      "uid=excluded.uid,ts=excluded.ts,tab=excluded.tab,device=excluded.device,tz=excluded.tz",
-                      (vkey, uid, now, tab, dev, tz))
+            c.execute("INSERT INTO presence(vkey,uid,ts,tab,device,tz,what) VALUES(?,?,?,?,?,?,?) ON CONFLICT(vkey) DO UPDATE SET "
+                      "uid=excluded.uid,ts=excluded.ts,tab=excluded.tab,device=excluded.device,tz=excluded.tz,what=excluded.what",
+                      (vkey, uid, now, tab, dev, tz, what if uid else ""))
             if u:
                 c.execute("UPDATE users SET last_seen=?, tz=COALESCE(NULLIF(?,''),tz), device=?, lang=COALESCE(NULLIF(?,''),lang) WHERE id=?",
                           (now, tz, dev + " · " + os_, s_str(d.get("lang"), 12), uid))
@@ -1091,6 +1134,26 @@ class Handler(BaseHTTPRequestHandler):
             m = re.fullmatch(r"/admin/user/(\d+)", p)
             if m:
                 return self.send_json(200, admin_user(c, int(m.group(1))))
+
+        if method in ("POST", "DELETE") and p.startswith("/admin/user/"):
+            me = self.need_owner(c)
+            m = re.fullmatch(r"/admin/user/(\d+)(/reset)?", p)
+            if not m:
+                raise ApiError(404, "Не найдено")
+            u = c.execute("SELECT * FROM users WHERE id=?", (int(m.group(1)),)).fetchone()
+            if not u:
+                raise ApiError(404, "Пользователь не найден")
+            if method == "POST" and m.group(2):
+                send_reset(c, u["id"], u["name"], u["email"], SITE_URL or self.site_url())
+                return self.send_json(200, {"ok": True, "mail": bool(smtp_conf())})
+            if method == "DELETE" and not m.group(2):
+                if u["id"] == me["id"] or u["email"].lower() in owner_emails():
+                    raise ApiError(400, "Аккаунт владельца удалить отсюда нельзя")
+                if s_str(self.read_json().get("email"), 254).lower() != u["email"].lower():
+                    raise ApiError(400, "Для подтверждения впиши почту пользователя")
+                delete_user(c, u["id"])
+                sys.stderr.write("Админ %s удалил аккаунт %s\n" % (me["email"], u["email"]))
+                return self.send_json(200, {"ok": True})
 
         raise ApiError(404, "Не найдено")
 

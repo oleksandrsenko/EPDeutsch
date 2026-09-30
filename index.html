@@ -426,26 +426,45 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .card[data-sw="r"]{box-shadow:0 0 0 4px var(--good),var(--sh-card)}.card[data-sw="r"] .sw-r{opacity:1}
 @keyframes pop{0%{transform:scale(.4);opacity:0}100%{transform:none;opacity:1}}
 .front{font-size:clamp(24px,4.4vw,34px);font-weight:700;line-height:1.3;max-width:680px;overflow-wrap:anywhere}
-.front.cloze{font-size:clamp(18px,3.2vw,23px);font-weight:500;text-align:left;line-height:1.55}
+.front.cloze{font-size:clamp(18px,3.2vw,23px);font-weight:500;line-height:2.2;max-width:620px;text-wrap:pretty}
+.front.cloze+.hintline{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:14.5px;font-weight:600;background:var(--panel2);border-radius:999px;padding:5px 14px}
 .gap{display:inline-block;min-width:4.5em;border-bottom:3px solid var(--primary);margin:0 2px}
 /* пропуск «по буквам»: видно сколько слов и букв, буквы встают в клетки по мере набора */
-.gbox{position:relative;display:inline-block;max-width:100%;vertical-align:-.35em;margin:0 3px;border-radius:10px;cursor:text}
+.gbox{position:relative;display:inline-block;max-width:100%;vertical-align:middle;margin:0 4px;border-radius:10px;cursor:text}
 .gapin{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px;border:0;padding:0;margin:0;cursor:text;color:transparent;background:none;caret-color:transparent}
-.gslots{display:inline;line-height:1.95}
-.gw{display:inline-flex;flex-wrap:wrap;gap:3px;max-width:100%;vertical-align:bottom}
-.gw:not(:last-child){margin-right:.5em}
-.gs{display:inline-flex;align-items:center;justify-content:center;width:.95em;height:1.4em;font-weight:800;font-size:.95em;color:var(--link);background:var(--panel2);border-radius:7px;box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--primary) 22%,transparent);transition:background .2s,box-shadow .2s}
-.gs.f{background:var(--primary-soft);box-shadow:inset 0 -2.5px 0 var(--primary)}
-.gs.ex{background:none;box-shadow:inset 0 0 0 1.5px var(--line);color:var(--muted)}
-.gcar{width:2px;align-self:stretch;margin:3px 0 3px 1px;border-radius:2px;background:transparent}
+.gslots{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:6px 0;max-width:100%;vertical-align:middle}
+.gw{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:100%}
+.gw:not(:last-child){margin-right:.55em}
+.gs{--c:var(--primary);display:inline-flex;align-items:center;justify-content:center;width:1.1em;height:1.5em;font-size:.9em;font-weight:800;line-height:1;color:var(--link);background:var(--panel);border:1.5px solid var(--line);border-radius:8px;box-shadow:0 2px 0 var(--line2);transition:background .2s,border-color .2s,box-shadow .2s,color .2s}
+.gs.f{background:var(--primary-soft);border-color:color-mix(in srgb,var(--c) 45%,transparent);box-shadow:0 2px 0 color-mix(in srgb,var(--c) 35%,transparent)}
+.gs.ok{--c:var(--good);background:var(--good-soft);color:var(--good)}
+.gs.bad,.gs.ex{--c:var(--bad);background:var(--bad-soft);color:var(--bad);border-color:var(--bad)}
+.gs.ex{border-style:dashed}
+.gs.miss{border:1.5px dashed var(--bad);box-shadow:none}
+.gs.ex.new{animation:gsNo .3s ease}
+.gbox:focus-within .gs.cur{border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 22%,transparent);animation:gsBlink 1.1s ease-in-out infinite}
+.gcar{width:2px;align-self:stretch;margin:4px 0 4px 2px;border-radius:2px;background:transparent}
 .gbox:focus-within .gcar{background:var(--primary);animation:gcBlink 1s steps(1) infinite}
-@keyframes gcBlink{50%{opacity:0}}
-.gbox:focus-within .gs.cur{background:var(--panel);box-shadow:inset 0 0 0 2px var(--primary);animation:gsBlink 1.1s ease-in-out infinite}
 .gs.new{animation:gsIn .25s cubic-bezier(.3,1.6,.5,1)}
 @keyframes gsIn{0%{transform:translateY(5px) scale(.7)}100%{transform:none}}
-@keyframes gsBlink{50%{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--primary) 25%,transparent)}}
+@keyframes gsNo{0%,100%{transform:none}30%{transform:translateX(-3px) rotate(-6deg)}70%{transform:translateX(3px) rotate(6deg)}}
+@keyframes gsBlink{50%{box-shadow:0 0 0 3px transparent}}
+@keyframes gcBlink{50%{opacity:0}}
+.gaphint{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;font-weight:700;color:var(--bad);background:var(--bad-soft);border-radius:999px;padding:6px 14px;animation:pop .3s cubic-bezier(.3,1.4,.5,1)}
+.umkeys{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:20px}
+.um-l{font-size:12.5px;font-weight:700;color:var(--muted);margin-right:4px}
+.umk{position:relative;width:42px;height:42px;display:grid;place-items:center;font:inherit;font-size:19px;font-weight:800;color:var(--link);background:var(--panel);border:1.5px solid var(--line);border-radius:12px;box-shadow:0 3px 0 var(--line);cursor:pointer;transition:transform .08s,box-shadow .08s,background .15s,border-color .15s}
+.umk:hover{background:var(--primary-soft);border-color:color-mix(in srgb,var(--primary) 45%,transparent);box-shadow:0 3px 0 color-mix(in srgb,var(--primary) 35%,transparent)}
+.umk:active{transform:translateY(3px);box-shadow:0 0 0 var(--line)}
+.umk.sh{color:var(--muted);width:36px}
+.umk.sh[aria-pressed="true"]{color:#fff;background:var(--primary);border-color:var(--primary);box-shadow:0 3px 0 color-mix(in srgb,var(--primary) 60%,#000)}
+.umk.hit::after{content:"";position:absolute;inset:-2px;border-radius:13px;border:2px solid var(--primary);animation:umHit .45s ease-out forwards;pointer-events:none}
+@keyframes umHit{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.35)}}
+@media (max-width:640px){.um-l{width:100%;text-align:center;margin:0}.umk{width:46px;height:46px}}
+.gaphint.done{color:var(--good);background:var(--good-soft)}
+.res.mid{background:var(--mid-soft);color:var(--mid)}
 .gapres.ok{animation:pop .35s cubic-bezier(.3,1.6,.5,1)}
-@media (prefers-reduced-motion:reduce){.gs.new,.gapres.ok{animation:none}.gbox:focus-within .gs.cur,.gbox:focus-within .gcar{animation:none}}
+@media (prefers-reduced-motion:reduce){.gs.new,.gapres.ok{animation:none}.gbox:focus-within .gs.cur,.gbox:focus-within .gcar,.gs.ex.new{animation:none}}
 .gapres{font-weight:800;border-radius:8px;padding:0 6px;margin:0 2px}
 .gapres.ok{background:var(--good-soft);color:var(--good)}
 .gapres.no{background:var(--bad-soft);color:var(--bad);text-decoration:line-through;text-decoration-thickness:2px}
@@ -1512,6 +1531,7 @@ const CH_RU = {1:"Образование и наука",2:"Человек",3:"П
 // ---------- иконки ----------
 const IP={
   menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+  shift:'<path d="M12 4l8 8h-4v7H8v-7H4z"/>',
   search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
   home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
   cards:'<rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/>',
@@ -2034,13 +2054,15 @@ function draw(){
     const html=c.ex.split(/(\[\[.+?\]\])/).map(part=>{
       if(!/^\[\[.+\]\]$/.test(part))return esc(part);
       const i=gi++,a=clz.ans[i],v=clz.vals[i]||"";
-      if(!flipped)return '<span class="gbox"><span class="gslots" aria-hidden="true">'+gapSlots(a,v,-1)+'</span><input class="gapin" data-gi="'+i+'" value="'+esc(v)+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Пропуск '+(i+1)+': '+gapCnt(a)+'"></span>';
+      if(!flipped)return '<span class="gbox"><span class="gslots" aria-hidden="true">'+gapSlots(a,v,-1,-1,clz.hint)+'</span><input class="gapin" data-gi="'+i+'" value="'+esc(v)+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Пропуск '+(i+1)+': '+gapCnt(a)+'"></span>';
       const ok=clz.res&&clz.res[i];
       return ok?'<span class="gapres ok">'+esc(v.trim())+"</span>":(v.trim()?'<span class="gapres no">'+esc(v.trim())+"</span>":"")+'<span class="gapfix">'+esc(a)+"</span>";
     }).join("");
     const syn=flipped&&clz.syn&&clz.syn.some(Boolean);
     const inexact=!syn&&flipped&&clz.res&&clz.ans.some((a,i)=>clz.res[i]&&(clz.vals[i]||"").trim().replace(/\s+/g," ")!==a);
     front='<div class="front cloze">'+html+'</div><div class="hintline">'+esc(c.ru)+"</div>"+
+      (!flipped&&clz.hint?'<div class="gaphint" id="gapHint" aria-live="polite"></div>':"")+
+      (flipped?"":'<div class="umkeys" id="umKeys" role="group" aria-label="Немецкие буквы"><span class="um-l">Нет на клавиатуре?</span>'+["ä","ö","ü","ß"].map(k=>'<button type="button" class="umk" data-um="'+k+'">'+k+"</button>").join("")+'<button type="button" class="umk sh" id="umShift" aria-pressed="false" title="Заглавные: Ä Ö Ü">'+ic("shift",16)+"</button></div>")+
       (syn?'<div class="gapnote">Тоже верно, это синоним. В предложении было: <b>'+clz.ans.map(esc).join(" … ")+"</b></div>":inexact?'<div class="gapnote">Засчитано. Точное написание: <b>'+clz.ans.map(esc).join(" … ")+"</b></div>":"");
   }
   else if(m==="forms")front='<div class="front">'+esc(c.de)+'</div><div class="hintline">'+esc(c.ru)+" · Präsens (er) – Präteritum – Perfekt?</div>";
@@ -2054,7 +2076,8 @@ function draw(){
   let back="";
   if(flipped){
     back='<div class="back">';
-    if(testish)back+='<span class="res '+(cur.ok?"ok":"no")+'">'+(cur.ok?"✓ Верно!":"✗ Неверно"+(m==="art"?", ты выбрал(а) «"+esc(artPick)+"»":""))+"</span>";
+    if(m==="cloze"&&clz&&clz.fixed)back+='<span class="res mid">✓ Исправлено с подсказкой, повторим ещё раз</span>';
+    else if(testish)back+='<span class="res '+(cur.ok?"ok":"no")+'">'+(cur.ok?"✓ Верно!":"✗ Неверно"+(m==="art"?", ты выбрал(а) «"+esc(artPick)+"»":""))+"</span>";
     if(m==="de")back+='<div class="ans">'+esc(c.ru)+"</div>";
     if(m==="ru"||m==="cloze")back+='<div class="ans de">'+esc(c.de)+"</div>";
     if(m==="forms"||c.verb&&m!=="test")back+='<div class="forms"><div><small>Präsens</small><b>'+esc(c.pres||"")+'</b></div><div><small>Präteritum</small><b>'+esc(c.prat||"")+'</b></div><div><small>Perfekt</small><b>'+esc(c.perf||"")+"</b></div></div>";
@@ -2091,13 +2114,24 @@ function draw(){
     const ins=[...st.querySelectorAll(".gapin")];
     ins.forEach((el,i)=>{
       const sl=el.parentNode.querySelector(".gslots");let prev=el.value.length;
-      const paint=nw=>{sl.innerHTML=gapSlots(clz.ans[i],el.value,el.selectionStart,nw)};
-      el.oninput=()=>{clz.vals[i]=el.value;const L=el.value.length;paint(L>prev&&el.selectionStart===L?L-1:-1);prev=L};
-      el.onfocus=el.onkeyup=el.onclick=el.onselect=()=>setTimeout(()=>paint(-1));el.onblur=()=>paint(-1);
+      const paint=nw=>{sl.innerHTML=gapSlots(clz.ans[i],el.value,el.selectionStart,nw,clz.hint);if(clz.hint)hintLeft()};
+      el.oninput=()=>{clz.vals[i]=el.value;const L=el.value.length;paint(L>=prev&&el.selectionStart>0?el.selectionStart-1:-1);prev=L};
+      el.addEventListener("focus",()=>{umIn=el});
+      el.onfocus=el.onkeyup=el.onselect=()=>setTimeout(()=>paint(-1));
+      // клик по плитке: выделяем эту букву, чтобы новая буква её заменила
+      el.onclick=e=>{const t=[...sl.querySelectorAll(".gs")].find(g=>{const r=g.getBoundingClientRect();return e.clientX>=r.left-2&&e.clientX<=r.right+2&&e.clientY>=r.top-3&&e.clientY<=r.bottom+3});
+        const k=t?+t.dataset.i:-1;if(k>=0)el.setSelectionRange(k,t.textContent?k+1:k);paint(-1)};el.onblur=()=>paint(-1);
       el.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();if(i<ins.length-1&&!ins[i+1].value)ins[i+1].focus();else clozeCheck()}};
     });
+    hintLeft();umIn=ins[0];
+    // ä ö ü ß: вставляем в тот пропуск и на то место, где стоит курсор; фокус с поля не уводим
+    const uk=$("#umKeys");if(uk){uk.onpointerdown=e=>{if(e.target.closest(".umk"))e.preventDefault()};
+      uk.onclick=e=>{const b=e.target.closest(".umk");if(!b)return;const up=$("#umShift").getAttribute("aria-pressed")==="true";
+        if(b.id==="umShift"){b.setAttribute("aria-pressed",String(!up));uk.querySelectorAll("[data-um]").forEach(k=>{if(k.dataset.um!=="ß")k.textContent=!up?k.dataset.um.toUpperCase():k.dataset.um});return}
+        const el=umIn||ins[0],ch=b.textContent;el.focus({preventScroll:true});el.setRangeText(ch,el.selectionStart,el.selectionEnd,"end");el.dispatchEvent(new Event("input"));
+        b.classList.remove("hit");void b.offsetWidth;b.classList.add("hit")}}
     $("#clozeCheck").onclick=()=>clozeCheck(false);$("#clozeGive").onclick=()=>clozeCheck(true);
-    if(ins[0])setTimeout(()=>{const f=ins.find(x=>!x.value)||ins[0];f.focus({preventScroll:true})},30);
+    if(ins[0])setTimeout(()=>{const f=ins.find(x=>!x.value)||ins[0];f.focus({preventScroll:true});const L=f.value.length;f.setSelectionRange(L,L)},30);
   }
   bindSwipe(card);
   if(tourHook)tourHook("draw");
@@ -2120,7 +2154,7 @@ function bindSwipe(card){
 }
 function canAnswer(){return cur&&!busy&&(!(cur.m==="test"||cur.m==="art"||cur.m==="cloze")||flipped)}
 // «Вставь слово»: сравниваем без учёта регистра, лишних пробелов и знаков в конце; ae/oe/ue/ss = ä/ö/ü/ß
-let clz=null;
+let clz=null,umIn=null;
 const clzNorm=s=>s.normalize("NFC").trim().toLowerCase().replace(/[.,!?;:]+$/,"").replace(/\s+/g," ").replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss");
 // Какие ещё ответы засчитать в пропуске, кроме слова из предложения. Логика:
 // 1) «стороны» синонимов: части слова карточки через « = » плюс «= …» из примечания (только латиница);
@@ -2194,22 +2228,37 @@ function clzAlts(c,gap,gi){
   [...alts].forEach(a=>{if(/(in|innen)$/.test(a)&&!/(in|innen)$/.test(g)&&alts.has(a.replace(/(in|innen)$/,"")))alts.delete(a)});
   return alts;
 }
-// клетки пропуска: по плитке на букву ответа, набранные слова раскладываются по словам ответа; лишние буквы — пунктирные плитки
-function gapSlots(a,v,cur,nw){const A=a.split(" "),V=(v||"").split(" "),n=Math.max(A.length,V.length);let h="",pos=0;
+// клетки пропуска: по плитке на букву ответа, набранные слова раскладываются по словам ответа.
+// лишние буквы сразу красные; после неудачной проверки (hint) каждая буква подсвечивается: верно / неверно / не хватает
+const gEq=(x,y)=>x.toLowerCase()===y.toLowerCase();
+function gapSlots(a,v,cur,nw,hint){const A=a.split(" "),V=(v||"").split(" "),n=Math.max(A.length,V.length);let h="",pos=0;
   for(let j=0;j<n;j++){const aw=A[j]||"",typed=j<V.length,vw=typed?V[j]:"";h+='<span class="gw">';
-    for(let k=0;k<Math.max(aw.length,vw.length);k++){const t=vw[k]||"",i=pos+k;
-      h+='<span class="gs'+(t?" f":"")+(k>=aw.length?" ex":"")+(typed&&i===cur&&k<aw.length?" cur":"")+(typed&&i===nw?" new":"")+'">'+esc(t)+"</span>"}
+    for(let k=0;k<Math.max(aw.length,vw.length);k++){const t=vw[k]||"",i=pos+k,ex=k>=aw.length;
+      const st=ex?" ex":!hint?(t?" f":""):t?(gEq(t,aw[k])?" f ok":" f bad"):" miss";
+      h+='<span class="gs'+st+(typed&&i===cur&&!ex?" cur":"")+(typed&&i===nw?" new":"")+'" data-i="'+(typed?Math.min(i,pos+vw.length):-1)+'">'+esc(t)+"</span>"}
     if(typed&&cur===pos+vw.length&&vw.length>=aw.length)h+='<span class="gcar"></span>';
     h+="</span>";if(typed)pos+=vw.length+1}
   return h}
+// доля верных букв на своих местах — решаем, дать ли шанс исправить
+function gapScore(a,v){const A=a.split(" "),V=(v||"").trim().split(/\s+/);let ok=0,n=0;
+  A.forEach((aw,j)=>{const vw=V[j]||"";n+=Math.max(aw.length,vw.length);for(let k=0;k<aw.length;k++)if(vw[k]&&gEq(vw[k],aw[k]))ok++});
+  if(V.length>A.length)V.slice(A.length).forEach(w=>n+=w.length);
+  return n?ok/n:0}
 const gapCnt=a=>{const w=a.split(" ");return w.length>1?w.length+" "+plural(w.length,"слово","слова","слов"):a.length+" "+plural(a.length,"буква","буквы","букв")};
 function clozeCheck(give){give=give===true;
   if(!cur||cur.m!=="cloze"||flipped||!clz)return;
   if(!give&&clz.ans.some((a,i)=>!(clz.vals[i]||"").trim())){const e=[...document.querySelectorAll(".gapin")].find(x=>!x.value.trim());if(e){e.focus();e.parentNode.animate([{transform:"translateX(0)"},{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}],{duration:260})}return}
   clz.syn=[];
   clz.res=clz.ans.map((a,i)=>{if(give)return false;const v=clzNorm(clz.vals[i]||"");if(v===clzNorm(a))return true;if(clzAlts(cur.c,a,i).has(v)){clz.syn[i]=true;return true}return false});
-  cur.ok=clz.res.every(Boolean);flipped=true;anim="flip";draw();
+  const allOk=clz.res.every(Boolean);
+  // почти верно с первой попытки: не переворачиваем, а подсвечиваем неверные буквы и даём исправить
+  if(!give&&!allOk&&!clz.hint&&clz.ans.every((a,i)=>clz.res[i]||gapScore(a,clz.vals[i])>=.5)){clz.hint=true;clz.res=null;anim="";draw();return}
+  clz.fixed=clz.hint&&allOk;cur.ok=allOk&&!clz.hint;flipped=true;anim="flip";draw();
 }
+// счётчик оставшихся ошибок в подсказке — обновляем на лету, без перерисовки карточки
+function hintLeft(){const h=$("#gapHint");if(!h||!clz)return;let e=0;
+  clz.ans.forEach((a,i)=>{const A=a.split(" "),V=(clz.vals[i]||"").split(" ");A.forEach((aw,j)=>{const vw=V[j]||"";for(let k=0;k<Math.max(aw.length,vw.length);k++)if(!vw[k]||!aw[k]||!gEq(vw[k],aw[k]))e++});V.slice(A.length).forEach(w=>e+=w.length)});
+  h.textContent=e?"Почти! Исправь красные буквы: осталось "+e:"Теперь верно, жми «Проверить»";h.classList.toggle("done",!e)}
 function answer(r){
   if(!canAnswer())return;
   if(cur.m==="test"||cur.m==="art"||cur.m==="cloze")r=cur.ok?1:0;

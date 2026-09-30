@@ -360,8 +360,22 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .mode small{display:none;font-size:11.5px;color:var(--muted);line-height:1.25;margin-top:2px}
 .mode[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft)}
 .mode .badge{position:absolute;top:-9px;right:-4px;background:var(--yellow);color:#282E3E;font-size:10.5px;font-weight:800;border-radius:999px;padding:2px 8px;box-shadow:var(--sh)}
-.subsets{flex-wrap:nowrap;overflow-x:auto;padding:2px 2px 10px;margin:0 0 6px;scrollbar-width:thin}
+/* наборы главы: «Все наборы» закреплено слева, остальные листаются; края растворяются только там, где есть что листать */
+.subsets{flex-wrap:nowrap;align-items:center;gap:0;margin:0 0 10px;position:relative}
 .subsets .chip{white-space:nowrap;flex:none}
+.subsets .sub-all{margin-right:12px}
+.sub-sep{width:2px;height:26px;border-radius:2px;background:var(--line);flex:none;margin-right:4px}
+.sub-scroll{--fl:0px;--fr:0px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth;padding:4px 8px 6px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 var(--fl),#000 calc(100% - var(--fr)),transparent);mask-image:linear-gradient(90deg,transparent,#000 var(--fl),#000 calc(100% - var(--fr)),transparent)}
+.sub-scroll::-webkit-scrollbar{display:none}
+.sub-scroll.fl{--fl:56px}.sub-scroll.fr{--fr:56px}
+.sub-track{display:flex;gap:8px;width:max-content}
+.sub-arr{position:absolute;top:50%;z-index:2;width:34px;height:34px;margin-top:-17px;border-radius:50%;border:0;background:var(--panel);color:var(--fg);box-shadow:var(--sh-card);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+.sub-arr:hover{background:var(--hover)}
+.sub-arr.l{left:var(--al,0px);transform:translateX(-6px)}.sub-arr.r{right:-6px;transform:translateX(6px)}
+.sub-arr.r svg{transform:rotate(-90deg)}.sub-arr.l svg{transform:rotate(90deg)}
+.subsets.cl .sub-arr.l,.subsets.cr .sub-arr.r{opacity:1;pointer-events:auto;transform:none}
+@media (hover:none){.sub-arr{display:none}}
 .studybar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;margin:0 0 16px}
 .banner{background:var(--primary-soft);color:var(--link);font-weight:700;border-radius:var(--r);padding:10px 16px;margin-bottom:12px;font-size:14px;display:flex;align-items:center;gap:10px}
 
@@ -815,7 +829,7 @@ body.guest .tright{margin-left:auto}
   .mode{flex-direction:row;gap:8px;padding:6px 14px 6px 6px;border-radius:14px}
   .mode .mi{width:30px;height:30px;border-radius:10px}.mode .mi svg{width:18px;height:18px}
   .mode b{font-size:13.5px;white-space:nowrap}.mode .badge{top:-9px;right:-2px;font-size:10px;padding:1px 7px}
-  .subsets{scrollbar-width:none;margin:0 -16px 4px;padding:2px 16px 8px}.subsets::-webkit-scrollbar{display:none}
+  .subsets{margin:0 -16px 6px 0}.subsets .sub-all{margin-right:10px}.sub-scroll.fr{--fr:40px}.sub-scroll.fl{--fl:40px}
   .studybar{margin-bottom:12px;gap:8px;flex-wrap:nowrap}.studybar .switch{font-size:13.5px;gap:8px;min-width:0;white-space:nowrap}.studybar>.row{flex:none;flex-wrap:nowrap}
   #start .lbl{display:none}#start{padding:6px 9px}
   .fr-act .btn{padding:6px 12px;font-size:13px}
@@ -1797,8 +1811,13 @@ function renderSet(){
   $("#setBy").innerHTML="<b>"+(s.user?"Мой набор":"Uni? Sicher! Deutsch 3")+"</b> · "+terms(n)+" · выучено "+k+(s.pages?" · с. "+esc(s.pages):"");
   $("#setAct").innerHTML='<button class="btn sm" data-share>'+ic("share",16)+'Поделиться</button><button class="btn sm" data-tofolder>'+ic("folder",16)+"В папку</button>"+(s.user?'<button class="btn sm" data-edit="'+esc(s.id)+'">'+ic("pencil",16)+"Редактировать</button>":"");
   const all=s.sets.every(st=>sel.has(st.key));
-  $("#subsets").hidden=s.sets.length<2;
-  $("#subsets").innerHTML='<button class="chip" data-sub="*" aria-pressed="'+all+'">Все наборы<small>'+n+"</small></button>"+s.sets.map(st=>'<button class="chip" data-sub="'+st.key+'" aria-pressed="'+(!all&&sel.has(st.key))+'">'+esc(st.name)+"<small>"+st.items.length+"</small></button>").join("");
+  const sb=$("#subsets"),old=sb.querySelector(".sub-scroll"),keep=old&&sb.dataset.sec===curSec?old.scrollLeft:0;
+  sb.hidden=s.sets.length<2;sb.dataset.sec=curSec;
+  sb.innerHTML='<button class="chip sub-all" data-sub="*" aria-pressed="'+all+'">Все наборы<small>'+n+'</small></button><span class="sub-sep" aria-hidden="true"></span>'+
+    '<div class="sub-scroll"><div class="sub-track">'+s.sets.map(st=>'<button class="chip" data-sub="'+st.key+'" aria-pressed="'+(!all&&sel.has(st.key))+'">'+esc(st.name)+"<small>"+st.items.length+"</small></button>").join("")+"</div></div>"+
+    '<button class="sub-arr l" data-subgo="-1" aria-label="Назад" tabindex="-1">'+ic("chev",18)+'</button><button class="sub-arr r" data-subgo="1" aria-label="Дальше" tabindex="-1">'+ic("chev",18)+"</button>";
+  const sc=sb.querySelector(".sub-scroll");sc.style.scrollBehavior="auto";sc.scrollLeft=keep;sc.style.scrollBehavior="";
+  sc.onscroll=subEdges;subEdges();requestAnimationFrame(subEdges);
   $("#modes").innerHTML=secModes().map(m=>'<button class="mode" data-mode="'+m[0]+'" aria-pressed="'+(m[0]===mode)+'" style="--mc:'+m[4]+'">'+(m[0]==="smart"?'<span class="badge">совет</span>':"")+'<span class="mi">'+ic(m[3],24)+"</span><span><b>"+m[1]+"</b><small>"+m[2]+"</small></span></button>").join("");
   renderTerms();
 }
@@ -1810,7 +1829,13 @@ function renderTerms(){
   $("#termN").textContent=cnt;$("#termK").textContent=cnt?"выучено "+k+" из "+cnt:"";
   $("#terms").innerHTML=h||'<p class="muted">Выбери хотя бы один набор выше.</p>';
 }
+// плавные края и стрелки у ряда наборов: показываем только с той стороны, где ещё есть наборы
+function subEdges(){const sb=$("#subsets"),sc=sb&&sb.querySelector(".sub-scroll");if(!sc)return;
+  const l=sc.scrollLeft>4,r=sc.scrollLeft+sc.clientWidth<sc.scrollWidth-4;
+  sc.classList.toggle("fl",l);sc.classList.toggle("fr",r);sb.classList.toggle("cl",l);sb.classList.toggle("cr",r);sb.style.setProperty("--al",sc.offsetLeft-6+"px")}
+addEventListener("resize",subEdges);
 $("#subsets").onclick=e=>{
+  const g=e.target.closest("[data-subgo]");if(g){const sc=$("#subsets .sub-scroll");sc.scrollBy({left:+g.dataset.subgo*sc.clientWidth*.7});return}
   const b=e.target.closest("[data-sub]");if(!b)return;
   const s=SECS[curSec],all=s.sets.every(st=>sel.has(st.key)),k=b.dataset.sub;
   if(k==="*")s.sets.forEach(st=>sel.add(st.key));

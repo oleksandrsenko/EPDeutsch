@@ -272,6 +272,11 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .hstats{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
 .hs{display:flex;align-items:center;gap:12px;background:var(--bg);border-radius:18px;padding:13px 22px 13px 16px;min-width:120px}
 .hs-i{font-size:30px;line-height:1}
+.hin{animation:hsIn .55s cubic-bezier(.2,.8,.3,1) both}
+@keyframes hsIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+.hs-i.lit{display:inline-block;animation:fireLit 1s cubic-bezier(.3,1.5,.5,1) .2s both}
+@keyframes fireLit{0%{transform:scale(.2) rotate(-20deg);opacity:0}45%{transform:scale(1.3) rotate(8deg);opacity:1}70%{transform:scale(.92) rotate(-4deg)}100%{transform:none}}
+
 .hs:not(:has(.hs-i)){padding-left:22px}
 .hs b{display:block;font-size:21px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
 .hs small{display:block;font-size:13px;margin-top:2px;color:var(--muted);font-weight:600}
@@ -664,6 +669,25 @@ div.plbl{flex-direction:row;align-items:center;flex-wrap:wrap}
 .aform input{font:inherit;font-size:16px;font-weight:600;color:var(--fg);border:2px solid var(--line);background:var(--panel);border-radius:14px;padding:11px 14px}
 .aform input:focus{border-color:var(--primary);outline:none}
 .aform .btn{align-self:flex-start;margin-top:4px}
+.aform .ahint{font-size:12.5px;font-weight:500;color:var(--muted)}
+.pw-box{position:relative;display:block}
+.pw-box input{width:100%;padding-right:48px}
+.pw-eye{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--muted);cursor:pointer;padding:8px;border-radius:10px;display:flex}
+.pw-eye:hover{color:var(--fg);background:var(--hover)}
+.pw-rules{list-style:none;margin:-6px 0 0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:var(--muted)}
+.pw-rules li{display:flex;align-items:center;gap:8px;transition:color .25s}
+.pw-rules li::before{content:"";width:16px;height:16px;border-radius:50%;border:2px solid var(--line);flex:none;box-sizing:border-box;transition:background .25s,border-color .25s}
+.pw-rules li.ok{color:var(--good)}
+.pw-rules li.ok::before{border-color:var(--good);background:var(--good) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/10px no-repeat}
+.pw-rules.shake{animation:shake .35s}
+.alink{border:0;background:none;padding:0;font:inherit;font-size:13.5px;font-weight:700;color:var(--link);cursor:pointer;align-self:flex-start}
+.alink:hover{text-decoration:underline}
+.alink-r{align-self:flex-end;margin-top:-8px}
+.aform label.acheck{flex-direction:row;align-items:flex-start;gap:10px;font-size:12.5px;font-weight:500;line-height:1.5;cursor:pointer}
+.acheck input{width:20px;height:20px;margin:1px 0 0;flex:none;accent-color:var(--primary);cursor:pointer;padding:0}
+.acheck .legal-link{font-weight:700;font-size:inherit}
+.aok{color:var(--good);font-weight:700;font-size:14px;margin:0;line-height:1.5}
+.aform .btn:disabled{opacity:.5;cursor:not-allowed}
 .aerr{color:var(--bad);font-weight:700;font-size:14px;margin:0;min-height:1em}
 .prof-card{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .pc-t{flex:1 1 220px;min-width:0}.pc-t small{overflow:hidden;text-overflow:ellipsis}.pc-t b{display:block;font-size:20px;font-weight:800}.pc-t small{display:block;color:var(--muted);font-weight:600}
@@ -924,8 +948,8 @@ dialog.wide{width:min(760px,calc(100vw - 32px))}
 .ld-rv.in{opacity:1;transform:none}
 .ld-nums b{font-variant-numeric:tabular-nums}
 .ld-art{perspective:1200px}
-.ld-fcb .ok{transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
-.ld-fcb .ok.tap{transform:scale(1.14);box-shadow:0 0 0 6px rgba(24,174,121,.18)}
+.ld-fcb em{transition:background .45s ease,color .45s ease}
+.ld-fcb .ok.tap{background:color-mix(in srgb,var(--good) 30%,var(--good-soft));color:color-mix(in srgb,var(--good) 80%,#000)}
 .ld-fc2 small{font-variant-numeric:tabular-nums}
 .ld-arts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px;font-size:13.5px;color:var(--muted);font-weight:600}
 .ld-arts i{font-style:normal;font-weight:800;font-size:13px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border-radius:999px;padding:4px 11px;animation:ldArt 5s ease-in-out infinite;animation-delay:var(--d)}
@@ -1702,10 +1726,28 @@ function renderHome(){
   h+=homeFolders(false);
   const ph=$("#p-home");ph.innerHTML=h;
   // анимация появления — только при заходе на главную; при перерисовке на месте (открыли папку и т.п.) не мигаем
-  ph.classList.toggle("still",!homeAnim);homeAnim=false;
+  ph.classList.toggle("still",!homeAnim);if(homeAnim)homeIntro(ph);homeAnim=false;
   if(justOpenF){const fr=$("#fr-"+justOpenF);if(fr)fr.classList.add("justopen");justOpenF=null}
 }
 let homeAnim=true,justOpenF=null;
+// плавный вход на главную: карточки статистики выплывают, цифры набегают, полоски прогресса заполняются, огонёк вспыхивает
+function homeIntro(ph){
+  if(reduced())return;
+  ph.querySelectorAll(".hs,.rep-g>div").forEach((x,i)=>{x.classList.add("hin");x.style.animationDelay=Math.min(i,7)*70+"ms"});
+  const nums=[...ph.querySelectorAll(".hs b,.rep-g b")].map(b=>{const tx=b.textContent;return{b,tx,parts:tx.split(/(\d+)/)}}).filter(o=>o.parts.length>1);
+  nums.forEach(o=>{o.b.style.minWidth=o.b.offsetWidth+"px"});
+  const t0=performance.now()+120,D=900;
+  (function step(now){const k=Math.max(0,Math.min(1,(now-t0)/D)),e=1-Math.pow(1-k,3);
+    nums.forEach(o=>{if(!o.b.isConnected)return;o.b.textContent=k<1?o.parts.map((s,i)=>i%2?String(Math.round(+s*e)):s).join(""):o.tx});
+    if(k<1)requestAnimationFrame(step)})(performance.now());
+  setTimeout(()=>nums.forEach(o=>{o.b.textContent=o.tx}),D+600); // страховка: в фоновой вкладке кадров может не быть
+  const bars=[...ph.querySelectorAll(".rc-bar i,.fr-bar i,.bar i")];
+  bars.forEach(i=>{i.dataset.w=i.style.width;i.style.transition="none";i.style.width="0"});
+  void ph.offsetWidth;
+  bars.forEach((i,n)=>{i.style.transition="width 1.1s cubic-bezier(.3,.8,.3,1) "+(250+Math.min(n,10)*60)+"ms";i.style.width=i.dataset.w;
+    setTimeout(()=>{i.style.transition=""},1500+Math.min(n,10)*60)});
+  const fire=ph.querySelector(".hs-i");if(fire)fire.classList.add("lit");
+}
 
 function homeFolders(empty){
   let h="";
@@ -2412,6 +2454,9 @@ $("#resetBtn").onclick=()=>{if(confirm("Удалить весь прогресс
 
 // ---------- аккаунт, друзья, общие наборы (нужен server.py) ----------
 const AV=["#7E6FB8","#8B5CF6","#E8505B","#F28C28","#18AE79","#0EA5B7","#E0A800","#282E3E"];
+// правила пароля: такие же проверяет сервер (pw_problem в server.py)
+const PW_RULES=[[v=>v.length>=8,"Не короче 8 символов","At least 8 characters"],[v=>/\p{Lu}/u.test(v),"Хотя бы одна заглавная буква","At least one capital letter"],[v=>/[^\p{L}\p{N}\s]/u.test(v),"Хотя бы один знак, например ! ? # %","At least one symbol, like ! ? # %"]];
+let resetTok="";
 let ME=null,API=null,syncTimer=null,syncAt=0,syncErr="",applying=false,friendsCache=null,lbSort="week_xp",openFriend=null,authTab="reg";
 const ownerTag=u=>u&&u.owner?'<span class="owner" title="Создатель сайта">'+ic("crown",13)+"Owner</span>":"";
 function uava(u,sz){return'<span class="uava" style="background:'+AV[(+u.avatar||0)%8]+";width:"+(sz||32)+"px;height:"+(sz||32)+"px;font-size:"+Math.round((sz||32)*.45)+'px">'+esc(((u.name||"?").trim()[0]||"?").toUpperCase())+"</span>"}
@@ -2466,6 +2511,7 @@ async function handleHash(){
         const u={id:newId(""),name:j.name,desc:j.desc||"",n:j.cards.length,cards:j.cards.map((c,i)=>({k:i,de:c.de,ru:c.ru,ex:c.ex||""}))};
         S.usets=(S.usets||[]).concat(u);save();rebuildUser();renderListSel();renderFolders();checkAch();openSec("u:"+u.id);toast("📥 Набор добавлен в «Мои наборы»")},"Добавить себе")
     }catch(e){toast("⚠️ "+e.message)}return}
+  if(k==="reset"&&v){if(ME)return toast(LT("Ты уже в аккаунте","You are already logged in"));resetTok=v;authTab="reset";go("acct");return}
   if(k==="friend"&&v){if(!ME){S.pendingFriend=v;save();go("acct");return toast("Войди или зарегистрируйся, и друг добавится сам")}addFriend(v)}
 }
 async function addFriend(code){try{const j=await api("POST","/friends",{code});toast("🤝 "+j.name+" теперь в друзьях");friendsCache=null;if(curTab==="friends")renderFriends()}catch(e){toast("⚠️ "+e.message)}}
@@ -2485,20 +2531,51 @@ function renderAcct(){
   if(API===false){el.innerHTML='<h1>Аккаунт</h1><div class="acard"><p style="margin-top:0"><b>Аккаунты работают, когда сайт открыт через сервер.</b></p><p>В папке проекта выполни в терминале:</p><pre class="code">python3 server.py</pre><p>и открой <b>http://localhost:8765</b>. Сейчас сайт открыт как простой файл, поэтому регистрация, друзья и общие наборы недоступны. Учиться можно и так, прогресс сохраняется в браузере.</p></div>';return}
   if(API===null){el.innerHTML='<h1>Аккаунт</h1><p class="muted">Подключаюсь к серверу…</p>';return}
   if(!ME){
-    const reg=authTab==="reg";
-    el.innerHTML='<button class="crumb auth-back" data-tab="land">'+LT("← О платформе","← About EPDeutsch")+'</button><div class="auth"><div class="auth-l"><h1>'+(reg?LT("Создать аккаунт","Create an account"):LT("С возвращением!","Welcome back!"))+'</h1><p class="muted">'+(reg?LT("Прогресс, свои наборы и папки будут храниться в аккаунте и совпадать на телефоне и компьютере.","Your progress, sets and folders are stored in your account and synced between phone and computer."):LT("Войди, чтобы продолжить с того места, где остановился.","Log in to continue where you left off."))+"</p>"+
-      '<div class="seg" style="margin:6px 0 18px"><button data-auth="login" aria-pressed="'+!reg+'">'+LT("Вход","Log in")+'</button><button data-auth="reg" aria-pressed="'+reg+'">'+LT("Регистрация","Sign up")+'</button></div>'+
-      '<form id="authForm" class="aform" novalidate>'+(reg?'<label>'+LT("Имя","Name")+'<input type="text" id="aName" autocomplete="nickname" maxlength="40" required placeholder="'+LT("Как тебя показывать друзьям","How friends will see you")+'"></label>':"")+
-      '<label>'+LT("Почта","Email")+'<input type="email" id="aEmail" autocomplete="email" required placeholder="name@mail.com"></label>'+
-      '<label>'+LT("Пароль","Password")+'<input type="password" id="aPw" autocomplete="'+(reg?"new-password":"current-password")+'" minlength="8" required placeholder="'+(reg?LT("Не короче 8 символов","At least 8 characters"):LT("Твой пароль","Your password"))+'"></label>'+
-      (reg?'<p class="consent">'+LT('Регистрируясь, ты принимаешь <button type="button" class="legal-link" data-legal="terms">Условия использования</button> и <button type="button" class="legal-link" data-legal="privacy">Политику конфиденциальности</button>, в том числе использование данных об обучении для персонализации. Иногда мы будем присылать на почту новости платформы и советы по подготовке. Отписаться можно в любой момент.','By signing up you accept the <button type="button" class="legal-link" data-legal="terms">Terms of use</button> and the <button type="button" class="legal-link" data-legal="privacy">Privacy policy</button> (in Russian), including the use of learning data for personalisation. We will occasionally email you platform news and preparation tips. You can unsubscribe at any time.')+'</p>':"")+'<p class="aerr" id="aErr" role="alert"></p><button class="btn primary big" type="submit" id="aSubmit">'+(reg?LT("Зарегистрироваться","Sign up"):LT("Войти","Log in"))+"</button></form></div>"+
-      '<div class="auth-r">'+LT('<h3>Что даёт аккаунт</h3><ul><li><b>Синхронизация.</b> Прогресс, XP, серия, свои наборы и папки будут одинаковыми на всех устройствах.</li><li><b>Друзья.</b> Добавляй по коду, сравнивай серию, XP и выученные слова.</li><li><b>Соревнование.</b> Таблица лидеров за неделю среди друзей.</li><li><b>Общие наборы.</b> Делись своими наборами по ссылке, друг добавит их себе в один клик.</li></ul>','<h3>What you get</h3><ul><li><b>Sync.</b> Progress, XP, streak, your sets and folders stay the same on every device.</li><li><b>Friends.</b> Add friends by code and compare streaks, XP and learned words.</li><li><b>Competition.</b> A weekly leaderboard among friends.</li><li><b>Shared sets.</b> Share your sets with a link.</li></ul><p class="muted" style="margin:10px 0 0">Note: the learning interface and translations are currently in Russian.</p>')+'</div></div>';
+    const reg=authTab==="reg",forgot=authTab==="forgot",reset=authTab==="reset"&&resetTok;
+    const eye='<button type="button" class="pw-eye" data-pweye aria-label="'+LT("Показать пароль","Show password")+'">'+ic("eye",18)+'</button>';
+    const rules=reg||reset?'<ul class="pw-rules" id="pwRules">'+PW_RULES.map((r,i)=>'<li data-r="'+i+'">'+LT(r[1],r[2])+"</li>").join("")+"</ul>":"";
+    const pwField=(lbl,ac,ph)=>'<label>'+lbl+'<span class="pw-box"><input type="password" id="aPw" autocomplete="'+ac+'" required'+(ph?' placeholder="'+ph+'"':"")+">"+eye+"</span></label>";
+    const head=(h,sub)=>'<button class="crumb auth-back" data-tab="land">'+LT("← О платформе","← About EPDeutsch")+'</button><div class="auth"><div class="auth-l"><h1>'+h+'</h1><p class="muted">'+sub+"</p>";
+    const right='<div class="auth-r">'+LT('<h3>Что даёт аккаунт</h3><ul><li><b>Синхронизация.</b> Прогресс, XP, серия, свои наборы и папки будут одинаковыми на всех устройствах.</li><li><b>Друзья.</b> Добавляй по коду, сравнивай серию, XP и выученные слова.</li><li><b>Соревнование.</b> Таблица лидеров за неделю среди друзей.</li><li><b>Общие наборы.</b> Делись своими наборами по ссылке, друг добавит их себе в один клик.</li></ul>','<h3>What you get</h3><ul><li><b>Sync.</b> Progress, XP, streak, your sets and folders stay the same on every device.</li><li><b>Friends.</b> Add friends by code and compare streaks, XP and learned words.</li><li><b>Competition.</b> A weekly leaderboard among friends.</li><li><b>Shared sets.</b> Share your sets with a link.</li></ul><p class="muted" style="margin:10px 0 0">Note: the learning interface and translations are currently in Russian.</p>')+'</div></div>';
+    let form;
+    if(forgot){
+      form=head(LT("Не помню пароль","Forgot password"),LT("Напиши почту, на которую создан аккаунт. Мы пришлём ссылку, по ней можно будет придумать новый пароль.","Enter the email of your account. We will send you a link to set a new password."))+
+        '<form id="authForm" class="aform" novalidate><label>'+LT("Почта","Email")+'<input type="email" id="aEmail" autocomplete="email" required placeholder="name@mail.com"></label>'+
+        '<p class="aerr" id="aErr" role="alert"></p><p class="aok" id="aOk" role="status" hidden></p><button class="btn primary big" type="submit" id="aSubmit">'+LT("Прислать ссылку","Send link")+'</button>'+
+        '<button type="button" class="alink" data-auth="login">'+LT("Вспомнил(а) пароль? Войти","Remembered it? Log in")+"</button></form></div>"+right;
+    }else if(reset){
+      form=head(LT("Новый пароль","New password"),LT("Придумай новый пароль. После этого ты сразу войдёшь в аккаунт.","Choose a new password. You will be logged in right after."))+
+        '<form id="authForm" class="aform" novalidate>'+pwField(LT("Новый пароль","New password"),"new-password")+rules+
+        '<p class="aerr" id="aErr" role="alert"></p><button class="btn primary big" type="submit" id="aSubmit">'+LT("Сохранить и войти","Save and log in")+"</button></form></div>"+right;
+    }else{
+      form=head(reg?LT("Создать аккаунт","Create an account"):LT("С возвращением!","Welcome back!"),reg?LT("Прогресс, свои наборы и папки будут храниться в аккаунте и совпадать на телефоне и компьютере.","Your progress, sets and folders are stored in your account and synced between phone and computer."):LT("Войди, чтобы продолжить с того места, где остановился.","Log in to continue where you left off."))+
+        '<div class="seg" style="margin:6px 0 18px"><button data-auth="login" aria-pressed="'+!reg+'">'+LT("Вход","Log in")+'</button><button data-auth="reg" aria-pressed="'+reg+'">'+LT("Регистрация","Sign up")+"</button></div>"+
+        '<form id="authForm" class="aform" novalidate>'+(reg?'<label>'+LT("Имя","Name")+'<input type="text" id="aName" autocomplete="nickname" maxlength="40" required><small class="ahint">'+LT("Под этим именем тебя увидят друзья. Поменять его можно в профиле.","Your friends will see this name. You can change it in your profile.")+"</small></label>":"")+
+        '<label>'+LT("Почта","Email")+'<input type="email" id="aEmail" autocomplete="email" required placeholder="name@mail.com"></label>'+
+        pwField(LT("Пароль","Password"),reg?"new-password":"current-password")+rules+
+        (reg?"":'<button type="button" class="alink alink-r" data-auth="forgot">'+LT("Не помню пароль","Forgot password?")+"</button>")+
+        (reg?'<label class="acheck"><input type="checkbox" id="aAccept"><span>'+LT('Я принимаю <button type="button" class="legal-link" data-legal="terms">Условия использования</button> и <button type="button" class="legal-link" data-legal="privacy">Политику конфиденциальности</button>, в том числе использование данных об обучении для персонализации. Иногда мы будем присылать на почту новости платформы и советы по подготовке. Отписаться можно в любой момент.','I accept the <button type="button" class="legal-link" data-legal="terms">Terms of use</button> and the <button type="button" class="legal-link" data-legal="privacy">Privacy policy</button> (in Russian), including the use of learning data for personalisation. We will occasionally email you platform news and preparation tips. You can unsubscribe at any time.')+"</span></label>":"")+
+        '<p class="aerr" id="aErr" role="alert"></p><button class="btn primary big" type="submit" id="aSubmit"'+(reg?" disabled":"")+">"+(reg?LT("Зарегистрироваться","Sign up"):LT("Войти","Log in"))+"</button></form></div>"+right;
+    }
+    el.innerHTML=form;
     el.querySelectorAll("[data-auth]").forEach(b=>b.onclick=()=>{authTab=b.dataset.auth;renderAcct()});
-    $("#authForm").onsubmit=async ev=>{ev.preventDefault();const err=$("#aErr"),btn=$("#aSubmit");err.textContent="";btn.disabled=true;
-      try{const body={email:$("#aEmail").value.trim(),password:$("#aPw").value};if(reg)body.name=$("#aName").value.trim();
-        const j=await api("POST",reg?"/register":"/login",body);adopt(j);if(!reg)toast("👋 Привет, "+j.user.name+"!");
+    el.querySelectorAll("[data-pweye]").forEach(b=>b.onclick=()=>{const i=b.previousElementSibling,show=i.type==="password";i.type=show?"text":"password";b.innerHTML=ic(show?"eyeoff":"eye",18);b.setAttribute("aria-label",show?LT("Скрыть пароль","Hide password"):LT("Показать пароль","Show password"))});
+    const pw=$("#aPw"),rl=$("#pwRules");
+    if(pw&&rl)pw.oninput=()=>PW_RULES.forEach((r,i)=>rl.children[i].classList.toggle("ok",r[0](pw.value)));
+    const acc=$("#aAccept");if(acc)acc.onchange=()=>{$("#aSubmit").disabled=!acc.checked;$("#aErr").textContent=""};
+    $("#authForm").onsubmit=async ev=>{ev.preventDefault();const err=$("#aErr"),btn=$("#aSubmit");err.textContent="";
+      if((reg||reset)&&pw){const bad=PW_RULES.find(r=>!r[0](pw.value));if(bad){rl.classList.add("shake");setTimeout(()=>rl.classList.remove("shake"),400);err.textContent=LT("Пароль пока не подходит: ","Password is not strong enough: ")+LT(bad[1],bad[2]).toLowerCase();pw.focus();return}}
+      if(reg&&!acc.checked){err.textContent=LT("Отметь галочку, что принимаешь условия","Please accept the terms first");return}
+      btn.disabled=true;
+      try{
+        if(forgot){await api("POST","/forgot",{email:$("#aEmail").value.trim()});const ok=$("#aOk");ok.hidden=false;
+          ok.textContent=LT("Если аккаунт с этой почтой есть, письмо уже в пути. Проверь «Входящие» и «Спам». Ссылка работает час.","If an account with this email exists, the email is on its way. Check your inbox and spam. The link works for one hour.");btn.disabled=false;return}
+        let j;
+        if(reset){j=await api("POST","/reset",{token:resetTok,password:pw.value});resetTok="";authTab="login";adopt(j);toast(LT("🔑 Пароль обновлён","🔑 Password updated"),LT("Ты уже в аккаунте","You are logged in"));go("home");return}
+        const body={email:$("#aEmail").value.trim(),password:pw.value};if(reg){body.name=$("#aName").value.trim();body.accept=true}
+        j=await api("POST",reg?"/register":"/login",body);adopt(j);if(!reg)toast("👋 Привет, "+j.user.name+"!");
         if(S.pendingFriend){const c=S.pendingFriend;delete S.pendingFriend;save();addFriend(c)}go("home");if(reg&&!S.tourDone)setTimeout(startTour,350)}
-      catch(e){err.textContent=e.message;btn.disabled=false}};
+      catch(e){err.textContent=e.message;btn.disabled=reg&&!acc.checked}};
     return;
   }
   el.innerHTML='<h1>Аккаунт</h1><div class="acard"><div class="prof-card">'+uava(ME,72)+'<div class="pc-t"><b>'+esc(ME.name)+ownerTag(ME)+"</b><small>"+esc(ME.email)+'</small><small>Код друга: <b class="fcode">'+esc(ME.code)+'</b></small></div><div class="pc-act">'+(isOwner()?'<button class="btn sm primary" data-tab="admin">'+ic("shield",16)+"Админ-панель</button>":"")+'<button class="btn sm" id="syncBtn" title="Сохранить прогресс в аккаунт сейчас">'+ic("refresh",16)+'Синхронизировать</button><button class="btn sm" id="logoutBtn">'+ic("logout",16)+"Выйти</button></div></div>"+
@@ -2600,6 +2677,7 @@ function ldCount(el){
     b.style.minWidth=b.offsetWidth+"px";const t0=performance.now()+250,D=n>100?1600:900;
     (function s(t){const k=Math.max(0,Math.min(1,(t-t0)/D)),v=Math.round(n*(1-Math.pow(1-k,3)));
       b.textContent=k<1?fmt(v):fin;if(k<1&&b.isConnected)requestAnimationFrame(s)})(performance.now());
+    setTimeout(()=>{b.textContent=fin},D+900); // страховка: в фоновой вкладке кадров может не быть
   });
 }
 // живая карточка в первом экране: «Знаю ✓» → +10 XP → переворот на следующее слово
@@ -2611,14 +2689,15 @@ function ldLive(el){
     if(!fc.isConnected){clearInterval(id);return}
     if(document.hidden||art.classList.contains("ld-off"))return;
     const ok=fc.querySelector(".ld-fcb .ok"),xp=el.querySelector(".ld-p2");
-    ok.classList.add("tap");setTimeout(()=>ok.classList.remove("tap"),420);
+    // «Знаю» спокойно темнеет, как при наведении, потом карточка переворачивается
+    ok.classList.add("tap");setTimeout(()=>ok.classList.remove("tap"),1500);
     // rotate/scale — отдельные свойства, поэтому не сбивают CSS-«парение» карточек (оно на transform)
     setTimeout(()=>{if(xp.animate)xp.animate([{scale:1},{scale:1.28},{scale:1}],{duration:600,easing:"cubic-bezier(.3,1.6,.5,1)"});
-      if(fc.animate)fc.animate([{rotate:"x 0deg"},{rotate:"x 90deg"},{rotate:"x 0deg"}],{duration:560,easing:"cubic-bezier(.4,.1,.3,1)"});
+      if(fc.animate)fc.animate([{rotate:"x 0deg"},{rotate:"x 90deg"},{rotate:"x 0deg"}],{duration:900,easing:"cubic-bezier(.45,.05,.35,1)"});
       setTimeout(()=>{i=(i+1)%LD_W.length;n=n%20+1;const w=LD_W[i],nx=LD_W[(i+1)%LD_W.length];
         fc.querySelector("b").innerHTML=word(w);fc.querySelector("span").textContent=tr(w);
-        if(bk){bk.querySelector("b").innerHTML=word(nx);bk.querySelector("small").textContent=n+" / 20"}},280)},380);
-  },3800);
+        if(bk){bk.querySelector("b").innerHTML=word(nx);bk.querySelector("small").textContent=n+" / 20"}},450)},1100);
+  },6000);
 }
 // конфетти из немецких букв и артиклей — из точки (x, y) на экране
 function letterBurst(x,y,big){

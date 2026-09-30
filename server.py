@@ -17,10 +17,17 @@
 Страница отдаётся сжатой (gzip) с ETag; словарь (BOOK) вынесен в /assets/book.<хэш>.js и кэшируется
 браузером навсегда. Иконки и картинка для соцсетей — в папке static/.
 
+Письма (восстановление пароля) уходят через SMTP, если он настроен:
+  SMTP_HOST=smtp.… SMTP_PORT=587 SMTP_USER=… SMTP_PASS=… MAIL_FROM="EPDeutsch <noreply@…>"
+  или файл db/smtp.json с теми же ключами (host, port, user, pass, from).
+Без SMTP ссылка для сброса пароля печатается в консоль сервера (удобно для проверки на своём компьютере).
+Ссылку в письме строим от SITE_URL; без него письма отправляются только при открытии через localhost.
+
 Только стандартная библиотека Python. База — db/unisicher.db (SQLite).
 Пароли хранятся как PBKDF2-SHA256 с солью, сессии — как SHA-256 от токена.
 """
-import gzip, hashlib, hmac, json, os, re, secrets, sqlite3, sys, time, urllib.parse, urllib.request
+import gzip, hashlib, hmac, json, os, re, secrets, smtplib, sqlite3, ssl, sys, threading, time, urllib.parse, urllib.request
+from email.message import EmailMessage
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
@@ -37,6 +44,8 @@ KEY_FILE = os.path.join(ROOT, "db", "deepl.key")
 # за HTTPS-прокси (Caddy/nginx) на хостинге: PROXY=1 — брать IP из X-Forwarded-For и ставить cookie с Secure
 PROXY = os.environ.get("PROXY") == "1"
 OWNER_FILE = os.path.join(ROOT, "db", "owner.txt")
+SMTP_FILE = os.path.join(ROOT, "db", "smtp.json")
+RESET_MINUTES = 60
 
 
 def owner_emails():
@@ -66,6 +75,11 @@ CREATE TABLE IF NOT EXISTS users(
   created INTEGER NOT NULL
 );
 CREATE TABLE IF NOT EXISTS sessions(
+  token TEXT PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  expires INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS resets(
   token TEXT PRIMARY KEY,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   expires INTEGER NOT NULL
@@ -384,6 +398,7 @@ def init_db():
         c.execute("PRAGMA journal_mode=WAL")
         c.executescript(SCHEMA)
         c.execute("DELETE FROM sessions WHERE expires<?", (int(time.time()),))
+        c.execute("DELETE FROM resets WHERE expires<?", (int(time.time()),))
         cols = {r[1] for r in c.execute("PRAGMA table_info(users)")}
         for col, typ in (("last_seen", "INTEGER"), ("tz", "TEXT"), ("device", "TEXT"), ("lang", "TEXT")):
             if col not in cols:
@@ -511,6 +526,59 @@ def hash_pw(pw, salt=None):
 def check_pw(pw, stored):
     salt, h = stored.split("$")
     return hmac.compare_digest(hash_pw(pw, bytes.fromhex(salt)).split("$")[1], h)
+
+
+def pw_problem(pw):
+    """Правила пароля (такие же проверяет форма на сайте). Возвращает текст ошибки или None."""
+    if len(pw) < 8:
+        return "Пароль должен быть не короче 8 символов"
+    if len(pw) > 200:
+        return "Слишком длинный пароль"
+    if not any(ch.isupper() for ch in pw):
+        return "Добавь в пароль хотя бы одну заглавную букву"
+    if not any(not ch.isalnum() and not ch.isspace() for ch in pw):
+        return "Добавь в пароль хотя бы один знак, например ! ? # или %"
+    return None
+
+
+# ---------- почта ----------
+def smtp_conf():
+    conf = {}
+    if os.path.exists(SMTP_FILE):
+        with open(SMTP_FILE, encoding="utf-8") as f:
+            conf = json.load(f)
+    for k, e in (("host", "SMTP_HOST"), ("port", "SMTP_PORT"), ("user", "SMTP_USER"), ("pass", "SMTP_PASS"), ("from", "MAIL_FROM")):
+        if os.environ.get(e):
+            conf[k] = os.environ[e]
+    return conf if conf.get("host") else None
+
+
+def send_mail(to, subject, text):
+    """Отправляет письмо в фоне. Без настроенного SMTP печатает его в консоль сервера."""
+    conf = smtp_conf()
+    if not conf:
+        sys.stderr.write("\n[почта не настроена] письмо для %s\nТема: %s\n%s\n\n" % (to, subject, text))
+        return
+
+    def run():
+        try:
+            msg = EmailMessage()
+            msg["Subject"], msg["To"] = subject, to
+            msg["From"] = conf.get("from") or conf.get("user")
+            msg.set_content(text)
+            port = int(conf.get("port") or 587)
+            if port == 465:
+                srv = smtplib.SMTP_SSL(conf["host"], port, context=ssl.create_default_context(), timeout=20)
+            else:
+                srv = smtplib.SMTP(conf["host"], port, timeout=20)
+                srv.starttls(context=ssl.create_default_context())
+            with srv:
+                if conf.get("user"):
+                    srv.login(conf["user"], conf.get("pass", ""))
+                srv.send_message(msg)
+        except Exception as e:  # noqa: BLE001
+            sys.stderr.write("Письмо для %s не отправлено: %r\n" % (to, e))
+    threading.Thread(target=run, daemon=True).start()
 
 
 def sha(tok):
@@ -785,10 +853,11 @@ class Handler(BaseHTTPRequestHandler):
                 raise ApiError(400, "Введи имя")
             if not EMAIL_RE.match(email):
                 raise ApiError(400, "Проверь адрес почты")
-            if len(pw) < 8:
-                raise ApiError(400, "Пароль должен быть не короче 8 символов")
-            if len(pw) > 200:
-                raise ApiError(400, "Слишком длинный пароль")
+            bad = pw_problem(pw)
+            if bad:
+                raise ApiError(400, bad)
+            if d.get("accept") is not True:
+                raise ApiError(400, "Чтобы создать аккаунт, прими условия использования")
             if c.execute("SELECT 1 FROM users WHERE email=?", (email,)).fetchone():
                 raise ApiError(409, "Аккаунт с этой почтой уже есть, просто войди")
             cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created) VALUES(?,?,?,?,?,?)",
@@ -812,6 +881,51 @@ class Handler(BaseHTTPRequestHandler):
             FAILS.pop(key, None)
             cookie = self.start_session(c, u["id"])
             pr = c.execute("SELECT data,updated FROM progress WHERE user_id=?", (u["id"],)).fetchone()
+            return self.send_json(200, {"user": user_json(u),
+                                        "progress": json.loads(pr["data"]) if pr else None,
+                                        "updated": pr["updated"] if pr else 0}, cookie)
+
+        if method == "POST" and p == "/forgot":
+            # ответ всегда одинаковый, чтобы по нему нельзя было узнать, есть ли такой аккаунт
+            email = s_str(self.read_json().get("email"), 254).lower()
+            key = self.client_ip() + "|forgot"
+            if too_many(key):
+                raise ApiError(429, "Слишком много попыток. Подожди 10 минут")
+            FAILS.setdefault(key, []).append(time.time())
+            if not EMAIL_RE.match(email):
+                raise ApiError(400, "Проверь адрес почты")
+            u = c.execute("SELECT id,name FROM users WHERE email=?", (email,)).fetchone()
+            base = self.site_url()
+            host = urlparse(base).hostname or ""
+            if u and (SITE_URL or host in ("localhost", "127.0.0.1", "::1")):
+                tok = secrets.token_urlsafe(32)
+                c.execute("DELETE FROM resets WHERE user_id=?", (u["id"],))
+                c.execute("INSERT INTO resets(token,user_id,expires) VALUES(?,?,?)", (sha(tok), u["id"], now + RESET_MINUTES * 60))
+                send_mail(email, "EPDeutsch: новый пароль",
+                          "Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\n"
+                          "Чтобы придумать новый, открой ссылку:\n\n%s/#reset=%s\n\n"
+                          "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, "
+                          "пароль останется прежним.\n\nEPDeutsch" % (u["name"], base, tok, RESET_MINUTES))
+            elif u:
+                sys.stderr.write("Сброс пароля для %s не отправлен: задай SITE_URL, чтобы ссылка в письме вела на твой сайт\n" % email)
+            return self.send_json(200, {"ok": True})
+
+        if method == "POST" and p == "/reset":
+            d = self.read_json()
+            tok, pw = s_str(d.get("token"), 100), str(d.get("password") or "")
+            r = c.execute("SELECT user_id FROM resets WHERE token=? AND expires>?", (sha(tok), now)).fetchone()
+            if not r:
+                raise ApiError(400, "Ссылка устарела или уже использована. Запроси новую")
+            bad = pw_problem(pw)
+            if bad:
+                raise ApiError(400, bad)
+            uid = r["user_id"]
+            c.execute("UPDATE users SET pw=? WHERE id=?", (hash_pw(pw), uid))
+            c.execute("DELETE FROM resets WHERE user_id=?", (uid,))
+            c.execute("DELETE FROM sessions WHERE user_id=?", (uid,))  # старые входы на других устройствах закрываем
+            cookie = self.start_session(c, uid)
+            u = c.execute("SELECT * FROM users WHERE id=?", (uid,)).fetchone()
+            pr = c.execute("SELECT data,updated FROM progress WHERE user_id=?", (uid,)).fetchone()
             return self.send_json(200, {"user": user_json(u),
                                         "progress": json.loads(pr["data"]) if pr else None,
                                         "updated": pr["updated"] if pr else 0}, cookie)

@@ -601,69 +601,146 @@ def _esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-def mail_html(base, preview, icon, title, body, button, link, note="", unsub=""):
-    """Фирменное письмо: карточка с кнопкой и футер со ссылками. Таблицы и стили в строке, так его понимают почтовые программы."""
+ART_COL = {"der": "#3D7BF7", "die": "#E8505B", "das": "#18AE79"}
+
+
+def pick_word(c=None, uid=None):
+    """Слово для письма: самое трудное слово человека (чаще всего «Не знаю»), иначе случайное существительное с артиклем."""
+    bw = book_words()["w"]
+    if c is not None and uid:
+        r = c.execute("SELECT data FROM progress WHERE user_id=?", (uid,)).fetchone()
+        if r:
+            miss = {k: v for k, v in progress_summary(json.loads(r["data"]))["l"].items() if isinstance(v, int) and k in bw}
+            if miss:
+                de, ru = bw[max(miss, key=miss.get)]
+                return de.replace("*", "").strip(), ru, True
+    pool = [v for v in bw.values() if v[0].split(" ")[0] in ART_COL and len(v[0]) <= 24 and len(v[1]) <= 42]
+    if not pool:
+        return "die Hochschule", "вуз", False
+    de, ru = secrets.choice(pool)
+    return de.replace("*", "").strip(), ru, False
+
+
+def word_card(label, de, ru, hint=""):
+    """Карточка слова как в тренажёре: цветная полоска рода, артикль цветом, перевод."""
+    art = de.split(" ")[0]
+    col = ART_COL.get(art, "#7E6FB8")
+    word = ('<span style="color:%s">%s</span> %s' % (col, _esc(art), _esc(de[len(art):].strip()))) if art in ART_COL else _esc(de)
+    return ('<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="margin:24px 0 0;border-radius:18px;background:#F6F7FB;overflow:hidden"><tr>'
+            '<td style="width:6px;background:%s"></td><td style="padding:18px 20px">'
+            '<div style="font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8A93AD">%s</div>'
+            '<div style="font-size:24px;font-weight:800;margin:6px 0 2px;color:#282E3E">%s</div>'
+            '<div style="font-size:15px;color:#586380">%s</div>%s</td></tr></table>') % (
+        col, _esc(label), word, _esc(ru), ('<div style="font-size:13px;color:#8A93AD;margin-top:8px">%s</div>' % hint) if hint else "")
+
+
+def stat_row(items):
+    """Ряд плиток с цифрами: [(число, подпись, цвет)]."""
+    cells = "".join('<td width="%d%%" style="padding:0 5px"><div style="background:%s;border-radius:16px;padding:14px 10px;text-align:center">'
+                    '<div style="font-size:24px;font-weight:800;color:#282E3E;line-height:1.2">%s</div>'
+                    '<div style="font-size:12px;font-weight:700;color:#586380;margin-top:2px">%s</div></div></td>' % (100 // len(items), bg, v, _esc(k))
+                    for v, k, bg in items)
+    return '<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="margin:22px 0 0"><tr>%s</tr></table>' % cells
+
+
+def steps_list(items):
+    """Нумерованные шаги с цветными кружками."""
+    cols = ["#7E6FB8", "#3D7BF7", "#18AE79", "#E8505B"]
+    rows = "".join('<tr><td valign="top" style="padding:0 12px 12px 0"><div style="width:28px;height:28px;border-radius:50%%;background:%s;color:#fff;'
+                   'font-weight:800;font-size:14px;line-height:28px;text-align:center">%s</div></td>'
+                   '<td valign="top" style="padding:3px 0 12px;font-size:15px;line-height:1.5;color:#586380">%s</td></tr>' % (cols[n % 4], "✓" if done else n + 1, txt)
+                   for n, (txt, done) in enumerate(items))
+    return '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0 0">%s</table>' % rows
+
+
+def mail_html(base, preview, icon, title, body, button, link, note="", unsub="", kicker="", extra="", grad=("#7E6FB8", "#8B5CF6")):
+    """Фирменное письмо: цветная шапка с артиклями, текст, кнопка, дополнительные блоки и футер.
+    Только таблицы и стили в строке, так письмо одинаково выглядит в Gmail, Outlook и почте на телефоне."""
+    chips = "".join('<span style="display:inline-block;margin:0 4px 6px 0;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.18);'
+                    'color:#fff;font-size:12px;font-weight:800;letter-spacing:.02em">%s</span>' % w for w in ("der", "die", "das", "ä ö ü ß"))
     foot_links = ('<a href="%s" style="color:#6C5CAC;text-decoration:none;font-weight:700">Открыть EPDeutsch</a>'
                   ' &nbsp;·&nbsp; <a href="%s/terms" style="color:#8A93AD">Условия</a>'
                   ' &nbsp;·&nbsp; <a href="%s/privacy" style="color:#8A93AD">Конфиденциальность</a>') % (_esc(base), _esc(base), _esc(base))
-    unsub_html = ('<br><a href="%s" style="color:#8A93AD">Отписаться от таких писем</a>' % _esc(unsub)) if unsub else ""
+    unsub_html = ('<br><a href="%s" style="color:#8A93AD">Отписаться от напоминаний и новостей</a>' % _esc(unsub)) if unsub else ""
     return """<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light"><title>%(title)s</title></head>
-<body style="margin:0;padding:0;background:#F6F7FB;font-family:Manrope,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#282E3E">
-<div style="display:none;max-height:0;overflow:hidden">%(preview)s</div>
-<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:#F6F7FB"><tr><td align="center" style="padding:32px 14px">
-<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="max-width:520px">
-<tr><td style="padding:0 6px 18px"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>%(title)s</title></head>
+<body style="margin:0;padding:0;background:#EEF0F7;font-family:Manrope,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#282E3E">
+<div style="display:none;max-height:0;overflow:hidden">%(preview)s&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:#EEF0F7"><tr><td align="center" style="padding:28px 12px 36px">
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="max-width:540px">
+<tr><td style="padding:0 6px 16px"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
 <td style="background:#7E6FB8;border-radius:10px;width:34px;height:34px;text-align:center;font-weight:800;font-size:19px;color:#fff">D</td>
 <td style="padding-left:10px;font-size:21px;font-weight:800;letter-spacing:-.02em">EP<span style="color:#6C5CAC">Deutsch</span></td></tr></table></td></tr>
-<tr><td style="background:#ffffff;border-radius:22px;box-shadow:0 8px 30px rgba(40,46,62,.08);overflow:hidden">
-<div style="height:6px;background:#7E6FB8;background:linear-gradient(90deg,#7E6FB8,#8B5CF6)"></div>
-<div style="padding:34px 32px 30px">
-<div style="width:52px;height:52px;border-radius:16px;background:#EFEBFA;text-align:center;line-height:52px;font-size:26px">%(icon)s</div>
-<h1 style="margin:18px 0 10px;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.01em">%(title)s</h1>
-<div style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#586380">%(body)s</div>
-<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:999px;background:#7E6FB8">
-<a href="%(link)s" style="display:inline-block;padding:15px 30px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">%(button)s</a></td></tr></table>
-%(note)s
-<div style="margin:24px 0 0;padding:14px 16px;background:#F6F7FB;border-radius:14px;font-size:12.5px;line-height:1.5;color:#586380">Кнопка не нажимается? Скопируй ссылку в браузер:<br><a href="%(link)s" style="color:#6C5CAC;word-break:break-all">%(link)s</a></div>
+<tr><td style="background:#ffffff;border-radius:26px;box-shadow:0 12px 40px rgba(40,46,62,.10);overflow:hidden">
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0"><tr><td bgcolor="%(g1)s" style="background:%(g1)s;background-image:linear-gradient(135deg,%(g1)s,%(g2)s);padding:30px 32px 26px;color:#ffffff">
+<table role="presentation" width="100%%" cellpadding="0" cellspacing="0"><tr><td valign="top">
+<div style="font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.85">%(kicker)s</div>
+<h1 style="margin:10px 0 14px;font-size:27px;line-height:1.2;font-weight:800;letter-spacing:-.01em;color:#ffffff">%(title)s</h1>
+<div>%(chips)s</div></td>
+<td valign="top" align="right" style="width:74px"><div style="width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.2);text-align:center;line-height:64px;font-size:32px">%(icon)s</div></td></tr></table>
+</td></tr></table>
+<div style="padding:28px 32px 32px">
+<div style="font-size:16px;line-height:1.65;color:#586380">%(body)s</div>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0 0"><tr><td bgcolor="#7E6FB8" style="border-radius:999px;background:#7E6FB8;box-shadow:0 10px 24px -8px rgba(126,111,184,.7)">
+<a href="%(link)s" style="display:inline-block;padding:16px 32px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">%(button)s &rarr;</a></td></tr></table>
+%(extra)s%(note)s
+<p style="margin:26px 0 0;font-size:15px;line-height:1.6;color:#586380">Viel Erfolg! 🍀<br><b style="color:#282E3E">Команда EPDeutsch</b></p>
+<div style="margin:24px 0 0;padding:14px 16px;border:1px dashed #D9DDE8;border-radius:14px;font-size:12.5px;line-height:1.5;color:#8A93AD">Кнопка не нажимается? Скопируй ссылку в браузер:<br><a href="%(link)s" style="color:#6C5CAC;word-break:break-all">%(link)s</a></div>
 </div></td></tr>
 <tr><td style="padding:22px 10px 0;text-align:center;font-size:12.5px;line-height:1.7;color:#8A93AD">
 %(foot)s<br>Это письмо пришло, потому что на EPDeutsch есть аккаунт с этой почтой.%(unsub)s<br>© EPDeutsch · подготовка к Ergänzungsprüfung Deutsch · Вена</td></tr>
 </table></td></tr></table></body></html>""" % {"title": _esc(title), "preview": _esc(preview), "icon": icon, "body": body, "button": _esc(button),
-                                                "link": _esc(link), "note": note, "foot": foot_links, "unsub": unsub_html}
+                                                "link": _esc(link), "note": note, "foot": foot_links, "unsub": unsub_html, "kicker": _esc(kicker),
+                                                "extra": extra, "chips": chips, "g1": grad[0], "g2": grad[1]}
 
 
 def reset_email(name, base, link, minutes):
     text = ("Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\nЧтобы придумать новый, открой ссылку:\n\n%s\n\n"
             "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.\n\nEPDeutsch"
             % (name, link, minutes))
-    html = mail_html(base, "Ссылка, чтобы придумать новый пароль. Работает %d минут." % minutes, "🔑", "Придумай новый пароль",
+    note = ('<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="margin:24px 0 0"><tr>'
+            '<td style="background:#FFF6E0;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.55;color:#6B5A1E">'
+            '⏳ Ссылка работает <b>%d минут</b> и только один раз.<br>🔒 Не просил(а) сбросить пароль? Просто удали письмо, пароль останется прежним.</td></tr></table>') % minutes
+    html = mail_html(base, "Ссылка, чтобы придумать новый пароль. Работает %d минут." % minutes, "🔑", "Придумаем новый пароль",
                      "Привет, %s! Кто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch. Нажми на кнопку, и откроется страница, где можно задать новый." % _esc(name),
-                     "Задать новый пароль", link,
-                     '<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380">Ссылка работает <b style="color:#282E3E">%d минут</b> и только один раз. '
-                     "Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.</p>" % minutes)
+                     "Задать новый пароль", link, note=note, kicker="Восстановление доступа", grad=("#6C5CAC", "#3D7BF7"))
     return text, html
 
 
-def welcome_email(name, base, link):
+def welcome_email(name, base, link, word=None):
+    de, ru, _ = word or ("die Hochschule", "вуз", False)
     text = ("Привет, %s!\n\nДобро пожаловать в EPDeutsch. Подтверди, пожалуйста, почту, чтобы мы знали, что она твоя:\n\n%s\n\n"
-            "Что дальше: добавь первую тему на главной и позанимайся 15 минут. Мы сами подскажем, что повторить завтра.\n\nУдачи на EPD!\nEPDeutsch" % (name, link))
+            "Твой старт: 1) подтверди почту, 2) добавь первую тему на главной, 3) позанимайся 15 минут.\n\nСлово дня: %s (%s)\n\nViel Erfolg!\nКоманда EPDeutsch"
+            % (name, link, de, ru))
+    extra = steps_list([("Создать аккаунт", True), ("<b style=\"color:#282E3E\">Подтвердить почту</b>: кнопка выше, это одна секунда", False),
+                        ("Добавить первую тему на главной, например «Учёба и наука»", False), ("Позаниматься 15 минут. Дальше мы сами подскажем, что повторить", False)])
+    extra += word_card("Слово дня", de, ru, "Выучи его прямо сейчас, завтра спросим 😉")
     html = mail_html(base, "Подтверди почту и начни готовиться к EPD.", "👋", "Добро пожаловать в EPDeutsch!",
-                     "Привет, %s! Рады, что ты с нами. Подтверди, пожалуйста, почту одним нажатием, чтобы мы знали, что она твоя "
-                     "и могли вернуть доступ, если забудешь пароль." % _esc(name), "Подтвердить почту", link,
-                     '<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380"><b style="color:#282E3E">Что дальше:</b> добавь первую тему на главной '
-                     "и позанимайся 15 минут. Остальное мы возьмём на себя: подскажем, что повторить завтра, и напомним, если пропадёшь.</p>")
+                     "Привет, %s! Рады, что ты с нами. Подтверди, пожалуйста, почту одним нажатием: так мы будем знать, что она твоя, "
+                     "и сможем вернуть доступ, если забудешь пароль." % _esc(name), "Подтвердить почту", link,
+                     kicker="Твой путь к EPD начинается", extra=extra)
     return text, html
 
 
-def nudge_email(name, base, days, streak, unsub):
-    lost = "Твоя серия %d %s подряд прервалась, но её легко начать заново." % (streak, "день" if streak % 10 == 1 and streak % 100 != 11 else "дней") if streak else ""
-    text = ("Привет, %s!\n\nТы не занимался(ась) уже %d дня. Слова начинают забываться именно сейчас, поэтому 10 минут сегодня сэкономят часы потом.\n%s\n\n"
-            "Продолжить: %s\n\nОтписаться от напоминаний: %s\n\nEPDeutsch" % (name, days, lost, base, unsub))
+def ru_plural(n, one, few, many):
+    n = abs(n) % 100
+    return many if 11 <= n <= 19 else one if n % 10 == 1 else few if 2 <= n % 10 <= 4 else many
+
+
+def nudge_email(name, base, days, streak, unsub, word=None):
+    dw = ru_plural(days, "день", "дня", "дней")
+    de, ru, hard = word or ("die Hochschule", "вуз", False)
+    lost = ("Серия в %d дн. прервалась, но её легко начать заново." % streak) if streak else ""
+    text = ("Привет, %s!\n\nТы не занимался(ась) уже %d %s. Слова начинают забываться именно сейчас, поэтому 10 минут сегодня сэкономят часы потом.\n%s\n\n"
+            "Помнишь это слово? %s (%s)\n\nПродолжить: %s\n\nОтписаться от напоминаний: %s\n\nКоманда EPDeutsch" % (name, days, dw, lost, de, ru, base, unsub))
+    extra = stat_row([(str(days), dw + " без занятий", "#FDE9EA"), ("🔥 %d" % streak if streak else "🔥 0", "была серия" if streak else "серия ждёт", "#FFF0E1"),
+                      ("10", "минут хватит", "#E3F7EF")])
+    extra += word_card("Твоё трудное слово" if hard else "Помнишь это слово?", de, ru,
+                       "Ты чаще всего спотыкался(ась) на нём. Самое время закрепить." if hard else "Если вспомнил(а) с артиклем, ты молодец. Если нет, самое время повторить.")
     html = mail_html(base, "10 минут сегодня, и слова не забудутся.", "⏰", "Слова скучают по тебе",
-                     "Привет, %s! Ты не занимался(ась) уже <b style=\"color:#282E3E\">%d дня</b>. Как раз сейчас слова начинают забываться, "
-                     "поэтому 10 минут повторения сегодня сэкономят часы потом. %s" % (_esc(name), days, _esc(lost)),
-                     "Продолжить подготовку", base, unsub=unsub)
+                     "Привет, %s! Ты не занимался(ась) уже <b style=\"color:#282E3E\">%d %s</b>. Как раз сейчас слова начинают забываться, "
+                     "поэтому 10 минут повторения сегодня сэкономят часы потом. %s" % (_esc(name), days, dw, _esc(lost)),
+                     "Повторить 10 минут", base, unsub=unsub, kicker="Мы по тебе соскучились", extra=extra, grad=("#F28C28", "#E8505B"))
     return text, html
 
 
@@ -719,7 +796,7 @@ def send_welcome(c, uid, name, email, base):
     tok = secrets.token_urlsafe(32)
     c.execute("DELETE FROM verifies WHERE user_id=?", (uid,))
     c.execute("INSERT INTO verifies(token,user_id,expires) VALUES(?,?,?)", (sha(tok), uid, int(time.time()) + 14 * 86400))
-    text, html = welcome_email(name, base, "%s/#verify=%s" % (base, tok))
+    text, html = welcome_email(name, base, "%s/#verify=%s" % (base, tok), pick_word())
     send_mail(email, "Добро пожаловать в EPDeutsch! Подтверди почту", text, html)
 
 
@@ -738,7 +815,7 @@ def reminder_loop():
                                      (now - 30 * 86400, now - 3 * 86400)).fetchall()
                     for r in rows:
                         un = unsub_link(SITE_URL, r["id"])
-                        text, html = nudge_email(r["name"], SITE_URL, (now - r["updated"]) // 86400, r["streak"] or 0, un)
+                        text, html = nudge_email(r["name"], SITE_URL, (now - r["updated"]) // 86400, r["streak"] or 0, un, pick_word(c, r["id"]))
                         send_mail(r["email"], "EPDeutsch: слова скучают по тебе", text, html, unsub=un)
                         c.execute("UPDATE users SET last_nudge=? WHERE id=?", (now, r["id"]))
         except Exception as e:  # noqa: BLE001

@@ -950,6 +950,7 @@ body.focus .tabbar{display:none!important}
 .pr-res ul{margin:8px 0 0;padding-left:20px}.pr-res li{margin:4px 0}
 .pr-ph{display:inline-block;height:10px;border-radius:6px;background:var(--panel2);vertical-align:middle}
 .pr-topics{margin-bottom:14px}
+.pr-lbl{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
 .pr-topics .chip[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft);color:var(--link)}
 .pr-chat{display:flex;flex-direction:column;gap:10px;min-height:220px;max-height:52vh;overflow-y:auto;padding:4px 2px 8px}
 .pr-msg{max-width:82%;padding:10px 14px;border-radius:18px;line-height:1.5;font-size:15px;position:relative}
@@ -1691,7 +1692,7 @@ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random
 // ---------- хранилище ----------
 const KEY="usd3-v1";
 const DEF=()=>({v:1,b:{},sel:["1.1/s1"],mode:"de",tr:{},gr:{},own:[],theme:"",recent:[],folders:[],usets:[],hidden:["c1","c2","c3","c4","c5","c6"],minGoal:30,voice:"",rate:.95,
-  ms:{},l:{},days:{},xp:0,ach:{},goal:20,bestStreak:0,bestCombo:0,rounds:0,perfect:0,navFold:false,openF:null});
+  ms:{},l:{},pw:{},days:{},xp:0,ach:{},goal:20,bestStreak:0,bestCombo:0,rounds:0,perfect:0,navFold:false,openF:null});
 let S=DEF();
 try{const o=JSON.parse(localStorage.getItem(KEY)||"null");if(o&&o.v===1)S=Object.assign(S,o)}catch(e){}
 if(S.mode==="mix")S.mode="smart";
@@ -2725,7 +2726,7 @@ $("#tourBtn").onclick=()=>{S.tourDone=0;startTour()};
 $("#expBtn").onclick=async()=>{const txt=JSON.stringify(S);try{await navigator.clipboard.writeText(txt);$("#expMsg").textContent="Скопировано ("+Math.round(txt.length/1024)+" КБ)"}catch(e){$("#impTxt").value=txt;$("#impTxt").select();$("#expMsg").textContent="Буфер недоступен: код вставлен в поле ниже, скопируй его вручную"}};
 function applyState(o,keepAcct){const acct=S.acct,dev={theme:S.theme,voice:S.voice,rate:S.rate,navHide:S.navHide};S=Object.assign(DEF(),o,dev);if(keepAcct)S.acct=acct;rebuildUser();sel=new Set(S.sel.filter(k=>SETS.some(x=>x.key===k)));if(!sel.size){const k=(SECS[S.cur]||BOOK[0]).sets[0].key;sel.add(k)}curSec=[...sel][0].split("/")[0];if(!SECS[curSec])curSec=BOOK[0].id;mode=S.mode||"de";applyTheme();renderListSel();renderAll();start()}
 $("#impBtn").onclick=()=>{try{const o=JSON.parse($("#impTxt").value);if(!o||o.v!==1||typeof o.b!=="object")throw 0;applyState(o,true);save();renderProg();$("#impMsg").textContent="Готово: прогресс загружен"}catch(e){$("#impMsg").textContent="Не получилось: это не код прогресса"}};
-$("#resetBtn").onclick=()=>{if(confirm("Удалить весь прогресс, XP, серию и достижения в этом браузере? Свои наборы и папки останутся.")){Object.assign(S,{b:{},tr:{},gr:{},own:[],ms:{},l:{},days:{},xp:0,ach:{},bestStreak:0,bestCombo:0,rounds:0,perfect:0});save();renderAll();renderProg();start()}};
+$("#resetBtn").onclick=()=>{if(confirm("Удалить весь прогресс, XP, серию и достижения в этом браузере? Свои наборы и папки останутся.")){Object.assign(S,{b:{},tr:{},gr:{},own:[],ms:{},l:{},pw:{},days:{},xp:0,ach:{},bestStreak:0,bestCombo:0,rounds:0,perfect:0});save();renderAll();renderProg();start()}};
 
 // ---------- аккаунт, друзья, общие наборы (нужен server.py) ----------
 const AV=["#7E6FB8","#8B5CF6","#E8505B","#F28C28","#18AE79","#0EA5B7","#E0A800","#282E3E"];
@@ -3506,13 +3507,31 @@ document.addEventListener("click",e=>{
 // ---------- практика: свои предложения и разговор с ИИ ----------
 // Пока заглушка: интерфейс готов, проверка и ответы ИИ появятся, когда подключим сервер (/api/practice/*).
 // Схема: «Пиши» — LanguageTool + Claude Haiku, «Разговор» — распознавание речи в облаке + Haiku + озвучка браузером.
-let prMode="",prWord=null,prTopic=null,prChat=[];
-const PR_FREE=10; // бесплатных проверок в день — число пока для вида
-function prCards(){const secs=new Set(libSecs());return CARDS.filter(c=>secs.has(c.sec)&&!c.verb)}
-function prPick(){const all=prCards();if(!all.length)return null;
-  const seen=all.filter(c=>box(c.id)>=1); // сначала слова, которые уже встречались в карточках
-  const pool=seen.length>=5?seen:all;let c;do{c=pool[Math.floor(Math.random()*pool.length)]}while(pool.length>1&&c===prWord);return c}
+let prMode="",prFmt="",prWord=null,prTopic=null,prChat=[];
+// Слова для «Пиши» — выученные в карточках. Каждое слово после практики возвращается через растущий интервал,
+// так что старые слова время от времени снова попадаются вперемешку с новыми. S.pw[id]=[день практики, сколько раз]
+const PR_INT=[0,2,5,12,30,60];
+const prRec=id=>(S.pw||{})[id];
+function prCards(){const secs=new Set(libSecs());return CARDS.filter(c=>secs.has(c.sec))}
+function prPick(){
+  const all=prCards(),t=today();if(!all.length)return null;
+  let pool=all.filter(c=>learned(c.id));
+  if(pool.length<3)pool=all.filter(c=>box(c.id)>=1); // выученных пока мало — берём те, что уже встречались
+  if(pool.length<3)pool=all;
+  const fresh=pool.filter(c=>!prRec(c.id)),
+    old=pool.filter(c=>{const r=prRec(c.id);return r&&t-r[0]>=PR_INT[Math.min(r[1],PR_INT.length-1)]});
+  const rnd=a=>{const b=a.length>1?a.filter(c=>c!==prWord):a;return b[Math.floor(Math.random()*b.length)]};
+  if(old.length&&(!fresh.length||Math.random()<.35))return rnd(old); // примерно каждое третье слово — повторение
+  if(fresh.length)return rnd(fresh);
+  // всё недавно практиковали: берём то, что было давнее всего
+  return pool.slice().sort((a,b)=>prRec(a.id)[0]-prRec(b.id)[0]).find(c=>c!==prWord)||pool[0];
+}
+function prDone(c){if(!S.pw)S.pw={};const r=S.pw[c.id];S.pw[c.id]=[today(),(r?r[1]:0)+1];save()}
 const prDe=c=>c.de.replace(/\*+$/,"");
+function prTag(c){const r=prRec(c.id);
+  if(!learned(c.id))return"Слово из твоих глав";
+  if(!r)return"Выучено в карточках · первая практика";
+  const d=today()-r[0];return"Повторение · практиковал "+(d<1?"сегодня":d+" "+plural(d,"день","дня","дней")+" назад")}
 function renderPractice(){
   const el=$("#p-practice");
   if(!prMode)prMode=lsGet("epd_prac")==="talk"?"talk":"write";
@@ -3526,35 +3545,48 @@ function prWrite(){
   if(!prWord||!prCards().includes(prWord))prWord=prPick();
   const c=prWord,b=$("#prBody");
   if(!c){b.innerHTML='<div class="acard"><p style="margin-top:0">Сначала добавь слова: выбери главы на главной, и здесь появятся слова для практики.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
-  b.innerHTML='<div class="acard pr-word"><div><small>Составь предложение со словом</small><b>'+esc(prDe(c))+'</b><span class="ru">'+esc(c.ru)+"</span>"+
+  b.innerHTML='<div class="acard pr-word"><div><small>'+esc(prTag(c))+'</small><b>'+esc(prDe(c))+'</b><span class="ru">'+esc(c.ru)+"</span>"+
       (c.ex?'<p class="ex">Пример: '+esc(exPlain(c.ex))+"</p>":"")+'</div><div class="pr-acts"><button class="btn sm" id="prSay" aria-label="Послушать слово">'+ic("speaker",16)+'</button><button class="btn sm" id="prNext">'+ic("refresh",16)+"Другое слово</button></div></div>"+
-    '<form class="acard pr-in" id="prForm"><textarea id="prText" maxlength="400" placeholder="Напиши своё предложение по-немецки…" autocomplete="off" spellcheck="false" lang="de"></textarea>'+
-      '<div class="row"><span class="muted" style="font-size:13px">Сегодня осталось проверок: <b>'+PR_FREE+"</b> из "+PR_FREE+'</span><button class="btn primary" type="submit">'+ic("check",16)+"Проверить</button></div></form>"+
+    '<form class="acard pr-in" id="prForm"><label class="muted" for="prText" style="font-size:13.5px;font-weight:700">Составь своё предложение с этим словом</label><textarea id="prText" maxlength="400" placeholder="Напиши предложение по-немецки…" autocomplete="off" spellcheck="false" lang="de"></textarea>'+
+      '<div class="row"><span class="muted" style="font-size:13px">Не копируй пример, придумай свою ситуацию</span><button class="btn primary" type="submit">'+ic("check",16)+"Проверить</button></div></form>"+
     '<div id="prRes"></div>';
   $("#prSay").onclick=()=>speak(prDe(c));
   $("#prNext").onclick=()=>{prWord=prPick();prWrite()};
   $("#prForm").onsubmit=ev=>{ev.preventDefault();const t=$("#prText").value.trim();
     if(!t){toast("Сначала напиши предложение");return}
+    prDone(c);
     // заглушка: показываем, как будет выглядеть ответ проверки
     $("#prRes").innerHTML='<div class="acard pr-res"><h3>'+ic("spark",18)+'Проверка ИИ<span class="pr-soon">скоро</span></h3>'+
       '<div class="mine"><small class="muted">Твой вариант</small><br>'+esc(t)+"</div>"+
       '<div class="fix"><small class="muted">Исправленный вариант</small><br><span class="pr-ph" style="width:70%"></span></div>'+
       '<ul><li><b>Ошибки:</b> где ошибка, что не так и почему, одной строкой по-русски</li><li><b>Слово «'+esc(prDe(c))+'»:</b> подходит ли по смыслу и стилю</li><li><b>Оценка:</b> от 1 до 5 и один совет, как сказать естественнее</li></ul>'+
-      '<p class="muted" style="margin:12px 0 0;font-size:13px">Проверка пока не подключена. Так будет выглядеть ответ.</p></div>'};
+      '<div class="row" style="justify-content:space-between;margin-top:12px;gap:10px;flex-wrap:wrap"><span class="muted" style="font-size:13px">Проверка пока не подключена. Так будет выглядеть ответ.</span><button class="btn sm" id="prNext2">Следующее слово'+ic("chev",16)+"</button></div></div>";
+    $("#prNext2").onclick=()=>{prWord=prPick();prWrite();window.scrollTo(0,0)}};
 }
+// Форматы устной части EPD: презентация, обсуждение, ответы на вопросы. Плюс свободный разговор для разминки.
+const PR_FMT=[
+  ["chat","Свободный разговор",T=>"Hallo! Heute sprechen wir über das Thema „"+T+"“. Was ist für dich persönlich dabei am wichtigsten?"],
+  ["pres","Презентация",T=>"Bitte halten Sie eine kurze Präsentation zum Thema „"+T+"“, etwa zwei bis drei Minuten. Gliedern Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss. Sie können beginnen."],
+  ["disc","Дискуссия",T=>"Diskutieren wir über das Thema „"+T+"“. Ich vertrete die Gegenposition. Sagen Sie zuerst Ihre Meinung und begründen Sie sie."],
+  ["ques","Вопросы экзаменатора",T=>"Ich stelle Ihnen einige Fragen zum Thema „"+T+"“. Erste Frage: Welche Rolle spielt dieses Thema in Ihrem Heimatland?"]
+];
 function prTalk(){
+  if(!prFmt)prFmt=PR_FMT.some(f=>f[0]===lsGet("epd_pracf"))?lsGet("epd_pracf"):"chat";
   const secs=libSecs().map(id=>SECS[id]).filter(s=>!s.user&&!s.verbs);
   if(!prTopic||!secs.includes(SECS[prTopic]))prTopic=(secs.find(s=>s.id===curSec)||secs[0]||{}).id||null;
-  const T=SECS[prTopic],b=$("#prBody");
+  const T=SECS[prTopic],F=PR_FMT.find(f=>f[0]===prFmt),b=$("#prBody");
   if(!T){b.innerHTML='<div class="acard"><p style="margin-top:0">Чтобы начать разговор, добавь главы учебника на главной: темы разговора берутся из них.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
-  if(!prChat.length||prChat.topic!==prTopic){prChat=[{ai:1,t:"Hallo! Heute sprechen wir über das Thema „"+T.title+"“. Was ist für dich persönlich dabei am wichtigsten?"}];prChat.topic=prTopic}
-  b.innerHTML='<div class="chips pr-topics" id="prTopics">'+secs.map(s=>'<button class="chip" data-prt="'+s.id+'" aria-pressed="'+(s.id===prTopic)+'">'+esc(secName(s))+"</button>").join("")+"</div>"+
+  const key=prFmt+"|"+prTopic;
+  if(!prChat.length||prChat.key!==key){prChat=[{ai:1,t:F[2](T.title)}];prChat.key=key}
+  b.innerHTML='<div class="pr-lbl">Формат устной части EPD</div><div class="chips pr-topics" id="prFmts">'+PR_FMT.map(f=>'<button class="chip" data-prf="'+f[0]+'" aria-pressed="'+(f[0]===prFmt)+'">'+f[1]+"</button>").join("")+"</div>"+
+    '<div class="pr-lbl">Тема из учебника</div><div class="chips pr-topics" id="prTopics">'+secs.map(s=>'<button class="chip" data-prt="'+s.id+'" aria-pressed="'+(s.id===prTopic)+'">'+esc(secName(s))+"</button>").join("")+"</div>"+
     '<div class="acard"><div class="pr-chat" id="prChat">'+prChat.map(m=>'<div class="pr-msg '+(m.ai?"ai":"me")+'"><span class="who">'+(m.ai?"Экзаменатор":"Ты")+"</span>"+esc(m.t)+
       (m.ai?'<button class="say" data-prsay="'+esc(m.t)+'" aria-label="Озвучить">'+ic("speaker",16)+"</button>":"")+"</div>").join("")+"</div>"+
     '<form class="pr-talk" id="prTalkF"><button type="button" class="pr-mic" id="prMic" aria-label="Говорить">'+ic("mic",28)+'</button><input type="text" id="prMsg" maxlength="300" placeholder="Ответь по-немецки…" autocomplete="off" lang="de"><button class="btn primary pr-send" type="submit" aria-label="Отправить">'+ic("send",16)+"</button></form></div>"+
     '<div class="acard"><h3 style="margin:0 0 4px">Разбор после разговора<span class="pr-soon">скоро</span></h3><p class="muted" style="margin:0 0 10px">Когда закончишь, ИИ покажет:</p>'+
       '<div class="pr-how"><div><b>3 главные ошибки</b><small>с исправлением и объяснением по-русски</small></div><div><b>Слова из темы</b><small>которые стоило использовать в ответах</small></div><div><b>Оценка</b><small>беглость, грамматика и словарный запас</small></div></div></div>';
   const chatEl=$("#prChat");chatEl.scrollTop=chatEl.scrollHeight;
+  b.querySelectorAll("[data-prf]").forEach(x=>x.onclick=()=>{prFmt=x.dataset.prf;lsSet("epd_pracf",prFmt);prTalk()});
   b.querySelectorAll("[data-prt]").forEach(x=>x.onclick=()=>{prTopic=x.dataset.prt;prTalk()});
   b.querySelectorAll("[data-prsay]").forEach(x=>x.onclick=()=>speak(x.dataset.prsay));
   $("#prMic").onclick=()=>toast("🎙️ Голосовой разговор скоро заработает","Пока можно написать ответ текстом");

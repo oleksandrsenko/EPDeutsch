@@ -890,7 +890,7 @@ body.guest .tright{margin-left:auto}
   .plusbtn,.btn.due{display:none}
   .search{height:40px}
   .search input,select,input[type=text],input[type=email],input[type=password],input[type=search],textarea,.aform input{font-size:16px}
-  body:not(.guest):not(.focus) .tabbar{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:45;grid-template-columns:repeat(5,1fr);background:var(--panel);border-top:1px solid var(--line2);padding:4px max(4px,env(safe-area-inset-right)) calc(4px + env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));box-shadow:0 -6px 20px -12px rgba(40,46,62,.25)}
+  body:not(.guest):not(.focus) .tabbar{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:45;grid-template-columns:repeat(6,1fr);background:var(--panel);border-top:1px solid var(--line2);padding:4px max(4px,env(safe-area-inset-right)) calc(4px + env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));box-shadow:0 -6px 20px -12px rgba(40,46,62,.25)}
   .tabbar a,.tabbar button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;border:0;background:none;border-radius:14px;color:var(--muted);font:inherit;font-size:11px;font-weight:700;text-decoration:none;cursor:pointer;padding:4px 2px}
   .tabbar svg{width:22px;height:22px}
   .tabbar [aria-current="page"]{color:var(--link)}
@@ -930,6 +930,45 @@ body.guest .tright{margin-left:auto}
 }
 @media (max-width:380px){.grid{grid-template-columns:1fr}.streak{padding:6px 8px;font-size:14px}}
 body.focus .tabbar{display:none!important}
+/* ---------- Практика: свои предложения и разговор с ИИ ---------- */
+.prx .pr-sub{margin:0 0 16px;color:var(--muted)}
+.prx .seg{margin-bottom:16px}
+.prx .seg button{display:inline-flex;align-items:center;gap:7px}
+.pr-soon{display:inline-block;background:var(--yellow);color:#282E3E;font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.02em}
+.pr-word{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.pr-word small{color:var(--muted);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.pr-word b{display:block;font-size:24px;font-weight:800;letter-spacing:-.01em;margin:4px 0 2px}
+.pr-word .ru{color:var(--muted)}
+.pr-word .ex{margin:10px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+.pr-acts{display:flex;gap:8px;flex-wrap:wrap;flex:none}
+.pr-in{display:flex;flex-direction:column;gap:10px}
+.pr-in .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pr-res{border-left:4px solid var(--primary)}
+.pr-res h3{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.pr-res .fix{background:var(--good-soft);border-radius:var(--r-sm);padding:10px 12px;margin:8px 0;font-weight:600}
+.pr-res .mine{background:var(--panel2);border-radius:var(--r-sm);padding:10px 12px;margin:8px 0}
+.pr-res ul{margin:8px 0 0;padding-left:20px}.pr-res li{margin:4px 0}
+.pr-ph{display:inline-block;height:10px;border-radius:6px;background:var(--panel2);vertical-align:middle}
+.pr-topics{margin-bottom:14px}
+.pr-topics .chip[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft);color:var(--link)}
+.pr-chat{display:flex;flex-direction:column;gap:10px;min-height:220px;max-height:52vh;overflow-y:auto;padding:4px 2px 8px}
+.pr-msg{max-width:82%;padding:10px 14px;border-radius:18px;line-height:1.5;font-size:15px;position:relative}
+.pr-msg.ai{align-self:flex-start;background:var(--panel2);border-bottom-left-radius:6px}
+.pr-msg.me{align-self:flex-end;background:var(--primary);color:var(--on-primary);border-bottom-right-radius:6px}
+.pr-msg .who{display:block;font-size:11.5px;font-weight:800;opacity:.7;margin-bottom:2px}
+.pr-msg .say{border:0;background:none;color:inherit;cursor:pointer;padding:0 0 0 6px;vertical-align:middle;opacity:.7}
+.pr-msg .say svg{width:16px;height:16px}
+.pr-talk{display:flex;align-items:center;gap:10px;margin-top:10px}
+.pr-talk input{flex:1;min-width:0}
+.pr-mic{flex:none;width:64px;height:64px;border-radius:50%;border:0;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -8px rgba(var(--acc-rgb,126,111,184),.8)}
+.pr-mic svg{width:28px;height:28px}
+.pr-mic:hover{background:var(--primary-h)}
+.pr-send{flex:none}
+.pr-how{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.pr-how div{background:var(--panel2);border-radius:var(--r-sm);padding:12px}
+.pr-how b{display:block;font-size:14px;margin-bottom:4px}
+.pr-how small{color:var(--muted);line-height:1.45;display:block}
+@media (max-width:640px){.pr-topics{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-16px;padding-right:16px}.pr-topics::-webkit-scrollbar{display:none}.pr-topics .chip{flex:none;white-space:nowrap}.pr-how{grid-template-columns:1fr}.pr-word b{font-size:21px}.pr-msg{max-width:90%}.pr-mic{width:56px;height:56px}}
 
 /* ---------- переключатель языка, гид по EPD, блок «как готовиться» ---------- */
 .langsw{display:none;align-items:center;justify-content:center;height:36px;min-width:40px;padding:0 10px;border-radius:999px;font-weight:800;font-size:13px;color:var(--muted);text-decoration:none;border:2px solid var(--line2)}
@@ -1359,6 +1398,7 @@ body.focus .app-foot{display:none}
   <nav class="nav" id="nav" aria-label="Разделы">
     <a href="#" data-tab="home"><i data-ic="home"></i>Главная</a>
     <a href="#" data-tab="learn"><i data-ic="cards"></i>Карточки</a>
+    <a href="#" data-tab="practice"><i data-ic="chat"></i>Практика</a>
     <a href="#" data-tab="list"><i data-ic="list"></i>Все слова</a>
     <a href="#" data-tab="plan"><i data-ic="calendar"></i>Мой план</a>
     <a href="#" data-tab="friends"><i data-ic="users"></i>Друзья</a>
@@ -1415,6 +1455,8 @@ body.focus .app-foot{display:none}
     </section>
 
     <section id="p-plan" class="page plan" hidden></section>
+
+    <section id="p-practice" class="page plan prx" hidden></section>
 
     <section id="p-edit" class="page" hidden></section>
 
@@ -1537,6 +1579,7 @@ body.focus .app-foot{display:none}
 <nav class="tabbar" id="tabbar" aria-label="Быстрая навигация">
   <a href="/" data-tab="home"><i data-ic="home"></i>Главная</a>
   <a href="/" data-tab="learn"><i data-ic="cards"></i>Учить</a>
+  <a href="/" data-tab="practice"><i data-ic="chat"></i>Практика</a>
   <button type="button" data-due id="tbDue"><i data-ic="bell"></i>Повторить<span class="tb-n" id="tbDueN"></span></button>
   <a href="/" data-tab="plan"><i data-ic="calendar"></i>План</a>
   <a href="/" data-tab="prog"><i data-ic="chart"></i>Прогресс</a>
@@ -1585,6 +1628,9 @@ const IP={
   cloud:'<path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8z"/>',
   eyeoff:'<path d="M3 3l18 18"/><path d="M10.6 6.1A10 10 0 0 1 12 6c6 0 9.5 6 9.5 6a17 17 0 0 1-2.6 3.4M6.6 6.6A17 17 0 0 0 2.5 12S6 18 12 18a9 9 0 0 0 4.4-1.1"/>',
   chev:'<path d="M6 9l6 6 6-6"/>',
+  chat:'<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
+  mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/>',
+  send:'<path d="M4 12l16-8-6 16-3-7z"/><path d="M11 13l9-9"/>',
   shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
   focus:'<path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4"/><circle cx="12" cy="12" r="2.5"/>',
   key:'<circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3L20 3M16 7l3 3M14 9l2 2"/>',
@@ -3115,7 +3161,7 @@ const INIT={path:PATH_LEGAL?"/":location.pathname==="/en"?"/en":PATH_GUIDE?"/epd
 const META={
   terms:["Условия использования · EPDeutsch","Условия использования EPDeutsch: аккаунт, авторские права, ответственность и применимое право."],
   privacy:["Политика конфиденциальности · EPDeutsch","Какие данные обрабатывает EPDeutsch, зачем и какие у вас права по DSGVO / GDPR."],
-  home:["Главная · EPDeutsch Wörter"],learn:["Карточки · EPDeutsch Wörter"],list:["Все слова · EPDeutsch Wörter"],plan:["Мой план · EPDeutsch Wörter"],
+  home:["Главная · EPDeutsch Wörter"],learn:["Карточки · EPDeutsch Wörter"],practice:["Практика · EPDeutsch Wörter"],list:["Все слова · EPDeutsch Wörter"],plan:["Мой план · EPDeutsch Wörter"],
   prog:["Прогресс · EPDeutsch Wörter"],friends:["Друзья · EPDeutsch Wörter"],acct:["Аккаунт · EPDeutsch Wörter"],admin:["Админ-панель · EPDeutsch"],edit:["Редактор набора · EPDeutsch Wörter"]
 };
 function syncUrl(t){
@@ -3327,7 +3373,7 @@ const isOwner=()=>!!(ME&&ME.owner),isAdmin=()=>!!(ME&&ME.admin);
 const admDate=d=>new Date(d*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"short",timeZone:"UTC"});
 const admAgo=ts=>{if(!ts)return"—";const m=Math.floor((Date.now()/1000-ts)/60);return m<2?"сейчас":m<60?m+" мин назад":m<1440?Math.floor(m/60)+" ч назад":Math.floor(m/1440)+" дн назад"};
 const admNum=n=>(+n||0).toLocaleString("ru-RU");
-const TAB_RU={home:"Главная",learn:"Карточки",list:"Все слова",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
+const TAB_RU={home:"Главная",learn:"Карточки",practice:"Практика",list:"Все слова",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
 // столбики (+ линия второго ряда); подписи дат — через одну-две, подсказка при наведении
 function admChart(rows,key,opt){
   opt=opt||{};const W=640,H=160,pb=2,pt=8,n=rows.length,bw=W/n,max=Math.max(1,...rows.map(r=>Math.max(r[key],opt.line?r[opt.line]:0)));
@@ -3457,11 +3503,70 @@ document.addEventListener("click",e=>{
   const ur=e.target.closest("[data-admuser]");if(ur&&curTab==="admin"&&!e.target.closest("#dlg")){admUser(+ur.dataset.admuser)}
 });
 
+// ---------- практика: свои предложения и разговор с ИИ ----------
+// Пока заглушка: интерфейс готов, проверка и ответы ИИ появятся, когда подключим сервер (/api/practice/*).
+// Схема: «Пиши» — LanguageTool + Claude Haiku, «Разговор» — распознавание речи в облаке + Haiku + озвучка браузером.
+let prMode="",prWord=null,prTopic=null,prChat=[];
+const PR_FREE=10; // бесплатных проверок в день — число пока для вида
+function prCards(){const secs=new Set(libSecs());return CARDS.filter(c=>secs.has(c.sec)&&!c.verb)}
+function prPick(){const all=prCards();if(!all.length)return null;
+  const seen=all.filter(c=>box(c.id)>=1); // сначала слова, которые уже встречались в карточках
+  const pool=seen.length>=5?seen:all;let c;do{c=pool[Math.floor(Math.random()*pool.length)]}while(pool.length>1&&c===prWord);return c}
+const prDe=c=>c.de.replace(/\*+$/,"");
+function renderPractice(){
+  const el=$("#p-practice");
+  if(!prMode)prMode=lsGet("epd_prac")==="talk"?"talk":"write";
+  el.innerHTML='<h1>Практика</h1><p class="pr-sub">Здесь ты сам пишешь и говоришь по-немецки, а ИИ проверяет и объясняет ошибки по-русски.</p>'+
+    '<div class="seg" id="prSeg"><button data-pr="write" aria-pressed="'+(prMode==="write")+'">'+ic("pencil",16)+'Пиши предложения</button><button data-pr="talk" aria-pressed="'+(prMode==="talk")+'">'+ic("mic",16)+"Разговор с ИИ</button></div>"+
+    '<div id="prBody"></div>';
+  el.querySelectorAll("[data-pr]").forEach(b=>b.onclick=()=>{prMode=b.dataset.pr;lsSet("epd_prac",prMode);renderPractice()});
+  prMode==="talk"?prTalk():prWrite();
+}
+function prWrite(){
+  if(!prWord||!prCards().includes(prWord))prWord=prPick();
+  const c=prWord,b=$("#prBody");
+  if(!c){b.innerHTML='<div class="acard"><p style="margin-top:0">Сначала добавь слова: выбери главы на главной, и здесь появятся слова для практики.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
+  b.innerHTML='<div class="acard pr-word"><div><small>Составь предложение со словом</small><b>'+esc(prDe(c))+'</b><span class="ru">'+esc(c.ru)+"</span>"+
+      (c.ex?'<p class="ex">Пример: '+esc(exPlain(c.ex))+"</p>":"")+'</div><div class="pr-acts"><button class="btn sm" id="prSay" aria-label="Послушать слово">'+ic("speaker",16)+'</button><button class="btn sm" id="prNext">'+ic("refresh",16)+"Другое слово</button></div></div>"+
+    '<form class="acard pr-in" id="prForm"><textarea id="prText" maxlength="400" placeholder="Напиши своё предложение по-немецки…" autocomplete="off" spellcheck="false" lang="de"></textarea>'+
+      '<div class="row"><span class="muted" style="font-size:13px">Сегодня осталось проверок: <b>'+PR_FREE+"</b> из "+PR_FREE+'</span><button class="btn primary" type="submit">'+ic("check",16)+"Проверить</button></div></form>"+
+    '<div id="prRes"></div>';
+  $("#prSay").onclick=()=>speak(prDe(c));
+  $("#prNext").onclick=()=>{prWord=prPick();prWrite()};
+  $("#prForm").onsubmit=ev=>{ev.preventDefault();const t=$("#prText").value.trim();
+    if(!t){toast("Сначала напиши предложение");return}
+    // заглушка: показываем, как будет выглядеть ответ проверки
+    $("#prRes").innerHTML='<div class="acard pr-res"><h3>'+ic("spark",18)+'Проверка ИИ<span class="pr-soon">скоро</span></h3>'+
+      '<div class="mine"><small class="muted">Твой вариант</small><br>'+esc(t)+"</div>"+
+      '<div class="fix"><small class="muted">Исправленный вариант</small><br><span class="pr-ph" style="width:70%"></span></div>'+
+      '<ul><li><b>Ошибки:</b> где ошибка, что не так и почему, одной строкой по-русски</li><li><b>Слово «'+esc(prDe(c))+'»:</b> подходит ли по смыслу и стилю</li><li><b>Оценка:</b> от 1 до 5 и один совет, как сказать естественнее</li></ul>'+
+      '<p class="muted" style="margin:12px 0 0;font-size:13px">Проверка пока не подключена. Так будет выглядеть ответ.</p></div>'};
+}
+function prTalk(){
+  const secs=libSecs().map(id=>SECS[id]).filter(s=>!s.user&&!s.verbs);
+  if(!prTopic||!secs.includes(SECS[prTopic]))prTopic=(secs.find(s=>s.id===curSec)||secs[0]||{}).id||null;
+  const T=SECS[prTopic],b=$("#prBody");
+  if(!T){b.innerHTML='<div class="acard"><p style="margin-top:0">Чтобы начать разговор, добавь главы учебника на главной: темы разговора берутся из них.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
+  if(!prChat.length||prChat.topic!==prTopic){prChat=[{ai:1,t:"Hallo! Heute sprechen wir über das Thema „"+T.title+"“. Was ist für dich persönlich dabei am wichtigsten?"}];prChat.topic=prTopic}
+  b.innerHTML='<div class="chips pr-topics" id="prTopics">'+secs.map(s=>'<button class="chip" data-prt="'+s.id+'" aria-pressed="'+(s.id===prTopic)+'">'+esc(secName(s))+"</button>").join("")+"</div>"+
+    '<div class="acard"><div class="pr-chat" id="prChat">'+prChat.map(m=>'<div class="pr-msg '+(m.ai?"ai":"me")+'"><span class="who">'+(m.ai?"Экзаменатор":"Ты")+"</span>"+esc(m.t)+
+      (m.ai?'<button class="say" data-prsay="'+esc(m.t)+'" aria-label="Озвучить">'+ic("speaker",16)+"</button>":"")+"</div>").join("")+"</div>"+
+    '<form class="pr-talk" id="prTalkF"><button type="button" class="pr-mic" id="prMic" aria-label="Говорить">'+ic("mic",28)+'</button><input type="text" id="prMsg" maxlength="300" placeholder="Ответь по-немецки…" autocomplete="off" lang="de"><button class="btn primary pr-send" type="submit" aria-label="Отправить">'+ic("send",16)+"</button></form></div>"+
+    '<div class="acard"><h3 style="margin:0 0 4px">Разбор после разговора<span class="pr-soon">скоро</span></h3><p class="muted" style="margin:0 0 10px">Когда закончишь, ИИ покажет:</p>'+
+      '<div class="pr-how"><div><b>3 главные ошибки</b><small>с исправлением и объяснением по-русски</small></div><div><b>Слова из темы</b><small>которые стоило использовать в ответах</small></div><div><b>Оценка</b><small>беглость, грамматика и словарный запас</small></div></div></div>';
+  const chatEl=$("#prChat");chatEl.scrollTop=chatEl.scrollHeight;
+  b.querySelectorAll("[data-prt]").forEach(x=>x.onclick=()=>{prTopic=x.dataset.prt;prTalk()});
+  b.querySelectorAll("[data-prsay]").forEach(x=>x.onclick=()=>speak(x.dataset.prsay));
+  $("#prMic").onclick=()=>toast("🎙️ Голосовой разговор скоро заработает","Пока можно написать ответ текстом");
+  $("#prTalkF").onsubmit=ev=>{ev.preventDefault();const t=$("#prMsg").value.trim();if(!t)return;
+    prChat.push({t},{ai:1,t:"(Здесь ответит ИИ-экзаменатор. Разговор пока не подключён.)"});prTalk();$("#prMsg").focus()};
+}
+
 // ---------- навигация ----------
-const TABS=["home","learn","list","plan","prog","edit","acct","friends","land","legal","admin","guide"];
+const TABS=["home","learn","practice","list","plan","prog","edit","acct","friends","land","legal","admin","guide"];
 let curTab="";
 // после перезагрузки возвращаем на ту же вкладку; «edit», «land», «acct» не запоминаем
-const LAST_TABS=["home","learn","list","plan","prog","friends","legal"];
+const LAST_TABS=["home","learn","practice","list","plan","prog","friends","legal"];
 const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}},lsSet=(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}};
 // маска загрузки: снимаем, когда готов аккаунт и страница под ней уже отрисована.
 // держим её чуть дольше: под маской успевают доиграть анимации появления карточек и подгрузиться шрифт (ждём до 1,2 с),
@@ -3496,7 +3601,7 @@ function go(t){
   document.body.classList.remove("navopen");
   if(t!=="learn"){setFocus(false);flushNotes()}
   applyNav();
-  if(t==="home"){homeAnim=fromTab!=="home";renderHome()}if(t==="learn")renderSet();if(t==="edit")renderEditor();
+  if(t==="home"){homeAnim=fromTab!=="home";renderHome()}if(t==="learn")renderSet();if(t==="practice")renderPractice();if(t==="edit")renderEditor();
   if(t==="list")renderList();if(t==="plan")renderPlan();if(t==="prog"){renderProg();renderVoice()}if(t==="acct")renderAcct();if(t==="friends")renderFriends();if(t==="land")renderLand();if(t==="legal")renderLegal();if(t==="admin")renderAdmin();
   window.scrollTo(0,0);
 }

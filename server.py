@@ -602,6 +602,9 @@ def _esc(s):
 
 
 ART_COL = {"der": "#3D7BF7", "die": "#E8505B", "das": "#18AE79"}
+# палитра писем: фирменный фиолетовый + цветовой треугольник от него (триада: 252°, 12°, 132°) и светлые оттенки для фона
+TRIAD = ["#7E6FB8", "#D66D51", "#3FB45C"]
+TRIAD_SOFT = ["#EFEBFA", "#FBEDE9", "#E9FBED"]
 
 
 def pick_word(c=None, uid=None):
@@ -645,11 +648,11 @@ def stat_row(items):
 
 def steps_list(items):
     """Нумерованные шаги с цветными кружками."""
-    cols = ["#7E6FB8", "#3D7BF7", "#18AE79", "#E8505B"]
+    cols = TRIAD
     rows = "".join('<tr><td valign="top" style="padding:0 12px 12px 0"><div style="width:28px;height:28px;border-radius:50%%;background:%s;color:#fff;'
                    'font-weight:800;font-size:14px;line-height:28px;text-align:center">%s</div></td>'
-                   '<td valign="top" style="padding:3px 0 12px;font-size:15px;line-height:1.5;color:#586380">%s</td></tr>' % (cols[n % 4], "✓" if done else n + 1, txt)
-                   for n, (txt, done) in enumerate(items))
+                   '<td valign="top" style="padding:3px 0 12px;font-size:15px;line-height:1.5;color:#586380">%s</td></tr>' % (cols[n % 3], "✓" if done else n + 1, txt)
+                   for n, (txt, done) in enumerate(items))  # noqa: E501
     return '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0 0">%s</table>' % rows
 
 
@@ -699,22 +702,20 @@ def reset_email(name, base, link, minutes):
             "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.\n\nEPDeutsch"
             % (name, link, minutes))
     note = ('<table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="margin:24px 0 0"><tr>'
-            '<td style="background:#FFF6E0;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.55;color:#6B5A1E">'
+            '<td style="background:#EFEBFA;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.55;color:#4B3F86">'
             '⏳ Ссылка работает <b>%d минут</b> и только один раз.<br>🔒 Не просил(а) сбросить пароль? Просто удали письмо, пароль останется прежним.</td></tr></table>') % minutes
     html = mail_html(base, "Ссылка, чтобы придумать новый пароль. Работает %d минут." % minutes, "🔑", "Придумаем новый пароль",
                      "Привет, %s! Кто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch. Нажми на кнопку, и откроется страница, где можно задать новый." % _esc(name),
-                     "Задать новый пароль", link, note=note, kicker="Восстановление доступа", grad=("#6C5CAC", "#3D7BF7"))
+                     "Задать новый пароль", link, note=note, kicker="Восстановление доступа")
     return text, html
 
 
-def welcome_email(name, base, link, word=None):
-    de, ru, _ = word or ("die Hochschule", "вуз", False)
+def welcome_email(name, base, link):
     text = ("Привет, %s!\n\nДобро пожаловать в EPDeutsch. Подтверди, пожалуйста, почту, чтобы мы знали, что она твоя:\n\n%s\n\n"
-            "Твой старт: 1) подтверди почту, 2) добавь первую тему на главной, 3) позанимайся 15 минут.\n\nСлово дня: %s (%s)\n\nViel Erfolg!\nКоманда EPDeutsch"
-            % (name, link, de, ru))
+            "Твой старт: 1) подтверди почту, 2) добавь первую тему на главной, 3) позанимайся 15 минут.\n\nViel Erfolg!\nКоманда EPDeutsch"
+            % (name, link))
     extra = steps_list([("Создать аккаунт", True), ("<b style=\"color:#282E3E\">Подтвердить почту</b>: кнопка выше, это одна секунда", False),
                         ("Добавить первую тему на главной, например «Учёба и наука»", False), ("Позаниматься 15 минут. Дальше мы сами подскажем, что повторить", False)])
-    extra += word_card("Слово дня", de, ru, "Выучи его прямо сейчас, завтра спросим 😉")
     html = mail_html(base, "Подтверди почту и начни готовиться к EPD.", "👋", "Добро пожаловать в EPDeutsch!",
                      "Привет, %s! Рады, что ты с нами. Подтверди, пожалуйста, почту одним нажатием: так мы будем знать, что она твоя, "
                      "и сможем вернуть доступ, если забудешь пароль." % _esc(name), "Подтвердить почту", link,
@@ -733,14 +734,14 @@ def nudge_email(name, base, days, streak, unsub, word=None):
     lost = ("Серия в %d дн. прервалась, но её легко начать заново." % streak) if streak else ""
     text = ("Привет, %s!\n\nТы не занимался(ась) уже %d %s. Слова начинают забываться именно сейчас, поэтому 10 минут сегодня сэкономят часы потом.\n%s\n\n"
             "Помнишь это слово? %s (%s)\n\nПродолжить: %s\n\nОтписаться от напоминаний: %s\n\nКоманда EPDeutsch" % (name, days, dw, lost, de, ru, base, unsub))
-    extra = stat_row([(str(days), dw + " без занятий", "#FDE9EA"), ("🔥 %d" % streak if streak else "🔥 0", "была серия" if streak else "серия ждёт", "#FFF0E1"),
-                      ("10", "минут хватит", "#E3F7EF")])
+    extra = stat_row([(str(days), dw + " без занятий", TRIAD_SOFT[0]), ("🔥 %d" % streak if streak else "🔥 0", "была серия" if streak else "серия ждёт", TRIAD_SOFT[1]),
+                      ("10", "минут хватит", TRIAD_SOFT[2])])
     extra += word_card("Твоё трудное слово" if hard else "Помнишь это слово?", de, ru,
                        "Ты чаще всего спотыкался(ась) на нём. Самое время закрепить." if hard else "Если вспомнил(а) с артиклем, ты молодец. Если нет, самое время повторить.")
     html = mail_html(base, "10 минут сегодня, и слова не забудутся.", "⏰", "Слова скучают по тебе",
                      "Привет, %s! Ты не занимался(ась) уже <b style=\"color:#282E3E\">%d %s</b>. Как раз сейчас слова начинают забываться, "
                      "поэтому 10 минут повторения сегодня сэкономят часы потом. %s" % (_esc(name), days, dw, _esc(lost)),
-                     "Повторить 10 минут", base, unsub=unsub, kicker="Мы по тебе соскучились", extra=extra, grad=("#F28C28", "#E8505B"))
+                     "Повторить 10 минут", base, unsub=unsub, kicker="Мы по тебе соскучились", extra=extra)
     return text, html
 
 
@@ -796,7 +797,7 @@ def send_welcome(c, uid, name, email, base):
     tok = secrets.token_urlsafe(32)
     c.execute("DELETE FROM verifies WHERE user_id=?", (uid,))
     c.execute("INSERT INTO verifies(token,user_id,expires) VALUES(?,?,?)", (sha(tok), uid, int(time.time()) + 14 * 86400))
-    text, html = welcome_email(name, base, "%s/#verify=%s" % (base, tok), pick_word())
+    text, html = welcome_email(name, base, "%s/#verify=%s" % (base, tok))
     send_mail(email, "Добро пожаловать в EPDeutsch! Подтверди почту", text, html)
 
 

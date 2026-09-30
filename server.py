@@ -211,7 +211,7 @@ def static_asset(key, site):
         return body.encode(), STATIC_FILES[key], "public, max-age=86400"
     if key == "/manifest.webmanifest":
         body = json.dumps({
-            "name": "EPDeutsch Wörter — подготовка к EPD", "short_name": "EPDeutsch",
+            "name": "EPDeutsch Wörter: подготовка к EPD", "short_name": "EPDeutsch",
             "description": "Немецкие слова для Ergänzungsprüfung Deutsch: карточки, тесты и умные повторения.",
             "lang": "ru", "start_url": "/", "scope": "/", "display": "standalone",
             "background_color": "#F6F7FB", "theme_color": "#7E6FB8",
@@ -790,7 +790,7 @@ class Handler(BaseHTTPRequestHandler):
             if len(pw) > 200:
                 raise ApiError(400, "Слишком длинный пароль")
             if c.execute("SELECT 1 FROM users WHERE email=?", (email,)).fetchone():
-                raise ApiError(409, "Аккаунт с этой почтой уже есть — войди")
+                raise ApiError(409, "Аккаунт с этой почтой уже есть, просто войди")
             cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created) VALUES(?,?,?,?,?,?)",
                             (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now))
             uid = cur.lastrowid
@@ -933,7 +933,7 @@ class Handler(BaseHTTPRequestHandler):
             r = c.execute("SELECT s.*, u.name AS owner FROM shares s JOIN users u ON u.id=s.owner_id WHERE s.code=?",
                           (m.group(1),)).fetchone()
             if not r:
-                raise ApiError(404, "Набор не найден — возможно, ссылка неполная")
+                raise ApiError(404, "Набор не найден. Возможно, ссылка неполная")
             return self.send_json(200, {"name": r["name"], "desc": r["descr"], "owner": r["owner"], "cards": json.loads(r["cards"])})
 
         # ---------- аналитика: просмотр страницы и «я на сайте» ----------

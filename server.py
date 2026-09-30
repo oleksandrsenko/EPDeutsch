@@ -57,6 +57,16 @@ def owner_emails():
     return {e.strip().lower() for e in re.split(r"[,\s]+", v) if e.strip()}
 
 
+def ensure_owner(c):
+    """Если в базе ещё нет владельца, им становится аккаунт с почтой из OWNER_EMAILS / db/owner.txt.
+    Дальше владелец меняется только передачей прав в админке (файл больше ни на что не влияет)."""
+    if c.execute("SELECT 1 FROM users WHERE role='owner'").fetchone():
+        return
+    for e in owner_emails():
+        if c.execute("UPDATE users SET role='owner' WHERE lower(email)=?", (e,)).rowcount:
+            return
+
+
 def deepl_key():
     k = os.environ.get("DEEPL_API_KEY", "").strip()
     if not k and os.path.exists(KEY_FILE):
@@ -75,6 +85,11 @@ CREATE TABLE IF NOT EXISTS users(
   created INTEGER NOT NULL
 );
 CREATE TABLE IF NOT EXISTS sessions(
+  token TEXT PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  expires INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS verifies(
   token TEXT PRIMARY KEY,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   expires INTEGER NOT NULL
@@ -255,7 +270,6 @@ def admin_overview(c, n):
     now = int(time.time())
     today = local_day(now)
     since = today - n + 1
-    owners = owner_emails()
     users = c.execute("SELECT id,name,email,created,last_seen,tz,device FROM users").fetchall()
     prog = _progress_rows(c)
     bw = book_words()
@@ -333,7 +347,7 @@ def admin_overview(c, n):
         "pages": _count(hits, "path")[:10],
         "funnel": funnel, "hard": hard, "popular": popular,
         "modes": sorted(([k, v[0], v[1]] for k, v in modes.items()), key=lambda x: -x[2]),
-        "owners": len(owners),
+        "owners": c.execute("SELECT COUNT(*) FROM users WHERE role='owner'").fetchone()[0],
     }
 
 
@@ -341,14 +355,13 @@ def admin_users(c):
     prog = _progress_rows(c)
     bw = book_words()
     st = {r["user_id"]: r for r in c.execute("SELECT * FROM stats")}
-    owners = owner_emails()
     out = []
-    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until FROM users ORDER BY created DESC"):
+    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until,role,verified FROM users ORDER BY created DESC"):
         s_ = prog.get(u["id"]) or progress_summary({})
         t = st.get(u["id"])
         out.append({
             "id": u["id"], "name": u["name"], "email": u["email"], "avatar": u["avatar"], "code": u["code"],
-            "owner": u["email"].lower() in owners, "created": u["created"], "last_seen": u["last_seen"] or (t["updated"] if t else 0),
+            "owner": u["role"] == "owner", "role": u["role"], "verified": bool(u["verified"]), "created": u["created"], "last_seen": u["last_seen"] or (t["updated"] if t else 0),
             "country": country(u["tz"]), "tz": u["tz"] or "", "device": u["device"] or "", "lang": u["lang"] or "",
             "xp": s_["xp"], "level": t["level"] if t else 1, "streak": t["streak"] if t else 0,
             "learned": s_["learned"], "started": s_["started"], "answers": s_["answers"], "acc": s_["acc"],
@@ -399,12 +412,24 @@ def init_db():
         c.executescript(SCHEMA)
         c.execute("DELETE FROM sessions WHERE expires<?", (int(time.time()),))
         c.execute("DELETE FROM resets WHERE expires<?", (int(time.time()),))
+        c.execute("DELETE FROM verifies WHERE expires<?", (int(time.time()),))
         cols = {r[1] for r in c.execute("PRAGMA table_info(users)")}
         # news — согласие на рассылку (0/1, по умолчанию нет); plan/plan_until — тариф на будущее (free / premium до даты)
         for col, typ in (("last_seen", "INTEGER"), ("tz", "TEXT"), ("device", "TEXT"), ("lang", "TEXT"),
-                         ("news", "INTEGER NOT NULL DEFAULT 0"), ("plan", "TEXT NOT NULL DEFAULT 'free'"), ("plan_until", "INTEGER")):
+                         ("news", "INTEGER NOT NULL DEFAULT 0"), ("plan", "TEXT NOT NULL DEFAULT 'free'"), ("plan_until", "INTEGER"),
+                         ("role", "TEXT NOT NULL DEFAULT 'user'"), ("verified", "INTEGER NOT NULL DEFAULT 0"), ("last_nudge", "INTEGER")):
             if col not in cols:
                 c.execute("ALTER TABLE users ADD COLUMN %s %s" % (col, typ))
+        if "verified" not in cols:
+            # кто зарегистрировался до подтверждения почты, считаем подтверждёнными; письма им шлём, как обещали условия
+            c.execute("UPDATE users SET verified=1, news=1")
+        ensure_owner(c)
+        # защита в самой базе: владельца нельзя удалить, и нельзя снять с него роль, пока нет другого владельца
+        c.execute("""CREATE TRIGGER IF NOT EXISTS owner_no_delete BEFORE DELETE ON users WHEN OLD.role='owner'
+                     BEGIN SELECT RAISE(ABORT, 'owner is protected'); END""")
+        c.execute("""CREATE TRIGGER IF NOT EXISTS owner_keep_role BEFORE UPDATE OF role ON users
+                     WHEN OLD.role='owner' AND NEW.role<>'owner' AND (SELECT COUNT(*) FROM users WHERE role='owner' AND id<>OLD.id)=0
+                     BEGIN SELECT RAISE(ABORT, 'last owner'); END""")
         if "what" not in {r[1] for r in c.execute("PRAGMA table_info(presence)")}:
             c.execute("ALTER TABLE presence ADD COLUMN what TEXT")
         # посещения храним 13 месяцев, «онлайн» — сутки
@@ -555,17 +580,37 @@ def smtp_conf():
     return conf if conf.get("host") else None
 
 
-def reset_email(name, link, minutes):
-    """Письмо для сброса пароля: HTML (таблицы и стили в строке, так его понимают почтовые программы) + обычный текст."""
-    esc = lambda s: str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
-    text = ("Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\n"
-            "Чтобы придумать новый, открой ссылку:\n\n%s\n\n"
-            "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, "
-            "пароль останется прежним.\n\nEPDeutsch" % (name, link, minutes))
-    html = """<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light"><title>Новый пароль</title></head>
+MAIL_SECRET_FILE = os.path.join(ROOT, "db", "mail.key")
+
+
+def mail_secret():
+    if not os.path.exists(MAIL_SECRET_FILE):
+        os.makedirs(os.path.dirname(MAIL_SECRET_FILE), exist_ok=True)
+        with open(MAIL_SECRET_FILE, "w") as f:
+            f.write(secrets.token_hex(32))
+    with open(MAIL_SECRET_FILE) as f:
+        return f.read().strip()
+
+
+def unsub_link(base, uid):
+    sig = hmac.new(mail_secret().encode(), b"unsub:%d" % uid, hashlib.sha256).hexdigest()[:24]
+    return "%s/api/unsub?u=%d&s=%s" % (base, uid, sig)
+
+
+def _esc(s):
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def mail_html(base, preview, icon, title, body, button, link, note="", unsub=""):
+    """Фирменное письмо: карточка с кнопкой и футер со ссылками. Таблицы и стили в строке, так его понимают почтовые программы."""
+    foot_links = ('<a href="%s" style="color:#6C5CAC;text-decoration:none;font-weight:700">Открыть EPDeutsch</a>'
+                  ' &nbsp;·&nbsp; <a href="%s/terms" style="color:#8A93AD">Условия</a>'
+                  ' &nbsp;·&nbsp; <a href="%s/privacy" style="color:#8A93AD">Конфиденциальность</a>') % (_esc(base), _esc(base), _esc(base))
+    unsub_html = ('<br><a href="%s" style="color:#8A93AD">Отписаться от таких писем</a>' % _esc(unsub)) if unsub else ""
+    return """<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><title>%(title)s</title></head>
 <body style="margin:0;padding:0;background:#F6F7FB;font-family:Manrope,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#282E3E">
-<div style="display:none;max-height:0;overflow:hidden">Ссылка, чтобы придумать новый пароль. Работает %(min)d минут.</div>
+<div style="display:none;max-height:0;overflow:hidden">%(preview)s</div>
 <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:#F6F7FB"><tr><td align="center" style="padding:32px 14px">
 <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="max-width:520px">
 <tr><td style="padding:0 6px 18px"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
@@ -574,20 +619,55 @@ def reset_email(name, link, minutes):
 <tr><td style="background:#ffffff;border-radius:22px;box-shadow:0 8px 30px rgba(40,46,62,.08);overflow:hidden">
 <div style="height:6px;background:#7E6FB8;background:linear-gradient(90deg,#7E6FB8,#8B5CF6)"></div>
 <div style="padding:34px 32px 30px">
-<div style="width:52px;height:52px;border-radius:16px;background:#EFEBFA;text-align:center;line-height:52px;font-size:26px">🔑</div>
-<h1 style="margin:18px 0 10px;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.01em">Придумай новый пароль</h1>
-<p style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#586380">Привет, %(name)s! Кто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch. Нажми на кнопку, и откроется страница, где можно задать новый.</p>
+<div style="width:52px;height:52px;border-radius:16px;background:#EFEBFA;text-align:center;line-height:52px;font-size:26px">%(icon)s</div>
+<h1 style="margin:18px 0 10px;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.01em">%(title)s</h1>
+<div style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#586380">%(body)s</div>
 <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:999px;background:#7E6FB8">
-<a href="%(link)s" style="display:inline-block;padding:15px 30px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">Задать новый пароль</a></td></tr></table>
-<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380">Ссылка работает <b style="color:#282E3E">%(min)d минут</b> и только один раз. Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.</p>
+<a href="%(link)s" style="display:inline-block;padding:15px 30px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:999px">%(button)s</a></td></tr></table>
+%(note)s
 <div style="margin:24px 0 0;padding:14px 16px;background:#F6F7FB;border-radius:14px;font-size:12.5px;line-height:1.5;color:#586380">Кнопка не нажимается? Скопируй ссылку в браузер:<br><a href="%(link)s" style="color:#6C5CAC;word-break:break-all">%(link)s</a></div>
 </div></td></tr>
-<tr><td style="padding:20px 10px 0;text-align:center;font-size:12px;line-height:1.6;color:#8A93AD">Это письмо пришло, потому что на EPDeutsch есть аккаунт с этой почтой.<br>© EPDeutsch · подготовка к Ergänzungsprüfung Deutsch</td></tr>
-</table></td></tr></table></body></html>""" % {"name": esc(name), "link": esc(link), "min": minutes}
+<tr><td style="padding:22px 10px 0;text-align:center;font-size:12.5px;line-height:1.7;color:#8A93AD">
+%(foot)s<br>Это письмо пришло, потому что на EPDeutsch есть аккаунт с этой почтой.%(unsub)s<br>© EPDeutsch · подготовка к Ergänzungsprüfung Deutsch · Вена</td></tr>
+</table></td></tr></table></body></html>""" % {"title": _esc(title), "preview": _esc(preview), "icon": icon, "body": body, "button": _esc(button),
+                                                "link": _esc(link), "note": note, "foot": foot_links, "unsub": unsub_html}
+
+
+def reset_email(name, base, link, minutes):
+    text = ("Привет, %s!\n\nКто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch.\nЧтобы придумать новый, открой ссылку:\n\n%s\n\n"
+            "Ссылка работает %d минут и только один раз. Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.\n\nEPDeutsch"
+            % (name, link, minutes))
+    html = mail_html(base, "Ссылка, чтобы придумать новый пароль. Работает %d минут." % minutes, "🔑", "Придумай новый пароль",
+                     "Привет, %s! Кто-то (надеемся, ты) попросил сбросить пароль на EPDeutsch. Нажми на кнопку, и откроется страница, где можно задать новый." % _esc(name),
+                     "Задать новый пароль", link,
+                     '<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380">Ссылка работает <b style="color:#282E3E">%d минут</b> и только один раз. '
+                     "Если ты ничего не просил(а), просто удали это письмо, пароль останется прежним.</p>" % minutes)
     return text, html
 
 
-def send_mail(to, subject, text, html=None):
+def welcome_email(name, base, link):
+    text = ("Привет, %s!\n\nДобро пожаловать в EPDeutsch. Подтверди, пожалуйста, почту, чтобы мы знали, что она твоя:\n\n%s\n\n"
+            "Что дальше: добавь первую тему на главной и позанимайся 15 минут. Мы сами подскажем, что повторить завтра.\n\nУдачи на EPD!\nEPDeutsch" % (name, link))
+    html = mail_html(base, "Подтверди почту и начни готовиться к EPD.", "👋", "Добро пожаловать в EPDeutsch!",
+                     "Привет, %s! Рады, что ты с нами. Подтверди, пожалуйста, почту одним нажатием, чтобы мы знали, что она твоя "
+                     "и могли вернуть доступ, если забудешь пароль." % _esc(name), "Подтвердить почту", link,
+                     '<p style="margin:22px 0 0;font-size:14px;line-height:1.6;color:#586380"><b style="color:#282E3E">Что дальше:</b> добавь первую тему на главной '
+                     "и позанимайся 15 минут. Остальное мы возьмём на себя: подскажем, что повторить завтра, и напомним, если пропадёшь.</p>")
+    return text, html
+
+
+def nudge_email(name, base, days, streak, unsub):
+    lost = "Твоя серия %d %s подряд прервалась, но её легко начать заново." % (streak, "день" if streak % 10 == 1 and streak % 100 != 11 else "дней") if streak else ""
+    text = ("Привет, %s!\n\nТы не занимался(ась) уже %d дня. Слова начинают забываться именно сейчас, поэтому 10 минут сегодня сэкономят часы потом.\n%s\n\n"
+            "Продолжить: %s\n\nОтписаться от напоминаний: %s\n\nEPDeutsch" % (name, days, lost, base, unsub))
+    html = mail_html(base, "10 минут сегодня, и слова не забудутся.", "⏰", "Слова скучают по тебе",
+                     "Привет, %s! Ты не занимался(ась) уже <b style=\"color:#282E3E\">%d дня</b>. Как раз сейчас слова начинают забываться, "
+                     "поэтому 10 минут повторения сегодня сэкономят часы потом. %s" % (_esc(name), days, _esc(lost)),
+                     "Продолжить подготовку", base, unsub=unsub)
+    return text, html
+
+
+def send_mail(to, subject, text, html=None, unsub=None):
     """Отправляет письмо в фоне. Без настроенного SMTP печатает его в консоль сервера."""
     conf = smtp_conf()
     if not conf:
@@ -599,6 +679,8 @@ def send_mail(to, subject, text, html=None):
             msg = EmailMessage()
             msg["Subject"], msg["To"] = subject, to
             msg["From"] = conf.get("from") or conf.get("user")
+            if unsub:
+                msg["List-Unsubscribe"] = "<%s>" % unsub
             msg.set_content(text)
             if html:
                 msg.add_alternative(html, subtype="html")
@@ -629,8 +711,39 @@ def send_reset(c, uid, name, email, base):
     tok = secrets.token_urlsafe(32)
     c.execute("DELETE FROM resets WHERE user_id=?", (uid,))
     c.execute("INSERT INTO resets(token,user_id,expires) VALUES(?,?,?)", (sha(tok), uid, int(time.time()) + RESET_MINUTES * 60))
-    text, html = reset_email(name, "%s/#reset=%s" % (base, tok), RESET_MINUTES)
+    text, html = reset_email(name, base, "%s/#reset=%s" % (base, tok), RESET_MINUTES)
     send_mail(email, "EPDeutsch: новый пароль", text, html)
+
+
+def send_welcome(c, uid, name, email, base):
+    tok = secrets.token_urlsafe(32)
+    c.execute("DELETE FROM verifies WHERE user_id=?", (uid,))
+    c.execute("INSERT INTO verifies(token,user_id,expires) VALUES(?,?,?)", (sha(tok), uid, int(time.time()) + 14 * 86400))
+    text, html = welcome_email(name, base, "%s/#verify=%s" % (base, tok))
+    send_mail(email, "Добро пожаловать в EPDeutsch! Подтверди почту", text, html)
+
+
+def reminder_loop():
+    """Раз в час: тем, кто не занимался 3–30 дней, одно напоминание за каждый такой перерыв.
+    Только при настроенном SMTP и SITE_URL; в каждом письме ссылка «Отписаться»."""
+    time.sleep(60)
+    while True:
+        try:
+            if smtp_conf() and SITE_URL:
+                now = int(time.time())
+                with db() as c:
+                    rows = c.execute("""SELECT u.id,u.name,u.email,s.updated,s.streak FROM users u JOIN stats s ON s.user_id=u.id
+                                        WHERE u.news=1 AND u.verified=1 AND s.updated BETWEEN ? AND ?
+                                        AND (u.last_nudge IS NULL OR u.last_nudge<s.updated) LIMIT 50""",
+                                     (now - 30 * 86400, now - 3 * 86400)).fetchall()
+                    for r in rows:
+                        un = unsub_link(SITE_URL, r["id"])
+                        text, html = nudge_email(r["name"], SITE_URL, (now - r["updated"]) // 86400, r["streak"] or 0, un)
+                        send_mail(r["email"], "EPDeutsch: слова скучают по тебе", text, html, unsub=un)
+                        c.execute("UPDATE users SET last_nudge=? WHERE id=?", (now, r["id"]))
+        except Exception as e:  # noqa: BLE001
+            sys.stderr.write("Напоминания: %r\n" % e)
+        time.sleep(3600)
 
 
 def sha(tok):
@@ -705,20 +818,21 @@ def s_str(v, n):
 
 def user_json(u):
     return {"id": u["id"], "name": u["name"], "email": u["email"], "avatar": u["avatar"], "code": u["code"],
-            "owner": u["email"].lower() in owner_emails(), "news": bool(u["news"]), "plan": u["plan"] or "free"}
+            "owner": u["role"] == "owner", "admin": u["role"] in ("admin", "owner"), "role": u["role"],
+            "news": bool(u["news"]), "verified": bool(u["verified"]), "plan": u["plan"] or "free"}
 
 
 def friend_rows(c, uid):
     rows = c.execute(
-        """SELECT u.id,u.name,u.email,u.avatar,u.code,s.xp,s.week_xp,s.streak,s.learned,s.acc,s.today,s.level,s.updated
+        """SELECT u.id,u.name,u.role,u.avatar,u.code,s.xp,s.week_xp,s.streak,s.learned,s.acc,s.today,s.level,s.updated
            FROM users u LEFT JOIN stats s ON s.user_id=u.id
            WHERE u.id=? OR u.id IN (SELECT friend_id FROM friends WHERE user_id=?)""",
         (uid, uid),
     ).fetchall()
-    out, owners = [], owner_emails()
+    out = []
     for r in rows:
         d = {k: r[k] for k in r.keys()}
-        d["owner"] = d.pop("email").lower() in owners  # почту друзей наружу не отдаём
+        d["owner"] = d.pop("role") == "owner"  # почту друзей наружу не отдаём
         for k in ("xp", "week_xp", "streak", "learned", "acc", "today", "updated"):
             d[k] = d[k] or 0
         d["level"] = d["level"] or 1
@@ -781,9 +895,20 @@ class Handler(BaseHTTPRequestHandler):
 
     def need_owner(self, c):
         u = self.need_user(c)
-        if u["email"].lower() not in owner_emails():
-            raise ApiError(403, "Доступ только для владельца сайта")
+        if u["role"] != "owner":
+            raise ApiError(403, "Это может только владелец сайта")
         return u
+
+    def need_admin(self, c):
+        u = self.need_user(c)
+        if u["role"] not in ("admin", "owner"):
+            raise ApiError(403, "Доступ только для администраторов")
+        return u
+
+    def mail_base(self):
+        """Адрес сайта для ссылок в письмах: SITE_URL, а без него только localhost (чтобы не подменили Host)."""
+        base = SITE_URL or self.site_url()
+        return base if SITE_URL or (urlparse(base).hostname or "") in ("localhost", "127.0.0.1", "::1") else None
 
     def need_user(self, c):
         u = self.current_user(c)
@@ -894,9 +1019,51 @@ class Handler(BaseHTTPRequestHandler):
             if not u:
                 return self.send_json(200, {"user": None})
             pr = c.execute("SELECT data,updated FROM progress WHERE user_id=?", (u["id"],)).fetchone()
-            return self.send_json(200, {"user": user_json(u),
+            return self.send_json(200, {"user": user_json(u), "mail": bool(smtp_conf()),
                                         "progress": json.loads(pr["data"]) if pr else None,
                                         "updated": pr["updated"] if pr else 0})
+
+        if method == "POST" and p == "/verify":
+            r = c.execute("SELECT user_id FROM verifies WHERE token=? AND expires>?", (sha(s_str(self.read_json().get("token"), 100)), now)).fetchone()
+            if not r:
+                raise ApiError(400, "Ссылка устарела или уже использована. Отправь письмо ещё раз из профиля")
+            c.execute("UPDATE users SET verified=1 WHERE id=?", (r["user_id"],))
+            c.execute("DELETE FROM verifies WHERE user_id=?", (r["user_id"],))
+            return self.send_json(200, {"ok": True})
+
+        if method == "POST" and p == "/verify/resend":
+            u = self.need_user(c)
+            if u["verified"]:
+                return self.send_json(200, {"ok": True})
+            key = self.client_ip() + "|verify|" + str(u["id"])
+            if too_many(key):
+                raise ApiError(429, "Слишком много писем. Подожди 10 минут")
+            FAILS.setdefault(key, []).append(time.time())
+            base = self.mail_base()
+            if not base:
+                raise ApiError(400, "Письма пока не настроены")
+            send_welcome(c, u["id"], u["name"], u["email"], base)
+            return self.send_json(200, {"ok": True})
+
+        if method == "GET" and p == "/unsub":
+            q = urllib.parse.parse_qs(urlparse(self.path).query)
+            uid = s_int((q.get("u") or ["0"])[0])
+            ok = hmac.compare_digest((q.get("s") or [""])[0], unsub_link("", uid).split("s=")[1])
+            if ok:
+                c.execute("UPDATE users SET news=0 WHERE id=?", (uid,))
+            body = ("<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>EPDeutsch</title>"
+                    "<body style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;background:#F6F7FB;color:#282E3E;display:grid;place-items:center;min-height:90vh;margin:0\">"
+                    "<div style=\"background:#fff;border-radius:22px;padding:34px 32px;max-width:420px;box-shadow:0 8px 30px rgba(40,46,62,.08)\"><h1 style=\"margin:0 0 10px;font-size:23px\">%s</h1>"
+                    "<p style=\"color:#586380;line-height:1.6\">%s</p><a href=\"/\" style=\"color:#6C5CAC;font-weight:700\">Открыть EPDeutsch</a></div></body>") % (
+                ("Готово, ты отписан(а)", "Напоминания и новости больше не придут. Письма о твоём аккаунте, например для сброса пароля, приходить будут. Включить рассылку снова можно в профиле.")
+                if ok else ("Ссылка не сработала", "Отписаться можно в профиле на сайте."))
+            b = body.encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(b)))
+            self.end_headers()
+            self.wfile.write(b)
+            return
 
         if method == "POST" and p == "/register":
             d = self.read_json()
@@ -913,9 +1080,12 @@ class Handler(BaseHTTPRequestHandler):
             if c.execute("SELECT 1 FROM users WHERE email=?", (email,)).fetchone():
                 raise ApiError(409, "Аккаунт с этой почтой уже есть, просто войди")
             cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created,news) VALUES(?,?,?,?,?,?,?)",
-                            (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now,
-                             1 if d.get("news") is True else 0))
+                            (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now, 1))
             uid = cur.lastrowid
+            ensure_owner(c)
+            base = self.mail_base()
+            if base:
+                send_welcome(c, uid, name, email, base)
             c.execute("INSERT INTO stats(user_id,updated) VALUES(?,?)", (uid, now))
             cookie = self.start_session(c, uid)
             u = c.execute("SELECT * FROM users WHERE id=?", (uid,)).fetchone()
@@ -948,9 +1118,8 @@ class Handler(BaseHTTPRequestHandler):
             if not EMAIL_RE.match(email):
                 raise ApiError(400, "Проверь адрес почты")
             u = c.execute("SELECT id,name FROM users WHERE email=?", (email,)).fetchone()
-            base = self.site_url()
-            host = urlparse(base).hostname or ""
-            if u and (SITE_URL or host in ("localhost", "127.0.0.1", "::1")):
+            base = self.mail_base()
+            if u and base:
                 send_reset(c, u["id"], u["name"], email, base)
             elif u:
                 sys.stderr.write("Сброс пароля для %s не отправлен: задай SITE_URL, чтобы ссылка в письме вела на твой сайт\n" % email)
@@ -1013,6 +1182,8 @@ class Handler(BaseHTTPRequestHandler):
         if method == "DELETE" and p == "/account":
             # удаление аккаунта: нужен пароль; вместе с пользователем удаляются прогресс, статистика, друзья, общие наборы и сессии
             u = self.need_user(c)
+            if u["role"] == "owner":
+                raise ApiError(400, "Владельца удалить нельзя. Сначала передай права владельца в админке")
             pw = str(self.read_json().get("password") or "")
             key = self.client_ip() + "|del|" + str(u["id"])
             if too_many(key):
@@ -1125,7 +1296,7 @@ class Handler(BaseHTTPRequestHandler):
 
         # ---------- админка (только для владельца сайта) ----------
         if method == "GET" and p.startswith("/admin/"):
-            self.need_owner(c)
+            self.need_admin(c)
             q = urllib.parse.parse_qs(urlparse(self.path).query)
             if p == "/admin/overview":
                 return self.send_json(200, admin_overview(c, s_int((q.get("days") or ["30"])[0], 7, 365)))
@@ -1136,23 +1307,41 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(200, admin_user(c, int(m.group(1))))
 
         if method in ("POST", "DELETE") and p.startswith("/admin/user/"):
-            me = self.need_owner(c)
-            m = re.fullmatch(r"/admin/user/(\d+)(/reset)?", p)
+            me = self.need_owner(c)  # удалять, менять роли и передавать права может только владелец
+            m = re.fullmatch(r"/admin/user/(\d+)(/reset|/role|/owner)?", p)
             if not m:
                 raise ApiError(404, "Не найдено")
             u = c.execute("SELECT * FROM users WHERE id=?", (int(m.group(1)),)).fetchone()
             if not u:
                 raise ApiError(404, "Пользователь не найден")
-            if method == "POST" and m.group(2):
+            act = m.group(2)
+            if method == "POST" and act == "/reset":
                 send_reset(c, u["id"], u["name"], u["email"], SITE_URL or self.site_url())
                 return self.send_json(200, {"ok": True, "mail": bool(smtp_conf())})
-            if method == "DELETE" and not m.group(2):
-                if u["id"] == me["id"] or u["email"].lower() in owner_emails():
-                    raise ApiError(400, "Аккаунт владельца удалить отсюда нельзя")
+            if method == "POST" and act == "/role":
+                role = s_str(self.read_json().get("role"), 10)
+                if role not in ("admin", "user"):
+                    raise ApiError(400, "Такой роли нет")
+                if u["role"] == "owner":
+                    raise ApiError(400, "Роль владельца меняется только передачей прав")
+                c.execute("UPDATE users SET role=? WHERE id=?", (role, u["id"]))
+                return self.send_json(200, {"ok": True})
+            if method == "POST" and act == "/owner":
+                if u["id"] == me["id"]:
+                    raise ApiError(400, "Ты уже владелец")
+                if not check_pw(str(self.read_json().get("password") or ""), me["pw"]):
+                    raise ApiError(401, "Неверный пароль")
+                c.execute("UPDATE users SET role='owner' WHERE id=?", (u["id"],))
+                c.execute("UPDATE users SET role='admin' WHERE id=?", (me["id"],))
+                sys.stderr.write("Права владельца переданы: %s -> %s\n" % (me["email"], u["email"]))
+                return self.send_json(200, {"ok": True})
+            if method == "DELETE" and not act:
+                if u["role"] == "owner" or u["id"] == me["id"]:
+                    raise ApiError(400, "Владельца удалить нельзя")
                 if s_str(self.read_json().get("email"), 254).lower() != u["email"].lower():
                     raise ApiError(400, "Для подтверждения впиши почту пользователя")
                 delete_user(c, u["id"])
-                sys.stderr.write("Админ %s удалил аккаунт %s\n" % (me["email"], u["email"]))
+                sys.stderr.write("Владелец %s удалил аккаунт %s\n" % (me["email"], u["email"]))
                 return self.send_json(200, {"ok": True})
 
         raise ApiError(404, "Не найдено")
@@ -1160,6 +1349,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     init_db()
+    threading.Thread(target=reminder_loop, daemon=True).start()
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     print(f"EPDeutsch: http://localhost:{PORT}  (база: {DB})")
     try:

@@ -1,0 +1,74 @@
+@id 5.3
+@chapter 5
+@chapterName Natur und Umwelt
+@title Chemie
+@titleRu Химия
+@pages 254–256
+@exercises 257–258
+@solutions 271–272
+@bookRows 41
+
+# s1 Основы: элементы и молекулы
+das Element, Elemente | элемент | Das Periodensystem ist eine strukturierte Darstellung der bekannten chemischen [[Elemente]]. |  | n
+das Atom, Atome | атом | Chemische Elemente bestehen aus [[Atomen]] oder Verbindungen von Atomen, die je nach Element unterschiedliche Eigenschaften haben. |  | n
+der Kern, Kerne | ядро | Der [[Kern]] eines Atoms macht den größten Teil seiner Masse aus. |  | m
+das Molekül, Moleküle | молекула | Eine Verbindung mehrerer Atome bezeichnet man als [[Molekül]]. |  | n
+die Säure, Säuren | кислота | Der menschliche Magen enthält [[Säure]], die Bakterien abtötet und zur Verdauung beiträgt. |  | f
+die Base, Basen | основание, щёлочь | Die Augen werden rot und brennen, wenn sie mit [[Basen]] in Kontakt kommen, die z. B. in vielen Seifen enthalten sind. |  | f
+das Gas, Gase | газ | Im Gegensatz zu festen Stoffen sind die Moleküle von [[Gasen]] weit voneinander entfernt. |  | n
+
+# s2 Газы
+der Sauerstoff (O2) | кислород | Ein Feuer erlischt, wenn es in seiner Umgebung nicht genug [[Sauerstoff]] gibt. |  | m
+das Ozon (O3) | озон | [[Ozon]] ist ein Gas, das aus drei Sauerstoffatomen besteht. |  | n
+der Wasserstoff (H) | водород | Techniker haben Motoren entwickelt, die mit [[Wasserstoff]] betrieben werden können. |  | m
+der Kohlenstoff (C) | углерод | Unter starkem Druck und bei hohen Temperaturen entstehen aus [[Kohlenstoff]] Diamanten. |  | m
+das Kohlendioxid (CO2) | углекислый газ | Beim Atmen nehmen wir Sauerstoff auf und geben [[Kohlendioxid]] ab. |  | n
+das Kohlenmonoxid (CO) | угарный газ | Bei Bränden entsteht giftiges [[Kohlenmonoxid]], das in größeren Mengen tödlich ist. |  | n
+das Methan (CH4) | метан | Aus gefrorenem [[Methan]] lässt sich Energie gewinnen, doch seine Förderung ist mit Risiken verbunden. |  | n
+die Fluorchlorkohlenwasserstoffe = FCKW (Plural) | фреоны (ХФУ) | Wissenschaftler haben nachgewiesen, dass die Freisetzung von [[FCKW]] die Ozonschicht zerstört. |  | pl
+
+# s3 Вещества
+der Schwefel (S) | сера | [[Schwefel]] findet sich häufig in der Umgebung von Vulkanen. |  | m
+das Quecksilber (Hg) | ртуть | Statt des giftigen [[Quecksilbers]] enthalten moderne Fieberthermometer eine ungefährliche Flüssigkeit. |  | n
+der Stickstoff (N) | азот | Unsere Atemluft besteht zum größten Teil aus [[Stickstoff]]. |  | m
+das Nitrat, Nitrate | нитрат | Durch Düngemittel in der Landwirtschaft wird das Trinkwasser mit [[Nitraten]] kontaminiert. |  | n
+der Schadstoff, -stoffe | вредное вещество | Eine hohe Konzentration von [[Schadstoffen]] in der Luft kann die Lebenserwartung der Bevölkerung deutlich verkürzen. |  | m
+der Kunststoff, -stoffe | пластмасса | Viele Gegenstände, die wir im Alltag benutzen, bestehen aus [[Kunststoffen]], weil diese leicht, praktisch und relativ günstig sind. |  | m
+der Sprengstoff, -stoffe | взрывчатое вещество | Um Attentate mit [[Sprengstoff]] zu verhindern, wird das Gepäck von Reisenden vor Besteigen des Flugzeugs gründlich untersucht. |  | m
+
+# s4 Превращения веществ
+sich / etw. auflösen · die Auflösung | растворяться · растворение | Salz [[löst sich]] in Wasser [[auf]], bis die Salzlösung gesättigt ist und kein Salz mehr aufnehmen kann. |  | v
+sich / etw. zersetzen · die Zersetzung | разлагать(ся) · разложение | Bakterien [[zersetzen]] Pflanzenreste und anderes organisches Material. |  | v
+zerfallen* · der Zerfall | распадаться · распад | Wenn Atomkerne [[zerfallen]], wird radioaktive Strahlung freigesetzt. | zerfällt – zerfiel – ist zerfallen | v
+etw. spalten · die Spaltung | расщеплять · расщепление | Der Physiker Enrico Fermi hat untersucht, wie man Atomkerne [[spalten]] kann. |  | v
+die Kernspaltung | деление ядра | Durch die [[Kernspaltung]] können große Mengen an nuklearer Energie erzeugt werden. |  | f
+gefrieren* | замерзать | Obwohl allgemein gilt, dass Wasser bei 0 Grad Celsius [[gefriert]], hängt der genaue Gefrierpunkt von verschiedenen Faktoren ab. | gefror – ist gefroren | v
+schmelzen* | плавиться, таять | Gold [[schmilzt]] bei einer Temperatur von etwa 1064 Grad Celsius. | schmilzt – schmolz – ist geschmolzen | v
+etw. schmelzen* | плавить что-то | In einem Hochofen wird Metall [[geschmolzen]], bis es flüssig ist. | schmolz – hat geschmolzen | v
+verdampfen | испаряться | Wenn eine Flüssigkeit [[verdampft]], verwandelt sie sich in ein Gas. | ist verdampft | v
+
+# s5 Свойства веществ
+organisch | органический | Die Biochemie beschäftigt sich in erster Linie mit [[organischen]] Stoffen, aus denen Lebewesen bestehen. |  | v
+anorganisch | неорганический | Metalle und verschiedene Minerale zählen zu den [[anorganischen]] Elementen. |  | v
+gasförmig | газообразный | In der Natur kommt Sauerstoff in [[gasförmigem]] Zustand vor. |  | v
+flüssig | жидкий | Carl von Linde hat ein Verfahren entwickelt, um [[flüssigen]] Sauerstoff herzustellen. |  | v
+fest | твёрдый | Chemische Elemente können in [[festem]], flüssigem oder gasförmigem Zustand existieren. |  | v
+ätzend | едкий | Da Haushaltsreiniger oft [[ätzende]] Stoffe enthalten, sollten sie nicht mit der Haut in Kontakt kommen. |  | v
+wasserlöslich | растворимый в воде | Viele Medikamente sind [[wasserlöslich]] und sollten deshalb nicht ins Trinkwasser gelangen. |  | v
+brennbar | горючий | Im Gegensatz zu anorganischen Substanzen sind viele organische Stoffe [[brennbar]]. |  | v
+spaltbar | делящийся | [[Spaltbares]] radioaktives Material kann dazu verwendet werden, Energie zu erzeugen. |  | v
+biologisch abbaubar | биоразлагаемый | [[Biologisch abbaubare]] Stoffe zerfallen innerhalb einer gewissen Zeit in natürliche Substanzen. |  | v
+
+## b1 Бонус: словообразование (Sprachliche Besonderheiten)
+-bar = kann … werden | -bar = «можно …» | Das Material ist [[spaltbar]]. = Das Material kann gespalten werden. |  | v
+-lich (физическое свойство) | -lich — свойство вещества | Das Pulver ist [[wasserlöslich]]. = Das Pulver kann in Wasser aufgelöst werden. |  | v
+-abel (в иностранных словах) | -abel = «можно …» в заимствованиях | Der Schaden ist [[irreparabel]]. = Der Schaden kann nicht repariert werden. |  | v
+ver- (изменение, исчезновение) | ver- — изменение, исчезновение | Das Wasser [[verdampft]]. = Das Wasser verwandelt sich in Dampf und verschwindet. |  | v
+zer- (разрушение на части) | zer- — разрушение, распад на части | Organisches Material wird [[zersetzt]]. = … in kleine Teile und schließlich in Atome zerlegt. |  | v
+
+! schmelzen (неперех.) ↔ etw. schmelzen (перех.) | Das Eis ist geschmolzen (sein); Man hat das Metall geschmolzen (haben)
+! zerfallen, gefrieren, verdampfen | Perfekt с sein: Der Kern ist zerfallen, das Wasser ist gefroren
+! sich auflösen | Zucker löst sich in Wasser auf; die Lösung — раствор
+! -bar / -lich / -abel | spaltbar = kann gespalten werden; wasserlöslich; irreparabel
+! der Stoff в сложных словах | Sauerstoff, Wasserstoff, Kohlenstoff, Stickstoff — все der
+! das Gas → die Gase | Ein farb- und geruchloses Gas (Übung II)

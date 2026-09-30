@@ -1,0 +1,121 @@
+@id 4.4
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Verkehr
+@titleRu Транспорт и дорожное движение
+@pages 167–171
+@exercises 172–176
+@solutions 267–268
+@bookRows 70
+
+# s1 Инфраструктура и мобильность
+die Infrastruktur | инфраструктура | Einwohner großer Metropolen schätzen die gute [[Infrastruktur]], die ihnen die Stadt bietet. |  | f
+das Verkehrsnetz = die Verkehrsverbindungen (Plural) | транспортная сеть | Nach dem Erdbeben investierte der Staat große Summen in den schnellen Wiederaufbau des [[Verkehrsnetzes]]. |  | n
+gut ausgebaut sein* | быть хорошо развитым | Das Verkehrsnetz in der Hauptstadt ist so [[gut ausgebaut]], dass man jeden Stadtteil in relativ kurzer Zeit erreichen kann. |  | v
+mobil sein* | быть мобильным | Da in ländlichen Gebieten weniger Busse und Bahnen verkehren, braucht man oft ein eigenes Auto, um [[mobil]] zu sein. |  | v
+die Mobilität | мобильность |  |  | f
+sich fortbewegen | передвигаться | Bei dichtem Verkehr kann man [[sich]] mit dem Fahrrad oft schneller [[fortbewegen]] als mit dem Auto. |  | v
+die Fortbewegung | передвижение |  |  | f
+unterwegs sein* | быть в пути, в разъездах | Mitarbeiter der Vertriebsabteilung sind viel [[unterwegs]], um die Firmenprodukte im In- und Ausland zu präsentieren. |  | v
+gelangen | добираться, попадать | Da die Insel keinen Flughafen hat, kann man nur mit dem Schiff dorthin [[gelangen]]. | ist gelangt | v
+jdn. / etw. befördern | перевозить | Nachts [[befördern]] die städtischen Busse deutlich weniger Passagiere als tagsüber. |  | v
+
+# s2 Расстояния и транспортные средства
+die Strecke, Strecken | участок пути, маршрут | Wegen einer technischen Störung verkehren auf der [[Strecke]] zwischen Münster und Bremen zurzeit keine Züge. |  | f
+eine Strecke zurücklegen | преодолеть расстояние | Die kurze [[Strecke]] vom Wohnheim bis zur Bibliothek kann man problemlos zu Fuß oder mit dem Fahrrad [[zurücklegen]]. |  | v
+entfernt sein* von + D | находиться на расстоянии от | Das Fußballstadion ist nur wenige Kilometer vom Stadtzentrum [[entfernt]]. |  | v
+die Entfernung, -en | расстояние | Größere [[Entfernungen]] kann man am schnellsten mit dem Flugzeug zurücklegen. |  | f
+pendeln | ездить на работу из другого города | Wenn man eine neue Stelle in einer anderen Stadt findet, steht man vor der Frage, ob man umzieht oder jeden Tag [[pendelt]]. |  | v
+der Pendler / die Pendlerin, Pendler | маятниковый мигрант (ездящий на работу) | Wegen des Streiks im öffentlichen Dienst kommen viele [[Pendler]] zu spät zur Arbeit. |  | m
+das Fahrzeug, -zeuge | транспортное средство | Wer mit einem [[Fahrzeug]] auf öffentlichen Straßen unterwegs ist, sollte die Verkehrsregeln genau kennen. |  | n
+der Pkw, Pkw = der Personenkraftwagen | легковой автомобиль | Fahren Sie mit Ihrem eigenen [[Pkw]] zur Arbeit oder haben Sie einen Dienstwagen, der der Firma gehört? |  | m
+der Lkw, Lkw = der Lastkraftwagen | грузовик | Das Umzugsunternehmen transportiert die Möbel des Kunden mit einem [[Lkw]] zur neuen Wohnung. |  | m
+die Schiene, Schienen | рельс | Obwohl auf dieser Straße keine Straßenbahn mehr verkehrt, kann man immer noch die alten [[Schienen]] auf der Fahrbahn sehen. |  | f
+der Verkehrsteilnehmer, -teilnehmer | участник дорожного движения | Alle [[Verkehrsteilnehmer]] – Autofahrer, Radfahrer und Fußgänger – müssen die Verkehrsregeln beachten und Rücksicht aufeinander nehmen. |  | m
+
+# s3 Общественный транспорт
+öffentliche Verkehrsmittel (Plural) | общественный транспорт | Umweltverbände weisen darauf hin, dass die Nutzung [[öffentlicher Verkehrsmittel]] umweltfreundlicher ist als das Fahren mit dem eigenen Auto. |  | pl
+öffentliche Verkehrsmittel benutzen | пользоваться общественным транспортом | Wer auf einer Karnevalsparty Alkohol getrunken hat, sollte [[öffentliche Verkehrsmittel benutzen]], um sicher nach Hause zu gelangen. |  | v
+der Fahrgast, -gäste | пассажир | Die Kameras in den U-Bahnen sollen der Sicherheit der [[Fahrgäste]] dienen. |  | m
+der Fahrschein, -scheine = die Fahrkarte, -karten | проездной билет | Sie dürfen in diesen Zug nur einsteigen, wenn Sie einen gültigen [[Fahrschein]] bei sich haben. |  | m
+das Semesterticket, -tickets | студенческий проездной на семестр | Studierende erhalten ein [[Semesterticket]], mit dem sie öffentliche Verkehrsmittel benutzen können. |  | n
+gelten* | действовать, быть действительным | Das NeunPlus-Ticket [[gilt]] nur werktags von 9 bis 18 Uhr. | gilt – galt – hat gegolten | v
+gültig | действительный | Das Semesterticket ist sechs Monate lang [[gültig]]. |  | v
+schwarzfahren* | ездить зайцем | Wer [[schwarzfährt]] und in eine Kontrolle gerät, muss eine Geldstrafe bezahlen. | fuhr schwarz – ist schwarzgefahren | v
+das Schwarzfahren | безбилетный проезд |  |  | n
+
+# s4 Водить машину
+die Fahrerlaubnis = der Führerschein, -scheine | водительские права | Bei Verkehrskontrollen überprüfen die Polizeibeamten die [[Fahrerlaubnis]] und den Fahrzeugschein der Autofahrer. |  | f
+den Führerschein machen | получать права (учиться в автошколе) | Man darf den [[Führerschein]] frühestens einen Monat vor dem 17. Geburtstag [[machen]]. |  | v
+die theoretische Fahrprüfung | теоретический экзамен на права | Man kann die [[theoretische Fahrprüfung]] nicht nur auf Deutsch, sondern auch in zahlreichen anderen Sprachen ablegen. |  | f
+die praktische Fahrprüfung | практический экзамен на права | Wer in der [[praktischen Fahrprüfung]] bei Rot über eine Ampel fährt, muss die Prüfung wiederholen. |  | f
+der TÜV | техосмотр (организация) | Alle zwei Jahre muss man sein Auto vom [[TÜV]] oder einer anderen anerkannten Organisation technisch überprüfen lassen. |  | m
+ein Auto / ein Fahrzeug steuern | управлять автомобилем | Im Alter von 17 Jahren darf man ein [[Auto]] nur in Begleitung eines Erwachsenen [[steuern]]. |  | v
+bremsen | тормозить | Fahren Sie an einer Kreuzung langsam, damit Sie rechtzeitig [[bremsen]] können, wenn ein Auto von rechts kommt. |  | v
+Gas geben* | нажать на газ | Lösen Sie die Handbremse und [[geben]] Sie vorsichtig [[Gas]]. | gibt – gab – hat gegeben | v
+beschleunigen | разгоняться | [[Beschleunigen]] Sie, wenn Sie auf die Autobahn fahren, damit Sie den Verkehr nicht behindern. |  | v
+einen Unfall verursachen | стать виновником аварии | Die Polizei hat Zeugen befragt, um festzustellen, wer den [[Unfall verursacht]] hat. |  | v
+sich anschnallen | пристегнуться | Jedes Auto muss über Gurte verfügen, damit [[sich]] alle Personen im Auto [[anschnallen]] können. |  | v
+ums Leben kommen* | погибнуть | Bei einem schweren Verkehrsunfall sind drei Personen [[ums Leben gekommen]]. | kam – ist gekommen | v
+
+# s5 Правила дорожного движения
+das Verkehrsschild, -schilder | дорожный знак | [[Verkehrsschilder]] weisen beispielsweise auf Parkverbote, besondere Gefahren und Tempolimits hin. |  | n
+die Verkehrsregeln (Plural) | правила дорожного движения | Damit Kinder sicher zur Schule gelangen, sollten die Eltern sie schon früh mit den [[Verkehrsregeln]] vertraut machen. |  | pl
+die Verkehrsregeln beachten | соблюдать ПДД | Nicht nur die Autofahrer, sondern auch die Fußgänger müssen die [[Verkehrsregeln beachten]]. |  | v
+gegen die Verkehrsregeln verstoßen* | нарушать ПДД | Einem Fahrer, der zu oft [[gegen die Verkehrsregeln verstößt]], kann der Führerschein entzogen werden. | verstößt – verstieß – hat verstoßen | v
+das Bußgeld, -gelder | штраф | Autofahrer, die während der Fahrt mit dem Handy telefonieren, müssen ein [[Bußgeld]] von 60 € bezahlen. |  | n
+der Bürgersteig, -steige = der Gehweg, -wege | тротуар | Hier darf man nicht auf dem [[Bürgersteig]] parken. |  | m
+der Radweg, -wege | велодорожка | Radfahrer ärgern sich darüber, wenn Autos auf dem [[Radweg]] parken. |  | m
+die Fahrbahn, -bahnen | проезжая часть | Fahren Sie auf der Autobahn zwischen Hamburg und Lübeck besonders vorsichtig! Dort befinden sich Tiere auf der [[Fahrbahn]]. |  | f
+die Straße überqueren | переходить улицу | Kinder müssen lernen, nach rechts und links zu schauen, bevor sie eine [[Straße überqueren]]. | неотделяемая: hat überquert | v
+der Zebrastreifen, -streifen | пешеходный переход, «зебра» | Autofahrer müssen vor dem [[Zebrastreifen]] anhalten, um Fußgängern das Überqueren der Straße zu ermöglichen. |  | m
+die Ampel, Ampeln | светофор | Wenn die [[Ampel]] gelb ist, müssen Sie schnell entscheiden, ob Sie noch weiterfahren können oder besser anhalten sollten. |  | f
+
+# s6 Скорость и препятствия
+die Geschwindigkeit = das Tempo | скорость | Autofahrer müssen bei Regen, Schnee oder Nebel ihre [[Geschwindigkeit]] an die Wetterbedingungen anpassen. | an + Akk. anpassen | f
+die Geschwindigkeitsbegrenzung = das Tempolimit | ограничение скорости | Es wird viel darüber diskutiert, ob man das Unfallrisiko durch [[Geschwindigkeitsbegrenzungen]] auf Autobahnen reduzieren kann. |  | f
+die erlaubte Geschwindigkeit überschreiten* | превысить допустимую скорость | Wer die [[erlaubte Geschwindigkeit überschreitet]], muss mit einem Bußgeld rechnen. | überschritt – hat überschritten | v
+jdn. überholen | обгонять | [[Überholen]] Sie ein langsameres Fahrzeug nur dann, wenn Ihnen kein Auto entgegenkommt. | неотделяемая: hat überholt | v
+die Baustelle, -stellen | стройка, дорожные работы | Wegen einer [[Baustelle]] staut sich der Verkehr auf der A7. |  | f
+das Hindernis, Hindernisse | препятствие | Autofahrer sollten so langsam fahren, dass sie bei plötzlich auftauchenden [[Hindernissen]] noch rechtzeitig bremsen können. |  | n
+jdm. / etw. ausweichen* | уклоняться, объезжать | Der Fahrer des Krankenwagens muss sich konzentrieren, um anderen Autos [[auszuweichen]]. | wich aus – ist ausgewichen · + Dat. | v
+# s7 Перекрытия и пробки
+sperren | перекрывать | Nach dem Unfall musste die Polizei die Autobahn für mehrere Stunden [[sperren]]. |  | v
+die Sperrung, Sperrungen | перекрытие |  |  | f
+
+der Stau, Staus | пробка | Während der Sommerferien kommt es oft zu kilometerlangen [[Staus]] auf den Autobahnen. |  | m
+im Stau stehen* | стоять в пробке | Manche Autofahrer werden nervös und sogar aggressiv, wenn sie längere Zeit [[im Stau stehen]]. | stand – hat gestanden | v
+dichter Verkehr | плотное движение | Bei [[dichtem Verkehr]] muss man besonders konzentriert sein und darauf achten, nicht zu nahe an die anderen Autos heranzufahren. |  | m
+der Berufsverkehr | час пик (поездки на работу) | Man muss damit rechnen, während des [[Berufsverkehrs]] am Morgen und am späten Nachmittag im Stau zu stehen. |  | m
+die Stoßzeit, -zeiten | час пик | Wer die Möglichkeit hat, sollte Autofahrten zu den [[Stoßzeiten]] vermeiden und zu einer anderen Uhrzeit fahren, wenn nicht so viele Menschen unterwegs sind. |  | f
+
+# s8 Транспорт и экология
+der Lärm | шум | Menschen, die an einer stark befahrenen Straße wohnen, können wegen des [[Lärms]] oft schlecht schlafen. |  | m
+das Benzin | бензин | Sind Sie der Meinung, dass der [[Benzin]]preis weiter erhöht werden sollte, damit die Bürger weniger Auto fahren? |  | n
+der Treibstoff, -stoffe = der Kraftstoff, -stoffe | топливо | Automotoren können mit verschiedenen [[Treibstoffen]], z. B. Benzin oder Diesel, angetrieben werden. |  | m
+die Abgase (Plural) | выхлопные газы | Katalysatoren filtern die [[Abgase]] von Fahrzeugen, damit weniger Schadstoffe in die Luft gelangen. |  | pl
+Abgase ausstoßen* · der Ausstoß von Abgasen | выбрасывать выхлопные газы · выброс | Autos, die mit Erdgas angetrieben werden, [[stoßen]] deutlich weniger [[Abgase aus]] als dieselbetriebene Fahrzeuge. | stößt aus – stieß aus – hat ausgestoßen | v
+das Ozon (O3) | озон | Der Straßenverkehr trägt in den Sommermonaten erheblich zur Erhöhung der [[Ozon]]werte bei. |  | n
+das Kohlendioxid (CO2) | углекислый газ | Um dem Klimawandel entgegenzuwirken, muss der Ausstoß von [[Kohlendioxid]] reduziert werden. | entgegenwirken + Dat. | n
+der Feinstaub | мелкодисперсная пыль | [[Feinstaub]], der in den menschlichen Körper eindringt, kann Erkrankungen der Atemwege verursachen. |  | m
+die Luftverschmutzung | загрязнение воздуха | Wissenschaftler und Politiker diskutieren darüber, welche Maßnahmen gegen die [[Luftverschmutzung]] ergriffen werden müssen. |  | f
+der Smog | смог | Wegen des starken [[Smogs]] hat die Regierung Fahrverbote für Autofahrer beschlossen. |  | m
+
+## b1 Бонус: биотопливо (Infobox)
+der Biokraftstoff, -e | биотопливо | Relativ neu ist der Einsatz von [[Biokraftstoffen]]. |  | m
+unvorstellbar | немыслимый | Dennoch ist eine Welt ohne Autos und Flugzeuge heutzutage [[unvorstellbar]]. |  | v
+im Zeitalter der Globalisierung | в эпоху глобализации | … insbesondere [[im Zeitalter der Globalisierung]]. |  | v
+angesichts + G | ввиду, учитывая | [[Angesichts]] des Klimawandels arbeiten Wissenschaftler intensiv daran, den Schadstoffausstoß zu reduzieren. | + Genitiv | v
+etw. antreiben* | приводить в движение | Fahrzeuge, die mit Gas, Elektrizität oder Wasserstoff [[angetrieben]] werden … | trieb an – hat angetrieben | v
+der Wasserstoff | водород | Fahrzeuge, die mit Gas, Elektrizität oder [[Wasserstoff]] angetrieben werden, sind Beispiele für diese Entwicklung. |  | m
+essbar | съедобный | … dass Bioethanol aus [[essbaren]] Pflanzen wie Zuckerrüben und Mais hergestellt wird. |  | v
+die Alternative zu + D | альтернатива чему-то | … könnten Kraftstoffe aus Pflanzen eine echte [[Alternative zu]] Benzin und Diesel werden. |  | f
+
+! der Pkw / der Lkw | Мн. ч. без окончания или -s: die Pkw / Pkws
+! gelangen · gelingen | gelangen — добраться куда-то (ist gelangt); gelingen — удаваться (es ist mir gelungen)
+! überholen, überqueren, überschreiten | Неотделяемые: Er hat das Auto überholt, die Straße überquert
+! ausweichen + D | Einem Hindernis ausweichen; Perfekt с sein
+! ums Leben kommen | Drei Personen sind ums Leben gekommen (sein!)
+! schwarzfahren | Отделяемое: Er fährt schwarz; ist schwarzgefahren
+! gegen + A verstoßen | gegen die Verkehrsregeln verstoßen; der Verstoß gegen + A
+! angesichts + G | Предлог с Genitiv: angesichts des Klimawandels

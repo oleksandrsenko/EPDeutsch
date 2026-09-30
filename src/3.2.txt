@@ -1,0 +1,138 @@
+@id 3.2
+@chapter 3
+@chapterName Alltagsleben
+@title Arbeit und Beruf
+@titleRu Работа и профессия
+@pages 104–110
+@exercises 110–113
+@solutions 263–264
+@bookRows 77
+
+# x Работать: основные выражения
+erwerbstätig sein* = berufstätig sein* | работать, иметь оплачиваемую работу | Viele Frauen wollen auch dann [[erwerbstätig sein]], wenn sie Kinder haben. |  | v
+die Erwerbstätigkeit = die Berufstätigkeit | трудовая деятельность, занятость | [[Eine Erwerbstätigkeit]] ist eine Möglichkeit, das Studium ganz oder teilweise zu finanzieren. |  | f
+einer Erwerbstätigkeit nachgehen* | заниматься трудовой деятельностью, работать | Wenn Sie [[einer Erwerbstätigkeit nachgehen]], müssen Sie Einkommenssteuern zahlen. | ging nach – ist nachgegangen · + Dativ | v
+einen Beruf ergreifen* | выбрать профессию | Spätestens gegen Ende der Schulzeit müssen sich junge Leute Gedanken darüber machen, welchen Beruf sie [[ergreifen]] wollen. | ergriff – hat ergriffen | v
+einen Beruf ausüben | работать по профессии, заниматься профессией | Früher [[übten]] die meisten Arbeitnehmer viele Jahrzehnte lang den gleichen Beruf [[aus]]. | übte aus – hat ausgeübt | v
+tätig sein* als = arbeiten als | работать кем-то, в качестве кого-то | Seit seinem Hochschulabschluss ist er als Ingenieur in der Automobilbranche [[tätig]]. |  | v
+angestellt sein* | работать по найму, быть в штате | Sie war lange [[angestellt]], bevor sie beschlossen hat, ein eigenes Unternehmen zu gründen. |  | v
+selbstständig sein* | работать на себя, быть самозанятым | Wenn man [[selbstständig]] ist, muss man gewisse finanzielle Risiken in Kauf nehmen. |  | v
+die Selbstständigkeit | самостоятельная (частная) деятельность, работа на себя |  |  | f
+sich selbstständig machen | открыть своё дело | Wer [[sich selbstständig machen]] will, kann einen Kredit für Existenzgründer beantragen. |  | v
+
+# x Участники рынка труда
+der Arbeitgeber, - / die Arbeitgeberin | работодатель | Die [[Arbeitgeber]] zahlen einen Teil der Beiträge zur Krankenversicherung ihrer Angestellten. |  | m
+der Arbeitnehmer, - / die Arbeitnehmerin | работник (по найму) | Erst nach der sechsmonatigen Probezeit haben [[Arbeitnehmer]] ein Recht auf einen längeren Urlaub. |  | m
+die Arbeitskräfte (Pl.) | рабочая сила, работники | Wegen der guten Auftragslage stellt das Unternehmen zusätzliche [[Arbeitskräfte]] ein. |  | pl
+jds. Interessen vertreten* | представлять чьи-либо интересы | Die Arbeitgeberverbände [[vertreten die Interessen]] ihrer Mitglieder gegenüber dem Staat und den Gewerkschaften. | vertritt – vertrat – hat vertreten | v
+die Gewerkschaft, -en | профсоюз | [[Gewerkschaften]] vertreten die Interessen der Arbeitnehmerinnen und Arbeitnehmer, die in der jeweiligen Branche tätig sind. |  | f
+der Betriebsrat, -räte | совет работников предприятия (выборный орган) | Der [[Betriebsrat]] wird von den Mitarbeitern gewählt und vertritt ihre Interessen gegenüber der Firmenleitung. |  | m
+der Mitarbeiter, - / die Mitarbeiterin | сотрудник | Die Firmenleitung veranstaltet eine Weihnachtsfeier, zu der alle [[Mitarbeiter]] herzlich eingeladen sind. |  | m
+der Arbeiter, - / die Arbeiterin | рабочий | Die Sicherheitsvorschriften auf der Baustelle dienen dem Schutz der [[Arbeiter]]. | получает Lohn → Rente | m
+der / die Angestellte (!) | служащий, сотрудник по найму | Als [[Angestellter]] wird man auch bezahlt, wenn man krank ist oder Urlaub macht. | склоняется как прилагательное: ein Angestellter · получает Gehalt → Rente | m
+der Beamte (!) / die Beamtin | госслужащий, чиновник | Während früher alle Lehrer an staatlichen Schulen [[Beamte]] waren, gibt es heute auch eine große Zahl an angestellten Lehrern. | ein Beamter, die Beamten · получает Gehalt → Pension | m
+
+# x Квалификация
+die Qualifikation, -en | квалификация | Berufliche [[Qualifikationen]] erwirbt man heute nicht nur in der Ausbildung, sondern auch durch Fortbildungen. |  | f
+verfügen über + A | располагать чем-либо, обладать | Ein Bewerber, der über besondere Qualifikationen [[verfügt]], hat bessere Chancen, einen Arbeitsplatz zu finden. | über + Akkusativ | v
+die Berufsausbildung, -en | профессиональное обучение | Haupt- und Realschüler absolvieren nach dem Schulabschluss in der Regel eine [[Berufsausbildung]]. |  | f
+der Akademiker, - / die Akademikerin | человек с высшим образованием | Untersuchungen haben gezeigt, dass [[Akademiker]] seltener arbeitslos sind als Menschen ohne Hochschulabschluss. |  | m
+der Hochschulabsolvent, -en / die Hochschulabsolventin | выпускник вуза | Zahlreiche [[Hochschulabsolventen]] absolvieren nach dem Abschluss ihres Studiums ein Praktikum. | n-склонение: den/dem/des Hochschulabsolventen | m
+die Schlüsselqualifikationen (Pl.) | ключевые компетенции, soft skills | In allen Berufen wird heute auf [[Schlüsselqualifikationen]] wie soziale und kommunikative Kompetenz Wert gelegt. |  | pl
+die Auslandserfahrung | опыт жизни или работы за границей | Heutzutage wünschen sich die meisten Arbeitgeber Mitarbeiter, die über [[Auslandserfahrung]] verfügen. |  | f
+die Sprachkenntnisse (Pl.) | знание языков | Große Unternehmen geben ihren Mitarbeitern häufig Gelegenheit, ihre [[Sprachkenntnisse]] in firmeninternen Sprachkursen zu erweitern. |  | pl
+
+# x Рынок труда и безработица
+der Arbeitsmarkt, -märkte | рынок труда | Die Situation auf dem [[Arbeitsmarkt]] beeinflusst wirtschafts- und sozialpolitische Entscheidungen. |  | m
+die Chancen auf dem Arbeitsmarkt | шансы на рынке труда | Die meisten Schulabgänger machen sich bei der Berufswahl Gedanken über ihre [[Chancen auf dem Arbeitsmarkt]]. |  | pl
+Arbeitsplätze schaffen* | создавать рабочие места | Durch den zunehmenden Tourismus werden neue [[Arbeitsplätze geschaffen]]. | schuf – hat geschaffen | v
+Arbeitsplätze abbauen | сокращать рабочие места | Das Unternehmen steckt in einer Krise und muss deshalb [[Arbeitsplätze abbauen]]. |  | v
+arbeitslos sein* | быть безработным | Viele Betroffene schämen sich, wenn sie [[arbeitslos]] sind und staatliche Hilfe in Anspruch nehmen müssen. |  | v
+die Arbeitslosigkeit | безработица |  |  | f
+die Arbeitsagentur, -en | агентство занятости, биржа труда | Es ist die Aufgabe der [[Arbeitsagenturen]], geeignete Stellen für Menschen zu finden, die keine Arbeit haben. |  | f
+sich umschulen lassen* | пройти переподготовку, переучиться | Wer seinen erlernten Beruf aus gesundheitlichen Gründen nicht mehr ausüben kann, kann [[sich umschulen lassen]]. | ließ sich umschulen – hat sich umschulen lassen | v
+die Umschulung, -en | переквалификация, переобучение | Teilweise übernehmen die Arbeitsagenturen die Kosten für eine [[Umschulung]]. |  | f
+
+# x Поиск работы и собеседование
+die Stelle, -n | место, должность, вакансия | Auf der Webseite des Unternehmens finden Sie Informationen über offene [[Stellen]]. |  | f
+die Stellenanzeige, -n | объявление о вакансии | Große Institutionen und Unternehmen veröffentlichen ihre [[Stellenanzeigen]] meist in überregionalen Zeitungen und im Internet. |  | f
+sich um eine Stelle bewerben* | претендовать на место, откликаться на вакансию | Wenn Sie [[sich um eine Stelle bewerben]], sollten Sie sich vorher gründlich über das betreffende Unternehmen informieren. | bewirbt – bewarb – hat beworben · um + Akk. | v
+die Bewerbung um eine Stelle | отклик, заявка на вакансию |  |  | f
+der Bewerber, - / die Bewerberin | соискатель, кандидат | Manche [[Bewerber]] geben in ihrem Lebenslauf Auskunft über persönliche Hobbys und Interessen. |  | m
+die Bewerbungsunterlagen (Pl.) | документы для отклика на вакансию | Heutzutage kann man den Unternehmen seine [[Bewerbungsunterlagen]] oft auch per E-Mail zuschicken. |  | pl
+der Lebenslauf, -läufe | резюме, автобиография (CV) | Zu den Bewerbungsunterlagen gehört normalerweise ein tabellarischer [[Lebenslauf]]. |  | m
+das Vorstellungsgespräch, -e | собеседование | Nur ein kleiner Teil der Bewerber wird zu einem [[Vorstellungsgespräch]] eingeladen. |  | n
+der Personalleiter, - / die Personalleiterin | руководитель отдела кадров | Im Rahmen des Vorstellungsgesprächs prüft der [[Personalleiter]] die Qualifikationen der Bewerber. |  | m
+der / die Vorgesetzte (!) | начальник, руководитель | Beim Vorstellungsgespräch lernt der Bewerber seinen zukünftigen [[Vorgesetzten]] kennen. | склоняется как прилагательное: ein Vorgesetzter | m
+
+# x Приём на работу и увольнение
+jdn. einstellen | принять кого-то на работу | Entgegen dem allgemeinen Trend [[stellen]] einige Unternehmen gerne auch ältere Mitarbeiter [[ein]]. | stellte ein – hat eingestellt | v
+die Einstellung, -en | приём на работу, найм |  |  | f
+jdn. entlassen* | уволить кого-то | Um Personalkosten zu sparen, wurde beschlossen, einen Teil der Mitarbeiter zu [[entlassen]]. | entlässt – entließ – hat entlassen | v
+die Entlassung, -en | увольнение (по инициативе работодателя) |  |  | f
+kündigen | уволиться самому, подать заявление об уходе | Er hat schon [[gekündigt]], obwohl er noch keine neue Stelle gefunden hat. | без дополнения: уходит сам работник | v
+jdm. kündigen = jdn. entlassen* | уволить кого-то | Es ist nicht erlaubt, einer Frau während der Schwangerschaft zu [[kündigen]]. | + Dativ: Die Firma kündigt ihm. | v
+die Kündigung, -en | увольнение; заявление об уходе | Eine [[Kündigung]] ist nur rechtskräftig, wenn sie schriftlich erfolgt. |  | f
+eine fristlose Kündigung | увольнение без срока предупреждения | [[Eine fristlose Kündigung]] ist nur in Ausnahmefällen möglich. |  | f
+die Probezeit | испытательный срок | Während der [[Probezeit]] kann ein neuer Mitarbeiter jederzeit entlassen werden. |  | f
+jdn. einarbeiten | вводить в курс дела, обучать новичка | Die Mitarbeiterin wird ihre Nachfolgerin [[einarbeiten]], bevor sie das Unternehmen verlässt. |  | v
+sich einarbeiten | освоиться на новом месте, войти в курс дела | Wenn man eine neue Stelle antritt, braucht man einige Zeit, um [[sich einzuarbeiten]]. |  | v
+
+# x Договор и рабочее время
+der Arbeitsvertrag, -verträge | трудовой договор | Im [[Arbeitsvertrag]] sind Verdienst, Arbeitszeiten, Sozialleistungen und andere Details geregelt. |  | m
+befristet | ограниченный по сроку | Viele Stellen sind heute auf zwei oder drei Jahre [[befristet]]. |  | v
+ein befristeter Arbeitsvertrag | срочный трудовой договор | Insbesondere Berufsanfänger erhalten meist nur [[einen befristeten Arbeitsvertrag]]. |  | m
+ein unbefristeter Arbeitsvertrag | бессрочный трудовой договор | Die Bewerber hoffen darauf, dass ihnen [[ein unbefristeter Arbeitsvertrag]] angeboten wird. |  | m
+die Vollzeitstelle, -n | работа на полную ставку | Alleinstehende Arbeitnehmer sind in der Regel auf [[eine Vollzeitstelle]] angewiesen, um ihren Lebensunterhalt zu verdienen. |  | f
+die Teilzeitstelle, -n | работа на неполную ставку | Ältere Menschen haben in einigen Unternehmen die Möglichkeit, in den Jahren vor der Rente [[eine Teilzeitstelle]] zu erhalten. |  | f
+vollzeitbeschäftigt sein* | работать полный день | Vor seiner Erkrankung war er [[vollzeitbeschäftigt]], aber jetzt möchte er zunächst einmal Teilzeit arbeiten. |  | v
+teilzeitbeschäftigt sein* | работать неполный день | Aus familiären Gründen sind Frauen häufiger [[teilzeitbeschäftigt]] als Männer. |  | v
+halbtags arbeiten | работать полдня | Mütter, die schulpflichtige Kinder haben, arbeiten oft [[halbtags]]. |  | v
+flexible Arbeitszeiten (Pl.) | гибкий график работы | In vielen Unternehmen sind [[flexible Arbeitszeiten]] nichts Besonderes mehr. |  | pl
+Schichtdienst machen | работать посменно | Krankenpfleger müssen in der Regel [[Schichtdienst machen]], da immer jemand für die Patienten da sein muss. |  | v
+die Schichtarbeit | сменная работа | Mittlerweile hat man festgestellt, dass [[Schichtarbeit]] sich negativ auf die Gesundheit auswirkt. |  | f
+
+# x Зарплата и забастовки
+der Verdienst | заработок | Um die Inflation auszugleichen, sollte der [[Verdienst]] regelmäßig angehoben werden. | не путать: das Verdienst — заслуга | m
+der Lohn, Löhne | зарплата (рабочих, часто почасовая) | Die Gewerkschaften fordern, die [[Löhne]] der Arbeiter um 6 % zu erhöhen. | Arbeiter → Lohn | m
+das Gehalt, Gehälter | оклад, зарплата (служащих, помесячно) | Angestellte haben die Möglichkeit, neben ihrem [[Gehalt]] zusätzliche Leistungen, z. B. Weihnachtsgeld, zu bekommen. | Angestellte, Beamte → Gehalt | n
+die Rente, -n | пенсия (рабочих и служащих) | Ein Arbeiter bekommt Lohn und später [[Rente]]. |  | f
+die Pension, -en | пенсия госслужащего | Beamte erhalten im Alter eine [[Pension]]. | только у Beamte | f
+streiken | бастовать | Die Mitarbeiter [[streiken]], um ihre Forderungen nach besseren Arbeitsbedingungen durchzusetzen. |  | v
+der Streik, -s | забастовка | Wegen des [[Streiks]] im öffentlichen Nahverkehr kommen viele Menschen zu spät zur Arbeit. |  | m
+
+# x Карьера
+das Praktikum, Praktika | практика, стажировка | Durch ein [[Praktikum]] können sich Haupt- und Realschüler ein Bild von ihrem zukünftigen Beruf machen. | мн. ч. die Praktika | n
+ein Praktikum machen / absolvieren | проходить практику | Studierende der Wirtschaftswissenschaften müssen während ihres Studiums ein zweimonatiges Praktikum [[absolvieren]]. |  | v
+der Praktikant, -en / die Praktikantin | практикант, стажёр | Häufig wird behauptet, dass Unternehmen ihre [[Praktikanten]] als billige Arbeitskräfte missbrauchen. | n-склонение: den Praktikanten | m
+Berufserfahrung sammeln | набираться опыта работы | Praktika sind eine gute Möglichkeit, schon während des Studiums [[Berufserfahrung zu sammeln]]. |  | v
+aufsteigen* | продвигаться по службе | Wer engagiert ist und sich regelmäßig weiterbildet, hat die Chance, im Unternehmen rasch [[aufzusteigen]]. | stieg auf – ist aufgestiegen | v
+der Aufstieg | карьерный рост, повышение |  |  | m
+die Aufstiegschancen (Pl.) | перспективы карьерного роста | Absolventen bestimmter Studiengänge haben besonders gute [[Aufstiegschancen]]. |  | pl
+Karriere machen | сделать карьеру | Junge Leute wollen häufig erst [[Karriere machen]], bevor sie eine Familie gründen. |  | v
+
+# x Сферы деятельности
+das Handwerk | ремесло, ремесленный сектор | Durch den technischen Fortschritt haben sich die Tätigkeiten im [[Handwerk]] teilweise stark verändert. |  | n
+die Industrie | промышленность | Die [[Industrie]] ist von der wirtschaftlichen Entwicklung im In- und Ausland abhängig. |  | f
+der Handel | торговля | Zu den Beschäftigten im [[Handel]] zählen unter anderem Verkäufer, Floristen und Einzelhandelskaufleute. |  | m
+der öffentliche Dienst | государственная служба | Menschen, die bei Behörden und in anderen staatlichen Institutionen arbeiten, sind im [[öffentlichen Dienst]] tätig. |  | m
+die Verwaltung | администрация, управление | Manche Menschen arbeiten gerne in der [[Verwaltung]], während andere administrative Aufgaben als langweilig empfinden. |  | f
+der Dienstleistungsberuf, -e | профессия в сфере услуг | Wer einen [[Dienstleistungsberuf]] ausübt, muss oft auch abends oder am Wochenende arbeiten. |  | m
+eine Dienstleistung erbringen* | оказывать услугу | Taxifahrer werden dafür bezahlt, dass sie [[eine Dienstleistung erbringen]]. | erbrachte – hat erbracht | v
+
+## b1 Бонус: временная работа (Infobox)
+die Zeitarbeit | временная работа через кадровое агентство | In den letzten Jahrzehnten hat sich eine neue Form der Arbeit entwickelt, die so genannte [[Zeitarbeit]]. |  | f
+die Leiharbeit / der Leiharbeiter | заёмный труд / заёмный работник | Deshalb bezeichnet man diese Arbeit auch als [[Leiharbeit]]. |  | f
+jdn. ausleihen* | одалживать, передавать во временное пользование | Zeitarbeitsunternehmen stellen Mitarbeiter ein, die sie dann an verschiedene Arbeitgeber [[ausleihen]]. | lieh aus – hat ausgeliehen | v
+fest angestellt / der/die Festangestellte | в штате на постоянной основе / штатный сотрудник | Aufgrund der gesetzlichen Regelungen ist dies deutlich schwieriger, wenn alle Mitarbeiter [[fest angestellt]] sind. |  | v
+die Belegschaft | персонал, коллектив предприятия | Leiharbeiter werden oft schlechter bezahlt als die normale [[Belegschaft]] eines Unternehmens. |  | f
+der Berufsanfänger, - | новичок в профессии | Auch [[Berufsanfänger]] haben so die Möglichkeit, in verschiedenen Unternehmen Erfahrung zu sammeln. |  | m
+vorübergehend | временно | Menschen, die länger oder [[vorübergehend]] arbeitslos sind, können auf diese Weise eine Arbeit finden. |  | v
+der Mindestlohn, -löhne | минимальная зарплата | Außerdem wurden [[Mindestlöhne]] festgesetzt. |  | m
+
+! kündigen / jdm. kündigen | «Er hat gekündigt» — ушёл сам. «Die Firma hat ihm gekündigt» — его уволили (Dativ!)
+! der Angestellte → ein Angestellter | Склоняется как прилагательное. Так же der Vorgesetzte / ein Vorgesetzter, der Beamte / ein Beamter (но die Beamtin)
+! Lohn · Gehalt · Pension | Рабочий получает Lohn, а потом Rente. Служащий — Gehalt, потом Rente. Beamter — Gehalt, потом Pension
+! der Verdienst ≠ das Verdienst | der Verdienst — заработок, das Verdienst — заслуга
+! der Praktikant, der Hochschulabsolvent | n-склонение: den/dem/des Praktikanten, Absolventen
+! das Praktikum → die Praktika | Латинское множественное число

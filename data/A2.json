@@ -1,0 +1,1383 @@
+{
+ "id": "A2",
+ "chapter": 6,
+ "chapterName": "Anhang",
+ "title": "Unregelmäßige Verben",
+ "titleRu": "Неправильные глаголы",
+ "pages": "276–279",
+ "bookRows": 128,
+ "verbs": true,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "abbrechen – aufladen",
+   "items": [
+    {
+     "de": "abbrechen",
+     "ru": "прерывать, бросать",
+     "pres": "bricht ab",
+     "prat": "brach ab",
+     "perf": "hat abgebrochen",
+     "ex": "",
+     "note": "bricht ab – brach ab – hat abgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "abheben",
+     "ru": "снимать (деньги)",
+     "pres": "hebt ab",
+     "prat": "hob ab",
+     "perf": "hat abgehoben",
+     "ex": "",
+     "note": "hebt ab – hob ab – hat abgehoben",
+     "g": "v"
+    },
+    {
+     "de": "abgeben",
+     "ru": "сдавать, испускать",
+     "pres": "gibt ab",
+     "prat": "gab ab",
+     "perf": "hat abgegeben",
+     "ex": "",
+     "note": "gibt ab – gab ab – hat abgegeben",
+     "g": "v"
+    },
+    {
+     "de": "abnehmen",
+     "ru": "худеть, уменьшаться",
+     "pres": "nimmt ab",
+     "prat": "nahm ab",
+     "perf": "hat abgenommen",
+     "ex": "",
+     "note": "nimmt ab – nahm ab – hat abgenommen",
+     "g": "v"
+    },
+    {
+     "de": "abschließen",
+     "ru": "заканчивать",
+     "pres": "schließt ab",
+     "prat": "schloss ab",
+     "perf": "hat abgeschlossen",
+     "ex": "",
+     "note": "schließt ab – schloss ab – hat abgeschlossen",
+     "g": "v"
+    },
+    {
+     "de": "anbieten",
+     "ru": "предлагать",
+     "pres": "bietet an",
+     "prat": "bot an",
+     "perf": "hat angeboten",
+     "ex": "",
+     "note": "bietet an – bot an – hat angeboten",
+     "g": "v"
+    },
+    {
+     "de": "ansehen",
+     "ru": "смотреть",
+     "pres": "sieht an",
+     "prat": "sah an",
+     "perf": "hat angesehen",
+     "ex": "",
+     "note": "sieht an – sah an – hat angesehen",
+     "g": "v"
+    },
+    {
+     "de": "antreiben",
+     "ru": "приводить в движение",
+     "pres": "treibt an",
+     "prat": "trieb an",
+     "perf": "hat angetrieben",
+     "ex": "",
+     "note": "treibt an – trieb an – hat angetrieben",
+     "g": "v"
+    },
+    {
+     "de": "anwenden",
+     "ru": "применять",
+     "pres": "wendet an",
+     "prat": "wandte an / wendete an",
+     "perf": "hat angewendet / hat angewandt",
+     "ex": "",
+     "note": "wendet an – wandte an / wendete an – hat angewendet / hat angewandt",
+     "g": "v"
+    },
+    {
+     "de": "aufladen",
+     "ru": "заряжать",
+     "pres": "lädt auf",
+     "prat": "lud auf",
+     "perf": "hat aufgeladen",
+     "ex": "",
+     "note": "lädt auf – lud auf – hat aufgeladen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "aufnehmen – beginnen",
+   "items": [
+    {
+     "de": "aufnehmen",
+     "ru": "принимать, начинать",
+     "pres": "nimmt auf",
+     "prat": "nahm auf",
+     "perf": "hat aufgenommen",
+     "ex": "",
+     "note": "nimmt auf – nahm auf – hat aufgenommen",
+     "g": "v"
+    },
+    {
+     "de": "aufsteigen",
+     "ru": "продвигаться по службе",
+     "pres": "steigt auf",
+     "prat": "stieg auf",
+     "perf": "ist aufgestiegen",
+     "ex": "",
+     "note": "steigt auf – stieg auf – ist aufgestiegen",
+     "g": "v"
+    },
+    {
+     "de": "ausbrechen",
+     "ru": "вспыхивать, извергаться",
+     "pres": "bricht aus",
+     "prat": "brach aus",
+     "perf": "ist ausgebrochen",
+     "ex": "",
+     "note": "bricht aus – brach aus – ist ausgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "ausfallen",
+     "ru": "отменяться, отключаться",
+     "pres": "fällt aus",
+     "prat": "fiel aus",
+     "perf": "ist ausgefallen",
+     "ex": "",
+     "note": "fällt aus – fiel aus – ist ausgefallen",
+     "g": "v"
+    },
+    {
+     "de": "ausgehen",
+     "ru": "выходить (развлечься)",
+     "pres": "geht aus",
+     "prat": "ging aus",
+     "perf": "ist ausgegangen",
+     "ex": "",
+     "note": "geht aus – ging aus – ist ausgegangen",
+     "g": "v"
+    },
+    {
+     "de": "aussteigen",
+     "ru": "выходить, отказываться",
+     "pres": "steigt aus",
+     "prat": "stieg aus",
+     "perf": "ist ausgestiegen",
+     "ex": "",
+     "note": "steigt aus – stieg aus – ist ausgestiegen",
+     "g": "v"
+    },
+    {
+     "de": "aussterben",
+     "ru": "вымирать",
+     "pres": "stirbt aus",
+     "prat": "starb aus",
+     "perf": "ist ausgestorben",
+     "ex": "",
+     "note": "stirbt aus – starb aus – ist ausgestorben",
+     "g": "v"
+    },
+    {
+     "de": "ausstoßen",
+     "ru": "выбрасывать",
+     "pres": "stößt aus",
+     "prat": "stieß aus",
+     "perf": "hat ausgestoßen",
+     "ex": "",
+     "note": "stößt aus – stieß aus – hat ausgestoßen",
+     "g": "v"
+    },
+    {
+     "de": "begehen",
+     "ru": "совершать (преступление)",
+     "pres": "begeht",
+     "prat": "beging",
+     "perf": "hat begangen",
+     "ex": "",
+     "note": "begeht – beging – hat begangen",
+     "g": "v"
+    },
+    {
+     "de": "beginnen",
+     "ru": "начинать",
+     "pres": "beginnt",
+     "prat": "begann",
+     "perf": "hat begonnen",
+     "ex": "",
+     "note": "beginnt – begann – hat begonnen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "beitreten – sich bewerben",
+   "items": [
+    {
+     "de": "beitreten",
+     "ru": "вступать",
+     "pres": "tritt bei",
+     "prat": "trat bei",
+     "perf": "ist beigetreten",
+     "ex": "",
+     "note": "tritt bei – trat bei – ist beigetreten",
+     "g": "v"
+    },
+    {
+     "de": "bekommen",
+     "ru": "получать",
+     "pres": "bekommt",
+     "prat": "bekam",
+     "perf": "hat bekommen",
+     "ex": "",
+     "note": "bekommt – bekam – hat bekommen",
+     "g": "v"
+    },
+    {
+     "de": "beschließen",
+     "ru": "решать, принимать (закон)",
+     "pres": "beschließt",
+     "prat": "beschloss",
+     "perf": "hat beschlossen",
+     "ex": "",
+     "note": "beschließt – beschloss – hat beschlossen",
+     "g": "v"
+    },
+    {
+     "de": "bestehen",
+     "ru": "сдать; состоять из",
+     "pres": "besteht",
+     "prat": "bestand",
+     "perf": "hat bestanden",
+     "ex": "",
+     "note": "besteht – bestand – hat bestanden",
+     "g": "v"
+    },
+    {
+     "de": "bestreiten",
+     "ru": "оспаривать",
+     "pres": "bestreitet",
+     "prat": "bestritt",
+     "perf": "hat bestritten",
+     "ex": "",
+     "note": "bestreitet – bestritt – hat bestritten",
+     "g": "v"
+    },
+    {
+     "de": "betreiben",
+     "ru": "заниматься, вести",
+     "pres": "betreibt",
+     "prat": "betrieb",
+     "perf": "hat betrieben",
+     "ex": "",
+     "note": "betreibt – betrieb – hat betrieben",
+     "g": "v"
+    },
+    {
+     "de": "betrügen",
+     "ru": "обманывать",
+     "pres": "betrügt",
+     "prat": "betrog",
+     "perf": "hat betrogen",
+     "ex": "",
+     "note": "betrügt – betrog – hat betrogen",
+     "g": "v"
+    },
+    {
+     "de": "bevorstehen",
+     "ru": "предстоять",
+     "pres": "steht bevor",
+     "prat": "stand bevor",
+     "perf": "hat bevorgestanden",
+     "ex": "",
+     "note": "steht bevor – stand bevor – hat bevorgestanden",
+     "g": "v"
+    },
+    {
+     "de": "beweisen",
+     "ru": "доказывать",
+     "pres": "beweist",
+     "prat": "bewies",
+     "perf": "hat bewiesen",
+     "ex": "",
+     "note": "beweist – bewies – hat bewiesen",
+     "g": "v"
+    },
+    {
+     "de": "sich bewerben",
+     "ru": "подавать заявку",
+     "pres": "bewirbt sich",
+     "prat": "bewarb sich",
+     "perf": "hat sich beworben",
+     "ex": "",
+     "note": "bewirbt sich – bewarb sich – hat sich beworben",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "bleiben – sich einschreiben",
+   "items": [
+    {
+     "de": "bleiben",
+     "ru": "оставаться",
+     "pres": "bleibt",
+     "prat": "blieb",
+     "perf": "ist geblieben",
+     "ex": "",
+     "note": "bleibt – blieb – ist geblieben",
+     "g": "v"
+    },
+    {
+     "de": "brechen",
+     "ru": "ломать",
+     "pres": "bricht",
+     "prat": "brach",
+     "perf": "hat gebrochen",
+     "ex": "",
+     "note": "bricht – brach – hat gebrochen",
+     "g": "v"
+    },
+    {
+     "de": "bringen",
+     "ru": "приносить",
+     "pres": "bringt",
+     "prat": "brachte",
+     "perf": "hat gebracht",
+     "ex": "",
+     "note": "bringt – brachte – hat gebracht",
+     "g": "v"
+    },
+    {
+     "de": "durchfallen",
+     "ru": "провалиться",
+     "pres": "fällt durch",
+     "prat": "fiel durch",
+     "perf": "ist durchgefallen",
+     "ex": "",
+     "note": "fällt durch – fiel durch – ist durchgefallen",
+     "g": "v"
+    },
+    {
+     "de": "einbrechen",
+     "ru": "вламываться",
+     "pres": "bricht ein",
+     "prat": "brach ein",
+     "perf": "ist eingebrochen",
+     "ex": "",
+     "note": "bricht ein – brach ein – ist eingebrochen",
+     "g": "v"
+    },
+    {
+     "de": "eingeben",
+     "ru": "вводить (данные)",
+     "pres": "gibt ein",
+     "prat": "gab ein",
+     "perf": "hat eingegeben",
+     "ex": "",
+     "note": "gibt ein – gab ein – hat eingegeben",
+     "g": "v"
+    },
+    {
+     "de": "eingehen",
+     "ru": "вступать (в брак), идти на",
+     "pres": "geht ein",
+     "prat": "ging ein",
+     "perf": "ist eingegangen",
+     "ex": "",
+     "note": "geht ein – ging ein – ist eingegangen",
+     "g": "v"
+    },
+    {
+     "de": "einhalten",
+     "ru": "соблюдать",
+     "pres": "hält ein",
+     "prat": "hielt ein",
+     "perf": "hat eingehalten",
+     "ex": "",
+     "note": "hält ein – hielt ein – hat eingehalten",
+     "g": "v"
+    },
+    {
+     "de": "einnehmen",
+     "ru": "принимать (пищу, лекарство)",
+     "pres": "nimmt ein",
+     "prat": "nahm ein",
+     "perf": "hat eingenommen",
+     "ex": "",
+     "note": "nimmt ein – nahm ein – hat eingenommen",
+     "g": "v"
+    },
+    {
+     "de": "sich einschreiben",
+     "ru": "записываться",
+     "pres": "schreibt sich ein",
+     "prat": "schrieb sich ein",
+     "perf": "hat sich eingeschrieben",
+     "ex": "",
+     "note": "schreibt sich ein – schrieb sich ein – hat sich eingeschrieben",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "empfinden – erbrechen",
+   "items": [
+    {
+     "de": "empfinden",
+     "ru": "ощущать",
+     "pres": "empfindet",
+     "prat": "empfand",
+     "perf": "hat empfunden",
+     "ex": "",
+     "note": "empfindet – empfand – hat empfunden",
+     "g": "v"
+    },
+    {
+     "de": "enthalten",
+     "ru": "содержать",
+     "pres": "enthält",
+     "prat": "enthielt",
+     "perf": "hat enthalten",
+     "ex": "",
+     "note": "enthält – enthielt – hat enthalten",
+     "g": "v"
+    },
+    {
+     "de": "entlassen",
+     "ru": "увольнять",
+     "pres": "entlässt",
+     "prat": "entließ",
+     "perf": "hat entlassen",
+     "ex": "",
+     "note": "entlässt – entließ – hat entlassen",
+     "g": "v"
+    },
+    {
+     "de": "entscheiden",
+     "ru": "решать",
+     "pres": "entscheidet",
+     "prat": "entschied",
+     "perf": "hat entschieden",
+     "ex": "",
+     "note": "entscheidet – entschied – hat entschieden",
+     "g": "v"
+    },
+    {
+     "de": "entwerfen",
+     "ru": "проектировать",
+     "pres": "entwirft",
+     "prat": "entwarf",
+     "perf": "hat entworfen",
+     "ex": "",
+     "note": "entwirft – entwarf – hat entworfen",
+     "g": "v"
+    },
+    {
+     "de": "erbringen",
+     "ru": "оказывать, показывать",
+     "pres": "erbringt",
+     "prat": "erbrachte",
+     "perf": "hat erbracht",
+     "ex": "",
+     "note": "erbringt – erbrachte – hat erbracht",
+     "g": "v"
+    },
+    {
+     "de": "ergreifen",
+     "ru": "хватать, принимать (меры)",
+     "pres": "ergreift",
+     "prat": "ergriff",
+     "perf": "hat ergriffen",
+     "ex": "",
+     "note": "ergreift – ergriff – hat ergriffen",
+     "g": "v"
+    },
+    {
+     "de": "erhalten",
+     "ru": "получать; сохранять",
+     "pres": "erhält",
+     "prat": "erhielt",
+     "perf": "hat erhalten",
+     "ex": "",
+     "note": "erhält – erhielt – hat erhalten",
+     "g": "v"
+    },
+    {
+     "de": "erheben",
+     "ru": "взимать; собирать (данные)",
+     "pres": "erhebt",
+     "prat": "erhob",
+     "perf": "hat erhoben",
+     "ex": "",
+     "note": "erhebt – erhob – hat erhoben",
+     "g": "v"
+    },
+    {
+     "de": "erbrechen",
+     "ru": "рвать (тошнить)",
+     "pres": "erbricht",
+     "prat": "erbrach",
+     "perf": "hat erbrochen",
+     "ex": "",
+     "note": "erbricht – erbrach – hat erbrochen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "erfinden – freisprechen",
+   "items": [
+    {
+     "de": "erfinden",
+     "ru": "изобретать",
+     "pres": "erfindet",
+     "prat": "erfand",
+     "perf": "hat erfunden",
+     "ex": "",
+     "note": "erfindet – erfand – hat erfunden",
+     "g": "v"
+    },
+    {
+     "de": "erkennen",
+     "ru": "узнавать, распознавать",
+     "pres": "erkennt",
+     "prat": "erkannte",
+     "perf": "hat erkannt",
+     "ex": "",
+     "note": "erkennt – erkannte – hat erkannt",
+     "g": "v"
+    },
+    {
+     "de": "erleiden",
+     "ru": "перенести (удар, инфаркт)",
+     "pres": "erleidet",
+     "prat": "erlitt",
+     "perf": "hat erlitten",
+     "ex": "",
+     "note": "erleidet – erlitt – hat erlitten",
+     "g": "v"
+    },
+    {
+     "de": "erschließen",
+     "ru": "осваивать",
+     "pres": "erschließt",
+     "prat": "erschloss",
+     "perf": "hat erschlossen",
+     "ex": "",
+     "note": "erschließt – erschloss – hat erschlossen",
+     "g": "v"
+    },
+    {
+     "de": "erwerben",
+     "ru": "приобретать",
+     "pres": "erwirbt",
+     "prat": "erwarb",
+     "perf": "hat erworben",
+     "ex": "",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "erziehen",
+     "ru": "воспитывать",
+     "pres": "erzieht",
+     "prat": "erzog",
+     "perf": "hat erzogen",
+     "ex": "",
+     "note": "erzieht – erzog – hat erzogen",
+     "g": "v"
+    },
+    {
+     "de": "fallen",
+     "ru": "падать",
+     "pres": "fällt",
+     "prat": "fiel",
+     "perf": "ist gefallen",
+     "ex": "",
+     "note": "fällt – fiel – ist gefallen",
+     "g": "v"
+    },
+    {
+     "de": "festnehmen",
+     "ru": "задерживать",
+     "pres": "nimmt fest",
+     "prat": "nahm fest",
+     "perf": "hat festgenommen",
+     "ex": "",
+     "note": "nimmt fest – nahm fest – hat festgenommen",
+     "g": "v"
+    },
+    {
+     "de": "fliehen",
+     "ru": "бежать, спасаться",
+     "pres": "flieht",
+     "prat": "floh",
+     "perf": "ist geflohen",
+     "ex": "",
+     "note": "flieht – floh – ist geflohen",
+     "g": "v"
+    },
+    {
+     "de": "freisprechen",
+     "ru": "оправдывать",
+     "pres": "spricht frei",
+     "prat": "sprach frei",
+     "perf": "hat freigesprochen",
+     "ex": "",
+     "note": "spricht frei – sprach frei – hat freigesprochen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "gebären – halten",
+   "items": [
+    {
+     "de": "gebären",
+     "ru": "рожать",
+     "pres": "gebiert / gebärt",
+     "prat": "gebar",
+     "perf": "hat geboren",
+     "ex": "",
+     "note": "gebiert / gebärt – gebar – hat geboren",
+     "g": "v"
+    },
+    {
+     "de": "geben",
+     "ru": "давать",
+     "pres": "gibt",
+     "prat": "gab",
+     "perf": "hat gegeben",
+     "ex": "",
+     "note": "gibt – gab – hat gegeben",
+     "g": "v"
+    },
+    {
+     "de": "gefrieren",
+     "ru": "замерзать",
+     "pres": "gefriert",
+     "prat": "gefror",
+     "perf": "ist gefroren",
+     "ex": "",
+     "note": "gefriert – gefror – ist gefroren",
+     "g": "v"
+    },
+    {
+     "de": "gehen",
+     "ru": "идти",
+     "pres": "geht",
+     "prat": "ging",
+     "perf": "ist gegangen",
+     "ex": "",
+     "note": "geht – ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "gelten",
+     "ru": "действовать, считаться",
+     "pres": "gilt",
+     "prat": "galt",
+     "perf": "hat gegolten",
+     "ex": "",
+     "note": "gilt – galt – hat gegolten",
+     "g": "v"
+    },
+    {
+     "de": "genießen",
+     "ru": "наслаждаться",
+     "pres": "genießt",
+     "prat": "genoss",
+     "perf": "hat genossen",
+     "ex": "",
+     "note": "genießt – genoss – hat genossen",
+     "g": "v"
+    },
+    {
+     "de": "geraten",
+     "ru": "попадать (в ситуацию)",
+     "pres": "gerät",
+     "prat": "geriet",
+     "perf": "ist geraten",
+     "ex": "",
+     "note": "gerät – geriet – ist geraten",
+     "g": "v"
+    },
+    {
+     "de": "gewinnen",
+     "ru": "выигрывать, добывать",
+     "pres": "gewinnt",
+     "prat": "gewann",
+     "perf": "hat gewonnen",
+     "ex": "",
+     "note": "gewinnt – gewann – hat gewonnen",
+     "g": "v"
+    },
+    {
+     "de": "haben",
+     "ru": "иметь",
+     "pres": "hat",
+     "prat": "hatte",
+     "perf": "hat gehabt",
+     "ex": "",
+     "note": "hat – hatte – hat gehabt",
+     "g": "v"
+    },
+    {
+     "de": "halten",
+     "ru": "держать",
+     "pres": "hält",
+     "prat": "hielt",
+     "perf": "hat gehalten",
+     "ex": "",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "herunterladen – meiden",
+   "items": [
+    {
+     "de": "herunterladen",
+     "ru": "скачивать",
+     "pres": "lädt herunter",
+     "prat": "lud herunter",
+     "perf": "hat heruntergeladen",
+     "ex": "",
+     "note": "lädt herunter – lud herunter – hat heruntergeladen",
+     "g": "v"
+    },
+    {
+     "de": "hinweisen",
+     "ru": "указывать",
+     "pres": "weist hin",
+     "prat": "wies hin",
+     "perf": "hat hingewiesen",
+     "ex": "",
+     "note": "weist hin – wies hin – hat hingewiesen",
+     "g": "v"
+    },
+    {
+     "de": "hochladen",
+     "ru": "загружать",
+     "pres": "lädt hoch",
+     "prat": "lud hoch",
+     "perf": "hat hochgeladen",
+     "ex": "",
+     "note": "lädt hoch – lud hoch – hat hochgeladen",
+     "g": "v"
+    },
+    {
+     "de": "kommen",
+     "ru": "приходить",
+     "pres": "kommt",
+     "prat": "kam",
+     "perf": "ist gekommen",
+     "ex": "",
+     "note": "kommt – kam – ist gekommen",
+     "g": "v"
+    },
+    {
+     "de": "können",
+     "ru": "мочь",
+     "pres": "kann",
+     "prat": "konnte",
+     "perf": "hat gekonnt / hat + Inf. + können",
+     "ex": "",
+     "note": "kann – konnte – hat gekonnt / hat + Inf. + können",
+     "g": "v"
+    },
+    {
+     "de": "lassen",
+     "ru": "оставлять, позволять",
+     "pres": "lässt",
+     "prat": "ließ",
+     "perf": "hat gelassen / hat + Inf. + lassen",
+     "ex": "",
+     "note": "lässt – ließ – hat gelassen / hat + Inf. + lassen",
+     "g": "v"
+    },
+    {
+     "de": "laufen",
+     "ru": "бежать, идти",
+     "pres": "läuft",
+     "prat": "lief",
+     "perf": "ist gelaufen",
+     "ex": "",
+     "note": "läuft – lief – ist gelaufen",
+     "g": "v"
+    },
+    {
+     "de": "leiden",
+     "ru": "страдать",
+     "pres": "leidet",
+     "prat": "litt",
+     "perf": "hat gelitten",
+     "ex": "",
+     "note": "leidet – litt – hat gelitten",
+     "g": "v"
+    },
+    {
+     "de": "leihen",
+     "ru": "одалживать",
+     "pres": "leiht",
+     "prat": "lieh",
+     "perf": "hat geliehen",
+     "ex": "",
+     "note": "leiht – lieh – hat geliehen",
+     "g": "v"
+    },
+    {
+     "de": "meiden",
+     "ru": "избегать",
+     "pres": "meidet",
+     "prat": "mied",
+     "perf": "hat gemieden",
+     "ex": "",
+     "note": "meidet – mied – hat gemieden",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "nachgehen – schmelzen",
+   "items": [
+    {
+     "de": "nachgehen",
+     "ru": "заниматься (чем-то)",
+     "pres": "geht nach",
+     "prat": "ging nach",
+     "perf": "ist nachgegangen",
+     "ex": "",
+     "note": "geht nach – ging nach – ist nachgegangen",
+     "g": "v"
+    },
+    {
+     "de": "nachschlagen",
+     "ru": "смотреть в справочнике",
+     "pres": "schlägt nach",
+     "prat": "schlug nach",
+     "perf": "hat nachgeschlagen",
+     "ex": "",
+     "note": "schlägt nach – schlug nach – hat nachgeschlagen",
+     "g": "v"
+    },
+    {
+     "de": "nehmen",
+     "ru": "брать",
+     "pres": "nimmt",
+     "prat": "nahm",
+     "perf": "hat genommen",
+     "ex": "",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "nennen",
+     "ru": "называть",
+     "pres": "nennt",
+     "prat": "nannte",
+     "perf": "hat genannt",
+     "ex": "",
+     "note": "nennt – nannte – hat genannt",
+     "g": "v"
+    },
+    {
+     "de": "sich niederlassen",
+     "ru": "поселяться",
+     "pres": "lässt sich nieder",
+     "prat": "ließ sich nieder",
+     "perf": "hat sich niedergelassen",
+     "ex": "",
+     "note": "lässt sich nieder – ließ sich nieder – hat sich niedergelassen",
+     "g": "v"
+    },
+    {
+     "de": "riechen",
+     "ru": "пахнуть, нюхать",
+     "pres": "riecht",
+     "prat": "roch",
+     "perf": "hat gerochen",
+     "ex": "",
+     "note": "riecht – roch – hat gerochen",
+     "g": "v"
+    },
+    {
+     "de": "schaffen",
+     "ru": "создавать",
+     "pres": "schafft",
+     "prat": "schuf",
+     "perf": "hat geschaffen",
+     "ex": "",
+     "note": "schafft – schuf – hat geschaffen",
+     "g": "v"
+    },
+    {
+     "de": "scheiden",
+     "ru": "разводить, разделять",
+     "pres": "scheidet",
+     "prat": "schied",
+     "perf": "hat geschieden",
+     "ex": "",
+     "note": "scheidet – schied – hat geschieden",
+     "g": "v"
+    },
+    {
+     "de": "schließen",
+     "ru": "закрывать; заключать",
+     "pres": "schließt",
+     "prat": "schloss",
+     "perf": "hat geschlossen",
+     "ex": "",
+     "note": "schließt – schloss – hat geschlossen",
+     "g": "v"
+    },
+    {
+     "de": "schmelzen",
+     "ru": "таять; плавить",
+     "pres": "schmilzt",
+     "prat": "schmolz",
+     "perf": "ist geschmolzen (intr.) / hat geschmolzen (tr.)",
+     "ex": "",
+     "note": "schmilzt – schmolz – ist geschmolzen (intr.) / hat geschmolzen (tr.)",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "schreiben – streiten",
+   "items": [
+    {
+     "de": "schreiben",
+     "ru": "писать",
+     "pres": "schreibt",
+     "prat": "schrieb",
+     "perf": "hat geschrieben",
+     "ex": "",
+     "note": "schreibt – schrieb – hat geschrieben",
+     "g": "v"
+    },
+    {
+     "de": "schwarzfahren",
+     "ru": "ездить без билета",
+     "pres": "fährt schwarz",
+     "prat": "fuhr schwarz",
+     "perf": "ist schwarzgefahren",
+     "ex": "",
+     "note": "fährt schwarz – fuhr schwarz – ist schwarzgefahren",
+     "g": "v"
+    },
+    {
+     "de": "sein",
+     "ru": "быть",
+     "pres": "ist",
+     "prat": "war",
+     "perf": "ist gewesen",
+     "ex": "",
+     "note": "ist – war – ist gewesen",
+     "g": "v"
+    },
+    {
+     "de": "sinken",
+     "ru": "опускаться, снижаться",
+     "pres": "sinkt",
+     "prat": "sank",
+     "perf": "ist gesunken",
+     "ex": "",
+     "note": "sinkt – sank – ist gesunken",
+     "g": "v"
+    },
+    {
+     "de": "sitzen bleiben",
+     "ru": "остаться на второй год",
+     "pres": "bleibt sitzen",
+     "prat": "blieb sitzen",
+     "perf": "ist sitzen geblieben",
+     "ex": "",
+     "note": "bleibt sitzen – blieb sitzen – ist sitzen geblieben",
+     "g": "v"
+    },
+    {
+     "de": "sprechen",
+     "ru": "говорить",
+     "pres": "spricht",
+     "prat": "sprach",
+     "perf": "hat gesprochen",
+     "ex": "",
+     "note": "spricht – sprach – hat gesprochen",
+     "g": "v"
+    },
+    {
+     "de": "stehen",
+     "ru": "стоять",
+     "pres": "steht",
+     "prat": "stand",
+     "perf": "hat gestanden",
+     "ex": "",
+     "note": "steht – stand – hat gestanden",
+     "g": "v"
+    },
+    {
+     "de": "stehlen",
+     "ru": "красть",
+     "pres": "stiehlt",
+     "prat": "stahl",
+     "perf": "hat gestohlen",
+     "ex": "",
+     "note": "stiehlt – stahl – hat gestohlen",
+     "g": "v"
+    },
+    {
+     "de": "steigen",
+     "ru": "подниматься, расти",
+     "pres": "steigt",
+     "prat": "stieg",
+     "perf": "ist gestiegen",
+     "ex": "",
+     "note": "steigt – stieg – ist gestiegen",
+     "g": "v"
+    },
+    {
+     "de": "streiten",
+     "ru": "спорить, ссориться",
+     "pres": "streitet",
+     "prat": "stritt",
+     "perf": "hat gestritten",
+     "ex": "",
+     "note": "streitet – stritt – hat gestritten",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "name": "teilnehmen – unterbrechen",
+   "items": [
+    {
+     "de": "teilnehmen",
+     "ru": "участвовать",
+     "pres": "nimmt teil",
+     "prat": "nahm teil",
+     "perf": "hat teilgenommen",
+     "ex": "",
+     "note": "nimmt teil – nahm teil – hat teilgenommen",
+     "g": "v"
+    },
+    {
+     "de": "tragen",
+     "ru": "нести, носить",
+     "pres": "trägt",
+     "prat": "trug",
+     "perf": "hat getragen",
+     "ex": "",
+     "note": "trägt – trug – hat getragen",
+     "g": "v"
+    },
+    {
+     "de": "treiben",
+     "ru": "заниматься (спортом), гнать",
+     "pres": "treibt",
+     "prat": "trieb",
+     "perf": "hat getrieben",
+     "ex": "",
+     "note": "treibt – trieb – hat getrieben",
+     "g": "v"
+    },
+    {
+     "de": "(sich) übergeben",
+     "ru": "передавать; рвать (тошнить)",
+     "pres": "übergibt (sich)",
+     "prat": "übergab (sich)",
+     "perf": "hat (sich) übergeben",
+     "ex": "",
+     "note": "übergibt (sich) – übergab (sich) – hat (sich) übergeben",
+     "g": "v"
+    },
+    {
+     "de": "überschreiten",
+     "ru": "превышать",
+     "pres": "überschreitet",
+     "prat": "überschritt",
+     "perf": "hat überschritten",
+     "ex": "",
+     "note": "überschreitet – überschritt – hat überschritten",
+     "g": "v"
+    },
+    {
+     "de": "übertragen",
+     "ru": "передавать, транслировать",
+     "pres": "überträgt",
+     "prat": "übertrug",
+     "perf": "hat übertragen",
+     "ex": "",
+     "note": "überträgt – übertrug – hat übertragen",
+     "g": "v"
+    },
+    {
+     "de": "überziehen",
+     "ru": "превысить (счёт)",
+     "pres": "überzieht",
+     "prat": "überzog",
+     "perf": "hat überzogen",
+     "ex": "",
+     "note": "überzieht – überzog – hat überzogen",
+     "g": "v"
+    },
+    {
+     "de": "umgeben",
+     "ru": "окружать",
+     "pres": "umgibt",
+     "prat": "umgab",
+     "perf": "hat umgeben",
+     "ex": "",
+     "note": "umgibt – umgab – hat umgeben",
+     "g": "v"
+    },
+    {
+     "de": "umgehen",
+     "ru": "обращаться (с чем-то)",
+     "pres": "geht um",
+     "prat": "ging um",
+     "perf": "ist umgegangen",
+     "ex": "",
+     "note": "geht um – ging um – ist umgegangen",
+     "g": "v"
+    },
+    {
+     "de": "unterbrechen",
+     "ru": "прерывать",
+     "pres": "unterbricht",
+     "prat": "unterbrach",
+     "perf": "hat unterbrochen",
+     "ex": "",
+     "note": "unterbricht – unterbrach – hat unterbrochen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "name": "unterhalten – vertreten",
+   "items": [
+    {
+     "de": "unterhalten",
+     "ru": "развлекать; содержать",
+     "pres": "unterhält",
+     "prat": "unterhielt",
+     "perf": "hat unterhalten",
+     "ex": "",
+     "note": "unterhält – unterhielt – hat unterhalten",
+     "g": "v"
+    },
+    {
+     "de": "unternehmen",
+     "ru": "предпринимать",
+     "pres": "unternimmt",
+     "prat": "unternahm",
+     "perf": "hat unternommen",
+     "ex": "",
+     "note": "unternimmt – unternahm – hat unternommen",
+     "g": "v"
+    },
+    {
+     "de": "verbinden",
+     "ru": "соединять; перевязывать",
+     "pres": "verbindet",
+     "prat": "verband",
+     "perf": "hat verbunden",
+     "ex": "",
+     "note": "verbindet – verband – hat verbunden",
+     "g": "v"
+    },
+    {
+     "de": "verbrennen",
+     "ru": "сжигать",
+     "pres": "verbrennt",
+     "prat": "verbrannte",
+     "perf": "hat verbrannt",
+     "ex": "",
+     "note": "verbrennt – verbrannte – hat verbrannt",
+     "g": "v"
+    },
+    {
+     "de": "verbringen",
+     "ru": "проводить (время)",
+     "pres": "verbringt",
+     "prat": "verbrachte",
+     "perf": "hat verbracht",
+     "ex": "",
+     "note": "verbringt – verbrachte – hat verbracht",
+     "g": "v"
+    },
+    {
+     "de": "verderben",
+     "ru": "портить(ся)",
+     "pres": "verdirbt",
+     "prat": "verdarb",
+     "perf": "hat verdorben",
+     "ex": "",
+     "note": "verdirbt – verdarb – hat verdorben",
+     "g": "v"
+    },
+    {
+     "de": "sich verhalten",
+     "ru": "вести себя",
+     "pres": "verhält sich",
+     "prat": "verhielt sich",
+     "perf": "hat sich verhalten",
+     "ex": "",
+     "note": "verhält sich – verhielt sich – hat sich verhalten",
+     "g": "v"
+    },
+    {
+     "de": "verstehen",
+     "ru": "понимать",
+     "pres": "versteht",
+     "prat": "verstand",
+     "perf": "hat verstanden",
+     "ex": "",
+     "note": "versteht – verstand – hat verstanden",
+     "g": "v"
+    },
+    {
+     "de": "verstoßen",
+     "ru": "нарушать",
+     "pres": "verstößt",
+     "prat": "verstieß",
+     "perf": "hat verstoßen",
+     "ex": "",
+     "note": "verstößt – verstieß – hat verstoßen",
+     "g": "v"
+    },
+    {
+     "de": "vertreten",
+     "ru": "представлять, отстаивать",
+     "pres": "vertritt",
+     "prat": "vertrat",
+     "perf": "hat vertreten",
+     "ex": "",
+     "note": "vertritt – vertrat – hat vertreten",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "name": "wachsen – zurückgehen",
+   "items": [
+    {
+     "de": "wachsen",
+     "ru": "расти",
+     "pres": "wächst",
+     "prat": "wuchs",
+     "perf": "ist gewachsen",
+     "ex": "",
+     "note": "wächst – wuchs – ist gewachsen",
+     "g": "v"
+    },
+    {
+     "de": "wahrnehmen",
+     "ru": "воспринимать",
+     "pres": "nimmt wahr",
+     "prat": "nahm wahr",
+     "perf": "hat wahrgenommen",
+     "ex": "",
+     "note": "nimmt wahr – nahm wahr – hat wahrgenommen",
+     "g": "v"
+    },
+    {
+     "de": "werden",
+     "ru": "становиться",
+     "pres": "wird",
+     "prat": "wurde",
+     "perf": "ist geworden",
+     "ex": "",
+     "note": "wird – wurde – ist geworden",
+     "g": "v"
+    },
+    {
+     "de": "zerfallen",
+     "ru": "распадаться",
+     "pres": "zerfällt",
+     "prat": "zerfiel",
+     "perf": "ist zerfallen",
+     "ex": "",
+     "note": "zerfällt – zerfiel – ist zerfallen",
+     "g": "v"
+    },
+    {
+     "de": "ziehen",
+     "ru": "тянуть; переезжать",
+     "pres": "zieht",
+     "prat": "zog",
+     "perf": "hat gezogen",
+     "ex": "",
+     "note": "zieht – zog – hat gezogen",
+     "g": "v"
+    },
+    {
+     "de": "zunehmen",
+     "ru": "прибавлять (в весе), расти",
+     "pres": "nimmt zu",
+     "prat": "nahm zu",
+     "perf": "hat zugenommen",
+     "ex": "",
+     "note": "nimmt zu – nahm zu – hat zugenommen",
+     "g": "v"
+    },
+    {
+     "de": "zurückgehen",
+     "ru": "сокращаться",
+     "pres": "geht zurück",
+     "prat": "ging zurück",
+     "perf": "ist zurückgegangen",
+     "ex": "",
+     "note": "geht zurück – ging zurück – ist zurückgegangen",
+     "g": "v"
+    }
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "k": "sein или haben?",
+   "v": "sein — движение и изменение состояния без объекта: ist gefallen, ist gestiegen, ist geschmolzen, ist ausgestorben; также sein, bleiben, werden"
+  },
+  {
+   "k": "schmelzen",
+   "v": "Das Eis ist geschmolzen (само), aber: Man hat das Metall geschmolzen (кто-то)"
+  },
+  {
+   "k": "Смешанные глаголы",
+   "v": "bringen – brachte – gebracht, nennen – nannte – genannt, erkennen – erkannte – erkannt, verbrennen – verbrannte — меняют корень, но с окончанием -te"
+  },
+  {
+   "k": "Неотделяемые приставки",
+   "v": "be-, ge-, er-, ver-, zer-, ent-, emp- и часто über-, unter-, um-: hat bestanden, hat übertragen, hat umgeben — без ge-"
+  },
+  {
+   "k": "e → i / ie в Präsens",
+   "v": "geben → gibt, nehmen → nimmt, stehlen → stiehlt, verderben → verdirbt, gelten → gilt"
+  }
+ ],
+ "note": "ergreifen в книге стоит дважды"
+}

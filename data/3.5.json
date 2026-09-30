@@ -1,0 +1,433 @@
+{
+ "id": "3.5",
+ "chapter": 3,
+ "chapterName": "Alltagsleben",
+ "title": "Freizeit",
+ "titleRu": "Свободное время",
+ "pages": "131–134",
+ "exercises": "134–138",
+ "solutions": "265",
+ "bookRows": 46,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Отдыхать",
+   "items": [
+    {
+     "de": "frei haben*",
+     "ru": "быть свободным, иметь выходной",
+     "ex": "Arbeitnehmer, die in der Gastronomie arbeiten, haben nicht jeden Sonntag [[frei]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Freizeit genießen*",
+     "ru": "наслаждаться свободным временем",
+     "ex": "Man sollte seine [[Freizeit genießen]] und sie mit angenehmen Aktivitäten verbringen.",
+     "note": "genoss – hat genossen",
+     "g": "v"
+    },
+    {
+     "de": "sich ausruhen",
+     "ru": "отдыхать (физически)",
+     "ex": "Viele nutzen die freie Zeit, um [[sich auszuruhen]].",
+     "note": "ruhte sich aus – hat sich ausgeruht",
+     "g": "v"
+    },
+    {
+     "de": "sich erholen",
+     "ru": "восстанавливаться, отдыхать",
+     "ex": "Ein Spaziergang bei schönem Wetter ist eine gute Möglichkeit, [[sich]] vom Alltagsstress zu [[erholen]].",
+     "note": "von + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Erholung",
+     "ru": "отдых, восстановление",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Stress abbauen",
+     "ru": "снимать стресс",
+     "ex": "Körperliche Aktivität, Yoga und verschiedene Entspannungstechniken können dabei helfen, [[Stress abzubauen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "faulenzen",
+     "ru": "бездельничать, лениться",
+     "ex": "Nach einem anstrengenden Arbeitstag möchte man manchmal einfach nur auf dem Sofa liegen und [[faulenzen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "abschalten",
+     "ru": "отключиться, расслабиться",
+     "ex": "Neben der körperlichen Erholung ist es wichtig, auch geistig [[abzuschalten]] und den Alltag zu vergessen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Занятия и хобби",
+   "items": [
+    {
+     "de": "etw. unternehmen*",
+     "ru": "предпринимать что-то, куда-то выбраться",
+     "ex": "Möchten Sie am Wochenende zu Hause bleiben, oder haben Sie Lust, etwas zu [[unternehmen]]?",
+     "note": "unternimmt – unternahm – hat unternommen (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "die Unternehmung, Unternehmungen",
+     "ru": "мероприятие, вылазка",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich beschäftigen mit + D",
+     "ru": "заниматься чем-то",
+     "ex": "Leider muss man [[sich]] in der Freizeit auch [[mit]] Dingen [[beschäftigen]], die man an Arbeitstagen nicht schafft, beispielsweise mit der Gartenarbeit oder dem Hausputz.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Beschäftigung mit + D",
+     "ru": "занятие чем-то",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "einer Freizeitbeschäftigung / einem Hobby nachgehen*",
+     "ru": "заниматься хобби",
+     "ex": "Wer regelmäßig [[einem Hobby nachgeht]], kann auf diese Weise wieder Kraft für den Alltag schöpfen.",
+     "note": "ging nach – ist nachgegangen · + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "sich jdm. / etw. widmen",
+     "ru": "посвящать себя кому-то / чему-то",
+     "ex": "Berufstätige Eltern können [[sich]] am Wochenende ganz ihrer Familie [[widmen]].",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "ausgehen*",
+     "ru": "выходить (развлекаться)",
+     "ex": "Es ist schwer, am Freitagabend einen Parkplatz im Stadtzentrum zu finden, weil viele Menschen an diesem Abend [[ausgehen]].",
+     "note": "ging aus – ist ausgegangen",
+     "g": "v"
+    },
+    {
+     "de": "sich amüsieren",
+     "ru": "развлекаться, веселиться",
+     "ex": "Leider habe ich [[mich]] auf der Party nicht besonders gut [[amüsiert]] – es war ein ziemlich langweiliger Abend.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Ausflug, Ausflüge",
+     "ru": "поездка, экскурсия",
+     "ex": "Wenn Sie Berlin besuchen, sollten Sie auf jeden Fall einen [[Ausflug]] nach Potsdam unternehmen und sich das Schloss Sanssouci ansehen.",
+     "note": "einen Ausflug machen / unternehmen",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Активности на свежем воздухе и дома",
+   "items": [
+    {
+     "de": "Sport treiben*",
+     "ru": "заниматься спортом",
+     "ex": "Fitness-Studios und Sportvereine bieten die Möglichkeit, gemeinsam mit anderen [[Sport zu treiben]].",
+     "note": "trieb – hat getrieben",
+     "g": "v"
+    },
+    {
+     "de": "wandern",
+     "ru": "ходить в походы",
+     "ex": "Menschen, die in ihrer Freizeit gerne [[wandern]], können bei Tourismusverbänden umfangreiches Informationsmaterial erhalten.",
+     "note": "ist gewandert",
+     "g": "v"
+    },
+    {
+     "de": "eine Fahrradtour unternehmen*",
+     "ru": "совершить велопрогулку",
+     "ex": "Wer nicht gerne mit dem Fahrrad einen Berg hinauffährt, kann eine [[Fahrradtour]] an einem Fluss [[unternehmen]], wo der Weg eben ist.",
+     "note": "unternimmt – unternahm – hat unternommen",
+     "g": "v"
+    },
+    {
+     "de": "angeln",
+     "ru": "рыбачить (удочкой)",
+     "ex": "Es kann sehr entspannend sein zu [[angeln]], weil man dabei intensiv die Ruhe und die Natur genießen kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Schach spielen",
+     "ru": "играть в шахматы",
+     "ex": "Man kann die Konzentrationsfähigkeit und das strategische Denken trainieren, indem man [[Schach spielt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. sammeln",
+     "ru": "коллекционировать",
+     "ex": "Zahlreiche Menschen [[sammeln]] bestimmte Gegenstände, beispielsweise Briefmarken oder Münzen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zeichnen",
+     "ru": "рисовать (карандашом)",
+     "ex": "Während man zum Malen Farben, Pinsel und andere Utensilien benötigt, braucht man nur Papier und Bleistift, um eine Landschaft oder ein Objekt zu [[zeichnen]].",
+     "note": "malen — красками",
+     "g": "v"
+    },
+    {
+     "de": "Handarbeiten machen",
+     "ru": "заниматься рукоделием",
+     "ex": "Noch immer [[machen]] mehr Frauen als Männer in ihrer Freizeit [[Handarbeiten]], denn nur wenige Männer können nähen, stricken oder häkeln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "basteln",
+     "ru": "мастерить, делать поделки",
+     "ex": "Vor Ostern und in der Adventszeit [[basteln]] Eltern mit ihren Kindern dekorative Gegenstände aus buntem Papier und anderen Materialien.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Музыка",
+   "items": [
+    {
+     "de": "die Veranstaltung, Veranstaltungen",
+     "ru": "мероприятие",
+     "ex": "Auf der Internetseite des Kulturzentrums finden Sie nähere Informationen zu den [[Veranstaltungen]], die diesen Monat dort stattfinden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "ein Konzert besuchen",
+     "ru": "посетить концерт",
+     "ex": "[[Besuchen]] Sie gern [[Konzerte]] oder andere kulturelle Veranstaltungen?",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ins Konzert gehen*",
+     "ru": "пойти на концерт",
+     "ex": "Ist es Ihrer Meinung nach angemessen, in Jeans [[in]] ein klassisches [[Konzert]] zu [[gehen]]?",
+     "note": "ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "das Orchester, Orchester",
+     "ru": "оркестр",
+     "ex": "Die Musiker spielen perfekt zusammen, weil sie alle schon lange Mitglieder des gleichen [[Orchesters]] sind.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Musik machen",
+     "ru": "заниматься музыкой, музицировать",
+     "ex": "Amateurmusiker treffen sich gerne in ihrer Freizeit, um zusammen [[Musik zu machen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Instrument spielen",
+     "ru": "играть на инструменте",
+     "ex": "Musikalisch begabte Kinder können schon sehr früh lernen, ein [[Instrument zu spielen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Chor, Chöre",
+     "ru": "хор",
+     "ex": "Sogar in kleinen Städten oder Dörfern gibt es meist einen Kirchen[[chor]], der bei den Gottesdiensten singt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Bühne, Bühnen",
+     "ru": "сцена",
+     "ex": "Die meisten Pianisten haben Lampenfieber, wenn sie zum ersten Mal vor einem großen Publikum auf der [[Bühne]] stehen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Театр и кино",
+   "items": [
+    {
+     "de": "der Schauspieler / die Schauspielerin, Schauspieler",
+     "ru": "актёр",
+     "ex": "Nur wenige [[Schauspieler]] werden mit einem einzigen Film über Nacht berühmt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Theaterstück, -stücke",
+     "ru": "пьеса",
+     "ex": "Johann Wolfgang von Goethe hat nicht nur Gedichte, sondern auch [[Theaterstücke]] geschrieben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Theater spielen",
+     "ru": "играть в театре",
+     "ex": "Während manche Schauspieler sehr gerne Kinofilme drehen, [[spielen]] andere lieber [[Theater]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Theaterstück aufführen",
+     "ru": "ставить пьесу",
+     "ex": "Am Ende jedes Schuljahres [[führen]] die Schüler der 10. Klasse ein [[Theaterstück auf]].",
+     "note": "führte auf – hat aufgeführt",
+     "g": "v"
+    },
+    {
+     "de": "sich ein Theaterstück / einen Film ansehen*",
+     "ru": "посмотреть спектакль / фильм",
+     "ex": "Ich [[sehe mir]] lieber [[Theaterstücke]] als Kinofilme [[an]], da ich die Atmosphäre im Theater besonders mag.",
+     "note": "sieht an – sah an – hat angesehen · sich (Dat.)",
+     "g": "v"
+    },
+    {
+     "de": "einen Film drehen",
+     "ru": "снимать фильм",
+     "ex": "Es kostet viel Zeit und Geld, einen Kino[[film zu drehen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Regie führen",
+     "ru": "быть режиссёром",
+     "ex": "Steven Spielberg hat bei zahlreichen erfolgreichen Filmen [[Regie geführt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Regisseur, Regisseure",
+     "ru": "режиссёр",
+     "ex": "Achten Sie auf den Namen des [[Regisseurs]], wenn Sie sich einen Film ansehen möchten, oder interessieren Sie sich mehr für die Schauspieler?",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Зрители, балет, выставки",
+   "items": [
+    {
+     "de": "ins Ballett gehen*",
+     "ru": "пойти на балет",
+     "ex": "Seit er zum ersten Mal mit seinen Eltern [[ins Ballett gegangen]] ist, möchte er Tänzer werden.",
+     "note": "ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "ins Kabarett gehen*",
+     "ru": "пойти в кабаре (сатирическое шоу)",
+     "ex": "Ich [[gehe]] gern [[ins Kabarett]], da ich politische Satire äußerst amüsant finde.",
+     "note": "ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "der Zuschauer, Zuschauer",
+     "ru": "зритель",
+     "ex": "Am Ende des Konzerts standen die [[Zuschauer]] auf und klatschten minutenlang.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Publikum = die Zuschauer (Plural)",
+     "ru": "публика",
+     "ex": "Obwohl der Film sehr gute Kritiken bekommen hat, hatte er beim [[Publikum]] leider keinen Erfolg.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. besichtigen",
+     "ru": "осматривать (достопримечательности)",
+     "ex": "In Städten gibt es zahlreiche Museen und andere Sehenswürdigkeiten, die kulturell Interessierte [[besichtigen]] können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Besichtigung, Besichtigungen",
+     "ru": "осмотр, экскурсия",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ausstellung, Ausstellungen",
+     "ru": "выставка",
+     "ex": "Museen bieten im Laufe des Jahres [[Ausstellungen]] zu unterschiedlichen Themen an.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Ausstellung besuchen / besichtigen",
+     "ru": "посетить выставку",
+     "ex": "Neben den erwachsenen Besuchern haben auch viele Kinder und Jugendliche die [[Ausstellung besucht]], die zeigt, wie computeranimierte Filme entstehen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "k": "sich ausruhen ↔ sich erholen",
+   "v": "ausruhen — передохнуть (сесть, полежать); erholen — восстановиться (после болезни, стресса): sich vom Stress erholen"
+  },
+  {
+   "k": "einem Hobby nachgehen · sich einer Sache widmen",
+   "v": "Оба с Dativ: einem Hobby nachgehen, sich der Familie widmen"
+  },
+  {
+   "k": "sich beschäftigen mit + D",
+   "v": "mit + Dat.: sich mit Gartenarbeit beschäftigen"
+  },
+  {
+   "k": "zeichnen ↔ malen",
+   "v": "zeichnen — карандашом, линиями; malen — красками"
+  },
+  {
+   "k": "ins Konzert / ins Theater / ins Kino gehen",
+   "v": "in + Akk. при движении; im Konzert sein (Dat.)"
+  },
+  {
+   "k": "unternehmen",
+   "v": "Неотделяемая: Wir unternehmen einen Ausflug. Hast du etwas unternommen?"
+  },
+  {
+   "k": "das Publikum",
+   "v": "Только ед. ч.; «зрители» = die Zuschauer (мн. ч.)"
+  },
+  {
+   "k": "sich etw. ansehen",
+   "v": "sich (Dat.): Ich sehe mir einen Film an."
+  }
+ ]
+}

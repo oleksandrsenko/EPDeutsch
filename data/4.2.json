@@ -1,0 +1,648 @@
+{
+ "id": "4.2",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Sprache",
+ "titleRu": "Язык",
+ "pages": "152–156",
+ "exercises": "157–160",
+ "solutions": "266–267",
+ "bookRows": 64,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Коммуникация",
+   "items": [
+    {
+     "de": "kommunizieren mit + D",
+     "ru": "общаться с кем-то",
+     "ex": "Die moderne Technik ermöglicht es, [[mit]] Menschen in aller Welt zu [[kommunizieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Kommunikation",
+     "ru": "коммуникация, общение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. äußern",
+     "ru": "высказывать",
+     "ex": "Der Moderator achtet darauf, dass jeder Gast Gelegenheit hat, seine Meinung zum Thema zu [[äußern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. darstellen",
+     "ru": "изображать, представлять",
+     "ex": "Professor Rossbach kann auch komplizierte Zusammenhänge leicht verständlich [[darstellen]].",
+     "note": "stellte dar – hat dargestellt",
+     "g": "v"
+    },
+    {
+     "de": "die Darstellung",
+     "ru": "изображение, представление",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdm. etw. vermitteln",
+     "ru": "передавать кому-то что-то",
+     "ex": "Die Autorin des Reiseführers [[vermittelt]] dem Leser einen lebendigen Eindruck vom Leben der Menschen vor Ort.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich ausdrücken (können)",
+     "ru": "(уметь) выражать свои мысли",
+     "ex": "Schon als Zehnjährige hatte sie einen großen Wortschatz und konnte [[sich]] deshalb besser [[ausdrücken]] als die meisten ihrer Mitschüler.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Ausdruck, Ausdrücke",
+     "ru": "выражение",
+     "ex": "In wissenschaftlichen Texten sollte man informelle [[Ausdrücke]] vermeiden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich verständigen (können)",
+     "ru": "(уметь) объясниться",
+     "ex": "Er legt keinen Wert auf grammatische Perfektion, sondern ist zufrieden, wenn er [[sich verständigen]] kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Gebärdensprache, -sprachen",
+     "ru": "язык жестов (глухих)",
+     "ex": "Gehörlose verwenden eine [[Gebärdensprache]], um miteinander zu kommunizieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Mimik",
+     "ru": "мимика",
+     "ex": "Die [[Mimik]], z. B. ein Lächeln oder ein Stirnrunzeln, zeigt oft, was wir denken oder fühlen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Gestik · die Geste, Gesten",
+     "ru": "жестикуляция · жест",
+     "ex": "Auch wenn wir telefonieren, verwenden wir Mimik und [[Gestik]], obwohl unser Gesprächspartner uns nicht sehen kann.",
+     "note": "Gesten können … unterschiedliche Bedeutungen haben.",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Звуки и термины",
+   "items": [
+    {
+     "de": "die Aussprache",
+     "ru": "произношение",
+     "ex": "Wenn Kinder eine Fremdsprache lernen, eignen sie sich schnell die korrekte [[Aussprache]] an.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Phonetik",
+     "ru": "фонетика",
+     "ex": "Anglistikstudenten müssen sich auch mit der [[Phonetik]] des Englischen beschäftigen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "phonetisch",
+     "ru": "фонетический",
+     "ex": "In der mündlichen Prüfung wird nicht nur die grammatische Korrektheit, sondern auch die [[phonetische]] Verständlichkeit bewertet.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Laut, Laute",
+     "ru": "звук (речи)",
+     "ex": "Bevor Kinder sprechen lernen, kommunizieren sie mit Mimik, Gestik und einzelnen [[Lauten]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Rhetorik",
+     "ru": "риторика",
+     "ex": "Wenn man in der Lage sein will, gute Reden zu halten, sollte man sich mit [[Rhetorik]] beschäftigen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Begriff, Begriffe",
+     "ru": "понятие",
+     "ex": "Bevor wir über Demokratie diskutieren, sollten wir zunächst einmal klären, wie wir diesen [[Begriff]] definieren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Fachbegriff, -begriffe",
+     "ru": "специальный термин",
+     "ex": "Übersetzer verwenden spezielle Wörterbücher, um z. B. medizinische, juristische oder technische [[Fachbegriffe]] nachzuschlagen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Terminus, Termini",
+     "ru": "термин",
+     "ex": "Medizinische [[Termini]], die Ärzte verwenden, wenn sie miteinander sprechen, sind für Patienten oft unverständlich.",
+     "note": "мн. ч. die Termini",
+     "g": "m"
+    },
+    {
+     "de": "die Terminologie",
+     "ru": "терминология",
+     "ex": "Im Laufe des Studiums erlernt man die [[Terminologie]], die in dem jeweiligen Fach verwendet wird.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Fremdwort, -wörter",
+     "ru": "иностранное (заимствованное) слово",
+     "ex": "Zum deutschen Wortschatz gehört eine große Zahl von [[Fremdwörtern]], die aus verschiedenen Sprachen stammen.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Выражения, диалекты, языкознание",
+   "items": [
+    {
+     "de": "die Redewendung, -wendungen",
+     "ru": "идиома, оборот речи",
+     "ex": "Die [[Redewendung]] „jemanden im Regen stehen lassen“ bedeutet, dass man jemanden mit seinem Problem alleine lässt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Sprichwort, -wörter",
+     "ru": "пословица",
+     "ex": "[[Sprichwörter]] wie „Lügen haben kurze Beine“ haben wir oft schon als Kinder von unseren Eltern gehört.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Amtssprache, -sprachen",
+     "ru": "официальный язык",
+     "ex": "Länder, in denen verschiedene Sprachen gesprochen werden, z. B. Luxemburg, Belgien und die Schweiz, haben oft auch mehrere [[Amtssprachen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Dialekt, Dialekte",
+     "ru": "диалект",
+     "ex": "Viele Menschen fühlen sich stark mit ihrer Heimat verbunden, wenn sie den [[Dialekt]] aus dieser Region hören oder sprechen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Umgangssprache",
+     "ru": "разговорный язык",
+     "ex": "In der [[Umgangssprache]] verwendet man andere Wörter und Formulierungen als in der Standardsprache.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Linguistik = die Sprachwissenschaft",
+     "ru": "лингвистика, языкознание",
+     "ex": "Studierende der [[Linguistik]] können sich mit vielen verschiedenen Aspekten von Sprache beschäftigen, beispielsweise mit Phonetik und Rhetorik.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Philologie, Philologien",
+     "ru": "филология",
+     "ex": "Der Verlag veröffentlicht fremdsprachige Literatur und sucht Mitarbeiter, die eine moderne [[Philologie]] studiert haben, z. B. Romanistik, Anglistik oder Slawistik.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Речевые действия: сообщать и утверждать",
+   "items": [
+    {
+     "de": "jdm. etw. mitteilen",
+     "ru": "сообщать кому-то что-то",
+     "ex": "Der Regierungssprecher [[teilte]] den Journalisten [[mit]], der Minister wolle aus persönlichen Gründen zurücktreten.",
+     "note": "teilte mit – hat mitgeteilt",
+     "g": "v"
+    },
+    {
+     "de": "die Mitteilung",
+     "ru": "сообщение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. behaupten",
+     "ru": "утверждать",
+     "ex": "Mein Kollege [[behauptet]], mir eine E-Mail geschickt zu haben, aber ich habe keine bekommen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Behauptung",
+     "ru": "утверждение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "hinweisen* auf + A",
+     "ru": "указывать на что-то",
+     "ex": "Kritiker des dreigliedrigen Schulsystems [[weisen darauf hin]], dass dadurch zu früh über die Zukunft der Kinder entschieden wird.",
+     "note": "wies hin – hat hingewiesen",
+     "g": "v"
+    },
+    {
+     "de": "der Hinweis",
+     "ru": "указание, подсказка",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. bestreiten*",
+     "ru": "оспаривать, отрицать",
+     "ex": "Der Bankdirektor [[bestreitet]], etwas von den illegalen Transaktionen gewusst zu haben.",
+     "note": "bestritt – hat bestritten",
+     "g": "v"
+    },
+    {
+     "de": "etw. widerlegen",
+     "ru": "опровергать",
+     "ex": "Gegen Ende des 19. Jahrhunderts wurde die Theorie, dass Atome unteilbar sind, [[widerlegt]].",
+     "note": "неотделяемая: hat widerlegt",
+     "g": "v"
+    },
+    {
+     "de": "etw. definieren",
+     "ru": "определять (давать определение)",
+     "ex": "Abstrakte Begriffe wie „Ehre“, „Liebe“ und „Treue“ kann man schwer [[definieren]], da diese Wörter oft für jeden Menschen etwas anderes bedeuten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Definition",
+     "ru": "определение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. verstehen* unter + D",
+     "ru": "понимать под чем-то",
+     "ex": "Bitte erklären Sie, was Sie [[unter]] „Sozialkompetenz“ [[verstehen]].",
+     "note": "verstand – hat verstanden",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Речевые действия: позиция и аргументы",
+   "items": [
+    {
+     "de": "Stellung nehmen* zu + D",
+     "ru": "высказать позицию по поводу чего-то",
+     "ex": "In Internetforen können die Leser [[Stellung zu]] einem Thema [[nehmen]].",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "die Stellungnahme",
+     "ru": "позиция, заключение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdm. zustimmen",
+     "ru": "соглашаться с кем-то",
+     "ex": "[[Stimmen]] Sie mir [[zu]] oder sind Sie anderer Meinung?",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Zustimmung",
+     "ru": "согласие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. ablehnen",
+     "ru": "отклонять, отвергать",
+     "ex": "Aus finanziellen Gründen hat das Studentenwerk die Vorschläge der Studierenden zur Umgestaltung der Mensa [[abgelehnt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Ablehnung",
+     "ru": "отказ, отклонение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "argumentieren",
+     "ru": "аргументировать",
+     "ex": "Obwohl sie sehr überzeugend [[argumentiert]] hat, stimme ich ihren Thesen nicht zu.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Argument, Argumente",
+     "ru": "аргумент",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Argument anführen / nennen*",
+     "ru": "привести аргумент",
+     "ex": "Ich möchte ein weiteres [[Argument anführen]], um meine Meinung zu begründen.",
+     "note": "nannte – hat genannt",
+     "g": "v"
+    },
+    {
+     "de": "ein Beispiel anführen / nennen*",
+     "ru": "привести пример",
+     "ex": "Als [[Beispiel]] für den medizinischen Fortschritt kann man die Entwicklung neuer Medikamente [[nennen]], die weniger Nebenwirkungen haben.",
+     "note": "nannte – hat genannt",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Угрозы и способ изложения",
+   "items": [
+    {
+     "de": "jdm. drohen (mit + D)",
+     "ru": "угрожать кому-то (чем-то)",
+     "ex": "Die Polizei [[droht]] den Demonstranten [[mit]] dem Einsatz von Tränengas, wenn sie den Platz nicht sofort verlassen.",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Drohung",
+     "ru": "угроза",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. bedrohen",
+     "ru": "угрожать (кому-то, с оружием)",
+     "ex": "Ein maskierter Mann hat eine Bank überfallen und den Kassierer mit einer Waffe [[bedroht]].",
+     "note": "+ Akk.",
+     "g": "v"
+    },
+    {
+     "de": "ausführlich",
+     "ru": "подробно",
+     "ex": "Der Arzt hat sich viel Zeit genommen, um der Patientin den Ablauf und die Risiken der geplanten Operation [[ausführlich]] zu erklären.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "detailliert",
+     "ru": "детально",
+     "ex": "Der Zeuge hat ein so gutes Gedächtnis, dass er der Polizei den Täter [[detailliert]] beschreiben kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "knapp",
+     "ru": "кратко, сжато",
+     "ex": "Am Ende Ihres Vortrags sollten Sie die wichtigsten Erkenntnisse kurz und [[knapp]] zusammenfassen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Иностранные языки",
+   "items": [
+    {
+     "de": "eine Fremdsprache beherrschen",
+     "ru": "владеть иностранным языком",
+     "ex": "Da sie mehrere Jahre in Moskau gelebt hat, [[beherrscht]] sie die russische [[Sprache]] sehr gut.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Beherrschung einer Fremdsprache",
+     "ru": "владение иностранным языком",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Sprache fließend sprechen*",
+     "ru": "свободно говорить на языке",
+     "ex": "Seine Eltern haben mit ihm von Kindheit an Deutsch und Türkisch gesprochen, deshalb [[spricht]] er beide [[Sprachen fließend]].",
+     "note": "spricht – sprach – hat gesprochen",
+     "g": "v"
+    },
+    {
+     "de": "die Fremdsprachenkenntnisse (Plural)",
+     "ru": "знание иностранных языков",
+     "ex": "Heutzutage braucht man in vielen Berufen [[Fremdsprachenkenntnisse]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Sprachkenntnisse (Plural)",
+     "ru": "знание языков",
+     "ex": "Bevor sie mit dem Studium beginnen kann, muss sie ihre [[Sprachkenntnisse]] durch ein Zertifikat nachweisen.",
+     "note": "nachweisen — подтвердить",
+     "g": "pl"
+    },
+    {
+     "de": "Sprachkenntnisse erwerben*",
+     "ru": "приобрести знание языка",
+     "ex": "Studierende eines philologischen Faches [[erwerben]] im Rahmen ihres Studiums auch [[Sprachkenntnisse]].",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "über Sprachkenntnisse verfügen",
+     "ru": "обладать знанием языков",
+     "ex": "Wer [[über]] gute [[Sprachkenntnisse verfügt]], hat bessere Chancen im Beruf.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Применение языка и перевод",
+   "items": [
+    {
+     "de": "die / seine Sprachkenntnisse erweitern / vertiefen",
+     "ru": "расширять / углублять знание языка",
+     "ex": "Auch nach der Schul- oder Studienzeit gibt es viele Möglichkeiten, seine [[Sprachkenntnisse zu erweitern]] / [[zu vertiefen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die / seine Sprachkenntnisse anwenden*",
+     "ru": "применять знание языка",
+     "ex": "Ein Auslandspraktikum ist eine gute Gelegenheit, die im Studium erworbenen [[Sprachkenntnisse]] praktisch [[anzuwenden]].",
+     "note": "wandte an – hat angewandt",
+     "g": "v"
+    },
+    {
+     "de": "dolmetschen",
+     "ru": "переводить устно",
+     "ex": "Da keiner der Urlauber die Landessprache beherrscht, muss der Reiseleiter bei Gesprächen mit Einheimischen [[dolmetschen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Dolmetscher / die Dolmetscherin, Dolmetscher",
+     "ru": "устный переводчик",
+     "ex": "Der Beruf des [[Dolmetschers]] erfordert hohe Konzentration, da man meist gleichzeitig zuhören und sprechen muss.",
+     "note": "письменный — der Übersetzer",
+     "g": "m"
+    },
+    {
+     "de": "der Untertitel, Untertitel",
+     "ru": "субтитр",
+     "ex": "Nur selten sieht man in Deutschland Filme in der Originalsprache, die mit [[Untertiteln]] versehen sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "synchronisieren",
+     "ru": "дублировать (фильм)",
+     "ex": "Die meisten ausländischen Filme, die im deutschen Fernsehen gezeigt werden, sind [[synchronisiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Synchronisation",
+     "ru": "дубляж",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: языковая политика ЕС (Infobox)",
+   "items": [
+    {
+     "de": "unverzichtbar",
+     "ru": "незаменимый, необходимый",
+     "ex": "In einem vereinten Europa sind Sprachkenntnisse [[unverzichtbar]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Lingua franca = die Verkehrssprache",
+     "ru": "язык межнационального общения",
+     "ex": "Englisch wäre dann die [[Lingua franca]], also die Sprache, in der Menschen miteinander kommunizieren, wenn sie nicht die gleiche Muttersprache sprechen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Mehrsprachigkeit",
+     "ru": "многоязычие",
+     "ex": "Sie fördert die [[Mehrsprachigkeit]] ihrer Bürger, ohne eine Sprache zu bevorzugen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. bevorzugen",
+     "ru": "предпочитать, отдавать предпочтение",
+     "ex": "Sie fördert die Mehrsprachigkeit ihrer Bürger, ohne eine Sprache zu [[bevorzugen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Denkweise",
+     "ru": "образ мыслей",
+     "ex": "Sprache gilt als Ausdruck einer bestimmten kulturellen Identität und [[Denkweise]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Vielfalt",
+     "ru": "многообразие",
+     "ex": "Eine [[Vielfalt]] der Sprachen bedeutet deshalb eine [[Vielfalt]] der Kulturen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Ziele verwirklichen",
+     "ru": "осуществлять цели",
+     "ex": "Um ihre sprachenpolitischen [[Ziele zu verwirklichen]], gibt es in der EU verschiedene Programme.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Minderheitensprache",
+     "ru": "язык меньшинства",
+     "ex": "Andere Initiativen sollen zum Schutz von Regional- und [[Minderheitensprachen]] beitragen.",
+     "note": "",
+     "g": "f"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "jdm. zustimmen ↔ etw. ablehnen",
+   "v": "zustimmen + Dat. (Ich stimme Ihnen zu); ablehnen + Akk. (einen Vorschlag ablehnen)"
+  },
+  {
+   "k": "jdm. drohen ↔ jdn. bedrohen",
+   "v": "drohen + Dat. (+ mit): Er droht ihm mit der Polizei; bedrohen + Akk.: Er bedroht ihn mit einer Waffe"
+  },
+  {
+   "k": "Er spricht Deutsch / ein gutes Deutsch",
+   "v": "Язык без артикля; с прилагательным — с артиклем: ein sehr gutes Deutsch; с предлогом: ins Deutsche, im Deutschen"
+  },
+  {
+   "k": "auf Deutsch",
+   "v": "Er liest ein Buch auf Deutsch (доп. информация), но Er spricht Deutsch (объект — без auf)"
+  },
+  {
+   "k": "dolmetschen ↔ übersetzen",
+   "v": "dolmetschen — устно, übersetzen — письменно"
+  },
+  {
+   "k": "Stellung nehmen zu + D",
+   "v": "Stellung zum Thema nehmen (zu + Dat.)"
+  },
+  {
+   "k": "etw. verstehen unter + D",
+   "v": "Was verstehen Sie unter Nachhaltigkeit?"
+  },
+  {
+   "k": "der Terminus → die Termini",
+   "v": "Латинское мн. ч."
+  }
+ ]
+}

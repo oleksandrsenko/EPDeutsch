@@ -1,0 +1,109 @@
+@id 4.9
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Recht und Gesetz
+@titleRu Право и закон
+@pages 216–220
+@exercises 221–223
+@solutions 270
+@bookRows 64
+
+# s1 Законы и предписания
+die Verfassung, Verfassungen | конституция | In der [[Verfassung]] sind die politischen Grundprinzipien eines Landes festgelegt, z. B. der Aufbau des Staates und die Rechte der Bürgerinnen und Bürger. |  | f
+das Grundgesetz | Основной закон (конституция ФРГ) | Das [[Grundgesetz]] ist die Verfassung der Bundesrepublik Deutschland, die 1949 verabschiedet wurde. |  | n
+das Gesetz, Gesetze | закон | Die Regierung plant ein neues [[Gesetz]] zur Einführung des Mindestlohns in allen Branchen. |  | n
+ein Gesetz beschließen* / verabschieden | принять закон | Das EU-Parlament hat ein neues [[Gesetz]] zum Datenschutz [[beschlossen]] / [[verabschiedet]]. | beschloss – hat beschlossen | v
+vorgeschrieben sein* | быть предписанным | Es ist [[vorgeschrieben]], auf einer Baustelle einen Helm zu tragen. |  | v
+die Vorschrift, Vorschriften | предписание, правило | Die Firmenleitung weist alle Mitarbeiter darauf hin, dass sie die Sicherheits[[vorschriften]] am Arbeitsplatz beachten müssen. |  | f
+die Vorschriften / die Gesetze befolgen / einhalten* | соблюдать предписания / законы | Wer die [[Vorschriften]] nicht [[befolgt]] / [[einhält]], bekommt eine Abmahnung von seinem Arbeitgeber. | hält ein – hielt ein – hat eingehalten | v
+sich an die Vorschriften / die Gesetze halten* | соблюдать правила / законы | Damit das Zusammenleben in der Gesellschaft funktioniert, müssen alle [[sich an die Gesetze halten]]. | hält – hielt – hat gehalten | v
+
+# s2 Преступность
+gegen ein Gesetz verstoßen* | нарушить закон | In diesem landwirtschaftlichen Betrieb wurde schon einige Male [[gegen]] das Tierschutz[[gesetz verstoßen]]. | verstößt – verstieß – hat verstoßen | v
+der Gesetzesverstoß, -verstöße | нарушение закона |  |  | m
+legal | законный | Ein seriöser Geschäftsmann macht nur [[legale]] Geschäfte. |  | v
+illegal | незаконный | Der Besitz von Kokain und anderen Drogen ist in Deutschland [[illegal]]. |  | v
+strafbar | уголовно наказуемый | Es ist [[strafbar]], ohne Führerschein Auto zu fahren. |  | v
+sich strafbar machen | совершить наказуемое деяние | Wer einen Unfall verursacht und dann einfach weiterfährt, [[macht sich strafbar]]. |  | v
+die Straftat, Straftaten = das Verbrechen, Verbrechen | преступление | Der Statistik zufolge ist die Zahl der [[Straftaten]] im vergangenen Jahr leicht gesunken. |  | f
+eine Straftat begehen* / verüben = ein Verbrechen begehen* / verüben | совершить преступление | Kriminalpsychologen diskutieren darüber, warum manche Menschen immer wieder [[Straftaten begehen]] / [[verüben]]. | beging – hat begangen | v
+der Straftäter / die Straftäterin, Straftäter | преступник | Ein Sozialarbeiter hilft jugendlichen [[Straftätern]], nach ihrer Entlassung aus dem Gefängnis eine Arbeit zu finden. |  | m
+der Täter / die Täterin, Täter | преступник, виновник | Bereits kurz nach dem Mord konnte die Polizei den [[Täter]] identifizieren. |  | m
+das Opfer, Opfer | жертва | Die Organisation „Der Weiße Ring“ berät und betreut [[Opfer]] von Straftaten. |  | n
+
+# s3 Виды преступлений
+jdn. betrügen* | обманывать, мошенничать | Ein Juwelier hat zahlreiche Kunden [[betrogen]], indem er ihnen statt teurer Diamanten billige Fälschungen verkauft hat. | betrog – hat betrogen | v
+der Betrug · der Betrüger / die Betrügerin | мошенничество · мошенник | Der [[Betrüger]] hat das Ehepaar mit einem Trick um seine gesamten Ersparnisse gebracht. | jdn. um etw. bringen | m
+etw. stehlen* | красть | Dank der Überwachungskameras konnte man leicht feststellen, wer die Waren im Kaufhaus [[gestohlen]] hatte. | stiehlt – stahl – hat gestohlen | v
+der Diebstahl, Diebstähle · der Dieb / die Diebin | кража · вор | Taschendiebe sind oft so geschickt, dass ihre Opfer den [[Diebstahl]] erst viel später bemerken. |  | m
+einbrechen* | совершить кражу со взломом | Nach Angaben der Polizei wurde in unserem Stadtviertel in den letzten Monaten mehrfach [[eingebrochen]]. | bricht ein – brach ein – hat/ist eingebrochen | v
+der Einbruch · der Einbrecher / die Einbrecherin | взлом · взломщик | Als die [[Einbrecher]] das Fenster einschlugen, lösten sie den Alarm aus. |  | m
+jdn. entführen | похитить | Terroristen haben ein Flugzeug [[entführt]] und fordern die Freilassung von fünf Gefangenen. |  | v
+die Entführung · der Entführer / die Entführerin | похищение · похититель | Bei der Befreiung der Geiseln durch die Polizei wurde einer der [[Entführer]] getötet. |  | f
+jdn. ermorden | убить | Die Frau wird verdächtigt, ihren untreuen Ehemann [[ermordet]] zu haben. |  | v
+der Mord, Morde | убийство | Die Polizei sucht nach einem Serientäter, der innerhalb von zwei Jahren elf [[Morde]] begangen hat. |  | m
+der Mörder / die Mörderin, Mörder | убийца | Der [[Mörder]] behauptet, die Pistole nach der Tat in einen Fluss geworfen zu haben. |  | m
+
+# s4 Расследование
+jdn. verklagen | подать в суд на кого-то | Wenn sie falsch behandelt wurden, können Patienten Ärzte auf Schmerzensgeld [[verklagen]]. | auf + Akk. verklagen | v
+jdn. anzeigen · die Anzeige | заявить на кого-то в полицию · заявление | Er hat den Mann, der ihn zusammengeschlagen hat, wegen Körperverletzung bei der Polizei [[angezeigt]]. |  | v
+ermitteln · die Ermittlung | расследовать · расследование | Nach dem Bankraub in der Sparkassenfiliale [[ermittelt]] die Polizei unter Hochdruck. |  | v
+jdn. verdächtigen · der Verdacht | подозревать · подозрение | Die Polizei [[verdächtigt]] die Ehefrau des Opfers, die Tat begangen zu haben. |  | v
+der / die Verdächtige, Verdächtige (!) | подозреваемый | Man hat herausgefunden, dass die [[Verdächtige]] kurz vor dem Mord eine Pistole gekauft hat. | склоняется как прилагательное | m
+jdn. / etw. überwachen · die Überwachung | следить · наблюдение, слежка | Mitarbeiter der Kriminalpolizei [[überwachen]] den Verdächtigen rund um die Uhr. |  | v
+jdn. / etw. beobachten · die Beobachtung | наблюдать | Ein Fahrgast, der den Überfall [[beobachtet]] hat, hat sofort die Polizei gerufen. |  | v
+jdn. verhaften · die Verhaftung | арестовать · арест | Gestern Abend wurde eine ältere Dame wegen Diebstahls [[verhaftet]]. |  | v
+jdn. festnehmen* = verhaften · die Festnahme | задержать · задержание | Bei dem gestrigen Fußballspiel wurden zehn Hooligans [[festgenommen]]. | nimmt fest – nahm fest – hat festgenommen | v
+
+# s5 Суд
+der Anwalt / die Anwältin, Anwälte | адвокат | Jeder hat das Recht auf einen [[Anwalt]], der ihn juristisch berät. |  | m
+das Gericht, Gerichte | суд | Das [[Gericht]] hat entschieden, dass die unerlaubt aufgenommenen Fotos von der Internetseite gelöscht werden müssen. |  | n
+die Gerichtsverhandlung, -verhandlungen = das Gerichtsverfahren | судебное заседание, процесс | Viele [[Gerichtsverhandlungen]] sind öffentlich, so dass interessierte Bürger als Zuschauer am Prozess teilnehmen können. |  | f
+der Richter / die Richterin, Richter | судья | Am Ende der Gerichtsverhandlung entscheidet der [[Richter]] über die Strafe. |  | m
+der Staatsanwalt / die Staatsanwältin, -anwälte | прокурор | Die [[Staatsanwältin]] ist davon überzeugt, dass der junge Mann die Tat begangen hat. |  | m
+jdn. anklagen · die Anklage | обвинять · обвинение | Kurz nach seiner Verhaftung wurde er wegen Entführung [[angeklagt]] und vor Gericht gestellt. | wegen + Gen. | v
+der / die Angeklagte, Angeklagte (!) | обвиняемый, подсудимый | Weil er ein Geständnis abgelegt hat, kann der [[Angeklagte]] auf eine milde Strafe hoffen. | склоняется как прилагательное | m
+jdn. verteidigen · die Verteidigung | защищать · защита | Es ist die Aufgabe des Anwalts, seinen Mandanten so gut wie möglich zu [[verteidigen]]. |  | v
+der Verteidiger / die Verteidigerin, Verteidiger | защитник | Der [[Verteidiger]] weist darauf hin, dass der Angeklagte zum Zeitpunkt der Tat unter großem Stress gestanden hat. |  | m
+der Zeuge / die Zeugin, Zeugen | свидетель | Mehrere [[Zeugen]] konnten den Täter präzise beschreiben. | n-склонение: den Zeugen | m
+
+# s6 Доказательства и приговор
+etw. beweisen* · der Beweis, Beweise | доказать · доказательство | Der Staatsanwalt muss [[beweisen]], dass der Angeklagte die Tat begangen hat. | bewies – hat bewiesen | v
+die Waffe, Waffen | оружие | Auf der [[Waffe]], einem Küchenmesser, hat man die Fingerabdrücke des Angeklagten gefunden. |  | f
+schuldig sein* · die Schuld | быть виновным · вина | Sollte der Angeklagte [[schuldig]] sein, muss er mit einer Strafe rechnen. |  | v
+unschuldig sein* · die Unschuld | быть невиновным · невиновность | Mithilfe von Zeugenaussagen konnte der Anwalt beweisen, dass der Angeklagte [[unschuldig]] war. |  | v
+jdn. freisprechen* · der Freispruch | оправдать · оправдательный приговор | Da die Staatsanwältin seine Schuld nicht beweisen konnte, wurde der Angeklagte [[freigesprochen]]. | sprach frei – hat freigesprochen | v
+jdn. verurteilen zu + D · die Verurteilung | приговорить к чему-то | Das Gericht hat die Angeklagte [[zu]] einer hohen Geldstrafe [[verurteilt]]. |  | v
+urteilen · das Urteil, Urteile | выносить решение · приговор | Der Richter muss erst alle Beweise genau prüfen, bevor er [[urteilt]]. | Am Ende … wird das Urteil verkündet. | v
+gerecht · die Gerechtigkeit | справедливый · справедливость | Der Richter soll ein möglichst [[gerechtes]] Urteil fällen. | ein Urteil fällen | v
+ungerecht · die Ungerechtigkeit | несправедливый | Wenn der Verurteilte das Urteil als [[ungerecht]] empfindet, kann er in Berufung gehen. | in Berufung gehen — обжаловать | v
+
+# s7 Наказания
+die Sozialstunden (Plural) | общественные работы | Zwei Jugendliche wurden dazu verurteilt, jeweils 50 [[Sozialstunden]] in einem Altersheim abzuleisten. |  | pl
+die Geldstrafe, -strafen | денежный штраф | Wegen schwerer Verstöße gegen das Immissionsschutzgesetz wurde das Unternehmen zu einer hohen [[Geldstrafe]] verurteilt. |  | f
+das Gefängnis, Gefängnisse | тюрьма | Jeder Besucher, der das [[Gefängnis]] betritt, wird von den Beamten gründlich durchsucht. |  | n
+die Haftstrafe = die Gefängnisstrafe = die Freiheitsstrafe | лишение свободы | Das Gericht verurteilte den Angeklagten wegen Mordes zu einer lebenslangen [[Haftstrafe]]. |  | f
+der Häftling, Häftlinge = der / die Gefangene (!) | заключённый | [[Häftlinge]], die gesundheitlich dazu in der Lage sind, können in der Druckerei des Gefängnisses arbeiten. |  | m
+die Bewährung | условный срок | Sie wurde wegen Betrugs zu einer achtmonatigen Haftstrafe auf [[Bewährung]] verurteilt. |  | f
+eine Strafe zur Bewährung aussetzen | назначить наказание условно | Wenn die Haftstrafe [[zur Bewährung ausgesetzt]] wird, muss der Verurteilte nicht ins Gefängnis. |  | v
+die Todesstrafe, -strafen | смертная казнь | Vor dem Gefängnis hat sich eine Gruppe von Menschen versammelt, die gegen die [[Todesstrafe]] protestieren. |  | f
+jdn. hinrichten · die Hinrichtung | казнить · казнь | Weltweit werden jedes Jahr mehrere Tausend Menschen [[hingerichtet]]. |  | v
+jdn. abschrecken von + D · die Abschreckung | удерживать (устрашением) от | Als Argument für die Todesstrafe wird häufig angeführt, dass sie die Menschen [[von]] Straftaten [[abschreckt]]. |  | v
+
+## b1 Бонус: уголовное право (Infobox)
+vor Gericht stellen | отдать под суд | Wer in Deutschland wegen einer Straftat [[vor Gericht gestellt]] wird, steht keiner Jury gegenüber. |  | v
+der Schöffe, -n | народный заседатель | Allerdings gibt es ehrenamtliche Richter, so genannte [[Schöffen]]. | n-склонение | m
+lebenslang | пожизненный | Die schwerste Strafe ist eine [[lebenslange]] Haftstrafe. |  | v
+aus dem Gefängnis entlassen werden | быть освобождённым из тюрьмы | … zu dem man [[aus dem Gefängnis entlassen]] wird. |  | v
+strafmündig | достигший возраста уголовной ответственности | Erst ab 14 Jahren ist man nach deutschem Recht [[strafmündig]]. |  | v
+das Jugendstrafrecht | уголовное право для несовершеннолетних | Danach gilt bis zum 18. Lebensjahr das [[Jugendstrafrecht]], das milder ist als das Strafrecht für Erwachsene. |  | n
+mild | мягкий (о наказании) | … das [[milder]] ist als das Strafrecht für Erwachsene. |  | v
+
+! verurteilen zu + D | Er wurde zu einer Geldstrafe / zu drei Jahren Haft verurteilt (zu + Dat.)
+! wegen + G | wegen Mordes, wegen Diebstahls, wegen Betrugs angeklagt / verurteilt
+! eine Straftat begehen / verüben | beging – hat begangen; einen Anschlag verüben
+! der / die Angeklagte, Verdächtige, Gefangene | Склоняются как прилагательные: ein Angeklagter, die Angeklagten
+! der Zeuge | n-склонение: den / dem / des Zeugen
+! verklagen ↔ anzeigen ↔ anklagen | verklagen — подать гражданский иск; anzeigen — заявить в полицию; anklagen — прокурор обвиняет
+! stehlen | stiehlt – stahl – hat gestohlen
+! gerecht ↔ richtig | gerecht — справедливый; richtig — правильный

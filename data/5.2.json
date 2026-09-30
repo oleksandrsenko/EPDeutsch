@@ -1,0 +1,703 @@
+{
+ "id": "5.2",
+ "chapter": 5,
+ "chapterName": "Natur und Umwelt",
+ "title": "Biologie",
+ "titleRu": "Биология",
+ "pages": "244–249",
+ "exercises": "249–253",
+ "solutions": "271",
+ "bookRows": 78,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Животный и растительный мир",
+   "items": [
+    {
+     "de": "die Fauna",
+     "ru": "фауна",
+     "ex": "In der Dokumentation über die [[Fauna]] Sibiriens werden unter anderem Bären, Wölfe und Tiger gezeigt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Flora",
+     "ru": "флора",
+     "ex": "Exotische Pflanzen, die aus anderen Teilen der Welt importiert wurden, bedrohen die einheimische [[Flora]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Lebewesen, Lebewesen",
+     "ru": "живое существо",
+     "ex": "Im Wasser befinden sich kleinste [[Lebewesen]], die man nur unter einem Mikroskop erkennen kann.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Artenvielfalt",
+     "ru": "биоразнообразие",
+     "ex": "Umweltveränderungen bedrohen die [[Artenvielfalt]] auf der Erde.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. bewahren / erhalten* · die Bewahrung / die Erhaltung",
+     "ru": "сохранять · сохранение",
+     "ex": "Naturschutzgebiete können dazu beitragen, die Vielfalt der Arten zu [[bewahren]] / zu [[erhalten]].",
+     "note": "erhält – erhielt – hat erhalten",
+     "g": "v"
+    },
+    {
+     "de": "aussterben*",
+     "ru": "вымирать",
+     "ex": "In Mitteleuropa waren Wölfe und Braunbären [[ausgestorben]], doch seit einigen Jahren nimmt die Zahl der Tiere wieder zu.",
+     "note": "starb aus – ist ausgestorben",
+     "g": "v"
+    },
+    {
+     "de": "vom Aussterben bedroht sein*",
+     "ru": "быть под угрозой вымирания",
+     "ex": "Aufgrund des Klimawandels sind zahlreiche Tier- und Pflanzenarten [[vom Aussterben bedroht]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Виды животных",
+   "items": [
+    {
+     "de": "das Säugetier, -tiere",
+     "ru": "млекопитающее",
+     "ex": "Obwohl sie im Wasser leben, sind Wale keine Fische, sondern [[Säugetiere]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Insekt, Insekten",
+     "ru": "насекомое",
+     "ex": "Mit mehr als einer Million verschiedener Arten sind die [[Insekten]] die artenreichste Tiergruppe auf der Erde.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Reptil, Reptilien",
+     "ru": "рептилия",
+     "ex": "[[Reptilien]] wie Schlangen und Echsen bevorzugen ein warmes Klima.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Raubtier, -tiere",
+     "ru": "хищник",
+     "ex": "In Afrika kann man Löwen und andere [[Raubtiere]] in freier Wildbahn beobachten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Vieh",
+     "ru": "скот",
+     "ex": "Menschen halten [[Vieh]], um sich von der Milch und dem Fleisch der Tiere zu ernähren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Hai, Haie",
+     "ru": "акула",
+     "ex": "[[Haie]] können auch kleine Mengen Blut, die sich im Wasser befinden, riechen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Robbe, Robben",
+     "ru": "тюлень",
+     "ex": "Vor allem früher war das Fleisch von [[Robben]] in der Polarregion eine wichtige Nahrungsquelle.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Frosch, Frösche",
+     "ru": "лягушка",
+     "ex": "[[Frösche]] entwickeln sich aus Eiern, die im Wasser abgelegt werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Schildkröte, -kröten",
+     "ru": "черепаха",
+     "ex": "Sowohl im Wasser als auch an Land findet man unterschiedliche Arten von [[Schildkröten]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Schnecke, Schnecken",
+     "ru": "улитка",
+     "ex": "Es gibt verschiedene Methoden, die verhindern sollen, dass [[Schnecken]] den Salat im Garten fressen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Насекомые и мелкие животные",
+   "items": [
+    {
+     "de": "die Spinne, Spinnen",
+     "ru": "паук",
+     "ex": "Viele Menschen fürchten sich vor [[Spinnen]], obwohl diese faszinierende Lebewesen sind.",
+     "note": "sich fürchten vor + Dat.",
+     "g": "f"
+    },
+    {
+     "de": "die Ameise, Ameisen",
+     "ru": "муравей",
+     "ex": "[[Ameisen]] sind dazu fähig, Dinge zu tragen, die viel schwerer sind als ihr eigener Körper.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Mücke, Mücken",
+     "ru": "комар",
+     "ex": "[[Mücken]] können eine Reihe von Krankheiten, z. B. Malaria und Gelbfieber, übertragen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Heuschrecke, Heuschrecken",
+     "ru": "саранча, кузнечик",
+     "ex": "Manchmal vernichtet eine große Zahl von [[Heuschrecken]] eine ganze Ernte.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Schmetterling, Schmetterlinge",
+     "ru": "бабочка",
+     "ex": "In einem Kokon entwickelt sich aus einer Raupe ein [[Schmetterling]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Biene, Bienen",
+     "ru": "пчела",
+     "ex": "Manche Menschen reagieren allergisch, wenn sie von einer [[Biene]] gestochen werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Fledermaus, -mäuse",
+     "ru": "летучая мышь",
+     "ex": "[[Fledermäuse]] sind nachtaktive Tiere, die sich im Dunkeln mithilfe von Ultraschallwellen orientieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Zugvogel, -vögel",
+     "ru": "перелётная птица",
+     "ex": "Ornithologen beobachten die Flugrouten von [[Zugvögeln]], indem sie einzelne Tiere beringen und ihren Weg verfolgen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Внешний вид животных",
+   "items": [
+    {
+     "de": "die Flosse, Flossen",
+     "ru": "плавник",
+     "ex": "Ein auffälliges Merkmal von Haien ist ihre dreieckige Rücken[[flosse]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kieme, Kiemen",
+     "ru": "жабра",
+     "ex": "Mit den [[Kiemen]] filtern Fische den Sauerstoff aus dem Wasser.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Rüssel, Rüssel",
+     "ru": "хобот",
+     "ex": "Elefanten können mit ihrem [[Rüssel]] Wasser aufsaugen, aber auch Gegenstände transportieren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Panzer, Panzer",
+     "ru": "панцирь",
+     "ex": "Ein starker [[Panzer]] schützt die Schildkröten vor ihren natürlichen Feinden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Flügel, Flügel",
+     "ru": "крыло",
+     "ex": "Junge Vögel müssen erst lernen, ihre [[Flügel]] richtig zu gebrauchen, bevor sie fliegen können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Schnabel, Schnäbel",
+     "ru": "клюв",
+     "ex": "Raubvögel verfügen über einen kräftigen [[Schnabel]], mit dem sie kleinere Tiere töten können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Feder, Federn · das Gefieder",
+     "ru": "перо · оперение",
+     "ex": "Früher wurden Vogel[[federn]] als Schreibgeräte benutzt.",
+     "note": "Bei einigen Vogelarten kann man das Geschlecht an der Farbe des Gefieders erkennen.",
+     "g": "f"
+    },
+    {
+     "de": "das Fell, Felle",
+     "ru": "шерсть, мех",
+     "ex": "Zebras erkennt man sofort an ihrem auffälligen, schwarz-weiß gestreiften [[Fell]].",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Образ жизни животных",
+   "items": [
+    {
+     "de": "ein Tier jagen · die Jagd",
+     "ru": "охотиться · охота",
+     "ex": "Verschiedene Raubtiere verfügen über ein sehr gutes Gehör und können deshalb auch im Dunkeln [[jagen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. erbeuten · die Beute",
+     "ru": "добывать · добыча",
+     "ex": "Löwen jagen gemeinsam und teilen anschließend das Tier, das sie [[erbeutet]] haben.",
+     "note": "Raubkatzen können sich … an ihre Beute heranschleichen",
+     "g": "v"
+    },
+    {
+     "de": "das Haustier, Haustiere",
+     "ru": "домашнее животное",
+     "ex": "Die Zahl der Deutschen, die Reptilien als [[Haustiere]] halten, hat in den letzten Jahren deutlich zugenommen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Tier füttern · das Futter",
+     "ru": "кормить животное · корм",
+     "ex": "Früher wurden Schweine mit Abfällen aus dem Haushalt [[gefüttert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "weiden · die Weide",
+     "ru": "пастись · пастбище",
+     "ex": "Wenn Tiere immer auf derselben Fläche [[weiden]], wird diese schnell verschmutzt.",
+     "note": "Die Rinder stehen tagsüber auf der Weide …",
+     "g": "v"
+    },
+    {
+     "de": "ein Tier schlachten",
+     "ru": "забивать животное",
+     "ex": "Wenn die Hühner ein bestimmtes Gewicht erreicht haben, werden sie [[geschlachtet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Herde, Herden",
+     "ru": "стадо",
+     "ex": "Auf der Suche nach neuen Weideflächen ziehen Nomaden mit ihren [[Herden]] durch das Land.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Rudel, Rudel",
+     "ru": "стая (волков)",
+     "ex": "Wölfe leben in [[Rudeln]] und gelten als Tiere mit ausgeprägtem Sozialverhalten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Schwarm, Schwärme",
+     "ru": "стая, рой",
+     "ex": "In der Nähe von Gewässern halten sich oft große [[Schwärme]] von Insekten auf.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Растения: общее",
+   "items": [
+    {
+     "de": "die Vegetation",
+     "ru": "растительность",
+     "ex": "In Wüsten ist wegen des Wassermangels kaum [[Vegetation]] vorhanden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Moos, Moose",
+     "ru": "мох",
+     "ex": "Bei feuchtem Klima sind Bäume und Steine häufig von [[Moos]] bedeckt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Pilz, Pilze",
+     "ru": "гриб",
+     "ex": "Man sollte im Wald gesammelte [[Pilze]] nur essen, wenn man essbare, ungenießbare und giftige Sorten voneinander unterscheiden kann.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kraut, Kräuter",
+     "ru": "трава (пряная)",
+     "ex": "Wer im eigenen Garten [[Kräuter]] zieht, kann diese zum Würzen von Speisen verwenden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Samen, Samen",
+     "ru": "семя",
+     "ex": "Durch den Wind werden die [[Samen]] von Pflanzen in der ganzen Umgebung verteilt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "keimen · der Keim, Keime",
+     "ru": "прорастать · росток",
+     "ex": "Nachdem sie in die Erde gelegt worden sind, müssen Samen regelmäßig gegossen werden, damit sie zu [[keimen]] beginnen.",
+     "note": "Die Keime von Kartoffeln … enthalten giftige Alkaloide.",
+     "g": "v"
+    },
+    {
+     "de": "die Wurzel, Wurzeln",
+     "ru": "корень",
+     "ex": "Einige Bäume haben [[Wurzeln]], die bis tief in den Boden reichen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Stängel, Stängel",
+     "ru": "стебель",
+     "ex": "Durch den [[Stängel]] der Blume gelangen Wasser und Nährstoffe von den Wurzeln zu den Blättern und Blüten.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Деревья и цветение",
+   "items": [
+    {
+     "de": "der Stamm, Stämme",
+     "ru": "ствол",
+     "ex": "Die [[Stämme]] von Mammutbäumen können einen Umfang von mehr als dreißig Metern erreichen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Ast, Äste",
+     "ru": "сук, толстая ветка",
+     "ex": "Oft sind die [[Äste]] von Bäumen so kräftig, dass ein Mensch darauf sitzen kann, ohne dass sie abbrechen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Zweig, Zweige",
+     "ru": "ветка",
+     "ex": "Die [[Zweige]] von Obstbäumen sollten regelmäßig geschnitten werden, damit sie besser wachsen und mehr Früchte tragen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Blatt, Blätter",
+     "ru": "лист",
+     "ex": "Lindenbäume kann man an ihren herzförmigen [[Blättern]] erkennen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Laub",
+     "ru": "листва",
+     "ex": "Im Herbst färbt sich das [[Laub]] der Bäume gelb, orange, rot und schließlich braun.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Laubbaum, -bäume",
+     "ru": "лиственное дерево",
+     "ex": "Die meisten [[Laubbäume]] verlieren zu Beginn des Winters ihre Blätter.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Nadelbaum, -bäume",
+     "ru": "хвойное дерево",
+     "ex": "So genannter Mischwald besteht zum Teil aus Laubbäumen und zum Teil aus [[Nadelbäumen]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "blühen · die Blüte, Blüten",
+     "ru": "цвести · цветок, цветение",
+     "ex": "Wenn der Raps [[blüht]], kann man schon aus großer Entfernung die gelb leuchtenden Felder erkennen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Pollen, Pollen",
+     "ru": "пыльца",
+     "ex": "[[Pollen]] von Bäumen und Blumen, die in die Luft gelangen, können bei Allergikern zu heftigen Reaktionen führen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Pflanzen bestäuben / befruchten · die Bestäubung",
+     "ru": "опылять · опыление",
+     "ex": "Wenn Bienen von Blüte zu Blüte fliegen, um Nektar zu sammeln, [[bestäuben]] sie die Pflanzen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich fortpflanzen · die Fortpflanzung",
+     "ru": "размножаться · размножение",
+     "ex": "Viele Blumenarten können [[sich]] nur durch die Bestäubung [[fortpflanzen]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Генетика: клетки и гены",
+   "items": [
+    {
+     "de": "die Zelle, Zellen",
+     "ru": "клетка",
+     "ex": "Die [[Zellen]] des Körpers leben unterschiedlich lange, bevor sie absterben und durch neue ersetzt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Zellkern, -kerne",
+     "ru": "клеточное ядро",
+     "ex": "Der größte Teil der genetischen Informationen befindet sich im [[Zellkern]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Stammzelle, -zellen",
+     "ru": "стволовая клетка",
+     "ex": "Im Gegensatz zu Hautzellen, Nervenzellen und anderen Zellen des Körpers sind [[Stammzellen]] noch nicht auf eine bestimmte Funktion festgelegt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Chromosom, Chromosomen",
+     "ru": "хромосома",
+     "ex": "Männer verfügen über ein Y-[[Chromosom]], während der Zellkern von Frauen nur X-Chromosomen enthält.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Gen, Gene · genetisch",
+     "ru": "ген · генетический",
+     "ex": "Es wird oft darüber diskutiert, wie groß der Einfluss der [[Gene]] auf die Persönlichkeit eines Menschen ist.",
+     "note": "… winzige genetische Unterschiede",
+     "g": "n"
+    },
+    {
+     "de": "die Gentechnik",
+     "ru": "генная инженерия",
+     "ex": "Die [[Gentechnik]] kann in verschiedenen Bereichen der Medizin eingesetzt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Merkmal, Merkmale",
+     "ru": "признак",
+     "ex": "Durch ihre Gene geben Eltern bestimmte [[Merkmale]], z. B. die Haarfarbe, an ihre Kinder weiter.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Eigenschaft, Eigenschaften",
+     "ru": "свойство, качество",
+     "ex": "Wird man in Zukunft schon vor der Geburt bestimmen können, welche [[Eigenschaften]] ein Mensch haben wird?",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. vererben · die Vererbung",
+     "ru": "передавать по наследству · наследственность",
+     "ex": "Gregor Mendel hat untersucht, wie bestimmte Merkmale an die nächste Generation [[vererbt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Erbanlagen (Plural) = das Erbgut",
+     "ru": "наследственность, генотип",
+     "ex": "Mendels Forschungen haben gezeigt, dass es dominante und rezessive [[Erbanlagen]] gibt.",
+     "note": "",
+     "g": "pl"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Генетика: манипуляции и этика",
+   "items": [
+    {
+     "de": "mutieren · die Mutation",
+     "ru": "мутировать · мутация",
+     "ex": "Aufgrund von Umwelteinflüssen können Gene [[mutieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die DNS = die DNA",
+     "ru": "ДНК",
+     "ex": "Heutzutage kann man einen Straftäter überführen, indem man seine [[DNS]] mit Spuren am Tatort vergleicht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die DNA manipulieren = die DNA verändern",
+     "ru": "модифицировать ДНК",
+     "ex": "Wissenschaftler haben Methoden entwickelt, mit denen sie die [[DNA manipulieren]] können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "genmanipuliert = genetisch verändert",
+     "ru": "генетически модифицированный",
+     "ex": "Verbraucherschützer fordern schon lange eine deutliche Kennzeichnung von [[genmanipulierten]] Nahrungsmitteln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "eine Pflanze / ein Tier züchten · die Zucht",
+     "ru": "выводить (породу, сорт) · селекция",
+     "ex": "Durch die Manipulation des Erbguts kann man Tier- und Pflanzenarten mit bestimmten Eigenschaften [[züchten]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. / etw. klonen · das Klonen · der Klon",
+     "ru": "клонировать · клонирование · клон",
+     "ex": "1996 haben Wissenschaftler mit dem Schaf „Dolly“ zum ersten Mal ein erwachsenes Säugetier [[geklont]].",
+     "note": "Die Klone … waren häufig nicht lebensfähig.",
+     "g": "v"
+    },
+    {
+     "de": "die Moral · moralisch",
+     "ru": "мораль · моральный",
+     "ex": "Viele halten das Klonen von Lebewesen für [[moralisch]] fragwürdig.",
+     "note": "Wissenschaftler stehen … vor der Frage, inwieweit die Moral ihrer Forschung Grenzen setzt.",
+     "g": "f"
+    },
+    {
+     "de": "die Ethik · ethisch",
+     "ru": "этика · этический",
+     "ex": "Aus [[ethischen]] Gründen ist die Nutzung von embryonalen Stammzellen höchst umstritten.",
+     "note": "Die Ethik verbietet es, bestimmte Experimente an Menschen durchzuführen.",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: стволовые клетки (Infobox)",
+   "items": [
+    {
+     "de": "für die Forschung interessant sein",
+     "ru": "представлять интерес для науки",
+     "ex": "Da sich aus Stammzellen unterschiedliche Arten von Körperzellen züchten lassen, sind diese für die medizinische [[Forschung]] sehr [[interessant]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "embryonal / fetal",
+     "ru": "эмбриональный / фетальный",
+     "ex": "Zudem ist besonders die Verwendung [[embryonaler]] Stammzellen mit ethischen Problemen verbunden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "mit Problemen verbunden sein",
+     "ru": "быть связанным с проблемами",
+     "ex": "Zudem ist besonders die Verwendung embryonaler Stammzellen mit ethischen [[Problemen verbunden]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zu wissenschaftlichen Zwecken",
+     "ru": "в научных целях",
+     "ex": "Wenn man diese Zellen [[zu wissenschaftlichen]] oder medizinischen [[Zwecken]] verwendet, wird der Embryo zerstört.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. vernichten",
+     "ru": "уничтожать",
+     "ex": "Es werden also Zellen [[vernichtet]], aus denen sich ein menschliches Lebewesen entwickeln könnte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "unter bestimmten Bedingungen erlaubt",
+     "ru": "разрешено при определённых условиях",
+     "ex": "Deshalb sind der Import und die Verwendung dieser Stammzellen in Deutschland nur [[unter bestimmten Bedingungen erlaubt]].",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "aussterben",
+   "v": "Perfekt с sein: Die Dinosaurier sind ausgestorben"
+  },
+  {
+   "k": "der Samen ↔ der Same",
+   "v": "Обе формы: der Samen / der Same (des Samens)"
+  },
+  {
+   "k": "das Laub ↔ das Blatt",
+   "v": "das Laub — листва (собир., только ед. ч.); das Blatt, die Blätter — лист"
+  },
+  {
+   "k": "der Ast ↔ der Zweig",
+   "v": "Ast — толстая ветка, сук; Zweig — тонкая ветка"
+  },
+  {
+   "k": "die Herde · das Rudel · der Schwarm",
+   "v": "Herde — стадо (коровы, овцы); Rudel — стая (волки); Schwarm — стая птиц, рой насекомых"
+  },
+  {
+   "k": "erhalten",
+   "v": "1) сохранять (die Artenvielfalt erhalten), 2) получать (einen Brief erhalten)"
+  },
+  {
+   "k": "etw. vererben ↔ etw. erben",
+   "v": "vererben — передавать по наследству; erben — получать наследство"
+  },
+  {
+   "k": "züchten",
+   "v": "Выводить породу / сорт; die Zucht — разведение"
+  }
+ ]
+}

@@ -1,0 +1,284 @@
+{
+ "p1": {
+  "lesen": {
+   "title": "Lesetext: Die Digitalisierung der Hochschullehre",
+   "minutes": 60,
+   "text": "Noch vor wenigen Jahren bestand ein typischer Studientag aus Vorlesungen im überfüllten Hörsaal, Seminaren in kleinen Räumen und langen Stunden in der Bibliothek. Heute sieht der Alltag vieler Studierender anders aus. Vorlesungen werden aufgezeichnet und auf Lernplattformen zur Verfügung gestellt, Hausarbeiten werden online eingereicht, und selbst mündliche Prüfungen finden teilweise per Videokonferenz statt. Die Digitalisierung hat die Hochschullehre grundlegend verändert.\n\nBefürworter dieser Entwicklung verweisen vor allem auf die gewonnene Flexibilität. Studierende, die neben dem Studium arbeiten oder Kinder betreuen, können Lehrveranstaltungen dann ansehen, wenn es ihnen zeitlich passt. Wer den Stoff beim ersten Mal nicht verstanden hat, kann die Aufzeichnung anhalten und schwierige Stellen wiederholen. Auch für Studierende mit Behinderungen bieten digitale Formate häufig Vorteile, etwa durch Untertitel oder eine vergrößerte Darstellung.\n\nDarüber hinaus eröffnet die Digitalisierung neue didaktische Möglichkeiten. Beim sogenannten „Inverted Classroom“ eignen sich die Studierenden die Grundlagen zu Hause mithilfe von Videos an; die gemeinsame Zeit in der Präsenzveranstaltung wird dann für Diskussionen, Übungen und Fragen genutzt. Erste Studien deuten darauf hin, dass Studierende auf diese Weise den Lernstoff nachhaltiger im Gedächtnis behalten.\n\nKritiker geben jedoch zu bedenken, dass sich nicht alle Inhalte digital vermitteln lassen. Gerade in Fächern wie Medizin, Chemie oder den Ingenieurwissenschaften sei praktische Arbeit im Labor unverzichtbar. Zudem fehle beim reinen Online-Studium der persönliche Austausch mit Kommilitonen und Dozenten. Umfragen zeigen, dass sich viele Erstsemester, die ihr Studium ausschließlich online begonnen haben, isoliert fühlten und Schwierigkeiten hatten, Kontakte zu knüpfen.\n\nEin weiteres Problem ist die ungleiche technische Ausstattung. Nicht alle Studierenden verfügen über einen leistungsfähigen Rechner oder einen stabilen Internetzugang. Hochschulen stehen daher vor der Aufgabe, Geräte zu verleihen und Arbeitsplätze auf dem Campus bereitzustellen. Hinzu kommen Fragen des Datenschutzes, denn Lernplattformen speichern große Mengen personenbezogener Daten.\n\nDie meisten Experten sind sich inzwischen einig, dass die Zukunft weder im reinen Präsenz- noch im reinen Online-Studium liegt. Vielmehr setzt sich ein sogenanntes „Blended Learning“ durch, das die Vorteile beider Formen verbindet. Entscheidend ist dabei, dass digitale Angebote nicht als Sparmaßnahme missverstanden werden: Gute Online-Lehre erfordert Zeit, Personal und eine didaktische Weiterbildung der Lehrenden. Wird diese Investition gescheut, droht die Qualität der Lehre zu sinken.",
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Nennen Sie drei Beispiele dafür, wie sich der Studienalltag verändert hat (Absatz 1).",
+     "a": "Vorlesungen werden aufgezeichnet / auf Lernplattformen gestellt; Hausarbeiten online eingereicht; Prüfungen per Videokonferenz"
+    },
+    {
+     "t": "open",
+     "q": "Welche Gruppen profitieren laut Absatz 2 besonders von der Flexibilität?",
+     "a": "Studierende, die arbeiten oder Kinder betreuen; Studierende mit Behinderungen"
+    },
+    {
+     "t": "open",
+     "q": "Erklären Sie mit eigenen Worten das Prinzip des „Inverted Classroom“.",
+     "a": "Grundlagen lernt man vorher zu Hause mit Videos; die Präsenzzeit dient Diskussion, Übungen und Fragen"
+    },
+    {
+     "t": "tf",
+     "q": "Laut Text lassen sich alle Studieninhalte gleich gut digital vermitteln.",
+     "a": false
+    },
+    {
+     "t": "mc",
+     "q": "Welches Problem hatten viele Erstsemester im reinen Online-Studium?",
+     "o": [
+      "Sie konnten keine Prüfungen ablegen.",
+      "Sie fühlten sich isoliert und fanden schwer Kontakte.",
+      "Sie hatten zu viele Präsenzveranstaltungen."
+     ],
+     "a": 1
+    },
+    {
+     "t": "open",
+     "q": "Welche zwei weiteren Probleme nennt Absatz 5?",
+     "a": "ungleiche technische Ausstattung (Rechner, Internet); Datenschutz"
+    },
+    {
+     "t": "tf",
+     "q": "Die Experten empfehlen, in Zukunft vollständig auf Präsenzlehre zu verzichten.",
+     "a": false
+    },
+    {
+     "t": "open",
+     "q": "Unter welcher Bedingung sinkt laut Autor die Qualität der Lehre?",
+     "a": "wenn nicht in Zeit, Personal und Weiterbildung der Lehrenden investiert wird / wenn digitale Lehre als Sparmaßnahme verstanden wird"
+    }
+   ]
+  },
+  "schreiben": {
+   "minutes": 70,
+   "task": "Thema: Studiengebühren – ja oder nein?\n\n1) Beschreiben Sie die Grafik.\n2) Nennen Sie Argumente für und gegen allgemeine Studiengebühren.\n3) Nehmen Sie Stellung und begründen Sie Ihre Meinung. Beziehen Sie sich dabei auch auf die Situation in Ihrem Heimatland.\n\nUmfang: ca. 250 Wörter.",
+   "chart": {
+    "title": "Wie finanzieren Studierende in Deutschland ihr Studium? (Mehrfachnennungen, in %)",
+    "rows": [
+     [
+      "Unterstützung durch Eltern",
+      86
+     ],
+     [
+      "eigener Verdienst (Jobben)",
+      63
+     ],
+     [
+      "BAföG",
+      11
+     ],
+     [
+      "Stipendium",
+      6
+     ],
+     [
+      "Studienkredit",
+      4
+     ]
+    ]
+   },
+   "model": "Die Grafik zeigt, wie Studierende in Deutschland ihr Studium finanzieren. Mehrfachnennungen waren möglich. Mit 86 % steht die Unterstützung durch die Eltern an erster Stelle. Knapp zwei Drittel (63 %) finanzieren sich zusätzlich durch eigenen Verdienst. BAföG erhalten dagegen nur 11 %, ein Stipendium 6 % und einen Studienkredit lediglich 4 %.\n\nVor diesem Hintergrund wird immer wieder über die Einführung allgemeiner Studiengebühren diskutiert. Befürworter argumentieren, dass die Hochschulen zusätzliche Einnahmen dringend benötigen, um die Qualität der Lehre zu verbessern. Außerdem würden Studierende ihr Studium zielstrebiger absolvieren, wenn es Geld kostet.\n\nGegner weisen hingegen darauf hin, dass Gebühren vor allem Kinder aus einkommensschwachen Familien vom Studium abschrecken. Die Grafik verdeutlicht, wie stark Studierende von ihren Eltern abhängig sind; zusätzliche Kosten würden die soziale Ungleichheit verschärfen. Zudem müssten noch mehr Studierende jobben, was häufig zu einer Überschreitung der Regelstudienzeit führt.\n\nMeiner Meinung nach überwiegen die Nachteile. Bildung ist ein Grundrecht und sollte nicht vom Einkommen der Eltern abhängen. In meinem Heimatland gibt es zwar kostenlose Studienplätze, doch sie werden nur an die besten Bewerber vergeben; wer nicht zugelassen wird, muss bezahlen. Dieses System halte ich für ungerecht. Statt Gebühren einzuführen, sollte der Staat die Hochschulen besser finanzieren und das BAföG ausbauen, damit mehr junge Menschen unabhängig von ihrer Herkunft studieren können.",
+   "phrases": [
+    "Die Grafik zeigt / gibt Auskunft über …",
+    "An erster Stelle steht … mit … %",
+    "Knapp / Gut die Hälfte …",
+    "Im Gegensatz dazu / Dagegen …",
+    "Befürworter argumentieren, dass …",
+    "Gegner weisen darauf hin, dass …",
+    "Meiner Meinung nach überwiegen …",
+    "Zusammenfassend lässt sich sagen, …"
+   ]
+  }
+ },
+ "p2": {
+  "lesen": {
+   "title": "Lesetext: Die Energiewende – Erfolg mit Hindernissen",
+   "minutes": 60,
+   "text": "Als die Bundesregierung im Jahr 2011 beschloss, bis 2022 aus der Atomenergie auszusteigen, war das Echo im Ausland gespalten. Während Umweltverbände den Schritt als mutig lobten, hielten viele Ökonomen ihn für riskant. Deutschland, so ihre Befürchtung, werde sich damit von Energieimporten abhängig machen und die Strompreise in die Höhe treiben. Mehr als ein Jahrzehnt später lässt sich eine differenzierte Bilanz ziehen.\n\nUnbestritten ist, dass der Anteil erneuerbarer Energien am Stromverbrauch stark gestiegen ist. Lag er im Jahr 2000 noch bei rund sechs Prozent, so stammt heute mehr als die Hälfte des Stroms aus Wind, Sonne, Biomasse und Wasserkraft. An windreichen Tagen decken die Windkraftanlagen im Norden zeitweise den gesamten Bedarf des Landes. Diese Entwicklung hat zudem zahlreiche Arbeitsplätze geschaffen, vor allem in ländlichen Regionen.\n\nDoch die Energiewende stößt an Grenzen. Das größte Problem ist die sogenannte Dunkelflaute: Wenn im Winter weder die Sonne scheint noch der Wind weht, müssen Kohle- und Gaskraftwerke einspringen. Große Speicher, die überschüssigen Strom aufnehmen und bei Bedarf wieder abgeben könnten, existieren bisher nur in geringem Umfang. Ein zweites Problem ist der Transport: Der Windstrom wird überwiegend im Norden erzeugt, während die großen Industriebetriebe im Süden angesiedelt sind. Die dafür notwendigen Stromleitungen sind jedoch noch längst nicht fertiggestellt, weil Anwohner gegen den Bau klagen und die Genehmigungsverfahren Jahre dauern.\n\nHinzu kommt die Frage der Kosten. Die Förderung der erneuerbaren Energien wurde lange über eine Umlage auf den Strompreis finanziert, die private Haushalte stärker belastete als energieintensive Unternehmen. Kritiker bemängeln, dass Menschen mit geringem Einkommen dadurch überproportional zur Kasse gebeten wurden. Inzwischen wird die Förderung aus dem Staatshaushalt bezahlt, was die Stromrechnung entlastet, die Staatsfinanzen aber belastet.\n\nBemerkenswert ist schließlich, dass der Strom nur einen Teil des Energieverbrauchs ausmacht. Im Verkehr und bei der Heizung von Gebäuden dominieren nach wie vor fossile Brennstoffe. Soll die Klimaneutralität bis 2045 erreicht werden, müssen Millionen Öl- und Gasheizungen ersetzt und der Verkehr weitgehend elektrifiziert werden. Die eigentliche Herausforderung der Energiewende, so resümieren Fachleute, liege daher noch vor uns.",
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Welche Befürchtung äußerten Ökonomen 2011?",
+     "a": "Abhängigkeit von Energieimporten und steigende Strompreise"
+    },
+    {
+     "t": "open",
+     "q": "Wie hat sich der Anteil erneuerbarer Energien am Strom entwickelt?",
+     "a": "von ca. 6 % (2000) auf über die Hälfte heute"
+    },
+    {
+     "t": "tf",
+     "q": "Die Energiewende hat vor allem in Großstädten neue Arbeitsplätze geschaffen.",
+     "a": false
+    },
+    {
+     "t": "open",
+     "q": "Was ist eine „Dunkelflaute“, und welche Folge hat sie?",
+     "a": "Zeit ohne Sonne und Wind (im Winter); dann müssen Kohle- und Gaskraftwerke einspringen"
+    },
+    {
+     "t": "open",
+     "q": "Warum ist der Stromtransport ein Problem? Nennen Sie zwei Gründe.",
+     "a": "Windstrom im Norden, Industrie im Süden; Leitungen nicht fertig, weil Anwohner klagen und Genehmigungen lange dauern"
+    },
+    {
+     "t": "mc",
+     "q": "Wen belastete die frühere Umlage laut Kritikern besonders?",
+     "o": [
+      "energieintensive Unternehmen",
+      "Menschen mit geringem Einkommen",
+      "die Windkraftbetreiber"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Heute wird die Förderung der erneuerbaren Energien aus dem Staatshaushalt bezahlt.",
+     "a": true
+    },
+    {
+     "t": "open",
+     "q": "Warum liegt die „eigentliche Herausforderung“ laut Fachleuten noch vor uns?",
+     "a": "Verkehr und Heizung nutzen noch fossile Brennstoffe; Heizungen müssen ersetzt und Verkehr elektrifiziert werden"
+    }
+   ]
+  },
+  "schreiben": {
+   "minutes": 70,
+   "task": "Thema: Sollten Autos aus den Innenstädten verbannt werden?\n\n1) Beschreiben Sie die Grafik.\n2) Stellen Sie Vor- und Nachteile autofreier Innenstädte dar.\n3) Nehmen Sie begründet Stellung und gehen Sie auf die Situation in Ihrem Heimatland ein.\n\nUmfang: ca. 250 Wörter.",
+   "chart": {
+    "title": "Wie legen Berufstätige in deutschen Großstädten den Weg zur Arbeit zurück? (in %)",
+    "rows": [
+     [
+      "Pkw",
+      42
+     ],
+     [
+      "öffentliche Verkehrsmittel",
+      31
+     ],
+     [
+      "Fahrrad",
+      17
+     ],
+     [
+      "zu Fuß",
+      8
+     ],
+     [
+      "Sonstiges",
+      2
+     ]
+    ]
+   },
+   "model": "Die Grafik gibt Auskunft darüber, wie Berufstätige in deutschen Großstädten zur Arbeit gelangen. Mit 42 % ist der Pkw nach wie vor das wichtigste Verkehrsmittel. An zweiter Stelle folgen die öffentlichen Verkehrsmittel mit 31 %. Immerhin 17 % fahren mit dem Fahrrad, während nur 8 % zu Fuß gehen.\n\nAngesichts von Staus, Lärm und Luftverschmutzung fordern viele Städte, Autos aus den Innenstädten zu verbannen. Dafür spricht zunächst der Umweltschutz: Weniger Autos bedeuten weniger Abgase, weniger Feinstaub und weniger CO2. Außerdem würde die Lebensqualität steigen, denn auf ehemaligen Parkplätzen könnten Grünflächen und Radwege entstehen. Nicht zuletzt würde die Zahl der Verkehrsunfälle sinken.\n\nDagegen lässt sich einwenden, dass nicht alle Menschen auf das Auto verzichten können. Für ältere oder körperlich beeinträchtigte Menschen sowie für Pendler aus ländlichen Regionen, die schlecht an das Verkehrsnetz angebunden sind, wäre ein Verbot eine große Belastung. Auch der Einzelhandel befürchtet Umsatzeinbußen, wenn Kunden nicht mehr mit dem Auto kommen können.\n\nMeiner Ansicht nach ist ein vollständiges Verbot nicht sinnvoll, solange die Alternativen nicht gut ausgebaut sind. Zunächst müssen der öffentliche Nahverkehr günstiger und zuverlässiger und die Radwege sicherer werden. In meinem Heimatland ist die Situation noch schwieriger, weil es in vielen Städten kaum Radwege gibt. Ein schrittweiser Umbau der Innenstädte erscheint mir daher als der beste Weg: Er schützt die Umwelt, ohne einzelne Gruppen auszugrenzen.",
+   "phrases": [
+    "Die Grafik gibt Auskunft darüber, …",
+    "An zweiter Stelle folgen …",
+    "Dafür spricht zunächst, dass …",
+    "Nicht zuletzt …",
+    "Dagegen lässt sich einwenden, dass …",
+    "Meiner Ansicht nach …",
+    "Angesichts + G …",
+    "Ein schrittweiser … erscheint mir als der beste Weg."
+   ]
+  }
+ },
+ "p3": {
+  "lesen": {
+   "title": "Lesetext: Einsam unter vielen – soziale Medien und psychische Gesundheit",
+   "minutes": 60,
+   "text": "Nie zuvor waren Menschen so gut miteinander vernetzt wie heute. Über soziale Netzwerke können wir in Sekunden mit Freunden auf anderen Kontinenten kommunizieren, Fotos teilen und an Diskussionen teilnehmen. Und doch berichten Psychologen von einer paradoxen Entwicklung: Gerade unter jungen Erwachsenen, die besonders viel Zeit online verbringen, nimmt das Gefühl der Einsamkeit zu.\n\nWie lässt sich dieser Widerspruch erklären? Ein Ansatz betrifft die Qualität der Kontakte. Zwar hat ein durchschnittlicher Nutzer mehrere hundert „Freunde“ oder „Follower“, doch die meisten dieser Beziehungen sind oberflächlich. Ein Like ersetzt kein Gespräch, in dem man sich verstanden fühlt. Wer seine Zeit vorwiegend mit solchen flüchtigen Kontakten verbringt, vernachlässigt unter Umständen die wenigen engen Beziehungen, die für das psychische Wohlbefinden entscheidend sind.\n\nEin zweiter Erklärungsansatz ist der soziale Vergleich. In sozialen Netzwerken präsentieren Menschen in der Regel nur die schönsten Seiten ihres Lebens: den Urlaub am Strand, die bestandene Prüfung, das perfekte Abendessen. Wer diese Bilder ständig betrachtet, gewinnt leicht den Eindruck, das eigene Leben sei langweilig und misslungen. Besonders Jugendliche, deren Selbstbild sich noch in der Entwicklung befindet, reagieren empfindlich auf solche Vergleiche. Eine Untersuchung unter 14- bis 17-Jährigen ergab, dass Mädchen, die täglich mehr als drei Stunden in sozialen Netzwerken verbringen, doppelt so häufig über depressive Symptome klagen wie Gleichaltrige mit geringerer Nutzung.\n\nAllerdings warnen Forscher vor vorschnellen Schlüssen. Aus den vorliegenden Daten geht nicht eindeutig hervor, ob die intensive Nutzung die Ursache der psychischen Probleme ist oder ob umgekehrt Menschen, die sich ohnehin einsam fühlen, mehr Zeit online verbringen. Zudem können soziale Medien durchaus positive Wirkungen haben: Menschen mit seltenen Krankheiten finden in Internetforen Gleichgesinnte, und für Jugendliche aus Minderheiten kann eine Online-Gemeinschaft eine wichtige Stütze sein.\n\nEntscheidend scheint daher weniger die Dauer als die Art der Nutzung zu sein. Wer aktiv kommuniziert, kommentiert und sich mit anderen austauscht, profitiert eher als jemand, der passiv durch fremde Profile scrollt. Experten empfehlen deshalb, bewusst mit Medien umzugehen: Benachrichtigungen auszuschalten, feste bildschirmfreie Zeiten einzuplanen und Online-Kontakte regelmäßig durch persönliche Treffen zu ergänzen. Schulen sollten Medienkompetenz nicht nur technisch, sondern auch im Hinblick auf das seelische Wohlbefinden vermitteln.",
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Worin besteht die „paradoxe Entwicklung“ (Absatz 1)?",
+     "a": "Menschen sind so vernetzt wie nie, aber besonders junge Erwachsene, die viel online sind, fühlen sich zunehmend einsam"
+    },
+    {
+     "t": "open",
+     "q": "Warum können viele Online-Kontakte laut Absatz 2 einsam machen?",
+     "a": "sie sind oberflächlich; man vernachlässigt die engen Beziehungen, die für das Wohlbefinden wichtig sind"
+    },
+    {
+     "t": "open",
+     "q": "Erklären Sie den Mechanismus des „sozialen Vergleichs“.",
+     "a": "Menschen zeigen online nur die schönsten Seiten; Betrachter halten das eigene Leben für langweilig / misslungen"
+    },
+    {
+     "t": "mc",
+     "q": "Was ergab die Untersuchung unter 14- bis 17-Jährigen?",
+     "o": [
+      "Jungen leiden häufiger an Depressionen als Mädchen.",
+      "Mädchen mit über drei Stunden Nutzung täglich klagen doppelt so oft über depressive Symptome.",
+      "Soziale Netzwerke haben keinen Einfluss auf Jugendliche."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Die Forschung hat eindeutig bewiesen, dass soziale Medien Depressionen verursachen.",
+     "a": false
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei positive Wirkungen sozialer Medien aus dem Text.",
+     "a": "Menschen mit seltenen Krankheiten finden Gleichgesinnte; Online-Gemeinschaft als Stütze für Jugendliche aus Minderheiten"
+    },
+    {
+     "t": "open",
+     "q": "Welche Art der Nutzung ist laut Text günstiger?",
+     "a": "aktive Kommunikation und Austausch statt passives Scrollen"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie drei Empfehlungen der Experten.",
+     "a": "Benachrichtigungen ausschalten; bildschirmfreie Zeiten; Online-Kontakte durch persönliche Treffen ergänzen; Medienkompetenz in Schulen"
+    }
+   ]
+  },
+  "schreiben": {
+   "minutes": 70,
+   "task": "Thema: Sollte die Nutzung von Smartphones an Schulen verboten werden?\n\n1) Beschreiben Sie die Grafik.\n2) Stellen Sie Argumente für und gegen ein Verbot dar.\n3) Nehmen Sie Stellung und beziehen Sie sich auf Ihr Heimatland.\n\nUmfang: ca. 250 Wörter.",
+   "chart": {
+    "title": "Tägliche Bildschirmzeit von Jugendlichen (12–19 Jahre) in Deutschland, in Minuten",
+    "rows": [
+     [
+      "2014",
+      192
+     ],
+     [
+      "2016",
+      200
+     ],
+     [
+      "2018",
+      214
+     ],
+     [
+      "2020",
+      258
+     ],
+     [
+      "2022",
+      243
+     ]
+    ]
+   },
+   "model": "Die Grafik zeigt die Entwicklung der täglichen Bildschirmzeit von Jugendlichen zwischen 12 und 19 Jahren in Deutschland im Zeitraum von 2014 bis 2022. Im Jahr 2014 lag sie bei 192 Minuten. Bis 2018 stieg sie leicht auf 214 Minuten an. 2020 erreichte sie mit 258 Minuten – vermutlich infolge der Schulschließungen während der Pandemie – ihren Höchststand. 2022 ging sie wieder leicht auf 243 Minuten zurück, blieb aber deutlich über dem Ausgangsniveau.\n\nVor diesem Hintergrund fordern manche Politiker, Smartphones an Schulen zu verbieten. Befürworter eines Verbots argumentieren, dass sich Schülerinnen und Schüler ohne Handy besser auf den Unterricht konzentrieren können. Außerdem würden sie in den Pausen wieder mehr miteinander sprechen, und Cyber-Mobbing während der Schulzeit würde erschwert.\n\nGegner weisen darauf hin, dass Smartphones auch sinnvolle Lernwerkzeuge sind, etwa für Recherchen oder Wörterbuch-Apps. Ein Verbot vermittle keine Medienkompetenz; vielmehr müssten Jugendliche lernen, verantwortungsvoll mit digitalen Medien umzugehen. Zudem sei ein Verbot schwer zu kontrollieren.\n\nIch persönlich halte ein generelles Verbot für wenig sinnvoll. Überzeugender finden ich klare Regeln: Im Unterricht bleibt das Handy ausgeschaltet, es sei denn, die Lehrkraft setzt es gezielt ein. In meinem Heimatland wurde ein solches Modell an meiner Schule eingeführt, und die Erfahrungen waren positiv. Entscheidend ist meiner Meinung nach, dass Schulen den bewussten Umgang mit Medien lehren, statt sie nur zu verbieten.",
+   "phrases": [
+    "Die Grafik zeigt die Entwicklung … im Zeitraum von … bis …",
+    "… stieg leicht / deutlich an",
+    "… erreichte ihren Höchststand",
+    "… ging leicht zurück",
+    "Vor diesem Hintergrund …",
+    "Befürworter argumentieren, dass …",
+    "Gegner weisen darauf hin, dass …",
+    "Ich persönlich halte … für …"
+   ]
+  }
+ }
+}

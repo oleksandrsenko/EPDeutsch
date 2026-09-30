@@ -1,0 +1,167 @@
+[
+ {
+  "id": "h1",
+  "topics": "1.2 Studium · 3.2 Arbeit und Beruf · 3.3 Geld",
+  "title": "Vortrag: Jobben neben dem Studium",
+  "minutes": 40,
+  "intro": "Sie hören einen Vortrag über die Erwerbstätigkeit von Studierenden. Sie hören den Text zweimal. Beim ersten Hören dürfen Sie nur Notizen machen. Beantworten Sie die Fragen nach dem zweiten Hören.",
+  "text": "Meine Damen und Herren, ich begrüße Sie herzlich zu unserem heutigen Vortrag. Das Thema lautet: Jobben neben dem Studium – Notwendigkeit oder Chance?\n\nLassen Sie mich mit einigen Zahlen beginnen. Nach Angaben des Deutschen Studentenwerks gehen heute etwa zwei Drittel aller Studierenden neben ihrem Studium einer Erwerbstätigkeit nach. Vor zwanzig Jahren lag dieser Anteil noch bei ungefähr der Hälfte. Im Durchschnitt arbeiten die Studierenden etwa fünfzehn Stunden pro Woche, also fast zwei volle Arbeitstage.\n\nWarum jobben so viele junge Menschen? Der wichtigste Grund ist ohne Zweifel die Finanzierung des Lebensunterhalts. Vor allem die Mieten in den Universitätsstädten sind in den letzten Jahren stark gestiegen. In München oder Frankfurt kostet ein Zimmer in einer Wohngemeinschaft heute oft mehr als fünfhundert Euro im Monat. Nicht alle Eltern sind in der Lage, ihre Kinder finanziell ausreichend zu unterstützen, und nur etwa elf Prozent der Studierenden erhalten BAföG.\n\nEs gibt aber auch andere Motive. Viele Studierende möchten bereits während des Studiums Berufserfahrung sammeln. Wer als Werkstudent in einem Unternehmen arbeitet, lernt den Arbeitsalltag kennen, knüpft Kontakte und hat nach dem Abschluss bessere Chancen auf dem Arbeitsmarkt. Personalleiter bestätigen, dass sie Bewerber mit praktischer Erfahrung bevorzugen.\n\nAllerdings hat das Jobben auch Schattenseiten. Wer mehr als zwanzig Stunden pro Woche arbeitet, überschreitet häufig die Regelstudienzeit. Außerdem zeigen Untersuchungen, dass erwerbstätige Studierende ihr Studium öfter abbrechen. Die Doppelbelastung führt bei manchen zu Stress und Erschöpfung, besonders in der Prüfungszeit.\n\nWas kann man also empfehlen? Erstens sollte die Arbeit möglichst einen Bezug zum Studienfach haben. Ein Job als wissenschaftliche Hilfskraft oder ein Werkstudentenvertrag im eigenen Fachgebiet ist sinnvoller als eine Tätigkeit ohne jeden Bezug zum Studium. Zweitens sollte man die Arbeitszeit begrenzen und in der Prüfungsphase reduzieren. Und drittens lohnt es sich, sich über Stipendien zu informieren: Viele Studierende wissen gar nicht, dass sie sich um ein Stipendium bewerben könnten.\n\nZusammenfassend lässt sich sagen: Das Jobben neben dem Studium ist für viele eine finanzielle Notwendigkeit, es kann aber auch eine Chance sein – vorausgesetzt, man findet die richtige Balance. Vielen Dank für Ihre Aufmerksamkeit.",
+  "tasks": [
+   {
+    "t": "open",
+    "q": "Wie hoch ist heute der Anteil der Studierenden, die neben dem Studium arbeiten?",
+    "a": "etwa zwei Drittel (vor zwanzig Jahren etwa die Hälfte)"
+   },
+   {
+    "t": "open",
+    "q": "Wie viele Stunden pro Woche arbeiten Studierende im Durchschnitt?",
+    "a": "etwa fünfzehn Stunden (fast zwei Arbeitstage)"
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie den wichtigsten Grund für das Jobben und eine Ursache dafür.",
+    "a": "Finanzierung des Lebensunterhalts; stark gestiegene Mieten / Eltern können nicht ausreichend unterstützen / nur 11 % erhalten BAföG"
+   },
+   {
+    "t": "mc",
+    "q": "Warum bevorzugen Personalleiter manche Bewerber?",
+    "o": [
+     "Weil sie jünger sind.",
+     "Weil sie praktische Erfahrung haben.",
+     "Weil sie ein Stipendium hatten."
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Wer mehr als 20 Stunden pro Woche arbeitet, schließt das Studium meist schneller ab.",
+    "a": false
+   },
+   {
+    "t": "tf",
+    "q": "Erwerbstätige Studierende brechen das Studium häufiger ab.",
+    "a": true
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie die drei Empfehlungen der Referentin / des Referenten.",
+    "a": "1) Job mit Bezug zum Studienfach; 2) Arbeitszeit begrenzen, in der Prüfungsphase reduzieren; 3) sich über Stipendien informieren"
+   },
+   {
+    "t": "open",
+    "q": "Welches Fazit zieht der Vortrag?",
+    "a": "Jobben ist oft finanzielle Notwendigkeit, kann aber eine Chance sein, wenn man die richtige Balance findet"
+   }
+  ]
+ },
+ {
+  "id": "h2",
+  "topics": "4.3 Energie · 5.1 Die Erde · 4.4 Verkehr",
+  "title": "Interview: Wasser – ein knappes Gut",
+  "minutes": 40,
+  "intro": "Sie hören ein Interview mit einer Hydrologin über Wasserknappheit. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+  "text": "Moderator: Frau Dr. Lehmann, Sie sind Hydrologin und beschäftigen sich seit zwanzig Jahren mit dem Thema Wasser. Viele Menschen in Deutschland glauben, Wasser sei bei uns unbegrenzt verfügbar. Stimmt das?\n\nDr. Lehmann: Leider nicht mehr. Deutschland galt lange als wasserreiches Land, und im internationalen Vergleich stehen wir immer noch gut da. Aber in den trockenen Sommern der letzten Jahre ist der Grundwasserspiegel in vielen Regionen deutlich gesunken. In einigen Gemeinden in Brandenburg und Niedersachsen musste die Wasserentnahme bereits eingeschränkt werden. Man durfte zum Beispiel tagsüber keine Gärten mehr bewässern.\n\nModerator: Woran liegt das?\n\nDr. Lehmann: Es gibt mehrere Ursachen. Die wichtigste ist der Klimawandel: Die Niederschläge verteilen sich anders über das Jahr. Im Winter regnet es zwar mehr, aber im Sommer gibt es lange Dürreperioden, und bei hohen Temperaturen verdunstet ein großer Teil des Wassers, bevor es ins Grundwasser gelangt. Hinzu kommt, dass immer mehr Flächen versiegelt werden, also mit Beton oder Asphalt bedeckt sind. Dort kann der Regen nicht versickern.\n\nModerator: Und wie viel Wasser verbrauchen wir eigentlich?\n\nDr. Lehmann: Im Haushalt verbraucht jeder Deutsche etwa 125 Liter pro Tag. Das klingt viel, ist aber nur ein kleiner Teil. Viel größer ist das sogenannte virtuelle Wasser, also das Wasser, das für die Herstellung von Produkten benötigt wird. Für ein Kilogramm Rindfleisch braucht man rund 15.000 Liter, für eine Baumwoll-Jeans etwa 8.000 Liter. Rechnet man das mit ein, liegt der tägliche Verbrauch pro Person bei über 7.000 Litern.\n\nModerator: Was kann der Einzelne tun?\n\nDr. Lehmann: Natürlich sollte man kein Wasser verschwenden. Aber wirkungsvoller ist ein bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel. Gleichzeitig ist die Politik gefordert. Wir brauchen Regeln, wer in Krisenzeiten Vorrang hat – die Trinkwasserversorgung, die Landwirtschaft oder die Industrie. Außerdem müssen Städte so umgebaut werden, dass sie Regenwasser speichern können, statt es in die Kanalisation abzuleiten. Man spricht von der „Schwammstadt“.\n\nModerator: Frau Dr. Lehmann, vielen Dank für das Gespräch.",
+  "tasks": [
+   {
+    "t": "tf",
+    "q": "Deutschland hat im internationalen Vergleich große Wasserprobleme.",
+    "a": false
+   },
+   {
+    "t": "open",
+    "q": "Welche Maßnahme mussten einige Gemeinden ergreifen?",
+    "a": "Wasserentnahme einschränken, z. B. tagsüber keine Gärten bewässern"
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie zwei Ursachen für den sinkenden Grundwasserspiegel.",
+    "a": "Klimawandel (andere Verteilung der Niederschläge, Dürre im Sommer, Verdunstung); Versiegelung von Flächen"
+   },
+   {
+    "t": "mc",
+    "q": "Wie viel Wasser verbraucht ein Deutscher täglich im Haushalt?",
+    "o": [
+     "etwa 15 Liter",
+     "etwa 125 Liter",
+     "etwa 7.000 Liter"
+    ],
+    "a": 1
+   },
+   {
+    "t": "open",
+    "q": "Was versteht man unter „virtuellem Wasser“?",
+    "a": "Wasser, das für die Herstellung von Produkten benötigt wird"
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie ein Beispiel für virtuelles Wasser mit Zahl.",
+    "a": "1 kg Rindfleisch ≈ 15.000 l; eine Jeans ≈ 8.000 l"
+   },
+   {
+    "t": "open",
+    "q": "Was ist laut Dr. Lehmann wirkungsvoller als Wassersparen im Haushalt?",
+    "a": "bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel"
+   },
+   {
+    "t": "open",
+    "q": "Was bedeutet der Begriff „Schwammstadt“?",
+    "a": "eine Stadt, die Regenwasser speichert, statt es in die Kanalisation abzuleiten"
+   }
+  ]
+ },
+ {
+  "id": "h3",
+  "topics": "2.3 Gesundheit · 2.5 Geist und Seele · 4.8 Medien",
+  "title": "Vortrag: Warum wir mehr schlafen sollten",
+  "minutes": 40,
+  "intro": "Sie hören einen populärwissenschaftlichen Vortrag über Schlaf. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+  "text": "Guten Abend, meine Damen und Herren. Wir verbringen ungefähr ein Drittel unseres Lebens im Schlaf – und trotzdem wissen die meisten von uns erstaunlich wenig darüber. Heute möchte ich Ihnen zeigen, warum Schlaf keine verlorene Zeit ist, sondern eine der wichtigsten Voraussetzungen für Gesundheit und Lernen.\n\nBeginnen wir mit dem Gedächtnis. Während wir schlafen, ist unser Gehirn keineswegs untätig. Im Gegenteil: In bestimmten Schlafphasen werden die Informationen, die wir tagsüber aufgenommen haben, verarbeitet und mit bereits vorhandenem Wissen verknüpft. In einem bekannten Experiment lernten Probanden am Abend eine Liste von Vokabeln. Die eine Gruppe schlief danach acht Stunden, die andere blieb wach. Am nächsten Morgen konnte die ausgeschlafene Gruppe sich an rund zwanzig bis dreißig Prozent mehr Wörter erinnern. Wer also vor einer Prüfung die Nacht durcharbeitet, schadet sich eher, als dass er sich nützt.\n\nZweitens stärkt Schlaf das Immunsystem. Menschen, die regelmäßig weniger als sechs Stunden schlafen, erkranken deutlich häufiger an Erkältungen. Langfristig steigt bei chronischem Schlafmangel außerdem das Risiko für Übergewicht, Diabetes und Herz-Kreislauf-Erkrankungen.\n\nDrittens beeinflusst Schlaf unsere Psyche. Nach einer schlaflosen Nacht reagieren wir gereizter, sind weniger konzentriert und nehmen Probleme als bedrohlicher wahr. Studien zeigen einen engen Zusammenhang zwischen dauerhaftem Schlafmangel und Depressionen.\n\nWarum schlafen wir trotzdem so wenig? Ein Hauptgrund ist das Smartphone. Viele Menschen nutzen ihr Handy bis unmittelbar vor dem Einschlafen. Das blaue Licht des Bildschirms hemmt die Ausschüttung des Hormons Melatonin, das uns müde macht. Hinzu kommt, dass Nachrichten und soziale Netzwerke unser Gehirn aktiv halten.\n\nWas empfehlen Schlafforscher? Gehen Sie möglichst zur gleichen Zeit ins Bett, auch am Wochenende. Legen Sie das Handy mindestens eine Stunde vor dem Schlafen weg. Halten Sie das Schlafzimmer kühl und dunkel. Und verzichten Sie am Abend auf Kaffee und schwere Mahlzeiten. Schlaf, meine Damen und Herren, ist kein Luxus – er ist eine Investition in Ihre Gesundheit. Vielen Dank.",
+  "tasks": [
+   {
+    "t": "open",
+    "q": "Welchen Anteil unseres Lebens verbringen wir im Schlaf?",
+    "a": "etwa ein Drittel"
+   },
+   {
+    "t": "open",
+    "q": "Was geschieht laut Vortrag im Schlaf mit den Informationen des Tages?",
+    "a": "sie werden verarbeitet und mit vorhandenem Wissen verknüpft"
+   },
+   {
+    "t": "open",
+    "q": "Beschreiben Sie kurz das Experiment und sein Ergebnis.",
+    "a": "Probanden lernten abends Vokabeln; eine Gruppe schlief 8 Stunden, die andere blieb wach; die ausgeschlafene Gruppe erinnerte sich an 20–30 % mehr Wörter"
+   },
+   {
+    "t": "tf",
+    "q": "Wer vor einer Prüfung die Nacht durcharbeitet, lernt effektiver.",
+    "a": false
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie zwei langfristige Risiken von chronischem Schlafmangel.",
+    "a": "Übergewicht, Diabetes, Herz-Kreislauf-Erkrankungen, Depressionen, häufigere Erkältungen"
+   },
+   {
+    "t": "mc",
+    "q": "Warum stört das Smartphone den Schlaf?",
+    "o": [
+     "Es erzeugt Lärm.",
+     "Das blaue Licht hemmt die Ausschüttung von Melatonin.",
+     "Es erhöht die Temperatur im Schlafzimmer."
+    ],
+    "a": 1
+   },
+   {
+    "t": "open",
+    "q": "Nennen Sie drei Empfehlungen der Schlafforscher.",
+    "a": "gleiche Schlafenszeit; Handy 1 Stunde vorher weglegen; Schlafzimmer kühl und dunkel; abends kein Kaffee, keine schweren Mahlzeiten"
+   },
+   {
+    "t": "tf",
+    "q": "Der Referent bezeichnet Schlaf als Luxus.",
+    "a": false
+   }
+  ]
+ }
+]

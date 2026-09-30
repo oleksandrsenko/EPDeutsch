@@ -1,0 +1,523 @@
+{
+ "id": "4.5",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Tourismus",
+ "titleRu": "Туризм",
+ "pages": "177–180",
+ "exercises": "181–183",
+ "solutions": "268",
+ "bookRows": 51,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Отпуск и путешествия",
+   "items": [
+    {
+     "de": "Urlaub haben*",
+     "ru": "быть в отпуске",
+     "ex": "Wenn ich [[Urlaub habe]], schlafe ich lange, lese oder arbeite im Garten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Urlaub machen",
+     "ru": "проводить отпуск (куда-то ехать)",
+     "ex": "Dieses Jahr [[machen]] wir keinen [[Urlaub]], sondern bleiben in den Ferien zu Hause.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "den Urlaub verbringen*",
+     "ru": "проводить отпуск",
+     "ex": "Manche Menschen [[verbringen]] ihren Sommer[[urlaub]] immer am gleichen Ort.",
+     "note": "verbrachte – hat verbracht",
+     "g": "v"
+    },
+    {
+     "de": "verreisen",
+     "ru": "уезжать (в поездку)",
+     "ex": "Jemand muss sich um die Haustiere kümmern, wenn ihre Besitzer [[verreisen]].",
+     "note": "ist verreist",
+     "g": "v"
+    },
+    {
+     "de": "eine Reise unternehmen*",
+     "ru": "совершить поездку",
+     "ex": "Es lohnt sich, eine [[Reise zu unternehmen]], um neue Orte und Menschen kennen zu lernen.",
+     "note": "unternimmt – unternahm – hat unternommen",
+     "g": "v"
+    },
+    {
+     "de": "auf Reisen",
+     "ru": "в поездках, в путешествии",
+     "ex": "Schließen Sie eine Auslandskrankenversicherung ab, damit Sie sich [[auf Reisen]] problemlos medizinisch behandeln lassen können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Klassenfahrt, -fahrten",
+     "ru": "школьная поездка класса",
+     "ex": "Die 11. Klasse des Einstein-Gymnasiums unternimmt im Herbst eine 10-tägige [[Klassenfahrt]] nach London.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Dienstreise, -reisen",
+     "ru": "командировка",
+     "ex": "Oft sieht man während einer [[Dienstreise]] nur den Flughafen, das Hotel und den Konferenzraum.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Виды путешествий",
+   "items": [
+    {
+     "de": "die Pauschalreise, -reisen",
+     "ru": "турпакет",
+     "ex": "Eine [[Pauschalreise]] hat den Vorteil, dass man nicht selbst den Flug oder das Hotel buchen muss, weil alles im Reisepreis enthalten ist.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Cluburlaub, -urlaube",
+     "ru": "отдых в клубном отеле",
+     "ex": "[[Cluburlaub]] ist gut für Familien geeignet, da im Hotel oft auch ein Betreuungsprogramm für Kinder angeboten wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Kreuzfahrt, -fahrten",
+     "ru": "круиз",
+     "ex": "Eine [[Kreuzfahrt]] bietet die Möglichkeit, verschiedene Orte zu bereisen und gleichzeitig den Komfort an Bord zu genießen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Studienreise, -reisen",
+     "ru": "познавательная поездка",
+     "ex": "Wenn Sie viel über die Geschichte und Kultur eines Landes erfahren möchten, könnte eine [[Studienreise]] interessant für Sie sein.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Individualreise, -reisen",
+     "ru": "самостоятельное путешествие",
+     "ex": "Im Gegensatz zu einer Pauschalreise kann man eine [[Individualreise]] ganz nach eigenen Vorstellungen gestalten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Massentourismus",
+     "ru": "массовый туризм",
+     "ex": "Leider besteht die Gefahr, dass die Landschaft durch den [[Massentourismus]] stark verändert oder sogar zerstört wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der sanfte / nachhaltige Tourismus",
+     "ru": "мягкий (устойчивый) туризм",
+     "ex": "Aufgrund des wachsenden Umweltbewusstseins gewinnt der [[sanfte]] / [[nachhaltige Tourismus]] immer mehr Anhänger.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Планирование поездки и жильё",
+   "items": [
+    {
+     "de": "eine Reise buchen",
+     "ru": "забронировать поездку",
+     "ex": "Wenn Sie in den Sommerferien verreisen möchten, sollten Sie die [[Reise]] frühzeitig [[buchen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Buchung einer Reise",
+     "ru": "бронирование поездки",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Reisebüro, -büros",
+     "ru": "турагентство",
+     "ex": "Da Reisen heutzutage leicht im Internet gebucht werden können, verzichten viele Menschen darauf, ein [[Reisebüro]] aufzusuchen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Fluggesellschaft, -gesellschaften = die Fluglinie, -linien",
+     "ru": "авиакомпания",
+     "ex": "Die Zahl der [[Fluggesellschaften]], die günstige Flüge anbieten, ist in den vergangenen Jahren stark gewachsen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "übernachten",
+     "ru": "ночевать",
+     "ex": "Im Hotel zu [[übernachten]] ist sicherlich bequem, aber nicht unbedingt günstig.",
+     "note": "неотделяемая: hat übernachtet",
+     "g": "v"
+    },
+    {
+     "de": "die Übernachtung",
+     "ru": "ночёвка",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Unterkunft, Unterkünfte",
+     "ru": "жильё, размещение",
+     "ex": "Reisende, die nicht im Hotel übernachten möchten, können zwischen verschiedenen anderen [[Unterkünften]] wählen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ferienwohnung, -wohnungen",
+     "ru": "квартира для отдыха",
+     "ex": "Eine [[Ferienwohnung]] bietet mehr Freiraum und Unabhängigkeit als ein Hotelzimmer.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Кемпинг",
+   "items": [
+    {
+     "de": "campen",
+     "ru": "жить в кемпинге",
+     "ex": "Wer in freier Natur übernachten möchte, sollte sich vorher darüber informieren, ob es erlaubt ist, dort zu [[campen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Camping",
+     "ru": "кемпинг (отдых)",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Campingplatz, -plätze",
+     "ru": "кемпинг (площадка)",
+     "ex": "Viele [[Campingplätze]] befinden sich inmitten der Natur, z. B. an einem Fluss oder einem See.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Wohnwagen, -wagen",
+     "ru": "дом на колёсах, трейлер",
+     "ex": "[[Wohnwagen]] sind zwar ziemlich teuer, doch wenn man einen hat, ist man im Urlaub sehr flexibel und muss kein Geld für ein Hotel ausgeben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "zelten",
+     "ru": "жить в палатке",
+     "ex": "Für Kinder und Jugendliche ist es oft noch ein Abenteuer, draußen zu [[zelten]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Zelt, Zelte",
+     "ru": "палатка",
+     "ex": "Ein [[Zelt]] schützt zwar vor Regen, doch bei großer Hitze oder starkem Wind kann es darin recht unangenehm werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Jugendherberge, -herbergen",
+     "ru": "молодёжный хостел",
+     "ex": "In allen größeren Städten gibt es [[Jugendherbergen]], in denen auch größere Gruppen preisgünstig übernachten können.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "На месте отдыха",
+   "items": [
+    {
+     "de": "der Reiseleiter / die Reiseleiterin, Reiseleiter",
+     "ru": "гид, руководитель группы",
+     "ex": "Als [[Reiseleiter]] muss man kontaktfreudig sein und gut mit Menschen umgehen können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Reiseführer, -führer",
+     "ru": "путеводитель",
+     "ex": "Ein guter [[Reiseführer]] enthält viele interessante Informationen, Stadtpläne und oft auch einige wichtige Wörter in der Landessprache.",
+     "note": "также: гид (человек)",
+     "g": "m"
+    },
+    {
+     "de": "das Reiseziel, -ziele",
+     "ru": "цель поездки, пункт назначения",
+     "ex": "Nach einem langen Flug kommt man oft erschöpft am [[Reiseziel]] an und möchte sich erst einmal ausruhen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Gastland, -länder = das Reiseland, -länder",
+     "ru": "принимающая страна",
+     "ex": "Touristen sollten sich vor dem Urlaub über die Kultur des [[Gastlandes]] informieren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Sehenswürdigkeit, Sehenswürdigkeiten",
+     "ru": "достопримечательность",
+     "ex": "Der Eiffelturm zählt zu den berühmtesten [[Sehenswürdigkeiten]] von Paris.",
+     "note": "zählen zu + Dat.",
+     "g": "f"
+    },
+    {
+     "de": "besichtigen",
+     "ru": "осматривать",
+     "ex": "Nicht alle Touristen haben Interesse daran, im Urlaub Museen zu [[besichtigen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Land und Leute kennenlernen",
+     "ru": "познакомиться со страной и людьми",
+     "ex": "Um [[Land und Leute]] wirklich [[kennenzulernen]], sollte man nicht nur mit dem Bus herumfahren und Sehenswürdigkeiten besichtigen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Местные жители и кругозор",
+   "items": [
+    {
+     "de": "einheimisch",
+     "ru": "местный",
+     "ex": "Sie sollten unbedingt einige [[einheimische]] Gerichte probieren, wenn Sie auf Reisen sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der / die Einheimische, Einheimische (!)",
+     "ru": "местный житель",
+     "ex": "Wer den [[Einheimischen]] mit Offenheit und Respekt begegnet, kann die Kultur des Reiselandes hautnah erleben.",
+     "note": "склоняется как прилагательное; begegnen + Dat.",
+     "g": "m"
+    },
+    {
+     "de": "gastfreundlich",
+     "ru": "гостеприимный",
+     "ex": "Oft trifft man [[gastfreundliche]] Menschen, die die Reisenden manchmal sogar zu einem Tee oder Kaffee in ihr Haus einladen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Gastfreundschaft",
+     "ru": "гостеприимство",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "mit jdm. ins Gespräch kommen*",
+     "ru": "завязать разговор с кем-то",
+     "ex": "Wenn man Restaurants besucht, in denen die Einheimischen verkehren, hat man Gelegenheit, mit den Menschen dort [[ins Gespräch zu kommen]].",
+     "note": "kam – ist gekommen",
+     "g": "v"
+    },
+    {
+     "de": "seinen Horizont erweitern",
+     "ru": "расширять кругозор",
+     "ex": "Viele Menschen reisen, um die Welt kennen zu lernen und ihren [[Horizont zu erweitern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Lebensweise, -weisen",
+     "ru": "образ жизни",
+     "ex": "Das Verständnis für eine völlig andere [[Lebensweise]] kann wachsen, wenn man sich die Zeit nimmt, Land und Leute intensiv kennen zu lernen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Обычаи и природа",
+   "items": [
+    {
+     "de": "die Sitte, Sitten",
+     "ru": "обычай, нравы",
+     "ex": "Touristen sollten sich der Tatsache bewusst sein, dass sich die [[Sitten]] und Verhaltensweisen im Ausland von den eigenen unterscheiden.",
+     "note": "sich + Gen. bewusst sein",
+     "g": "f"
+    },
+    {
+     "de": "der Brauch, Bräuche",
+     "ru": "обычай, традиция",
+     "ex": "Auch wenn in mehreren Ländern die gleichen Feste gefeiert werden, können die [[Bräuche]], die mit diesen Festen verbunden sind, sehr unterschiedlich sein.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. pflegen",
+     "ru": "поддерживать, хранить (традиции)",
+     "ex": "Viele Menschen meinen, dass man seine Sitten und Bräuche [[pflegen]] sollte, damit Traditionen nicht verlorengehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. bewahren",
+     "ru": "сохранять",
+     "ex": "Der Tourismus kann dazu beitragen, die Traditionen eines Landes zu [[bewahren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "exotisch",
+     "ru": "экзотический",
+     "ex": "In tropischen Regionen kann man [[exotische]] Tier- und Pflanzenarten in ihrer natürlichen Umgebung sehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "idyllisch",
+     "ru": "идиллический",
+     "ex": "Naturfreunde bringen aus dem Urlaub oft Fotos von [[idyllischen]] Landschaften mit nach Hause.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "unberührt",
+     "ru": "нетронутый",
+     "ex": "Nur auf wenigen Inseln findet man noch [[unberührte]] Strände.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "abgelegen / entlegen",
+     "ru": "отдалённый, уединённый",
+     "ex": "Um sich vom Alltagsstress zu erholen, suchen manche Urlauber Ruhe in [[abgelegenen]] / [[entlegenen]] Dörfern.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: последствия туризма (Infobox)",
+   "items": [
+    {
+     "de": "die Wachstumsbranche",
+     "ru": "растущая отрасль",
+     "ex": "Der Tourismus gilt als [[Wachstumsbranche]] mit jährlichen Umsätzen in Milliardenhöhe.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "profitieren von + D",
+     "ru": "получать выгоду от",
+     "ex": "In wirtschaftlicher Hinsicht können sie vom Tourismus [[profitieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die einheimische Wirtschaft beleben",
+     "ru": "оживлять местную экономику",
+     "ex": "… was die [[einheimische Wirtschaft belebt]] und mehr Arbeitsplätze schafft.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdm. zugutekommen*",
+     "ru": "идти на пользу кому-то",
+     "ex": "Ein weiterer Vorteil ist der Ausbau der Infrastruktur, der auch der Bevölkerung des Landes [[zugutekommt]].",
+     "note": "kam zugute – ist zugutegekommen",
+     "g": "v"
+    },
+    {
+     "de": "vernachlässigt werden",
+     "ru": "оставаться без внимания",
+     "ex": "Andere Branchen entwickeln sich deshalb nicht oder werden [[vernachlässigt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Artenvielfalt",
+     "ru": "биоразнообразие",
+     "ex": "Das bedroht auch die [[Artenvielfalt]] in diesen Gebieten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Schattenseite, -n",
+     "ru": "теневая сторона",
+     "ex": "Angesichts der [[Schattenseiten]] des Tourismus … entstanden alternative Konzepte.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Schonung natürlicher Ressourcen",
+     "ru": "бережное отношение к ресурсам",
+     "ex": "Ein weiterer wichtiger Aspekt ist die [[Schonung natürlicher Ressourcen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. einbeziehen*",
+     "ru": "вовлекать",
+     "ex": "Bei der Entwicklung des nachhaltigen Tourismus werden die Einheimischen stärker [[einbezogen]].",
+     "note": "bezog ein – hat einbezogen",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "Urlaub haben ↔ Urlaub machen",
+   "v": "haben — быть в отпуске (не работать); machen — ехать отдыхать"
+  },
+  {
+   "k": "verreisen",
+   "v": "Perfekt с sein: Sie sind verreist (уехали); не путать с reisen (путешествовать)"
+  },
+  {
+   "k": "übernachten",
+   "v": "Неотделяемая: Wir haben im Hotel übernachtet"
+  },
+  {
+   "k": "der / die Einheimische",
+   "v": "Склоняется как прилагательное: ein Einheimischer, mit Einheimischen"
+  },
+  {
+   "k": "den Einheimischen begegnen",
+   "v": "begegnen + Dat., Perfekt с sein: Ich bin ihm begegnet"
+  },
+  {
+   "k": "der Reiseführer",
+   "v": "1) путеводитель (книга); 2) гид. Руководитель группы — der Reiseleiter"
+  },
+  {
+   "k": "Sitten und Bräuche",
+   "v": "Устойчивая пара: Sitten und Bräuche pflegen / respektieren"
+  },
+  {
+   "k": "zählen zu + D",
+   "v": "Der Eiffelturm zählt zu den berühmtesten Sehenswürdigkeiten"
+  }
+ ]
+}

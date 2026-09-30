@@ -1,0 +1,621 @@
+{
+ "id": "4.9",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Recht und Gesetz",
+ "titleRu": "Право и закон",
+ "pages": "216–220",
+ "exercises": "221–223",
+ "solutions": "270",
+ "bookRows": 64,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Законы и предписания",
+   "items": [
+    {
+     "de": "die Verfassung, Verfassungen",
+     "ru": "конституция",
+     "ex": "In der [[Verfassung]] sind die politischen Grundprinzipien eines Landes festgelegt, z. B. der Aufbau des Staates und die Rechte der Bürgerinnen und Bürger.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Grundgesetz",
+     "ru": "Основной закон (конституция ФРГ)",
+     "ex": "Das [[Grundgesetz]] ist die Verfassung der Bundesrepublik Deutschland, die 1949 verabschiedet wurde.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Gesetz, Gesetze",
+     "ru": "закон",
+     "ex": "Die Regierung plant ein neues [[Gesetz]] zur Einführung des Mindestlohns in allen Branchen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Gesetz beschließen* / verabschieden",
+     "ru": "принять закон",
+     "ex": "Das EU-Parlament hat ein neues [[Gesetz]] zum Datenschutz [[beschlossen]] / [[verabschiedet]].",
+     "note": "beschloss – hat beschlossen",
+     "g": "v"
+    },
+    {
+     "de": "vorgeschrieben sein*",
+     "ru": "быть предписанным",
+     "ex": "Es ist [[vorgeschrieben]], auf einer Baustelle einen Helm zu tragen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Vorschrift, Vorschriften",
+     "ru": "предписание, правило",
+     "ex": "Die Firmenleitung weist alle Mitarbeiter darauf hin, dass sie die Sicherheits[[vorschriften]] am Arbeitsplatz beachten müssen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Vorschriften / die Gesetze befolgen / einhalten*",
+     "ru": "соблюдать предписания / законы",
+     "ex": "Wer die [[Vorschriften]] nicht [[befolgt]] / [[einhält]], bekommt eine Abmahnung von seinem Arbeitgeber.",
+     "note": "hält ein – hielt ein – hat eingehalten",
+     "g": "v"
+    },
+    {
+     "de": "sich an die Vorschriften / die Gesetze halten*",
+     "ru": "соблюдать правила / законы",
+     "ex": "Damit das Zusammenleben in der Gesellschaft funktioniert, müssen alle [[sich an die Gesetze halten]].",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Преступность",
+   "items": [
+    {
+     "de": "gegen ein Gesetz verstoßen*",
+     "ru": "нарушить закон",
+     "ex": "In diesem landwirtschaftlichen Betrieb wurde schon einige Male [[gegen]] das Tierschutz[[gesetz verstoßen]].",
+     "note": "verstößt – verstieß – hat verstoßen",
+     "g": "v"
+    },
+    {
+     "de": "der Gesetzesverstoß, -verstöße",
+     "ru": "нарушение закона",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "legal",
+     "ru": "законный",
+     "ex": "Ein seriöser Geschäftsmann macht nur [[legale]] Geschäfte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "illegal",
+     "ru": "незаконный",
+     "ex": "Der Besitz von Kokain und anderen Drogen ist in Deutschland [[illegal]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "strafbar",
+     "ru": "уголовно наказуемый",
+     "ex": "Es ist [[strafbar]], ohne Führerschein Auto zu fahren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich strafbar machen",
+     "ru": "совершить наказуемое деяние",
+     "ex": "Wer einen Unfall verursacht und dann einfach weiterfährt, [[macht sich strafbar]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Straftat, Straftaten = das Verbrechen, Verbrechen",
+     "ru": "преступление",
+     "ex": "Der Statistik zufolge ist die Zahl der [[Straftaten]] im vergangenen Jahr leicht gesunken.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Straftat begehen* / verüben = ein Verbrechen begehen* / verüben",
+     "ru": "совершить преступление",
+     "ex": "Kriminalpsychologen diskutieren darüber, warum manche Menschen immer wieder [[Straftaten begehen]] / [[verüben]].",
+     "note": "beging – hat begangen",
+     "g": "v"
+    },
+    {
+     "de": "der Straftäter / die Straftäterin, Straftäter",
+     "ru": "преступник",
+     "ex": "Ein Sozialarbeiter hilft jugendlichen [[Straftätern]], nach ihrer Entlassung aus dem Gefängnis eine Arbeit zu finden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Täter / die Täterin, Täter",
+     "ru": "преступник, виновник",
+     "ex": "Bereits kurz nach dem Mord konnte die Polizei den [[Täter]] identifizieren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Opfer, Opfer",
+     "ru": "жертва",
+     "ex": "Die Organisation „Der Weiße Ring“ berät und betreut [[Opfer]] von Straftaten.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Виды преступлений",
+   "items": [
+    {
+     "de": "jdn. betrügen*",
+     "ru": "обманывать, мошенничать",
+     "ex": "Ein Juwelier hat zahlreiche Kunden [[betrogen]], indem er ihnen statt teurer Diamanten billige Fälschungen verkauft hat.",
+     "note": "betrog – hat betrogen",
+     "g": "v"
+    },
+    {
+     "de": "der Betrug · der Betrüger / die Betrügerin",
+     "ru": "мошенничество · мошенник",
+     "ex": "Der [[Betrüger]] hat das Ehepaar mit einem Trick um seine gesamten Ersparnisse gebracht.",
+     "note": "jdn. um etw. bringen",
+     "g": "m"
+    },
+    {
+     "de": "etw. stehlen*",
+     "ru": "красть",
+     "ex": "Dank der Überwachungskameras konnte man leicht feststellen, wer die Waren im Kaufhaus [[gestohlen]] hatte.",
+     "note": "stiehlt – stahl – hat gestohlen",
+     "g": "v"
+    },
+    {
+     "de": "der Diebstahl, Diebstähle · der Dieb / die Diebin",
+     "ru": "кража · вор",
+     "ex": "Taschendiebe sind oft so geschickt, dass ihre Opfer den [[Diebstahl]] erst viel später bemerken.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einbrechen*",
+     "ru": "совершить кражу со взломом",
+     "ex": "Nach Angaben der Polizei wurde in unserem Stadtviertel in den letzten Monaten mehrfach [[eingebrochen]].",
+     "note": "bricht ein – brach ein – hat/ist eingebrochen",
+     "g": "v"
+    },
+    {
+     "de": "der Einbruch · der Einbrecher / die Einbrecherin",
+     "ru": "взлом · взломщик",
+     "ex": "Als die [[Einbrecher]] das Fenster einschlugen, lösten sie den Alarm aus.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdn. entführen",
+     "ru": "похитить",
+     "ex": "Terroristen haben ein Flugzeug [[entführt]] und fordern die Freilassung von fünf Gefangenen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Entführung · der Entführer / die Entführerin",
+     "ru": "похищение · похититель",
+     "ex": "Bei der Befreiung der Geiseln durch die Polizei wurde einer der [[Entführer]] getötet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. ermorden",
+     "ru": "убить",
+     "ex": "Die Frau wird verdächtigt, ihren untreuen Ehemann [[ermordet]] zu haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Mord, Morde",
+     "ru": "убийство",
+     "ex": "Die Polizei sucht nach einem Serientäter, der innerhalb von zwei Jahren elf [[Morde]] begangen hat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Mörder / die Mörderin, Mörder",
+     "ru": "убийца",
+     "ex": "Der [[Mörder]] behauptet, die Pistole nach der Tat in einen Fluss geworfen zu haben.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Расследование",
+   "items": [
+    {
+     "de": "jdn. verklagen",
+     "ru": "подать в суд на кого-то",
+     "ex": "Wenn sie falsch behandelt wurden, können Patienten Ärzte auf Schmerzensgeld [[verklagen]].",
+     "note": "auf + Akk. verklagen",
+     "g": "v"
+    },
+    {
+     "de": "jdn. anzeigen · die Anzeige",
+     "ru": "заявить на кого-то в полицию · заявление",
+     "ex": "Er hat den Mann, der ihn zusammengeschlagen hat, wegen Körperverletzung bei der Polizei [[angezeigt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ermitteln · die Ermittlung",
+     "ru": "расследовать · расследование",
+     "ex": "Nach dem Bankraub in der Sparkassenfiliale [[ermittelt]] die Polizei unter Hochdruck.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. verdächtigen · der Verdacht",
+     "ru": "подозревать · подозрение",
+     "ex": "Die Polizei [[verdächtigt]] die Ehefrau des Opfers, die Tat begangen zu haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der / die Verdächtige, Verdächtige (!)",
+     "ru": "подозреваемый",
+     "ex": "Man hat herausgefunden, dass die [[Verdächtige]] kurz vor dem Mord eine Pistole gekauft hat.",
+     "note": "склоняется как прилагательное",
+     "g": "m"
+    },
+    {
+     "de": "jdn. / etw. überwachen · die Überwachung",
+     "ru": "следить · наблюдение, слежка",
+     "ex": "Mitarbeiter der Kriminalpolizei [[überwachen]] den Verdächtigen rund um die Uhr.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. / etw. beobachten · die Beobachtung",
+     "ru": "наблюдать",
+     "ex": "Ein Fahrgast, der den Überfall [[beobachtet]] hat, hat sofort die Polizei gerufen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. verhaften · die Verhaftung",
+     "ru": "арестовать · арест",
+     "ex": "Gestern Abend wurde eine ältere Dame wegen Diebstahls [[verhaftet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. festnehmen* = verhaften · die Festnahme",
+     "ru": "задержать · задержание",
+     "ex": "Bei dem gestrigen Fußballspiel wurden zehn Hooligans [[festgenommen]].",
+     "note": "nimmt fest – nahm fest – hat festgenommen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Суд",
+   "items": [
+    {
+     "de": "der Anwalt / die Anwältin, Anwälte",
+     "ru": "адвокат",
+     "ex": "Jeder hat das Recht auf einen [[Anwalt]], der ihn juristisch berät.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Gericht, Gerichte",
+     "ru": "суд",
+     "ex": "Das [[Gericht]] hat entschieden, dass die unerlaubt aufgenommenen Fotos von der Internetseite gelöscht werden müssen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Gerichtsverhandlung, -verhandlungen = das Gerichtsverfahren",
+     "ru": "судебное заседание, процесс",
+     "ex": "Viele [[Gerichtsverhandlungen]] sind öffentlich, so dass interessierte Bürger als Zuschauer am Prozess teilnehmen können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Richter / die Richterin, Richter",
+     "ru": "судья",
+     "ex": "Am Ende der Gerichtsverhandlung entscheidet der [[Richter]] über die Strafe.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Staatsanwalt / die Staatsanwältin, -anwälte",
+     "ru": "прокурор",
+     "ex": "Die [[Staatsanwältin]] ist davon überzeugt, dass der junge Mann die Tat begangen hat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdn. anklagen · die Anklage",
+     "ru": "обвинять · обвинение",
+     "ex": "Kurz nach seiner Verhaftung wurde er wegen Entführung [[angeklagt]] und vor Gericht gestellt.",
+     "note": "wegen + Gen.",
+     "g": "v"
+    },
+    {
+     "de": "der / die Angeklagte, Angeklagte (!)",
+     "ru": "обвиняемый, подсудимый",
+     "ex": "Weil er ein Geständnis abgelegt hat, kann der [[Angeklagte]] auf eine milde Strafe hoffen.",
+     "note": "склоняется как прилагательное",
+     "g": "m"
+    },
+    {
+     "de": "jdn. verteidigen · die Verteidigung",
+     "ru": "защищать · защита",
+     "ex": "Es ist die Aufgabe des Anwalts, seinen Mandanten so gut wie möglich zu [[verteidigen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Verteidiger / die Verteidigerin, Verteidiger",
+     "ru": "защитник",
+     "ex": "Der [[Verteidiger]] weist darauf hin, dass der Angeklagte zum Zeitpunkt der Tat unter großem Stress gestanden hat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Zeuge / die Zeugin, Zeugen",
+     "ru": "свидетель",
+     "ex": "Mehrere [[Zeugen]] konnten den Täter präzise beschreiben.",
+     "note": "n-склонение: den Zeugen",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Доказательства и приговор",
+   "items": [
+    {
+     "de": "etw. beweisen* · der Beweis, Beweise",
+     "ru": "доказать · доказательство",
+     "ex": "Der Staatsanwalt muss [[beweisen]], dass der Angeklagte die Tat begangen hat.",
+     "note": "bewies – hat bewiesen",
+     "g": "v"
+    },
+    {
+     "de": "die Waffe, Waffen",
+     "ru": "оружие",
+     "ex": "Auf der [[Waffe]], einem Küchenmesser, hat man die Fingerabdrücke des Angeklagten gefunden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "schuldig sein* · die Schuld",
+     "ru": "быть виновным · вина",
+     "ex": "Sollte der Angeklagte [[schuldig]] sein, muss er mit einer Strafe rechnen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "unschuldig sein* · die Unschuld",
+     "ru": "быть невиновным · невиновность",
+     "ex": "Mithilfe von Zeugenaussagen konnte der Anwalt beweisen, dass der Angeklagte [[unschuldig]] war.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. freisprechen* · der Freispruch",
+     "ru": "оправдать · оправдательный приговор",
+     "ex": "Da die Staatsanwältin seine Schuld nicht beweisen konnte, wurde der Angeklagte [[freigesprochen]].",
+     "note": "sprach frei – hat freigesprochen",
+     "g": "v"
+    },
+    {
+     "de": "jdn. verurteilen zu + D · die Verurteilung",
+     "ru": "приговорить к чему-то",
+     "ex": "Das Gericht hat die Angeklagte [[zu]] einer hohen Geldstrafe [[verurteilt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "urteilen · das Urteil, Urteile",
+     "ru": "выносить решение · приговор",
+     "ex": "Der Richter muss erst alle Beweise genau prüfen, bevor er [[urteilt]].",
+     "note": "Am Ende … wird das Urteil verkündet.",
+     "g": "v"
+    },
+    {
+     "de": "gerecht · die Gerechtigkeit",
+     "ru": "справедливый · справедливость",
+     "ex": "Der Richter soll ein möglichst [[gerechtes]] Urteil fällen.",
+     "note": "ein Urteil fällen",
+     "g": "v"
+    },
+    {
+     "de": "ungerecht · die Ungerechtigkeit",
+     "ru": "несправедливый",
+     "ex": "Wenn der Verurteilte das Urteil als [[ungerecht]] empfindet, kann er in Berufung gehen.",
+     "note": "in Berufung gehen — обжаловать",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Наказания",
+   "items": [
+    {
+     "de": "die Sozialstunden (Plural)",
+     "ru": "общественные работы",
+     "ex": "Zwei Jugendliche wurden dazu verurteilt, jeweils 50 [[Sozialstunden]] in einem Altersheim abzuleisten.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Geldstrafe, -strafen",
+     "ru": "денежный штраф",
+     "ex": "Wegen schwerer Verstöße gegen das Immissionsschutzgesetz wurde das Unternehmen zu einer hohen [[Geldstrafe]] verurteilt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gefängnis, Gefängnisse",
+     "ru": "тюрьма",
+     "ex": "Jeder Besucher, der das [[Gefängnis]] betritt, wird von den Beamten gründlich durchsucht.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Haftstrafe = die Gefängnisstrafe = die Freiheitsstrafe",
+     "ru": "лишение свободы",
+     "ex": "Das Gericht verurteilte den Angeklagten wegen Mordes zu einer lebenslangen [[Haftstrafe]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Häftling, Häftlinge = der / die Gefangene (!)",
+     "ru": "заключённый",
+     "ex": "[[Häftlinge]], die gesundheitlich dazu in der Lage sind, können in der Druckerei des Gefängnisses arbeiten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Bewährung",
+     "ru": "условный срок",
+     "ex": "Sie wurde wegen Betrugs zu einer achtmonatigen Haftstrafe auf [[Bewährung]] verurteilt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Strafe zur Bewährung aussetzen",
+     "ru": "назначить наказание условно",
+     "ex": "Wenn die Haftstrafe [[zur Bewährung ausgesetzt]] wird, muss der Verurteilte nicht ins Gefängnis.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Todesstrafe, -strafen",
+     "ru": "смертная казнь",
+     "ex": "Vor dem Gefängnis hat sich eine Gruppe von Menschen versammelt, die gegen die [[Todesstrafe]] protestieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. hinrichten · die Hinrichtung",
+     "ru": "казнить · казнь",
+     "ex": "Weltweit werden jedes Jahr mehrere Tausend Menschen [[hingerichtet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. abschrecken von + D · die Abschreckung",
+     "ru": "удерживать (устрашением) от",
+     "ex": "Als Argument für die Todesstrafe wird häufig angeführt, dass sie die Menschen [[von]] Straftaten [[abschreckt]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: уголовное право (Infobox)",
+   "items": [
+    {
+     "de": "vor Gericht stellen",
+     "ru": "отдать под суд",
+     "ex": "Wer in Deutschland wegen einer Straftat [[vor Gericht gestellt]] wird, steht keiner Jury gegenüber.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Schöffe, -n",
+     "ru": "народный заседатель",
+     "ex": "Allerdings gibt es ehrenamtliche Richter, so genannte [[Schöffen]].",
+     "note": "n-склонение",
+     "g": "m"
+    },
+    {
+     "de": "lebenslang",
+     "ru": "пожизненный",
+     "ex": "Die schwerste Strafe ist eine [[lebenslange]] Haftstrafe.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "aus dem Gefängnis entlassen werden",
+     "ru": "быть освобождённым из тюрьмы",
+     "ex": "… zu dem man [[aus dem Gefängnis entlassen]] wird.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "strafmündig",
+     "ru": "достигший возраста уголовной ответственности",
+     "ex": "Erst ab 14 Jahren ist man nach deutschem Recht [[strafmündig]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Jugendstrafrecht",
+     "ru": "уголовное право для несовершеннолетних",
+     "ex": "Danach gilt bis zum 18. Lebensjahr das [[Jugendstrafrecht]], das milder ist als das Strafrecht für Erwachsene.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "mild",
+     "ru": "мягкий (о наказании)",
+     "ex": "… das [[milder]] ist als das Strafrecht für Erwachsene.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "verurteilen zu + D",
+   "v": "Er wurde zu einer Geldstrafe / zu drei Jahren Haft verurteilt (zu + Dat.)"
+  },
+  {
+   "k": "wegen + G",
+   "v": "wegen Mordes, wegen Diebstahls, wegen Betrugs angeklagt / verurteilt"
+  },
+  {
+   "k": "eine Straftat begehen / verüben",
+   "v": "beging – hat begangen; einen Anschlag verüben"
+  },
+  {
+   "k": "der / die Angeklagte, Verdächtige, Gefangene",
+   "v": "Склоняются как прилагательные: ein Angeklagter, die Angeklagten"
+  },
+  {
+   "k": "der Zeuge",
+   "v": "n-склонение: den / dem / des Zeugen"
+  },
+  {
+   "k": "verklagen ↔ anzeigen ↔ anklagen",
+   "v": "verklagen — подать гражданский иск; anzeigen — заявить в полицию; anklagen — прокурор обвиняет"
+  },
+  {
+   "k": "stehlen",
+   "v": "stiehlt – stahl – hat gestohlen"
+  },
+  {
+   "k": "gerecht ↔ richtig",
+   "v": "gerecht — справедливый; richtig — правильный"
+  }
+ ]
+}

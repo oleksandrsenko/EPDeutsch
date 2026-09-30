@@ -1,0 +1,128 @@
+@id 3.3
+@chapter 3
+@chapterName Alltagsleben
+@title Geld
+@titleRu Деньги
+@pages 114–118
+@exercises 119–122
+@solutions 264
+@bookRows 76
+
+# s1 Платёжные средства
+die Münze, Münzen | монета | An diesem Automaten kann man nur mit [[Münzen]] bezahlen. |  | f
+die Banknote, Banknoten = der Geldschein, -scheine | банкнота, купюра | Die Polizei hat einen Mann festgenommen, der gefälschte [[Banknoten]] bei sich hatte. |  | f
+die Summe, Summen | сумма | Jährlich werden hohe [[Summen]] für den Bau und die Sanierung von Verkehrswegen ausgegeben. |  | f
+der Betrag, Beträge | сумма (к оплате) | Bitte überweisen Sie den [[Betrag]] von 16,40 € innerhalb von 14 Tagen auf unser Konto. |  | m
+die Währung, Währungen | валюта | Im Jahr 1999 wurde der Euro von 11 EU-Staaten als gemeinsame [[Währung]] im Bankverkehr eingeführt. |  | f
+die Inflation | инфляция | Durch die [[Inflation]] kann eine Währung im Laufe der Zeit stark an Wert verlieren. | an Wert verlieren | f
+
+# s2 Банковский счёт
+Bankgeschäfte abwickeln | проводить банковские операции | Heute kann man die meisten [[Bankgeschäfte]] bequem online [[abwickeln]]. | wickelte ab – hat abgewickelt | v
+das Konto, Konten | счёт | Durch ein Spar[[konto]] können Kinder und Jugendliche lernen, mit Geld umzugehen. | мн. ч. die Konten | n
+ein Konto eröffnen | открыть счёт | Das Ehepaar geht zur Bank, um ein gemeinsames [[Konto]] zu [[eröffnen]], auf das beide Partner Zugriff haben. |  | v
+die Eröffnung eines Kontos | открытие счёта |  |  | f
+Geld auf ein Konto einzahlen | положить деньги на счёт | Wenn Sie ein Konto eröffnen wollen, müssen Sie [[Geld auf]] dieses [[Konto einzahlen]]. | zahlte ein – hat eingezahlt | v
+Geld von einem Konto abheben* | снять деньги со счёта | Informieren Sie vorher Ihre Bank, wenn Sie eine große Geldsumme von Ihrem [[Konto abheben]] möchten. | hob ab – hat abgehoben | v
+das Konto überziehen* | превысить остаток на счёте, уйти в минус | Um die Autoreparatur zu bezahlen, muss ich diesen Monat mein [[Konto überziehen]]. | überzog – hat überzogen (неотделяемая) | v
+Geld anlegen | вкладывать деньги | Wer kein großes Risiko eingehen möchte, [[legt]] sein [[Geld]] in Immobilien [[an]]. | legte an – hat angelegt | v
+die Geldanlage, -anlagen | вложение денег |  |  | f
+der Zins, Zinsen | процент (по вкладу, кредиту) | Da man für das Geld auf einem Sparkonto nur sehr niedrige [[Zinsen]] bekommt, investieren die Menschen ihr Geld lieber in Aktien. |  | m
+
+# s3 Кредиты и акции
+das Darlehen, Darlehen = der Kredit, Kredite | заём, кредит | Größere Anschaffungen, z. B. ein Auto oder ein Haus, lassen sich oft nur mithilfe eines [[Darlehens]] finanzieren. |  | n
+einen Kredit beantragen | подать заявку на кредит | Studierende, die finanzielle Unterstützung benötigen, können einen Studien[[kredit beantragen]]. |  | v
+einen Kredit aufnehmen* | взять кредит | Der Unternehmer [[nimmt]] einen [[Kredit auf]], um seinen Betrieb zu modernisieren. | nimmt auf – nahm auf – hat aufgenommen | v
+einen Kredit abzahlen / zurückzahlen | выплачивать кредит | Da wir den [[Kredit]] für unser Haus [[abzahlen]] müssen, geben wir wenig Geld für Urlaub und Freizeit aus. |  | v
+die Rate, Raten | взнос, платёж (в рассрочку) | Den Kredit können Sie in monatlichen [[Raten]] zurückzahlen. |  | f
+etw. auf Raten kaufen | купить в рассрочку | Wenn Sie jetzt nicht genug Geld für ein neues Auto haben, können Sie es auch [[auf Raten kaufen]] und Monat für Monat abzahlen. |  | v
+die Aktie, Aktien | акция | Wer in [[Aktien]] investiert, kann hohe Gewinne machen, aber auch schnell viel Geld verlieren. |  | f
+die Börse, Börsen | биржа | Politische Ereignisse beeinflussen die Entwicklung der Aktienkurse an der [[Börse]]. | an der Börse | f
+
+# s4 Имущество и доходы
+das Vermögen | состояние, имущество | Durch riskante Aktiengeschäfte hat sie einen großen Teil ihres [[Vermögens]] verloren. |  | n
+etw. erben | унаследовать | Er hat von seinem verstorbenen Onkel ein kleines Haus und 15.000 Euro [[geerbt]]. |  | v
+das Erbe | наследство |  | не путать: der Erbe — наследник | n
+das Einkommen | доход | Während Angestellte ein regelmäßiges [[Einkommen]] haben, können die Einkünfte von Selbstständigen stark schwanken. |  | n
+die Einkünfte (Plural) | доходы | Die Bürger sind verpflichtet, das Finanzamt über ihre [[Einkünfte]] zu informieren. |  | pl
+der Verdienst | заработок | Häufig reicht der [[Verdienst]] einer einzigen Person nicht aus, um davon die ganze Familie zu ernähren. |  | m
+brutto | брутто (до вычетов) | Vom [[Brutto]]gehalt eines Angestellten werden automatisch Steuern und Sozialversicherungsbeiträge abgezogen. |  | v
+netto | нетто (после вычетов) | Je mehr die Krankenversicherungsbeiträge steigen, desto niedriger ist mein [[Netto]]einkommen. |  | v
+der Lebensunterhalt | средства к существованию | Durch ihren Halbtagsjob trägt die Mutter zum [[Lebensunterhalt]] der Familie bei. | zu + Dat. beitragen | m
+sich seinen Lebensunterhalt verdienen | зарабатывать себе на жизнь | Viele Studierende müssen nebenbei jobben, um [[sich]] ihren [[Lebensunterhalt zu verdienen]]. |  | v
+der Umsatz, Umsätze | оборот, выручка | Die Geschäftsleute im Einzelhandel erwarten, dass die [[Umsätze]] im diesjährigen Weihnachtsgeschäft höher sein werden als im letzten Jahr. |  | m
+
+# s5 Налоги и расходы
+die Steuer, Steuern | налог | Die Oppositionspartei verspricht den Bürgern, nach der Wahl die [[Steuern]] zu senken. | die Steuer (налог) ≠ das Steuer (руль) | f
+Steuern erheben* auf + A | взимать налог на что-то | Der Staat [[erhebt]] auf Waren und Dienstleistungen eine Mehrwert[[steuer]] von 7 % bzw. 19 %. | erhob – hat erhoben | v
+die Gebühr, Gebühren | сбор, пошлина, плата | In verschiedenen europäischen Ländern muss man für die Benutzung der Autobahn eine [[Gebühr]] bezahlen. |  | f
+das Pfand | залог (за тару) | Für einen Kasten Getränke müssen Sie [[Pfand]] bezahlen, das Sie zurückbekommen, wenn Sie den leeren Kasten wieder im Geschäft abgeben. |  | n
+der Beitrag, Beiträge | взнос | Die [[Beiträge]] zur Krankenversicherung sind von der Höhe des Einkommens abhängig. |  | m
+der Zuschuss, Zuschüsse | дотация, доплата | Viele Krankenkassen zahlen ihren Mitgliedern einen [[Zuschuss]] zu den monatlichen Kosten, wenn sie sich in einem Fitness-Studio anmelden. | zu + Dat. | m
+die Kosten (Plural) für + A | расходы, затраты на что-то | Mittlerweile ist bekannt geworden, dass die [[Kosten für]] den Neubau des Bahnhofs deutlich höher sein werden als ursprünglich geplant. |  | pl
+die Kosten (Pl.) tragen* für + A | нести расходы | Bund und Länder streiten darüber, wer die [[Kosten für]] die Beseitigung der Hochwasserschäden [[tragen]] muss. | trägt – trug – hat getragen | v
+die Lebenshaltungskosten (Plural) | стоимость жизни | In Großstädten sind die [[Lebenshaltungskosten]] in der Regel höher als auf dem Land. |  | pl
+
+# s6 Пожертвования и обращение с деньгами
+Geld spenden für + A | жертвовать деньги на что-то | Ein Lottogewinner hat die Hälfte seines Gewinns für einen guten Zweck [[gespendet]]. |  | v
+die Spende, Spenden | пожертвование |  |  | f
+jdm. Geld spenden | пожертвовать кому-то деньги | Nach der Heilung ihrer Tochter haben die Eltern der Kinderklinik eine große Geldsumme [[gespendet]]. |  | v
+die karitative Organisation, Organisationen | благотворительная организация | [[Karitative Organisationen]] sind auf Spenden angewiesen, um Menschen in Not helfen zu können. | auf + Akk. angewiesen sein | f
+aus finanziellen Gründen | по финансовым причинам | [[Aus finanziellen Gründen]] haben wir beschlossen, unser zweites Auto zu verkaufen und in Zukunft mehr mit dem Fahrrad zu fahren. |  | v
+der Etat, Etats = das Budget, Budgets | бюджет | Der PR-Abteilung des Unternehmens steht ein [[Etat]] von 500.000 Euro für Werbung zur Verfügung. | jdm. zur Verfügung stehen | m
+über die Runden kommen* | сводить концы с концами | Ohne meinen Zweitjob würde ich finanziell nicht [[über die Runden kommen]]. | kam – ist gekommen | v
+
+# s7 Долги
+jdm. Geld leihen* | одалживать кому-то деньги | Meine Eltern haben mir Geld [[geliehen]], damit ich mir einen neuen Computer kaufen kann. | lieh – hat geliehen | v
+sich Geld leihen* von + D | занимать деньги у кого-то | Es ist oft günstiger, [[sich]] Geld von Verwandten oder Freunden zu [[leihen]], als einen Kredit bei der Bank aufzunehmen. | lieh – hat geliehen | v
+jdm. Geld schulden | быть должным кому-то деньги | Die 3.000 Euro, die ich dir [[schulde]], kann ich dir in spätestens drei Monaten zurückzahlen. |  | v
+die Schuld, Schulden | долг (мн. ч. — долги); вина (ед. ч.) | Aufgrund seiner hohen [[Schulden]] kann er nachts kaum noch ruhig schlafen. |  | f
+verschuldet sein* = Schulden haben | быть в долгах | Immer mehr Menschen sind [[verschuldet]], weil ihre Ausgaben höher sind als ihre Einkünfte. |  | v
+zahlungsunfähig sein* = insolvent sein | быть неплатёжеспособным | Das Unternehmen ist [[zahlungsunfähig]] und muss Insolvenz anmelden. |  | v
+
+# s8 Финансирование учёбы
+das Studium finanzieren | финансировать учёбу | Studierende [[finanzieren]] ihr [[Studium]] oft aus mehreren Quellen. |  | v
+die Finanzierung des Studiums | финансирование учёбы |  |  | f
+jdn. finanziell unterstützen | финансово поддерживать | Meist [[unterstützen]] die Eltern ihre Kinder während des Studiums [[finanziell]], sofern sie die Mittel dazu haben. | неотделяемая: hat unterstützt | v
+das Stipendium, Stipendien | стипендия (грант) | Verschiedene Organisationen vergeben [[Stipendien]] an begabte Studierende. |  | n
+sich um ein Stipendium bewerben* | претендовать на стипендию | Auch Studierende in höheren Semestern können [[sich um ein Stipendium bewerben]]. | bewirbt – bewarb – hat beworben | v
+ein Stipendium erhalten* | получить стипендию | Wer ein [[Stipendium erhält]], muss sich weniger Sorgen um die Finanzierung seines Studiums machen. | erhält – erhielt – hat erhalten | v
+BAföG beantragen | подать заявление на BAföG | Man kann [[BAföG beantragen]], wenn die Eltern das Studium nicht finanzieren können. |  | v
+BAföG erhalten* | получать BAföG | Wer [[BAföG erhält]], sollte das Studium möglichst innerhalb der Regelstudienzeit abschließen. | erhält – erhielt – hat erhalten | v
+BAföG zurückzahlen | возвращать BAföG | Die Studierenden müssen das [[BAföG]] nicht gleich nach dem Studium [[zurückzahlen]]. |  | v
+
+# s9 Плата за учёбу
+die Studiengebühr, -gebühren | плата за обучение | Studierende in ganz Deutschland haben heftig gegen [[Studiengebühren]] protestiert. |  | f
+Studiengebühren einführen | ввести плату за обучение | Im Jahr 2006 wurden in einigen Bundesländern [[Studiengebühren eingeführt]]. |  | v
+die Einführung von Studiengebühren | введение платы за обучение |  |  | f
+Studiengebühren abschaffen | отменить плату за обучение | In Hessen wurden die [[Studiengebühren]] schon nach kurzer Zeit wieder [[abgeschafft]]. |  | v
+die Abschaffung von Studiengebühren | отмена платы за обучение |  |  | f
+der Sozialbeitrag, -beiträge = der Semesterbeitrag, -beiträge | семестровый взнос | Studierende müssen jedes Semester den [[Sozialbeitrag]] an die Universität bezahlen, in dem z. B. die Kosten für das Semesterticket enthalten sind. |  | m
+das Semesterticket, -tickets | студенческий проездной | An vielen Universitäten erhalten Studierende ein [[Semesterticket]], mit dem sie öffentliche Verkehrsmittel benutzen können. |  | n
+# s10 Льготы и подработка
+die Ermäßigung, Ermäßigungen | скидка, льгота | Gibt es eine [[Ermäßigung]] für Studierende oder muss ich den vollen Preis bezahlen? |  | f
+eine Ermäßigung bekommen* | получить скидку | Da sie oft nicht so viel Geld haben, [[bekommen]] Studierende in Museen, Kinos und Schwimmbädern eine [[Ermäßigung]]. | bekam – hat bekommen | v
+
+der Studentenausweis, -ausweise | студенческий билет | Die Universität stellt jedem Studierenden einen [[Studentenausweis]] aus, sobald er den Sozialbeitrag bezahlt hat. |  | m
+den Studentenausweis vorlegen | предъявить студенческий | Um eine Ermäßigung zu bekommen, muss man seinen [[Studentenausweis vorlegen]]. |  | v
+jobben | подрабатывать | Studierende [[jobben]] nicht nur, um ihr Studium zu finanzieren, sondern auch, um sich beispielsweise einen Urlaub leisten zu können. |  | v
+erwerbstätig sein* | работать (иметь оплачиваемую работу) | Manche Studierende sind [[erwerbstätig]], um schon während des Studiums Berufserfahrung zu sammeln. |  | v
+die Erwerbstätigkeit | трудовая деятельность |  |  | f
+
+## b1 Бонус: BAföG (Infobox)
+das Bundesausbildungsförderungsgesetz (BAföG) | закон о поддержке образования (BAföG) | BAföG ist die Abkürzung für „[[Bundesausbildungsförderungsgesetz]]“. |  | n
+eine qualifizierte Ausbildung | квалифицированное образование | Dieses Gesetz soll es allen jungen Leuten ermöglichen, [[eine qualifizierte Ausbildung]] … zu erhalten. |  | f
+die finanzielle Unterstützung | финансовая поддержка | Deshalb bekommen Jugendliche und junge Erwachsene … eine [[finanzielle Unterstützung]] durch den Staat. |  | f
+abhängen* von + D | зависеть от чего-то | … hängt es normalerweise vom Einkommen der Eltern [[ab]], ob jemand BAföG bekommt. | hing ab – hat abgehangen | v
+unabhängig von + D | независимо от | … kann die Zahlung von BAföG auch [[unabhängig von]] den finanziellen Möglichkeiten der Eltern sein. |  | v
+die Rückzahlung | возврат (долга) | Zunächst einmal beginnt die [[Rückzahlung]] erst 5 Jahre nach Ende der Ausbildung. |  | f
+zinsfrei | беспроцентный | Zudem ist das Darlehen [[zinsfrei]]. |  | v
+der Pluspunkt, -e | плюс, преимущество | Ein großer [[Pluspunkt]] ist, dass man höchstens die Hälfte des Geldes zurückzahlen muss. |  | m
+
+! die Steuer ↔ das Steuer | die Steuer — налог; das Steuer — руль
+! die Schuld ↔ die Schulden | Schuld (ед. ч.) — вина; Schulden (мн. ч.) — долги
+! jdm. etw. leihen ↔ sich etw. leihen | leihen — давать в долг; sich (Dat.) leihen — брать в долг: Ich leihe mir Geld von meinem Bruder
+! das Erbe ↔ der Erbe | das Erbe — наследство; der Erbe — наследник (n-склонение)
+! das Konto → die Konten | мн. ч. die Konten; das Stipendium → die Stipendien
+! Geld abheben · einzahlen · überweisen | abheben — снять, einzahlen — внести, überweisen — перевести; überziehen — неотделяемая: hat überzogen
+! die Kosten | Только мн. ч.: Die Kosten sind gestiegen. Kosten tragen für + Akk.
+! hohe Zinsen, ein hoher Betrag | Но не «hohes Konto», «hohe Währung» (Übung I): hoch сочетается с суммами, доходами, ставками

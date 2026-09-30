@@ -1,0 +1,141 @@
+@id 2.3
+@chapter 2
+@chapterName Der Mensch
+@title Gesundheit
+@titleRu Здоровье
+@pages 66–72
+@exercises 72–75
+@solutions 261–262
+@bookRows 74
+
+# s1 Жалобы и симптомы
+klagen über + A | жаловаться на что-то | Die Patientin [[klagt über]] Appetitlosigkeit und starke Bauchschmerzen. | über + Akk. | v
+leiden* unter + D | страдать от чего-то (состояния) | Seit einigen Wochen [[leidet]] der junge Mann [[unter]] Schlaflosigkeit und Mattigkeit. | litt – hat gelitten | v
+unter Schmerzen leiden* | страдать от боли | Bei Migräne [[leiden]] Patienten häufig [[unter]] heftigen Kopf[[schmerzen]] und Übelkeit. | litt – hat gelitten | v
+die Beschwerden (Plural) | жалобы, недомогание | Wenn das Wetter wechselt, klagen viele Menschen über verschiedene [[Beschwerden]], z. B. Kopfschmerzen und Kreislaufprobleme. |  | pl
+das Symptom, Symptome | симптом | Rote Flecken auf der Haut können ein [[Symptom]] für eine allergische Reaktion sein. | ein Symptom für + Akk. | n
+erschöpft | измождённый, обессиленный | Man sollte einen Arzt aufsuchen, wenn man sich schon nach einem kurzen Spaziergang müde und [[erschöpft]] fühlt. |  | v
+die Erschöpfung | истощение, упадок сил |  |  | f
+jdm. ist schwindlig | у кого-то кружится голова | Nach einem heftigen Schlag auf den Kopf wurde [[ihm schwindlig]] und er verlor das Bewusstsein. | Dativ: mir ist schwindlig | v
+der Schwindel / das Schwindelgefühl | головокружение |  |  | m
+jdm. ist übel | кого-то тошнит | Wenn [[Ihnen übel ist]], haben Sie möglicherweise etwas Verdorbenes gegessen. | Dativ: mir ist übel | v
+die Übelkeit | тошнота |  |  | f
+
+# s2 Тошнота и тяжёлые болезни
+sich übergeben* | рвать, стошнить | Starke Übelkeit führt häufig dazu, dass man [[sich übergeben]] muss. | übergibt sich – übergab sich – hat sich übergeben (неотделяемая) | v
+erbrechen* = sich übergeben | рвать | Wenn man [[erbricht]], entleert man dadurch seinen Magen. | erbricht – erbrach – hat erbrochen | v
+das Erbrechen | рвота | Magen-Darm-Erkrankungen sind meist mit [[Erbrechen]] und Durchfall verbunden. |  | n
+der Durchfall, Durchfälle | диарея, понос | Magen-Darm-Erkrankungen sind meist mit Erbrechen und [[Durchfall]] verbunden. |  | m
+leiden* an + D | болеть чем-то (болезнью) | Die Zahl der Menschen, die [[an]] Allergien [[leiden]], nimmt ständig zu. | an + Dat. — хроническая болезнь | v
+erkranken an + D | заболеть чем-то | Besonders im Winter [[erkranken]] viele Menschen [[an]] Grippe. | ist erkrankt | v
+die Erkrankung, Erkrankungen | заболевание | AIDS ist eine [[Erkrankung]], gegen die man noch kein Heilmittel gefunden hat. |  | f
+allergisch sein* gegen + A | иметь аллергию на что-то | Immer mehr Menschen sind [[allergisch gegen]] Nahrungsmittel, z. B. gegen Erdbeeren oder Nüsse. | gegen + Akk. | v
+die Allergie gegen + A, Allergien | аллергия на что-то | Eine [[Allergie gegen]] das Antibiotikum Penizillin kann die Behandlung bestimmter Krankheiten erschweren. |  | f
+der Heuschnupfen | сенная лихорадка, поллиноз | Für Menschen, die an [[Heuschnupfen]] leiden, ist der Frühling eine unangenehme Zeit. |  | m
+
+# s3 Опухоли, инсульт, инфаркт
+der Tumor, Tumoren | опухоль | Wenn Zellen sich unkontrolliert vermehren, können sie [[Tumoren]] bilden. |  | m
+der Krebs | рак | Bei [[Krebs]] kann ein Tumor Metastasen bilden und sich dadurch im ganzen Körper ausbreiten. |  | m
+die Thrombose, Thrombosen | тромбоз | Nach Operationen müssen die Patienten manchmal spezielle Strümpfe tragen, die sie vor [[Thrombosen]] schützen sollen. |  | f
+der Schlaganfall, -anfälle | инсульт | Wenn das Gehirn nicht ausreichend mit Blut versorgt wird, kann das zu einem [[Schlaganfall]] führen. |  | m
+der Herzinfarkt, -infarkte | инфаркт | Ein schwerer [[Herzinfarkt]] muss schnell behandelt werden, um das Leben des Patienten zu retten. |  | m
+einen Schlaganfall erleiden* / einen Herzinfarkt erleiden* | перенести инсульт / инфаркт | Nachdem er einen [[Schlaganfall erlitten]] hatte, wurde er sofort ins Krankenhaus gebracht. | erlitt – hat erlitten | v
+chronisch | хронический | Unter [[chronischen]] Krankheiten leiden Patienten lange Zeit, manchmal sogar ihr ganzes Leben lang. |  | v
+der Diabetes | диабет | Manche Menschen leiden schon als Kinder an [[Diabetes]], bei anderen entwickelt sich die Krankheit erst im fortgeschrittenen Alter. |  | m
+das Asthma | астма | Bei [[Asthma]] treten Anfälle von Atemnot auf, die durch Medikamente gelindert werden können. |  | n
+
+# s4 Инфекции
+sich entzünden | воспаляться | Wenn eine Wunde nicht desinfiziert wird, kann sie [[sich entzünden]]. |  | v
+die Entzündung, Entzündungen | воспаление | Bei akuten [[Entzündungen]] sind die betroffenen Körperteile rot und geschwollen. |  | f
+sich (bei jdm.) (mit einer Krankheit) anstecken | заразиться (от кого-то чем-то) | Wer im Beruf viel mit Menschen zu tun hat, [[steckt sich]] besonders leicht [[bei]] jemandem [[mit]] Grippe [[an]]. | steckte sich an – hat sich angesteckt | v
+jdn. (mit einer Krankheit) anstecken | заразить кого-то | Menschen mit bestimmten Infektionskrankheiten müssen isoliert werden, damit sie niemanden mit ihrer Krankheit [[anstecken]]. |  | v
+ansteckend | заразный | Gründliches Händewaschen kann helfen, sich vor [[ansteckenden]] Krankheiten zu schützen. |  | v
+die Epidemie, Epidemien | эпидемия | Hochansteckende Krankheitserreger können eine [[Epidemie]] verursachen. |  | f
+die Pandemie, Pandemien | пандемия | Bei einigen Grippeviren besteht die Gefahr, dass sie sich in mehreren Ländern ausbreiten und so eine [[Pandemie]] auslösen. |  | f
+der Erreger, Erreger | возбудитель (болезни) | Unser Immunsystem schützt uns vor vielen Krankheits[[erregern]], mit denen wir täglich in Kontakt kommen. |  | m
+das Bakterium, Bakterien | бактерия | Desinfektionsmittel werden verwendet, um [[Bakterien]] abzutöten. |  | n
+das / der Virus, Viren | вирус | Eine AIDS-Erkrankung ist auf eine Infektion mit [[Viren]] zurückzuführen. | в разговорной речи часто der Virus | n
+
+# s5 Инфекционные болезни и травмы
+die Grippe | грипп | Unter den vielen verschiedenen Grippeviren gibt es auch gefährliche Formen wie die Spanische [[Grippe]], an der zwischen 1918 und 1920 zahlreiche Menschen starben. |  | f
+die Tuberkulose | туберкулёз | Nicht alle Menschen, die sich mit der Lungenkrankheit [[Tuberkulose]] infizieren, erkranken auch daran. |  | f
+die Pest | чума | Im Mittelalter sind Millionen von Menschen an der [[Pest]], dem so genannten „Schwarzen Tod“ gestorben. |  | f
+die Kinderkrankheit, -krankheiten | детская болезнь | Während [[Kinderkrankheiten]] wie Windpocken und Mumps bei Kindern oft harmlos verlaufen, können sie für Erwachsene gefährlich sein. |  | f
+sich verletzen · verletzt werden* | пораниться, травмироваться · быть раненым | Er hat [[sich]] bei der Arbeit mit einem Werkzeug an der Hand [[verletzt]]. | Bei dem Erdbeben … wurde niemand verletzt. | v
+die Verletzung | травма, ранение |  |  | f
+die Wunde, Wunden | рана | Wenn eine [[Wunde]] stark blutet, muss die Blutung so schnell wie möglich gestoppt werden. |  | f
+sich etw. brechen* | сломать себе что-то | Bei älteren Menschen ist die Gefahr, [[sich]] einen Knochen zu [[brechen]], in der Regel höher als bei jungen Menschen. | bricht – brach – hat gebrochen · sich (Dat.) | v
+der Bruch, Brüche | перелом |  |  | m
+etw. / jdn. verbinden* | перевязывать | Kurz nach einer Operation muss die Wunde regelmäßig frisch [[verbunden]] werden. | verband – hat verbunden | v
+der Verband, Verbände | повязка | Saubere [[Verbände]] schützen die Wunde vor Infektionen durch Krankheitserreger. |  | m
+die Narbe, Narben | шрам | Nach schweren Verletzungen oder größeren Operationen kann eine [[Narbe]] auf der Haut zurückbleiben. |  | f
+
+# s6 Профилактика
+Krankheiten vorbeugen | предотвращать болезни | Durch eine gesunde Lebensweise kann man vielen [[Krankheiten vorbeugen]]. | + Dat.: einer Krankheit vorbeugen | v
+eine Krankheit erkennen* | распознать болезнь | Ein erfahrener Arzt kann zahlreiche [[Krankheiten]] anhand der Symptome schnell [[erkennen]]. | erkannte – hat erkannt | v
+die Früherkennung | раннее выявление | Bei Krebserkrankungen ist die [[Früherkennung]] wichtig, um zu verhindern, dass sich die Krankheit ausbreitet. |  | f
+die Vorsorgeuntersuchung, -untersuchungen | профилактический осмотр | [[Vorsorgeuntersuchungen]] helfen, Krankheiten in einem frühen Stadium zu erkennen und zu behandeln. |  | f
+impfen | делать прививку | Es wird empfohlen, sich gegen Malaria [[impfen]] zu lassen, bevor man in tropische Regionen reist. | gegen + Akk. | v
+die Impfung, Impfungen | прививка |  |  | f
+# s6b Обследование и диагностика
+sich untersuchen lassen* | пройти обследование | Bei gesundheitlichen Beschwerden sollte man sich möglichst bald von einem Arzt [[untersuchen lassen]]. | ließ – hat sich untersuchen lassen | v
+eine Krankheit diagnostizieren | поставить диагноз | Ärzte führen gezielte Untersuchungen durch, um eine [[Krankheit diagnostizieren]] zu können. |  | v
+die Diagnose, Diagnosen | диагноз | Eine eindeutige [[Diagnose]] ist die Voraussetzung für eine erfolgreiche Behandlung. |  | f
+etw. / jdn. röntgen | делать рентген | Damit der Arzt die Verletzung des Knochens genau sehen kann, muss er den Fuß [[röntgen]]. |  | v
+das Röntgenbild, -bilder | рентгеновский снимок | Wegen der Strahlung sollte bei schwangeren Frauen kein [[Röntgenbild]] gemacht werden. |  | n
+der Ultraschall | ультразвук, УЗИ | Eine Untersuchung mit [[Ultraschall]] hat den Vorteil, dass man das Innere des Körpers untersuchen kann, ohne den Patienten gefährlicher Strahlung auszusetzen. |  | m
+das Ultraschallbild, -bilder | снимок УЗИ | Werdende Eltern zeigen das [[Ultraschallbild]] ihres Babys gerne ihren Verwandten und Freunden. |  | n
+
+# s7 Лечение и лекарства
+etw. / jdn. behandeln | лечить | Oft gibt es verschiedene Möglichkeiten, eine Krankheit zu [[behandeln]]. |  | v
+die Behandlung, Behandlungen | лечение |  |  | f
+etw. / jdn. heilen | вылечить, исцелить | Krankheiten, die früher tödlich waren, können mithilfe der modernen Medizin [[geheilt]] werden. |  | v
+die Heilung, Heilungen | выздоровление, исцеление |  |  | f
+das Arzneimittel, -mittel = das Medikament, Medikamente | лекарство | Die Pharmaindustrie arbeitet an der Entwicklung neuer, gut verträglicher [[Arzneimittel]]. |  | n
+jdm. ein Medikament verschreiben* | выписать кому-то лекарство | Der Arzt [[verschreibt]] der Patientin ein [[Medikament]], das sie dreimal täglich einnehmen soll. | verschrieb – hat verschrieben | v
+jdm. ein Medikament verabreichen | дать (ввести) кому-то лекарство | Das Pflegepersonal [[verabreicht]] den Patienten die notwendigen [[Medikamente]]. |  | v
+die Nebenwirkungen (Plural) | побочные действия | Der Beipackzettel in der Medikamentenschachtel informiert die Patienten über mögliche [[Nebenwirkungen]]. |  | pl
+das Antibiotikum, Antibiotika | антибиотик | [[Antibiotika]] werden zur Bekämpfung von Infektionen eingesetzt. |  | n
+etw. injizieren | вводить (инъекцией) | Beispielsweise kann der Arzt ein Medikament ins Blut oder in die Muskulatur [[injizieren]]. |  | v
+die Injektion, Injektionen | инъекция | Man unterscheidet verschiedene [[Injektionsformen]]. |  | f
+die Spritze, Spritzen | шприц, укол | Wenn [[Spritzen]] mehrfach verwendet werden, müssen sie nach jedem Gebrauch sorgfältig sterilisiert werden. |  | f
+
+# s8 Терапия и операции
+die Infusion, Infusionen | капельница | Schmerzmittel können im Krankenhaus per [[Infusion]] verabreicht werden, sodass das Medikament über einen längeren Zeitraum langsam, aber gleichmäßig ins Blut gelangt. |  | f
+die Chemotherapie, -therapien | химиотерапия | Bei vielen Krebserkrankungen soll eine [[Chemotherapie]] die Krankheit heilen oder zumindest ihre Ausbreitung verhindern. |  | f
+die Bestrahlung, Bestrahlungen | облучение, лучевая терапия | Um den Tumor gezielt zu bekämpfen, werden neben der Chemotherapie [[Bestrahlungen]] angewandt. |  | f
+die Physiotherapie, -therapien | физиотерапия, ЛФК | Regelmäßige [[Physiotherapie]] kann ein gutes Mittel gegen Rückenschmerzen sein. |  | f
+etw. / jdn. betäuben | обезболить, сделать анестезию | Eine Behandlung beim Zahnarzt ist weniger schmerzhaft, wenn man sich vorher [[betäuben]] lässt. |  | v
+die Betäubung, Betäubungen | анестезия, обезболивание |  |  | f
+die Narkose, Narkosen = die Betäubung | наркоз | Bei kleineren Operationen werden meist nur bestimmte Teile des Körpers betäubt, bei größeren Eingriffen ist oft eine Voll[[narkose]] erforderlich. |  | f
+# s9 Трансплантация и альтернативная медицина
+etw. transplantieren | пересаживать | In den Sechzigerjahren des 20. Jahrhunderts hat der südafrikanische Chirurg Christiaan Barnard zum ersten Mal erfolgreich ein Herz [[transplantiert]]. |  | v
+die Transplantation, Transplantationen | трансплантация |  |  | f
+
+alternative Therapien | альтернативные методы лечения | Inzwischen gibt es zahlreiche Ärzte, die neben der so genannten „Schulmedizin“ auch [[alternative Therapien]] anbieten. |  | pl
+die Naturheilkunde | натуропатия, народная медицина | Bereits in der Antike und im Mittelalter hat man Krankheiten mithilfe der [[Naturheilkunde]] behandelt. |  | f
+die Akupunktur | иглоукалывание | Bei der [[Akupunktur]] werden an bestimmten Körperstellen Nadeln gesetzt, um Energieblockaden zu lösen. |  | f
+homöopathisch | гомеопатический | Befürworter [[homöopathischer]] Therapien weisen darauf hin, dass diese weniger Nebenwirkungen haben als eine Behandlung mit herkömmlichen Medikamenten. |  | v
+die Homöopathie | гомеопатия |  |  | f
+der Heilpraktiker / die Heilpraktikerin, Heilpraktiker | целитель (лицензированный немедицинский) | [[Heilpraktiker]] sind dafür ausgebildet, Patienten mit alternativen Therapien, z. B. naturheilkundlichen Verfahren, zu behandeln. |  | m
+
+## b1 Бонус: болезни цивилизации (Infobox)
+die Zivilisationskrankheit, -en | болезнь цивилизации | Die Folge sind so genannte [[Zivilisationskrankheiten]], also Krankheiten, die aus unserer bequemen Lebensweise resultieren. |  | f
+der Lebensstandard | уровень жизни | Der [[Lebensstandard]] in den Industrieländern hat sich in den vergangenen hundert Jahren deutlich erhöht. |  | m
+sich positiv auf etw. auswirken | положительно влиять на что-то | Obwohl sich diese Entwicklung in vielerlei Hinsicht [[positiv auf]] unsere Gesundheit [[auswirkt]], hat sie auch Nachteile. | auf + Akk. | v
+sich körperlich anstrengen | прилагать физические усилия | Hinzu kommt, dass wir uns immer weniger [[körperlich anstrengen]] müssen, um bestimmte Arbeiten zu verrichten. |  | v
+resultieren aus + D | вытекать из чего-то, быть следствием | Krankheiten, die aus unserer bequemen Lebensweise [[resultieren]]. |  | v
+der Bewegungsmangel | недостаток движения | Diabetes Typ 2 dagegen entwickelt sich im Laufe des Lebens, häufig aufgrund einer ungesunden Ernährung und [[Bewegungsmangel]]. |  | m
+die Herz-Kreislauf-Erkrankung, -en | сердечно-сосудистое заболевание | Das sind vor allem Diabetes und [[Herz-Kreislauf-Erkrankungen]]. |  | f
+der Blutdruck | кровяное давление | Zudem erhöht sich der [[Blutdruck]] und das Herz muss mehr leisten. |  | m
+das Risiko steigt | риск растёт | Dadurch [[steigt das Risiko]], einen Herzinfarkt zu erleiden. |  | v
+
+! leiden an + D ↔ leiden unter + D | an — болезнью (an Diabetes, an Asthma); unter — состоянием, симптомом (unter Schlaflosigkeit, unter Schmerzen)
+! mir ist übel / schwindlig | Безличная конструкция с Dativ: Ihm war schwindlig. Не «ich bin übel»!
+! allergisch gegen + A ↔ allergisch reagieren auf + A | Er ist allergisch gegen Nüsse. Er reagiert allergisch auf Nüsse
+! sich anstecken bei jdm. mit etw. | Ich habe mich bei meinem Kollegen mit Grippe angesteckt
+! sich übergeben — неотделяемая | er übergibt sich, hat sich übergeben (не «gibt sich über»)
+! vorbeugen + D | einer Krankheit vorbeugen; Krankheiten vorbeugen (Dat. Pl.)
+! sich etw. brechen | sich (Dat.) den Arm brechen: Ich habe mir den Arm gebrochen
+! das Virus | В научном языке das Virus, в разговорном часто der Virus; мн. ч. die Viren
+! erkranken an ↔ krank sein | erkranken — заболеть (ist erkrankt); an + Dat.

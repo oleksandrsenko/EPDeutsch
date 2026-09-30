@@ -1,0 +1,176 @@
+@id 5.1
+@chapter 5
+@chapterName Natur und Umwelt
+@title Die Erde
+@titleRu Земля
+@pages 230–238
+@exercises 238–243
+@solutions 270–271
+@bookRows 121
+
+# s1 Строение Земли
+der Erdkern | ядро Земли | Im [[Erdkern]] herrschen Temperaturen von mehreren Tausend Grad Celsius. |  | m
+die Erdkruste | земная кора | Die [[Erdkruste]] ist die äußerste Schicht der Erde, die aus verschiedenen Arten von Gestein besteht. |  | f
+die Erdoberfläche | поверхность Земли | Über zwei Drittel der gesamten [[Erdoberfläche]] sind von Wasser bedeckt. |  | f
+die Erdatmosphäre | атмосфера Земли | Die [[Erdatmosphäre]], die die Erde umgibt, besteht aus verschiedenen Schichten. |  | f
+die Ozonschicht | озоновый слой | Durch die [[Ozonschicht]] wird die Erde vor zu starker ultravioletter Strahlung geschützt. |  | f
+das Ozonloch, -löcher | озоновая дыра | In den Achtzigerjahren des 20. Jahrhunderts entdeckte man erstmals das [[Ozonloch]] über der Antarktis. |  | n
+der Äquator | экватор | Länder, die am [[Äquator]] liegen, zeichnen sich durch überwiegend tropisches, feuchtheißes Klima aus. | sich durch + Akk. auszeichnen | m
+die Hemisphäre, -sphären | полушарие | Der Äquator trennt die Nordhalbkugel von der südlichen [[Hemisphäre]]. |  | f
+die Kontinentalplatte, -platten | континентальная плита | Alfred Wegener vertrat die Theorie, dass sich die [[Kontinentalplatten]] ständig in Bewegung befinden. |  | f
+der Pol, Pole | полюс | An den [[Polen]] ist es so kalt, dass nur wenige Tier- und Pflanzenarten dort überleben können. |  | m
+
+# s2 География: полюса, океаны, ландшафты
+die Arktis | Арктика | Aufgrund des Klimawandels sind die Gewässer der [[Arktis]] heutzutage leichter mit Schiffen befahrbar. |  | f
+die Antarktis | Антарктида | 1991 vereinbarten 35 Staaten, die [[Antarktis]] als Naturreservat unter besonderen Schutz zu stellen. |  | f
+der Gletscher, Gletscher | ледник | Aufgrund der Klimaveränderung werden die [[Gletscher]] an den Polen und im Hochgebirge immer kleiner. |  | m
+der Ozean, Ozeane | океан | Die Tiefen der [[Ozeane]] sind nur wenig erforscht, da dort ein sehr hoher Druck herrscht. |  | m
+die Gezeiten (Plural) | приливы и отливы | Die [[Gezeiten]] entstehen durch den Einfluss, den der Mond auf die Erde ausübt. | Einfluss ausüben auf + Akk. | pl
+die Ebbe | отлив | Im Wattenmeer kann man bei [[Ebbe]] über große Flächen laufen, die sonst von Wasser bedeckt sind. |  | f
+die Flut | прилив | Spaziergänger sollten rechtzeitig an den Strand zurückkehren, damit sie nicht von der [[Flut]] überrascht und vom Land abgeschnitten werden. |  | f
+die Küste, Küsten | побережье | Früher war der Fischfang für die Menschen, die an der [[Küste]] lebten, die wichtigste Einnahmequelle. |  | f
+das Gebirge, Gebirge | горы, горный массив | Viele [[Gebirge]] sind durch die Verschiebung von Kontinentalplatten entstanden. |  | n
+die Wüste, Wüsten | пустыня | Nur wenige Völker haben sich an die lebensfeindlichen Bedingungen in der [[Wüste]] angepasst. | sich an + Akk. anpassen | f
+
+# s3 Окружающая среда: защита
+die Umwelt | окружающая среда | Hormone, die in der Massentierhaltung eingesetzt werden, gelangen in die [[Umwelt]]. |  | f
+die Umwelt schützen · der Umweltschutz | защищать окружающую среду · охрана природы | Mittlerweile ist den meisten Menschen bewusst, dass es in unserem eigenen Interesse liegt, die [[Umwelt zu schützen]]. |  | v
+umweltfreundlich | экологичный | Es wird empfohlen, beim Kauf von Lebensmitteln auf [[umweltfreundliche]] Verpackungen aus Papier oder Glas zu achten. |  | v
+die Umwelt schonen | беречь окружающую среду | Ein wichtiger Aspekt moderner Stadtplanung ist es, die [[Umwelt zu schonen]]. |  | v
+umweltschonend | щадящий для природы | [[Umweltschonende]] Wasch- und Putzmittel enthalten natürliche Substanzen, die biologisch abbaubar sind. |  | v
+filtern · der Filter | фильтровать · фильтр | Aus Angst vor schädlichen Stoffen [[filtern]] manche Menschen das Leitungswasser, bevor sie es trinken. | Filter dienen … dazu, Abgase zu reinigen | v
+der Abfall, Abfälle = der Müll | отходы, мусор | Das Trinkwasser kann durch industrielle [[Abfälle]] kontaminiert werden. |  | m
+Abfall / Müll entsorgen · die Entsorgung | утилизировать отходы · утилизация | Es gibt strenge Vorschriften dafür, wie [[Abfall entsorgt]] werden muss, damit keine Umweltschäden entstehen. |  | v
+
+# s4 Окружающая среда: вред
+die Umwelt zerstören · die Umweltzerstörung | разрушать окружающую среду | Die [[Umwelt]] wird beispielsweise durch den Abbau verschiedener Rohstoffe [[zerstört]]. |  | v
+die Umwelt belasten · die Umweltbelastung | загрязнять окружающую среду · нагрузка на природу | Der Einsatz von Düngemitteln und Pestiziden in der Landwirtschaft [[belastet]] die [[Umwelt]]. |  | v
+der Umwelt schaden | вредить окружающей среде | Ein konsumorientierter Lebensstil führt zum Verbrauch vieler Ressourcen und [[schadet der Umwelt]]. | + Dat. | v
+umweltschädlich | вредный для природы | Zahlreiche Supermärkte bieten Papiertüten und Stofftaschen als Alternative zu [[umweltschädlichen]] Plastiktüten an. |  | v
+etw. verschmutzen · die Verschmutzung | загрязнять · загрязнение | Beim Unfall eines Öltankers können große Teile des Meeres und der Strände in der Umgebung [[verschmutzt]] werden. |  | v
+die Umweltverschmutzung | загрязнение окружающей среды | Dank moderner Technik lässt sich die [[Umweltverschmutzung]] durch Industrie und Verkehr reduzieren. |  | f
+verseuchen · die Verseuchung | заражать · заражение | Chemisch oder bakteriell [[verseuchtes]] Trinkwasser kann zu schweren Magen-Darm-Erkrankungen und sogar zum Tode führen. |  | v
+kontaminieren · die Kontamination | загрязнять, заражать | Bei einem Unfall in einer Aluminiumfabrik können Böden und Gewässer in der Umgebung mit Schadstoffen [[kontaminiert]] werden. |  | v
+vergiften · die Vergiftung | отравлять · отравление | Kritikern zufolge kann durch Fracking, eine spezielle Form der Erdgasförderung, das Grundwasser [[vergiftet]] werden. |  | v
+das Gift, Gifte | яд | Durch den Verzehr von Fisch können [[Gifte]], z. B. Quecksilber, in den menschlichen Organismus gelangen. |  | n
+giftig | ядовитый | Bei der Herstellung von Textilien werden oftmals [[giftige]] Substanzen verwendet. |  | v
+der saure Regen | кислотный дождь | [[Saurer Regen]] gilt als eine der Hauptursachen für das Waldsterben. |  | m
+
+# s5 Климатические зоны и погода
+die Klimazone, -zonen | климатическая зона | Die klimatischen Bedingungen in den verschiedenen [[Klimazonen]] der Welt unterscheiden sich stark voneinander. |  | f
+tropisch · die Tropen (Pl.) | тропический · тропики | [[Tropische]] Temperaturen können eine große Belastung für Herz und Kreislauf sein. | In den Tropen findet man … | v
+gemäßigt | умеренный | In Deutschland herrscht [[gemäßigtes]] Klima mit warmen Sommern und kalten Wintern, aber ohne extrem hohe oder extrem niedrige Temperaturen. |  | v
+polar | полярный | Die Temperaturen liegen in den [[polaren]] Regionen der Welt meist unter null Grad Celsius. |  | v
+feucht · die Feuchtigkeit | влажный · влажность | Sportliche Aktivitäten sind bei [[feuchtem]], heißem Klima oft besonders anstrengend. |  | v
+trocken · die Trockenheit | сухой · засушливость | Im Vergleich zu feuchtem Klima empfinden viele Menschen Kälte bei [[trockenem]] Klima als weniger unangenehm. |  | v
+der Niederschlag, -schläge | осадки | Die Meteorologen haben für die nächsten Tage heftige [[Niederschläge]] in Form von Regen oder Schnee vorhergesagt. |  | m
+hageln / es hagelt · der Hagel | идёт град · град | Während des Gewitters [[hagelte]] es bis zu 1 cm große Eiskörner. |  | v
+der Frost | мороз | Bei starkem [[Frost]] besteht die Gefahr, dass Wasser- und Heizungsrohre einfrieren und platzen. |  | m
+die Hitze | жара | Starke [[Hitze]] kann eine ernste Gefahr für Menschen darstellen, die unter Herz-Kreislauf-Erkrankungen leiden. |  | f
+
+# s6 Изменение климата
+sich abkühlen · die Abkühlung | охлаждаться · похолодание | Während der Eiszeiten hat [[sich]] das Klima auf der Erde erheblich [[abgekühlt]]. |  | v
+sich erwärmen · die Erwärmung | нагреваться · потепление | Es ist allgemein bekannt, dass [[sich]] das Klima in den vergangenen Jahrzehnten deutlich [[erwärmt]] hat. |  | v
+die Erderwärmung = die globale Erwärmung | глобальное потепление | Wissenschaftler warnen schon seit langem vor den Folgen der [[Erderwärmung]]. |  | f
+der Klimawandel | изменение климата | Politiker diskutieren darüber, wie man den [[Klimawandel]] aufhalten kann. |  | m
+der Treibhauseffekt | парниковый эффект | Der [[Treibhauseffekt]] wirkt sich in verschiedenen Regionen der Welt auf unterschiedliche Weise aus. |  | m
+das Treibhausgas, -gase | парниковый газ | Das [[Treibhausgas]] Methan (CH4) ist noch schädlicher für das Klima als das viel diskutierte Kohlendioxid. |  | n
+das Kohlendioxid (CO2) | углекислый газ | Durch die Verbrennung von Öl und Kohle werden große Mengen an [[Kohlendioxid]] freigesetzt. |  | n
+die CO2-Konzentration | концентрация CO2 | Eine der Hauptursachen des Klimawandels ist die steigende [[CO2-Konzentration]] in der Erdatmosphäre. |  | f
+etw. ausstoßen* · der Ausstoß | выбрасывать · выброс | Im Kyoto-Protokoll haben sich die Industrieländer dazu verpflichtet, weniger Treibhausgase [[auszustoßen]] als im Jahr 1990. | stößt aus – stieß aus – hat ausgestoßen | v
+
+# s7 Климат и леса
+klimaschädlich | вредный для климата | Der Ausstoß [[klimaschädlicher]] Gase soll drastisch reduziert werden. |  | v
+klimafreundlich | безвредный для климата | Ca. 20 % des in Deutschland verbrauchten Stroms stammen aus [[klimafreundlichen]] erneuerbaren Energiequellen. |  | v
+klimaschonend | щадящий климат | Zum [[klimaschonenden]] Konsum gehört der Kauf regionaler Lebensmittel, die nicht über weite Strecken transportiert werden müssen. |  | v
+der Sauerstoff (O2) | кислород | Ohne [[Sauerstoff]] können Menschen und viele Tierarten nicht überleben. |  | m
+etw. umwandeln in + A · die Umwandlung | превращать во что-то | Bäume sind wichtig für das globale Klima, weil sie Kohlendioxid in Sauerstoff [[umwandeln]]. |  | v
+der Regenwald, -wälder | тропический лес | Man bezeichnet die [[Regenwälder]] auch als „grüne Lunge“ der Erde. |  | m
+Wald abholzen · die Abholzung | вырубать лес · вырубка | Wenn viel [[Wald abgeholzt]] wird, hat das ernsthafte Konsequenzen für das Weltklima. |  | v
+roden · die Rodung | корчевать, расчищать · расчистка | Waldflächen werden [[gerodet]], um den Boden landwirtschaftlich nutzen zu können. |  | v
+Bäume fällen · das Fällen von Bäumen | рубить деревья | [[Bäume]], die bei einem Sturm schwer beschädigt wurden, müssen [[gefällt]] werden. |  | v
+Bäume pflanzen · das Pflanzen von Bäumen | сажать деревья | In nachhaltigen Forstprojekten wird für jeden Baum, der gefällt wird, ein neuer [[Baum gepflanzt]]. |  | v
+schmelzen* | таять | Durch den Anstieg der Temperaturen [[schmelzen]] die Gletscher in den Gebirgen und an den Polen. | schmilzt – schmolz – ist geschmolzen | v
+der Meeresspiegel | уровень моря | Es wird erwartet, dass der Klimawandel zu einem erheblichen Anstieg des [[Meeresspiegels]] führt. |  | m
+
+# s8 Стихийные бедствия: вода и погода
+sich ereignen · das Ereignis, Ereignisse | происходить · событие | Wenn [[sich]] eine Naturkatastrophe [[ereignet]], wird in den Nachrichten darüber berichtet. |  | v
+das Unwetter, Unwetter | непогода, буря | Bei dem [[Unwetter]] wurden mehrere Menschen von herabfallenden Ästen verletzt. |  | n
+das Gewitter, Gewitter | гроза | Wenn man im Freien von einem [[Gewitter]] überrascht wird, sollte man sich von Bäumen und Gewässern fernhalten. |  | n
+etw. überschwemmen · die Überschwemmung | затоплять · наводнение | Früher [[überschwemmte]] der Nil jedes Jahr das Land entlang des Flusses. | неотделяемая | v
+etw. überfluten = überschwemmen · die Überflutung | заливать, затоплять | Nach tagelangen heftigen Regenfällen waren zahlreiche Straßen [[überflutet]]. |  | v
+die Flut, Fluten | наводнение, паводок | Nach einer schweren [[Flut]] stehen weite Gebiete entlang der Nordseeküste unter Wasser. | unter Wasser stehen | f
+die Dürre, Dürren | засуха | Wegen der anhaltenden [[Dürre]] klagen die Bauern über eine schlechte Ernte. |  | f
+
+# s9 Стихийные бедствия: земля и огонь
+die Erde bebt · das Erdbeben, -beben | земля трясётся · землетрясение | Dort, wo zwei Kontinentalplatten aufeinandertreffen, [[bebt]] besonders häufig die [[Erde]]. | Nach dem Erdbeben mussten viele Menschen im Freien übernachten. | v
+der Tsunami, Tsunamis | цунами | Ein Seebeben kann einen [[Tsunami]] auslösen, der die Küste überflutet. |  | m
+der Vulkan, Vulkane | вулкан | Zahlreiche aktive [[Vulkane]] auf der ganzen Welt stellen eine ständige Gefahr dar. |  | m
+ausbrechen* · der Ausbruch, Ausbrüche | извергаться · извержение | Wissenschaftler sammeln ständig Daten, um zu berechnen, wann ein Vulkan das nächste Mal [[ausbricht]]. | bricht aus – brach aus – ist ausgebrochen | v
+die Asche | пепел | Vulkane stoßen bei einem Ausbruch oft große Mengen an [[Asche]] aus. |  | f
+die Lawine, Lawinen | лавина | Speziell ausgebildete Hunde können dabei helfen, Menschen im Schnee zu finden, die von einer [[Lawine]] verschüttet wurden. |  | f
+
+# s10 Прогнозы и меры
+etw. voraussagen = etw. vorhersagen · die Voraussage | предсказывать · прогноз | Dank moderner Messinstrumente lassen sich Vulkanausbrüche heute oft [[vorhersagen]]. |  | v
+etw. prognostizieren · die Prognose, Prognosen | прогнозировать · прогноз | Aufgrund der globalen Erwärmung [[prognostizieren]] Klimaforscher eine Zunahme extremer Wetterereignisse. |  | v
+warnen vor + D · die Warnung | предупреждать о · предупреждение | Meteorologen [[warnen vor]] schweren Überschwemmungen infolge eines Hurrikans. | vor + Dat. | v
+die Maßnahme, Maßnahmen | мера | Der Aufbau eines Frühwarnsystems ist eine wichtige [[Maßnahme]], um die Bevölkerung vor Tsunamis zu schützen. |  | f
+Maßnahmen ergreifen* | принимать меры | Es müssen sofort [[Maßnahmen ergriffen]] werden, um eine Ausbreitung der Cholera zu verhindern. | ergriff – hat ergriffen | v
+jdn. evakuieren · die Evakuierung | эвакуировать · эвакуация | Boote und Hubschrauber werden eingesetzt, um die Menschen aus den überschwemmten Gebieten zu [[evakuieren]]. |  | v
+
+# s11 Нехватка воды
+es mangelt jdm. an + D | кому-то не хватает чего-то | Millionen Menschen weltweit [[mangelt es an]] sauberem Wasser. |  | v
+der Wassermangel | нехватка воды | Prognosen zufolge wird sich der [[Wassermangel]] in den kommenden Jahren noch verschärfen. |  | m
+knapp sein* | быть в дефиците | Besonders in trockenen Regionen der Welt ist Trinkwasser oft [[knapp]]. |  | v
+die Wasserknappheit | нехватка воды | Wegen der [[Wasserknappheit]] wird das Wasser täglich für einige Stunden abgestellt. |  | f
+der Wasserbedarf | потребность в воде | Aufgrund des stetigen Bevölkerungswachstums steigt der weltweite [[Wasserbedarf]]. |  | m
+Wasser verbrauchen · der Wasserverbrauch | расходовать воду · расход воды | In Deutschland [[verbraucht]] man pro Person täglich ca. 120–130 Liter [[Wasser]]. |  | v
+Wasser verschwenden · die Wasserverschwendung | расточать воду | Angesichts des Wassermangels in vielen Teilen der Welt sollte man kein [[Wasser verschwenden]]. |  | v
+Wasser sparen · das Sparen von Wasser | экономить воду | Durch den Einbau moderner Duschköpfe und Toilettenspülungen kann man [[Wasser sparen]]. |  | v
+kostbar | ценный, драгоценный | Wasser ist ein [[kostbares]] Gut, mit dem man sparsam umgehen muss. |  | v
+
+# s12 Водоёмы и грунтовые воды
+das Gewässer, Gewässer | водоём | In den letzten Jahren hat sich die Wasserqualität in heimischen [[Gewässern]] wieder verbessert. |  | n
+verdunsten · die Verdunstung | испаряться · испарение | Bei hohen Temperaturen [[verdunstet]] Wasser und steigt in die Atmosphäre auf, wo es Wolken bildet. | ist verdunstet | v
+das Grundwasser | грунтовые воды | An einigen Orten befindet sich das [[Grundwasser]] dicht unter der Erde, während man in anderen Regionen viele Meter tief graben muss. |  | n
+der Grundwasserspiegel sinkt* / fällt* | уровень грунтовых вод падает | Durch die künstliche Bewässerung von Feldern [[sinkt]] / [[fällt]] der [[Grundwasserspiegel]]. | sank – ist gesunken | v
+der Grundwasserspiegel steigt* | уровень грунтовых вод растёт | Aufgrund von heftigen Regenfällen [[steigt]] der [[Grundwasserspiegel]]. | stieg – ist gestiegen | v
+der Wasservorrat, -vorräte | запас воды | Das Eis der Gletscher und Polkappen macht einen erheblichen Teil der natürlichen [[Wasservorräte]] aus. |  | m
+einen Vorrat anlegen | создавать запас | Schon vor Tausenden von Jahren bauten die Menschen Zisternen, um einen Wasser[[vorrat]] für Trockenzeiten [[anzulegen]]. |  | v
+die Pumpe, Pumpen | насос | Man verwendet eine [[Pumpe]], um das Grundwasser an die Oberfläche zu bringen. |  | f
+die Quelle, Quellen | источник, родник | In Wäldern und Gebirgen findet man manchmal [[Quellen]], deren Wasser eine sehr gute Qualität hat. |  | f
+der Brunnen, Brunnen | колодец | Um die Bevölkerung mit Trinkwasser zu versorgen, muss ein neuer [[Brunnen]] gebohrt werden. |  | m
+versiegen | иссякать | Weil der Grundwasserspiegel stark gesunken ist, ist der Brunnen [[versiegt]]. | ist versiegt | v
+erschöpft sein* · die Erschöpfung | быть исчерпанным · истощение | Wenn zu viel Wasser an die Oberfläche gepumpt wird, sind die Grundwasservorräte bald [[erschöpft]]. |  | v
+
+# s13 Водоснабжение и очистка
+der Staudamm, -dämme | плотина | [[Staudämme]] können sowohl zur Regulierung der Wassermenge als auch zur Stromerzeugung genutzt werden. |  | m
+die Wasserleitung, -leitungen | водопровод | Durch alte [[Wasserleitungen]] aus Blei kann das Trinkwasser kontaminiert werden. |  | f
+das Leitungswasser | водопроводная вода | In bestimmten Regionen enthält [[Leitungswasser]] mehr Kalk als in anderen. |  | n
+jdn. mit Wasser versorgen · die Wasserversorgung | снабжать водой · водоснабжение | Wenn bei einer Naturkatastrophe Wasserleitungen zerstört werden, ist es oft schwierig, die Bevölkerung mit sauberem [[Wasser]] zu [[versorgen]]. |  | v
+das Trinkwasser | питьевая вода | Besonders in einigen trockenen Gebieten der Welt steht nicht genug [[Trinkwasser]] zur Verfügung. |  | n
+das Süßwasser | пресная вода | Experten befürchten, dass der Mangel an [[Süßwasser]] zu bewaffneten Konflikten führen wird. |  | n
+das Salzwasser | солёная вода | Einige Pflanzenarten, z. B. Mangroven, können auch im [[Salzwasser]] überleben. |  | n
+Meerwasser entsalzen · die Entsalzung | опреснять морскую воду · опреснение | Da auf der Insel nur sehr wenig Süßwasser zur Verfügung steht, werden Anlagen gebaut, um das [[Meerwasser]] zu [[entsalzen]]. |  | v
+das Abwasser | сточные воды | [[Abwasser]] aus der Industrie darf nur unter bestimmten Bedingungen in Flüsse geleitet werden. |  | n
+Wasser aufbereiten / klären | очищать воду | Verschmutztes Wasser muss [[aufbereitet]] / [[geklärt]] werden, bevor man es trinken kann. |  | v
+die Kläranlage, -anlagen | очистное сооружение | In [[Kläranlagen]] wird das Abwasser mit Hilfe von mechanischen, biologischen und chemischen Verfahren gereinigt. |  | f
+
+## b1 Бонус: изменение климата (Infobox)
+das Umweltthema | экологическая тема | Der Klimawandel ist eines der meistdiskutierten [[Umweltthemen]] der letzten Jahre. |  | n
+eine Barriere bilden | образовывать барьер | Treibhausgase … sammeln sich in der Erdatmosphäre und [[bilden eine Barriere]]. |  | v
+entweichen* | улетучиваться | Dadurch kann ein großer Teil der Wärme … nicht mehr [[entweichen]]. | entwich – ist entwichen | v
+fossile Energieträger | ископаемые энергоносители | Kohlendioxid entsteht vor allem bei der Verbrennung [[fossiler Energieträger]] wie Öl und Kohle. |  | pl
+vom Aussterben bedroht sein | находиться под угрозой вымирания | Zudem geht der Lebensraum vieler Tier- und Pflanzenarten verloren, so dass diese [[vom Aussterben bedroht]] sind. |  | v
+der Lebensraum | среда обитания | Zudem geht der [[Lebensraum]] vieler Tier- und Pflanzenarten verloren. |  | m
+extreme Wetterereignisse | экстремальные погодные явления | Infolge des Klimawandels nehmen [[extreme Wetterereignisse]] wie Stürme und heftige Regenfälle zu. |  | pl
+Hungersnöte auslösen | вызывать голод | … sondern auch Ernten vernichten und dadurch [[Hungersnöte auslösen]] können. |  | v
+
+! warnen vor + D | Meteorologen warnen vor Überschwemmungen (vor + Dat.)
+! schmelzen, ausbrechen, versiegen, verdunsten | Perfekt с sein: Der Gletscher ist geschmolzen, der Vulkan ist ausgebrochen
+! überschwemmen, überfluten | Неотделяемые: Der Fluss hat das Land überschwemmt
+! der Umwelt schaden ↔ die Umwelt belasten | schaden + Dat.; belasten, schützen, schonen + Akk.
+! es mangelt an + D | Безличное: Es mangelt an sauberem Wasser
+! die Flut | 1) прилив (↔ Ebbe), 2) наводнение; die Informationsflut — поток
+! sinken ↔ senken | Der Spiegel sinkt (сам); man senkt den Verbrauch (кто-то снижает)
+! Maßnahmen ergreifen | ergriff – hat ergriffen (не «machen»)

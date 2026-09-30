@@ -1,0 +1,693 @@
+{
+ "id": "4.7",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Technik",
+ "titleRu": "Техника",
+ "pages": "194–199",
+ "exercises": "200–204",
+ "solutions": "269",
+ "bookRows": 76,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Техническое развитие",
+   "items": [
+    {
+     "de": "der Ingenieur, Ingenieure",
+     "ru": "инженер",
+     "ex": "[[Ingenieure]] arbeiten intensiv an der Entwicklung sparsamer Automotoren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Ingenieurwesen",
+     "ru": "инженерное дело",
+     "ex": "An verschiedenen Universitäten und technischen Hochschulen kann man [[Ingenieurwesen]] studieren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. erfinden*",
+     "ru": "изобретать",
+     "ex": "Verschiedene Erfinder stritten darüber, wer von ihnen das Telefon [[erfunden]] hatte.",
+     "note": "erfand – hat erfunden",
+     "g": "v"
+    },
+    {
+     "de": "die Erfindung",
+     "ru": "изобретение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. entwickeln · die Entwicklung",
+     "ru": "разрабатывать · разработка",
+     "ex": "Ingenieure haben ein neues Material [[entwickelt]], das sehr hitzebeständig ist und in der Raumfahrt eingesetzt werden könnte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Patent anmelden = etw. patentieren lassen*",
+     "ru": "запатентовать",
+     "ex": "Um sich die Nutzungsrechte an einer Erfindung zu sichern, muss man sie [[patentieren lassen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Patent, Patente",
+     "ru": "патент",
+     "ex": "Das [[Patent]] für eine Erfindung kann man beim Patentamt anmelden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Fortschritt, Fortschritte",
+     "ru": "прогресс",
+     "ex": "Dank des technischen [[Fortschritts]] werden Notebooks immer leichter und zugleich leistungsfähiger.",
+     "note": "dank + Gen./Dat.",
+     "g": "m"
+    },
+    {
+     "de": "die Automatisierung",
+     "ru": "автоматизация",
+     "ex": "Die [[Automatisierung]] hat Handarbeit in vielen Bereichen überflüssig gemacht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die industrielle Revolution",
+     "ru": "промышленная революция",
+     "ex": "Die [[industrielle Revolution]] ermöglichte es, Waren in großen Mengen herzustellen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Материалы",
+   "items": [
+    {
+     "de": "bestehen* aus + D",
+     "ru": "состоять из",
+     "ex": "Heutzutage [[bestehen]] Computerchips meist [[aus]] Silizium, doch Forscher arbeiten bereits an Chips aus anderen Materialien.",
+     "note": "bestand – hat bestanden",
+     "g": "v"
+    },
+    {
+     "de": "der Rohstoff, -stoffe",
+     "ru": "сырьё",
+     "ex": "Erdöl ist ein [[Rohstoff]], der für die Herstellung verschiedenster Produkte verwendet wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Eisen",
+     "ru": "железо",
+     "ex": "Wegen seiner Stabilität wurde [[Eisen]] im 19. Jahrhundert für große Bauten, z. B. Brücken und Bahnhofshallen, verwendet.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Stahl",
+     "ru": "сталь",
+     "ex": "Im Vergleich zu Eisen hat [[Stahl]] den Vorteil, dass er nicht so leicht bricht und deshalb leichter in unterschiedliche Formen gebracht werden kann.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Beton",
+     "ru": "бетон",
+     "ex": "Viele Wände, Böden und Decken in modernen Gebäuden bestehen aus [[Beton]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Kunststoff, Kunststoffe",
+     "ru": "пластмасса",
+     "ex": "Wegen ihres geringen Gewichts und ihrer leichten Formbarkeit können [[Kunststoffe]] für die Herstellung vieler verschiedener Produkte verwendet werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Draht, Drähte",
+     "ru": "проволока, провод",
+     "ex": "Komplexe elektronische Geräte bestehen aus einer Vielzahl von Einzelteilen, die durch [[Drähte]] miteinander verbunden sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kupfer",
+     "ru": "медь",
+     "ex": "Kabel enthalten Drähte aus [[Kupfer]], die den Strom leiten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "elastisch",
+     "ru": "эластичный",
+     "ex": "Da Gummi sehr [[elastisch]] ist, werden aus diesem Material beispielsweise Luftballons, Reifen und weiche Bodenbeläge für Sportplätze hergestellt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "stabil · die Stabilität",
+     "ru": "прочный · прочность",
+     "ex": "Pappe ist ein sehr [[stabiles]] Material, aus dem man Verpackungen und sogar kleine Möbel herstellen kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. recyceln · das Recycling",
+     "ru": "перерабатывать · переработка",
+     "ex": "Verschiedene Metalle, Glas und Papier kann man nach Gebrauch [[recyceln]] und für neue Produkte verwenden.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Физика",
+   "items": [
+    {
+     "de": "Strom leiten",
+     "ru": "проводить ток",
+     "ex": "Da Wasser [[Strom leitet]], sollte man sich bei einem Gewitter von Gewässern wie Seen oder Flüssen fernhalten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "leitfähig",
+     "ru": "проводящий",
+     "ex": "Metalle leiten Strom unterschiedlich gut: Silber ist beispielsweise [[leitfähiger]] als Eisen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "elektrisch geladen",
+     "ru": "электрически заряженный",
+     "ex": "Batterien haben zwei Pole, die [[elektrisch geladen]] sind: Der eine Pol ist positiv, der andere negativ [[geladen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. umwandeln in + A",
+     "ru": "преобразовывать во что-то",
+     "ex": "Herkömmliche Glühbirnen sind nicht energieeffizient, weil nur ein kleiner Teil der zugeführten Energie in Licht [[umgewandelt]] wird.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Welle, Wellen",
+     "ru": "волна",
+     "ex": "Aus physikalischer Sicht sind verschiedene Farben unterschiedlich lange Licht[[wellen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Schallwelle, -wellen",
+     "ru": "звуковая волна",
+     "ex": "[[Schallwellen]] nehmen wir in erster Linie mit den Ohren wahr.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Schall",
+     "ru": "звук",
+     "ex": "Genauso wie Licht kann auch [[Schall]] in Form von Wellen dargestellt werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Ultraschall",
+     "ru": "ультразвук",
+     "ex": "[[Ultraschall]] hat eine Wellenfrequenz, die vom Menschen nicht wahrgenommen werden kann.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Строительство и конструкция",
+   "items": [
+    {
+     "de": "etw. entwerfen*",
+     "ru": "проектировать, создавать эскиз",
+     "ex": "Ingenieure und Designer [[entwerfen]] gemeinsam ein neues Automodell.",
+     "note": "entwirft – entwarf – hat entworfen",
+     "g": "v"
+    },
+    {
+     "de": "der Entwurf",
+     "ru": "проект, эскиз",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. zeichnen · die Zeichnung",
+     "ru": "чертить · чертёж",
+     "ex": "Der Architekt [[zeichnet]] zunächst einen genauen Plan des Gebäudes, auf dessen Grundlage das Haus dann gebaut wird.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. konstruieren · die Konstruktion",
+     "ru": "конструировать · конструкция",
+     "ex": "Wenn Ingenieure ein neues Gerät [[konstruieren]], müssen sie zahlreiche Aspekte berücksichtigen, z. B. Energieeffizienz, Sicherheit und Funktionalität.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Gerüst, Gerüste",
+     "ru": "каркас; строительные леса",
+     "ex": "Fachwerkhäuser bestehen aus einem Holz[[gerüst]], das mit Lehm, Stroh oder Steinen ausgefüllt wurde.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Säule, Säulen",
+     "ru": "колонна",
+     "ex": "In mittelalterlichen Kirchen findet man zahlreiche [[Säulen]], die das Gewicht der Decke tragen, damit das Gebäude nicht einstürzt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. beschichten · die Beschichtung",
+     "ru": "покрывать слоем · покрытие",
+     "ex": "Smartphones werden mit einem speziellen Material [[beschichtet]], so dass man keine wasserfeste Hülle mehr braucht.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Приборы и установки",
+   "items": [
+    {
+     "de": "das Gerät, Geräte",
+     "ru": "прибор, устройство",
+     "ex": "Haushalts[[geräte]] wie Waschmaschinen und Kühlschränke, die anfangs noch als Luxusgut galten, sind heute für uns eine Selbstverständlichkeit geworden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Anlage, Anlagen",
+     "ru": "установка, система",
+     "ex": "Zu einer Heizungs[[anlage]] gehören die Heizkörper in den einzelnen Zimmern, der Heizkessel im Keller, der Warmwasserspeicher und die Heizungsrohre, die die einzelnen Teile miteinander verbinden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Klimaanlage, -anlagen",
+     "ru": "кондиционер",
+     "ex": "[[Klimaanlagen]] sorgen auch bei heißem Wetter für eine angenehme Raumtemperatur.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Alarmanlage, -anlagen",
+     "ru": "сигнализация",
+     "ex": "Aus Angst vor Einbrechern lassen manche Hausbesitzer eine [[Alarmanlage]] einbauen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Werkzeug, Werkzeuge",
+     "ru": "инструмент",
+     "ex": "Um Uhren zu reparieren, benötigt man besonders kleine Spezial[[werkzeuge]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Schraube, Schrauben",
+     "ru": "винт, шуруп",
+     "ex": "Das Regal ist mit [[Schrauben]] an der Wand befestigt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. montieren · die Montage",
+     "ru": "монтировать · монтаж",
+     "ex": "Schalten Sie den Strom aus, bevor Sie die Lampe an die Decke [[montieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. regulieren · die Regulierung",
+     "ru": "регулировать",
+     "ex": "Indem Sie den grauen Knopf drehen, können Sie die Lautstärke [[regulieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. einstellen · die Einstellung",
+     "ru": "настраивать · настройка",
+     "ex": "In modernen Krankenhausbetten lassen sich Kopf- und Fußhöhe des Bettes individuell [[einstellen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. steuern · die Steuerung",
+     "ru": "управлять · управление",
+     "ex": "Man kann die Bewegungen des Satelliten von der Erde aus [[steuern]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Управление приборами",
+   "items": [
+    {
+     "de": "etw. bedienen · die Bedienung",
+     "ru": "управлять, обслуживать · управление",
+     "ex": "Spezielle Handys für Senioren haben große Tasten und sind einfach zu [[bedienen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. einschalten",
+     "ru": "включать",
+     "ex": "Überprüfen Sie, ob Sie den Wasserhahn aufgedreht haben, bevor Sie die Waschmaschine [[einschalten]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. ausschalten",
+     "ru": "выключать",
+     "ex": "Bitte [[schalten]] Sie vor Beginn des Kinofilms Ihr Handy [[aus]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Schalter, Schalter",
+     "ru": "выключатель",
+     "ex": "Im Notfall drücken Sie den großen roten [[Schalter]], der sich auf der linken Seite der Konsole befindet.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Knopf, Knöpfe",
+     "ru": "кнопка",
+     "ex": "Um die Bedienung des Geräts zu erleichtern, sind [[Knöpfe]] oder Schalter, die man oft braucht, besonders groß oder farbig markiert.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Taste, Tasten",
+     "ru": "клавиша",
+     "ex": "Wenn Sie den Film anhalten möchten, drücken Sie bitte die Stopp-[[Taste]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "pumpen · die Pumpe, Pumpen",
+     "ru": "качать · насос",
+     "ex": "Nach der Überschwemmung muss das Wasser aus den Kellern der überfluteten Häuser [[gepumpt]] werden.",
+     "note": "Mithilfe von Pumpen wird Erdöl … an die Oberfläche gebracht.",
+     "g": "v"
+    },
+    {
+     "de": "hydraulisch · die Hydraulik",
+     "ru": "гидравлический · гидравлика",
+     "ex": "Ein [[hydraulischer]] Wagenheber ermöglicht es, mit relativ wenig Körperkraft ein Auto anzuheben, um einen Reifen zu wechseln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Radar",
+     "ru": "радар",
+     "ex": "Fluglotsen überwachen die Position startender und landender Flugzeuge durch [[Radar]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. warten · die Wartung",
+     "ru": "обслуживать (техн.) · техобслуживание",
+     "ex": "Der Kopierer muss regelmäßig von einem Techniker [[gewartet]] werden, damit er lange Zeit einwandfrei funktioniert.",
+     "note": "≠ warten auf + A (ждать)",
+     "g": "v"
+    },
+    {
+     "de": "defekt · der Defekt, Defekte",
+     "ru": "неисправный · неисправность",
+     "ex": "Der [[defekte]] Motor muss durch einen neuen ersetzt werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Störung, Störungen = der Defekt",
+     "ru": "сбой, неполадка",
+     "ex": "Aufgrund einer technischen [[Störung]] funktioniert das Telefonnetz in einem Teil der Stadt momentan nicht.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Приводы и передача данных",
+   "items": [
+    {
+     "de": "etw. antreiben*",
+     "ru": "приводить в действие",
+     "ex": "Man kann Motoren z. B. mit Benzin, Gas oder Strom [[antreiben]].",
+     "note": "trieb an – hat angetrieben",
+     "g": "v"
+    },
+    {
+     "de": "der Antrieb",
+     "ru": "привод, двигатель",
+     "ex": "Immer mehr Fahrzeuge haben alternative [[Antriebe]], die umweltfreundlicher sind als die herkömmlichen Benzinmotoren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Kraftstoff, -stoffe = der Brennstoff, -stoffe",
+     "ru": "топливо",
+     "ex": "Heutzutage kann man [[Kraftstoffe]] statt aus Öl auch aus energiereichen Pflanzen herstellen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Daten (Plural)",
+     "ru": "данные",
+     "ex": "Datenschützer warnen davor, zu viele persönliche [[Daten]] im Internet öffentlich zugänglich zu machen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "der Datenträger, -träger",
+     "ru": "носитель данных",
+     "ex": "USB-Sticks sind praktische kleine [[Datenträger]], die an jeden modernen Computer angeschlossen werden können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Daten übertragen* / übermitteln",
+     "ru": "передавать данные",
+     "ex": "Per WLAN können [[Daten]] kabellos [[übertragen]] / [[übermittelt]] werden.",
+     "note": "überträgt – übertrug – hat übertragen",
+     "g": "v"
+    },
+    {
+     "de": "das Signal, Signale",
+     "ru": "сигнал",
+     "ex": "Ein akustisches [[Signal]] macht den Handynutzer darauf aufmerksam, dass er eine SMS erhalten hat.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Signal übertragen* / übermitteln",
+     "ru": "передавать сигнал",
+     "ex": "[[Signale]] werden oft über mehrere Stationen vom Sender zum Empfänger [[übertragen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. verschlüsseln · die Verschlüsselung",
+     "ru": "шифровать · шифрование",
+     "ex": "HTTPS ermöglicht sichere Datenübertragung im Internet, weil es die Informationen [[verschlüsselt]], bevor sie gesendet werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. entschlüsseln · die Entschlüsselung",
+     "ru": "расшифровывать",
+     "ex": "Computerhacker haben eine Möglichkeit gefunden, per HTTPS gesendete Daten zu [[entschlüsseln]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Связь и датчики",
+   "items": [
+    {
+     "de": "funken · der Funk",
+     "ru": "передавать по радио · радиосвязь",
+     "ex": "Flugzeuge oder Schiffe [[funken]] einen Notruf, wenn sie sich in Gefahr befinden.",
+     "note": "Bei der Kommunikation per Funk …",
+     "g": "v"
+    },
+    {
+     "de": "der Mobilfunk",
+     "ru": "мобильная связь",
+     "ex": "Im Vergleich zu Festnetztelefonen hat der [[Mobilfunk]] den Vorteil, dass man fast überall erreichbar ist.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Funkmast, -masten = die Mobilfunkanlage",
+     "ru": "вышка связи",
+     "ex": "Handysignale werden vom Mobiltelefon zum nächsten [[Funkmast]] weitergeleitet.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Antenne, Antennen",
+     "ru": "антенна",
+     "ex": "Auf Funkmasten befinden sich [[Antennen]] aus Metall, die die Funksignale auffangen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Satellit, Satelliten",
+     "ru": "спутник",
+     "ex": "Im Jahr 2013 umkreisten mehr als 1000 [[Satelliten]] die Erde.",
+     "note": "n-склонение",
+     "g": "m"
+    },
+    {
+     "de": "die Satellitenschüssel, -schüsseln",
+     "ru": "спутниковая тарелка",
+     "ex": "Wer eine [[Satellitenschüssel]] besitzt, kann Fernsehprogramme aus weit entfernten Ländern empfangen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Fernbedienung, -bedienungen",
+     "ru": "пульт дистанционного управления",
+     "ex": "Dank der [[Fernbedienung]] kann man den Fernseher bequem vom Sofa aus steuern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "analog",
+     "ru": "аналоговый",
+     "ex": "[[Analoge]] Medien wie Kassetten oder Schallplatten werden heute kaum noch benutzt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "digital",
+     "ru": "цифровой",
+     "ex": "Auf [[digitalen]] Datenträgern können große Mengen an Informationen gespeichert werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Sensor, Sensoren",
+     "ru": "датчик",
+     "ex": "[[Sensoren]] an automatischen Türen registrieren, wenn jemand einen Raum betreten oder verlassen will.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Sonde, Sonden",
+     "ru": "зонд",
+     "ex": "Da Reisen zu anderen Planeten sehr lange dauern, schicken Weltraumforscher unbemannte [[Sonden]] zu diesen Planeten, um sie zu erforschen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: бионика (Infobox)",
+   "items": [
+    {
+     "de": "die Bionik",
+     "ru": "бионика",
+     "ex": "Ein spezieller technischer Arbeitsbereich ist die [[Bionik]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich zusammensetzen aus + D",
+     "ru": "состоять, складываться из",
+     "ex": "Das Wort „Bionik“ [[setzt sich aus]] den Wörtern „Biologie und Technik“ [[zusammen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich orientieren an + D",
+     "ru": "ориентироваться на",
+     "ex": "… haben sich Forscher und Erfinder bei ihrer Arbeit schon viel früher an der Natur [[orientiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Oberfläche, -n",
+     "ru": "поверхность",
+     "ex": "Dabei geht es um die Frage, wie [[Oberflächen]] beschaffen sein müssen, um nicht schmutzig zu werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "glatt",
+     "ru": "гладкий",
+     "ex": "… dass man Materialien verwenden sollte, die sehr [[glatt]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "haften an + D",
+     "ru": "прилипать",
+     "ex": "… damit kein Schmutz an der Oberfläche [[haften]] kann.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "warten ↔ warten auf",
+   "v": "etw. warten — обслуживать технику (die Wartung); auf jdn. warten — ждать"
+  },
+  {
+   "k": "einstellen",
+   "v": "1) настраивать прибор, 2) нанимать на работу, 3) прекращать (die Produktion einstellen)"
+  },
+  {
+   "k": "bestehen aus + D",
+   "v": "Computerchips bestehen aus Silizium"
+  },
+  {
+   "k": "entwerfen",
+   "v": "entwirft – entwarf – hat entworfen; der Entwurf"
+  },
+  {
+   "k": "der Satellit",
+   "v": "n-склонение: den Satelliten"
+  },
+  {
+   "k": "übertragen",
+   "v": "Неотделяемое: Daten werden übertragen; überträgt – übertrug – hat übertragen"
+  },
+  {
+   "k": "der Knopf ↔ die Taste ↔ der Schalter",
+   "v": "Knopf — кнопка/ручка, Taste — клавиша, Schalter — выключатель"
+  }
+ ]
+}

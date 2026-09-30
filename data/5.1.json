@@ -1,0 +1,1042 @@
+{
+ "id": "5.1",
+ "chapter": 5,
+ "chapterName": "Natur und Umwelt",
+ "title": "Die Erde",
+ "titleRu": "Земля",
+ "pages": "230–238",
+ "exercises": "238–243",
+ "solutions": "270–271",
+ "bookRows": 121,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Строение Земли",
+   "items": [
+    {
+     "de": "der Erdkern",
+     "ru": "ядро Земли",
+     "ex": "Im [[Erdkern]] herrschen Temperaturen von mehreren Tausend Grad Celsius.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Erdkruste",
+     "ru": "земная кора",
+     "ex": "Die [[Erdkruste]] ist die äußerste Schicht der Erde, die aus verschiedenen Arten von Gestein besteht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Erdoberfläche",
+     "ru": "поверхность Земли",
+     "ex": "Über zwei Drittel der gesamten [[Erdoberfläche]] sind von Wasser bedeckt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Erdatmosphäre",
+     "ru": "атмосфера Земли",
+     "ex": "Die [[Erdatmosphäre]], die die Erde umgibt, besteht aus verschiedenen Schichten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ozonschicht",
+     "ru": "озоновый слой",
+     "ex": "Durch die [[Ozonschicht]] wird die Erde vor zu starker ultravioletter Strahlung geschützt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Ozonloch, -löcher",
+     "ru": "озоновая дыра",
+     "ex": "In den Achtzigerjahren des 20. Jahrhunderts entdeckte man erstmals das [[Ozonloch]] über der Antarktis.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Äquator",
+     "ru": "экватор",
+     "ex": "Länder, die am [[Äquator]] liegen, zeichnen sich durch überwiegend tropisches, feuchtheißes Klima aus.",
+     "note": "sich durch + Akk. auszeichnen",
+     "g": "m"
+    },
+    {
+     "de": "die Hemisphäre, -sphären",
+     "ru": "полушарие",
+     "ex": "Der Äquator trennt die Nordhalbkugel von der südlichen [[Hemisphäre]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kontinentalplatte, -platten",
+     "ru": "континентальная плита",
+     "ex": "Alfred Wegener vertrat die Theorie, dass sich die [[Kontinentalplatten]] ständig in Bewegung befinden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Pol, Pole",
+     "ru": "полюс",
+     "ex": "An den [[Polen]] ist es so kalt, dass nur wenige Tier- und Pflanzenarten dort überleben können.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "География: полюса, океаны, ландшафты",
+   "items": [
+    {
+     "de": "die Arktis",
+     "ru": "Арктика",
+     "ex": "Aufgrund des Klimawandels sind die Gewässer der [[Arktis]] heutzutage leichter mit Schiffen befahrbar.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Antarktis",
+     "ru": "Антарктида",
+     "ex": "1991 vereinbarten 35 Staaten, die [[Antarktis]] als Naturreservat unter besonderen Schutz zu stellen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Gletscher, Gletscher",
+     "ru": "ледник",
+     "ex": "Aufgrund der Klimaveränderung werden die [[Gletscher]] an den Polen und im Hochgebirge immer kleiner.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Ozean, Ozeane",
+     "ru": "океан",
+     "ex": "Die Tiefen der [[Ozeane]] sind nur wenig erforscht, da dort ein sehr hoher Druck herrscht.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Gezeiten (Plural)",
+     "ru": "приливы и отливы",
+     "ex": "Die [[Gezeiten]] entstehen durch den Einfluss, den der Mond auf die Erde ausübt.",
+     "note": "Einfluss ausüben auf + Akk.",
+     "g": "pl"
+    },
+    {
+     "de": "die Ebbe",
+     "ru": "отлив",
+     "ex": "Im Wattenmeer kann man bei [[Ebbe]] über große Flächen laufen, die sonst von Wasser bedeckt sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Flut",
+     "ru": "прилив",
+     "ex": "Spaziergänger sollten rechtzeitig an den Strand zurückkehren, damit sie nicht von der [[Flut]] überrascht und vom Land abgeschnitten werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Küste, Küsten",
+     "ru": "побережье",
+     "ex": "Früher war der Fischfang für die Menschen, die an der [[Küste]] lebten, die wichtigste Einnahmequelle.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gebirge, Gebirge",
+     "ru": "горы, горный массив",
+     "ex": "Viele [[Gebirge]] sind durch die Verschiebung von Kontinentalplatten entstanden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Wüste, Wüsten",
+     "ru": "пустыня",
+     "ex": "Nur wenige Völker haben sich an die lebensfeindlichen Bedingungen in der [[Wüste]] angepasst.",
+     "note": "sich an + Akk. anpassen",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Окружающая среда: защита",
+   "items": [
+    {
+     "de": "die Umwelt",
+     "ru": "окружающая среда",
+     "ex": "Hormone, die in der Massentierhaltung eingesetzt werden, gelangen in die [[Umwelt]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Umwelt schützen · der Umweltschutz",
+     "ru": "защищать окружающую среду · охрана природы",
+     "ex": "Mittlerweile ist den meisten Menschen bewusst, dass es in unserem eigenen Interesse liegt, die [[Umwelt zu schützen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "umweltfreundlich",
+     "ru": "экологичный",
+     "ex": "Es wird empfohlen, beim Kauf von Lebensmitteln auf [[umweltfreundliche]] Verpackungen aus Papier oder Glas zu achten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Umwelt schonen",
+     "ru": "беречь окружающую среду",
+     "ex": "Ein wichtiger Aspekt moderner Stadtplanung ist es, die [[Umwelt zu schonen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "umweltschonend",
+     "ru": "щадящий для природы",
+     "ex": "[[Umweltschonende]] Wasch- und Putzmittel enthalten natürliche Substanzen, die biologisch abbaubar sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "filtern · der Filter",
+     "ru": "фильтровать · фильтр",
+     "ex": "Aus Angst vor schädlichen Stoffen [[filtern]] manche Menschen das Leitungswasser, bevor sie es trinken.",
+     "note": "Filter dienen … dazu, Abgase zu reinigen",
+     "g": "v"
+    },
+    {
+     "de": "der Abfall, Abfälle = der Müll",
+     "ru": "отходы, мусор",
+     "ex": "Das Trinkwasser kann durch industrielle [[Abfälle]] kontaminiert werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Abfall / Müll entsorgen · die Entsorgung",
+     "ru": "утилизировать отходы · утилизация",
+     "ex": "Es gibt strenge Vorschriften dafür, wie [[Abfall entsorgt]] werden muss, damit keine Umweltschäden entstehen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Окружающая среда: вред",
+   "items": [
+    {
+     "de": "die Umwelt zerstören · die Umweltzerstörung",
+     "ru": "разрушать окружающую среду",
+     "ex": "Die [[Umwelt]] wird beispielsweise durch den Abbau verschiedener Rohstoffe [[zerstört]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Umwelt belasten · die Umweltbelastung",
+     "ru": "загрязнять окружающую среду · нагрузка на природу",
+     "ex": "Der Einsatz von Düngemitteln und Pestiziden in der Landwirtschaft [[belastet]] die [[Umwelt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Umwelt schaden",
+     "ru": "вредить окружающей среде",
+     "ex": "Ein konsumorientierter Lebensstil führt zum Verbrauch vieler Ressourcen und [[schadet der Umwelt]].",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "umweltschädlich",
+     "ru": "вредный для природы",
+     "ex": "Zahlreiche Supermärkte bieten Papiertüten und Stofftaschen als Alternative zu [[umweltschädlichen]] Plastiktüten an.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. verschmutzen · die Verschmutzung",
+     "ru": "загрязнять · загрязнение",
+     "ex": "Beim Unfall eines Öltankers können große Teile des Meeres und der Strände in der Umgebung [[verschmutzt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Umweltverschmutzung",
+     "ru": "загрязнение окружающей среды",
+     "ex": "Dank moderner Technik lässt sich die [[Umweltverschmutzung]] durch Industrie und Verkehr reduzieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verseuchen · die Verseuchung",
+     "ru": "заражать · заражение",
+     "ex": "Chemisch oder bakteriell [[verseuchtes]] Trinkwasser kann zu schweren Magen-Darm-Erkrankungen und sogar zum Tode führen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "kontaminieren · die Kontamination",
+     "ru": "загрязнять, заражать",
+     "ex": "Bei einem Unfall in einer Aluminiumfabrik können Böden und Gewässer in der Umgebung mit Schadstoffen [[kontaminiert]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "vergiften · die Vergiftung",
+     "ru": "отравлять · отравление",
+     "ex": "Kritikern zufolge kann durch Fracking, eine spezielle Form der Erdgasförderung, das Grundwasser [[vergiftet]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Gift, Gifte",
+     "ru": "яд",
+     "ex": "Durch den Verzehr von Fisch können [[Gifte]], z. B. Quecksilber, in den menschlichen Organismus gelangen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "giftig",
+     "ru": "ядовитый",
+     "ex": "Bei der Herstellung von Textilien werden oftmals [[giftige]] Substanzen verwendet.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der saure Regen",
+     "ru": "кислотный дождь",
+     "ex": "[[Saurer Regen]] gilt als eine der Hauptursachen für das Waldsterben.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Климатические зоны и погода",
+   "items": [
+    {
+     "de": "die Klimazone, -zonen",
+     "ru": "климатическая зона",
+     "ex": "Die klimatischen Bedingungen in den verschiedenen [[Klimazonen]] der Welt unterscheiden sich stark voneinander.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "tropisch · die Tropen (Pl.)",
+     "ru": "тропический · тропики",
+     "ex": "[[Tropische]] Temperaturen können eine große Belastung für Herz und Kreislauf sein.",
+     "note": "In den Tropen findet man …",
+     "g": "v"
+    },
+    {
+     "de": "gemäßigt",
+     "ru": "умеренный",
+     "ex": "In Deutschland herrscht [[gemäßigtes]] Klima mit warmen Sommern und kalten Wintern, aber ohne extrem hohe oder extrem niedrige Temperaturen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "polar",
+     "ru": "полярный",
+     "ex": "Die Temperaturen liegen in den [[polaren]] Regionen der Welt meist unter null Grad Celsius.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "feucht · die Feuchtigkeit",
+     "ru": "влажный · влажность",
+     "ex": "Sportliche Aktivitäten sind bei [[feuchtem]], heißem Klima oft besonders anstrengend.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "trocken · die Trockenheit",
+     "ru": "сухой · засушливость",
+     "ex": "Im Vergleich zu feuchtem Klima empfinden viele Menschen Kälte bei [[trockenem]] Klima als weniger unangenehm.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Niederschlag, -schläge",
+     "ru": "осадки",
+     "ex": "Die Meteorologen haben für die nächsten Tage heftige [[Niederschläge]] in Form von Regen oder Schnee vorhergesagt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "hageln / es hagelt · der Hagel",
+     "ru": "идёт град · град",
+     "ex": "Während des Gewitters [[hagelte]] es bis zu 1 cm große Eiskörner.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Frost",
+     "ru": "мороз",
+     "ex": "Bei starkem [[Frost]] besteht die Gefahr, dass Wasser- und Heizungsrohre einfrieren und platzen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Hitze",
+     "ru": "жара",
+     "ex": "Starke [[Hitze]] kann eine ernste Gefahr für Menschen darstellen, die unter Herz-Kreislauf-Erkrankungen leiden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Изменение климата",
+   "items": [
+    {
+     "de": "sich abkühlen · die Abkühlung",
+     "ru": "охлаждаться · похолодание",
+     "ex": "Während der Eiszeiten hat [[sich]] das Klima auf der Erde erheblich [[abgekühlt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich erwärmen · die Erwärmung",
+     "ru": "нагреваться · потепление",
+     "ex": "Es ist allgemein bekannt, dass [[sich]] das Klima in den vergangenen Jahrzehnten deutlich [[erwärmt]] hat.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Erderwärmung = die globale Erwärmung",
+     "ru": "глобальное потепление",
+     "ex": "Wissenschaftler warnen schon seit langem vor den Folgen der [[Erderwärmung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Klimawandel",
+     "ru": "изменение климата",
+     "ex": "Politiker diskutieren darüber, wie man den [[Klimawandel]] aufhalten kann.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Treibhauseffekt",
+     "ru": "парниковый эффект",
+     "ex": "Der [[Treibhauseffekt]] wirkt sich in verschiedenen Regionen der Welt auf unterschiedliche Weise aus.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Treibhausgas, -gase",
+     "ru": "парниковый газ",
+     "ex": "Das [[Treibhausgas]] Methan (CH4) ist noch schädlicher für das Klima als das viel diskutierte Kohlendioxid.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Kohlendioxid (CO2)",
+     "ru": "углекислый газ",
+     "ex": "Durch die Verbrennung von Öl und Kohle werden große Mengen an [[Kohlendioxid]] freigesetzt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die CO2-Konzentration",
+     "ru": "концентрация CO2",
+     "ex": "Eine der Hauptursachen des Klimawandels ist die steigende [[CO2-Konzentration]] in der Erdatmosphäre.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. ausstoßen* · der Ausstoß",
+     "ru": "выбрасывать · выброс",
+     "ex": "Im Kyoto-Protokoll haben sich die Industrieländer dazu verpflichtet, weniger Treibhausgase [[auszustoßen]] als im Jahr 1990.",
+     "note": "stößt aus – stieß aus – hat ausgestoßen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Климат и леса",
+   "items": [
+    {
+     "de": "klimaschädlich",
+     "ru": "вредный для климата",
+     "ex": "Der Ausstoß [[klimaschädlicher]] Gase soll drastisch reduziert werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "klimafreundlich",
+     "ru": "безвредный для климата",
+     "ex": "Ca. 20 % des in Deutschland verbrauchten Stroms stammen aus [[klimafreundlichen]] erneuerbaren Energiequellen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "klimaschonend",
+     "ru": "щадящий климат",
+     "ex": "Zum [[klimaschonenden]] Konsum gehört der Kauf regionaler Lebensmittel, die nicht über weite Strecken transportiert werden müssen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Sauerstoff (O2)",
+     "ru": "кислород",
+     "ex": "Ohne [[Sauerstoff]] können Menschen und viele Tierarten nicht überleben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. umwandeln in + A · die Umwandlung",
+     "ru": "превращать во что-то",
+     "ex": "Bäume sind wichtig für das globale Klima, weil sie Kohlendioxid in Sauerstoff [[umwandeln]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Regenwald, -wälder",
+     "ru": "тропический лес",
+     "ex": "Man bezeichnet die [[Regenwälder]] auch als „grüne Lunge“ der Erde.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Wald abholzen · die Abholzung",
+     "ru": "вырубать лес · вырубка",
+     "ex": "Wenn viel [[Wald abgeholzt]] wird, hat das ernsthafte Konsequenzen für das Weltklima.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "roden · die Rodung",
+     "ru": "корчевать, расчищать · расчистка",
+     "ex": "Waldflächen werden [[gerodet]], um den Boden landwirtschaftlich nutzen zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Bäume fällen · das Fällen von Bäumen",
+     "ru": "рубить деревья",
+     "ex": "[[Bäume]], die bei einem Sturm schwer beschädigt wurden, müssen [[gefällt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Bäume pflanzen · das Pflanzen von Bäumen",
+     "ru": "сажать деревья",
+     "ex": "In nachhaltigen Forstprojekten wird für jeden Baum, der gefällt wird, ein neuer [[Baum gepflanzt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "schmelzen*",
+     "ru": "таять",
+     "ex": "Durch den Anstieg der Temperaturen [[schmelzen]] die Gletscher in den Gebirgen und an den Polen.",
+     "note": "schmilzt – schmolz – ist geschmolzen",
+     "g": "v"
+    },
+    {
+     "de": "der Meeresspiegel",
+     "ru": "уровень моря",
+     "ex": "Es wird erwartet, dass der Klimawandel zu einem erheblichen Anstieg des [[Meeresspiegels]] führt.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Стихийные бедствия: вода и погода",
+   "items": [
+    {
+     "de": "sich ereignen · das Ereignis, Ereignisse",
+     "ru": "происходить · событие",
+     "ex": "Wenn [[sich]] eine Naturkatastrophe [[ereignet]], wird in den Nachrichten darüber berichtet.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Unwetter, Unwetter",
+     "ru": "непогода, буря",
+     "ex": "Bei dem [[Unwetter]] wurden mehrere Menschen von herabfallenden Ästen verletzt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Gewitter, Gewitter",
+     "ru": "гроза",
+     "ex": "Wenn man im Freien von einem [[Gewitter]] überrascht wird, sollte man sich von Bäumen und Gewässern fernhalten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. überschwemmen · die Überschwemmung",
+     "ru": "затоплять · наводнение",
+     "ex": "Früher [[überschwemmte]] der Nil jedes Jahr das Land entlang des Flusses.",
+     "note": "неотделяемая",
+     "g": "v"
+    },
+    {
+     "de": "etw. überfluten = überschwemmen · die Überflutung",
+     "ru": "заливать, затоплять",
+     "ex": "Nach tagelangen heftigen Regenfällen waren zahlreiche Straßen [[überflutet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Flut, Fluten",
+     "ru": "наводнение, паводок",
+     "ex": "Nach einer schweren [[Flut]] stehen weite Gebiete entlang der Nordseeküste unter Wasser.",
+     "note": "unter Wasser stehen",
+     "g": "f"
+    },
+    {
+     "de": "die Dürre, Dürren",
+     "ru": "засуха",
+     "ex": "Wegen der anhaltenden [[Dürre]] klagen die Bauern über eine schlechte Ernte.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Стихийные бедствия: земля и огонь",
+   "items": [
+    {
+     "de": "die Erde bebt · das Erdbeben, -beben",
+     "ru": "земля трясётся · землетрясение",
+     "ex": "Dort, wo zwei Kontinentalplatten aufeinandertreffen, [[bebt]] besonders häufig die [[Erde]].",
+     "note": "Nach dem Erdbeben mussten viele Menschen im Freien übernachten.",
+     "g": "v"
+    },
+    {
+     "de": "der Tsunami, Tsunamis",
+     "ru": "цунами",
+     "ex": "Ein Seebeben kann einen [[Tsunami]] auslösen, der die Küste überflutet.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Vulkan, Vulkane",
+     "ru": "вулкан",
+     "ex": "Zahlreiche aktive [[Vulkane]] auf der ganzen Welt stellen eine ständige Gefahr dar.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ausbrechen* · der Ausbruch, Ausbrüche",
+     "ru": "извергаться · извержение",
+     "ex": "Wissenschaftler sammeln ständig Daten, um zu berechnen, wann ein Vulkan das nächste Mal [[ausbricht]].",
+     "note": "bricht aus – brach aus – ist ausgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "die Asche",
+     "ru": "пепел",
+     "ex": "Vulkane stoßen bei einem Ausbruch oft große Mengen an [[Asche]] aus.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Lawine, Lawinen",
+     "ru": "лавина",
+     "ex": "Speziell ausgebildete Hunde können dabei helfen, Menschen im Schnee zu finden, die von einer [[Lawine]] verschüttet wurden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Прогнозы и меры",
+   "items": [
+    {
+     "de": "etw. voraussagen = etw. vorhersagen · die Voraussage",
+     "ru": "предсказывать · прогноз",
+     "ex": "Dank moderner Messinstrumente lassen sich Vulkanausbrüche heute oft [[vorhersagen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. prognostizieren · die Prognose, Prognosen",
+     "ru": "прогнозировать · прогноз",
+     "ex": "Aufgrund der globalen Erwärmung [[prognostizieren]] Klimaforscher eine Zunahme extremer Wetterereignisse.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "warnen vor + D · die Warnung",
+     "ru": "предупреждать о · предупреждение",
+     "ex": "Meteorologen [[warnen vor]] schweren Überschwemmungen infolge eines Hurrikans.",
+     "note": "vor + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Maßnahme, Maßnahmen",
+     "ru": "мера",
+     "ex": "Der Aufbau eines Frühwarnsystems ist eine wichtige [[Maßnahme]], um die Bevölkerung vor Tsunamis zu schützen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Maßnahmen ergreifen*",
+     "ru": "принимать меры",
+     "ex": "Es müssen sofort [[Maßnahmen ergriffen]] werden, um eine Ausbreitung der Cholera zu verhindern.",
+     "note": "ergriff – hat ergriffen",
+     "g": "v"
+    },
+    {
+     "de": "jdn. evakuieren · die Evakuierung",
+     "ru": "эвакуировать · эвакуация",
+     "ex": "Boote und Hubschrauber werden eingesetzt, um die Menschen aus den überschwemmten Gebieten zu [[evakuieren]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "name": "Нехватка воды",
+   "items": [
+    {
+     "de": "es mangelt jdm. an + D",
+     "ru": "кому-то не хватает чего-то",
+     "ex": "Millionen Menschen weltweit [[mangelt es an]] sauberem Wasser.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Wassermangel",
+     "ru": "нехватка воды",
+     "ex": "Prognosen zufolge wird sich der [[Wassermangel]] in den kommenden Jahren noch verschärfen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "knapp sein*",
+     "ru": "быть в дефиците",
+     "ex": "Besonders in trockenen Regionen der Welt ist Trinkwasser oft [[knapp]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Wasserknappheit",
+     "ru": "нехватка воды",
+     "ex": "Wegen der [[Wasserknappheit]] wird das Wasser täglich für einige Stunden abgestellt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Wasserbedarf",
+     "ru": "потребность в воде",
+     "ex": "Aufgrund des stetigen Bevölkerungswachstums steigt der weltweite [[Wasserbedarf]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Wasser verbrauchen · der Wasserverbrauch",
+     "ru": "расходовать воду · расход воды",
+     "ex": "In Deutschland [[verbraucht]] man pro Person täglich ca. 120–130 Liter [[Wasser]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Wasser verschwenden · die Wasserverschwendung",
+     "ru": "расточать воду",
+     "ex": "Angesichts des Wassermangels in vielen Teilen der Welt sollte man kein [[Wasser verschwenden]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Wasser sparen · das Sparen von Wasser",
+     "ru": "экономить воду",
+     "ex": "Durch den Einbau moderner Duschköpfe und Toilettenspülungen kann man [[Wasser sparen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "kostbar",
+     "ru": "ценный, драгоценный",
+     "ex": "Wasser ist ein [[kostbares]] Gut, mit dem man sparsam umgehen muss.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "name": "Водоёмы и грунтовые воды",
+   "items": [
+    {
+     "de": "das Gewässer, Gewässer",
+     "ru": "водоём",
+     "ex": "In den letzten Jahren hat sich die Wasserqualität in heimischen [[Gewässern]] wieder verbessert.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "verdunsten · die Verdunstung",
+     "ru": "испаряться · испарение",
+     "ex": "Bei hohen Temperaturen [[verdunstet]] Wasser und steigt in die Atmosphäre auf, wo es Wolken bildet.",
+     "note": "ist verdunstet",
+     "g": "v"
+    },
+    {
+     "de": "das Grundwasser",
+     "ru": "грунтовые воды",
+     "ex": "An einigen Orten befindet sich das [[Grundwasser]] dicht unter der Erde, während man in anderen Regionen viele Meter tief graben muss.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Grundwasserspiegel sinkt* / fällt*",
+     "ru": "уровень грунтовых вод падает",
+     "ex": "Durch die künstliche Bewässerung von Feldern [[sinkt]] / [[fällt]] der [[Grundwasserspiegel]].",
+     "note": "sank – ist gesunken",
+     "g": "v"
+    },
+    {
+     "de": "der Grundwasserspiegel steigt*",
+     "ru": "уровень грунтовых вод растёт",
+     "ex": "Aufgrund von heftigen Regenfällen [[steigt]] der [[Grundwasserspiegel]].",
+     "note": "stieg – ist gestiegen",
+     "g": "v"
+    },
+    {
+     "de": "der Wasservorrat, -vorräte",
+     "ru": "запас воды",
+     "ex": "Das Eis der Gletscher und Polkappen macht einen erheblichen Teil der natürlichen [[Wasservorräte]] aus.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Vorrat anlegen",
+     "ru": "создавать запас",
+     "ex": "Schon vor Tausenden von Jahren bauten die Menschen Zisternen, um einen Wasser[[vorrat]] für Trockenzeiten [[anzulegen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Pumpe, Pumpen",
+     "ru": "насос",
+     "ex": "Man verwendet eine [[Pumpe]], um das Grundwasser an die Oberfläche zu bringen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Quelle, Quellen",
+     "ru": "источник, родник",
+     "ex": "In Wäldern und Gebirgen findet man manchmal [[Quellen]], deren Wasser eine sehr gute Qualität hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Brunnen, Brunnen",
+     "ru": "колодец",
+     "ex": "Um die Bevölkerung mit Trinkwasser zu versorgen, muss ein neuer [[Brunnen]] gebohrt werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "versiegen",
+     "ru": "иссякать",
+     "ex": "Weil der Grundwasserspiegel stark gesunken ist, ist der Brunnen [[versiegt]].",
+     "note": "ist versiegt",
+     "g": "v"
+    },
+    {
+     "de": "erschöpft sein* · die Erschöpfung",
+     "ru": "быть исчерпанным · истощение",
+     "ex": "Wenn zu viel Wasser an die Oberfläche gepumpt wird, sind die Grundwasservorräte bald [[erschöpft]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "name": "Водоснабжение и очистка",
+   "items": [
+    {
+     "de": "der Staudamm, -dämme",
+     "ru": "плотина",
+     "ex": "[[Staudämme]] können sowohl zur Regulierung der Wassermenge als auch zur Stromerzeugung genutzt werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Wasserleitung, -leitungen",
+     "ru": "водопровод",
+     "ex": "Durch alte [[Wasserleitungen]] aus Blei kann das Trinkwasser kontaminiert werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Leitungswasser",
+     "ru": "водопроводная вода",
+     "ex": "In bestimmten Regionen enthält [[Leitungswasser]] mehr Kalk als in anderen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdn. mit Wasser versorgen · die Wasserversorgung",
+     "ru": "снабжать водой · водоснабжение",
+     "ex": "Wenn bei einer Naturkatastrophe Wasserleitungen zerstört werden, ist es oft schwierig, die Bevölkerung mit sauberem [[Wasser]] zu [[versorgen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Trinkwasser",
+     "ru": "питьевая вода",
+     "ex": "Besonders in einigen trockenen Gebieten der Welt steht nicht genug [[Trinkwasser]] zur Verfügung.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Süßwasser",
+     "ru": "пресная вода",
+     "ex": "Experten befürchten, dass der Mangel an [[Süßwasser]] zu bewaffneten Konflikten führen wird.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Salzwasser",
+     "ru": "солёная вода",
+     "ex": "Einige Pflanzenarten, z. B. Mangroven, können auch im [[Salzwasser]] überleben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Meerwasser entsalzen · die Entsalzung",
+     "ru": "опреснять морскую воду · опреснение",
+     "ex": "Da auf der Insel nur sehr wenig Süßwasser zur Verfügung steht, werden Anlagen gebaut, um das [[Meerwasser]] zu [[entsalzen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Abwasser",
+     "ru": "сточные воды",
+     "ex": "[[Abwasser]] aus der Industrie darf nur unter bestimmten Bedingungen in Flüsse geleitet werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Wasser aufbereiten / klären",
+     "ru": "очищать воду",
+     "ex": "Verschmutztes Wasser muss [[aufbereitet]] / [[geklärt]] werden, bevor man es trinken kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Kläranlage, -anlagen",
+     "ru": "очистное сооружение",
+     "ex": "In [[Kläranlagen]] wird das Abwasser mit Hilfe von mechanischen, biologischen und chemischen Verfahren gereinigt.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: изменение климата (Infobox)",
+   "items": [
+    {
+     "de": "das Umweltthema",
+     "ru": "экологическая тема",
+     "ex": "Der Klimawandel ist eines der meistdiskutierten [[Umweltthemen]] der letzten Jahre.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "eine Barriere bilden",
+     "ru": "образовывать барьер",
+     "ex": "Treibhausgase … sammeln sich in der Erdatmosphäre und [[bilden eine Barriere]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "entweichen*",
+     "ru": "улетучиваться",
+     "ex": "Dadurch kann ein großer Teil der Wärme … nicht mehr [[entweichen]].",
+     "note": "entwich – ist entwichen",
+     "g": "v"
+    },
+    {
+     "de": "fossile Energieträger",
+     "ru": "ископаемые энергоносители",
+     "ex": "Kohlendioxid entsteht vor allem bei der Verbrennung [[fossiler Energieträger]] wie Öl und Kohle.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "vom Aussterben bedroht sein",
+     "ru": "находиться под угрозой вымирания",
+     "ex": "Zudem geht der Lebensraum vieler Tier- und Pflanzenarten verloren, so dass diese [[vom Aussterben bedroht]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Lebensraum",
+     "ru": "среда обитания",
+     "ex": "Zudem geht der [[Lebensraum]] vieler Tier- und Pflanzenarten verloren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "extreme Wetterereignisse",
+     "ru": "экстремальные погодные явления",
+     "ex": "Infolge des Klimawandels nehmen [[extreme Wetterereignisse]] wie Stürme und heftige Regenfälle zu.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Hungersnöte auslösen",
+     "ru": "вызывать голод",
+     "ex": "… sondern auch Ernten vernichten und dadurch [[Hungersnöte auslösen]] können.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "warnen vor + D",
+   "v": "Meteorologen warnen vor Überschwemmungen (vor + Dat.)"
+  },
+  {
+   "k": "schmelzen, ausbrechen, versiegen, verdunsten",
+   "v": "Perfekt с sein: Der Gletscher ist geschmolzen, der Vulkan ist ausgebrochen"
+  },
+  {
+   "k": "überschwemmen, überfluten",
+   "v": "Неотделяемые: Der Fluss hat das Land überschwemmt"
+  },
+  {
+   "k": "der Umwelt schaden ↔ die Umwelt belasten",
+   "v": "schaden + Dat.; belasten, schützen, schonen + Akk."
+  },
+  {
+   "k": "es mangelt an + D",
+   "v": "Безличное: Es mangelt an sauberem Wasser"
+  },
+  {
+   "k": "die Flut",
+   "v": "1) прилив (↔ Ebbe), 2) наводнение; die Informationsflut — поток"
+  },
+  {
+   "k": "sinken ↔ senken",
+   "v": "Der Spiegel sinkt (сам); man senkt den Verbrauch (кто-то снижает)"
+  },
+  {
+   "k": "Maßnahmen ergreifen",
+   "v": "ergriff – hat ergriffen (не «machen»)"
+  }
+ ]
+}

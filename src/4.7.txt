@@ -1,0 +1,120 @@
+@id 4.7
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Technik
+@titleRu Техника
+@pages 194–199
+@exercises 200–204
+@solutions 269
+@bookRows 76
+
+# s1 Техническое развитие
+der Ingenieur, Ingenieure | инженер | [[Ingenieure]] arbeiten intensiv an der Entwicklung sparsamer Automotoren. |  | m
+das Ingenieurwesen | инженерное дело | An verschiedenen Universitäten und technischen Hochschulen kann man [[Ingenieurwesen]] studieren. |  | n
+etw. erfinden* | изобретать | Verschiedene Erfinder stritten darüber, wer von ihnen das Telefon [[erfunden]] hatte. | erfand – hat erfunden | v
+die Erfindung | изобретение |  |  | f
+etw. entwickeln · die Entwicklung | разрабатывать · разработка | Ingenieure haben ein neues Material [[entwickelt]], das sehr hitzebeständig ist und in der Raumfahrt eingesetzt werden könnte. |  | v
+ein Patent anmelden = etw. patentieren lassen* | запатентовать | Um sich die Nutzungsrechte an einer Erfindung zu sichern, muss man sie [[patentieren lassen]]. |  | v
+das Patent, Patente | патент | Das [[Patent]] für eine Erfindung kann man beim Patentamt anmelden. |  | n
+der Fortschritt, Fortschritte | прогресс | Dank des technischen [[Fortschritts]] werden Notebooks immer leichter und zugleich leistungsfähiger. | dank + Gen./Dat. | m
+die Automatisierung | автоматизация | Die [[Automatisierung]] hat Handarbeit in vielen Bereichen überflüssig gemacht. |  | f
+die industrielle Revolution | промышленная революция | Die [[industrielle Revolution]] ermöglichte es, Waren in großen Mengen herzustellen. |  | f
+
+# s2 Материалы
+bestehen* aus + D | состоять из | Heutzutage [[bestehen]] Computerchips meist [[aus]] Silizium, doch Forscher arbeiten bereits an Chips aus anderen Materialien. | bestand – hat bestanden | v
+der Rohstoff, -stoffe | сырьё | Erdöl ist ein [[Rohstoff]], der für die Herstellung verschiedenster Produkte verwendet wird. |  | m
+das Eisen | железо | Wegen seiner Stabilität wurde [[Eisen]] im 19. Jahrhundert für große Bauten, z. B. Brücken und Bahnhofshallen, verwendet. |  | n
+der Stahl | сталь | Im Vergleich zu Eisen hat [[Stahl]] den Vorteil, dass er nicht so leicht bricht und deshalb leichter in unterschiedliche Formen gebracht werden kann. |  | m
+der Beton | бетон | Viele Wände, Böden und Decken in modernen Gebäuden bestehen aus [[Beton]]. |  | m
+der Kunststoff, Kunststoffe | пластмасса | Wegen ihres geringen Gewichts und ihrer leichten Formbarkeit können [[Kunststoffe]] für die Herstellung vieler verschiedener Produkte verwendet werden. |  | m
+der Draht, Drähte | проволока, провод | Komplexe elektronische Geräte bestehen aus einer Vielzahl von Einzelteilen, die durch [[Drähte]] miteinander verbunden sind. |  | m
+das Kupfer | медь | Kabel enthalten Drähte aus [[Kupfer]], die den Strom leiten. |  | n
+elastisch | эластичный | Da Gummi sehr [[elastisch]] ist, werden aus diesem Material beispielsweise Luftballons, Reifen und weiche Bodenbeläge für Sportplätze hergestellt. |  | v
+stabil · die Stabilität | прочный · прочность | Pappe ist ein sehr [[stabiles]] Material, aus dem man Verpackungen und sogar kleine Möbel herstellen kann. |  | v
+etw. recyceln · das Recycling | перерабатывать · переработка | Verschiedene Metalle, Glas und Papier kann man nach Gebrauch [[recyceln]] und für neue Produkte verwenden. |  | v
+
+# s3 Физика
+Strom leiten | проводить ток | Da Wasser [[Strom leitet]], sollte man sich bei einem Gewitter von Gewässern wie Seen oder Flüssen fernhalten. |  | v
+leitfähig | проводящий | Metalle leiten Strom unterschiedlich gut: Silber ist beispielsweise [[leitfähiger]] als Eisen. |  | v
+elektrisch geladen | электрически заряженный | Batterien haben zwei Pole, die [[elektrisch geladen]] sind: Der eine Pol ist positiv, der andere negativ [[geladen]]. |  | v
+etw. umwandeln in + A | преобразовывать во что-то | Herkömmliche Glühbirnen sind nicht energieeffizient, weil nur ein kleiner Teil der zugeführten Energie in Licht [[umgewandelt]] wird. |  | v
+die Welle, Wellen | волна | Aus physikalischer Sicht sind verschiedene Farben unterschiedlich lange Licht[[wellen]]. |  | f
+die Schallwelle, -wellen | звуковая волна | [[Schallwellen]] nehmen wir in erster Linie mit den Ohren wahr. |  | f
+der Schall | звук | Genauso wie Licht kann auch [[Schall]] in Form von Wellen dargestellt werden. |  | m
+der Ultraschall | ультразвук | [[Ultraschall]] hat eine Wellenfrequenz, die vom Menschen nicht wahrgenommen werden kann. |  | m
+
+# s4 Строительство и конструкция
+etw. entwerfen* | проектировать, создавать эскиз | Ingenieure und Designer [[entwerfen]] gemeinsam ein neues Automodell. | entwirft – entwarf – hat entworfen | v
+der Entwurf | проект, эскиз |  |  | m
+etw. zeichnen · die Zeichnung | чертить · чертёж | Der Architekt [[zeichnet]] zunächst einen genauen Plan des Gebäudes, auf dessen Grundlage das Haus dann gebaut wird. |  | v
+etw. konstruieren · die Konstruktion | конструировать · конструкция | Wenn Ingenieure ein neues Gerät [[konstruieren]], müssen sie zahlreiche Aspekte berücksichtigen, z. B. Energieeffizienz, Sicherheit und Funktionalität. |  | v
+das Gerüst, Gerüste | каркас; строительные леса | Fachwerkhäuser bestehen aus einem Holz[[gerüst]], das mit Lehm, Stroh oder Steinen ausgefüllt wurde. |  | n
+die Säule, Säulen | колонна | In mittelalterlichen Kirchen findet man zahlreiche [[Säulen]], die das Gewicht der Decke tragen, damit das Gebäude nicht einstürzt. |  | f
+etw. beschichten · die Beschichtung | покрывать слоем · покрытие | Smartphones werden mit einem speziellen Material [[beschichtet]], so dass man keine wasserfeste Hülle mehr braucht. |  | v
+
+# s5 Приборы и установки
+das Gerät, Geräte | прибор, устройство | Haushalts[[geräte]] wie Waschmaschinen und Kühlschränke, die anfangs noch als Luxusgut galten, sind heute für uns eine Selbstverständlichkeit geworden. |  | n
+die Anlage, Anlagen | установка, система | Zu einer Heizungs[[anlage]] gehören die Heizkörper in den einzelnen Zimmern, der Heizkessel im Keller, der Warmwasserspeicher und die Heizungsrohre, die die einzelnen Teile miteinander verbinden. |  | f
+die Klimaanlage, -anlagen | кондиционер | [[Klimaanlagen]] sorgen auch bei heißem Wetter für eine angenehme Raumtemperatur. |  | f
+die Alarmanlage, -anlagen | сигнализация | Aus Angst vor Einbrechern lassen manche Hausbesitzer eine [[Alarmanlage]] einbauen. |  | f
+das Werkzeug, Werkzeuge | инструмент | Um Uhren zu reparieren, benötigt man besonders kleine Spezial[[werkzeuge]]. |  | n
+die Schraube, Schrauben | винт, шуруп | Das Regal ist mit [[Schrauben]] an der Wand befestigt. |  | f
+etw. montieren · die Montage | монтировать · монтаж | Schalten Sie den Strom aus, bevor Sie die Lampe an die Decke [[montieren]]. |  | v
+etw. regulieren · die Regulierung | регулировать | Indem Sie den grauen Knopf drehen, können Sie die Lautstärke [[regulieren]]. |  | v
+etw. einstellen · die Einstellung | настраивать · настройка | In modernen Krankenhausbetten lassen sich Kopf- und Fußhöhe des Bettes individuell [[einstellen]]. |  | v
+etw. steuern · die Steuerung | управлять · управление | Man kann die Bewegungen des Satelliten von der Erde aus [[steuern]]. |  | v
+
+# s6 Управление приборами
+etw. bedienen · die Bedienung | управлять, обслуживать · управление | Spezielle Handys für Senioren haben große Tasten und sind einfach zu [[bedienen]]. |  | v
+etw. einschalten | включать | Überprüfen Sie, ob Sie den Wasserhahn aufgedreht haben, bevor Sie die Waschmaschine [[einschalten]]. |  | v
+etw. ausschalten | выключать | Bitte [[schalten]] Sie vor Beginn des Kinofilms Ihr Handy [[aus]]. |  | v
+der Schalter, Schalter | выключатель | Im Notfall drücken Sie den großen roten [[Schalter]], der sich auf der linken Seite der Konsole befindet. |  | m
+der Knopf, Knöpfe | кнопка | Um die Bedienung des Geräts zu erleichtern, sind [[Knöpfe]] oder Schalter, die man oft braucht, besonders groß oder farbig markiert. |  | m
+die Taste, Tasten | клавиша | Wenn Sie den Film anhalten möchten, drücken Sie bitte die Stopp-[[Taste]]. |  | f
+pumpen · die Pumpe, Pumpen | качать · насос | Nach der Überschwemmung muss das Wasser aus den Kellern der überfluteten Häuser [[gepumpt]] werden. | Mithilfe von Pumpen wird Erdöl … an die Oberfläche gebracht. | v
+hydraulisch · die Hydraulik | гидравлический · гидравлика | Ein [[hydraulischer]] Wagenheber ermöglicht es, mit relativ wenig Körperkraft ein Auto anzuheben, um einen Reifen zu wechseln. |  | v
+das Radar | радар | Fluglotsen überwachen die Position startender und landender Flugzeuge durch [[Radar]]. |  | n
+etw. warten · die Wartung | обслуживать (техн.) · техобслуживание | Der Kopierer muss regelmäßig von einem Techniker [[gewartet]] werden, damit er lange Zeit einwandfrei funktioniert. | ≠ warten auf + A (ждать) | v
+defekt · der Defekt, Defekte | неисправный · неисправность | Der [[defekte]] Motor muss durch einen neuen ersetzt werden. |  | v
+die Störung, Störungen = der Defekt | сбой, неполадка | Aufgrund einer technischen [[Störung]] funktioniert das Telefonnetz in einem Teil der Stadt momentan nicht. |  | f
+
+# s7 Приводы и передача данных
+etw. antreiben* | приводить в действие | Man kann Motoren z. B. mit Benzin, Gas oder Strom [[antreiben]]. | trieb an – hat angetrieben | v
+der Antrieb | привод, двигатель | Immer mehr Fahrzeuge haben alternative [[Antriebe]], die umweltfreundlicher sind als die herkömmlichen Benzinmotoren. |  | m
+der Kraftstoff, -stoffe = der Brennstoff, -stoffe | топливо | Heutzutage kann man [[Kraftstoffe]] statt aus Öl auch aus energiereichen Pflanzen herstellen. |  | m
+die Daten (Plural) | данные | Datenschützer warnen davor, zu viele persönliche [[Daten]] im Internet öffentlich zugänglich zu machen. |  | pl
+der Datenträger, -träger | носитель данных | USB-Sticks sind praktische kleine [[Datenträger]], die an jeden modernen Computer angeschlossen werden können. |  | m
+Daten übertragen* / übermitteln | передавать данные | Per WLAN können [[Daten]] kabellos [[übertragen]] / [[übermittelt]] werden. | überträgt – übertrug – hat übertragen | v
+das Signal, Signale | сигнал | Ein akustisches [[Signal]] macht den Handynutzer darauf aufmerksam, dass er eine SMS erhalten hat. |  | n
+ein Signal übertragen* / übermitteln | передавать сигнал | [[Signale]] werden oft über mehrere Stationen vom Sender zum Empfänger [[übertragen]]. |  | v
+etw. verschlüsseln · die Verschlüsselung | шифровать · шифрование | HTTPS ermöglicht sichere Datenübertragung im Internet, weil es die Informationen [[verschlüsselt]], bevor sie gesendet werden. |  | v
+etw. entschlüsseln · die Entschlüsselung | расшифровывать | Computerhacker haben eine Möglichkeit gefunden, per HTTPS gesendete Daten zu [[entschlüsseln]]. |  | v
+
+# s8 Связь и датчики
+funken · der Funk | передавать по радио · радиосвязь | Flugzeuge oder Schiffe [[funken]] einen Notruf, wenn sie sich in Gefahr befinden. | Bei der Kommunikation per Funk … | v
+der Mobilfunk | мобильная связь | Im Vergleich zu Festnetztelefonen hat der [[Mobilfunk]] den Vorteil, dass man fast überall erreichbar ist. |  | m
+der Funkmast, -masten = die Mobilfunkanlage | вышка связи | Handysignale werden vom Mobiltelefon zum nächsten [[Funkmast]] weitergeleitet. |  | m
+die Antenne, Antennen | антенна | Auf Funkmasten befinden sich [[Antennen]] aus Metall, die die Funksignale auffangen. |  | f
+der Satellit, Satelliten | спутник | Im Jahr 2013 umkreisten mehr als 1000 [[Satelliten]] die Erde. | n-склонение | m
+die Satellitenschüssel, -schüsseln | спутниковая тарелка | Wer eine [[Satellitenschüssel]] besitzt, kann Fernsehprogramme aus weit entfernten Ländern empfangen. |  | f
+die Fernbedienung, -bedienungen | пульт дистанционного управления | Dank der [[Fernbedienung]] kann man den Fernseher bequem vom Sofa aus steuern. |  | f
+analog | аналоговый | [[Analoge]] Medien wie Kassetten oder Schallplatten werden heute kaum noch benutzt. |  | v
+digital | цифровой | Auf [[digitalen]] Datenträgern können große Mengen an Informationen gespeichert werden. |  | v
+der Sensor, Sensoren | датчик | [[Sensoren]] an automatischen Türen registrieren, wenn jemand einen Raum betreten oder verlassen will. |  | m
+die Sonde, Sonden | зонд | Da Reisen zu anderen Planeten sehr lange dauern, schicken Weltraumforscher unbemannte [[Sonden]] zu diesen Planeten, um sie zu erforschen. |  | f
+
+## b1 Бонус: бионика (Infobox)
+die Bionik | бионика | Ein spezieller technischer Arbeitsbereich ist die [[Bionik]]. |  | f
+sich zusammensetzen aus + D | состоять, складываться из | Das Wort „Bionik“ [[setzt sich aus]] den Wörtern „Biologie und Technik“ [[zusammen]]. |  | v
+sich orientieren an + D | ориентироваться на | … haben sich Forscher und Erfinder bei ihrer Arbeit schon viel früher an der Natur [[orientiert]]. |  | v
+die Oberfläche, -n | поверхность | Dabei geht es um die Frage, wie [[Oberflächen]] beschaffen sein müssen, um nicht schmutzig zu werden. |  | f
+glatt | гладкий | … dass man Materialien verwenden sollte, die sehr [[glatt]] sind. |  | v
+haften an + D | прилипать | … damit kein Schmutz an der Oberfläche [[haften]] kann. |  | v
+
+! warten ↔ warten auf | etw. warten — обслуживать технику (die Wartung); auf jdn. warten — ждать
+! einstellen | 1) настраивать прибор, 2) нанимать на работу, 3) прекращать (die Produktion einstellen)
+! bestehen aus + D | Computerchips bestehen aus Silizium
+! entwerfen | entwirft – entwarf – hat entworfen; der Entwurf
+! der Satellit | n-склонение: den Satelliten
+! übertragen | Неотделяемое: Daten werden übertragen; überträgt – übertrug – hat übertragen
+! der Knopf ↔ die Taste ↔ der Schalter | Knopf — кнопка/ручка, Taste — клавиша, Schalter — выключатель

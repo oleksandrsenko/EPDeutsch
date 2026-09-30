@@ -1,0 +1,15 @@
+# Живые данные и секреты — никогда не коммитить
+db/
+*.db
+*.db-wal
+*.db-shm
+*.key
+*.log
+.env
+
+# Системное
+.DS_Store
+__pycache__/
+*.pyc
+.claude/settings.local.json
+.claude/worktrees/

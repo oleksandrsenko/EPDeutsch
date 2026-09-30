@@ -1,0 +1,168 @@
+@id 1.2
+@chapter 1
+@chapterName Bildung und Forschung
+@title Studium
+@titleRu Учёба в вузе
+@pages 20–27
+@exercises 29–33
+@solutions 260
+@bookRows 94
+
+# s1 Виды вузов и форм обучения
+die Hochschule, -schulen | высшее учебное заведение, вуз | Universitäten und Fachhochschulen bezeichnet man zusammenfassend als [[Hochschulen]]. | обобщающее слово для университетов и FH | f
+die Fachhochschule, -schulen | высшая школа прикладных наук | Das Studium an einer [[Fachhochschule]] gilt als besonders praxisorientiert. |  | f
+die Berufsakademie, -akademien | профессиональная академия (дуальное обучение) | An einer [[Berufsakademie]] kann man auch ohne Abitur studieren, wenn man zum Beispiel die Meisterprüfung in einem Handwerksberuf bestanden hat. |  | f
+die Elite-Universität, -Universitäten | элитный университет | Hochschulen, die sich erfolgreich um den Titel „[[Elite-Universität]]“ beworben haben, erhalten eine besondere finanzielle Förderung vom Staat. |  | f
+an einer Hochschule / Universität studieren | учиться в вузе / университете | Möchten Sie später [[an einer Universität]] oder an einer Fachhochschule [[studieren]]? | an + Dat. (не in der Universität) | v
+das Hochschulranking, -rankings | рейтинг вузов | Bei [[Hochschulrankings]] werden die Hochschulen nach verschiedenen Kriterien bewertet. |  | n
+berufsbegleitend | без отрыва от работы, параллельно с работой | Ein [[berufsbegleitendes]] Studium bietet Berufstätigen die Möglichkeit, neben ihrer Arbeit ein Studium zu absolvieren. |  | v
+das Fernstudium | заочное (дистанционное) обучение | Dank moderner Medien kann man heute einen Hochschulabschluss auch per [[Fernstudium]] erwerben. |  | n
+die Präsenzphase, -phasen · an einer Präsenzphase teilnehmen* | очная сессия (при заочном обучении) · участвовать в очной сессии | Obwohl man bei einem Fernstudium überwiegend zu Hause lernt, muss man auch an bestimmten [[Präsenzphasen]] in der Hochschule [[teilnehmen]]. | nimmt teil – nahm teil – hat teilgenommen | f
+
+# s2 Программы и степени
+der Studiengang, -gänge | учебная программа, специальность | Nach dem Abschluss eines Bachelorstudiums kann man sich für einen [[Masterstudiengang]] einschreiben. |  | m
+das Aufbaustudium | дополнительное (надстроечное) обучение после первого диплома | In einem [[Aufbaustudium]] kann man das Wissen, das man im ersten Studium erworben hat, erweitern. |  | n
+das Lehramtsstudium | учёба на учителя (педагогическое образование) | Nach dem [[Lehramtsstudium]] muss man ein Referendariat in einer Schule absolvieren. |  | n
+der Studienabschluss, -abschlüsse = der Hochschulabschluss | диплом о высшем образовании, окончание вуза | Heute ist der Bachelor der häufigste [[Studienabschluss]] im Erststudium. |  | m
+einen Studienabschluss erwerben* | получить высшее образование (диплом) | Einen [[Studienabschluss]] kann man sowohl an einer Universität als auch an einer Fachhochschule [[erwerben]]. | erwirbt – erwarb – hat erworben | v
+der akademische Grad, Grade | учёная (академическая) степень | Wenn man ein Studium erfolgreich abgeschlossen hat, hat man [[einen akademischen Grad]] erworben, z. B. den Bachelor- oder den Mastergrad. |  | m
+einen akademischen Grad erwerben* | получить академическую степень | Wenn man ein Studium erfolgreich abgeschlossen hat, hat man einen [[akademischen Grad erworben]], z. B. den Bachelor- oder den Mastergrad. | erwirbt – erwarb – hat erworben | v
+die Habilitationsschrift, -schriften | хабилитационная работа (≈ докторская диссертация) | Für viele, die eine wissenschaftliche Laufbahn anstreben, ist die [[Habilitationsschrift]] der nächste Schritt nach der Promotion. |  | f
+eine Habilitationsschrift verfassen | написать хабилитационную работу | Man muss umfangreiche Recherchen durchführen, bevor man eine [[Habilitationsschrift verfassen]] kann. |  | v
+habilitiert werden* / sein* | получить (иметь) хабилитацию | Um Juniorprofessor zu werden, muss man nicht [[habilitiert sein]]. | wurde habilitiert – ist habilitiert worden | v
+die Habilitation | хабилитация (право преподавать как профессор) | Bei der Bewerbung um eine ordentliche Professur wird oft eine [[Habilitation]] erwartet. |  | f
+
+# s3 Выбор специальности и поступление
+das Studienfach, -fächer | учебная дисциплина, специальность | Wirtschaftswissenschaften wie BWL und VWL sind beliebte [[Studienfächer]]. |  | n
+sich für ein Studienfach entscheiden* | выбрать специальность | Man sollte seine Interessen, aber auch seine Berufsperspektiven berücksichtigen, wenn man [[sich für ein Studienfach entscheidet]]. | entschied – hat entschieden · für + Akk. | v
+die Entscheidung für ein Studienfach | выбор специальности (решение) |  |  | f
+ein Studienfach wählen | выбрать специальность | Bei Informationsveranstaltungen kann man sich über verschiedene Studienfächer informieren, um dann leichter das richtige [[Fach wählen]] zu können. |  | v
+die Wahl des Studienfachs · die Studienwahl | выбор специальности | In Buchhandlungen findet man Ratgeber, die Abiturienten bei der [[Studienwahl]] helfen sollen. |  | f
+sich beraten lassen* | получить консультацию | Abiturienten können sich bei der Studienwahl [[beraten lassen]], um herauszufinden, welches Fach für sie am besten geeignet ist. | lässt – ließ – hat sich beraten lassen | v
+die Studienberatung | консультация по вопросам учёбы | Wenn Studierende im Studium Schwierigkeiten haben, können sie sich an die [[Studienberatung]] wenden. | sich an + Akk. wenden | f
+der Studienbewerber / die Studienbewerberin, Studienbewerber | абитуриент (подающий документы в вуз) | Die Zahl der ausländischen [[Studienbewerber]] ist in den vergangenen Jahren kontinuierlich gestiegen. |  | m
+zugelassen werden* | быть допущенным, принятым (к учёбе) | Um zum Studium [[zugelassen zu werden]], muss ein Studienbewerber verschiedene Voraussetzungen erfüllen. | zu + Dat.: zum Studium zugelassen werden | v
+die Zulassung | допуск, зачисление | Einige Zeit vor Beginn des Semesters erhalten die Studienbewerber ihre [[Zulassung]]. |  | f
+die Zulassungsbeschränkung, -beschränkungen | ограничение приёма | Für das Studium bestimmter Fächer gelten [[Zulassungsbeschränkungen]], z. B. wenn es mehr Bewerber als Studienplätze gibt. |  | f
+der Numerus clausus (N.C.) | минимальный проходной балл аттестата | Der [[Numerus clausus]] gibt eine Abiturnote vor, die Studienbewerber erreichen müssen, um beispielsweise zum Medizinstudium zugelassen zu werden. |  | m
+
+# s4 Зачисление, начало и перерыв в учёбе
+sich immatrikulieren (lassen) = sich einschreiben* (lassen) | зачислиться в вуз, записаться | Bevor man mit dem Studium beginnen kann, muss man sich an der Hochschule [[immatrikulieren]]. | schrieb sich ein – hat sich eingeschrieben | v
+die Immatrikulation = die Einschreibung | зачисление, запись в вуз | Die [[Immatrikulation]] ist die offizielle Anmeldung einer bzw. eines Studierenden an der Hochschule. |  | f
+sich exmatrikulieren (lassen) | отчислиться (по своему желанию) | Es wird empfohlen, sich nach dem Ende des Studiums offiziell an der Hochschule zu [[exmatrikulieren]]. |  | v
+exmatrikuliert werden* | быть отчисленным | Studierende, die die erforderlichen Studienleistungen nicht erbringen, können von der Universität [[exmatrikuliert werden]]. |  | v
+die Exmatrikulation | отчисление | Mit der [[Exmatrikulation]] verliert man die finanziellen Vorteile eines Studenten, z. B. bei der Krankenversicherung. |  | f
+die Erstsemester (Plural) = die Studienanfänger (Plural) | первокурсники | Orientierungsveranstaltungen für [[Erstsemester]] sind eine gute Gelegenheit, andere [[Studienanfänger]] kennen zu lernen. |  | pl
+ein Studium aufnehmen* / beginnen* | начать учёбу в вузе | Nicht alle Abiturienten [[nehmen]] gleich nach dem Schulabschluss ein [[Studium auf]]. | nimmt auf – nahm auf – hat aufgenommen | v
+ein Studium absolvieren | проходить (заканчивать) курс обучения | Melanie [[absolviert]] zurzeit ein Studium der Agrarökonomie an der Universität München. |  | v
+das Studium unterbrechen* | прервать учёбу | Wegen ihrer Schwangerschaft hat die Studentin das Studium für zwei Semester [[unterbrochen]]. | unterbricht – unterbrach – hat unterbrochen (неотделяемая) | v
+die Unterbrechung des Studiums | перерыв в учёбе, академический отпуск |  |  | f
+
+# s5 Окончание учёбы и экзамены
+das Studium abbrechen* | бросить учёбу | Es wird heftig darüber diskutiert, warum manche Studierende ihr Studium kurz vor dem Examen [[abbrechen]]. | bricht ab – brach ab – hat abgebrochen | v
+der Studienabbruch | прекращение учёбы, отчисление |  |  | m
+der Studienabbrecher / die Studienabbrecherin, Studienabbrecher | бросивший учёбу студент | Eine bessere Betreuung der Studierenden durch die Universitäten könnte dazu beitragen, die Zahl der [[Studienabbrecher]] zu senken. |  | m
+das Studium abschließen* | окончить вуз | Je schneller man das Studium [[abschließt]], desto früher kann man eine gut bezahlte Stelle finden. | schloss ab – hat abgeschlossen | v
+die Regelstudienzeit, -zeiten | нормативный срок обучения | Wer sich voll auf sein Studium konzentriert, sollte es innerhalb der [[Regelstudienzeit]] abschließen können. |  | f
+die Regelstudienzeit überschreiten* | превысить нормативный срок обучения | Studierende, die neben dem Studium jobben, [[überschreiten]] häufig die [[Regelstudienzeit]]. | überschritt – hat überschritten (неотделяемая) | v
+die Überschreitung der Regelstudienzeit | превышение нормативного срока обучения |  |  | f
+eine Prüfung ablegen | сдавать экзамен | Studierende klagen darüber, dass sie innerhalb eines Semesters zu viele [[Prüfungen ablegen]] müssen. |  | v
+die Zwischenprüfung, -prüfungen | промежуточный экзамен | In bestimmten Studiengängen müssen Studierende während des Studiums eine [[Zwischenprüfung]] ablegen. |  | f
+die Abschlussprüfung, -prüfungen | выпускной экзамен | Die [[Abschlussprüfung]] besteht meist aus einer Hausarbeit sowie einer mündlichen und einer schriftlichen Prüfung. |  | f
+das Staatsexamen, -examina | государственный экзамен | Lehrer und Juristen legen nach dem Referendariat das Zweite [[Staatsexamen]] ab. | мн. ч. die Staatsexamina | n
+der Hochschulabsolvent / die Hochschulabsolventin, Hochschulabsolventen | выпускник вуза | Untersuchungen belegen, dass [[Hochschulabsolventen]] seltener arbeitslos sind als junge Leute ohne Hochschulabschluss. | n-склонение | m
+
+# s6 Докторантура
+promovieren | защитить докторскую (кандидатскую) диссертацию | Die meisten Mediziner [[promovieren]] nach dem Studium, damit sie sich „Dr.“ nennen dürfen. | hat promoviert | v
+die Promotion | получение докторской степени | Die Wahl des Themas ist einer der wichtigsten Schritte bei einer [[Promotion]]. |  | f
+die Dissertation = die Doktorarbeit | диссертация | Doktoranden sind verpflichtet, ihre [[Dissertationen]] zu veröffentlichen. |  | f
+eine Dissertation schreiben* / verfassen | писать диссертацию | Man braucht in der Regel mehrere Jahre, um eine [[Dissertation zu verfassen]]. | schrieb – hat geschrieben | v
+das Schreiben / Verfassen der Dissertation | написание диссертации |  |  | n
+der Doktorand / die Doktorandin, Doktoranden | докторант, аспирант | In verschiedenen Internetforen können [[Doktoranden]] ihre Erfahrungen austauschen. | n-склонение: den Doktoranden | m
+der Doktorvater / die Doktormutter | научный руководитель | Man kann seinen [[Doktorvater]] an der Universität, an der man studiert hat, oder an einer anderen Hochschule finden. |  | m
+eine Doktorarbeit betreuen | руководить диссертацией | Die Doktormutter [[betreut]] die [[Doktorarbeit]], indem sie den Studierenden bei der Wahl des Themas und dem Verfassen der Arbeit berät. |  | v
+die Betreuung der Doktorarbeit | научное руководство диссертацией |  |  | f
+
+# s7 Преподаватели и занятия
+der Dozent / die Dozentin, Dozenten | преподаватель вуза | Es ist die Aufgabe der [[Dozenten]], Vorlesungen zu halten und Studierende zu betreuen. | n-склонение: den Dozenten | m
+die Sprechstunde, -stunden | консультационный час (приёмные часы) | Wenn ein Student etwas mit einem Dozenten besprechen möchte, sollte er zu dessen [[Sprechstunde]] gehen. |  | f
+die wissenschaftliche Hilfskraft, Hilfskräfte (formell) = der HiWi, HiWis (informell) | студент-ассистент на кафедре | Studierende arbeiten gerne als [[wissenschaftliche Hilfskräfte]], weil sie auf diese Weise Studium und Arbeit gut miteinander verbinden können. |  | f
+der Kommilitone / die Kommilitonin, Kommilitonen | однокурсник | Es ist sinnvoll, sich gemeinsam mit seinen [[Kommilitonen]] auf eine Prüfung vorzubereiten. | n-склонение: den Kommilitonen | m
+die Lehrveranstaltung, -veranstaltungen | учебное занятие (лекция, семинар) | In den [[Lehrveranstaltungen]] vermitteln die Dozenten den Studierenden ihre Kenntnisse. |  | f
+eine Lehrveranstaltung anbieten* | предлагать (вести) учебный курс | Die Professoren [[bieten]] Seminare zu Themen [[an]], die zu ihrem Forschungsschwerpunkt gehören. | bot an – hat angeboten | v
+eine Lehrveranstaltung besuchen | посещать занятие | Bestimmte [[Lehrveranstaltungen]], z. B. Einführungsvorlesungen, müssen alle Studierenden eines Faches [[besuchen]]. |  | v
+der Besuch einer Lehrveranstaltung | посещение занятия |  |  | m
+das Vorlesungsverzeichnis, -verzeichnisse | каталог (расписание) курсов | Im [[Vorlesungsverzeichnis]], das jedes Semester erscheint, sind alle Lehrveranstaltungen aufgeführt. |  | n
+das Propädeutikum, Propädeutika | вводный (подготовительный) курс | Im Rahmen eines [[Propädeutikums]] werden den Studierenden wissenschaftliche Arbeitstechniken vermittelt. | мн. ч. die Propädeutika | n
+
+# s8 Лекции, семинары, модули
+die Vorlesung, Vorlesungen | лекция | Manche Dozenten fördern Diskussionen in ihren [[Vorlesungen]], andere konzentrieren sich darauf, den Studierenden die Inhalte vorzutragen. |  | f
+eine Vorlesung halten* | читать лекцию | Professor Steinberg [[hält]] jedes Semester die [[Vorlesung]] „Einführung in die Pädagogische Psychologie“. | hält – hielt – hat gehalten | v
+eine Vorlesung hören | слушать лекцию (посещать курс) | Viele Studierende wollen die [[Vorlesung hören]], weil die Professorin für ihre interessanten Vorlesungen bekannt ist. |  | v
+das Seminar, Seminare | семинар | In [[Seminaren]] sind die Studierenden deutlich aktiver als in Vorlesungen, z. B. wenn sie über ein Thema diskutieren oder ein Referat halten. |  | n
+an einem Seminar teilnehmen* | участвовать в семинаре | Es wird viel Wert darauf gelegt, dass die Studierenden regelmäßig [[an]] den [[Seminaren teilnehmen]]. | nimmt teil – nahm teil – hat teilgenommen · an + Dat. | v
+die Teilnahme an einem Seminar | участие в семинаре |  |  | f
+die Exkursion, Exkursionen | учебная экскурсия, выезд | Im Rahmen des Seminars unternehmen die Archäologiestudenten eine [[Exkursion]], um sich vor Ort eine Grabung anzusehen. | eine Exkursion unternehmen | f
+das Tutorium, Tutorien | тьюториал (занятие под руководством старшекурсника) | [[Tutorien]] sind eine große Hilfe bei der Vertiefung des Lern- und Prüfungsstoffes. |  | n
+der Tutor / die Tutorin, Tutoren | тьютор | Die [[Tutoren]], die diese Veranstaltungen durchführen, sind häufig Studierende in höheren Semestern. |  | m
+das Kolloquium, Kolloquien | коллоквиум | Im wissenschaftlichen [[Kolloquium]] halten verschiedene Wissenschaftler Vorträge, zu denen alle Interessenten innerhalb und außerhalb der Universität herzlich eingeladen sind. |  | n
+das Modul, Module | модуль (блок курсов) | Die Studieninhalte sind in verschiedene [[Module]] unterteilt, die aus einer oder mehreren Lehrveranstaltungen zu einem Thema bestehen. |  | n
+
+# s9 Кредиты и курсовые
+der Kreditpunkt, -punkte | кредит, зачётная единица (ECTS) | Für die erfolgreiche Teilnahme an einer Lehrveranstaltung erhalten die Studierenden [[Kreditpunkte]]. |  | m
+Kreditpunkte sammeln | набирать кредиты | Bevor man sich zur Prüfung anmelden kann, muss man in diesem Studiengang 150 [[Kreditpunkte sammeln]]. |  | v
+das Sammeln von Kreditpunkten | набор кредитов |  |  | n
+die Studienleistung, Studienleistungen | учебное задание, зачётная работа | Wie viele Kreditpunkte man für eine [[Studienleistung]] erhält, hängt davon ab, wie viel Zeit man dafür investieren muss. |  | f
+eine Studienleistung erbringen* | выполнить учебное задание | Studierende müssen je nach Lehrveranstaltung benotete oder unbenotete [[Studienleistungen erbringen]]. | erbrachte – hat erbracht | v
+die Hausarbeit, Hausarbeiten | курсовая (письменная) работа | Viele Studierende nutzen die Semesterferien, um ihre [[Hausarbeiten]] zu schreiben. |  | f
+eine Hausarbeit schreiben* / verfassen | писать курсовую | Wenn sie [[Hausarbeiten verfassen]], müssen die Studierenden formale Vorgaben beachten, z. B. die Regeln für das Zitieren aus Texten. | schrieb – hat geschrieben | v
+das Schreiben / Verfassen einer Hausarbeit | написание курсовой |  |  | n
+# s10 Экзамены, доклады, протоколы
+die Klausur, Klausuren | письменный экзамен, контрольная | Der Lernerfolg der Studierenden wird durch eine mündliche Prüfung oder eine [[Klausur]] überprüft. |  | f
+eine Klausur schreiben* | писать письменный экзамен | Viele Studierende sind bei mündlichen Prüfungen sehr nervös und ziehen es deshalb vor, eine [[Klausur zu schreiben]]. | schrieb – hat geschrieben | v
+das Referat, Referate | доклад | Ein [[Referat]] sollte gut verständlich und klar strukturiert sein, damit die anderen Studierenden dem Vortrag folgen können. |  | n
+ein Referat halten* | делать доклад | In vielen Seminaren wird erwartet, dass jeder Studierende ein [[Referat hält]]. | hält – hielt – hat gehalten | v
+
+das Stundenprotokoll, -protokolle | протокол занятия (краткое изложение) | Einige Dozenten verlangen, dass in jeder Seminarsitzung ein Student ein [[Stundenprotokoll]] anfertigt und seinen Kommilitonen diese Zusammenfassung zur Verfügung stellt. |  | n
+ein Stundenprotokoll anfertigen | составить протокол занятия | Wenn man ein [[Stundenprotokoll anfertigt]], lernt man, Inhalte kurz und präzise zusammenzufassen. | fertigte an – hat angefertigt | v
+die Lernplattform, -plattformen | учебная онлайн-платформа | Auf [[Lernplattformen]] haben die Studierenden die Möglichkeit, sich online über die Studieninhalte auszutauschen. |  | f
+
+# s11 Кампус и учреждения вуза
+der Campus, Campus · auf dem Campus | кампус · на территории кампуса | Bei deutschen Universitäten, die vor mehreren hundert Jahren gegründet wurden, befinden sich die Wohnheime normalerweise nicht [[auf dem Campus]]. | мн. ч. = ед. ч. | m
+das Hauptgebäude | главный корпус | Die Abschlussfeier der Absolventen findet wie jedes Jahr im [[Hauptgebäude]] statt. |  | n
+der Hörsaal, Hörsäle | лекционный зал, аудитория | Der [[Hörsaal]] ist überfüllt, so dass einige Studierende während der Vorlesung auf dem Boden sitzen müssen. |  | m
+die Mensa, Mensen | студенческая столовая | In der [[Mensa]] können Studierende ein warmes Essen zu günstigen Preisen bekommen. | мн. ч. die Mensen | f
+das Studentenwohnheim, -wohnheime | студенческое общежитие | Nicht alle Zimmer in [[Studentenwohnheimen]] verfügen über eine eigene Küche. |  | n
+das Studentenwerk, -werke = das Studierendenwerk | студенческая служба (общежития, столовые) | Die Mensen und Wohnheime werden vom [[Studentenwerk]] betrieben. |  | n
+der Allgemeine Studierendenausschuss (Abkürzung: AStA) | студенческий совет вуза | Der [[AStA]] wird von den Studierenden gewählt und vertritt ihre Interessen. |  | m
+
+# s12 Факультеты и службы
+die Fakultät, Fakultäten | факультет | Die philosophische und die naturwissenschaftliche [[Fakultät]] veranstalten eine gemeinsame Vorlesung zum Thema „Ethik in den Biowissenschaften“. |  | f
+die Fachschaft, Fachschaften | студенческое представительство специальности | Mitglieder der [[Fachschaft]] werden einmal im Jahr gewählt und beraten ihre Kommilitonen bei Fragen rund um ihr Fach. |  | f
+das Seminar, Seminare (Institut) | кафедра, институт (подразделение факультета) | Das [[Seminar]] für Romanistik bietet Französischkurse für alle Studierenden an. | второе значение: подразделение вуза | n
+die Seminarbibliothek, -bibliotheken | библиотека кафедры | Wenn Sie eine Fachzeitschrift in der Universitätsbibliothek nicht finden, fragen Sie in der [[Seminarbibliothek]] nach. |  | f
+das Studierendensekretariat, -sekretariate | студенческий секретариат (деканат) | Sollten Sie während des Studiums umziehen, teilen Sie bitte dem [[Studierendensekretariat]] Ihre neue Adresse mit. |  | n
+das Hochschulrechenzentrum, -zentren | вычислительный центр вуза | Im [[Hochschulrechenzentrum]] können Sie einen kostenlosen Internetzugang für Studierende beantragen. |  | n
+das Prüfungsamt, -ämter | экзаменационное управление | Das [[Prüfungsamt]] ist für die Einhaltung der Prüfungsordnung zuständig. | zuständig für + Akk. | n
+
+## b1 Бонус: Болонский процесс (Infobox)
+der Bologna-Prozess | Болонский процесс | Der Begriff „[[Bologna-Prozess]]“ bezeichnet die im Jahre 1999 von 29 europäischen Ländern begonnene Hochschulreform. |  | m
+vergleichbar | сопоставимый | Erstens sollen Studienabschlüsse in verschiedenen Ländern [[vergleichbar]] sein. |  | v
+anerkannt werden* | быть признанным (о дипломе) | Außerdem haben Absolventen bessere Chancen, eine Stelle im Ausland zu finden, wenn der Abschluss aus dem Heimatland dort [[anerkannt wird]]. | die Anerkennung | v
+das Erststudium | первое высшее образование | Zum Zweiten soll das [[Erststudium]] kürzer und praxisbezogener gestaltet werden, um einen schnelleren und leichteren Einstieg in den Beruf zu ermöglichen. |  | n
+der Einstieg in den Beruf | вход в профессию, начало карьеры | Zum Zweiten soll das Erststudium kürzer und praxisbezogener gestaltet werden, um einen schnelleren und leichteren [[Einstieg in den Beruf]] zu ermöglichen. |  | m
+sich für einen Masterstudiengang einschreiben* | записаться на магистратуру | Wer sein Studium weiterführen will, hat danach die Möglichkeit, [[sich für einen Masterstudiengang einzuschreiben]], der meist 2 bis 4 Semester dauert. | schrieb sich ein – hat sich eingeschrieben | v
+das gestufte Studiensystem | ступенчатая система высшего образования | Das so genannte [[gestufte Studiensystem]] (1. Stufe: Bachelor, 2. Stufe: Master) ist besonders in den ersten Jahren auf Kritik gestoßen. |  | n
+auf Kritik stoßen* | встретить критику | Das so genannte gestufte Studiensystem ist besonders in den ersten Jahren [[auf Kritik gestoßen]]. | stößt – stieß – ist gestoßen | v
+überlastet sein* | быть перегруженным | Studierende sind wegen des engen Zeitplans und der vielen Prüfungen [[überlastet]]. |  | v
+die Studierenden · die Lehrenden (!) | студенты · преподаватели (нейтральные формы) | Deshalb bevorzugt man heute die geschlechtsneutralen Plurale „[[Studierende]]“ und „[[Lehrende]]“. | склоняются как прилагательные: Studierende, der Studierenden | pl
+
+! Schule ↔ Hochschule | Schüler / Lehrer / lernen / Unterricht — но в вузе: Studenten (Studierende) / Dozenten (Lehrende) / studieren / Lehrveranstaltungen
+! der Student, der Kommilitone, der Dozent, der Doktorand | n-склонение: den / dem / des Studenten. Die Studentin склоняется обычно
+! die Studierenden | Склоняется как прилагательное: Studierende (без артикля), die Studierenden, mit Studierenden, Gen. Studierender
+! Studien- в сложных словах | Studium → Studienfach, Studienzeit, Studienordnung (не «Studiumfach»)
+! sich immatrikulieren ↔ exmatrikuliert werden | Сам записываешься — sich immatrikulieren / einschreiben. Отчисляют тебя — exmatrikuliert werden
+! unterbrechen, überschreiten | Неотделяемые: hat unterbrochen, überschreitet. Но abbrechen, abschließen, aufnehmen — отделяемые
+! an einer Hochschule studieren | Предлог an + Dat.: an der Uni, an der Fachhochschule. Но: im Hörsaal, in der Mensa
+! Seminar | 1) занятие (an einem Seminar teilnehmen), 2) институт / кафедра (das Seminar für Romanistik)
+! Mensa, Propädeutikum, Staatsexamen | Латинские мн. ч.: die Mensen, die Propädeutika, die Staatsexamina, die Kolloquien, die Tutorien

@@ -1,0 +1,780 @@
+{
+ "id": "2.5",
+ "chapter": 2,
+ "chapterName": "Der Mensch",
+ "title": "Geist und Seele",
+ "titleRu": "Разум и душа",
+ "pages": "84–88",
+ "exercises": "89–92",
+ "solutions": "262–263",
+ "bookRows": 65,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Восприятие и органы чувств",
+   "items": [
+    {
+     "de": "etw. wahrnehmen*",
+     "ru": "воспринимать, замечать",
+     "ex": "Auf manche Geräusche reagieren wir sofort, während wir andere gar nicht bewusst [[wahrnehmen]].",
+     "note": "nimmt wahr – nahm wahr – hat wahrgenommen",
+     "g": "v"
+    },
+    {
+     "de": "die Wahrnehmung",
+     "ru": "восприятие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Reiz, Reize = der Stimulus, Stimuli",
+     "ru": "раздражитель, стимул",
+     "ex": "Menschen werden krank, wenn es in ihrer Umgebung zu viele oder zu wenige [[Reize]] gibt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Reflex, Reflexe",
+     "ru": "рефлекс",
+     "ex": "Der Körper eines gesunden Menschen reagiert auf bestimmte Reize mit einem [[Reflex]], den wir nicht durch unseren Willen steuern können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Sinn, Sinne",
+     "ru": "чувство (орган чувств)",
+     "ex": "Eine der Gefahren radioaktiver Strahlung besteht darin, dass wir sie mit unseren [[Sinnen]] nicht wahrnehmen können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Sinnesorgan, -organe",
+     "ru": "орган чувств",
+     "ex": "Die [[Sinnesorgane]] nehmen Reize auf und leiten sie an das Gehirn weiter.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "akustisch",
+     "ru": "акустический, слуховой",
+     "ex": "Hunde können sehr hohe Töne hören, die für Menschen [[akustisch]] nicht wahrnehmbar sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "optisch",
+     "ru": "оптический, зрительный",
+     "ex": "Durch die Entwicklung neuer Medien sind wir heute mehr [[optischen]] und akustischen Reizen ausgesetzt als früher.",
+     "note": "etw. (Dat.) ausgesetzt sein",
+     "g": "v"
+    },
+    {
+     "de": "das Geräusch, Geräusche",
+     "ru": "звук, шум",
+     "ex": "Regelmäßig wiederkehrende [[Geräusche]], z. B. das Tropfen eines Wasserhahns, machen die meisten Menschen nervös.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Запах, осязание, чувствительность",
+   "items": [
+    {
+     "de": "riechen*",
+     "ru": "пахнуть; нюхать",
+     "ex": "Wenn wir an einem Lebensmittel [[riechen]], haben wir oft auch eine Vorstellung davon, wie es schmeckt.",
+     "note": "roch – hat gerochen · an + Dat. riechen — нюхать",
+     "g": "v"
+    },
+    {
+     "de": "der Geruch, Gerüche",
+     "ru": "запах",
+     "ex": "Ein [[Geruch]] kann intensive Erinnerungen an eine Situation auslösen, in der wir diesen [[Geruch]] früher schon einmal wahrgenommen haben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "duften · duftend",
+     "ru": "благоухать · ароматный",
+     "ex": "Angeblich regt es den Appetit an, wenn es im Haus nach bestimmten Lebensmitteln [[duftet]].",
+     "note": "nach + Dat. duften",
+     "g": "v"
+    },
+    {
+     "de": "der Duft, Düfte",
+     "ru": "аромат",
+     "ex": "In Geschäften werden [[Düfte]] verbreitet, um das Wohlbefinden der Kunden zu steigern und ihr Kaufverhalten zu beeinflussen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdn. / etw. berühren",
+     "ru": "касаться, трогать",
+     "ex": "Wenn wir eine heiße Oberfläche [[berühren]], ziehen wir automatisch sofort die Hand zurück.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Berührung, Berührungen",
+     "ru": "прикосновение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. spüren = fühlen",
+     "ru": "чувствовать, ощущать",
+     "ex": "Es kann sehr entspannend sein, barfuß zu gehen und das Gras unter den Füßen zu [[spüren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. empfinden* = fühlen",
+     "ru": "ощущать, испытывать",
+     "ex": "Vor einer Operation wird der Patient betäubt, damit er keine Schmerzen [[empfindet]].",
+     "note": "empfand – hat empfunden",
+     "g": "v"
+    },
+    {
+     "de": "die Empfindung",
+     "ru": "ощущение, чувство",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "empfindlich",
+     "ru": "чувствительный",
+     "ex": "Wenn Sie sehr [[empfindlich]] auf Lärm reagieren, sollten Sie mit Ohrstöpseln schlafen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sensibel",
+     "ru": "чувствительный, чуткий",
+     "ex": "[[Sensible]] Menschen können die Gefühle anderer sehr genau wahrnehmen.",
+     "note": "sensibel → sensible (e выпадает)",
+     "g": "v"
+    },
+    {
+     "de": "die Sensibilität",
+     "ru": "чуткость, чувствительность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Сознание и мозг",
+   "items": [
+    {
+     "de": "unbewusst",
+     "ru": "бессознательный",
+     "ex": "[[Unbewusste]] Gesten können verraten, dass jemand lügt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "bewusst",
+     "ru": "сознательный, осознанный",
+     "ex": "Wir glauben, dass wir alle unsere Entscheidungen [[bewusst]] treffen, aber auch unbewusste Faktoren beeinflussen unser Handeln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Bewusstsein",
+     "ru": "сознание",
+     "ex": "Bei starken Schmerzen verlieren wir das [[Bewusstsein]] und spüren nichts mehr.",
+     "note": "das Bewusstsein verlieren",
+     "g": "n"
+    },
+    {
+     "de": "bewusstlos",
+     "ru": "без сознания",
+     "ex": "Wenn die Luft nicht genug Sauerstoff enthält, wird man nach einiger Zeit [[bewusstlos]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Hirn, Hirne = das Gehirn, Gehirne",
+     "ru": "мозг",
+     "ex": "Mithilfe moderner Untersuchungsmethoden kann man relativ genau feststellen, welche Teile des [[Gehirns]] in bestimmten Situationen aktiv sind.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Hirnströme (Plural)",
+     "ru": "биотоки мозга",
+     "ex": "Durch ein EEG, ein Elektroenzephalogramm, kann man die [[Hirnströme]] eines Menschen messen und als Kurve darstellen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Nervenzelle, -zellen",
+     "ru": "нервная клетка",
+     "ex": "Das Gehirn besteht aus Milliarden von [[Nervenzellen]], die miteinander kommunizieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Synapse, Synapsen",
+     "ru": "синапс",
+     "ex": "An den Enden einer Gehirnzelle befinden sich [[Synapsen]], durch die Informationen mit anderen Gehirnzellen ausgetauscht werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Informationen verarbeiten",
+     "ru": "обрабатывать информацию",
+     "ex": "Unser Gehirn ist auch im Schlaf aktiv und [[verarbeitet Informationen]], die wir tagsüber aufgenommen haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Informationsverarbeitung",
+     "ru": "обработка информации",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. verknüpfen mit + D",
+     "ru": "связывать с чем-то",
+     "ex": "Am besten lernen wir, wenn wir neue Informationen [[mit]] bereits bekannten Fakten [[verknüpfen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verknüpfung",
+     "ru": "связь, ассоциация",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Память и мышление",
+   "items": [
+    {
+     "de": "das Gedächtnis",
+     "ru": "память",
+     "ex": "Durch gezielte Übungen lässt sich das [[Gedächtnis]] trainieren, so dass wir uns Informationen besser merken können.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. im Gedächtnis behalten*",
+     "ru": "удерживать в памяти",
+     "ex": "Informationen, die für uns persönlich bedeutsam sind, können wir am besten [[im Gedächtnis behalten]].",
+     "note": "behält – behielt – hat behalten",
+     "g": "v"
+    },
+    {
+     "de": "sich etw. merken",
+     "ru": "запоминать",
+     "ex": "Manche Menschen klagen darüber, dass [[sie sich]] keine Namen [[merken]] können.",
+     "note": "sich (Dat.): ich merke mir",
+     "g": "v"
+    },
+    {
+     "de": "sich etw. einprägen",
+     "ru": "запечатлевать в памяти",
+     "ex": "Um [[uns]] eine Telefonnummer [[einzuprägen]], müssen wir sie mehrfach wiederholen.",
+     "note": "sich (Dat.)",
+     "g": "v"
+    },
+    {
+     "de": "kognitiv",
+     "ru": "когнитивный",
+     "ex": "Während die einen eine Sprache am besten [[kognitiv]] lernen, indem sie grammatische Strukturen analysieren, bevorzugen andere kreative und kommunikative Lernmethoden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "rational",
+     "ru": "рациональный",
+     "ex": "Wenn man Vor- und Nachteile abwägt, kann man eine [[rationale]] Entscheidung treffen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "irrational",
+     "ru": "иррациональный",
+     "ex": "Phobien sind psychische Störungen, bei denen die Betroffenen [[irrationale]] Angst vor bestimmten Gegenständen, Tieren oder Situationen haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "vernünftig",
+     "ru": "разумный",
+     "ex": "Wir verhalten uns nicht immer [[vernünftig]]: Wir wissen, welche Entscheidung die beste wäre, und trotzdem tun wir oft das Gegenteil.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Vernunft",
+     "ru": "разум, благоразумие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Неврологические болезни",
+   "items": [
+    {
+     "de": "neurologisch",
+     "ru": "неврологический",
+     "ex": "Wenn man bestimmte Teile des Körpers nicht mehr spüren oder nicht mehr kontrolliert bewegen kann, ist möglicherweise eine [[neurologische]] Erkrankung die Ursache.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Neurologie",
+     "ru": "неврология",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. / etw. lähmen",
+     "ru": "парализовать",
+     "ex": "Verletzungen der Nerven oder neurologische Erkrankungen können bestimmte Körperteile [[lähmen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Lähmung",
+     "ru": "паралич",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "gelähmt sein",
+     "ru": "быть парализованным",
+     "ex": "Seit einem Unfall sind ihre Beine [[gelähmt]], und sie ist auf den Rollstuhl angewiesen.",
+     "note": "auf + Akk. angewiesen sein",
+     "g": "v"
+    },
+    {
+     "de": "das Koma",
+     "ru": "кома",
+     "ex": "Bis heute weiß man nicht genau, ob Menschen, die im [[Koma]] liegen, ihre Umgebung wahrnehmen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "dement",
+     "ru": "страдающий деменцией",
+     "ex": "Menschen werden [[dement]], wenn Nervenzellen im Gehirn absterben und dadurch die geistige Leistungsfähigkeit stark nachlässt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Demenz",
+     "ru": "деменция",
+     "ex": "Vor allem ältere Menschen sind von [[Demenz]] betroffen; es gibt jedoch auch Erkrankungen, die bei Jüngeren auftreten können.",
+     "note": "von + Dat. betroffen sein",
+     "g": "f"
+    },
+    {
+     "de": "die Alzheimerkrankheit",
+     "ru": "болезнь Альцгеймера",
+     "ex": "Die [[Alzheimerkrankheit]] ist ein Beispiel für eine Erkrankung, die zur Demenz führt.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Эмоции",
+   "items": [
+    {
+     "de": "emotional",
+     "ru": "эмоциональный",
+     "ex": "Wenn wir verliebt sind oder Angst haben, verhalten wir uns oft nicht vernünftig, sondern reagieren [[emotional]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Emotion, Emotionen",
+     "ru": "эмоция",
+     "ex": "Nicht nur sachliche Argumente, sondern auch [[Emotionen]] beeinflussen unser Verhalten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "euphorisch",
+     "ru": "эйфорический",
+     "ex": "Menschen nehmen bestimmte Drogen, weil die Einnahme dieser Substanzen sie [[euphorisch]] macht.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Euphorie",
+     "ru": "эйфория",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "enttäuscht",
+     "ru": "разочарованный",
+     "ex": "Wir sind [[enttäuscht]], wenn unsere Hoffnungen oder Erwartungen nicht erfüllt werden.",
+     "note": "von + Dat. enttäuscht",
+     "g": "v"
+    },
+    {
+     "de": "die Enttäuschung",
+     "ru": "разочарование",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verzweifelt",
+     "ru": "отчаявшийся",
+     "ex": "In einer aussichtslosen Situation fühlt man sich hilflos und [[verzweifelt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verzweiflung",
+     "ru": "отчаяние",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Паника и горе",
+   "items": [
+    {
+     "de": "panisch",
+     "ru": "панический",
+     "ex": "Wenn Menschen bei einer Katastrophe [[panisch]] reagieren, kann das zu vielen Toten und Verletzten führen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Panik",
+     "ru": "паника",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Panik bricht aus*",
+     "ru": "начинается паника",
+     "ex": "Die Sicherheitskräfte versuchen zu verhindern, dass [[Panik ausbricht]].",
+     "note": "brach aus – ist ausgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "in Panik geraten*",
+     "ru": "впасть в панику",
+     "ex": "Versuchen Sie, ruhig zu bleiben und nicht [[in Panik zu geraten]].",
+     "note": "gerät – geriet – ist geraten",
+     "g": "v"
+    },
+    {
+     "de": "trauern um + A",
+     "ru": "скорбеть по кому-то",
+     "ex": "Früher trugen Witwen nach dem Tod ihres Mannes ein Jahr lang schwarze Kleidung, um zu zeigen, dass sie [[um]] ihn [[trauerten]].",
+     "note": "um + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Trauer",
+     "ru": "скорбь, траур",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. belasten",
+     "ru": "обременять, угнетать",
+     "ex": "Krankheiten, Stress und finanzielle Sorgen [[belasten]] die Betroffenen, aber oft auch ihre Angehörigen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Belastung",
+     "ru": "нагрузка, бремя",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. verdrängen",
+     "ru": "вытеснять (из сознания)",
+     "ex": "Manche Probleme oder Ereignisse [[verdrängen]] wir, indem wir versuchen, sie zu ignorieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verdrängung",
+     "ru": "вытеснение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Психика и зависимости",
+   "items": [
+    {
+     "de": "traumatisiert",
+     "ru": "травмированный (психически)",
+     "ex": "Nach Einsätzen in Kriegsgebieten sind viele Soldaten von den schrecklichen Dingen, die sie erlebt haben, [[traumatisiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Trauma, Traumata",
+     "ru": "травма (психическая)",
+     "ex": "Eine Psychotherapie kann helfen, erlittene [[Traumata]] zu verarbeiten.",
+     "note": "мн. ч. die Traumata",
+     "g": "n"
+    },
+    {
+     "de": "seelisch = psychisch",
+     "ru": "душевный, психический",
+     "ex": "[[Seelische]] Belastungen können zu körperlichen Erkrankungen führen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Seele = die Psyche",
+     "ru": "душа, психика",
+     "ex": "Spaziergänge in der Natur sind nicht nur gut für den Körper, sondern auch für die [[Seele]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Psychoanalyse",
+     "ru": "психоанализ",
+     "ex": "Durch die von Sigmund Freud entwickelte [[Psychoanalyse]] können verdrängte Erinnerungen wieder bewusst gemacht werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "depressiv",
+     "ru": "депрессивный",
+     "ex": "[[Depressive]] Menschen sind oft traurig und haben keine Lust, irgendetwas zu tun.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Depression, Depressionen",
+     "ru": "депрессия",
+     "ex": "Es ist oft schwer festzustellen, was eine [[Depression]] verursacht hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "süchtig nach + D",
+     "ru": "зависимый от чего-то",
+     "ex": "Manche Menschen sind abhängig von bestimmten Drogen, andere sind [[süchtig nach]] Glücksspiel oder Medienkonsum.",
+     "note": "nach + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Sucht",
+     "ru": "зависимость",
+     "ex": "Die Liste der [[Sucht]]erkrankungen ist lang.",
+     "note": "мн. ч. die Süchte",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Личность",
+   "items": [
+    {
+     "de": "der Charakter, Charaktere",
+     "ru": "характер",
+     "ex": "Wissenschaftler streiten darüber, wie stark die Gene unseren [[Charakter]] beeinflussen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdn. / etw. prägen",
+     "ru": "формировать, накладывать отпечаток",
+     "ex": "Erfahrungen in der Kindheit und Jugend [[prägen]] den Charakter eines Menschen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich verhalten*",
+     "ru": "вести себя",
+     "ex": "In der Pubertät [[verhalten sich]] Jugendliche oft unberechenbar.",
+     "note": "verhält – verhielt – hat verhalten",
+     "g": "v"
+    },
+    {
+     "de": "das Verhalten",
+     "ru": "поведение",
+     "ex": "Für Eltern ist es nicht immer leicht, das [[Verhalten]] ihrer pubertierenden Kinder zu verstehen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Eigenschaft, Eigenschaften",
+     "ru": "качество, свойство",
+     "ex": "Auch wenn es uns schwerfällt, müssen wir akzeptieren, dass jeder von uns auch negative [[Eigenschaften]] hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "introvertiert",
+     "ru": "интровертный",
+     "ex": "[[Introvertierte]] Persönlichkeiten verbringen oft Zeit alleine, um zu lesen oder kreativ zu sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "schüchtern",
+     "ru": "застенчивый",
+     "ex": "Viele Kinder sind in einem bestimmten Alter [[schüchtern]] und verstecken sich hinter ihren Eltern, wenn sie jemanden nicht kennen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "extrovertiert",
+     "ru": "экстравертный",
+     "ex": "[[Extrovertierten]] Menschen fällt es in der Regel leicht, mit anderen ins Gespräch zu kommen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: выгорание (Infobox)",
+   "items": [
+    {
+     "de": "das Burnout",
+     "ru": "эмоциональное выгорание",
+     "ex": "Seit einiger Zeit werden immer mehr Menschen wegen eines so genannten „[[Burnouts]]“ medizinisch bzw. psychologisch behandelt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ausgebrannt",
+     "ru": "выгоревший",
+     "ex": "Der Begriff „Burnout“ bezeichnet einen Zustand, in dem die Betroffenen sich erschöpft oder „[[ausgebrannt]]“ fühlen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Führungskraft, -kräfte",
+     "ru": "руководитель",
+     "ex": "Oft denkt man dabei jedoch an [[Führungskräfte]] und Menschen in helfenden Berufen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Personal abbauen",
+     "ru": "сокращать персонал",
+     "ex": "In vielen Bereichen sollen Kosten gespart werden und deshalb wird [[Personal abgebaut]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "erreichbar",
+     "ru": "доступный (на связи)",
+     "ex": "… dass ein erheblicher Teil der Arbeitnehmer sogar im Urlaub arbeitet oder zumindest für seinen Arbeitgeber telefonisch [[erreichbar]] ist.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Auslöser, -",
+     "ru": "пусковой фактор, триггер",
+     "ex": "… kann auch die private Situation ein Einflussfaktor oder sogar der [[Auslöser]] für einen Burnout sein.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "pflegebedürftig",
+     "ru": "нуждающийся в уходе",
+     "ex": "Als Beispiel lassen sich Angehörige [[pflegebedürftiger]] Menschen anführen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "rund um die Uhr",
+     "ru": "круглосуточно",
+     "ex": "… die [[rund um die Uhr]] eine große Verantwortung tragen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "tabuisiert",
+     "ru": "табуированный",
+     "ex": "Diese Krankheiten waren in der Vergangenheit [[tabuisiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein heikles Thema",
+     "ru": "щекотливая тема",
+     "ex": "Auch heute ist das meist noch [[ein heikles Thema]].",
+     "note": "",
+     "g": "n"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "sich etw. merken / einprägen",
+   "v": "sich в Dativ: Ich merke mir den Namen. Kannst du dir das merken?"
+  },
+  {
+   "k": "riechen nach ↔ riechen an",
+   "v": "Es riecht nach Kaffee (пахнет); an einer Blume riechen (нюхать)"
+  },
+  {
+   "k": "sensibel ↔ empfindlich",
+   "v": "sensibel — чуткий к чувствам других; empfindlich — чувствительный к раздражителям (Lärm, Kälte), обидчивый"
+  },
+  {
+   "k": "in Panik geraten · Panik bricht aus",
+   "v": "Perfekt с sein: Er ist in Panik geraten. Panik ist ausgebrochen"
+  },
+  {
+   "k": "trauern um + A",
+   "v": "Sie trauert um ihren Mann (не «über»)"
+  },
+  {
+   "k": "süchtig nach + D ↔ abhängig von + D",
+   "v": "süchtig nach Alkohol; abhängig von Drogen"
+  },
+  {
+   "k": "das Trauma",
+   "v": "мн. ч. die Traumata (или Traumen)"
+  },
+  {
+   "k": "jdm. fällt etw. leicht / schwer",
+   "v": "Dativ: Extrovertierten Menschen fällt es leicht …"
+  }
+ ]
+}

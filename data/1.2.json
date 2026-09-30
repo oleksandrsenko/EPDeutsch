@@ -1,0 +1,991 @@
+{
+ "id": "1.2",
+ "chapter": 1,
+ "chapterName": "Bildung und Forschung",
+ "title": "Studium",
+ "titleRu": "Учёба в вузе",
+ "pages": "20–27",
+ "exercises": "29–33",
+ "solutions": "260",
+ "bookRows": 94,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Виды вузов и форм обучения",
+   "items": [
+    {
+     "de": "die Hochschule, -schulen",
+     "ru": "высшее учебное заведение, вуз",
+     "ex": "Universitäten und Fachhochschulen bezeichnet man zusammenfassend als [[Hochschulen]].",
+     "note": "обобщающее слово для университетов и FH",
+     "g": "f"
+    },
+    {
+     "de": "die Fachhochschule, -schulen",
+     "ru": "высшая школа прикладных наук",
+     "ex": "Das Studium an einer [[Fachhochschule]] gilt als besonders praxisorientiert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Berufsakademie, -akademien",
+     "ru": "профессиональная академия (дуальное обучение)",
+     "ex": "An einer [[Berufsakademie]] kann man auch ohne Abitur studieren, wenn man zum Beispiel die Meisterprüfung in einem Handwerksberuf bestanden hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Elite-Universität, -Universitäten",
+     "ru": "элитный университет",
+     "ex": "Hochschulen, die sich erfolgreich um den Titel „[[Elite-Universität]]“ beworben haben, erhalten eine besondere finanzielle Förderung vom Staat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "an einer Hochschule / Universität studieren",
+     "ru": "учиться в вузе / университете",
+     "ex": "Möchten Sie später [[an einer Universität]] oder an einer Fachhochschule [[studieren]]?",
+     "note": "an + Dat. (не in der Universität)",
+     "g": "v"
+    },
+    {
+     "de": "das Hochschulranking, -rankings",
+     "ru": "рейтинг вузов",
+     "ex": "Bei [[Hochschulrankings]] werden die Hochschulen nach verschiedenen Kriterien bewertet.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "berufsbegleitend",
+     "ru": "без отрыва от работы, параллельно с работой",
+     "ex": "Ein [[berufsbegleitendes]] Studium bietet Berufstätigen die Möglichkeit, neben ihrer Arbeit ein Studium zu absolvieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Fernstudium",
+     "ru": "заочное (дистанционное) обучение",
+     "ex": "Dank moderner Medien kann man heute einen Hochschulabschluss auch per [[Fernstudium]] erwerben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Präsenzphase, -phasen · an einer Präsenzphase teilnehmen*",
+     "ru": "очная сессия (при заочном обучении) · участвовать в очной сессии",
+     "ex": "Obwohl man bei einem Fernstudium überwiegend zu Hause lernt, muss man auch an bestimmten [[Präsenzphasen]] in der Hochschule [[teilnehmen]].",
+     "note": "nimmt teil – nahm teil – hat teilgenommen",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Программы и степени",
+   "items": [
+    {
+     "de": "der Studiengang, -gänge",
+     "ru": "учебная программа, специальность",
+     "ex": "Nach dem Abschluss eines Bachelorstudiums kann man sich für einen [[Masterstudiengang]] einschreiben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Aufbaustudium",
+     "ru": "дополнительное (надстроечное) обучение после первого диплома",
+     "ex": "In einem [[Aufbaustudium]] kann man das Wissen, das man im ersten Studium erworben hat, erweitern.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Lehramtsstudium",
+     "ru": "учёба на учителя (педагогическое образование)",
+     "ex": "Nach dem [[Lehramtsstudium]] muss man ein Referendariat in einer Schule absolvieren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Studienabschluss, -abschlüsse = der Hochschulabschluss",
+     "ru": "диплом о высшем образовании, окончание вуза",
+     "ex": "Heute ist der Bachelor der häufigste [[Studienabschluss]] im Erststudium.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Studienabschluss erwerben*",
+     "ru": "получить высшее образование (диплом)",
+     "ex": "Einen [[Studienabschluss]] kann man sowohl an einer Universität als auch an einer Fachhochschule [[erwerben]].",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "der akademische Grad, Grade",
+     "ru": "учёная (академическая) степень",
+     "ex": "Wenn man ein Studium erfolgreich abgeschlossen hat, hat man [[einen akademischen Grad]] erworben, z. B. den Bachelor- oder den Mastergrad.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen akademischen Grad erwerben*",
+     "ru": "получить академическую степень",
+     "ex": "Wenn man ein Studium erfolgreich abgeschlossen hat, hat man einen [[akademischen Grad erworben]], z. B. den Bachelor- oder den Mastergrad.",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "die Habilitationsschrift, -schriften",
+     "ru": "хабилитационная работа (≈ докторская диссертация)",
+     "ex": "Für viele, die eine wissenschaftliche Laufbahn anstreben, ist die [[Habilitationsschrift]] der nächste Schritt nach der Promotion.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Habilitationsschrift verfassen",
+     "ru": "написать хабилитационную работу",
+     "ex": "Man muss umfangreiche Recherchen durchführen, bevor man eine [[Habilitationsschrift verfassen]] kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "habilitiert werden* / sein*",
+     "ru": "получить (иметь) хабилитацию",
+     "ex": "Um Juniorprofessor zu werden, muss man nicht [[habilitiert sein]].",
+     "note": "wurde habilitiert – ist habilitiert worden",
+     "g": "v"
+    },
+    {
+     "de": "die Habilitation",
+     "ru": "хабилитация (право преподавать как профессор)",
+     "ex": "Bei der Bewerbung um eine ordentliche Professur wird oft eine [[Habilitation]] erwartet.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Выбор специальности и поступление",
+   "items": [
+    {
+     "de": "das Studienfach, -fächer",
+     "ru": "учебная дисциплина, специальность",
+     "ex": "Wirtschaftswissenschaften wie BWL und VWL sind beliebte [[Studienfächer]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "sich für ein Studienfach entscheiden*",
+     "ru": "выбрать специальность",
+     "ex": "Man sollte seine Interessen, aber auch seine Berufsperspektiven berücksichtigen, wenn man [[sich für ein Studienfach entscheidet]].",
+     "note": "entschied – hat entschieden · für + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Entscheidung für ein Studienfach",
+     "ru": "выбор специальности (решение)",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "ein Studienfach wählen",
+     "ru": "выбрать специальность",
+     "ex": "Bei Informationsveranstaltungen kann man sich über verschiedene Studienfächer informieren, um dann leichter das richtige [[Fach wählen]] zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Wahl des Studienfachs · die Studienwahl",
+     "ru": "выбор специальности",
+     "ex": "In Buchhandlungen findet man Ratgeber, die Abiturienten bei der [[Studienwahl]] helfen sollen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich beraten lassen*",
+     "ru": "получить консультацию",
+     "ex": "Abiturienten können sich bei der Studienwahl [[beraten lassen]], um herauszufinden, welches Fach für sie am besten geeignet ist.",
+     "note": "lässt – ließ – hat sich beraten lassen",
+     "g": "v"
+    },
+    {
+     "de": "die Studienberatung",
+     "ru": "консультация по вопросам учёбы",
+     "ex": "Wenn Studierende im Studium Schwierigkeiten haben, können sie sich an die [[Studienberatung]] wenden.",
+     "note": "sich an + Akk. wenden",
+     "g": "f"
+    },
+    {
+     "de": "der Studienbewerber / die Studienbewerberin, Studienbewerber",
+     "ru": "абитуриент (подающий документы в вуз)",
+     "ex": "Die Zahl der ausländischen [[Studienbewerber]] ist in den vergangenen Jahren kontinuierlich gestiegen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "zugelassen werden*",
+     "ru": "быть допущенным, принятым (к учёбе)",
+     "ex": "Um zum Studium [[zugelassen zu werden]], muss ein Studienbewerber verschiedene Voraussetzungen erfüllen.",
+     "note": "zu + Dat.: zum Studium zugelassen werden",
+     "g": "v"
+    },
+    {
+     "de": "die Zulassung",
+     "ru": "допуск, зачисление",
+     "ex": "Einige Zeit vor Beginn des Semesters erhalten die Studienbewerber ihre [[Zulassung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Zulassungsbeschränkung, -beschränkungen",
+     "ru": "ограничение приёма",
+     "ex": "Für das Studium bestimmter Fächer gelten [[Zulassungsbeschränkungen]], z. B. wenn es mehr Bewerber als Studienplätze gibt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Numerus clausus (N.C.)",
+     "ru": "минимальный проходной балл аттестата",
+     "ex": "Der [[Numerus clausus]] gibt eine Abiturnote vor, die Studienbewerber erreichen müssen, um beispielsweise zum Medizinstudium zugelassen zu werden.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Зачисление, начало и перерыв в учёбе",
+   "items": [
+    {
+     "de": "sich immatrikulieren (lassen) = sich einschreiben* (lassen)",
+     "ru": "зачислиться в вуз, записаться",
+     "ex": "Bevor man mit dem Studium beginnen kann, muss man sich an der Hochschule [[immatrikulieren]].",
+     "note": "schrieb sich ein – hat sich eingeschrieben",
+     "g": "v"
+    },
+    {
+     "de": "die Immatrikulation = die Einschreibung",
+     "ru": "зачисление, запись в вуз",
+     "ex": "Die [[Immatrikulation]] ist die offizielle Anmeldung einer bzw. eines Studierenden an der Hochschule.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich exmatrikulieren (lassen)",
+     "ru": "отчислиться (по своему желанию)",
+     "ex": "Es wird empfohlen, sich nach dem Ende des Studiums offiziell an der Hochschule zu [[exmatrikulieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "exmatrikuliert werden*",
+     "ru": "быть отчисленным",
+     "ex": "Studierende, die die erforderlichen Studienleistungen nicht erbringen, können von der Universität [[exmatrikuliert werden]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Exmatrikulation",
+     "ru": "отчисление",
+     "ex": "Mit der [[Exmatrikulation]] verliert man die finanziellen Vorteile eines Studenten, z. B. bei der Krankenversicherung.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Erstsemester (Plural) = die Studienanfänger (Plural)",
+     "ru": "первокурсники",
+     "ex": "Orientierungsveranstaltungen für [[Erstsemester]] sind eine gute Gelegenheit, andere [[Studienanfänger]] kennen zu lernen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "ein Studium aufnehmen* / beginnen*",
+     "ru": "начать учёбу в вузе",
+     "ex": "Nicht alle Abiturienten [[nehmen]] gleich nach dem Schulabschluss ein [[Studium auf]].",
+     "note": "nimmt auf – nahm auf – hat aufgenommen",
+     "g": "v"
+    },
+    {
+     "de": "ein Studium absolvieren",
+     "ru": "проходить (заканчивать) курс обучения",
+     "ex": "Melanie [[absolviert]] zurzeit ein Studium der Agrarökonomie an der Universität München.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Studium unterbrechen*",
+     "ru": "прервать учёбу",
+     "ex": "Wegen ihrer Schwangerschaft hat die Studentin das Studium für zwei Semester [[unterbrochen]].",
+     "note": "unterbricht – unterbrach – hat unterbrochen (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "die Unterbrechung des Studiums",
+     "ru": "перерыв в учёбе, академический отпуск",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Окончание учёбы и экзамены",
+   "items": [
+    {
+     "de": "das Studium abbrechen*",
+     "ru": "бросить учёбу",
+     "ex": "Es wird heftig darüber diskutiert, warum manche Studierende ihr Studium kurz vor dem Examen [[abbrechen]].",
+     "note": "bricht ab – brach ab – hat abgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "der Studienabbruch",
+     "ru": "прекращение учёбы, отчисление",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Studienabbrecher / die Studienabbrecherin, Studienabbrecher",
+     "ru": "бросивший учёбу студент",
+     "ex": "Eine bessere Betreuung der Studierenden durch die Universitäten könnte dazu beitragen, die Zahl der [[Studienabbrecher]] zu senken.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Studium abschließen*",
+     "ru": "окончить вуз",
+     "ex": "Je schneller man das Studium [[abschließt]], desto früher kann man eine gut bezahlte Stelle finden.",
+     "note": "schloss ab – hat abgeschlossen",
+     "g": "v"
+    },
+    {
+     "de": "die Regelstudienzeit, -zeiten",
+     "ru": "нормативный срок обучения",
+     "ex": "Wer sich voll auf sein Studium konzentriert, sollte es innerhalb der [[Regelstudienzeit]] abschließen können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Regelstudienzeit überschreiten*",
+     "ru": "превысить нормативный срок обучения",
+     "ex": "Studierende, die neben dem Studium jobben, [[überschreiten]] häufig die [[Regelstudienzeit]].",
+     "note": "überschritt – hat überschritten (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "die Überschreitung der Regelstudienzeit",
+     "ru": "превышение нормативного срока обучения",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Prüfung ablegen",
+     "ru": "сдавать экзамен",
+     "ex": "Studierende klagen darüber, dass sie innerhalb eines Semesters zu viele [[Prüfungen ablegen]] müssen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Zwischenprüfung, -prüfungen",
+     "ru": "промежуточный экзамен",
+     "ex": "In bestimmten Studiengängen müssen Studierende während des Studiums eine [[Zwischenprüfung]] ablegen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Abschlussprüfung, -prüfungen",
+     "ru": "выпускной экзамен",
+     "ex": "Die [[Abschlussprüfung]] besteht meist aus einer Hausarbeit sowie einer mündlichen und einer schriftlichen Prüfung.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Staatsexamen, -examina",
+     "ru": "государственный экзамен",
+     "ex": "Lehrer und Juristen legen nach dem Referendariat das Zweite [[Staatsexamen]] ab.",
+     "note": "мн. ч. die Staatsexamina",
+     "g": "n"
+    },
+    {
+     "de": "der Hochschulabsolvent / die Hochschulabsolventin, Hochschulabsolventen",
+     "ru": "выпускник вуза",
+     "ex": "Untersuchungen belegen, dass [[Hochschulabsolventen]] seltener arbeitslos sind als junge Leute ohne Hochschulabschluss.",
+     "note": "n-склонение",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Докторантура",
+   "items": [
+    {
+     "de": "promovieren",
+     "ru": "защитить докторскую (кандидатскую) диссертацию",
+     "ex": "Die meisten Mediziner [[promovieren]] nach dem Studium, damit sie sich „Dr.“ nennen dürfen.",
+     "note": "hat promoviert",
+     "g": "v"
+    },
+    {
+     "de": "die Promotion",
+     "ru": "получение докторской степени",
+     "ex": "Die Wahl des Themas ist einer der wichtigsten Schritte bei einer [[Promotion]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Dissertation = die Doktorarbeit",
+     "ru": "диссертация",
+     "ex": "Doktoranden sind verpflichtet, ihre [[Dissertationen]] zu veröffentlichen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Dissertation schreiben* / verfassen",
+     "ru": "писать диссертацию",
+     "ex": "Man braucht in der Regel mehrere Jahre, um eine [[Dissertation zu verfassen]].",
+     "note": "schrieb – hat geschrieben",
+     "g": "v"
+    },
+    {
+     "de": "das Schreiben / Verfassen der Dissertation",
+     "ru": "написание диссертации",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Doktorand / die Doktorandin, Doktoranden",
+     "ru": "докторант, аспирант",
+     "ex": "In verschiedenen Internetforen können [[Doktoranden]] ihre Erfahrungen austauschen.",
+     "note": "n-склонение: den Doktoranden",
+     "g": "m"
+    },
+    {
+     "de": "der Doktorvater / die Doktormutter",
+     "ru": "научный руководитель",
+     "ex": "Man kann seinen [[Doktorvater]] an der Universität, an der man studiert hat, oder an einer anderen Hochschule finden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "eine Doktorarbeit betreuen",
+     "ru": "руководить диссертацией",
+     "ex": "Die Doktormutter [[betreut]] die [[Doktorarbeit]], indem sie den Studierenden bei der Wahl des Themas und dem Verfassen der Arbeit berät.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Betreuung der Doktorarbeit",
+     "ru": "научное руководство диссертацией",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Преподаватели и занятия",
+   "items": [
+    {
+     "de": "der Dozent / die Dozentin, Dozenten",
+     "ru": "преподаватель вуза",
+     "ex": "Es ist die Aufgabe der [[Dozenten]], Vorlesungen zu halten und Studierende zu betreuen.",
+     "note": "n-склонение: den Dozenten",
+     "g": "m"
+    },
+    {
+     "de": "die Sprechstunde, -stunden",
+     "ru": "консультационный час (приёмные часы)",
+     "ex": "Wenn ein Student etwas mit einem Dozenten besprechen möchte, sollte er zu dessen [[Sprechstunde]] gehen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die wissenschaftliche Hilfskraft, Hilfskräfte (formell) = der HiWi, HiWis (informell)",
+     "ru": "студент-ассистент на кафедре",
+     "ex": "Studierende arbeiten gerne als [[wissenschaftliche Hilfskräfte]], weil sie auf diese Weise Studium und Arbeit gut miteinander verbinden können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Kommilitone / die Kommilitonin, Kommilitonen",
+     "ru": "однокурсник",
+     "ex": "Es ist sinnvoll, sich gemeinsam mit seinen [[Kommilitonen]] auf eine Prüfung vorzubereiten.",
+     "note": "n-склонение: den Kommilitonen",
+     "g": "m"
+    },
+    {
+     "de": "die Lehrveranstaltung, -veranstaltungen",
+     "ru": "учебное занятие (лекция, семинар)",
+     "ex": "In den [[Lehrveranstaltungen]] vermitteln die Dozenten den Studierenden ihre Kenntnisse.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Lehrveranstaltung anbieten*",
+     "ru": "предлагать (вести) учебный курс",
+     "ex": "Die Professoren [[bieten]] Seminare zu Themen [[an]], die zu ihrem Forschungsschwerpunkt gehören.",
+     "note": "bot an – hat angeboten",
+     "g": "v"
+    },
+    {
+     "de": "eine Lehrveranstaltung besuchen",
+     "ru": "посещать занятие",
+     "ex": "Bestimmte [[Lehrveranstaltungen]], z. B. Einführungsvorlesungen, müssen alle Studierenden eines Faches [[besuchen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Besuch einer Lehrveranstaltung",
+     "ru": "посещение занятия",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Vorlesungsverzeichnis, -verzeichnisse",
+     "ru": "каталог (расписание) курсов",
+     "ex": "Im [[Vorlesungsverzeichnis]], das jedes Semester erscheint, sind alle Lehrveranstaltungen aufgeführt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Propädeutikum, Propädeutika",
+     "ru": "вводный (подготовительный) курс",
+     "ex": "Im Rahmen eines [[Propädeutikums]] werden den Studierenden wissenschaftliche Arbeitstechniken vermittelt.",
+     "note": "мн. ч. die Propädeutika",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Лекции, семинары, модули",
+   "items": [
+    {
+     "de": "die Vorlesung, Vorlesungen",
+     "ru": "лекция",
+     "ex": "Manche Dozenten fördern Diskussionen in ihren [[Vorlesungen]], andere konzentrieren sich darauf, den Studierenden die Inhalte vorzutragen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Vorlesung halten*",
+     "ru": "читать лекцию",
+     "ex": "Professor Steinberg [[hält]] jedes Semester die [[Vorlesung]] „Einführung in die Pädagogische Psychologie“.",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    },
+    {
+     "de": "eine Vorlesung hören",
+     "ru": "слушать лекцию (посещать курс)",
+     "ex": "Viele Studierende wollen die [[Vorlesung hören]], weil die Professorin für ihre interessanten Vorlesungen bekannt ist.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Seminar, Seminare",
+     "ru": "семинар",
+     "ex": "In [[Seminaren]] sind die Studierenden deutlich aktiver als in Vorlesungen, z. B. wenn sie über ein Thema diskutieren oder ein Referat halten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "an einem Seminar teilnehmen*",
+     "ru": "участвовать в семинаре",
+     "ex": "Es wird viel Wert darauf gelegt, dass die Studierenden regelmäßig [[an]] den [[Seminaren teilnehmen]].",
+     "note": "nimmt teil – nahm teil – hat teilgenommen · an + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Teilnahme an einem Seminar",
+     "ru": "участие в семинаре",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Exkursion, Exkursionen",
+     "ru": "учебная экскурсия, выезд",
+     "ex": "Im Rahmen des Seminars unternehmen die Archäologiestudenten eine [[Exkursion]], um sich vor Ort eine Grabung anzusehen.",
+     "note": "eine Exkursion unternehmen",
+     "g": "f"
+    },
+    {
+     "de": "das Tutorium, Tutorien",
+     "ru": "тьюториал (занятие под руководством старшекурсника)",
+     "ex": "[[Tutorien]] sind eine große Hilfe bei der Vertiefung des Lern- und Prüfungsstoffes.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Tutor / die Tutorin, Tutoren",
+     "ru": "тьютор",
+     "ex": "Die [[Tutoren]], die diese Veranstaltungen durchführen, sind häufig Studierende in höheren Semestern.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kolloquium, Kolloquien",
+     "ru": "коллоквиум",
+     "ex": "Im wissenschaftlichen [[Kolloquium]] halten verschiedene Wissenschaftler Vorträge, zu denen alle Interessenten innerhalb und außerhalb der Universität herzlich eingeladen sind.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Modul, Module",
+     "ru": "модуль (блок курсов)",
+     "ex": "Die Studieninhalte sind in verschiedene [[Module]] unterteilt, die aus einer oder mehreren Lehrveranstaltungen zu einem Thema bestehen.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Кредиты и курсовые",
+   "items": [
+    {
+     "de": "der Kreditpunkt, -punkte",
+     "ru": "кредит, зачётная единица (ECTS)",
+     "ex": "Für die erfolgreiche Teilnahme an einer Lehrveranstaltung erhalten die Studierenden [[Kreditpunkte]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Kreditpunkte sammeln",
+     "ru": "набирать кредиты",
+     "ex": "Bevor man sich zur Prüfung anmelden kann, muss man in diesem Studiengang 150 [[Kreditpunkte sammeln]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Sammeln von Kreditpunkten",
+     "ru": "набор кредитов",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Studienleistung, Studienleistungen",
+     "ru": "учебное задание, зачётная работа",
+     "ex": "Wie viele Kreditpunkte man für eine [[Studienleistung]] erhält, hängt davon ab, wie viel Zeit man dafür investieren muss.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Studienleistung erbringen*",
+     "ru": "выполнить учебное задание",
+     "ex": "Studierende müssen je nach Lehrveranstaltung benotete oder unbenotete [[Studienleistungen erbringen]].",
+     "note": "erbrachte – hat erbracht",
+     "g": "v"
+    },
+    {
+     "de": "die Hausarbeit, Hausarbeiten",
+     "ru": "курсовая (письменная) работа",
+     "ex": "Viele Studierende nutzen die Semesterferien, um ihre [[Hausarbeiten]] zu schreiben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Hausarbeit schreiben* / verfassen",
+     "ru": "писать курсовую",
+     "ex": "Wenn sie [[Hausarbeiten verfassen]], müssen die Studierenden formale Vorgaben beachten, z. B. die Regeln für das Zitieren aus Texten.",
+     "note": "schrieb – hat geschrieben",
+     "g": "v"
+    },
+    {
+     "de": "das Schreiben / Verfassen einer Hausarbeit",
+     "ru": "написание курсовой",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Экзамены, доклады, протоколы",
+   "items": [
+    {
+     "de": "die Klausur, Klausuren",
+     "ru": "письменный экзамен, контрольная",
+     "ex": "Der Lernerfolg der Studierenden wird durch eine mündliche Prüfung oder eine [[Klausur]] überprüft.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Klausur schreiben*",
+     "ru": "писать письменный экзамен",
+     "ex": "Viele Studierende sind bei mündlichen Prüfungen sehr nervös und ziehen es deshalb vor, eine [[Klausur zu schreiben]].",
+     "note": "schrieb – hat geschrieben",
+     "g": "v"
+    },
+    {
+     "de": "das Referat, Referate",
+     "ru": "доклад",
+     "ex": "Ein [[Referat]] sollte gut verständlich und klar strukturiert sein, damit die anderen Studierenden dem Vortrag folgen können.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Referat halten*",
+     "ru": "делать доклад",
+     "ex": "In vielen Seminaren wird erwartet, dass jeder Studierende ein [[Referat hält]].",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    },
+    {
+     "de": "das Stundenprotokoll, -protokolle",
+     "ru": "протокол занятия (краткое изложение)",
+     "ex": "Einige Dozenten verlangen, dass in jeder Seminarsitzung ein Student ein [[Stundenprotokoll]] anfertigt und seinen Kommilitonen diese Zusammenfassung zur Verfügung stellt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Stundenprotokoll anfertigen",
+     "ru": "составить протокол занятия",
+     "ex": "Wenn man ein [[Stundenprotokoll anfertigt]], lernt man, Inhalte kurz und präzise zusammenzufassen.",
+     "note": "fertigte an – hat angefertigt",
+     "g": "v"
+    },
+    {
+     "de": "die Lernplattform, -plattformen",
+     "ru": "учебная онлайн-платформа",
+     "ex": "Auf [[Lernplattformen]] haben die Studierenden die Möglichkeit, sich online über die Studieninhalte auszutauschen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "name": "Кампус и учреждения вуза",
+   "items": [
+    {
+     "de": "der Campus, Campus · auf dem Campus",
+     "ru": "кампус · на территории кампуса",
+     "ex": "Bei deutschen Universitäten, die vor mehreren hundert Jahren gegründet wurden, befinden sich die Wohnheime normalerweise nicht [[auf dem Campus]].",
+     "note": "мн. ч. = ед. ч.",
+     "g": "m"
+    },
+    {
+     "de": "das Hauptgebäude",
+     "ru": "главный корпус",
+     "ex": "Die Abschlussfeier der Absolventen findet wie jedes Jahr im [[Hauptgebäude]] statt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Hörsaal, Hörsäle",
+     "ru": "лекционный зал, аудитория",
+     "ex": "Der [[Hörsaal]] ist überfüllt, so dass einige Studierende während der Vorlesung auf dem Boden sitzen müssen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Mensa, Mensen",
+     "ru": "студенческая столовая",
+     "ex": "In der [[Mensa]] können Studierende ein warmes Essen zu günstigen Preisen bekommen.",
+     "note": "мн. ч. die Mensen",
+     "g": "f"
+    },
+    {
+     "de": "das Studentenwohnheim, -wohnheime",
+     "ru": "студенческое общежитие",
+     "ex": "Nicht alle Zimmer in [[Studentenwohnheimen]] verfügen über eine eigene Küche.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Studentenwerk, -werke = das Studierendenwerk",
+     "ru": "студенческая служба (общежития, столовые)",
+     "ex": "Die Mensen und Wohnheime werden vom [[Studentenwerk]] betrieben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Allgemeine Studierendenausschuss (Abkürzung: AStA)",
+     "ru": "студенческий совет вуза",
+     "ex": "Der [[AStA]] wird von den Studierenden gewählt und vertritt ihre Interessen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "name": "Факультеты и службы",
+   "items": [
+    {
+     "de": "die Fakultät, Fakultäten",
+     "ru": "факультет",
+     "ex": "Die philosophische und die naturwissenschaftliche [[Fakultät]] veranstalten eine gemeinsame Vorlesung zum Thema „Ethik in den Biowissenschaften“.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Fachschaft, Fachschaften",
+     "ru": "студенческое представительство специальности",
+     "ex": "Mitglieder der [[Fachschaft]] werden einmal im Jahr gewählt und beraten ihre Kommilitonen bei Fragen rund um ihr Fach.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Seminar, Seminare (Institut)",
+     "ru": "кафедра, институт (подразделение факультета)",
+     "ex": "Das [[Seminar]] für Romanistik bietet Französischkurse für alle Studierenden an.",
+     "note": "второе значение: подразделение вуза",
+     "g": "n"
+    },
+    {
+     "de": "die Seminarbibliothek, -bibliotheken",
+     "ru": "библиотека кафедры",
+     "ex": "Wenn Sie eine Fachzeitschrift in der Universitätsbibliothek nicht finden, fragen Sie in der [[Seminarbibliothek]] nach.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Studierendensekretariat, -sekretariate",
+     "ru": "студенческий секретариат (деканат)",
+     "ex": "Sollten Sie während des Studiums umziehen, teilen Sie bitte dem [[Studierendensekretariat]] Ihre neue Adresse mit.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Hochschulrechenzentrum, -zentren",
+     "ru": "вычислительный центр вуза",
+     "ex": "Im [[Hochschulrechenzentrum]] können Sie einen kostenlosen Internetzugang für Studierende beantragen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Prüfungsamt, -ämter",
+     "ru": "экзаменационное управление",
+     "ex": "Das [[Prüfungsamt]] ist für die Einhaltung der Prüfungsordnung zuständig.",
+     "note": "zuständig für + Akk.",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: Болонский процесс (Infobox)",
+   "items": [
+    {
+     "de": "der Bologna-Prozess",
+     "ru": "Болонский процесс",
+     "ex": "Der Begriff „[[Bologna-Prozess]]“ bezeichnet die im Jahre 1999 von 29 europäischen Ländern begonnene Hochschulreform.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "vergleichbar",
+     "ru": "сопоставимый",
+     "ex": "Erstens sollen Studienabschlüsse in verschiedenen Ländern [[vergleichbar]] sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "anerkannt werden*",
+     "ru": "быть признанным (о дипломе)",
+     "ex": "Außerdem haben Absolventen bessere Chancen, eine Stelle im Ausland zu finden, wenn der Abschluss aus dem Heimatland dort [[anerkannt wird]].",
+     "note": "die Anerkennung",
+     "g": "v"
+    },
+    {
+     "de": "das Erststudium",
+     "ru": "первое высшее образование",
+     "ex": "Zum Zweiten soll das [[Erststudium]] kürzer und praxisbezogener gestaltet werden, um einen schnelleren und leichteren Einstieg in den Beruf zu ermöglichen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Einstieg in den Beruf",
+     "ru": "вход в профессию, начало карьеры",
+     "ex": "Zum Zweiten soll das Erststudium kürzer und praxisbezogener gestaltet werden, um einen schnelleren und leichteren [[Einstieg in den Beruf]] zu ermöglichen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich für einen Masterstudiengang einschreiben*",
+     "ru": "записаться на магистратуру",
+     "ex": "Wer sein Studium weiterführen will, hat danach die Möglichkeit, [[sich für einen Masterstudiengang einzuschreiben]], der meist 2 bis 4 Semester dauert.",
+     "note": "schrieb sich ein – hat sich eingeschrieben",
+     "g": "v"
+    },
+    {
+     "de": "das gestufte Studiensystem",
+     "ru": "ступенчатая система высшего образования",
+     "ex": "Das so genannte [[gestufte Studiensystem]] (1. Stufe: Bachelor, 2. Stufe: Master) ist besonders in den ersten Jahren auf Kritik gestoßen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "auf Kritik stoßen*",
+     "ru": "встретить критику",
+     "ex": "Das so genannte gestufte Studiensystem ist besonders in den ersten Jahren [[auf Kritik gestoßen]].",
+     "note": "stößt – stieß – ist gestoßen",
+     "g": "v"
+    },
+    {
+     "de": "überlastet sein*",
+     "ru": "быть перегруженным",
+     "ex": "Studierende sind wegen des engen Zeitplans und der vielen Prüfungen [[überlastet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Studierenden · die Lehrenden (!)",
+     "ru": "студенты · преподаватели (нейтральные формы)",
+     "ex": "Deshalb bevorzugt man heute die geschlechtsneutralen Plurale „[[Studierende]]“ und „[[Lehrende]]“.",
+     "note": "склоняются как прилагательные: Studierende, der Studierenden",
+     "g": "pl"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "Schule ↔ Hochschule",
+   "v": "Schüler / Lehrer / lernen / Unterricht — но в вузе: Studenten (Studierende) / Dozenten (Lehrende) / studieren / Lehrveranstaltungen"
+  },
+  {
+   "k": "der Student, der Kommilitone, der Dozent, der Doktorand",
+   "v": "n-склонение: den / dem / des Studenten. Die Studentin склоняется обычно"
+  },
+  {
+   "k": "die Studierenden",
+   "v": "Склоняется как прилагательное: Studierende (без артикля), die Studierenden, mit Studierenden, Gen. Studierender"
+  },
+  {
+   "k": "Studien- в сложных словах",
+   "v": "Studium → Studienfach, Studienzeit, Studienordnung (не «Studiumfach»)"
+  },
+  {
+   "k": "sich immatrikulieren ↔ exmatrikuliert werden",
+   "v": "Сам записываешься — sich immatrikulieren / einschreiben. Отчисляют тебя — exmatrikuliert werden"
+  },
+  {
+   "k": "unterbrechen, überschreiten",
+   "v": "Неотделяемые: hat unterbrochen, überschreitet. Но abbrechen, abschließen, aufnehmen — отделяемые"
+  },
+  {
+   "k": "an einer Hochschule studieren",
+   "v": "Предлог an + Dat.: an der Uni, an der Fachhochschule. Но: im Hörsaal, in der Mensa"
+  },
+  {
+   "k": "Seminar",
+   "v": "1) занятие (an einem Seminar teilnehmen), 2) институт / кафедра (das Seminar für Romanistik)"
+  },
+  {
+   "k": "Mensa, Propädeutikum, Staatsexamen",
+   "v": "Латинские мн. ч.: die Mensen, die Propädeutika, die Staatsexamina, die Kolloquien, die Tutorien"
+  }
+ ]
+}

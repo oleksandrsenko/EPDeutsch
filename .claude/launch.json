@@ -1,0 +1,1 @@
+{"version": "0.0.1", "configurations": [{"name": "epd", "runtimeExecutable": "python3", "runtimeArgs": ["server.py", "8791"], "port": 8791}, {"name": "epm-demo", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8933", "--bind", "127.0.0.1"], "port": 8933}]}

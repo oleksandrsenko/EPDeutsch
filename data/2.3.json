@@ -1,0 +1,825 @@
+{
+ "id": "2.3",
+ "chapter": 2,
+ "chapterName": "Der Mensch",
+ "title": "Gesundheit",
+ "titleRu": "Здоровье",
+ "pages": "66–72",
+ "exercises": "72–75",
+ "solutions": "261–262",
+ "bookRows": 74,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Жалобы и симптомы",
+   "items": [
+    {
+     "de": "klagen über + A",
+     "ru": "жаловаться на что-то",
+     "ex": "Die Patientin [[klagt über]] Appetitlosigkeit und starke Bauchschmerzen.",
+     "note": "über + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "leiden* unter + D",
+     "ru": "страдать от чего-то (состояния)",
+     "ex": "Seit einigen Wochen [[leidet]] der junge Mann [[unter]] Schlaflosigkeit und Mattigkeit.",
+     "note": "litt – hat gelitten",
+     "g": "v"
+    },
+    {
+     "de": "unter Schmerzen leiden*",
+     "ru": "страдать от боли",
+     "ex": "Bei Migräne [[leiden]] Patienten häufig [[unter]] heftigen Kopf[[schmerzen]] und Übelkeit.",
+     "note": "litt – hat gelitten",
+     "g": "v"
+    },
+    {
+     "de": "die Beschwerden (Plural)",
+     "ru": "жалобы, недомогание",
+     "ex": "Wenn das Wetter wechselt, klagen viele Menschen über verschiedene [[Beschwerden]], z. B. Kopfschmerzen und Kreislaufprobleme.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Symptom, Symptome",
+     "ru": "симптом",
+     "ex": "Rote Flecken auf der Haut können ein [[Symptom]] für eine allergische Reaktion sein.",
+     "note": "ein Symptom für + Akk.",
+     "g": "n"
+    },
+    {
+     "de": "erschöpft",
+     "ru": "измождённый, обессиленный",
+     "ex": "Man sollte einen Arzt aufsuchen, wenn man sich schon nach einem kurzen Spaziergang müde und [[erschöpft]] fühlt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Erschöpfung",
+     "ru": "истощение, упадок сил",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdm. ist schwindlig",
+     "ru": "у кого-то кружится голова",
+     "ex": "Nach einem heftigen Schlag auf den Kopf wurde [[ihm schwindlig]] und er verlor das Bewusstsein.",
+     "note": "Dativ: mir ist schwindlig",
+     "g": "v"
+    },
+    {
+     "de": "der Schwindel / das Schwindelgefühl",
+     "ru": "головокружение",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdm. ist übel",
+     "ru": "кого-то тошнит",
+     "ex": "Wenn [[Ihnen übel ist]], haben Sie möglicherweise etwas Verdorbenes gegessen.",
+     "note": "Dativ: mir ist übel",
+     "g": "v"
+    },
+    {
+     "de": "die Übelkeit",
+     "ru": "тошнота",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Тошнота и тяжёлые болезни",
+   "items": [
+    {
+     "de": "sich übergeben*",
+     "ru": "рвать, стошнить",
+     "ex": "Starke Übelkeit führt häufig dazu, dass man [[sich übergeben]] muss.",
+     "note": "übergibt sich – übergab sich – hat sich übergeben (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "erbrechen* = sich übergeben",
+     "ru": "рвать",
+     "ex": "Wenn man [[erbricht]], entleert man dadurch seinen Magen.",
+     "note": "erbricht – erbrach – hat erbrochen",
+     "g": "v"
+    },
+    {
+     "de": "das Erbrechen",
+     "ru": "рвота",
+     "ex": "Magen-Darm-Erkrankungen sind meist mit [[Erbrechen]] und Durchfall verbunden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Durchfall, Durchfälle",
+     "ru": "диарея, понос",
+     "ex": "Magen-Darm-Erkrankungen sind meist mit Erbrechen und [[Durchfall]] verbunden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "leiden* an + D",
+     "ru": "болеть чем-то (болезнью)",
+     "ex": "Die Zahl der Menschen, die [[an]] Allergien [[leiden]], nimmt ständig zu.",
+     "note": "an + Dat. — хроническая болезнь",
+     "g": "v"
+    },
+    {
+     "de": "erkranken an + D",
+     "ru": "заболеть чем-то",
+     "ex": "Besonders im Winter [[erkranken]] viele Menschen [[an]] Grippe.",
+     "note": "ist erkrankt",
+     "g": "v"
+    },
+    {
+     "de": "die Erkrankung, Erkrankungen",
+     "ru": "заболевание",
+     "ex": "AIDS ist eine [[Erkrankung]], gegen die man noch kein Heilmittel gefunden hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "allergisch sein* gegen + A",
+     "ru": "иметь аллергию на что-то",
+     "ex": "Immer mehr Menschen sind [[allergisch gegen]] Nahrungsmittel, z. B. gegen Erdbeeren oder Nüsse.",
+     "note": "gegen + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Allergie gegen + A, Allergien",
+     "ru": "аллергия на что-то",
+     "ex": "Eine [[Allergie gegen]] das Antibiotikum Penizillin kann die Behandlung bestimmter Krankheiten erschweren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Heuschnupfen",
+     "ru": "сенная лихорадка, поллиноз",
+     "ex": "Für Menschen, die an [[Heuschnupfen]] leiden, ist der Frühling eine unangenehme Zeit.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Опухоли, инсульт, инфаркт",
+   "items": [
+    {
+     "de": "der Tumor, Tumoren",
+     "ru": "опухоль",
+     "ex": "Wenn Zellen sich unkontrolliert vermehren, können sie [[Tumoren]] bilden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Krebs",
+     "ru": "рак",
+     "ex": "Bei [[Krebs]] kann ein Tumor Metastasen bilden und sich dadurch im ganzen Körper ausbreiten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Thrombose, Thrombosen",
+     "ru": "тромбоз",
+     "ex": "Nach Operationen müssen die Patienten manchmal spezielle Strümpfe tragen, die sie vor [[Thrombosen]] schützen sollen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Schlaganfall, -anfälle",
+     "ru": "инсульт",
+     "ex": "Wenn das Gehirn nicht ausreichend mit Blut versorgt wird, kann das zu einem [[Schlaganfall]] führen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Herzinfarkt, -infarkte",
+     "ru": "инфаркт",
+     "ex": "Ein schwerer [[Herzinfarkt]] muss schnell behandelt werden, um das Leben des Patienten zu retten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Schlaganfall erleiden* / einen Herzinfarkt erleiden*",
+     "ru": "перенести инсульт / инфаркт",
+     "ex": "Nachdem er einen [[Schlaganfall erlitten]] hatte, wurde er sofort ins Krankenhaus gebracht.",
+     "note": "erlitt – hat erlitten",
+     "g": "v"
+    },
+    {
+     "de": "chronisch",
+     "ru": "хронический",
+     "ex": "Unter [[chronischen]] Krankheiten leiden Patienten lange Zeit, manchmal sogar ihr ganzes Leben lang.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Diabetes",
+     "ru": "диабет",
+     "ex": "Manche Menschen leiden schon als Kinder an [[Diabetes]], bei anderen entwickelt sich die Krankheit erst im fortgeschrittenen Alter.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Asthma",
+     "ru": "астма",
+     "ex": "Bei [[Asthma]] treten Anfälle von Atemnot auf, die durch Medikamente gelindert werden können.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Инфекции",
+   "items": [
+    {
+     "de": "sich entzünden",
+     "ru": "воспаляться",
+     "ex": "Wenn eine Wunde nicht desinfiziert wird, kann sie [[sich entzünden]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Entzündung, Entzündungen",
+     "ru": "воспаление",
+     "ex": "Bei akuten [[Entzündungen]] sind die betroffenen Körperteile rot und geschwollen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich (bei jdm.) (mit einer Krankheit) anstecken",
+     "ru": "заразиться (от кого-то чем-то)",
+     "ex": "Wer im Beruf viel mit Menschen zu tun hat, [[steckt sich]] besonders leicht [[bei]] jemandem [[mit]] Grippe [[an]].",
+     "note": "steckte sich an – hat sich angesteckt",
+     "g": "v"
+    },
+    {
+     "de": "jdn. (mit einer Krankheit) anstecken",
+     "ru": "заразить кого-то",
+     "ex": "Menschen mit bestimmten Infektionskrankheiten müssen isoliert werden, damit sie niemanden mit ihrer Krankheit [[anstecken]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ansteckend",
+     "ru": "заразный",
+     "ex": "Gründliches Händewaschen kann helfen, sich vor [[ansteckenden]] Krankheiten zu schützen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Epidemie, Epidemien",
+     "ru": "эпидемия",
+     "ex": "Hochansteckende Krankheitserreger können eine [[Epidemie]] verursachen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pandemie, Pandemien",
+     "ru": "пандемия",
+     "ex": "Bei einigen Grippeviren besteht die Gefahr, dass sie sich in mehreren Ländern ausbreiten und so eine [[Pandemie]] auslösen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Erreger, Erreger",
+     "ru": "возбудитель (болезни)",
+     "ex": "Unser Immunsystem schützt uns vor vielen Krankheits[[erregern]], mit denen wir täglich in Kontakt kommen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Bakterium, Bakterien",
+     "ru": "бактерия",
+     "ex": "Desinfektionsmittel werden verwendet, um [[Bakterien]] abzutöten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das / der Virus, Viren",
+     "ru": "вирус",
+     "ex": "Eine AIDS-Erkrankung ist auf eine Infektion mit [[Viren]] zurückzuführen.",
+     "note": "в разговорной речи часто der Virus",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Инфекционные болезни и травмы",
+   "items": [
+    {
+     "de": "die Grippe",
+     "ru": "грипп",
+     "ex": "Unter den vielen verschiedenen Grippeviren gibt es auch gefährliche Formen wie die Spanische [[Grippe]], an der zwischen 1918 und 1920 zahlreiche Menschen starben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Tuberkulose",
+     "ru": "туберкулёз",
+     "ex": "Nicht alle Menschen, die sich mit der Lungenkrankheit [[Tuberkulose]] infizieren, erkranken auch daran.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pest",
+     "ru": "чума",
+     "ex": "Im Mittelalter sind Millionen von Menschen an der [[Pest]], dem so genannten „Schwarzen Tod“ gestorben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kinderkrankheit, -krankheiten",
+     "ru": "детская болезнь",
+     "ex": "Während [[Kinderkrankheiten]] wie Windpocken und Mumps bei Kindern oft harmlos verlaufen, können sie für Erwachsene gefährlich sein.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich verletzen · verletzt werden*",
+     "ru": "пораниться, травмироваться · быть раненым",
+     "ex": "Er hat [[sich]] bei der Arbeit mit einem Werkzeug an der Hand [[verletzt]].",
+     "note": "Bei dem Erdbeben … wurde niemand verletzt.",
+     "g": "v"
+    },
+    {
+     "de": "die Verletzung",
+     "ru": "травма, ранение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Wunde, Wunden",
+     "ru": "рана",
+     "ex": "Wenn eine [[Wunde]] stark blutet, muss die Blutung so schnell wie möglich gestoppt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich etw. brechen*",
+     "ru": "сломать себе что-то",
+     "ex": "Bei älteren Menschen ist die Gefahr, [[sich]] einen Knochen zu [[brechen]], in der Regel höher als bei jungen Menschen.",
+     "note": "bricht – brach – hat gebrochen · sich (Dat.)",
+     "g": "v"
+    },
+    {
+     "de": "der Bruch, Brüche",
+     "ru": "перелом",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. / jdn. verbinden*",
+     "ru": "перевязывать",
+     "ex": "Kurz nach einer Operation muss die Wunde regelmäßig frisch [[verbunden]] werden.",
+     "note": "verband – hat verbunden",
+     "g": "v"
+    },
+    {
+     "de": "der Verband, Verbände",
+     "ru": "повязка",
+     "ex": "Saubere [[Verbände]] schützen die Wunde vor Infektionen durch Krankheitserreger.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Narbe, Narben",
+     "ru": "шрам",
+     "ex": "Nach schweren Verletzungen oder größeren Operationen kann eine [[Narbe]] auf der Haut zurückbleiben.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Профилактика",
+   "items": [
+    {
+     "de": "Krankheiten vorbeugen",
+     "ru": "предотвращать болезни",
+     "ex": "Durch eine gesunde Lebensweise kann man vielen [[Krankheiten vorbeugen]].",
+     "note": "+ Dat.: einer Krankheit vorbeugen",
+     "g": "v"
+    },
+    {
+     "de": "eine Krankheit erkennen*",
+     "ru": "распознать болезнь",
+     "ex": "Ein erfahrener Arzt kann zahlreiche [[Krankheiten]] anhand der Symptome schnell [[erkennen]].",
+     "note": "erkannte – hat erkannt",
+     "g": "v"
+    },
+    {
+     "de": "die Früherkennung",
+     "ru": "раннее выявление",
+     "ex": "Bei Krebserkrankungen ist die [[Früherkennung]] wichtig, um zu verhindern, dass sich die Krankheit ausbreitet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Vorsorgeuntersuchung, -untersuchungen",
+     "ru": "профилактический осмотр",
+     "ex": "[[Vorsorgeuntersuchungen]] helfen, Krankheiten in einem frühen Stadium zu erkennen und zu behandeln.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "impfen",
+     "ru": "делать прививку",
+     "ex": "Es wird empfohlen, sich gegen Malaria [[impfen]] zu lassen, bevor man in tropische Regionen reist.",
+     "note": "gegen + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Impfung, Impfungen",
+     "ru": "прививка",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Обследование и диагностика",
+   "items": [
+    {
+     "de": "sich untersuchen lassen*",
+     "ru": "пройти обследование",
+     "ex": "Bei gesundheitlichen Beschwerden sollte man sich möglichst bald von einem Arzt [[untersuchen lassen]].",
+     "note": "ließ – hat sich untersuchen lassen",
+     "g": "v"
+    },
+    {
+     "de": "eine Krankheit diagnostizieren",
+     "ru": "поставить диагноз",
+     "ex": "Ärzte führen gezielte Untersuchungen durch, um eine [[Krankheit diagnostizieren]] zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Diagnose, Diagnosen",
+     "ru": "диагноз",
+     "ex": "Eine eindeutige [[Diagnose]] ist die Voraussetzung für eine erfolgreiche Behandlung.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. / jdn. röntgen",
+     "ru": "делать рентген",
+     "ex": "Damit der Arzt die Verletzung des Knochens genau sehen kann, muss er den Fuß [[röntgen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Röntgenbild, -bilder",
+     "ru": "рентгеновский снимок",
+     "ex": "Wegen der Strahlung sollte bei schwangeren Frauen kein [[Röntgenbild]] gemacht werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Ultraschall",
+     "ru": "ультразвук, УЗИ",
+     "ex": "Eine Untersuchung mit [[Ultraschall]] hat den Vorteil, dass man das Innere des Körpers untersuchen kann, ohne den Patienten gefährlicher Strahlung auszusetzen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Ultraschallbild, -bilder",
+     "ru": "снимок УЗИ",
+     "ex": "Werdende Eltern zeigen das [[Ultraschallbild]] ihres Babys gerne ihren Verwandten und Freunden.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Лечение и лекарства",
+   "items": [
+    {
+     "de": "etw. / jdn. behandeln",
+     "ru": "лечить",
+     "ex": "Oft gibt es verschiedene Möglichkeiten, eine Krankheit zu [[behandeln]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Behandlung, Behandlungen",
+     "ru": "лечение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. / jdn. heilen",
+     "ru": "вылечить, исцелить",
+     "ex": "Krankheiten, die früher tödlich waren, können mithilfe der modernen Medizin [[geheilt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Heilung, Heilungen",
+     "ru": "выздоровление, исцеление",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Arzneimittel, -mittel = das Medikament, Medikamente",
+     "ru": "лекарство",
+     "ex": "Die Pharmaindustrie arbeitet an der Entwicklung neuer, gut verträglicher [[Arzneimittel]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdm. ein Medikament verschreiben*",
+     "ru": "выписать кому-то лекарство",
+     "ex": "Der Arzt [[verschreibt]] der Patientin ein [[Medikament]], das sie dreimal täglich einnehmen soll.",
+     "note": "verschrieb – hat verschrieben",
+     "g": "v"
+    },
+    {
+     "de": "jdm. ein Medikament verabreichen",
+     "ru": "дать (ввести) кому-то лекарство",
+     "ex": "Das Pflegepersonal [[verabreicht]] den Patienten die notwendigen [[Medikamente]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nebenwirkungen (Plural)",
+     "ru": "побочные действия",
+     "ex": "Der Beipackzettel in der Medikamentenschachtel informiert die Patienten über mögliche [[Nebenwirkungen]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Antibiotikum, Antibiotika",
+     "ru": "антибиотик",
+     "ex": "[[Antibiotika]] werden zur Bekämpfung von Infektionen eingesetzt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. injizieren",
+     "ru": "вводить (инъекцией)",
+     "ex": "Beispielsweise kann der Arzt ein Medikament ins Blut oder in die Muskulatur [[injizieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Injektion, Injektionen",
+     "ru": "инъекция",
+     "ex": "Man unterscheidet verschiedene [[Injektionsformen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Spritze, Spritzen",
+     "ru": "шприц, укол",
+     "ex": "Wenn [[Spritzen]] mehrfach verwendet werden, müssen sie nach jedem Gebrauch sorgfältig sterilisiert werden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Терапия и операции",
+   "items": [
+    {
+     "de": "die Infusion, Infusionen",
+     "ru": "капельница",
+     "ex": "Schmerzmittel können im Krankenhaus per [[Infusion]] verabreicht werden, sodass das Medikament über einen längeren Zeitraum langsam, aber gleichmäßig ins Blut gelangt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Chemotherapie, -therapien",
+     "ru": "химиотерапия",
+     "ex": "Bei vielen Krebserkrankungen soll eine [[Chemotherapie]] die Krankheit heilen oder zumindest ihre Ausbreitung verhindern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Bestrahlung, Bestrahlungen",
+     "ru": "облучение, лучевая терапия",
+     "ex": "Um den Tumor gezielt zu bekämpfen, werden neben der Chemotherapie [[Bestrahlungen]] angewandt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Physiotherapie, -therapien",
+     "ru": "физиотерапия, ЛФК",
+     "ex": "Regelmäßige [[Physiotherapie]] kann ein gutes Mittel gegen Rückenschmerzen sein.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. / jdn. betäuben",
+     "ru": "обезболить, сделать анестезию",
+     "ex": "Eine Behandlung beim Zahnarzt ist weniger schmerzhaft, wenn man sich vorher [[betäuben]] lässt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Betäubung, Betäubungen",
+     "ru": "анестезия, обезболивание",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Narkose, Narkosen = die Betäubung",
+     "ru": "наркоз",
+     "ex": "Bei kleineren Operationen werden meist nur bestimmte Teile des Körpers betäubt, bei größeren Eingriffen ist oft eine Voll[[narkose]] erforderlich.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Трансплантация и альтернативная медицина",
+   "items": [
+    {
+     "de": "etw. transplantieren",
+     "ru": "пересаживать",
+     "ex": "In den Sechzigerjahren des 20. Jahrhunderts hat der südafrikanische Chirurg Christiaan Barnard zum ersten Mal erfolgreich ein Herz [[transplantiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Transplantation, Transplantationen",
+     "ru": "трансплантация",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "alternative Therapien",
+     "ru": "альтернативные методы лечения",
+     "ex": "Inzwischen gibt es zahlreiche Ärzte, die neben der so genannten „Schulmedizin“ auch [[alternative Therapien]] anbieten.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Naturheilkunde",
+     "ru": "натуропатия, народная медицина",
+     "ex": "Bereits in der Antike und im Mittelalter hat man Krankheiten mithilfe der [[Naturheilkunde]] behandelt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Akupunktur",
+     "ru": "иглоукалывание",
+     "ex": "Bei der [[Akupunktur]] werden an bestimmten Körperstellen Nadeln gesetzt, um Energieblockaden zu lösen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "homöopathisch",
+     "ru": "гомеопатический",
+     "ex": "Befürworter [[homöopathischer]] Therapien weisen darauf hin, dass diese weniger Nebenwirkungen haben als eine Behandlung mit herkömmlichen Medikamenten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Homöopathie",
+     "ru": "гомеопатия",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Heilpraktiker / die Heilpraktikerin, Heilpraktiker",
+     "ru": "целитель (лицензированный немедицинский)",
+     "ex": "[[Heilpraktiker]] sind dafür ausgebildet, Patienten mit alternativen Therapien, z. B. naturheilkundlichen Verfahren, zu behandeln.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: болезни цивилизации (Infobox)",
+   "items": [
+    {
+     "de": "die Zivilisationskrankheit, -en",
+     "ru": "болезнь цивилизации",
+     "ex": "Die Folge sind so genannte [[Zivilisationskrankheiten]], also Krankheiten, die aus unserer bequemen Lebensweise resultieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Lebensstandard",
+     "ru": "уровень жизни",
+     "ex": "Der [[Lebensstandard]] in den Industrieländern hat sich in den vergangenen hundert Jahren deutlich erhöht.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich positiv auf etw. auswirken",
+     "ru": "положительно влиять на что-то",
+     "ex": "Obwohl sich diese Entwicklung in vielerlei Hinsicht [[positiv auf]] unsere Gesundheit [[auswirkt]], hat sie auch Nachteile.",
+     "note": "auf + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "sich körperlich anstrengen",
+     "ru": "прилагать физические усилия",
+     "ex": "Hinzu kommt, dass wir uns immer weniger [[körperlich anstrengen]] müssen, um bestimmte Arbeiten zu verrichten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "resultieren aus + D",
+     "ru": "вытекать из чего-то, быть следствием",
+     "ex": "Krankheiten, die aus unserer bequemen Lebensweise [[resultieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Bewegungsmangel",
+     "ru": "недостаток движения",
+     "ex": "Diabetes Typ 2 dagegen entwickelt sich im Laufe des Lebens, häufig aufgrund einer ungesunden Ernährung und [[Bewegungsmangel]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Herz-Kreislauf-Erkrankung, -en",
+     "ru": "сердечно-сосудистое заболевание",
+     "ex": "Das sind vor allem Diabetes und [[Herz-Kreislauf-Erkrankungen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Blutdruck",
+     "ru": "кровяное давление",
+     "ex": "Zudem erhöht sich der [[Blutdruck]] und das Herz muss mehr leisten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Risiko steigt",
+     "ru": "риск растёт",
+     "ex": "Dadurch [[steigt das Risiko]], einen Herzinfarkt zu erleiden.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "leiden an + D ↔ leiden unter + D",
+   "v": "an — болезнью (an Diabetes, an Asthma); unter — состоянием, симптомом (unter Schlaflosigkeit, unter Schmerzen)"
+  },
+  {
+   "k": "mir ist übel / schwindlig",
+   "v": "Безличная конструкция с Dativ: Ihm war schwindlig. Не «ich bin übel»!"
+  },
+  {
+   "k": "allergisch gegen + A ↔ allergisch reagieren auf + A",
+   "v": "Er ist allergisch gegen Nüsse. Er reagiert allergisch auf Nüsse"
+  },
+  {
+   "k": "sich anstecken bei jdm. mit etw.",
+   "v": "Ich habe mich bei meinem Kollegen mit Grippe angesteckt"
+  },
+  {
+   "k": "sich übergeben — неотделяемая",
+   "v": "er übergibt sich, hat sich übergeben (не «gibt sich über»)"
+  },
+  {
+   "k": "vorbeugen + D",
+   "v": "einer Krankheit vorbeugen; Krankheiten vorbeugen (Dat. Pl.)"
+  },
+  {
+   "k": "sich etw. brechen",
+   "v": "sich (Dat.) den Arm brechen: Ich habe mir den Arm gebrochen"
+  },
+  {
+   "k": "das Virus",
+   "v": "В научном языке das Virus, в разговорном часто der Virus; мн. ч. die Viren"
+  },
+  {
+   "k": "erkranken an ↔ krank sein",
+   "v": "erkranken — заболеть (ist erkrankt); an + Dat."
+  }
+ ]
+}

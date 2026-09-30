@@ -1,0 +1,627 @@
+{
+ "id": "4.6",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Wirtschaft",
+ "titleRu": "Экономика",
+ "pages": "184–188",
+ "exercises": "189–193",
+ "solutions": "268–269",
+ "bookRows": 66,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Экономика: общее",
+   "items": [
+    {
+     "de": "die Branche, Branchen",
+     "ru": "отрасль",
+     "ex": "Während sich die Medien[[branche]] in der Krise befindet, steigen die Verkaufszahlen in der Automobil[[branche]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ware, Waren",
+     "ru": "товар",
+     "ex": "In Kaufhäusern findet man ein großes Angebot verschiedener [[Waren]] des täglichen Bedarfs.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Güter (Plural)",
+     "ru": "блага, товары",
+     "ex": "Die Oppositionspartei fordert, dass höhere Steuern auf Luxus[[güter]] erhoben werden.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Bodenschätze (Plural)",
+     "ru": "полезные ископаемые",
+     "ex": "Die Arktis ist reich an [[Bodenschätzen]], insbesondere an Öl und Gas.",
+     "note": "reich an + Dat.",
+     "g": "pl"
+    },
+    {
+     "de": "Bodenschätze abbauen",
+     "ru": "добывать полезные ископаемые",
+     "ex": "Infolge des Klimawandels können die [[Bodenschätze]] in der Arktis leichter [[abgebaut]] werden.",
+     "note": "infolge + Gen.",
+     "g": "v"
+    },
+    {
+     "de": "die Dienstleistung, -leistungen",
+     "ru": "услуга",
+     "ex": "Das Unternehmen bietet [[Dienstleistungen]] rund um den Computer an, z. B. Kaufberatung, Installation von Netzwerken und Beseitigung von Störungen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Dienstleistung erbringen*",
+     "ru": "оказывать услугу",
+     "ex": "Nicht alle Beschäftigten werden für die [[Dienstleistungen]], die sie [[erbringen]], auch angemessen bezahlt.",
+     "note": "erbrachte – hat erbracht",
+     "g": "v"
+    },
+    {
+     "de": "die Betriebswirtschaft",
+     "ru": "экономика предприятия (BWL)",
+     "ex": "Nach einem Studium der [[Betriebswirtschaft]] bieten sich den Absolventen vielfältige Arbeitsmöglichkeiten in der Privatwirtschaft.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Volkswirtschaft",
+     "ru": "народное хозяйство, макроэкономика (VWL)",
+     "ex": "Nach der Wahl wurde ein renommierter Professor für [[Volkswirtschaft]] zum neuen Wirtschaftsminister berufen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Предприятие",
+   "items": [
+    {
+     "de": "das Unternehmen, Unternehmen",
+     "ru": "предприятие, компания",
+     "ex": "Das 1903 gegründete [[Unternehmen]] ist seit vier Generationen im Familienbesitz.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Unternehmen gründen",
+     "ru": "основать компанию",
+     "ex": "Wer ein [[Unternehmen gründen]] will, muss meist einen Kredit aufnehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Geschäft eröffnen",
+     "ru": "открыть магазин (бизнес)",
+     "ex": "Nachdem er lange fest angestellt war, hat er jetzt beschlossen, sich selbstständig zu machen und ein eigenes [[Geschäft zu eröffnen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Geschäft betreiben*",
+     "ru": "вести бизнес, держать магазин",
+     "ex": "Bis jetzt [[betreiben]] die Eltern das [[Geschäft]], aber in einigen Jahren soll ihre Tochter diese Aufgabe übernehmen.",
+     "note": "betrieb – hat betrieben",
+     "g": "v"
+    },
+    {
+     "de": "die Kette, Ketten",
+     "ru": "сеть (магазинов)",
+     "ex": "Die Bäckerei gehört zu einer [[Kette]], die Geschäfte in ganz Süddeutschland betreibt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Filiale, Filialen",
+     "ru": "филиал",
+     "ex": "In jeder größeren Stadt gibt es [[Filialen]] verschiedener großer Fastfood-Ketten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Betrieb, Betriebe",
+     "ru": "предприятие",
+     "ex": "Die Arbeitsagenturen fordern die [[Betriebe]] dazu auf, mehr Ausbildungsplätze für junge Menschen zu schaffen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Betrieb leiten",
+     "ru": "руководить предприятием",
+     "ex": "Um einen [[Betrieb]] erfolgreich zu [[leiten]], braucht man neben Branchenkenntnissen und fachlicher Kompetenz auch die Fähigkeit, Mitarbeiter zu führen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Geschäftsführer / die Geschäftsführerin, Geschäftsführer",
+     "ru": "директор, управляющий",
+     "ex": "Wegen der ständig sinkenden Verkaufszahlen hat das Unternehmen den [[Geschäftsführer]] entlassen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Führungskraft, -kräfte",
+     "ru": "руководитель, менеджер",
+     "ex": "In Managerseminaren sollen [[Führungskräfte]] lernen, wie sie ihre Mitarbeiter zu Bestleistungen motivieren können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Inhaber / die Inhaberin, Inhaber",
+     "ru": "владелец",
+     "ex": "Unzufriedene Kunden beschweren sich beim [[Inhaber]] des Geschäfts über die Unfreundlichkeit seiner Angestellten.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Инвестиции, баланс, банкротство",
+   "items": [
+    {
+     "de": "investieren in + A",
+     "ru": "инвестировать во что-то",
+     "ex": "Das Pharmaunternehmen [[investiert]] jährlich hohe Summen [[in]] Forschung und Entwicklung.",
+     "note": "in + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Investition, Investitionen",
+     "ru": "инвестиция",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "fusionieren",
+     "ru": "сливаться (о компаниях)",
+     "ex": "Zwei große Unternehmen [[fusionieren]], um gemeinsam größere Mengen produzieren zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Fusion, Fusionen",
+     "ru": "слияние",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Bilanz, Bilanzen",
+     "ru": "баланс, итог",
+     "ex": "Die Jahres[[bilanz]] des noch jungen Unternehmens wird von Wirtschaftsanalysten mit Spannung erwartet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "(eine positive / negative) Bilanz ziehen*",
+     "ru": "подвести (положительный / отрицательный) итог",
+     "ex": "Nach dem Weihnachtsgeschäft haben die Einzelhändler eine positive [[Bilanz gezogen]].",
+     "note": "zog – hat gezogen",
+     "g": "v"
+    },
+    {
+     "de": "die Insolvenz, Insolvenzen · Insolvenz anmelden",
+     "ru": "банкротство · объявить о банкротстве",
+     "ex": "Nach der [[Insolvenz]] wurden zahlreiche Filialen geschlossen und Teile des Unternehmens an Konkurrenten verkauft.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Konkurs anmelden",
+     "ru": "объявить о банкротстве",
+     "ex": "Nachdem der Betrieb [[Konkurs]] (= Insolvenz) [[anmelden]] musste, fürchten die Mitarbeiter um ihre Arbeitsplätze.",
+     "note": "um + Akk. fürchten",
+     "g": "v"
+    },
+    {
+     "de": "die Börse, Börsen",
+     "ru": "биржа",
+     "ex": "Die Banken verfolgen aufmerksam die Entwicklungen an der Wall Street und an anderen [[Börsen]] in aller Welt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Aktie, Aktien",
+     "ru": "акция",
+     "ex": "Wenn man [[Aktien]] eines Unternehmens kauft, kann man nicht mit Sicherheit wissen, wie viel diese in Zukunft wert sein werden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Народное хозяйство",
+   "items": [
+    {
+     "de": "die Marktwirtschaft",
+     "ru": "рыночная экономика",
+     "ex": "Das System der [[Marktwirtschaft]] erlaubt es Unternehmen und Betrieben, selbst zu entscheiden, welche Güter sie in welchen Mengen produzieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Wettbewerb",
+     "ru": "конкуренция",
+     "ex": "Der [[Wettbewerb]] gibt den Kunden die Möglichkeit, aus verschiedenen Angeboten das Beste auszuwählen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Monopol, Monopole",
+     "ru": "монополия",
+     "ex": "Fusionen großer Firmen müssen genehmigt werden, um die Entstehung von [[Monopolen]] zu verhindern.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. subventionieren",
+     "ru": "субсидировать",
+     "ex": "Die Regierung [[subventioniert]] die Erzeugung erneuerbarer Energien, um den CO2-Ausstoß zu senken.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Subventionen (Plural)",
+     "ru": "субсидии",
+     "ex": "[[Subventionen]] können in Form von finanziellen Zuschüssen oder durch Steuererleichterungen gewährt werden.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Bruttoinlandsprodukt",
+     "ru": "валовой внутренний продукт (ВВП)",
+     "ex": "Das [[Bruttoinlandsprodukt]] gibt Auskunft über die wirtschaftliche Produktivität eines Landes.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Bruttosozialprodukt",
+     "ru": "валовой национальный продукт (ВНП)",
+     "ex": "Das [[Bruttosozialprodukt]] gibt an, wie hoch das Gesamteinkommen aller Bürger eines Landes ist.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Staatshaushalt",
+     "ru": "государственный бюджет",
+     "ex": "Die neue Regierung hat angekündigt, keine weiteren Schulden zu machen, um den [[Staatshaushalt]] zu sanieren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Defizit, Defizite",
+     "ru": "дефицит",
+     "ex": "Wegen der hohen [[Defizite]] im Staatshaushalt hat der Finanzminister einen eisernen Sparkurs angekündigt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Mehrwertsteuer",
+     "ru": "НДС",
+     "ex": "Für die meisten Waren und Dienstleistungen müssen die Kunden 19 % [[Mehrwertsteuer]] bezahlen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Экономическое развитие",
+   "items": [
+    {
+     "de": "wachsen*",
+     "ru": "расти",
+     "ex": "Experten sagen voraus, dass die Wirtschaft im kommenden Jahr um ca. 1,3 Prozent [[wachsen]] wird.",
+     "note": "wächst – wuchs – ist gewachsen",
+     "g": "v"
+    },
+    {
+     "de": "schrumpfen",
+     "ru": "сокращаться",
+     "ex": "In Krisenzeiten [[schrumpft]] die Wirtschaft, da die Menschen deutlich weniger Geld ausgeben als sonst.",
+     "note": "ist geschrumpft",
+     "g": "v"
+    },
+    {
+     "de": "die Rezession",
+     "ru": "рецессия, спад",
+     "ex": "Die [[Rezession]] hat zu einem Anstieg der Arbeitslosenquote und einer höheren Staatsverschuldung geführt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Konjunktur",
+     "ru": "конъюнктура",
+     "ex": "Durch politische Maßnahmen, z. B. Steuersenkungen, kann der Staat die [[Konjunktur]] beeinflussen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Industrieland, -länder",
+     "ru": "индустриальная страна",
+     "ex": "Für den Ausstoß von Treibhausgasen sind in erster Linie die [[Industrieländer]] verantwortlich.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Schwellenland, -länder",
+     "ru": "развивающаяся страна с быстрорастущей экономикой",
+     "ex": "Aufgrund ihrer rasanten wirtschaftlichen Entwicklung sind [[Schwellenländer]] für Investoren sehr attraktiv.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Entwicklungsland, -länder",
+     "ru": "развивающаяся страна",
+     "ex": "Mikrokredite können armen Menschen in [[Entwicklungsländern]] dabei helfen, sich eine Existenz aufzubauen und dadurch ihren Lebensunterhalt zu sichern.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Производство и внешняя торговля",
+   "items": [
+    {
+     "de": "etw. herstellen = etw. produzieren",
+     "ru": "производить",
+     "ex": "In Handarbeit [[hergestellte]] Waren sind meist teurer als Produkte aus industrieller Herstellung.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Herstellung",
+     "ru": "производство",
+     "ex": "Für die [[Herstellung]] von Lebensmitteln gelten strenge Hygienevorschriften.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Fließband, -bänder",
+     "ru": "конвейер",
+     "ex": "Die Arbeit am [[Fließband]] ist oft monoton, da eine Person immer die gleichen Handgriffe machen muss.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "(etw.) liefern",
+     "ru": "поставлять",
+     "ex": "Trotz des Streiks konnten alle Waren pünktlich [[geliefert]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Lieferung",
+     "ru": "поставка",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. einführen = etw. importieren",
+     "ru": "импортировать, ввозить",
+     "ex": "Um die Energieversorgung sicherzustellen, müssen große Mengen an Öl und Gas [[eingeführt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Einfuhr",
+     "ru": "импорт, ввоз",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. ausführen = etw. exportieren",
+     "ru": "экспортировать, вывозить",
+     "ex": "Zu den Produkten, die [[ausgeführt]] werden, gehören Kraftfahrzeuge, Maschinen und andere technische Geräte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Ausfuhr",
+     "ru": "экспорт, вывоз",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Zoll, Zölle",
+     "ru": "пошлина; таможня",
+     "ex": "[[Zölle]] dienen dem Schutz der einheimischen Wirtschaft vor Konkurrenz aus dem Ausland und sind außerdem eine Einnahmequelle für den Staat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Zoll / Zölle erheben*",
+     "ru": "взимать пошлины",
+     "ex": "Um den Handel innerhalb Europas zu fördern, werden beim Import von Waren aus EU-Staaten keine [[Zölle erhoben]].",
+     "note": "erhob – hat erhoben",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Торговля",
+   "items": [
+    {
+     "de": "handeln mit + D",
+     "ru": "торговать чем-то",
+     "ex": "Große Ketten von Buchgeschäften [[handeln]] heutzutage nicht nur [[mit]] Büchern, sondern auch mit DVDs, Schreibwaren und Geschenkartikeln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Handel",
+     "ru": "торговля",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Händler, Händler",
+     "ru": "торговец",
+     "ex": "Manche [[Händler]] nehmen die gekaufte Ware auch 4 Wochen nach dem Einkauf noch zurück, wenn der Kunde mit dem Produkt nicht zufrieden ist.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Großhandel",
+     "ru": "оптовая торговля",
+     "ex": "Die Inhaber von Restaurants kaufen einen Teil der benötigten Lebensmittel im [[Großhandel]], da sie dort größere Mengen zu günstigeren Preisen erhalten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Einzelhandel",
+     "ru": "розничная торговля",
+     "ex": "Die meisten Menschen kaufen Obst und Gemüse im [[Einzelhandel]], z. B. im Supermarkt, im Bioladen oder auf dem Markt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Angebot",
+     "ru": "предложение",
+     "ex": "Früher war das [[Angebot]] an Lebensmitteln von der Jahreszeit abhängig und deshalb viel begrenzter als heute.",
+     "note": "Angebot an + Dat.",
+     "g": "n"
+    },
+    {
+     "de": "die Nachfrage",
+     "ru": "спрос",
+     "ex": "Aufgrund des heißen Sommers ist die [[Nachfrage]] nach Klimaanlagen und Ventilatoren stark gestiegen.",
+     "note": "nach + Dat.",
+     "g": "f"
+    },
+    {
+     "de": "der Bedarf an + D",
+     "ru": "потребность в чём-то",
+     "ex": "Der [[Bedarf an]] Rohstoffen, die für den Bau technischer Geräte verwendet werden, steigt kontinuierlich.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "den Bedarf decken",
+     "ru": "покрывать потребность",
+     "ex": "Wenn der [[Bedarf]] durch die inländische Produktion nicht [[gedeckt]] wird, müssen Waren aus dem Ausland importiert werden.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Сбыт, потребители, маркетинг",
+   "items": [
+    {
+     "de": "Waren absetzen",
+     "ru": "сбывать, продавать товары",
+     "ex": "Das Unternehmen konnte nur knapp die Hälfte der [[Waren]] gewinnbringend [[absetzen]] und musste den Rest zu stark reduzierten Preisen anbieten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Absatz",
+     "ru": "сбыт",
+     "ex": "Der geringe [[Absatz]] hat die Firma in eine so schwere Krise gestürzt, dass ein Teil der Mitarbeiter entlassen werden musste.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Markt, Märkte",
+     "ru": "рынок",
+     "ex": "Auf dem freien [[Markt]] bestimmen Angebot und Nachfrage den Preis für eine Ware.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "neue Märkte erschließen*",
+     "ru": "осваивать новые рынки",
+     "ex": "Um mehr Waren zu verkaufen, wollen die Unternehmen [[neue Märkte]] im Ausland [[erschließen]].",
+     "note": "erschloss – hat erschlossen",
+     "g": "v"
+    },
+    {
+     "de": "konsumieren · der Konsum",
+     "ru": "потреблять · потребление",
+     "ex": "Im Durchschnitt [[konsumieren]] die Deutschen pro Jahr mehr als 100 Liter an alkoholischen Getränken.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Verbraucher, Verbraucher = der Konsument, Konsumenten",
+     "ru": "потребитель",
+     "ex": "Informationen auf der Verpackung informieren die [[Verbraucher]] über die Herkunft der Ware.",
+     "note": "der Konsument — n-склонение",
+     "g": "m"
+    },
+    {
+     "de": "ein Produkt vermarkten",
+     "ru": "продвигать товар на рынке",
+     "ex": "Werbestrategen verbringen viel Zeit damit, sich Gedanken darüber zu machen, wie sie ein [[Produkt]] am besten [[vermarkten]] können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Vermarktung",
+     "ru": "маркетинг, продвижение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Reklame = die Werbung (nur Singular)",
+     "ru": "реклама",
+     "ex": "[[Reklame]] für Tabakwaren darf im Fernsehen nicht gezeigt werden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "k": "einführen ↔ ausführen",
+   "v": "ein- — импорт (die Einfuhr), aus- — экспорт (die Ausfuhr)"
+  },
+  {
+   "k": "das Angebot ↔ die Nachfrage",
+   "v": "Angebot an + D, Nachfrage nach + D"
+  },
+  {
+   "k": "der Bedarf an + D",
+   "v": "Der Bedarf an Rohstoffen; den Bedarf decken"
+  },
+  {
+   "k": "die Güter",
+   "v": "Только мн. ч. в значении «товары»; das Gut — ещё «имение»"
+  },
+  {
+   "k": "investieren in + A",
+   "v": "in Forschung investieren (Akk.)"
+  },
+  {
+   "k": "der Wettbewerb",
+   "v": "В экономике — конкуренция; в спорте — соревнование"
+  },
+  {
+   "k": "Insolvenz / Konkurs anmelden",
+   "v": "Без артикля: Das Unternehmen hat Insolvenz angemeldet"
+  },
+  {
+   "k": "der Konsument",
+   "v": "n-склонение: den Konsumenten; но der Verbraucher — обычное"
+  }
+ ]
+}

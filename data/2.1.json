@@ -1,0 +1,1056 @@
+{
+ "id": "2.1",
+ "chapter": 2,
+ "chapterName": "Der Mensch",
+ "title": "Ernährung",
+ "titleRu": "Питание",
+ "pages": "46–53",
+ "exercises": "54–57",
+ "solutions": "261",
+ "bookRows": 104,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Есть и готовить",
+   "items": [
+    {
+     "de": "etw. zu sich nehmen*",
+     "ru": "есть, употреблять что-то",
+     "ex": "Besonders im Winter ist es wichtig, genug vitaminreiches Obst und Gemüse [[zu sich zu nehmen]].",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "etw. verzehren",
+     "ru": "употреблять в пищу, съедать",
+     "ex": "Ernährungsexperten empfehlen, regelmäßig Seefisch zu [[verzehren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Verzehr",
+     "ru": "употребление (в пищу)",
+     "ex": "Der [[Verzehr]] von rohem Gemüse gilt als besonders gesund, weil beim Kochen Nährstoffe verloren gehen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. konsumieren",
+     "ru": "потреблять",
+     "ex": "In Deutschland [[konsumiert]] man heute deutlich weniger Kartoffeln als noch vor einigen Jahrzehnten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Konsum",
+     "ru": "потребление",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. zubereiten",
+     "ru": "готовить (блюдо)",
+     "ex": "Gemüse ist am gesündesten, wenn es frisch [[zubereitet]] wird.",
+     "note": "bereitete zu – hat zubereitet",
+     "g": "v"
+    },
+    {
+     "de": "die Zubereitung",
+     "ru": "приготовление",
+     "ex": "Berufstätige greifen gerne zu Fertiggerichten, da deren [[Zubereitung]] wenig Zeit erfordert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Mahlzeit, Mahlzeiten",
+     "ru": "приём пищи, еда",
+     "ex": "Regelmäßige [[Mahlzeiten]] sind für eine gesunde Ernährung wichtig.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Mahlzeit einnehmen*",
+     "ru": "принимать пищу",
+     "ex": "Heute ist es nicht mehr selbstverständlich, dass eine Familie die [[Mahlzeiten]] gemeinsam [[einnimmt]].",
+     "note": "nimmt ein – nahm ein – hat eingenommen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Еда и блюда",
+   "items": [
+    {
+     "de": "die Nahrung",
+     "ru": "пища, питание",
+     "ex": "Nicht allen Menschen auf der Welt steht genug [[Nahrung]] zur Verfügung.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Nahrungsmittel (Plural) = die Lebensmittel (Plural)",
+     "ru": "продукты питания",
+     "ex": "In deutschen Supermärkten wird eine große Auswahl an [[Nahrungsmitteln]] angeboten.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Speise, Speisen",
+     "ru": "кушанье, блюдо",
+     "ex": "Die Vielfalt an Restaurants in größeren Städten bietet die Möglichkeit, [[Speisen]] aus verschiedenen Ländern zu probieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kost",
+     "ru": "пища, кухня (тип питания)",
+     "ex": "Mediterrane [[Kost]] gilt als sehr gesund, da zu dieser Art der Ernährung viel Gemüse und Fisch gehören.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gericht, Gerichte",
+     "ru": "блюдо",
+     "ex": "In der Kantine werden nicht nur einheimische Speisen, sondern auch exotische [[Gerichte]] angeboten.",
+     "note": "не путать: das Gericht — ещё и «суд»",
+     "g": "n"
+    },
+    {
+     "de": "das Getreide",
+     "ru": "зерно, злаки",
+     "ex": "Brot kann aus verschiedenen [[Getreide]]sorten hergestellt werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Müsli",
+     "ru": "мюсли",
+     "ex": "Man kann fertige Müslimischungen kaufen oder sich sein [[Müsli]] aus Haferflocken, Nüssen und Früchten selbst zusammenstellen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Vollkorn-",
+     "ru": "цельнозерновой",
+     "ex": "Wer sich gesund ernähren möchte, sollte viel [[Vollkorn]]brot und wenig Weißbrot essen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Kern, Kerne",
+     "ru": "семечко, косточка",
+     "ex": "Sonnenblumen[[kerne]] und Kürbis[[kerne]] enthalten wertvolle Öle, die z. B. für Salate verwendet werden können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Schale, Schalen",
+     "ru": "кожура",
+     "ex": "Es ist empfehlenswert, bestimmte Obstsorten mit der [[Schale]] zu essen, da diese viele Nährstoffe enthält.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Fertiggericht, -gerichte",
+     "ru": "готовое блюдо, полуфабрикат",
+     "ex": "Berufstätige greifen gerne zu [[Fertiggerichten]], da deren Zubereitung wenig Zeit erfordert.",
+     "note": "zu etw. greifen",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Био и калории",
+   "items": [
+    {
+     "de": "die Bioprodukte (Plural)",
+     "ru": "биопродукты, органические продукты",
+     "ex": "Während man [[Bioprodukte]] früher nur in Bioläden oder direkt beim Biobauern kaufen konnte, bieten mittlerweile auch Supermärkte Biolebensmittel an.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Biosiegel, Biosiegel",
+     "ru": "знак «био» (сертификат)",
+     "ex": "[[Biosiegel]] sollen den Kunden helfen, Bioprodukte von anderen Lebensmitteln zu unterscheiden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. kennzeichnen",
+     "ru": "маркировать, обозначать",
+     "ex": "Nur Bioprodukte, die bestimmte Kriterien erfüllen, dürfen mit einem Biosiegel [[gekennzeichnet]] werden.",
+     "note": "kennzeichnete – hat gekennzeichnet (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "kalorienarm = kalorienreduziert",
+     "ru": "низкокалорийный",
+     "ex": "Da die meisten Menschen schlank bleiben wollen, erfreuen sich [[kalorienarme]] Lebensmittel großer Beliebtheit.",
+     "note": "sich großer Beliebtheit erfreuen (Gen.)",
+     "g": "v"
+    },
+    {
+     "de": "die Kalorie, Kalorien",
+     "ru": "калория",
+     "ex": "Aufdrucke auf Lebensmittelverpackungen informieren die Verbraucher darüber, wie viele [[Kalorien]] im Produkt enthalten sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Kalorien verbrennen*",
+     "ru": "сжигать калории",
+     "ex": "Durch anstrengende Sportarten kann man in einer Stunde viele [[Kalorien verbrennen]].",
+     "note": "verbrannte – hat verbrannt",
+     "g": "v"
+    },
+    {
+     "de": "das Kilojoule, -joule",
+     "ru": "килоджоуль",
+     "ex": "Der Energiewert von Nahrungsmitteln kann in Kalorien oder in [[Kilojoule]] angegeben werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "zuckerfrei",
+     "ru": "без сахара",
+     "ex": "Für die Herstellung von [[zuckerfreien]] Süßigkeiten oder Limonaden werden Süßstoffe verwendet.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "fettarm = fettreduziert",
+     "ru": "нежирный, с пониженной жирностью",
+     "ex": "Alternativ zu Vollmilchprodukten sind auch [[fettarme]] Milch, Joghurts und andere fettreduzierte Milchprodukte erhältlich.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Свежесть и порча",
+   "items": [
+    {
+     "de": "roh",
+     "ru": "сырой",
+     "ex": "Der Verzehr von [[rohem]] Gemüse gilt als besonders gesund, weil beim Kochen Nährstoffe verloren gehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "reif",
+     "ru": "спелый",
+     "ex": "Da tropische Früchte oftmals über weite Strecken transportiert werden müssen, werden sie oft gepflückt, wenn sie noch nicht ganz [[reif]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "haltbar",
+     "ru": "долго хранящийся",
+     "ex": "Frische Milch sollte innerhalb weniger Tage getrunken werden, weil sie nicht lange [[haltbar]] ist.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Haltbarkeit",
+     "ru": "срок хранения",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verderben*",
+     "ru": "портиться",
+     "ex": "Fisch [[verdirbt]] sehr schnell, wenn er nicht ausreichend gekühlt wird.",
+     "note": "verdirbt – verdarb – ist verdorben",
+     "g": "v"
+    },
+    {
+     "de": "verdorben",
+     "ru": "испорченный",
+     "ex": "[[Verdorbene]] Lebensmittel können zu heftigen Bauchschmerzen und sogar zu Vergiftungen führen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "verschimmeln",
+     "ru": "заплесневеть",
+     "ex": "Brot [[verschimmelt]], wenn man es zu lange liegen lässt.",
+     "note": "ist verschimmelt",
+     "g": "v"
+    },
+    {
+     "de": "verschimmelt",
+     "ru": "заплесневелый",
+     "ex": "[[Verschimmelte]] Lebensmittel sollte man auf keinen Fall mehr verzehren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Schimmel",
+     "ru": "плесень",
+     "ex": "Manchmal ist [[Schimmel]] eine Delikatesse, z. B. bei Schimmelkäse, aber in den meisten Fällen ist er gesundheitsschädlich.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Состав пищи: питательные вещества",
+   "items": [
+    {
+     "de": "etw. enthalten*",
+     "ru": "содержать",
+     "ex": "Es ist allgemein bekannt, dass einige Erfrischungsgetränke viel Zucker [[enthalten]].",
+     "note": "enthält – enthielt – hat enthalten",
+     "g": "v"
+    },
+    {
+     "de": "die Zutat, Zutaten",
+     "ru": "ингредиент",
+     "ex": "In einem Kochrezept sind die [[Zutaten]] für das Gericht und die genauen Mengen aufgelistet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Nährstoff, -stoffe",
+     "ru": "питательное вещество",
+     "ex": "Obst, Gemüse, Getreide und Fleisch liefern uns wertvolle [[Nährstoffe]], die der Körper braucht.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Vitamin, Vitamine",
+     "ru": "витамин",
+     "ex": "[[Vitamine]] sind für die Gesunderhaltung des Organismus unverzichtbar.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Protein, Proteine = das Eiweiß, Eiweiße",
+     "ru": "белок",
+     "ex": "[[Proteine]] sind sowohl in tierischen als auch in pflanzlichen Lebensmitteln enthalten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Kohlehydrate (Plural), auch: die Kohlenhydrate",
+     "ru": "углеводы",
+     "ex": "Zucker liefert uns [[Kohlehydrate]], die wir für körperliche und geistige Leistungen benötigen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Kalzium",
+     "ru": "кальций",
+     "ex": "Milchprodukte sind eine wichtige Quelle für [[Kalzium]], das für die Stabilität der Knochen benötigt wird.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Жиры и добавки",
+   "items": [
+    {
+     "de": "das Fett, Fette",
+     "ru": "жир",
+     "ex": "Man sollte zwar nicht zu viel [[Fett]] zu sich nehmen, aber nicht alle [[Fette]] sind ungesund.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "gesättigte Fettsäuren (Plural)",
+     "ru": "насыщенные жирные кислоты",
+     "ex": "[[Gesättigte Fettsäuren]] sollten nur in geringen Mengen verzehrt werden.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "ungesättigte Fettsäuren (Plural)",
+     "ru": "ненасыщенные жирные кислоты",
+     "ex": "Olivenöl gilt als gesund, weil es reich an [[ungesättigten Fettsäuren]] ist.",
+     "note": "reich an + Dat.",
+     "g": "pl"
+    },
+    {
+     "de": "chemische Zusätze (Plural), auch: chemische Zusatzstoffe",
+     "ru": "химические добавки",
+     "ex": "Auf Verpackungen von Lebensmitteln müssen alle [[chemischen Zusätze]] angegeben werden, die darin enthalten sind.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "der Aromastoff, -stoffe",
+     "ru": "ароматизатор",
+     "ex": "Manche Fruchtjoghurts enthalten mehr [[Aromastoffe]] als echte Früchte.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Farbstoff, -stoffe",
+     "ru": "краситель",
+     "ex": "[[Farbstoffe]] sollen dafür sorgen, dass Speisen besonders appetitlich aussehen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Konservierungsmittel, -mittel = der Konservierungsstoff, -stoffe",
+     "ru": "консервант",
+     "ex": "[[Konservierungsmittel]] verhindern, dass Lebensmittel schnell verderben.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Сельское хозяйство: земледелие",
+   "items": [
+    {
+     "de": "die Landwirtschaft",
+     "ru": "сельское хозяйство",
+     "ex": "Die [[Landwirtschaft]] produziert die Lebensmittel, die zur Ernährung der Bevölkerung benötigt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "agrarisch",
+     "ru": "аграрный",
+     "ex": "In [[agrarischen]] Gesellschaften ist die Landwirtschaft der wichtigste Wirtschaftszweig.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Agrarprodukt, -produkte",
+     "ru": "сельскохозяйственный продукт",
+     "ex": "Landwirtschaftliche Betriebe haben oft Hofläden, in denen die Kunden [[Agrarprodukte]] direkt vom Bauern kaufen können.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. anbauen",
+     "ru": "выращивать, возделывать",
+     "ex": "In Südamerika und in Teilen Afrikas wird Kaffee auf großen Plantagen [[angebaut]].",
+     "note": "baute an – hat angebaut",
+     "g": "v"
+    },
+    {
+     "de": "der Anbau · aus biologischem Anbau",
+     "ru": "выращивание · органического выращивания",
+     "ex": "Immer mehr Verbraucher kaufen Lebensmittel, die [[aus biologischem Anbau]] stammen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Acker, Äcker = das Feld, Felder",
+     "ru": "пашня, поле",
+     "ex": "Auf den [[Äckern]] werden verschiedene Getreidesorten und Feldfrüchte angebaut.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Ackerbau",
+     "ru": "земледелие",
+     "ex": "Schon sehr früh in der Geschichte begannen die Menschen mit dem [[Ackerbau]], um sich mit Gemüse und Getreide zu versorgen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Same, Samen",
+     "ru": "семя",
+     "ex": "Wenn man [[Samen]] in die Erde legt, beginnen sie zu keimen und bald entsteht daraus eine Pflanze.",
+     "note": "n-склонение: des Samens",
+     "g": "m"
+    },
+    {
+     "de": "(etw.) säen",
+     "ru": "сеять",
+     "ex": "Im Frühling [[säen]] die Bauern die Samen, aus denen die Pflanzen wachsen sollen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Saat",
+     "ru": "посев, семена",
+     "ex": "Damit sich aus der [[Saat]] Pflanzen entwickeln, müssen die Felder regelmäßig bewässert werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. bewässern",
+     "ru": "орошать, поливать",
+     "ex": "Schon in der Antike wurden Kanäle gebaut, um die Felder zu [[bewässern]] und damit die Ernte zu sichern.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Bewässerung",
+     "ru": "орошение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Сельское хозяйство: урожай и удобрения",
+   "items": [
+    {
+     "de": "etw. düngen",
+     "ru": "удобрять",
+     "ex": "Um das Wachstum von Pflanzen zu beschleunigen, werden diese [[gedüngt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Dünger, Dünger",
+     "ru": "удобрение",
+     "ex": "Als [[Dünger]] kann man den Mist von Tieren verwenden, aber häufig werden auch chemische Düngemittel eingesetzt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Pestizid, Pestizide",
+     "ru": "пестицид",
+     "ex": "Die Pflanzen werden mit [[Pestiziden]] besprüht, um zu verhindern, dass sie von Kleintieren gefressen werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "(etw.) ernten",
+     "ru": "собирать урожай",
+     "ex": "Wenn die Früchte reif sind, können sie [[geerntet]] und verkauft werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Ernte",
+     "ru": "урожай",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Missernte, -ernten",
+     "ru": "неурожай",
+     "ex": "Ungünstige Wetterbedingungen können zu [[Missernten]] führen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "ertragreich",
+     "ru": "урожайный",
+     "ex": "[[Ertragreiche]] Getreidesorten liefern den Landwirten eine besonders gute Ernte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gentechnisch verändern",
+     "ru": "генетически модифицировать",
+     "ex": "Man hat verschiedene Obst- und Gemüsesorten [[gentechnisch verändert]], damit sie beispielsweise weniger Wasser brauchen oder mehr Früchte tragen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gentechnisch manipuliert = gentechnisch verändert",
+     "ru": "генетически модифицированный",
+     "ex": "Große Teile der Bevölkerung lehnen [[gentechnisch manipulierte]] Lebensmittel ab.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Животноводство и магазины",
+   "items": [
+    {
+     "de": "etw. züchten",
+     "ru": "выводить (породу), разводить",
+     "ex": "Man hat Rinderarten [[gezüchtet]], die besonders viel Milch und Fleisch liefern können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Zucht",
+     "ru": "разведение, селекция",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Vieh",
+     "ru": "скот",
+     "ex": "Während manche Landwirte sich auf den Ackerbau konzentrieren, halten andere [[Vieh]], zum Beispiel Rinder, Schweine oder Schafe.",
+     "note": "только ед. ч.",
+     "g": "n"
+    },
+    {
+     "de": "Vieh halten*",
+     "ru": "держать скот",
+     "ex": "Kleinbauern [[halten Vieh]], um sich selbst mit einigen Nahrungsmitteln versorgen zu können.",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    },
+    {
+     "de": "die Massentierhaltung",
+     "ru": "промышленное (массовое) животноводство",
+     "ex": "Die [[Massentierhaltung]] ermöglicht eine günstige Herstellung von Fleisch und anderen tierischen Produkten, ist aber ethisch und gesundheitlich problematisch.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Bioladen, -läden",
+     "ru": "магазин органических продуктов",
+     "ex": "Da Bioprodukte immer beliebter werden, nimmt die Zahl der [[Bioläden]] in Deutschland ständig zu.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Reformhaus, -häuser",
+     "ru": "магазин здорового питания",
+     "ex": "In [[Reformhäusern]] findet man Lebensmittel, die in normalen Supermärkten oft nicht erhältlich sind, z. B. seltene Getreidesorten.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Как питаться",
+   "items": [
+    {
+     "de": "sich ernähren von + D",
+     "ru": "питаться чем-то",
+     "ex": "Die frühen Menschen [[ernährten sich]] überwiegend [[von]] Wurzeln, Beeren und anderen Früchten, die sie im Wald finden konnten.",
+     "note": "von + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Ernährung",
+     "ru": "питание",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich gesund ernähren",
+     "ru": "правильно (здорово) питаться",
+     "ex": "Man kann sich vor einer Vielzahl von Krankheiten schützen, indem man [[sich gesund ernährt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gesunde Ernährung",
+     "ru": "здоровое питание",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich ausgewogen ernähren",
+     "ru": "сбалансированно питаться",
+     "ex": "Sie [[ernähren sich ausgewogen]], wenn Sie eine gesunde Mischung aus verschiedenen Lebensmitteln zu sich nehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich einseitig ernähren",
+     "ru": "однообразно (несбалансированно) питаться",
+     "ex": "Wer [[sich einseitig ernährt]], indem er beispielsweise viele Kohlehydrate, aber kaum Vitamine zu sich nimmt, muss mit gesundheitlichen Folgen rechnen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ernährungsbedingt",
+     "ru": "вызванный питанием",
+     "ex": "[[Ernährungsbedingte]] Krankheiten lassen sich durch eine gesunde, ausgewogene Ernährung vermeiden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "verzichten auf + A",
+     "ru": "отказываться от чего-то",
+     "ex": "Es ist nicht immer leicht, [[auf]] Nahrungsmittel zu [[verzichten]], die zwar ungesund, aber sehr schmackhaft sind.",
+     "note": "auf + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "der Verzicht auf + A",
+     "ru": "отказ от чего-то",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "name": "Вегетарианство, пост и диеты",
+   "items": [
+    {
+     "de": "vegetarisch",
+     "ru": "вегетарианский",
+     "ex": "Viele Restaurants und Kantinen bieten inzwischen auch [[vegetarische]] Gerichte an.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Vegetarier / die Vegetarierin, Vegetarier",
+     "ru": "вегетарианец",
+     "ex": "Wie in zahlreichen anderen Ländern wächst auch in Deutschland die Zahl der [[Vegetarier]] kontinuierlich.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "vegan",
+     "ru": "веганский",
+     "ex": "Menschen, die sich [[vegan]] ernähren, verzichten vollständig auf tierische Lebensmittel wie Fleisch, Milch, Eier usw.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Veganer / die Veganerin, Veganer",
+     "ru": "веган",
+     "ex": "[[Veganer]] müssen darauf achten, genug pflanzliches Eiweiß zu sich zu nehmen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "fasten",
+     "ru": "поститься",
+     "ex": "Manche Menschen [[fasten]] aus religiösen Gründen: Sie nehmen nur bestimmte Lebensmittel zu sich oder essen zu bestimmten Zeiten gar nichts.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Fasten",
+     "ru": "пост",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Fastenkur, -kuren",
+     "ru": "лечебное голодание",
+     "ex": "Bei einer [[Fastenkur]] verzichtet man auf feste Nahrung und nimmt nur Suppen und Getränke zu sich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Diät, Diäten",
+     "ru": "диета",
+     "ex": "Heutzutage gibt es viele verschiedene [[Diäten]], die eine schnelle Gewichtsreduktion versprechen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "(eine) Diät machen",
+     "ru": "сидеть на диете",
+     "ex": "Besonders gegen Ende des Winters [[machen]] zahlreiche Menschen eine [[Diät]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zunehmen*",
+     "ru": "поправляться, набирать вес",
+     "ex": "Menschen, die mit dem Rauchen aufhören, klagen oft darüber, dass sie [[zunehmen]].",
+     "note": "nimmt zu – nahm zu – hat zugenommen",
+     "g": "v"
+    },
+    {
+     "de": "abnehmen*",
+     "ru": "худеть",
+     "ex": "Nicht jeder [[nimmt ab]], um gesünder zu leben – viele wollen vor allem dem gegenwärtigen Schönheitsideal entsprechen.",
+     "note": "nimmt ab – nahm ab – hat abgenommen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "name": "Голод и лишний вес",
+   "items": [
+    {
+     "de": "hungern",
+     "ru": "голодать",
+     "ex": "International tätige Hilfsorganisationen machen darauf aufmerksam, dass immer noch viele Menschen auf der Welt [[hungern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Hunger leiden*",
+     "ru": "страдать от голода",
+     "ex": "Während es in einigen Ländern Nahrung im Überfluss gibt, [[leiden]] Menschen in anderen Teilen der Welt [[Hunger]].",
+     "note": "litt – hat gelitten · без артикля",
+     "g": "v"
+    },
+    {
+     "de": "die Hungersnot, -nöte",
+     "ru": "голод (массовый)",
+     "ex": "Lange Dürreperioden, in denen wenig oder gar kein Regen fällt, können zu einer [[Hungersnot]] führen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verhungern",
+     "ru": "умереть от голода",
+     "ex": "Durch Hungersnöte [[verhungern]] auch heute noch viele Menschen, weil sie nicht mit Nahrung versorgt werden können.",
+     "note": "ist verhungert",
+     "g": "v"
+    },
+    {
+     "de": "unterernährt sein",
+     "ru": "страдать от недоедания",
+     "ex": "Wenn eine Familie nicht genug zu essen hat, sind oft schon die Babys [[unterernährt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Unterernährung",
+     "ru": "недоедание",
+     "ex": "[[Unterernährung]] kann schwerwiegende Gesundheitsschäden verursachen, von denen sich ein Mensch niemals erholt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "es mangelt jdm. an + D",
+     "ru": "кому-то не хватает чего-то",
+     "ex": "Kinder, denen [[es an]] Vitamin D [[mangelt]], erkranken oft an Rachitis.",
+     "note": "безличное: es mangelt mir an Zeit",
+     "g": "v"
+    },
+    {
+     "de": "der Mangel an + D",
+     "ru": "недостаток, нехватка чего-то",
+     "ex": "Chronische Müdigkeit kann ein Symptom für einen [[Mangel an]] Eisen sein.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Mangelerscheinungen (Plural)",
+     "ru": "симптомы недостатка (витаминов и т. п.)",
+     "ex": "Einseitige oder unzureichende Ernährung ist oft der Grund für [[Mangelerscheinungen]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "übergewichtig",
+     "ru": "с лишним весом",
+     "ex": "[[Übergewichtige]] Kinder sollten mehr Sport treiben und auf kalorienreiche Lebensmittel verzichten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Übergewicht",
+     "ru": "лишний вес",
+     "ex": "Ärzte weisen darauf hin, dass [[Übergewicht]] verschiedene Krankheiten zur Folge haben kann.",
+     "note": "etw. zur Folge haben",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "name": "Пищеварение, аллергия, диабет",
+   "items": [
+    {
+     "de": "die Essstörung, -störungen",
+     "ru": "расстройство пищевого поведения",
+     "ex": "Nach Erkenntnissen von Wissenschaftlern haben [[Essstörungen]] wie Magersucht und Bulimie meist psychische Ursachen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "an einer Essstörung leiden*",
+     "ru": "страдать расстройством пищевого поведения",
+     "ex": "Die meisten, die [[an Essstörungen leiden]], sind Mädchen im Teenageralter, die ein gestörtes Verhältnis zu ihrem Körper haben.",
+     "note": "litt – hat gelitten · an + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "etw. verdauen",
+     "ru": "переваривать",
+     "ex": "Verschiedene Säuren helfen dabei, die aufgenommene Nahrung zu [[verdauen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verdauung",
+     "ru": "пищеварение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Stoffwechsel",
+     "ru": "обмен веществ",
+     "ex": "Durch den [[Stoffwechsel]] wird Nahrung in verschiedene chemische Stoffe zerlegt und umgewandelt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "allergisch reagieren auf + A",
+     "ru": "иметь аллергию на что-то",
+     "ex": "Immer mehr Menschen [[reagieren allergisch auf]] bestimmte Bestandteile unserer Nahrung.",
+     "note": "auf + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Allergie, Allergien",
+     "ru": "аллергия",
+     "ex": "Es ist bekannt, dass der Verzehr bestimmter Zusatzstoffe [[Allergien]] auslösen kann.",
+     "note": "eine Allergie auslösen",
+     "g": "f"
+    },
+    {
+     "de": "der Blutzuckerspiegel",
+     "ru": "уровень сахара в крови",
+     "ex": "Nach dem Verzehr bestimmter Lebensmittel steigt der [[Blutzuckerspiegel]] sprunghaft an.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Diabetes = die Zuckerkrankheit",
+     "ru": "диабет",
+     "ex": "Bei [[Diabetes]] ist der Körper nicht mehr in der Lage, den Blutzuckerspiegel selbstständig zu regulieren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Cholesterin",
+     "ru": "холестерин",
+     "ex": "Man unterscheidet zwei Arten von [[Cholesterin]], und zwar das „gesunde“ HDL-Cholesterin und das „ungesunde“ LDL-Cholesterin.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Cholesterinspiegel",
+     "ru": "уровень холестерина",
+     "ex": "Ein hoher LDL-[[Cholesterinspiegel]] gilt als Gesundheitsrisiko, da dieses Cholesterin zur Verengung der Blutgefäße (Arteriosklerose) führt.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: потребление мяса (Infobox)",
+   "items": [
+    {
+     "de": "der Fleischkonsum",
+     "ru": "потребление мяса",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Luxusgut, -güter",
+     "ru": "предмет роскоши",
+     "ex": "In der Vergangenheit war Fleisch jedoch ein [[Luxusgut]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "sich etw. leisten können",
+     "ru": "мочь себе позволить",
+     "ex": "Und nach wie vor gibt es Menschen auf der Welt, die [[sich]] kein Fleisch [[leisten können]].",
+     "note": "sich (Dat.)",
+     "g": "v"
+    },
+    {
+     "de": "kritisch betrachtet werden",
+     "ru": "рассматриваться критически",
+     "ex": "Doch seit einigen Jahren wird der Verzehr von großen Mengen an Fleisch zunehmend [[kritisch betrachtet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gesundheitsschädlich",
+     "ru": "вредный для здоровья",
+     "ex": "Doch daneben enthält es Substanzen, die [[gesundheitsschädlich]] sein können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "krebserregend",
+     "ru": "канцерогенный",
+     "ex": "So hat man beispielsweise größere Mengen an Antibiotika oder das [[krebserregende]] Dioxin in Fleisch und anderen tierischen Produkten festgestellt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "einen Skandal aufdecken",
+     "ru": "раскрыть скандал",
+     "ex": "Hinzu kommt, dass in den vergangenen Jahren mehrere Fleischskandale [[aufgedeckt]] wurden.",
+     "note": "deckte auf – hat aufgedeckt",
+     "g": "v"
+    },
+    {
+     "de": "in Maßen",
+     "ru": "в меру, умеренно",
+     "ex": "Deshalb wird empfohlen, Fleisch nur [[in Maßen]] zu sich zu nehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Tierschutz",
+     "ru": "защита животных",
+     "ex": "[[Tierschutz]]: Manche Menschen verzichten auf Fleisch, weil sie nicht möchten, dass ein Tier ihretwegen getötet wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. an Tiere verfüttern",
+     "ru": "скармливать животным",
+     "ex": "Stattdessen wird aber ein erheblicher Teil an die Tiere [[verfüttert]].",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "verzichten auf + A",
+   "v": "Отказываться от чего-то — auf + Akk.: auf Fleisch verzichten, der Verzicht auf Zucker"
+  },
+  {
+   "k": "es mangelt jdm. an + D",
+   "v": "Безличная конструкция: Es mangelt ihm an Vitamin D (не «er mangelt»). Существительное: der Mangel an + Dat."
+  },
+  {
+   "k": "zunehmen / abnehmen",
+   "v": "Отделяемые: Ich nehme ab. Er hat zugenommen. «Похудеть на 5 кг» — um 5 Kilo abnehmen"
+  },
+  {
+   "k": "verderben — verdorben",
+   "v": "Сильный глагол: verdirbt – verdarb – ist verdorben. Verdorbene Lebensmittel (причастие как прилагательное)"
+  },
+  {
+   "k": "die Nahrung · die Nahrungsmittel · die Lebensmittel",
+   "v": "Nahrung — пища вообще (ед. ч.), Nahrungs-/Lebensmittel — конкретные продукты (мн. ч.)"
+  },
+  {
+   "k": "das Gericht",
+   "v": "1) блюдо, 2) суд. Das Gericht, die Gerichte в обоих значениях"
+  },
+  {
+   "k": "der Same",
+   "v": "n-склонение с -ns в Gen.: des Samens, мн. ч. die Samen"
+  },
+  {
+   "k": "Hunger leiden · an einer Krankheit leiden",
+   "v": "Hunger leiden — без артикля и предлога; болезнью — leiden an + Dat."
+  }
+ ]
+}

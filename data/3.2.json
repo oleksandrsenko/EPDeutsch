@@ -1,0 +1,806 @@
+{
+ "id": "3.2",
+ "chapter": 3,
+ "chapterName": "Alltagsleben",
+ "title": "Arbeit und Beruf",
+ "titleRu": "Работа и профессия",
+ "pages": "104–110",
+ "exercises": "110–113",
+ "solutions": "263–264",
+ "bookRows": 77,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Работать: основные выражения",
+   "items": [
+    {
+     "de": "erwerbstätig sein* = berufstätig sein*",
+     "ru": "работать, иметь оплачиваемую работу",
+     "ex": "Viele Frauen wollen auch dann [[erwerbstätig sein]], wenn sie Kinder haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Erwerbstätigkeit = die Berufstätigkeit",
+     "ru": "трудовая деятельность, занятость",
+     "ex": "[[Eine Erwerbstätigkeit]] ist eine Möglichkeit, das Studium ganz oder teilweise zu finanzieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "einer Erwerbstätigkeit nachgehen*",
+     "ru": "заниматься трудовой деятельностью, работать",
+     "ex": "Wenn Sie [[einer Erwerbstätigkeit nachgehen]], müssen Sie Einkommenssteuern zahlen.",
+     "note": "ging nach – ist nachgegangen · + Dativ",
+     "g": "v"
+    },
+    {
+     "de": "einen Beruf ergreifen*",
+     "ru": "выбрать профессию",
+     "ex": "Spätestens gegen Ende der Schulzeit müssen sich junge Leute Gedanken darüber machen, welchen Beruf sie [[ergreifen]] wollen.",
+     "note": "ergriff – hat ergriffen",
+     "g": "v"
+    },
+    {
+     "de": "einen Beruf ausüben",
+     "ru": "работать по профессии, заниматься профессией",
+     "ex": "Früher [[übten]] die meisten Arbeitnehmer viele Jahrzehnte lang den gleichen Beruf [[aus]].",
+     "note": "übte aus – hat ausgeübt",
+     "g": "v"
+    },
+    {
+     "de": "tätig sein* als = arbeiten als",
+     "ru": "работать кем-то, в качестве кого-то",
+     "ex": "Seit seinem Hochschulabschluss ist er als Ingenieur in der Automobilbranche [[tätig]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "angestellt sein*",
+     "ru": "работать по найму, быть в штате",
+     "ex": "Sie war lange [[angestellt]], bevor sie beschlossen hat, ein eigenes Unternehmen zu gründen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "selbstständig sein*",
+     "ru": "работать на себя, быть самозанятым",
+     "ex": "Wenn man [[selbstständig]] ist, muss man gewisse finanzielle Risiken in Kauf nehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Selbstständigkeit",
+     "ru": "самостоятельная (частная) деятельность, работа на себя",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich selbstständig machen",
+     "ru": "открыть своё дело",
+     "ex": "Wer [[sich selbstständig machen]] will, kann einen Kredit für Existenzgründer beantragen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Участники рынка труда",
+   "items": [
+    {
+     "de": "der Arbeitgeber, - / die Arbeitgeberin",
+     "ru": "работодатель",
+     "ex": "Die [[Arbeitgeber]] zahlen einen Teil der Beiträge zur Krankenversicherung ihrer Angestellten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Arbeitnehmer, - / die Arbeitnehmerin",
+     "ru": "работник (по найму)",
+     "ex": "Erst nach der sechsmonatigen Probezeit haben [[Arbeitnehmer]] ein Recht auf einen längeren Urlaub.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Arbeitskräfte (Pl.)",
+     "ru": "рабочая сила, работники",
+     "ex": "Wegen der guten Auftragslage stellt das Unternehmen zusätzliche [[Arbeitskräfte]] ein.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "jds. Interessen vertreten*",
+     "ru": "представлять чьи-либо интересы",
+     "ex": "Die Arbeitgeberverbände [[vertreten die Interessen]] ihrer Mitglieder gegenüber dem Staat und den Gewerkschaften.",
+     "note": "vertritt – vertrat – hat vertreten",
+     "g": "v"
+    },
+    {
+     "de": "die Gewerkschaft, -en",
+     "ru": "профсоюз",
+     "ex": "[[Gewerkschaften]] vertreten die Interessen der Arbeitnehmerinnen und Arbeitnehmer, die in der jeweiligen Branche tätig sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Betriebsrat, -räte",
+     "ru": "совет работников предприятия (выборный орган)",
+     "ex": "Der [[Betriebsrat]] wird von den Mitarbeitern gewählt und vertritt ihre Interessen gegenüber der Firmenleitung.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Mitarbeiter, - / die Mitarbeiterin",
+     "ru": "сотрудник",
+     "ex": "Die Firmenleitung veranstaltet eine Weihnachtsfeier, zu der alle [[Mitarbeiter]] herzlich eingeladen sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Arbeiter, - / die Arbeiterin",
+     "ru": "рабочий",
+     "ex": "Die Sicherheitsvorschriften auf der Baustelle dienen dem Schutz der [[Arbeiter]].",
+     "note": "получает Lohn → Rente",
+     "g": "m"
+    },
+    {
+     "de": "der / die Angestellte (!)",
+     "ru": "служащий, сотрудник по найму",
+     "ex": "Als [[Angestellter]] wird man auch bezahlt, wenn man krank ist oder Urlaub macht.",
+     "note": "склоняется как прилагательное: ein Angestellter · получает Gehalt → Rente",
+     "g": "m"
+    },
+    {
+     "de": "der Beamte (!) / die Beamtin",
+     "ru": "госслужащий, чиновник",
+     "ex": "Während früher alle Lehrer an staatlichen Schulen [[Beamte]] waren, gibt es heute auch eine große Zahl an angestellten Lehrern.",
+     "note": "ein Beamter, die Beamten · получает Gehalt → Pension",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Квалификация",
+   "items": [
+    {
+     "de": "die Qualifikation, -en",
+     "ru": "квалификация",
+     "ex": "Berufliche [[Qualifikationen]] erwirbt man heute nicht nur in der Ausbildung, sondern auch durch Fortbildungen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verfügen über + A",
+     "ru": "располагать чем-либо, обладать",
+     "ex": "Ein Bewerber, der über besondere Qualifikationen [[verfügt]], hat bessere Chancen, einen Arbeitsplatz zu finden.",
+     "note": "über + Akkusativ",
+     "g": "v"
+    },
+    {
+     "de": "die Berufsausbildung, -en",
+     "ru": "профессиональное обучение",
+     "ex": "Haupt- und Realschüler absolvieren nach dem Schulabschluss in der Regel eine [[Berufsausbildung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Akademiker, - / die Akademikerin",
+     "ru": "человек с высшим образованием",
+     "ex": "Untersuchungen haben gezeigt, dass [[Akademiker]] seltener arbeitslos sind als Menschen ohne Hochschulabschluss.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Hochschulabsolvent, -en / die Hochschulabsolventin",
+     "ru": "выпускник вуза",
+     "ex": "Zahlreiche [[Hochschulabsolventen]] absolvieren nach dem Abschluss ihres Studiums ein Praktikum.",
+     "note": "n-склонение: den/dem/des Hochschulabsolventen",
+     "g": "m"
+    },
+    {
+     "de": "die Schlüsselqualifikationen (Pl.)",
+     "ru": "ключевые компетенции, soft skills",
+     "ex": "In allen Berufen wird heute auf [[Schlüsselqualifikationen]] wie soziale und kommunikative Kompetenz Wert gelegt.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Auslandserfahrung",
+     "ru": "опыт жизни или работы за границей",
+     "ex": "Heutzutage wünschen sich die meisten Arbeitgeber Mitarbeiter, die über [[Auslandserfahrung]] verfügen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Sprachkenntnisse (Pl.)",
+     "ru": "знание языков",
+     "ex": "Große Unternehmen geben ihren Mitarbeitern häufig Gelegenheit, ihre [[Sprachkenntnisse]] in firmeninternen Sprachkursen zu erweitern.",
+     "note": "",
+     "g": "pl"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Рынок труда и безработица",
+   "items": [
+    {
+     "de": "der Arbeitsmarkt, -märkte",
+     "ru": "рынок труда",
+     "ex": "Die Situation auf dem [[Arbeitsmarkt]] beeinflusst wirtschafts- und sozialpolitische Entscheidungen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Chancen auf dem Arbeitsmarkt",
+     "ru": "шансы на рынке труда",
+     "ex": "Die meisten Schulabgänger machen sich bei der Berufswahl Gedanken über ihre [[Chancen auf dem Arbeitsmarkt]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Arbeitsplätze schaffen*",
+     "ru": "создавать рабочие места",
+     "ex": "Durch den zunehmenden Tourismus werden neue [[Arbeitsplätze geschaffen]].",
+     "note": "schuf – hat geschaffen",
+     "g": "v"
+    },
+    {
+     "de": "Arbeitsplätze abbauen",
+     "ru": "сокращать рабочие места",
+     "ex": "Das Unternehmen steckt in einer Krise und muss deshalb [[Arbeitsplätze abbauen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "arbeitslos sein*",
+     "ru": "быть безработным",
+     "ex": "Viele Betroffene schämen sich, wenn sie [[arbeitslos]] sind und staatliche Hilfe in Anspruch nehmen müssen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Arbeitslosigkeit",
+     "ru": "безработица",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Arbeitsagentur, -en",
+     "ru": "агентство занятости, биржа труда",
+     "ex": "Es ist die Aufgabe der [[Arbeitsagenturen]], geeignete Stellen für Menschen zu finden, die keine Arbeit haben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich umschulen lassen*",
+     "ru": "пройти переподготовку, переучиться",
+     "ex": "Wer seinen erlernten Beruf aus gesundheitlichen Gründen nicht mehr ausüben kann, kann [[sich umschulen lassen]].",
+     "note": "ließ sich umschulen – hat sich umschulen lassen",
+     "g": "v"
+    },
+    {
+     "de": "die Umschulung, -en",
+     "ru": "переквалификация, переобучение",
+     "ex": "Teilweise übernehmen die Arbeitsagenturen die Kosten für eine [[Umschulung]].",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Поиск работы и собеседование",
+   "items": [
+    {
+     "de": "die Stelle, -n",
+     "ru": "место, должность, вакансия",
+     "ex": "Auf der Webseite des Unternehmens finden Sie Informationen über offene [[Stellen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Stellenanzeige, -n",
+     "ru": "объявление о вакансии",
+     "ex": "Große Institutionen und Unternehmen veröffentlichen ihre [[Stellenanzeigen]] meist in überregionalen Zeitungen und im Internet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich um eine Stelle bewerben*",
+     "ru": "претендовать на место, откликаться на вакансию",
+     "ex": "Wenn Sie [[sich um eine Stelle bewerben]], sollten Sie sich vorher gründlich über das betreffende Unternehmen informieren.",
+     "note": "bewirbt – bewarb – hat beworben · um + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Bewerbung um eine Stelle",
+     "ru": "отклик, заявка на вакансию",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Bewerber, - / die Bewerberin",
+     "ru": "соискатель, кандидат",
+     "ex": "Manche [[Bewerber]] geben in ihrem Lebenslauf Auskunft über persönliche Hobbys und Interessen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Bewerbungsunterlagen (Pl.)",
+     "ru": "документы для отклика на вакансию",
+     "ex": "Heutzutage kann man den Unternehmen seine [[Bewerbungsunterlagen]] oft auch per E-Mail zuschicken.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "der Lebenslauf, -läufe",
+     "ru": "резюме, автобиография (CV)",
+     "ex": "Zu den Bewerbungsunterlagen gehört normalerweise ein tabellarischer [[Lebenslauf]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Vorstellungsgespräch, -e",
+     "ru": "собеседование",
+     "ex": "Nur ein kleiner Teil der Bewerber wird zu einem [[Vorstellungsgespräch]] eingeladen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Personalleiter, - / die Personalleiterin",
+     "ru": "руководитель отдела кадров",
+     "ex": "Im Rahmen des Vorstellungsgesprächs prüft der [[Personalleiter]] die Qualifikationen der Bewerber.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der / die Vorgesetzte (!)",
+     "ru": "начальник, руководитель",
+     "ex": "Beim Vorstellungsgespräch lernt der Bewerber seinen zukünftigen [[Vorgesetzten]] kennen.",
+     "note": "склоняется как прилагательное: ein Vorgesetzter",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Приём на работу и увольнение",
+   "items": [
+    {
+     "de": "jdn. einstellen",
+     "ru": "принять кого-то на работу",
+     "ex": "Entgegen dem allgemeinen Trend [[stellen]] einige Unternehmen gerne auch ältere Mitarbeiter [[ein]].",
+     "note": "stellte ein – hat eingestellt",
+     "g": "v"
+    },
+    {
+     "de": "die Einstellung, -en",
+     "ru": "приём на работу, найм",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. entlassen*",
+     "ru": "уволить кого-то",
+     "ex": "Um Personalkosten zu sparen, wurde beschlossen, einen Teil der Mitarbeiter zu [[entlassen]].",
+     "note": "entlässt – entließ – hat entlassen",
+     "g": "v"
+    },
+    {
+     "de": "die Entlassung, -en",
+     "ru": "увольнение (по инициативе работодателя)",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "kündigen",
+     "ru": "уволиться самому, подать заявление об уходе",
+     "ex": "Er hat schon [[gekündigt]], obwohl er noch keine neue Stelle gefunden hat.",
+     "note": "без дополнения: уходит сам работник",
+     "g": "v"
+    },
+    {
+     "de": "jdm. kündigen = jdn. entlassen*",
+     "ru": "уволить кого-то",
+     "ex": "Es ist nicht erlaubt, einer Frau während der Schwangerschaft zu [[kündigen]].",
+     "note": "+ Dativ: Die Firma kündigt ihm.",
+     "g": "v"
+    },
+    {
+     "de": "die Kündigung, -en",
+     "ru": "увольнение; заявление об уходе",
+     "ex": "Eine [[Kündigung]] ist nur rechtskräftig, wenn sie schriftlich erfolgt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine fristlose Kündigung",
+     "ru": "увольнение без срока предупреждения",
+     "ex": "[[Eine fristlose Kündigung]] ist nur in Ausnahmefällen möglich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Probezeit",
+     "ru": "испытательный срок",
+     "ex": "Während der [[Probezeit]] kann ein neuer Mitarbeiter jederzeit entlassen werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. einarbeiten",
+     "ru": "вводить в курс дела, обучать новичка",
+     "ex": "Die Mitarbeiterin wird ihre Nachfolgerin [[einarbeiten]], bevor sie das Unternehmen verlässt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich einarbeiten",
+     "ru": "освоиться на новом месте, войти в курс дела",
+     "ex": "Wenn man eine neue Stelle antritt, braucht man einige Zeit, um [[sich einzuarbeiten]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Договор и рабочее время",
+   "items": [
+    {
+     "de": "der Arbeitsvertrag, -verträge",
+     "ru": "трудовой договор",
+     "ex": "Im [[Arbeitsvertrag]] sind Verdienst, Arbeitszeiten, Sozialleistungen und andere Details geregelt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "befristet",
+     "ru": "ограниченный по сроку",
+     "ex": "Viele Stellen sind heute auf zwei oder drei Jahre [[befristet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein befristeter Arbeitsvertrag",
+     "ru": "срочный трудовой договор",
+     "ex": "Insbesondere Berufsanfänger erhalten meist nur [[einen befristeten Arbeitsvertrag]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ein unbefristeter Arbeitsvertrag",
+     "ru": "бессрочный трудовой договор",
+     "ex": "Die Bewerber hoffen darauf, dass ihnen [[ein unbefristeter Arbeitsvertrag]] angeboten wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Vollzeitstelle, -n",
+     "ru": "работа на полную ставку",
+     "ex": "Alleinstehende Arbeitnehmer sind in der Regel auf [[eine Vollzeitstelle]] angewiesen, um ihren Lebensunterhalt zu verdienen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Teilzeitstelle, -n",
+     "ru": "работа на неполную ставку",
+     "ex": "Ältere Menschen haben in einigen Unternehmen die Möglichkeit, in den Jahren vor der Rente [[eine Teilzeitstelle]] zu erhalten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "vollzeitbeschäftigt sein*",
+     "ru": "работать полный день",
+     "ex": "Vor seiner Erkrankung war er [[vollzeitbeschäftigt]], aber jetzt möchte er zunächst einmal Teilzeit arbeiten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "teilzeitbeschäftigt sein*",
+     "ru": "работать неполный день",
+     "ex": "Aus familiären Gründen sind Frauen häufiger [[teilzeitbeschäftigt]] als Männer.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "halbtags arbeiten",
+     "ru": "работать полдня",
+     "ex": "Mütter, die schulpflichtige Kinder haben, arbeiten oft [[halbtags]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "flexible Arbeitszeiten (Pl.)",
+     "ru": "гибкий график работы",
+     "ex": "In vielen Unternehmen sind [[flexible Arbeitszeiten]] nichts Besonderes mehr.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Schichtdienst machen",
+     "ru": "работать посменно",
+     "ex": "Krankenpfleger müssen in der Regel [[Schichtdienst machen]], da immer jemand für die Patienten da sein muss.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Schichtarbeit",
+     "ru": "сменная работа",
+     "ex": "Mittlerweile hat man festgestellt, dass [[Schichtarbeit]] sich negativ auf die Gesundheit auswirkt.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Зарплата и забастовки",
+   "items": [
+    {
+     "de": "der Verdienst",
+     "ru": "заработок",
+     "ex": "Um die Inflation auszugleichen, sollte der [[Verdienst]] regelmäßig angehoben werden.",
+     "note": "не путать: das Verdienst — заслуга",
+     "g": "m"
+    },
+    {
+     "de": "der Lohn, Löhne",
+     "ru": "зарплата (рабочих, часто почасовая)",
+     "ex": "Die Gewerkschaften fordern, die [[Löhne]] der Arbeiter um 6 % zu erhöhen.",
+     "note": "Arbeiter → Lohn",
+     "g": "m"
+    },
+    {
+     "de": "das Gehalt, Gehälter",
+     "ru": "оклад, зарплата (служащих, помесячно)",
+     "ex": "Angestellte haben die Möglichkeit, neben ihrem [[Gehalt]] zusätzliche Leistungen, z. B. Weihnachtsgeld, zu bekommen.",
+     "note": "Angestellte, Beamte → Gehalt",
+     "g": "n"
+    },
+    {
+     "de": "die Rente, -n",
+     "ru": "пенсия (рабочих и служащих)",
+     "ex": "Ein Arbeiter bekommt Lohn und später [[Rente]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pension, -en",
+     "ru": "пенсия госслужащего",
+     "ex": "Beamte erhalten im Alter eine [[Pension]].",
+     "note": "только у Beamte",
+     "g": "f"
+    },
+    {
+     "de": "streiken",
+     "ru": "бастовать",
+     "ex": "Die Mitarbeiter [[streiken]], um ihre Forderungen nach besseren Arbeitsbedingungen durchzusetzen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Streik, -s",
+     "ru": "забастовка",
+     "ex": "Wegen des [[Streiks]] im öffentlichen Nahverkehr kommen viele Menschen zu spät zur Arbeit.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Карьера",
+   "items": [
+    {
+     "de": "das Praktikum, Praktika",
+     "ru": "практика, стажировка",
+     "ex": "Durch ein [[Praktikum]] können sich Haupt- und Realschüler ein Bild von ihrem zukünftigen Beruf machen.",
+     "note": "мн. ч. die Praktika",
+     "g": "n"
+    },
+    {
+     "de": "ein Praktikum machen / absolvieren",
+     "ru": "проходить практику",
+     "ex": "Studierende der Wirtschaftswissenschaften müssen während ihres Studiums ein zweimonatiges Praktikum [[absolvieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Praktikant, -en / die Praktikantin",
+     "ru": "практикант, стажёр",
+     "ex": "Häufig wird behauptet, dass Unternehmen ihre [[Praktikanten]] als billige Arbeitskräfte missbrauchen.",
+     "note": "n-склонение: den Praktikanten",
+     "g": "m"
+    },
+    {
+     "de": "Berufserfahrung sammeln",
+     "ru": "набираться опыта работы",
+     "ex": "Praktika sind eine gute Möglichkeit, schon während des Studiums [[Berufserfahrung zu sammeln]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "aufsteigen*",
+     "ru": "продвигаться по службе",
+     "ex": "Wer engagiert ist und sich regelmäßig weiterbildet, hat die Chance, im Unternehmen rasch [[aufzusteigen]].",
+     "note": "stieg auf – ist aufgestiegen",
+     "g": "v"
+    },
+    {
+     "de": "der Aufstieg",
+     "ru": "карьерный рост, повышение",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Aufstiegschancen (Pl.)",
+     "ru": "перспективы карьерного роста",
+     "ex": "Absolventen bestimmter Studiengänge haben besonders gute [[Aufstiegschancen]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Karriere machen",
+     "ru": "сделать карьеру",
+     "ex": "Junge Leute wollen häufig erst [[Karriere machen]], bevor sie eine Familie gründen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Сферы деятельности",
+   "items": [
+    {
+     "de": "das Handwerk",
+     "ru": "ремесло, ремесленный сектор",
+     "ex": "Durch den technischen Fortschritt haben sich die Tätigkeiten im [[Handwerk]] teilweise stark verändert.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Industrie",
+     "ru": "промышленность",
+     "ex": "Die [[Industrie]] ist von der wirtschaftlichen Entwicklung im In- und Ausland abhängig.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Handel",
+     "ru": "торговля",
+     "ex": "Zu den Beschäftigten im [[Handel]] zählen unter anderem Verkäufer, Floristen und Einzelhandelskaufleute.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der öffentliche Dienst",
+     "ru": "государственная служба",
+     "ex": "Menschen, die bei Behörden und in anderen staatlichen Institutionen arbeiten, sind im [[öffentlichen Dienst]] tätig.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Verwaltung",
+     "ru": "администрация, управление",
+     "ex": "Manche Menschen arbeiten gerne in der [[Verwaltung]], während andere administrative Aufgaben als langweilig empfinden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Dienstleistungsberuf, -e",
+     "ru": "профессия в сфере услуг",
+     "ex": "Wer einen [[Dienstleistungsberuf]] ausübt, muss oft auch abends oder am Wochenende arbeiten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "eine Dienstleistung erbringen*",
+     "ru": "оказывать услугу",
+     "ex": "Taxifahrer werden dafür bezahlt, dass sie [[eine Dienstleistung erbringen]].",
+     "note": "erbrachte – hat erbracht",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: временная работа (Infobox)",
+   "items": [
+    {
+     "de": "die Zeitarbeit",
+     "ru": "временная работа через кадровое агентство",
+     "ex": "In den letzten Jahrzehnten hat sich eine neue Form der Arbeit entwickelt, die so genannte [[Zeitarbeit]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Leiharbeit / der Leiharbeiter",
+     "ru": "заёмный труд / заёмный работник",
+     "ex": "Deshalb bezeichnet man diese Arbeit auch als [[Leiharbeit]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. ausleihen*",
+     "ru": "одалживать, передавать во временное пользование",
+     "ex": "Zeitarbeitsunternehmen stellen Mitarbeiter ein, die sie dann an verschiedene Arbeitgeber [[ausleihen]].",
+     "note": "lieh aus – hat ausgeliehen",
+     "g": "v"
+    },
+    {
+     "de": "fest angestellt / der/die Festangestellte",
+     "ru": "в штате на постоянной основе / штатный сотрудник",
+     "ex": "Aufgrund der gesetzlichen Regelungen ist dies deutlich schwieriger, wenn alle Mitarbeiter [[fest angestellt]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Belegschaft",
+     "ru": "персонал, коллектив предприятия",
+     "ex": "Leiharbeiter werden oft schlechter bezahlt als die normale [[Belegschaft]] eines Unternehmens.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Berufsanfänger, -",
+     "ru": "новичок в профессии",
+     "ex": "Auch [[Berufsanfänger]] haben so die Möglichkeit, in verschiedenen Unternehmen Erfahrung zu sammeln.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "vorübergehend",
+     "ru": "временно",
+     "ex": "Menschen, die länger oder [[vorübergehend]] arbeitslos sind, können auf diese Weise eine Arbeit finden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Mindestlohn, -löhne",
+     "ru": "минимальная зарплата",
+     "ex": "Außerdem wurden [[Mindestlöhne]] festgesetzt.",
+     "note": "",
+     "g": "m"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "kündigen / jdm. kündigen",
+   "v": "«Er hat gekündigt» — ушёл сам. «Die Firma hat ihm gekündigt» — его уволили (Dativ!)"
+  },
+  {
+   "k": "der Angestellte → ein Angestellter",
+   "v": "Склоняется как прилагательное. Так же der Vorgesetzte / ein Vorgesetzter, der Beamte / ein Beamter (но die Beamtin)"
+  },
+  {
+   "k": "Lohn · Gehalt · Pension",
+   "v": "Рабочий получает Lohn, а потом Rente. Служащий — Gehalt, потом Rente. Beamter — Gehalt, потом Pension"
+  },
+  {
+   "k": "der Verdienst ≠ das Verdienst",
+   "v": "der Verdienst — заработок, das Verdienst — заслуга"
+  },
+  {
+   "k": "der Praktikant, der Hochschulabsolvent",
+   "v": "n-склонение: den/dem/des Praktikanten, Absolventen"
+  },
+  {
+   "k": "das Praktikum → die Praktika",
+   "v": "Латинское множественное число"
+  }
+ ]
+}

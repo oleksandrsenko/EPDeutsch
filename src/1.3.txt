@@ -1,0 +1,112 @@
+@id 1.3
+@chapter 1
+@chapterName Bildung und Forschung
+@title Wissenschaft
+@titleRu Наука
+@pages 34–39
+@exercises 40–43
+@solutions 260–261
+@bookRows 61
+
+# s1 Области науки и учёные
+das Fachgebiet, Fachgebiete | область знаний, специальность | Oft arbeiten Wissenschaftler aus verschiedenen [[Fachbereichen]] gemeinsam an einem Forschungsprojekt. | = der Fachbereich | n
+auf einem Gebiet | в какой-то области | Professor Hagen ist ein Experte [[auf dem Gebiet]] der Herzchirurgie. | auf + Dat. | v
+die Disziplin, Disziplinen = das Fachgebiet | научная дисциплина | Jura, Medizin und Theologie sind einige der ältesten wissenschaftlichen [[Disziplinen]]. |  | f
+interdisziplinär | междисциплинарный | [[Interdisziplinäre]] Forschungsprojekte beschäftigen sich mit Themen, die verschiedene Fachbereiche berühren. |  | v
+die Naturwissenschaft, Naturwissenschaften | естественная наука | Biologie, Chemie und Physik zählen zu den klassischen [[Naturwissenschaften]]. |  | f
+naturwissenschaftlich | естественнонаучный | Viele Themen der [[naturwissenschaftlichen]] Forschung sind sowohl für Biologen als auch für Chemiker und Mediziner interessant. |  | v
+die Geisteswissenschaft, Geisteswissenschaften | гуманитарная наука | Anders als in den Naturwissenschaften lassen sich Erkenntnisse der [[Geisteswissenschaften]] in der Regel nicht in Formeln ausdrücken. |  | f
+geisteswissenschaftlich | гуманитарный | Ein großer Teil der [[geisteswissenschaftlichen]] Arbeit besteht in der Lektüre und Analyse von Texten. |  | v
+der Forscher / die Forscherin, Forscher = der Wissenschaftler / die Wissenschaftlerin, Wissenschaftler | исследователь, учёный | Insbesondere in den Naturwissenschaften arbeiten viele [[Forscher]] heute nicht mehr alleine, sondern in einem Team. |  | m
+der Nachwuchswissenschaftler / die -wissenschaftlerin, Nachwuchswissenschaftler | молодой учёный | Durch die Einführung der Juniorprofessur soll [[Nachwuchswissenschaftlern]] der Einstieg in eine Karriere an der Universität erleichtert werden. |  | m
+den Nachwuchs fördern | поддерживать молодых учёных (смену) | Der wissenschaftliche [[Nachwuchs]] wird durch verschiedene Programme und Stipendien für junge Wissenschaftler [[gefördert]]. |  | v
+die Nachwuchsförderung | поддержка молодых учёных |  |  | f
+
+# s2 Исследовать и искать информацию
+forschen | заниматься исследованиями | In einem so genannten Forschungssemester können Professoren intensiv an einem Thema [[forschen]], weil sie von den Lehrveranstaltungen freigestellt sind. | an + Dat.: an einem Thema forschen | v
+forschen nach + D | искать, исследовать что-то | Seit Jahren [[forschen]] Wissenschaftler [[nach]] einem Heilmittel gegen AIDS. | nach + Dat. | v
+die Forschung, Forschungen | исследование, наука | Viele [[Forschungen]] werden nicht nur von den Universitäten finanziell unterstützt, sondern auch von Stiftungen und der Privatwirtschaft. |  | f
+Forschung(en) betreiben* | вести исследования | Mitarbeiter des Alfred-Wegener-Instituts [[betreiben]] umfangreiche [[Forschungen]] in der Antarktis. | betrieb – hat betrieben | v
+etw. erforschen | исследовать, изучать что-то | Geologen [[erforschen]] ein weitverzweigtes Höhlensystem, das erst vor einigen Jahren entdeckt wurde. | + Akk. (без предлога) | v
+die Fachliteratur | специальная (научная) литература | Wissenschaftler müssen ständig [[Fachliteratur]] lesen, um in ihrem Fach auf dem neuesten Stand zu sein. |  | f
+das Archiv, Archive | архив | Historiker finden in [[Archiven]] oft interessante Dokumente, die ihnen wertvolle Fakten liefern. |  | n
+die Datenbank, Datenbanken | база данных | In [[Datenbanken]] lassen sich umfangreiche Informationen übersichtlich speichern und bei Bedarf abrufen. |  | f
+recherchieren | искать информацию, проводить поиск | Von einem Wissenschaftler wird erwartet, dass er gründlich [[recherchiert]], bevor er sich eine Meinung bildet oder eine Theorie aufstellt. |  | v
+die Recherche, Recherchen | поиск информации, изыскание | Heutzutage erleichtern Datenbanken und online abrufbare Literaturverzeichnisse die [[Recherche]] zu einem bestimmten Thema. | zu + Dat. | f
+
+# s3 Исследования и открытия
+die Studie, Studien | исследование (научное) | Die Wirksamkeit eines Medikaments wird in zahlreichen [[Studien]] untersucht, bevor das Medikament auf den Markt kommt. |  | f
+eine Studie durchführen | проводить исследование | Um klimatische Veränderungen genau zu untersuchen, müssen Langzeit-[[Studien durchgeführt]] werden. | führte durch – hat durchgeführt | v
+etw. dokumentieren | документировать, фиксировать | Es ist wichtig, die Arbeitsschritte und Ergebnisse einer Studie genau zu [[dokumentieren]], damit sie für andere Wissenschaftler nachvollziehbar sind. |  | v
+die Dokumentation | документирование, документация |  |  | f
+erkennen* | распознать, понять | Isaac Newton hat [[erkannt]], dass starke Kräfte zwischen den verschiedenen Himmelskörpern wirken. | erkannte – hat erkannt | v
+die Erkenntnis, Erkenntnisse | научное знание, вывод, открытие | Die Menge wissenschaftlicher [[Erkenntnisse]] hat sich im Laufe des 20. Jahrhunderts vervielfacht. | -nis → -nisse | f
+Erkenntnisse gewinnen* | получить новые знания (данные) | Auch aus einem misslungenen Experiment lassen sich wichtige [[Erkenntnisse gewinnen]]. | gewann – hat gewonnen | v
+entdecken | открывать (обнаруживать) | Die technische Verbesserung von Raumsonden und Teleskopen führt dazu, dass immer wieder neue Planeten [[entdeckt]] werden. |  | v
+die Entdeckung, Entdeckungen | открытие |  |  | f
+entwickeln | разрабатывать | Lebensmitteltechniker haben eine Methode [[entwickelt]], um Obst und Gemüse länger haltbar zu machen. |  | v
+die Entwicklung | разработка, развитие |  |  | f
+der Durchbruch | прорыв | Die Formulierung der Relativitätstheorie gilt als Einsteins wissenschaftlicher [[Durchbruch]]. |  | m
+
+# s4 Гипотезы и тезисы
+die Hypothese, Hypothesen | гипотеза | Eine [[Hypothese]] ist eine Vermutung, auf der die weitere Forschungsarbeit basiert. |  | f
+eine Hypothese aufstellen | выдвинуть гипотезу | Es ist sinnvoll, eine [[Hypothese aufzustellen]], auch wenn diese sich später als falsch erweist. | stellte auf – hat aufgestellt | v
+eine Hypothese überprüfen | проверить гипотезу | Experimente werden durchgeführt, um die [[Hypothese zu überprüfen]]. | неотделяемая: hat überprüft | v
+die These, Thesen | тезис | Mit radikalen [[Thesen]] kann man viel Aufmerksamkeit erregen und eine lebhafte Diskussion in Gang setzen. |  | f
+eine These vertreten* | отстаивать тезис, придерживаться мнения | Einige Politiker [[vertreten die These]], dass gewaltverherrlichende Computerspiele der Grund für viele Gewalttaten sind. | vertritt – vertrat – hat vertreten | v
+eine These aufstellen | выдвинуть тезис | Als Barry Marshall und Robin Warren die [[These aufstellten]], dass ein Bakterium Magengeschwüre verursacht, wurde diese zunächst von vielen ihrer Kollegen abgelehnt. |  | v
+eine These untermauern | подкрепить (обосновать) тезис | Der Autor führt eine Reihe von Argumenten an, um seine [[These zu untermauern]]. | неотделяемая: hat untermauert | v
+umstritten | спорный, неоднозначный | Die These, dass die Verbreitung von Computern das Leseverhalten negativ beeinflusst, ist [[umstritten]]. |  | v
+
+# s5 Теории
+die Theorie, Theorien | теория | Einer verbreiteten [[Theorie]] zufolge verursachte ein Asteroideneinschlag das Aussterben der Dinosaurier. | einer Theorie zufolge — согласно теории (Dat.) | f
+eine Theorie aufstellen | выдвинуть теорию | Der Wissenschaftler Thomas Gold [[stellte]] verschiedene [[Theorien auf]], die der vorherrschenden Lehrmeinung widersprachen. |  | v
+eine Theorie vertreten* | придерживаться теории, отстаивать её | Gegen den Widerstand der Kirche [[vertrat]] Galilei die [[Theorie]], dass die Erde sich um die Sonne dreht. | vertritt – vertrat – hat vertreten | v
+eine Theorie überprüfen | проверить теорию | Es empfiehlt sich, eine [[Theorie]] gründlich [[zu überprüfen]], bevor man sie einer breiten Öffentlichkeit vorstellt. |  | v
+eine Theorie widerlegen | опровергнуть теорию | Die Evolutionstheorie von Jean-Baptiste Lamarck wurde durch weitere Forschungen [[widerlegt]]. | неотделяемая: hat widerlegt | v
+etw. beweisen* | доказать что-то | Einige Mediziner haben Selbstversuche durchgeführt, um zu [[beweisen]], dass sie mit ihren Behauptungen recht hatten. | bewies – hat bewiesen | v
+der Beweis, Beweise · Beweise vorlegen für + A | доказательство · представить доказательства | Die Wissenschaftlerin kann stichhaltige [[Beweise]] für ihre Theorie [[vorlegen]]. | für + Akk. | m
+etw. belegen (= etw. beweisen) | подтвердить, доказать (данными) | Können Sie Ihre These mit zuverlässigen Daten [[belegen]]? | неотделяемая: hat belegt | v
+der Beleg, Belege = der Beweis | подтверждение, доказательство | Der Anstieg der Durchschnittstemperatur ist ein [[Beleg]] für den Klimawandel. | für + Akk. | m
+
+# s6 Выводы
+schließen* aus + D auf + A | заключать, делать вывод из чего-то о чём-то | Oft kann man aus der Mimik einer Person auf ihre Gefühle [[schließen]]. | schloss – hat geschlossen | v
+(schluss)folgern aus + D = schließen* aus + D | делать вывод из чего-то | Aus der Analyse der Boden- und Wasserproben kann man [[schlussfolgern]], dass das Gebiet auf irgendeine Weise mit Giftstoffen kontaminiert wurde. |  | v
+die Schlussfolgerung (= Folgerung), Schlussfolgerungen | вывод, заключение |  |  | f
+einen Schluss ziehen aus + D = eine Schlussfolgerung ziehen* aus + D | сделать вывод из чего-то | Aus den Untersuchungsergebnissen lassen sich unterschiedliche [[Schlüsse ziehen]]; deshalb müssen weitere Experimente durchgeführt werden. | zog – hat gezogen | v
+etw. veröffentlichen = etw. publizieren | опубликовать | Er hat seine Forschungsergebnisse in einer renommierten Fachzeitschrift [[veröffentlicht]]. |  | v
+die Veröffentlichung, Veröffentlichungen = die Publikation, Publikationen | публикация | Die Arbeit eines Wissenschaftlers wird nicht nur an seinen Forschungsarbeiten gemessen, sondern auch an der Zahl seiner [[Veröffentlichungen]]. |  | f
+zitieren | цитировать | Studienanfänger lernen zu Beginn des Studiums, wie man Texte aus verschiedenen Quellen wissenschaftlich korrekt [[zitiert]]. |  | v
+das Zitat, Zitate | цитата | [[Zitate]] müssen in einem wissenschaftlichen Text klar erkennbar sein und mit einer Quellenangabe versehen werden. |  | n
+das Plagiat, Plagiate | плагиат | Heute ist es leicht, [[Plagiate]] anzufertigen, indem man Texte aus dem Internet kopiert und behauptet, sie selbst verfasst zu haben. |  | n
+
+# s7 Методы: анализ, данные, эксперимент
+etw. analysieren | анализировать | Sprachwissenschaftler [[analysieren]] die Reden berühmter Politiker, um herauszufinden, welche rhetorischen Mittel sie benutzt haben. |  | v
+die Analyse, Analysen | анализ |  |  | f
+etw. / jdn. beobachten | наблюдать | Biologen [[beobachten]] Tiere oft über einen langen Zeitraum, um ihr Verhalten zu verstehen. |  | v
+die Beobachtung, Beobachtungen | наблюдение |  |  | f
+die Daten (Plural) | данные | Oftmals werden umfangreiche [[Daten]] benötigt, um eine Theorie formulieren zu können. |  | pl
+Daten sammeln / erheben* | собирать данные | Bei dieser medizinischen Studie werden die Patienten[[daten erhoben]] und anonymisiert. | erhob – hat erhoben | v
+Daten auswerten | обрабатывать (анализировать) данные | Inzwischen nutzt man auch Computerprogramme, um [[Daten auszuwerten]] und übersichtlich zusammenzufassen. | wertete aus – hat ausgewertet | v
+experimentieren mit + D | экспериментировать с чем-то | Marie Curie hat [[mit]] verschiedenen radioaktiven Substanzen [[experimentiert]]. |  | v
+das Experiment, Experimente | эксперимент | Die Planung eines guten [[Experiments]] erfordert neben der Klärung organisatorischer Fragen auch Kreativität vonseiten der Wissenschaftler. |  | n
+ein Experiment durchführen | проводить эксперимент | Tragen Sie Schutzkleidung, wenn Sie [[Experimente]] mit chemischen Substanzen [[durchführen]]! |  | v
+
+# s8 Методы: испытуемые, лаборатория, экспедиция
+der Proband / die Probandin, Probanden = die Versuchsperson, -en = die Testperson, -en | испытуемый, участник эксперимента | Das Institut für Angewandte Psychologie sucht [[Probanden]] für ein lernpsychologisches Experiment. | n-склонение: den Probanden | m
+das Labor, Labore | лаборатория | Gefährliche Viren werden in einem Hochsicherheits[[labor]] gelagert und untersucht. |  | n
+die Ausstattung | оснащение, оборудование | Dank der hochmodernen technischen [[Ausstattung]] des Labors lassen sich auch geringe Mengen einer Substanz im Blut nachweisen. |  | f
+die Umfrage, Umfragen | опрос | Meinungsforschungsinstitute führen unter der Bevölkerung regelmäßig [[Umfragen]] zu aktuellen Themen durch. | eine Umfrage durchführen | f
+die Stichprobe, Stichproben | выборочная проверка, выборка | Um die Wasserqualität zu überprüfen, führt man in regelmäßigen Abständen [[Stichproben]] durch. |  | f
+die Expedition, Expeditionen | экспедиция | Bei [[Expeditionen]] in unwirtliche Gebiete, z. B. in die Arktis, sind immer wieder Forscher ums Leben gekommen. |  | f
+eine Expedition unternehmen* | предпринять экспедицию | Biologen [[unternehmen]] eine [[Expedition]] auf eine unbewohnte Insel, weil sie hoffen, dort unbekannte Pflanzenarten zu entdecken. | unternimmt – unternahm – hat unternommen (неотделяемая) | v
+die Ausrüstung | снаряжение | Bei einer Expedition in den Himalaya gehören Seile, Eispickel, festes Schuhwerk und wetterfeste Kleidung zur unbedingt notwendigen [[Ausrüstung]]. |  | f
+
+! Ausstattung ↔ Ausrüstung | Ausstattung — оборудование помещения (лаборатории), Ausrüstung — снаряжение для экспедиции, спорта
+! forschen · erforschen · forschen nach | forschen an + Dat. (над темой), forschen nach + Dat. (искать лекарство), etw. erforschen + Akk. без предлога
+! schließen aus + D auf + A | Aus der Mimik auf die Gefühle schließen — «из чего» Dat., «о чём» Akk.
+! Отделяемые и неотделяемые (Übung III) | aufstellen, vorlegen — отделяемые; beweisen, untermauern, widerlegen, überprüfen, vertreten — неотделяемые
+! die Erkenntnis ≠ die Kenntnis | Erkenntnis — научный вывод, открытие; Kenntnisse — знания, которыми человек владеет
+! die Daten | Только мн. ч.: die Daten werden erhoben. Ед. ч. — die Angabe
+! der Proband | n-склонение: den / dem / des Probanden
+! einer Theorie zufolge | zufolge стоит после существительного в Dativ

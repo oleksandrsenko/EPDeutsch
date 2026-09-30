@@ -1,0 +1,730 @@
+{
+ "id": "3.3",
+ "chapter": 3,
+ "chapterName": "Alltagsleben",
+ "title": "Geld",
+ "titleRu": "Деньги",
+ "pages": "114–118",
+ "exercises": "119–122",
+ "solutions": "264",
+ "bookRows": 76,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Платёжные средства",
+   "items": [
+    {
+     "de": "die Münze, Münzen",
+     "ru": "монета",
+     "ex": "An diesem Automaten kann man nur mit [[Münzen]] bezahlen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Banknote, Banknoten = der Geldschein, -scheine",
+     "ru": "банкнота, купюра",
+     "ex": "Die Polizei hat einen Mann festgenommen, der gefälschte [[Banknoten]] bei sich hatte.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Summe, Summen",
+     "ru": "сумма",
+     "ex": "Jährlich werden hohe [[Summen]] für den Bau und die Sanierung von Verkehrswegen ausgegeben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Betrag, Beträge",
+     "ru": "сумма (к оплате)",
+     "ex": "Bitte überweisen Sie den [[Betrag]] von 16,40 € innerhalb von 14 Tagen auf unser Konto.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Währung, Währungen",
+     "ru": "валюта",
+     "ex": "Im Jahr 1999 wurde der Euro von 11 EU-Staaten als gemeinsame [[Währung]] im Bankverkehr eingeführt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Inflation",
+     "ru": "инфляция",
+     "ex": "Durch die [[Inflation]] kann eine Währung im Laufe der Zeit stark an Wert verlieren.",
+     "note": "an Wert verlieren",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Банковский счёт",
+   "items": [
+    {
+     "de": "Bankgeschäfte abwickeln",
+     "ru": "проводить банковские операции",
+     "ex": "Heute kann man die meisten [[Bankgeschäfte]] bequem online [[abwickeln]].",
+     "note": "wickelte ab – hat abgewickelt",
+     "g": "v"
+    },
+    {
+     "de": "das Konto, Konten",
+     "ru": "счёт",
+     "ex": "Durch ein Spar[[konto]] können Kinder und Jugendliche lernen, mit Geld umzugehen.",
+     "note": "мн. ч. die Konten",
+     "g": "n"
+    },
+    {
+     "de": "ein Konto eröffnen",
+     "ru": "открыть счёт",
+     "ex": "Das Ehepaar geht zur Bank, um ein gemeinsames [[Konto]] zu [[eröffnen]], auf das beide Partner Zugriff haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Eröffnung eines Kontos",
+     "ru": "открытие счёта",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Geld auf ein Konto einzahlen",
+     "ru": "положить деньги на счёт",
+     "ex": "Wenn Sie ein Konto eröffnen wollen, müssen Sie [[Geld auf]] dieses [[Konto einzahlen]].",
+     "note": "zahlte ein – hat eingezahlt",
+     "g": "v"
+    },
+    {
+     "de": "Geld von einem Konto abheben*",
+     "ru": "снять деньги со счёта",
+     "ex": "Informieren Sie vorher Ihre Bank, wenn Sie eine große Geldsumme von Ihrem [[Konto abheben]] möchten.",
+     "note": "hob ab – hat abgehoben",
+     "g": "v"
+    },
+    {
+     "de": "das Konto überziehen*",
+     "ru": "превысить остаток на счёте, уйти в минус",
+     "ex": "Um die Autoreparatur zu bezahlen, muss ich diesen Monat mein [[Konto überziehen]].",
+     "note": "überzog – hat überzogen (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "Geld anlegen",
+     "ru": "вкладывать деньги",
+     "ex": "Wer kein großes Risiko eingehen möchte, [[legt]] sein [[Geld]] in Immobilien [[an]].",
+     "note": "legte an – hat angelegt",
+     "g": "v"
+    },
+    {
+     "de": "die Geldanlage, -anlagen",
+     "ru": "вложение денег",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Zins, Zinsen",
+     "ru": "процент (по вкладу, кредиту)",
+     "ex": "Da man für das Geld auf einem Sparkonto nur sehr niedrige [[Zinsen]] bekommt, investieren die Menschen ihr Geld lieber in Aktien.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Кредиты и акции",
+   "items": [
+    {
+     "de": "das Darlehen, Darlehen = der Kredit, Kredite",
+     "ru": "заём, кредит",
+     "ex": "Größere Anschaffungen, z. B. ein Auto oder ein Haus, lassen sich oft nur mithilfe eines [[Darlehens]] finanzieren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "einen Kredit beantragen",
+     "ru": "подать заявку на кредит",
+     "ex": "Studierende, die finanzielle Unterstützung benötigen, können einen Studien[[kredit beantragen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "einen Kredit aufnehmen*",
+     "ru": "взять кредит",
+     "ex": "Der Unternehmer [[nimmt]] einen [[Kredit auf]], um seinen Betrieb zu modernisieren.",
+     "note": "nimmt auf – nahm auf – hat aufgenommen",
+     "g": "v"
+    },
+    {
+     "de": "einen Kredit abzahlen / zurückzahlen",
+     "ru": "выплачивать кредит",
+     "ex": "Da wir den [[Kredit]] für unser Haus [[abzahlen]] müssen, geben wir wenig Geld für Urlaub und Freizeit aus.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Rate, Raten",
+     "ru": "взнос, платёж (в рассрочку)",
+     "ex": "Den Kredit können Sie in monatlichen [[Raten]] zurückzahlen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. auf Raten kaufen",
+     "ru": "купить в рассрочку",
+     "ex": "Wenn Sie jetzt nicht genug Geld für ein neues Auto haben, können Sie es auch [[auf Raten kaufen]] und Monat für Monat abzahlen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Aktie, Aktien",
+     "ru": "акция",
+     "ex": "Wer in [[Aktien]] investiert, kann hohe Gewinne machen, aber auch schnell viel Geld verlieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Börse, Börsen",
+     "ru": "биржа",
+     "ex": "Politische Ereignisse beeinflussen die Entwicklung der Aktienkurse an der [[Börse]].",
+     "note": "an der Börse",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Имущество и доходы",
+   "items": [
+    {
+     "de": "das Vermögen",
+     "ru": "состояние, имущество",
+     "ex": "Durch riskante Aktiengeschäfte hat sie einen großen Teil ihres [[Vermögens]] verloren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. erben",
+     "ru": "унаследовать",
+     "ex": "Er hat von seinem verstorbenen Onkel ein kleines Haus und 15.000 Euro [[geerbt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Erbe",
+     "ru": "наследство",
+     "ex": "",
+     "note": "не путать: der Erbe — наследник",
+     "g": "n"
+    },
+    {
+     "de": "das Einkommen",
+     "ru": "доход",
+     "ex": "Während Angestellte ein regelmäßiges [[Einkommen]] haben, können die Einkünfte von Selbstständigen stark schwanken.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Einkünfte (Plural)",
+     "ru": "доходы",
+     "ex": "Die Bürger sind verpflichtet, das Finanzamt über ihre [[Einkünfte]] zu informieren.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "der Verdienst",
+     "ru": "заработок",
+     "ex": "Häufig reicht der [[Verdienst]] einer einzigen Person nicht aus, um davon die ganze Familie zu ernähren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "brutto",
+     "ru": "брутто (до вычетов)",
+     "ex": "Vom [[Brutto]]gehalt eines Angestellten werden automatisch Steuern und Sozialversicherungsbeiträge abgezogen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "netto",
+     "ru": "нетто (после вычетов)",
+     "ex": "Je mehr die Krankenversicherungsbeiträge steigen, desto niedriger ist mein [[Netto]]einkommen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Lebensunterhalt",
+     "ru": "средства к существованию",
+     "ex": "Durch ihren Halbtagsjob trägt die Mutter zum [[Lebensunterhalt]] der Familie bei.",
+     "note": "zu + Dat. beitragen",
+     "g": "m"
+    },
+    {
+     "de": "sich seinen Lebensunterhalt verdienen",
+     "ru": "зарабатывать себе на жизнь",
+     "ex": "Viele Studierende müssen nebenbei jobben, um [[sich]] ihren [[Lebensunterhalt zu verdienen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Umsatz, Umsätze",
+     "ru": "оборот, выручка",
+     "ex": "Die Geschäftsleute im Einzelhandel erwarten, dass die [[Umsätze]] im diesjährigen Weihnachtsgeschäft höher sein werden als im letzten Jahr.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Налоги и расходы",
+   "items": [
+    {
+     "de": "die Steuer, Steuern",
+     "ru": "налог",
+     "ex": "Die Oppositionspartei verspricht den Bürgern, nach der Wahl die [[Steuern]] zu senken.",
+     "note": "die Steuer (налог) ≠ das Steuer (руль)",
+     "g": "f"
+    },
+    {
+     "de": "Steuern erheben* auf + A",
+     "ru": "взимать налог на что-то",
+     "ex": "Der Staat [[erhebt]] auf Waren und Dienstleistungen eine Mehrwert[[steuer]] von 7 % bzw. 19 %.",
+     "note": "erhob – hat erhoben",
+     "g": "v"
+    },
+    {
+     "de": "die Gebühr, Gebühren",
+     "ru": "сбор, пошлина, плата",
+     "ex": "In verschiedenen europäischen Ländern muss man für die Benutzung der Autobahn eine [[Gebühr]] bezahlen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Pfand",
+     "ru": "залог (за тару)",
+     "ex": "Für einen Kasten Getränke müssen Sie [[Pfand]] bezahlen, das Sie zurückbekommen, wenn Sie den leeren Kasten wieder im Geschäft abgeben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Beitrag, Beiträge",
+     "ru": "взнос",
+     "ex": "Die [[Beiträge]] zur Krankenversicherung sind von der Höhe des Einkommens abhängig.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Zuschuss, Zuschüsse",
+     "ru": "дотация, доплата",
+     "ex": "Viele Krankenkassen zahlen ihren Mitgliedern einen [[Zuschuss]] zu den monatlichen Kosten, wenn sie sich in einem Fitness-Studio anmelden.",
+     "note": "zu + Dat.",
+     "g": "m"
+    },
+    {
+     "de": "die Kosten (Plural) für + A",
+     "ru": "расходы, затраты на что-то",
+     "ex": "Mittlerweile ist bekannt geworden, dass die [[Kosten für]] den Neubau des Bahnhofs deutlich höher sein werden als ursprünglich geplant.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Kosten (Pl.) tragen* für + A",
+     "ru": "нести расходы",
+     "ex": "Bund und Länder streiten darüber, wer die [[Kosten für]] die Beseitigung der Hochwasserschäden [[tragen]] muss.",
+     "note": "trägt – trug – hat getragen",
+     "g": "v"
+    },
+    {
+     "de": "die Lebenshaltungskosten (Plural)",
+     "ru": "стоимость жизни",
+     "ex": "In Großstädten sind die [[Lebenshaltungskosten]] in der Regel höher als auf dem Land.",
+     "note": "",
+     "g": "pl"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Пожертвования и обращение с деньгами",
+   "items": [
+    {
+     "de": "Geld spenden für + A",
+     "ru": "жертвовать деньги на что-то",
+     "ex": "Ein Lottogewinner hat die Hälfte seines Gewinns für einen guten Zweck [[gespendet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Spende, Spenden",
+     "ru": "пожертвование",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdm. Geld spenden",
+     "ru": "пожертвовать кому-то деньги",
+     "ex": "Nach der Heilung ihrer Tochter haben die Eltern der Kinderklinik eine große Geldsumme [[gespendet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die karitative Organisation, Organisationen",
+     "ru": "благотворительная организация",
+     "ex": "[[Karitative Organisationen]] sind auf Spenden angewiesen, um Menschen in Not helfen zu können.",
+     "note": "auf + Akk. angewiesen sein",
+     "g": "f"
+    },
+    {
+     "de": "aus finanziellen Gründen",
+     "ru": "по финансовым причинам",
+     "ex": "[[Aus finanziellen Gründen]] haben wir beschlossen, unser zweites Auto zu verkaufen und in Zukunft mehr mit dem Fahrrad zu fahren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Etat, Etats = das Budget, Budgets",
+     "ru": "бюджет",
+     "ex": "Der PR-Abteilung des Unternehmens steht ein [[Etat]] von 500.000 Euro für Werbung zur Verfügung.",
+     "note": "jdm. zur Verfügung stehen",
+     "g": "m"
+    },
+    {
+     "de": "über die Runden kommen*",
+     "ru": "сводить концы с концами",
+     "ex": "Ohne meinen Zweitjob würde ich finanziell nicht [[über die Runden kommen]].",
+     "note": "kam – ist gekommen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Долги",
+   "items": [
+    {
+     "de": "jdm. Geld leihen*",
+     "ru": "одалживать кому-то деньги",
+     "ex": "Meine Eltern haben mir Geld [[geliehen]], damit ich mir einen neuen Computer kaufen kann.",
+     "note": "lieh – hat geliehen",
+     "g": "v"
+    },
+    {
+     "de": "sich Geld leihen* von + D",
+     "ru": "занимать деньги у кого-то",
+     "ex": "Es ist oft günstiger, [[sich]] Geld von Verwandten oder Freunden zu [[leihen]], als einen Kredit bei der Bank aufzunehmen.",
+     "note": "lieh – hat geliehen",
+     "g": "v"
+    },
+    {
+     "de": "jdm. Geld schulden",
+     "ru": "быть должным кому-то деньги",
+     "ex": "Die 3.000 Euro, die ich dir [[schulde]], kann ich dir in spätestens drei Monaten zurückzahlen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Schuld, Schulden",
+     "ru": "долг (мн. ч. — долги); вина (ед. ч.)",
+     "ex": "Aufgrund seiner hohen [[Schulden]] kann er nachts kaum noch ruhig schlafen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verschuldet sein* = Schulden haben",
+     "ru": "быть в долгах",
+     "ex": "Immer mehr Menschen sind [[verschuldet]], weil ihre Ausgaben höher sind als ihre Einkünfte.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zahlungsunfähig sein* = insolvent sein",
+     "ru": "быть неплатёжеспособным",
+     "ex": "Das Unternehmen ist [[zahlungsunfähig]] und muss Insolvenz anmelden.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Финансирование учёбы",
+   "items": [
+    {
+     "de": "das Studium finanzieren",
+     "ru": "финансировать учёбу",
+     "ex": "Studierende [[finanzieren]] ihr [[Studium]] oft aus mehreren Quellen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Finanzierung des Studiums",
+     "ru": "финансирование учёбы",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. finanziell unterstützen",
+     "ru": "финансово поддерживать",
+     "ex": "Meist [[unterstützen]] die Eltern ihre Kinder während des Studiums [[finanziell]], sofern sie die Mittel dazu haben.",
+     "note": "неотделяемая: hat unterstützt",
+     "g": "v"
+    },
+    {
+     "de": "das Stipendium, Stipendien",
+     "ru": "стипендия (грант)",
+     "ex": "Verschiedene Organisationen vergeben [[Stipendien]] an begabte Studierende.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "sich um ein Stipendium bewerben*",
+     "ru": "претендовать на стипендию",
+     "ex": "Auch Studierende in höheren Semestern können [[sich um ein Stipendium bewerben]].",
+     "note": "bewirbt – bewarb – hat beworben",
+     "g": "v"
+    },
+    {
+     "de": "ein Stipendium erhalten*",
+     "ru": "получить стипендию",
+     "ex": "Wer ein [[Stipendium erhält]], muss sich weniger Sorgen um die Finanzierung seines Studiums machen.",
+     "note": "erhält – erhielt – hat erhalten",
+     "g": "v"
+    },
+    {
+     "de": "BAföG beantragen",
+     "ru": "подать заявление на BAföG",
+     "ex": "Man kann [[BAföG beantragen]], wenn die Eltern das Studium nicht finanzieren können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "BAföG erhalten*",
+     "ru": "получать BAföG",
+     "ex": "Wer [[BAföG erhält]], sollte das Studium möglichst innerhalb der Regelstudienzeit abschließen.",
+     "note": "erhält – erhielt – hat erhalten",
+     "g": "v"
+    },
+    {
+     "de": "BAföG zurückzahlen",
+     "ru": "возвращать BAföG",
+     "ex": "Die Studierenden müssen das [[BAföG]] nicht gleich nach dem Studium [[zurückzahlen]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Плата за учёбу",
+   "items": [
+    {
+     "de": "die Studiengebühr, -gebühren",
+     "ru": "плата за обучение",
+     "ex": "Studierende in ganz Deutschland haben heftig gegen [[Studiengebühren]] protestiert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Studiengebühren einführen",
+     "ru": "ввести плату за обучение",
+     "ex": "Im Jahr 2006 wurden in einigen Bundesländern [[Studiengebühren eingeführt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Einführung von Studiengebühren",
+     "ru": "введение платы за обучение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Studiengebühren abschaffen",
+     "ru": "отменить плату за обучение",
+     "ex": "In Hessen wurden die [[Studiengebühren]] schon nach kurzer Zeit wieder [[abgeschafft]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Abschaffung von Studiengebühren",
+     "ru": "отмена платы за обучение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Sozialbeitrag, -beiträge = der Semesterbeitrag, -beiträge",
+     "ru": "семестровый взнос",
+     "ex": "Studierende müssen jedes Semester den [[Sozialbeitrag]] an die Universität bezahlen, in dem z. B. die Kosten für das Semesterticket enthalten sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Semesterticket, -tickets",
+     "ru": "студенческий проездной",
+     "ex": "An vielen Universitäten erhalten Studierende ein [[Semesterticket]], mit dem sie öffentliche Verkehrsmittel benutzen können.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Льготы и подработка",
+   "items": [
+    {
+     "de": "die Ermäßigung, Ermäßigungen",
+     "ru": "скидка, льгота",
+     "ex": "Gibt es eine [[Ermäßigung]] für Studierende oder muss ich den vollen Preis bezahlen?",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Ermäßigung bekommen*",
+     "ru": "получить скидку",
+     "ex": "Da sie oft nicht so viel Geld haben, [[bekommen]] Studierende in Museen, Kinos und Schwimmbädern eine [[Ermäßigung]].",
+     "note": "bekam – hat bekommen",
+     "g": "v"
+    },
+    {
+     "de": "der Studentenausweis, -ausweise",
+     "ru": "студенческий билет",
+     "ex": "Die Universität stellt jedem Studierenden einen [[Studentenausweis]] aus, sobald er den Sozialbeitrag bezahlt hat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "den Studentenausweis vorlegen",
+     "ru": "предъявить студенческий",
+     "ex": "Um eine Ermäßigung zu bekommen, muss man seinen [[Studentenausweis vorlegen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jobben",
+     "ru": "подрабатывать",
+     "ex": "Studierende [[jobben]] nicht nur, um ihr Studium zu finanzieren, sondern auch, um sich beispielsweise einen Urlaub leisten zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "erwerbstätig sein*",
+     "ru": "работать (иметь оплачиваемую работу)",
+     "ex": "Manche Studierende sind [[erwerbstätig]], um schon während des Studiums Berufserfahrung zu sammeln.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Erwerbstätigkeit",
+     "ru": "трудовая деятельность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: BAföG (Infobox)",
+   "items": [
+    {
+     "de": "das Bundesausbildungsförderungsgesetz (BAföG)",
+     "ru": "закон о поддержке образования (BAföG)",
+     "ex": "BAföG ist die Abkürzung für „[[Bundesausbildungsförderungsgesetz]]“.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "eine qualifizierte Ausbildung",
+     "ru": "квалифицированное образование",
+     "ex": "Dieses Gesetz soll es allen jungen Leuten ermöglichen, [[eine qualifizierte Ausbildung]] … zu erhalten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die finanzielle Unterstützung",
+     "ru": "финансовая поддержка",
+     "ex": "Deshalb bekommen Jugendliche und junge Erwachsene … eine [[finanzielle Unterstützung]] durch den Staat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "abhängen* von + D",
+     "ru": "зависеть от чего-то",
+     "ex": "… hängt es normalerweise vom Einkommen der Eltern [[ab]], ob jemand BAföG bekommt.",
+     "note": "hing ab – hat abgehangen",
+     "g": "v"
+    },
+    {
+     "de": "unabhängig von + D",
+     "ru": "независимо от",
+     "ex": "… kann die Zahlung von BAföG auch [[unabhängig von]] den finanziellen Möglichkeiten der Eltern sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Rückzahlung",
+     "ru": "возврат (долга)",
+     "ex": "Zunächst einmal beginnt die [[Rückzahlung]] erst 5 Jahre nach Ende der Ausbildung.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "zinsfrei",
+     "ru": "беспроцентный",
+     "ex": "Zudem ist das Darlehen [[zinsfrei]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Pluspunkt, -e",
+     "ru": "плюс, преимущество",
+     "ex": "Ein großer [[Pluspunkt]] ist, dass man höchstens die Hälfte des Geldes zurückzahlen muss.",
+     "note": "",
+     "g": "m"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "die Steuer ↔ das Steuer",
+   "v": "die Steuer — налог; das Steuer — руль"
+  },
+  {
+   "k": "die Schuld ↔ die Schulden",
+   "v": "Schuld (ед. ч.) — вина; Schulden (мн. ч.) — долги"
+  },
+  {
+   "k": "jdm. etw. leihen ↔ sich etw. leihen",
+   "v": "leihen — давать в долг; sich (Dat.) leihen — брать в долг: Ich leihe mir Geld von meinem Bruder"
+  },
+  {
+   "k": "das Erbe ↔ der Erbe",
+   "v": "das Erbe — наследство; der Erbe — наследник (n-склонение)"
+  },
+  {
+   "k": "das Konto → die Konten",
+   "v": "мн. ч. die Konten; das Stipendium → die Stipendien"
+  },
+  {
+   "k": "Geld abheben · einzahlen · überweisen",
+   "v": "abheben — снять, einzahlen — внести, überweisen — перевести; überziehen — неотделяемая: hat überzogen"
+  },
+  {
+   "k": "die Kosten",
+   "v": "Только мн. ч.: Die Kosten sind gestiegen. Kosten tragen für + Akk."
+  },
+  {
+   "k": "hohe Zinsen, ein hoher Betrag",
+   "v": "Но не «hohes Konto», «hohe Währung» (Übung I): hoch сочетается с суммами, доходами, ставками"
+  }
+ ]
+}

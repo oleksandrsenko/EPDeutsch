@@ -1,0 +1,81 @@
+@id 3.4
+@chapter 3
+@chapterName Alltagsleben
+@title Zeit
+@titleRu Время
+@pages 123–126
+@exercises 126–130
+@solutions 265
+@bookRows 42
+
+# s1 Тратить и требовать время
+Zeit verbringen* mit + D | проводить время за чем-то | Häufig wird beklagt, dass Kinder und Jugendliche zu viel [[Zeit damit verbringen]], Computerspiele zu spielen. | verbrachte – hat verbracht | v
+Zeit verbringen* + Lokalangabe | проводить время где-то | Einen großen Teil unserer Lebenszeit [[verbringen]] wir am Arbeitsplatz. | verbrachte – hat verbracht | v
+Zeit in Anspruch nehmen* = Zeit beanspruchen | отнимать время | Das Schreiben und Beantworten von E-Mails [[nimmt]] einen großen Teil der Arbeitszeit [[in Anspruch]]. | nimmt – nahm – hat genommen | v
+Zeit erfordern | требовать времени | Es [[erfordert]] viel [[Zeit]], sich gründlich auf eine Prüfung vorzubereiten. |  | v
+zeitaufwändig sein* | быть трудоёмким, требовать много времени | Nicht nur das Schreiben einer wissenschaftlichen Arbeit ist [[zeitaufwändig]]; auch die vorbereitende Literaturrecherche nimmt viel Zeit in Anspruch. |  | v
+unter Zeitdruck stehen* | быть в цейтноте | Menschen in Pflegeberufen [[stehen]] häufig [[unter Zeitdruck]] und können ihren Patienten deshalb nicht so viel Zeit widmen, wie sie es gerne täten. | stand – hat gestanden | v
+es eilig haben* = in Eile sein* | спешить | Berufstätige greifen gerne zu Fastfood-Produkten, wenn sie [[es eilig haben]] und schnell etwas essen möchten. |  | v
+sich beeilen | торопиться | Wir müssen [[uns beeilen]], damit wir pünktlich zu unserem Termin kommen. |  | v
+sich (D) Zeit lassen* | не торопиться | Ernährungsexperten weisen darauf hin, dass es gesünder ist, [[sich]] beim Essen [[Zeit zu lassen]]. | lässt – ließ – hat gelassen | v
+
+# s2 Ускорять и задерживать
+sich verzögern | задерживаться, откладываться | Aufgrund der Wetterbedingungen hat [[sich]] der Start des Flugzeugs um mehrere Stunden [[verzögert]]. | um + Akk.: um zwei Stunden | v
+sich verlängern | продлеваться | Durch einen Auslandsaufenthalt könnte [[sich]] das Studium um ein Semester [[verlängern]]. |  | v
+etw. beschleunigen | ускорять что-то | Es werden mehr Arbeiter eingestellt, um den Bau der Brücke zu [[beschleunigen]]. |  | v
+sich beschleunigen | ускоряться | Statistiken zeigen, dass [[sich]] das Bevölkerungswachstum in den letzten Jahrzehnten [[beschleunigt]] hat. |  | v
+die Frist, Fristen | срок | Die Bewerbungs[[frist]] für das Sommersemester endet am 15. Januar. |  | f
+eine Frist einhalten* | соблюдать срок | Für die Abgabe von Examensarbeiten gelten bestimmte [[Fristen]], die von den Studierenden [[eingehalten]] werden müssen. | hält ein – hielt ein – hat eingehalten | v
+befristet sein* | быть ограниченным по сроку | Das Visum ist zunächst auf sechs Monate [[befristet]]. | auf + Akk. | v
+kurzfristig | краткосрочно, в короткий срок | Das Unternehmen hat gerade einen großen Auftrag erhalten und sucht deshalb [[kurzfristig]] neue Mitarbeiter. |  | v
+langfristig | долгосрочно, в долгосрочной перспективе | Sparmaßnahmen im Bildungsbereich können sich zwar zunächst positiv auf die Staatsfinanzen auswirken, doch [[langfristig]] schaden sie der kulturellen, wirtschaftlichen und sozialen Entwicklung eines Landes. |  | v
+
+# s3 Моменты и периоды
+der Zeitpunkt, -punkte | момент (времени) | Astronomen können den [[Zeitpunkt]] der nächsten Sonnenfinsternis exakt vorhersagen. |  | m
+zu diesem Zeitpunkt | в тот момент | Viele Menschen erinnern sich noch daran, wo sie [[zu diesem Zeitpunkt]] gewesen sind. |  | v
+der Zeitraum, -räume | период (времени) | Die Arbeit muss innerhalb eines [[Zeitraums]] von 6 Monaten abgeschlossen sein. |  | m
+in diesem Zeitraum | в этот период | Die Daten der Grafik beziehen sich auf die Jahre 2005 bis 2010. [[In diesem Zeitraum]] hat sich der Anteil der ausländischen Studierenden leicht erhöht. |  | v
+im dargestellten Zeitraum | за представленный период (о графике) | Der Grafik zufolge ist die Zahl der Arbeitslosen [[im dargestellten Zeitraum]] leicht gesunken. | фраза для описания графиков! | v
+im Laufe der Zeit | со временем | Zu Beginn eines Auslandsaufenthalts ist vieles fremd und ungewohnt, doch [[im Laufe der Zeit]] gewöhnt man sich an die neue Umgebung. |  | v
+im Laufe des Studiums | в ходе учёбы | [[Im Laufe des Studiums]] lernen Studierende, sich selbstständig mit wissenschaftlichen Themen auseinanderzusetzen. | + Genitiv | v
+die Phase, Phasen | фаза, этап | In der ersten [[Phase]] der Krankheit verspürt der Patient noch keine Beschwerden. |  | f
+nachhaltig | устойчивый, долговременный | Nur regelmäßiges Üben und Wiederholen des Gelernten garantiert einen [[nachhaltigen]] Lerneffekt. |  | v
+die Nachhaltigkeit | устойчивость, экологичность |  |  | f
+
+# s4 Прошлое, настоящее, будущее
+damals | тогда (в прошлом) | Im Krieg waren die meisten gesunden Männer an der Front. [[Damals]] mussten viele Frauen die alleinige Verantwortung für die Familie übernehmen. |  | v
+kürzlich | недавно | [[Kürzlich]] wurde in der Zeitung darüber berichtet, dass immer mehr Menschen ihre Häuser mit Solaranlagen ausstatten. |  | v
+ehemalig | бывший | [[Ehemalige]] Fabrikgebäude dienen heute als Veranstaltungsorte für Konzerte und Ausstellungen. |  | v
+seit einiger Zeit | с некоторых пор | [[Seit einiger Zeit]] bieten große Unternehmen in ihrer Kantine einmal wöchentlich ausschließlich vegetarische Gerichte an. |  | v
+heutzutage | в наше время | [[Heutzutage]] können komplizierte Berechnungen mithilfe eines Computers innerhalb kurzer Zeit durchgeführt werden. |  | v
+in der heutigen Zeit | в наше время | [[In der heutigen Zeit]] muss man sich ständig weiterbilden, um in seinem Beruf immer auf dem neuesten Stand zu sein. |  | v
+künftig = zukünftig | будущий; в будущем | Durch Praktika können sich die Studierenden ein realistisches Bild von ihrem [[künftigen]] Beruf machen. |  | v
+jdm. bevorstehen* | предстоять кому-то | Klimaforscher weisen darauf hin, dass der Menschheit schwere Naturkatastrophen [[bevorstehen]]. | stand bevor – hat bevorgestanden · + Dat. | v
+im Voraus | заранее | Manche Menschen verreisen gerne spontan, während andere ihren Urlaub lange [[im Voraus]] planen. |  | v
+
+# s5 Возраст
+…-Jährige (!) (aber: zehnjährig) | …-летние | 60 % der 18- bis 35-[[Jährigen]] nutzen häufig das Internet, um online einzukaufen. | склоняется как прилагательное | pl
+das Lebensjahr, -jahre | год жизни | Ab dem 17. [[Lebensjahr]] dürfen junge Menschen Auto fahren, bis zum 18. [[Lebensjahr]] allerdings nur in Begleitung eines Erwachsenen. |  | n
+mit … Jahren | в … лет | [[Mit]] 18 [[Jahren]] sind junge Leute volljährig und tragen ab diesem Zeitpunkt allein die Verantwortung für ihre Entscheidungen. |  | v
+im Alter von + D | в возрасте | Die meisten Kinder gehen [[im Alter von]] sechs Jahren zum ersten Mal in die Schule. |  | v
+Menschen mittleren Alters | люди среднего возраста | [[Menschen mittleren Alters]] erleben manchmal eine Krise, in der sie den Wunsch haben, ihr Leben zu ändern. | Genitiv без артикля | pl
+mit zunehmendem Alter | с возрастом | Es wird oft behauptet, dass das Lernen [[mit zunehmendem Alter]] schwieriger wird. |  | v
+
+## b1 Бонус: устойчивое развитие (Infobox)
+Verwendung finden* | находить применение | Der Begriff „Nachhaltigkeit“ [[findet]] in ökologischen, wirtschaftlichen und politischen Zusammenhängen immer häufiger [[Verwendung]]. | fand – hat gefunden | v
+Ressourcen verbrauchen | расходовать ресурсы | … dass zu viele [[Ressourcen verbraucht]] wurden. |  | v
+rückgängig machen | отменить, обратить вспять | Teilweise sind ökologische Schäden entstanden, die nur schwer oder gar nicht [[rückgängig gemacht]] werden können. |  | v
+nachhaltig wirtschaften | вести хозяйство устойчиво | Das heißt, wir müssen [[nachhaltig wirtschaften]]. |  | v
+fossile Brennstoffe | ископаемое топливо | Es ist allgemein bekannt, dass [[fossile Brennstoffe]] wie Kohle oder Öl endlich sind. |  | pl
+endlich | конечный, исчерпаемый | … dass fossile Brennstoffe wie Kohle oder Öl [[endlich]] sind. | здесь не «наконец»! | v
+die Energiegewinnung | получение энергии | Deshalb ist es notwendig, andere Formen der [[Energiegewinnung]] zu entwickeln. |  | f
+unbegrenzt verfügbar | доступный без ограничений | Die Solarenergie beispielsweise ist nachhaltig, weil sie [[unbegrenzt verfügbar]] ist. |  | v
+
+! Zeit verbringen ↔ Zeit ausgeben | Время проводят: Zeit verbringen. Ausgeben — только деньги
+! sich Zeit lassen | sich в Dativ: Lass dir Zeit! Ich lasse mir Zeit.
+! damals ↔ dann ↔ als | damals — тогда (давно, в прошлом); dann — потом; als — союз «когда» (однократно в прошлом)
+! ehemalig ↔ früher | Der ehemalige / frühere Präsident — бывший президент
+! …-Jährige | die 18- bis 35-Jährigen (сущ., с большой буквы); ein zehnjähriges Kind (прил., с маленькой)
+! im Laufe + Gen. | im Laufe der Zeit, im Laufe des Studiums, im Laufe des Jahres
+! endlich | 1) наконец; 2) конечный, исчерпаемый (endliche Ressourcen)
+! bevorstehen + D | Uns steht eine schwere Zeit bevor. Die Prüfung steht bevor

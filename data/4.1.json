@@ -1,0 +1,828 @@
+{
+ "id": "4.1",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Bevölkerung und Gesellschaft",
+ "titleRu": "Население и общество",
+ "pages": "140–145",
+ "exercises": "146–151",
+ "solutions": "265–266",
+ "bookRows": 74,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Население: рост и сокращение",
+   "items": [
+    {
+     "de": "die Bevölkerung",
+     "ru": "население",
+     "ex": "Innerhalb von ca. 40 Jahren hat sich die [[Bevölkerung]] auf der Welt von 3 Milliarden auf 6 Milliarden verdoppelt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Bevölkerung wächst* / nimmt zu*",
+     "ru": "население растёт",
+     "ex": "Auf der ganzen Welt lässt sich beobachten, dass die [[Bevölkerung]] in Großstädten tendenziell [[wächst]] / [[zunimmt]].",
+     "note": "wuchs – ist gewachsen · nahm zu – hat zugenommen",
+     "g": "v"
+    },
+    {
+     "de": "das Bevölkerungswachstum",
+     "ru": "рост населения",
+     "ex": "Das weltweite [[Bevölkerungswachstum]] macht es immer schwieriger, alle Menschen mit Nahrung und sauberem Wasser zu versorgen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Bevölkerungsexplosion",
+     "ru": "демографический взрыв",
+     "ex": "Politiker und Wissenschaftler machen sich Gedanken über die Folgen der [[Bevölkerungsexplosion]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Bevölkerung schrumpft / nimmt ab* / geht zurück*",
+     "ru": "население сокращается",
+     "ex": "Es wird erwartet, dass die Bevölkerung in Deutschland in den kommenden Jahrzehnten deutlich [[schrumpfen]] / [[abnehmen]] / [[zurückgehen]] wird.",
+     "note": "ging zurück – ist zurückgegangen",
+     "g": "v"
+    },
+    {
+     "de": "der Bevölkerungsrückgang",
+     "ru": "сокращение населения",
+     "ex": "Dörfer im Osten Deutschlands sind besonders stark vom [[Bevölkerungsrückgang]] betroffen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Einwohner / die Einwohnerin, Einwohner",
+     "ru": "житель",
+     "ex": "Mit etwas mehr als einer Million [[Einwohnern]] ist Köln die viertgrößte Stadt Deutschlands.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Geburtenrate, -raten",
+     "ru": "рождаемость",
+     "ex": "Mit weniger als 2 Kindern pro Frau ist die [[Geburtenrate]] in Deutschland sehr niedrig.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Lebenserwartung",
+     "ru": "продолжительность жизни",
+     "ex": "Die [[Lebenserwartung]] der Deutschen ist in den letzten Jahrzehnten kontinuierlich gestiegen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Durchschnittsalter",
+     "ru": "средний возраст",
+     "ex": "In Lateinamerika ist das [[Durchschnittsalter]] der Bevölkerung deutlich niedriger als in Deutschland.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Народы и поселения",
+   "items": [
+    {
+     "de": "die Minderheit, Minderheiten",
+     "ru": "меньшинство",
+     "ex": "In einer Demokratie entscheidet zwar die Mehrheit, aber auch [[Minderheiten]] haben Rechte, die geschützt werden müssen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Volk, Völker",
+     "ru": "народ",
+     "ex": "Im 4. Jahrhundert nach Christi (n. Ch.) verließen verschiedene europäische [[Völker]] ihre Siedlungsgebiete und wanderten in andere Regionen aus.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Stamm, Stämme",
+     "ru": "племя",
+     "ex": "Das germanische Volk bestand zur Zeit der Völkerwanderung aus unterschiedlichen kleineren Gruppen, die man als [[Stämme]] bezeichnet.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sesshaft",
+     "ru": "оседлый",
+     "ex": "Im Laufe des 20. Jahrhunderts sind zahlreiche nomadische Stämme [[sesshaft]] geworden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich niederlassen*",
+     "ru": "поселиться, обосноваться",
+     "ex": "Früher war es Tradition, dass Handwerkergesellen nach ihrer Ausbildung auf Wanderschaft gingen, bevor sie [[sich]] an einem Ort dauerhaft [[niederließen]].",
+     "note": "lässt sich nieder – ließ sich nieder – hat sich niedergelassen",
+     "g": "v"
+    },
+    {
+     "de": "siedeln",
+     "ru": "селиться",
+     "ex": "Schon immer [[siedelten]] die Menschen gerne an Flüssen und Seen, um eine Wasserquelle in der Nähe ihres Dorfes zu haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Siedlung, Siedlungen",
+     "ru": "поселение",
+     "ex": "Man versuchte, die [[Siedlungen]] vor feindlichen Angriffen zu schützen, indem man sie mit einer Mauer oder einem Holzzaun umgab.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "dicht besiedelt",
+     "ru": "густонаселённый",
+     "ex": "Mit mehreren Tausend Einwohnern pro Quadratkilometer sind die großen Metropolen [[dicht besiedelt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "dünn besiedelt",
+     "ru": "малонаселённый",
+     "ex": "Lebensfeindliche Regionen wie hohe Gebirge und Wüsten sind meist nur [[dünn besiedelt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "städtisch",
+     "ru": "городской",
+     "ex": "Für Menschen, die in großen Städten leben, sind die [[städtischen]] Parks wichtige grüne Oasen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ländlich",
+     "ru": "сельский",
+     "ex": "In [[ländlichen]] Gebieten ist die medizinische Versorgung häufig deutlich schlechter als in den Städten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Landflucht",
+     "ru": "отток населения из деревни",
+     "ex": "Einer der Hauptgründe für [[Landflucht]] ist die Hoffnung, in der Stadt leichter eine Arbeit zu finden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Социальный статус",
+   "items": [
+    {
+     "de": "die soziale Herkunft",
+     "ru": "социальное происхождение",
+     "ex": "Wissenschaftler haben festgestellt, dass in Deutschland die [[soziale Herkunft]] eines Kindes großen Einfluss auf seine Bildungschancen hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der soziale Aufstieg",
+     "ru": "социальный рост",
+     "ex": "Eine gute Ausbildung erhöht die Chancen auf einen [[sozialen Aufstieg]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die soziale Klasse, Klassen",
+     "ru": "общественный класс",
+     "ex": "Im Mittelalter und in der frühen Neuzeit war es sehr schwierig, in eine höhere [[soziale Klasse]] aufzusteigen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Adel",
+     "ru": "дворянство, знать",
+     "ex": "Die Mitglieder des [[Adels]] bildeten mit ihren engen Beziehungen zum Königshaus die oberste Klasse der Gesellschaft.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Bürgertum",
+     "ru": "буржуазия, бюргерство",
+     "ex": "Angehörige des [[Bürgertums]] waren häufig durch Industrie und Handel wohlhabend geworden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die soziale Schicht, Schichten",
+     "ru": "социальный слой",
+     "ex": "Es ist umstritten, ob das Einkommen der einzige Maßstab für die Zugehörigkeit zu einer bestimmten [[sozialen Schicht]] ist.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "angehören + D",
+     "ru": "принадлежать к чему-то",
+     "ex": "Manchen Menschen sind Statussymbole wichtig, damit sie zeigen können, welcher sozialen Schicht sie [[angehören]].",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "stammen aus + D",
+     "ru": "происходить из",
+     "ex": "Kinder, die [[aus]] hohen sozialen Schichten [[stammen]], besuchen überdurchschnittlich oft das Gymnasium.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Бедность и богатство",
+   "items": [
+    {
+     "de": "der Reichtum",
+     "ru": "богатство",
+     "ex": "Viele Menschen streben nach Geld, obwohl sie wissen, dass [[Reichtum]] nicht glücklich macht.",
+     "note": "streben nach + Dat.",
+     "g": "m"
+    },
+    {
+     "de": "die Armut",
+     "ru": "бедность",
+     "ex": "Nach Angaben der Weltbank lebt ein Viertel der Menschheit in extremer [[Armut]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "auf staatliche Unterstützung angewiesen sein*",
+     "ru": "зависеть от государственной помощи",
+     "ex": "Die meisten Menschen möchten für ihren Lebensunterhalt arbeiten und nicht [[auf staatliche Unterstützung angewiesen sein]].",
+     "note": "auf + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "obdachlos sein*",
+     "ru": "быть бездомным",
+     "ex": "Man weiß nicht genau, wie viele Kinder und Jugendliche in Deutschland [[obdachlos]] sind und auf der Straße leben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Obdachlosigkeit",
+     "ru": "бездомность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der / die Obdachlose, Obdachlose (!)",
+     "ru": "бездомный",
+     "ex": "Verschiedene Einrichtungen bieten Unterkünfte für [[Obdachlose]] an, damit diese die Nächte nicht im Freien verbringen müssen.",
+     "note": "склоняется как прилагательное",
+     "g": "m"
+    },
+    {
+     "de": "die Solidarität",
+     "ru": "солидарность",
+     "ex": "Versicherungen beruhen auf dem Gedanken der [[Solidarität]]: Alle tragen gemeinsam die Kosten für diejenigen, die Unterstützung brauchen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "ehrenamtlich tätig sein*",
+     "ru": "работать волонтёром (на общественных началах)",
+     "ex": "Millionen Menschen sind in ihrer Freizeit [[ehrenamtlich tätig]], beispielsweise in Vereinen und karitativen Organisationen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Ansehen",
+     "ru": "авторитет, престиж",
+     "ex": "Ärzte und Rechtsanwälte sind Berufsgruppen, die ein hohes [[Ansehen]] genießen.",
+     "note": "Ansehen genießen",
+     "g": "n"
+    },
+    {
+     "de": "etw. / jdn. schätzen",
+     "ru": "ценить",
+     "ex": "Menschen, die soziale Berufe ausüben, werden für ihr Engagement zwar hoch [[geschätzt]], aber nicht immer dementsprechend bezahlt.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Исключение и предрассудки",
+   "items": [
+    {
+     "de": "jdn. ausgrenzen",
+     "ru": "исключать (из общества), изолировать",
+     "ex": "Wer anders als die Mehrheit lebt, wird oft nicht akzeptiert und [[ausgegrenzt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Ausgrenzung",
+     "ru": "социальное исключение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. diskriminieren",
+     "ru": "дискриминировать",
+     "ex": "Vor kurzem wurde in der Zeitung darüber berichtet, dass Menschen mit ausländisch klingenden Namen bei der Wohnungssuche von Vermietern [[diskriminiert]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Diskriminierung",
+     "ru": "дискриминация",
+     "ex": "Durch ein anonymes Bewerbungsverfahren kann eine [[Diskriminierung]] der Kandidaten aufgrund ihres Alters, ihres Geschlechts oder ihrer Herkunft zumindest in der ersten Bewerbungsrunde verhindert werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Außenseiter / die Außenseiterin, Außenseiter",
+     "ru": "аутсайдер, изгой",
+     "ex": "[[Außenseiter]] fühlen sich in der Schule oft unwohl, weil sie in viele gemeinsame Aktivitäten der anderen Schüler nicht einbezogen werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Randgruppe, -gruppen",
+     "ru": "маргинальная группа",
+     "ex": "Soziale Gruppen, die die Mehrheit der Gesellschaft nicht ohne Weiteres akzeptiert oder sogar diskriminiert, werden auch als „[[Randgruppen]]“ bezeichnet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Vorurteil, Vorurteile",
+     "ru": "предрассудок",
+     "ex": "Es ist ein [[Vorurteil]], dass alle Deutschen rassistisch und intolerant sind.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "Vorurteile haben* gegen + A",
+     "ru": "иметь предубеждения против",
+     "ex": "Häufig hat man [[Vorurteile gegen]] Menschen, die man eigentlich kaum kennt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Vorurteile abbauen",
+     "ru": "преодолевать предрассудки",
+     "ex": "Persönlicher Kontakt zu Menschen, deren Lebensweise sich von der eigenen unterscheidet, kann dazu beitragen, [[Vorurteile abzubauen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Wert, Werte",
+     "ru": "ценность",
+     "ex": "Eltern und Erzieher haben die Aufgabe, ihren Kindern gesellschaftliche [[Werte]] zu vermitteln.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Norm, Normen",
+     "ru": "норма",
+     "ex": "Es kommt häufig vor, dass Jugendliche gegen die [[Normen]] ihrer Eltern und der Gesellschaft rebellieren.",
+     "note": "gegen + Akk. rebellieren",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Миграция",
+   "items": [
+    {
+     "de": "migrieren",
+     "ru": "мигрировать",
+     "ex": "Aufgrund der offenen Grenzen ist es heutzutage viel leichter, innerhalb der EU zu [[migrieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Migration",
+     "ru": "миграция",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Migrant / die Migrantin, Migranten",
+     "ru": "мигрант",
+     "ex": "In vielen Ländern müssen [[Migranten]] nach einiger Zeit eine Sprachprüfung absolvieren.",
+     "note": "n-склонение: den Migranten",
+     "g": "m"
+    },
+    {
+     "de": "einwandern = immigrieren",
+     "ru": "иммигрировать, въезжать",
+     "ex": "Um in ein anderes Land [[einwandern]] zu können, muss man meist bestimmte Bedingungen erfüllen.",
+     "note": "ist eingewandert",
+     "g": "v"
+    },
+    {
+     "de": "der Einwanderer / die Einwanderin, Einwanderer = der Zuwanderer",
+     "ru": "иммигрант",
+     "ex": "In vielen Staaten gibt es spezielle Angebote für [[Einwanderer]], die ihnen helfen, sich in der neuen Umgebung einzuleben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "auswandern = emigrieren",
+     "ru": "эмигрировать",
+     "ex": "Auch wenn das Leben in einem anderen Land auf den ersten Blick verlockend erscheint, sollte man sich gut informieren, bevor man endgültig [[auswandert]].",
+     "note": "ist ausgewandert",
+     "g": "v"
+    },
+    {
+     "de": "der Auswanderer / die Auswanderin, Auswanderer",
+     "ru": "эмигрант",
+     "ex": "In Krisenzeiten steigt die Zahl der [[Auswanderer]], die sich in einem anderen Land ein neues Leben aufbauen wollen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "fliehen* aus + D",
+     "ru": "бежать откуда-то",
+     "ex": "Tausende von Menschen [[fliehen aus]] den umkämpften Gebieten in die Nachbarländer.",
+     "note": "floh – ist geflohen",
+     "g": "v"
+    },
+    {
+     "de": "fliehen* vor + D",
+     "ru": "бежать от кого-то / чего-то",
+     "ex": "Die Einwohner [[fliehen vor]] der gegnerischen Armee, die schnell näherkommt.",
+     "note": "floh – ist geflohen",
+     "g": "v"
+    },
+    {
+     "de": "flüchten = fliehen*",
+     "ru": "бежать, спасаться бегством",
+     "ex": "Während die Männer an der Front kämpften, [[flüchteten]] Frauen und Kinder nach Süden.",
+     "note": "ist geflüchtet",
+     "g": "v"
+    },
+    {
+     "de": "die Flucht",
+     "ru": "бегство",
+     "ex": "Auf der [[Flucht]] tragen die Menschen nur die nötigsten Dinge bei sich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Flüchtling, Flüchtlinge",
+     "ru": "беженец",
+     "ex": "Ein Teil der [[Flüchtlinge]] möchte nach dem Ende des Krieges in die Heimat zurückkehren.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Убежище и интеграция",
+   "items": [
+    {
+     "de": "das Asyl",
+     "ru": "убежище (политическое)",
+     "ex": "Menschen, die in ihrem Heimatland politisch verfolgt werden, können in einem anderen Land [[Asyl]] suchen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Asylbewerber / die Asylbewerberin, Asylbewerber",
+     "ru": "лицо, ищущее убежища",
+     "ex": "[[Asylbewerber]] müssen oft sehr lange warten, bis die Behörden über ihren Antrag entschieden haben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich integrieren",
+     "ru": "интегрироваться",
+     "ex": "Private Kontakte zu den Einheimischen können Einwanderern dabei helfen, [[sich]] in ihrer neuen Heimat zu [[integrieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Integration",
+     "ru": "интеграция",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Staatsbürgerschaft = die Staatsangehörigkeit",
+     "ru": "гражданство",
+     "ex": "Während früher nur die Kinder deutscher Eltern bei der Geburt die deutsche [[Staatsbürgerschaft]] erhielten, können heute auch Kinder ausländischer Eltern deutsche Staatsbürger werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die doppelte Staatsbürgerschaft / Staatsangehörigkeit",
+     "ru": "двойное гражданство",
+     "ex": "Die Einführung der [[doppelten Staatsbürgerschaft]] macht es möglich, dass Kinder von Einwanderern neben dem deutschen Pass auch die Staatsangehörigkeit ihres Herkunftslandes besitzen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Гражданство и мультикультурность",
+   "items": [
+    {
+     "de": "sich einbürgern lassen*",
+     "ru": "получить гражданство (натурализоваться)",
+     "ex": "Einwanderer können [[sich]] in Deutschland [[einbürgern lassen]], wenn sie bestimmte Voraussetzungen erfüllen.",
+     "note": "ließ sich einbürgern – hat sich einbürgern lassen",
+     "g": "v"
+    },
+    {
+     "de": "eingebürgert werden",
+     "ru": "быть натурализованным",
+     "ex": "Um [[eingebürgert]] zu werden, muss man über Deutschkenntnisse auf dem Niveau B1 verfügen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Einbürgerung",
+     "ru": "натурализация, получение гражданства",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Einbürgerungstest, -tests",
+     "ru": "тест на гражданство",
+     "ex": "Bevor man die deutsche Staatsangehörigkeit erhalten kann, muss man einen [[Einbürgerungstest]] ablegen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die multikulturelle Gesellschaft",
+     "ru": "мультикультурное общество",
+     "ex": "Toleranz und Offenheit gegenüber anderen Lebensweisen sind Voraussetzungen für eine [[multikulturelle Gesellschaft]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "fremdenfeindlich",
+     "ru": "ксенофобский",
+     "ex": "Leider kommt es immer wieder vor, dass Einzelpersonen oder Gruppen [[fremdenfeindliche]] Anschläge auf Einwanderer verüben.",
+     "note": "einen Anschlag verüben",
+     "g": "v"
+    },
+    {
+     "de": "die Fremdenfeindlichkeit",
+     "ru": "ксенофобия",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "weltoffen",
+     "ru": "открытый миру, космополитичный",
+     "ex": "Ein [[weltoffener]] Mensch interessiert sich für andere Kulturen und steht ihnen vorurteilsfrei gegenüber.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Weltoffenheit",
+     "ru": "открытость миру",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "name": "Государство и граждане",
+   "items": [
+    {
+     "de": "der Bürger / die Bürgerin, Bürger",
+     "ru": "гражданин",
+     "ex": "Als [[Bürger]] eines Landes hat man bestimmte Rechte, aber es gibt auch Pflichten, die man erfüllen muss.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Staat, Staaten",
+     "ru": "государство",
+     "ex": "Der [[Staat]] hat die Aufgabe, seine Bürger vor Gefahren zu schützen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "staatlich",
+     "ru": "государственный",
+     "ex": "[[Staatliche]] Einrichtungen werden aus Steuergeldern finanziert.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Öffentlichkeit",
+     "ru": "общественность",
+     "ex": "Die Presse hat die Aufgabe, die [[Öffentlichkeit]] über wichtige politische Entwicklungen zu informieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "öffentlich",
+     "ru": "публичный, открытый",
+     "ex": "Alle Sitzungen des deutschen Parlaments sind [[öffentlich]] und werden deshalb im Internet übertragen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verwaltung",
+     "ru": "администрация, управление",
+     "ex": "Kritiker der zunehmenden Bürokratie fordern eine Reform der öffentlichen [[Verwaltung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Behörde, Behörden",
+     "ru": "ведомство, орган власти",
+     "ex": "Zur staatlichen Verwaltung gehören verschiedene [[Behörden]] mit speziellen Aufgaben, beispielsweise das Finanzamt, das Einwohnermeldeamt und das Bundeskriminalamt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "zuständig sein* für + A",
+     "ru": "отвечать за что-то (по компетенции)",
+     "ex": "Das Amt für Ausbildungsförderung ist [[für]] die Bearbeitung von BAföG-Anträgen [[zuständig]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "name": "Заявления и власть",
+   "items": [
+    {
+     "de": "etw. genehmigen",
+     "ru": "разрешать, одобрять",
+     "ex": "Wer eine politische Demonstration auf der Straße veranstalten will, muss diese vorher bei der zuständigen Behörde anmelden und [[genehmigen]] lassen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Genehmigung = die Erlaubnis",
+     "ru": "разрешение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. beantragen",
+     "ru": "подавать заявление на что-то",
+     "ex": "Gehen Sie zum Ausländeramt, um eine Verlängerung Ihrer Aufenthaltserlaubnis zu [[beantragen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "einen Antrag stellen auf + A = etw. beantragen",
+     "ru": "подать заявление на что-то",
+     "ex": "Wer kein eigenes Einkommen hat und staatliche Unterstützung braucht, kann einen [[Antrag auf]] Arbeitslosengeld [[stellen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Macht",
+     "ru": "власть",
+     "ex": "Um eine Diktatur zu verhindern, wird die [[Macht]] unter verschiedenen Personen bzw. Institutionen aufgeteilt, die sich gegenseitig kontrollieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "mitbestimmen",
+     "ru": "участвовать в принятии решений",
+     "ex": "Ein Volksentscheid gibt der Bevölkerung die Möglichkeit, bei politischen Entscheidungen [[mitzubestimmen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Mitbestimmung",
+     "ru": "право участия в решениях",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: демографические изменения и Hartz IV (Infobox)",
+   "items": [
+    {
+     "de": "der demografische Wandel",
+     "ru": "демографические изменения",
+     "ex": "Diesen Prozess bezeichnet man als „[[demografischen Wandel]]“.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Altersdurchschnitt",
+     "ru": "средний возраст",
+     "ex": "… steigt der [[Altersdurchschnitt]] der Bevölkerung.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Fachkräfte (Pl.) · es mangelt an Fachkräften",
+     "ru": "специалисты · нехватка специалистов",
+     "ex": "Das führt dazu, dass es in vielen Wirtschaftsbereichen an [[Fachkräften]] mangelt.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "das Einwanderungsland",
+     "ru": "страна иммиграции",
+     "ex": "Zum anderen setzt sich allmählich die Erkenntnis durch, dass Deutschland ein [[Einwanderungsland]] ist.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "sich durchsetzen",
+     "ru": "утверждаться, распространяться",
+     "ex": "Zum anderen [[setzt sich]] allmählich die Erkenntnis [[durch]] …",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Bereicherung",
+     "ru": "обогащение",
+     "ex": "Neben der kulturellen und gesellschaftlichen [[Bereicherung]] durch Einwanderung ist Migration auch wirtschaftlich wichtig.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Maßnahmen ergreifen*",
+     "ru": "принимать меры",
+     "ex": "Einige politische [[Maßnahmen]] wurden bereits [[ergriffen]].",
+     "note": "ergriff – hat ergriffen",
+     "g": "v"
+    },
+    {
+     "de": "das Arbeitslosengeld",
+     "ru": "пособие по безработице",
+     "ex": "Seit 2005 bekommen Menschen, die ihre Arbeit verlieren, ein Jahr lang [[Arbeitslosengeld]] I.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Reduzierung der staatlichen Leistungen",
+     "ru": "сокращение социальных выплат",
+     "ex": "Die Hartz-Reformen waren sehr umstritten, weil sie eine deutliche [[Reduzierung der staatlichen Leistungen]] bedeuteten.",
+     "note": "",
+     "g": "f"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "einwandern ↔ auswandern",
+   "v": "ein- — въезжать (в Германию), aus- — уезжать (из страны); Perfekt с sein"
+  },
+  {
+   "k": "fliehen aus ↔ fliehen vor",
+   "v": "aus + D — откуда (aus dem Land); vor + D — от кого (vor der Armee)"
+  },
+  {
+   "k": "angehören + D",
+   "v": "Он принадлежит к слою: Er gehört der Mittelschicht an (Dativ, без предлога)"
+  },
+  {
+   "k": "der Migrant",
+   "v": "n-склонение: den / dem / des Migranten"
+  },
+  {
+   "k": "der / die Obdachlose",
+   "v": "Склоняется как прилагательное: ein Obdachloser, die Obdachlosen"
+  },
+  {
+   "k": "sich einbürgern lassen",
+   "v": "Кого-то натурализуют: eingebürgert werden; сам — sich einbürgern lassen"
+  },
+  {
+   "k": "zuständig für + A",
+   "v": "Das Amt ist für Anträge zuständig (für + Akk.)"
+  },
+  {
+   "k": "einen Antrag stellen auf + A",
+   "v": "Antrag auf Asyl / auf Arbeitslosengeld (не «für»)"
+  }
+ ]
+}

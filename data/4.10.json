@@ -1,0 +1,275 @@
+{
+ "id": "4.10",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Religion",
+ "titleRu": "Религия",
+ "pages": "224–225",
+ "exercises": "226–227",
+ "solutions": "270",
+ "bookRows": 22,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Вера и обряды",
+   "items": [
+    {
+     "de": "einer Religionsgemeinschaft / einer Kirche angehören",
+     "ru": "принадлежать к религиозной общине / церкви",
+     "ex": "Knapp ein Drittel der Deutschen [[gehört]] der katholischen [[Kirche an]].",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "gläubig sein* = religiös sein*",
+     "ru": "быть верующим",
+     "ex": "Es gibt immer mehr Menschen, die aus der Kirche austreten, obwohl sie [[gläubig]] sind.",
+     "note": "aus der Kirche austreten",
+     "g": "v"
+    },
+    {
+     "de": "der / die Gläubige, Gläubige (!)",
+     "ru": "верующий",
+     "ex": "Freitags versammeln sich die [[Gläubigen]] in der Moschee.",
+     "note": "склоняется как прилагательное",
+     "g": "m"
+    },
+    {
+     "de": "glauben an + A · der Glaube",
+     "ru": "верить во что-то · вера",
+     "ex": "Angehörige monotheistischer Religionen [[glauben daran]], dass es nur einen Gott gibt.",
+     "note": "der Glaube, des Glaubens",
+     "g": "v"
+    },
+    {
+     "de": "zweifeln an + D · der Zweifel, Zweifel",
+     "ru": "сомневаться в чём-то · сомнение",
+     "ex": "Nach einem schweren Schicksalsschlag kann es vorkommen, dass ein Mensch [[an]] seinem Glauben [[zweifelt]].",
+     "note": "an + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "beten · das Gebet, Gebete",
+     "ru": "молиться · молитва",
+     "ex": "Im Rahmen einer religiösen Erziehung [[beten]] die Eltern oft gemeinsam mit ihren Kindern.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "fasten · das Fasten",
+     "ru": "поститься · пост",
+     "ex": "Manche Menschen [[fasten]], indem sie auf bestimmte Lebensmittel verzichten, andere nehmen gar keine Nahrung zu sich.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "pilgern · die Pilgerreise, -reisen",
+     "ru": "совершать паломничество · паломничество",
+     "ex": "Jedes Jahr [[pilgern]] Millionen Muslime nach Mekka.",
+     "note": "ist gepilgert",
+     "g": "v"
+    },
+    {
+     "de": "das Paradies",
+     "ru": "рай",
+     "ex": "Auf Bildern wird das [[Paradies]] oft als schöner Garten dargestellt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Hölle",
+     "ru": "ад",
+     "ex": "Im Gegensatz zum Paradies ist die [[Hölle]] ein schrecklicher Ort, an dem Schmerz und Qual herrschen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "wiedergeboren werden* · die Wiedergeburt",
+     "ru": "перерождаться · перерождение",
+     "ex": "Die Vorstellung, dass man nicht nur einmal lebt, sondern [[wiedergeboren]] wird, besteht in mehreren Religionen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Святое, обряды, духовенство",
+   "items": [
+    {
+     "de": "heilig",
+     "ru": "святой",
+     "ex": "[[Heilige]] Personen, Orte oder Gegenstände werden mit besonderem Respekt behandelt und verehrt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "tabu sein* · das Tabu, Tabus",
+     "ru": "быть табу · табу",
+     "ex": "In einigen Religionen ist der Verzehr bestimmter Nahrungsmittel [[tabu]].",
+     "note": "Tabus sind kulturell unterschiedlich …",
+     "g": "v"
+    },
+    {
+     "de": "der Gottesdienst, -dienste",
+     "ru": "богослужение",
+     "ex": "Früher war es für Christen selbstverständlich, am Sonntag den [[Gottesdienst]] zu besuchen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "jdn. taufen · die Taufe, Taufen",
+     "ru": "крестить · крещение",
+     "ex": "Bei einer christlichen [[Taufe]] sind neben den Eltern auch die Taufpaten anwesend, die eine besondere Rolle im Leben des Kindes spielen sollen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. trauen · die Trauung, Trauungen",
+     "ru": "венчать, регистрировать брак · бракосочетание",
+     "ex": "Heutzutage lassen sich manche Hochzeitspaare nur noch standesamtlich [[trauen]] und verzichten auf eine kirchliche Trauung.",
+     "note": "≠ jdm. trauen (доверять)",
+     "g": "v"
+    },
+    {
+     "de": "jdn. beerdigen / beisetzen · die Beerdigung / Beisetzung",
+     "ru": "хоронить · похороны",
+     "ex": "Wenn ein Mensch [[beerdigt]] wird, haben die Angehörigen Gelegenheit, Abschied von dem Verstorbenen zu nehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Prophet / die Prophetin, Propheten",
+     "ru": "пророк",
+     "ex": "Ein [[Prophet]] gibt Botschaften, die er von Gott erhalten hat, an die Menschen weiter.",
+     "note": "n-склонение",
+     "g": "m"
+    },
+    {
+     "de": "der Priester / die Priesterin, Priester",
+     "ru": "священник",
+     "ex": "In der katholischen Kirche können nur Männer als [[Priester]] tätig sein.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kloster, Klöster",
+     "ru": "монастырь",
+     "ex": "Das Leben im [[Kloster]] folgt festen Regeln und einem strukturierten Tagesablauf.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Mönch, Mönche",
+     "ru": "монах",
+     "ex": "Am Morgen versammeln sich die [[Mönche]] zum gemeinsamen Gebet in der Kapelle.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Nonne, Nonnen",
+     "ru": "монахиня",
+     "ex": "Eine [[Nonne]] hat innerhalb des Ordens eine feste Aufgabe, der sie tagsüber nachgeht.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: религии и уроки религии (Infobox + Übung I)",
+   "items": [
+    {
+     "de": "das Christentum · die Christen · christlich · die Kirche",
+     "ru": "христианство · христиане · христианский · церковь",
+     "ex": "Knapp ein Drittel der Deutschen gehört der katholischen [[Kirche]] an.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Islam · die Muslime · muslimisch · die Moschee",
+     "ru": "ислам · мусульмане · мусульманский · мечеть",
+     "ex": "Freitags versammeln sich die Gläubigen in der [[Moschee]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Judentum · die Juden · jüdisch · die Synagoge",
+     "ru": "иудаизм · евреи · еврейский · синагога",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Buddhismus / der Hinduismus · der Tempel",
+     "ru": "буддизм / индуизм · храм",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Religionsunterricht",
+     "ru": "урок религии",
+     "ex": "An den meisten staatlichen Schulen ist [[Religionsunterricht]] ein normales Schulfach.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "freiwillig",
+     "ru": "добровольный",
+     "ex": "Allerdings ist die Teilnahme am Religionsunterricht [[freiwillig]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Konfession, -en",
+     "ru": "вероисповедание, конфессия",
+     "ex": "… an dem die Schüler teilnehmen, die der jeweiligen [[Konfession]] angehören.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Ersatzfach · die Ethik",
+     "ru": "заменяющий предмет · этика",
+     "ex": "… wird in den meisten Bundesländern ein [[Ersatzfach]] angeboten. Oft heißt es Ethik.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Weltanschauung",
+     "ru": "мировоззрение",
+     "ex": "… dessen Inhalte unabhängig von einer bestimmten Religion oder [[Weltanschauung]] sind.",
+     "note": "",
+     "g": "f"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "glauben an + A ↔ zweifeln an + D",
+   "v": "Ich glaube an Gott (Akk.), ich zweifle an meinem Glauben (Dat.)"
+  },
+  {
+   "k": "jdn. trauen ↔ jdm. trauen",
+   "v": "jdn. trauen — венчать (Akk.); jdm. trauen — доверять (Dat.)"
+  },
+  {
+   "k": "der Glaube",
+   "v": "Особое склонение: des Glaubens, dem Glauben"
+  },
+  {
+   "k": "angehören + D",
+   "v": "Er gehört keiner Religionsgemeinschaft an"
+  },
+  {
+   "k": "der / die Gläubige",
+   "v": "Склоняется как прилагательное: ein Gläubiger, die Gläubigen"
+  },
+  {
+   "k": "der Prophet",
+   "v": "n-склонение: den Propheten"
+  }
+ ]
+}

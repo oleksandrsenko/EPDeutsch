@@ -1,0 +1,92 @@
+@id 4.3
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Energie
+@titleRu Энергия
+@pages 161–164
+@exercises 164–166
+@solutions 267
+@bookRows 48
+
+# s1 Производство и потребление энергии
+Energie erzeugen / gewinnen* aus + D | вырабатывать энергию из чего-то | Man kann [[Energie]] z. B. [[aus]] Öl, Sonne oder Kohle [[erzeugen]] / [[gewinnen]]. | gewann – hat gewonnen | v
+die Erzeugung von Energie · die Energiegewinnung | производство энергии | Windparks an der Küste dienen der [[Energiegewinnung]]. |  | f
+Energie sparen | экономить энергию | Aus ökologischen und finanziellen Gründen ist es sinnvoll, [[Energie zu sparen]]. |  | v
+energiesparend | энергосберегающий | Es lohnt sich, [[energiesparende]] Haushaltsgeräte anzuschaffen. |  | v
+Energie verbrauchen | потреблять энергию | Heute [[verbrauchen]] wir viel mehr [[Energie]] als vor 100 Jahren. |  | v
+der Energieverbrauch | потребление энергии | Im Winter ist der [[Energieverbrauch]] der privaten Haushalte deutlich höher als im Sommer. |  | m
+Energie benötigen | нуждаться в энергии | Um einen Großrechner zu kühlen, [[benötigt]] man große Mengen an [[Energie]]. |  | v
+der Energiebedarf | потребность в энергии | Durch die Industrialisierung ist unser [[Energiebedarf]] stark gestiegen. |  | m
+die Energiequelle, -quellen | источник энергии | Der Strom, den wir täglich nutzen, stammt aus unterschiedlichen [[Energiequellen]], z. B. Gas, Wind und Wasserkraft. |  | f
+jdn. mit Energie versorgen | снабжать энергией | Alle Haushalte müssen [[mit Energie versorgt]] werden. |  | v
+die Energieversorgung | энергоснабжение | Die Städte sind für die [[Energieversorgung]] zuständig. |  | f
+
+# s2 Электричество
+der Strom fällt aus* | отключается электричество | Aufgrund von Sturmschäden an den Leitungen ist der [[Strom ausgefallen]]. | fiel aus – ist ausgefallen | v
+der Stromausfall, -ausfälle | отключение электричества | Wenn das Stromnetz überlastet ist, kann es zu [[Stromausfällen]] kommen. |  | m
+der Generator, Generatoren | генератор | Krankenhäuser verfügen über [[Generatoren]], um ihre medizinischen Geräte bei einem Stromausfall mit Energie versorgen zu können. |  | m
+der Stecker, Stecker · die Steckdose, Steckdosen | штекер, вилка · розетка | Man muss den [[Stecker]] in die [[Steckdose]] stecken, um das Gerät ans Stromnetz anzuschließen. |  | m
+das Stromkabel, Stromkabel | электрический кабель | Ein defektes [[Stromkabel]] sollte sofort ausgetauscht werden, denn man kann einen Stromschlag bekommen, wenn man es berührt. |  | n
+die Batterie, Batterien | батарейка | Der Radiowecker wird mit [[Batterien]] betrieben. |  | f
+der Akku, Akkus · den Akku aufladen* | аккумулятор · зарядить аккумулятор | [[Akkus]] sind teurer als Batterien, haben aber den Vorteil, dass man sie immer wieder [[aufladen]] kann. | lädt auf – lud auf – hat aufgeladen | m
+
+# s3 Атомная энергия
+die Kernenergie = die Atomenergie | ядерная (атомная) энергия | Es ist allgemein bekannt, dass die [[Kernenergie]] mit Risiken verbunden ist. |  | f
+die Kernenergie nutzen | использовать атомную энергию | Trotz ihrer Gefahren wird die [[Kernenergie]] in vielen Ländern [[genutzt]]. |  | v
+die Nutzung der Kernenergie | использование атомной энергии |  |  | f
+aus der Atomenergie aussteigen* | отказаться от атомной энергии | Das deutsche Parlament hat beschlossen, dass Deutschland [[aus der Atomenergie aussteigen]] wird. | stieg aus – ist ausgestiegen | v
+der Ausstieg aus der Atomenergie · der Atomausstieg | отказ от атомной энергии | Über den [[Atomausstieg]] wird seit Jahren heftig diskutiert. |  | m
+das Kernkraftwerk, -kraftwerke = das Atomkraftwerk | АЭС | Für [[Kernkraftwerke]] gelten strenge Sicherheitsvorschriften. |  | n
+das Uran | уран | Man braucht [[Uran]], um Atomenergie zu erzeugen. |  | n
+radioaktiv | радиоактивный | Uran ist ein [[radioaktives]] Element. |  | v
+# s3b Радиоактивность и отходы
+die Radioaktivität | радиоактивность | Die [[Radioaktivität]] des Urans ist das große Risiko bei der Nutzung der Kernenergie. |  | f
+
+die Strahlung | излучение | Radioaktive [[Strahlung]] ist für Mensch und Natur sehr gefährlich. |  | f
+Strahlung abgeben* | испускать излучение | Radioaktive Substanzen [[geben Strahlung]] an die Umwelt [[ab]]. | gibt ab – gab ab – hat abgegeben | v
+verseuchen | заражать (радиацией, ядом) | Bei einem Unfall können große Regionen radioaktiv [[verseucht]] werden. |  | v
+die Verseuchung | заражение | Eine radioaktive [[Verseuchung]] bleibt für lange Zeit bestehen. |  | f
+der Atommüll | радиоактивные отходы | Ein weiteres Problem ist die Lagerung von [[Atommüll]]. |  | m
+Atommüll lagern · die Lagerung von Atommüll | хранить радиоактивные отходы · хранение отходов | Wissenschaftler und Politiker beschäftigen sich mit der Frage, wie man [[Atommüll]] sicher [[lagern]] kann. |  | v
+
+# s5 Ископаемое топливо
+der fossile Brennstoff, fossile Brennstoffe | ископаемое топливо | Öl, Kohle und Gas bezeichnet man als [[fossile Brennstoffe]]. |  | m
+die Kohle, Kohlen | уголь | Früher hat man viele Wohnungen mit [[Kohle]] geheizt. |  | f
+Kohle fördern / abbauen | добывать уголь | Im Ruhrgebiet wird [[Kohle gefördert]] / [[abgebaut]]. |  | v
+die Förderung von Kohle · der Abbau von Kohle | добыча угля |  |  | f
+das Kohlekraftwerk, -kraftwerke | угольная электростанция | Durch den hohen Schadstoffausstoß tragen [[Kohlekraftwerke]] zur Luftverschmutzung bei. |  | n
+die Ölquelle, -quellen | нефтяная скважина, месторождение | Auf der Arabischen Halbinsel wurden neue [[Ölquellen]] entdeckt. |  | f
+nach Öl bohren | бурить в поисках нефти | Ein Mineralölkonzern [[bohrt]] in der Nordsee [[nach Öl]]. |  | v
+die Bohrinsel, -inseln | нефтяная платформа | Vor der norwegischen Küste sollen neue [[Bohrinseln]] errichtet werden. |  | f
+der Schadstoff, Schadstoffe | вредное вещество | Giftige [[Schadstoffe]] belasten die Luft und das Wasser. |  | m
+Schadstoffe freisetzen / ausstoßen* | выбрасывать вредные вещества | Bei der Verbrennung von fossilen Brennstoffen werden [[Schadstoffe freigesetzt]] / [[ausgestoßen]]. | stößt aus – stieß aus – hat ausgestoßen | v
+die Freisetzung von Schadstoffen · der Schadstoffausstoß | выброс вредных веществ | Durch den Einbau von Filtern soll der [[Schadstoffausstoß]] verringert werden. |  | m
+
+# s6 Альтернативная энергия
+erneuerbare Energien (Plural) = regenerative Energien | возобновляемые источники энергии | [[Erneuerbare Energien]] sind umweltfreundlicher als Energien aus fossilen Brennstoffen. |  | pl
+die Wasserkraft | гидроэнергия | Man kann Energie aus [[Wasserkraft]] gewinnen. |  | f
+der Staudamm, -dämme | плотина | In diesem Tal soll ein großer [[Staudamm]] gebaut werden. |  | m
+die Solarenergie = die Sonnenenergie | солнечная энергия | Der Taschenrechner arbeitet mit [[Solarenergie]]. |  | f
+die Solarzelle, -zellen | солнечный элемент | [[Solarzellen]] können Sonnenenergie speichern. |  | f
+die Windenergie | энергия ветра | Deutschland will in Zukunft mehr [[Windenergie]] nutzen. |  | f
+der Windpark, -parks | ветропарк | An der Küste entstehen große [[Windparks]]. |  | m
+die Windkraftanlage, -anlagen | ветроустановка | Moderne [[Windkraftanlagen]] arbeiten viel leiser als ältere. |  | f
+die Biomasse | биомасса | [[Biomasse]] kann in Energie umgewandelt werden. |  | f
+die Erdwärme = die Geothermie | геотермальная энергия | Immer mehr Menschen nutzen [[Erdwärme]], um ihre Häuser zu heizen. |  | f
+
+## b1 Бонус: споры об атомной энергии (Infobox)
+der Befürworter, - | сторонник | [[Befürworter]] der Kernenergie weisen darauf hin, dass sie eine saubere Energieform ist. | ↔ der Gegner | m
+die Verbrennung | сжигание | Anders als bei der [[Verbrennung]] von Öl und Kohle werden keine Schadstoffe produziert. |  | f
+zum Klimawandel beitragen* | способствовать изменению климата | … Schadstoffe (z. B. CO2), die [[zum Klimawandel beitragen]]. | trug bei – hat beigetragen | v
+die Energieversorgung sichern | обеспечить энергоснабжение | Außerdem kann man mit der Atomenergie die [[Energieversorgung sichern]]. |  | v
+der Rohstoff, -e | сырьё | … ohne [[Rohstoffe]] wie z. B. Öl aus anderen Ländern importieren zu müssen. |  | m
+gefährdet sein | находиться под угрозой | Bei einem Unfall sind das Leben und die Gesundheit vieler Menschen [[gefährdet]]. |  | v
+Krebs auslösen | вызывать рак | … da die radioaktive Strahlung das Gewebe des Körpers zerstört und [[Krebs auslösen]] kann. |  | v
+
+! Energie gewinnen aus + D | Energie aus Wind gewinnen; die Energiegewinnung (не «Gewinn» — это прибыль)
+! aus der Atomenergie aussteigen | Perfekt с sein: Deutschland ist aus der Atomenergie ausgestiegen
+! der Strom fällt aus | ist ausgefallen; der Stromausfall
+! Kohle fördern ↔ jdn. fördern | fördern: 1) добывать (Kohle, Öl), 2) поддерживать (Kinder, Projekte)
+! Schadstoffe ausstoßen | stößt aus – stieß aus – hat ausgestoßen; der Ausstoß
+! Strahlung abgeben | gibt ab – gab ab – hat abgegeben
+! Passiv в описании процессов | Strom wird aus Kohle erzeugt. Solarzellen wurden installiert. (Übung II)

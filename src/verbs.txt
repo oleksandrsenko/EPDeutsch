@@ -1,0 +1,127 @@
+abbrechen|bricht ab|brach ab|hat abgebrochen|прерывать, бросать
+abheben|hebt ab|hob ab|hat abgehoben|снимать (деньги)
+abgeben|gibt ab|gab ab|hat abgegeben|сдавать, испускать
+abnehmen|nimmt ab|nahm ab|hat abgenommen|худеть, уменьшаться
+abschließen|schließt ab|schloss ab|hat abgeschlossen|заканчивать
+anbieten|bietet an|bot an|hat angeboten|предлагать
+ansehen|sieht an|sah an|hat angesehen|смотреть
+antreiben|treibt an|trieb an|hat angetrieben|приводить в движение
+anwenden|wendet an|wandte an / wendete an|hat angewendet / hat angewandt|применять
+aufladen|lädt auf|lud auf|hat aufgeladen|заряжать
+aufnehmen|nimmt auf|nahm auf|hat aufgenommen|принимать, начинать
+aufsteigen|steigt auf|stieg auf|ist aufgestiegen|продвигаться по службе
+ausbrechen|bricht aus|brach aus|ist ausgebrochen|вспыхивать, извергаться
+ausfallen|fällt aus|fiel aus|ist ausgefallen|отменяться, отключаться
+ausgehen|geht aus|ging aus|ist ausgegangen|выходить (развлечься)
+aussteigen|steigt aus|stieg aus|ist ausgestiegen|выходить, отказываться
+aussterben|stirbt aus|starb aus|ist ausgestorben|вымирать
+ausstoßen|stößt aus|stieß aus|hat ausgestoßen|выбрасывать
+begehen|begeht|beging|hat begangen|совершать (преступление)
+beginnen|beginnt|begann|hat begonnen|начинать
+beitreten|tritt bei|trat bei|ist beigetreten|вступать
+bekommen|bekommt|bekam|hat bekommen|получать
+beschließen|beschließt|beschloss|hat beschlossen|решать, принимать (закон)
+bestehen|besteht|bestand|hat bestanden|сдать; состоять из
+bestreiten|bestreitet|bestritt|hat bestritten|оспаривать
+betreiben|betreibt|betrieb|hat betrieben|заниматься, вести
+betrügen|betrügt|betrog|hat betrogen|обманывать
+bevorstehen|steht bevor|stand bevor|hat bevorgestanden|предстоять
+beweisen|beweist|bewies|hat bewiesen|доказывать
+sich bewerben|bewirbt sich|bewarb sich|hat sich beworben|подавать заявку
+bleiben|bleibt|blieb|ist geblieben|оставаться
+brechen|bricht|brach|hat gebrochen|ломать
+bringen|bringt|brachte|hat gebracht|приносить
+durchfallen|fällt durch|fiel durch|ist durchgefallen|провалиться
+einbrechen|bricht ein|brach ein|ist eingebrochen|вламываться
+eingeben|gibt ein|gab ein|hat eingegeben|вводить (данные)
+eingehen|geht ein|ging ein|ist eingegangen|вступать (в брак), идти на
+einhalten|hält ein|hielt ein|hat eingehalten|соблюдать
+einnehmen|nimmt ein|nahm ein|hat eingenommen|принимать (пищу, лекарство)
+sich einschreiben|schreibt sich ein|schrieb sich ein|hat sich eingeschrieben|записываться
+empfinden|empfindet|empfand|hat empfunden|ощущать
+enthalten|enthält|enthielt|hat enthalten|содержать
+entlassen|entlässt|entließ|hat entlassen|увольнять
+entscheiden|entscheidet|entschied|hat entschieden|решать
+entwerfen|entwirft|entwarf|hat entworfen|проектировать
+erbringen|erbringt|erbrachte|hat erbracht|оказывать, показывать
+ergreifen|ergreift|ergriff|hat ergriffen|хватать, принимать (меры)
+erhalten|erhält|erhielt|hat erhalten|получать; сохранять
+erheben|erhebt|erhob|hat erhoben|взимать; собирать (данные)
+erbrechen|erbricht|erbrach|hat erbrochen|рвать (тошнить)
+erfinden|erfindet|erfand|hat erfunden|изобретать
+erkennen|erkennt|erkannte|hat erkannt|узнавать, распознавать
+erleiden|erleidet|erlitt|hat erlitten|перенести (удар, инфаркт)
+erschließen|erschließt|erschloss|hat erschlossen|осваивать
+erwerben|erwirbt|erwarb|hat erworben|приобретать
+erziehen|erzieht|erzog|hat erzogen|воспитывать
+fallen|fällt|fiel|ist gefallen|падать
+festnehmen|nimmt fest|nahm fest|hat festgenommen|задерживать
+fliehen|flieht|floh|ist geflohen|бежать, спасаться
+freisprechen|spricht frei|sprach frei|hat freigesprochen|оправдывать
+gebären|gebiert / gebärt|gebar|hat geboren|рожать
+geben|gibt|gab|hat gegeben|давать
+gefrieren|gefriert|gefror|ist gefroren|замерзать
+gehen|geht|ging|ist gegangen|идти
+gelten|gilt|galt|hat gegolten|действовать, считаться
+genießen|genießt|genoss|hat genossen|наслаждаться
+geraten|gerät|geriet|ist geraten|попадать (в ситуацию)
+gewinnen|gewinnt|gewann|hat gewonnen|выигрывать, добывать
+haben|hat|hatte|hat gehabt|иметь
+halten|hält|hielt|hat gehalten|держать
+herunterladen|lädt herunter|lud herunter|hat heruntergeladen|скачивать
+hinweisen|weist hin|wies hin|hat hingewiesen|указывать
+hochladen|lädt hoch|lud hoch|hat hochgeladen|загружать
+kommen|kommt|kam|ist gekommen|приходить
+können|kann|konnte|hat gekonnt / hat + Inf. + können|мочь
+lassen|lässt|ließ|hat gelassen / hat + Inf. + lassen|оставлять, позволять
+laufen|läuft|lief|ist gelaufen|бежать, идти
+leiden|leidet|litt|hat gelitten|страдать
+leihen|leiht|lieh|hat geliehen|одалживать
+meiden|meidet|mied|hat gemieden|избегать
+nachgehen|geht nach|ging nach|ist nachgegangen|заниматься (чем-то)
+nachschlagen|schlägt nach|schlug nach|hat nachgeschlagen|смотреть в справочнике
+nehmen|nimmt|nahm|hat genommen|брать
+nennen|nennt|nannte|hat genannt|называть
+sich niederlassen|lässt sich nieder|ließ sich nieder|hat sich niedergelassen|поселяться
+riechen|riecht|roch|hat gerochen|пахнуть, нюхать
+schaffen|schafft|schuf|hat geschaffen|создавать
+scheiden|scheidet|schied|hat geschieden|разводить, разделять
+schließen|schließt|schloss|hat geschlossen|закрывать; заключать
+schmelzen|schmilzt|schmolz|ist geschmolzen (intr.) / hat geschmolzen (tr.)|таять; плавить
+schreiben|schreibt|schrieb|hat geschrieben|писать
+schwarzfahren|fährt schwarz|fuhr schwarz|ist schwarzgefahren|ездить без билета
+sein|ist|war|ist gewesen|быть
+sinken|sinkt|sank|ist gesunken|опускаться, снижаться
+sitzen bleiben|bleibt sitzen|blieb sitzen|ist sitzen geblieben|остаться на второй год
+sprechen|spricht|sprach|hat gesprochen|говорить
+stehen|steht|stand|hat gestanden|стоять
+stehlen|stiehlt|stahl|hat gestohlen|красть
+steigen|steigt|stieg|ist gestiegen|подниматься, расти
+streiten|streitet|stritt|hat gestritten|спорить, ссориться
+teilnehmen|nimmt teil|nahm teil|hat teilgenommen|участвовать
+tragen|trägt|trug|hat getragen|нести, носить
+treiben|treibt|trieb|hat getrieben|заниматься (спортом), гнать
+(sich) übergeben|übergibt (sich)|übergab (sich)|hat (sich) übergeben|передавать; рвать (тошнить)
+überschreiten|überschreitet|überschritt|hat überschritten|превышать
+übertragen|überträgt|übertrug|hat übertragen|передавать, транслировать
+überziehen|überzieht|überzog|hat überzogen|превысить (счёт)
+umgeben|umgibt|umgab|hat umgeben|окружать
+umgehen|geht um|ging um|ist umgegangen|обращаться (с чем-то)
+unterbrechen|unterbricht|unterbrach|hat unterbrochen|прерывать
+unterhalten|unterhält|unterhielt|hat unterhalten|развлекать; содержать
+unternehmen|unternimmt|unternahm|hat unternommen|предпринимать
+verbinden|verbindet|verband|hat verbunden|соединять; перевязывать
+verbrennen|verbrennt|verbrannte|hat verbrannt|сжигать
+verbringen|verbringt|verbrachte|hat verbracht|проводить (время)
+verderben|verdirbt|verdarb|hat verdorben|портить(ся)
+sich verhalten|verhält sich|verhielt sich|hat sich verhalten|вести себя
+verstehen|versteht|verstand|hat verstanden|понимать
+verstoßen|verstößt|verstieß|hat verstoßen|нарушать
+vertreten|vertritt|vertrat|hat vertreten|представлять, отстаивать
+wachsen|wächst|wuchs|ist gewachsen|расти
+wahrnehmen|nimmt wahr|nahm wahr|hat wahrgenommen|воспринимать
+werden|wird|wurde|ist geworden|становиться
+zerfallen|zerfällt|zerfiel|ist zerfallen|распадаться
+ziehen|zieht|zog|hat gezogen|тянуть; переезжать
+zunehmen|nimmt zu|nahm zu|hat zugenommen|прибавлять (в весе), расти
+zurückgehen|geht zurück|ging zurück|ist zurückgegangen|сокращаться

@@ -1,0 +1,135 @@
+@id 2.5
+@chapter 2
+@chapterName Der Mensch
+@title Geist und Seele
+@titleRu Разум и душа
+@pages 84–88
+@exercises 89–92
+@solutions 262–263
+@bookRows 65
+
+# s1 Восприятие и органы чувств
+etw. wahrnehmen* | воспринимать, замечать | Auf manche Geräusche reagieren wir sofort, während wir andere gar nicht bewusst [[wahrnehmen]]. | nimmt wahr – nahm wahr – hat wahrgenommen | v
+die Wahrnehmung | восприятие |  |  | f
+der Reiz, Reize = der Stimulus, Stimuli | раздражитель, стимул | Menschen werden krank, wenn es in ihrer Umgebung zu viele oder zu wenige [[Reize]] gibt. |  | m
+der Reflex, Reflexe | рефлекс | Der Körper eines gesunden Menschen reagiert auf bestimmte Reize mit einem [[Reflex]], den wir nicht durch unseren Willen steuern können. |  | m
+der Sinn, Sinne | чувство (орган чувств) | Eine der Gefahren radioaktiver Strahlung besteht darin, dass wir sie mit unseren [[Sinnen]] nicht wahrnehmen können. |  | m
+das Sinnesorgan, -organe | орган чувств | Die [[Sinnesorgane]] nehmen Reize auf und leiten sie an das Gehirn weiter. |  | n
+akustisch | акустический, слуховой | Hunde können sehr hohe Töne hören, die für Menschen [[akustisch]] nicht wahrnehmbar sind. |  | v
+optisch | оптический, зрительный | Durch die Entwicklung neuer Medien sind wir heute mehr [[optischen]] und akustischen Reizen ausgesetzt als früher. | etw. (Dat.) ausgesetzt sein | v
+das Geräusch, Geräusche | звук, шум | Regelmäßig wiederkehrende [[Geräusche]], z. B. das Tropfen eines Wasserhahns, machen die meisten Menschen nervös. |  | n
+
+# s2 Запах, осязание, чувствительность
+riechen* | пахнуть; нюхать | Wenn wir an einem Lebensmittel [[riechen]], haben wir oft auch eine Vorstellung davon, wie es schmeckt. | roch – hat gerochen · an + Dat. riechen — нюхать | v
+der Geruch, Gerüche | запах | Ein [[Geruch]] kann intensive Erinnerungen an eine Situation auslösen, in der wir diesen [[Geruch]] früher schon einmal wahrgenommen haben. |  | m
+duften · duftend | благоухать · ароматный | Angeblich regt es den Appetit an, wenn es im Haus nach bestimmten Lebensmitteln [[duftet]]. | nach + Dat. duften | v
+der Duft, Düfte | аромат | In Geschäften werden [[Düfte]] verbreitet, um das Wohlbefinden der Kunden zu steigern und ihr Kaufverhalten zu beeinflussen. |  | m
+jdn. / etw. berühren | касаться, трогать | Wenn wir eine heiße Oberfläche [[berühren]], ziehen wir automatisch sofort die Hand zurück. |  | v
+die Berührung, Berührungen | прикосновение |  |  | f
+etw. spüren = fühlen | чувствовать, ощущать | Es kann sehr entspannend sein, barfuß zu gehen und das Gras unter den Füßen zu [[spüren]]. |  | v
+etw. empfinden* = fühlen | ощущать, испытывать | Vor einer Operation wird der Patient betäubt, damit er keine Schmerzen [[empfindet]]. | empfand – hat empfunden | v
+die Empfindung | ощущение, чувство |  |  | f
+empfindlich | чувствительный | Wenn Sie sehr [[empfindlich]] auf Lärm reagieren, sollten Sie mit Ohrstöpseln schlafen. |  | v
+sensibel | чувствительный, чуткий | [[Sensible]] Menschen können die Gefühle anderer sehr genau wahrnehmen. | sensibel → sensible (e выпадает) | v
+die Sensibilität | чуткость, чувствительность |  |  | f
+
+# s3 Сознание и мозг
+unbewusst | бессознательный | [[Unbewusste]] Gesten können verraten, dass jemand lügt. |  | v
+bewusst | сознательный, осознанный | Wir glauben, dass wir alle unsere Entscheidungen [[bewusst]] treffen, aber auch unbewusste Faktoren beeinflussen unser Handeln. |  | v
+das Bewusstsein | сознание | Bei starken Schmerzen verlieren wir das [[Bewusstsein]] und spüren nichts mehr. | das Bewusstsein verlieren | n
+bewusstlos | без сознания | Wenn die Luft nicht genug Sauerstoff enthält, wird man nach einiger Zeit [[bewusstlos]]. |  | v
+
+das Hirn, Hirne = das Gehirn, Gehirne | мозг | Mithilfe moderner Untersuchungsmethoden kann man relativ genau feststellen, welche Teile des [[Gehirns]] in bestimmten Situationen aktiv sind. |  | n
+die Hirnströme (Plural) | биотоки мозга | Durch ein EEG, ein Elektroenzephalogramm, kann man die [[Hirnströme]] eines Menschen messen und als Kurve darstellen. |  | pl
+die Nervenzelle, -zellen | нервная клетка | Das Gehirn besteht aus Milliarden von [[Nervenzellen]], die miteinander kommunizieren. |  | f
+die Synapse, Synapsen | синапс | An den Enden einer Gehirnzelle befinden sich [[Synapsen]], durch die Informationen mit anderen Gehirnzellen ausgetauscht werden. |  | f
+Informationen verarbeiten | обрабатывать информацию | Unser Gehirn ist auch im Schlaf aktiv und [[verarbeitet Informationen]], die wir tagsüber aufgenommen haben. |  | v
+die Informationsverarbeitung | обработка информации |  |  | f
+etw. verknüpfen mit + D | связывать с чем-то | Am besten lernen wir, wenn wir neue Informationen [[mit]] bereits bekannten Fakten [[verknüpfen]]. |  | v
+die Verknüpfung | связь, ассоциация |  |  | f
+
+# s4 Память и мышление
+das Gedächtnis | память | Durch gezielte Übungen lässt sich das [[Gedächtnis]] trainieren, so dass wir uns Informationen besser merken können. |  | n
+etw. im Gedächtnis behalten* | удерживать в памяти | Informationen, die für uns persönlich bedeutsam sind, können wir am besten [[im Gedächtnis behalten]]. | behält – behielt – hat behalten | v
+sich etw. merken | запоминать | Manche Menschen klagen darüber, dass [[sie sich]] keine Namen [[merken]] können. | sich (Dat.): ich merke mir | v
+sich etw. einprägen | запечатлевать в памяти | Um [[uns]] eine Telefonnummer [[einzuprägen]], müssen wir sie mehrfach wiederholen. | sich (Dat.) | v
+kognitiv | когнитивный | Während die einen eine Sprache am besten [[kognitiv]] lernen, indem sie grammatische Strukturen analysieren, bevorzugen andere kreative und kommunikative Lernmethoden. |  | v
+rational | рациональный | Wenn man Vor- und Nachteile abwägt, kann man eine [[rationale]] Entscheidung treffen. |  | v
+irrational | иррациональный | Phobien sind psychische Störungen, bei denen die Betroffenen [[irrationale]] Angst vor bestimmten Gegenständen, Tieren oder Situationen haben. |  | v
+vernünftig | разумный | Wir verhalten uns nicht immer [[vernünftig]]: Wir wissen, welche Entscheidung die beste wäre, und trotzdem tun wir oft das Gegenteil. |  | v
+die Vernunft | разум, благоразумие |  |  | f
+
+# s5 Неврологические болезни
+neurologisch | неврологический | Wenn man bestimmte Teile des Körpers nicht mehr spüren oder nicht mehr kontrolliert bewegen kann, ist möglicherweise eine [[neurologische]] Erkrankung die Ursache. |  | v
+die Neurologie | неврология |  |  | f
+jdn. / etw. lähmen | парализовать | Verletzungen der Nerven oder neurologische Erkrankungen können bestimmte Körperteile [[lähmen]]. |  | v
+die Lähmung | паралич |  |  | f
+gelähmt sein | быть парализованным | Seit einem Unfall sind ihre Beine [[gelähmt]], und sie ist auf den Rollstuhl angewiesen. | auf + Akk. angewiesen sein | v
+das Koma | кома | Bis heute weiß man nicht genau, ob Menschen, die im [[Koma]] liegen, ihre Umgebung wahrnehmen. |  | n
+dement | страдающий деменцией | Menschen werden [[dement]], wenn Nervenzellen im Gehirn absterben und dadurch die geistige Leistungsfähigkeit stark nachlässt. |  | v
+die Demenz | деменция | Vor allem ältere Menschen sind von [[Demenz]] betroffen; es gibt jedoch auch Erkrankungen, die bei Jüngeren auftreten können. | von + Dat. betroffen sein | f
+die Alzheimerkrankheit | болезнь Альцгеймера | Die [[Alzheimerkrankheit]] ist ein Beispiel für eine Erkrankung, die zur Demenz führt. |  | f
+
+# s6 Эмоции
+emotional | эмоциональный | Wenn wir verliebt sind oder Angst haben, verhalten wir uns oft nicht vernünftig, sondern reagieren [[emotional]]. |  | v
+die Emotion, Emotionen | эмоция | Nicht nur sachliche Argumente, sondern auch [[Emotionen]] beeinflussen unser Verhalten. |  | f
+euphorisch | эйфорический | Menschen nehmen bestimmte Drogen, weil die Einnahme dieser Substanzen sie [[euphorisch]] macht. |  | v
+die Euphorie | эйфория |  |  | f
+enttäuscht | разочарованный | Wir sind [[enttäuscht]], wenn unsere Hoffnungen oder Erwartungen nicht erfüllt werden. | von + Dat. enttäuscht | v
+die Enttäuschung | разочарование |  |  | f
+verzweifelt | отчаявшийся | In einer aussichtslosen Situation fühlt man sich hilflos und [[verzweifelt]]. |  | v
+die Verzweiflung | отчаяние |  |  | f
+
+# s7 Паника и горе
+panisch | панический | Wenn Menschen bei einer Katastrophe [[panisch]] reagieren, kann das zu vielen Toten und Verletzten führen. |  | v
+die Panik | паника |  |  | f
+Panik bricht aus* | начинается паника | Die Sicherheitskräfte versuchen zu verhindern, dass [[Panik ausbricht]]. | brach aus – ist ausgebrochen | v
+in Panik geraten* | впасть в панику | Versuchen Sie, ruhig zu bleiben und nicht [[in Panik zu geraten]]. | gerät – geriet – ist geraten | v
+trauern um + A | скорбеть по кому-то | Früher trugen Witwen nach dem Tod ihres Mannes ein Jahr lang schwarze Kleidung, um zu zeigen, dass sie [[um]] ihn [[trauerten]]. | um + Akk. | v
+die Trauer | скорбь, траур |  |  | f
+jdn. belasten | обременять, угнетать | Krankheiten, Stress und finanzielle Sorgen [[belasten]] die Betroffenen, aber oft auch ihre Angehörigen. |  | v
+die Belastung | нагрузка, бремя |  |  | f
+etw. verdrängen | вытеснять (из сознания) | Manche Probleme oder Ereignisse [[verdrängen]] wir, indem wir versuchen, sie zu ignorieren. |  | v
+die Verdrängung | вытеснение |  |  | f
+
+# s8 Психика и зависимости
+traumatisiert | травмированный (психически) | Nach Einsätzen in Kriegsgebieten sind viele Soldaten von den schrecklichen Dingen, die sie erlebt haben, [[traumatisiert]]. |  | v
+das Trauma, Traumata | травма (психическая) | Eine Psychotherapie kann helfen, erlittene [[Traumata]] zu verarbeiten. | мн. ч. die Traumata | n
+seelisch = psychisch | душевный, психический | [[Seelische]] Belastungen können zu körperlichen Erkrankungen führen. |  | v
+die Seele = die Psyche | душа, психика | Spaziergänge in der Natur sind nicht nur gut für den Körper, sondern auch für die [[Seele]]. |  | f
+die Psychoanalyse | психоанализ | Durch die von Sigmund Freud entwickelte [[Psychoanalyse]] können verdrängte Erinnerungen wieder bewusst gemacht werden. |  | f
+depressiv | депрессивный | [[Depressive]] Menschen sind oft traurig und haben keine Lust, irgendetwas zu tun. |  | v
+die Depression, Depressionen | депрессия | Es ist oft schwer festzustellen, was eine [[Depression]] verursacht hat. |  | f
+süchtig nach + D | зависимый от чего-то | Manche Menschen sind abhängig von bestimmten Drogen, andere sind [[süchtig nach]] Glücksspiel oder Medienkonsum. | nach + Dat. | v
+die Sucht | зависимость | Die Liste der [[Sucht]]erkrankungen ist lang. | мн. ч. die Süchte | f
+
+# s9 Личность
+der Charakter, Charaktere | характер | Wissenschaftler streiten darüber, wie stark die Gene unseren [[Charakter]] beeinflussen. |  | m
+jdn. / etw. prägen | формировать, накладывать отпечаток | Erfahrungen in der Kindheit und Jugend [[prägen]] den Charakter eines Menschen. |  | v
+sich verhalten* | вести себя | In der Pubertät [[verhalten sich]] Jugendliche oft unberechenbar. | verhält – verhielt – hat verhalten | v
+das Verhalten | поведение | Für Eltern ist es nicht immer leicht, das [[Verhalten]] ihrer pubertierenden Kinder zu verstehen. |  | n
+die Eigenschaft, Eigenschaften | качество, свойство | Auch wenn es uns schwerfällt, müssen wir akzeptieren, dass jeder von uns auch negative [[Eigenschaften]] hat. |  | f
+introvertiert | интровертный | [[Introvertierte]] Persönlichkeiten verbringen oft Zeit alleine, um zu lesen oder kreativ zu sein. |  | v
+schüchtern | застенчивый | Viele Kinder sind in einem bestimmten Alter [[schüchtern]] und verstecken sich hinter ihren Eltern, wenn sie jemanden nicht kennen. |  | v
+extrovertiert | экстравертный | [[Extrovertierten]] Menschen fällt es in der Regel leicht, mit anderen ins Gespräch zu kommen. |  | v
+
+## b1 Бонус: выгорание (Infobox)
+das Burnout | эмоциональное выгорание | Seit einiger Zeit werden immer mehr Menschen wegen eines so genannten „[[Burnouts]]“ medizinisch bzw. psychologisch behandelt. |  | n
+ausgebrannt | выгоревший | Der Begriff „Burnout“ bezeichnet einen Zustand, in dem die Betroffenen sich erschöpft oder „[[ausgebrannt]]“ fühlen. |  | v
+die Führungskraft, -kräfte | руководитель | Oft denkt man dabei jedoch an [[Führungskräfte]] und Menschen in helfenden Berufen. |  | f
+Personal abbauen | сокращать персонал | In vielen Bereichen sollen Kosten gespart werden und deshalb wird [[Personal abgebaut]]. |  | v
+erreichbar | доступный (на связи) | … dass ein erheblicher Teil der Arbeitnehmer sogar im Urlaub arbeitet oder zumindest für seinen Arbeitgeber telefonisch [[erreichbar]] ist. |  | v
+der Auslöser, - | пусковой фактор, триггер | … kann auch die private Situation ein Einflussfaktor oder sogar der [[Auslöser]] für einen Burnout sein. |  | m
+pflegebedürftig | нуждающийся в уходе | Als Beispiel lassen sich Angehörige [[pflegebedürftiger]] Menschen anführen. |  | v
+rund um die Uhr | круглосуточно | … die [[rund um die Uhr]] eine große Verantwortung tragen. |  | v
+tabuisiert | табуированный | Diese Krankheiten waren in der Vergangenheit [[tabuisiert]]. |  | v
+ein heikles Thema | щекотливая тема | Auch heute ist das meist noch [[ein heikles Thema]]. |  | n
+
+! sich etw. merken / einprägen | sich в Dativ: Ich merke mir den Namen. Kannst du dir das merken?
+! riechen nach ↔ riechen an | Es riecht nach Kaffee (пахнет); an einer Blume riechen (нюхать)
+! sensibel ↔ empfindlich | sensibel — чуткий к чувствам других; empfindlich — чувствительный к раздражителям (Lärm, Kälte), обидчивый
+! in Panik geraten · Panik bricht aus | Perfekt с sein: Er ist in Panik geraten. Panik ist ausgebrochen
+! trauern um + A | Sie trauert um ihren Mann (не «über»)
+! süchtig nach + D ↔ abhängig von + D | süchtig nach Alkohol; abhängig von Drogen
+! das Trauma | мн. ч. die Traumata (или Traumen)
+! jdm. fällt etw. leicht / schwer | Dativ: Extrovertierten Menschen fällt es leicht …

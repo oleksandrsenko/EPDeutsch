@@ -1,0 +1,110 @@
+@id 4.6
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Wirtschaft
+@titleRu Экономика
+@pages 184–188
+@exercises 189–193
+@solutions 268–269
+@bookRows 66
+
+# s1 Экономика: общее
+die Branche, Branchen | отрасль | Während sich die Medien[[branche]] in der Krise befindet, steigen die Verkaufszahlen in der Automobil[[branche]]. |  | f
+die Ware, Waren | товар | In Kaufhäusern findet man ein großes Angebot verschiedener [[Waren]] des täglichen Bedarfs. |  | f
+die Güter (Plural) | блага, товары | Die Oppositionspartei fordert, dass höhere Steuern auf Luxus[[güter]] erhoben werden. |  | pl
+die Bodenschätze (Plural) | полезные ископаемые | Die Arktis ist reich an [[Bodenschätzen]], insbesondere an Öl und Gas. | reich an + Dat. | pl
+Bodenschätze abbauen | добывать полезные ископаемые | Infolge des Klimawandels können die [[Bodenschätze]] in der Arktis leichter [[abgebaut]] werden. | infolge + Gen. | v
+die Dienstleistung, -leistungen | услуга | Das Unternehmen bietet [[Dienstleistungen]] rund um den Computer an, z. B. Kaufberatung, Installation von Netzwerken und Beseitigung von Störungen. |  | f
+eine Dienstleistung erbringen* | оказывать услугу | Nicht alle Beschäftigten werden für die [[Dienstleistungen]], die sie [[erbringen]], auch angemessen bezahlt. | erbrachte – hat erbracht | v
+die Betriebswirtschaft | экономика предприятия (BWL) | Nach einem Studium der [[Betriebswirtschaft]] bieten sich den Absolventen vielfältige Arbeitsmöglichkeiten in der Privatwirtschaft. |  | f
+die Volkswirtschaft | народное хозяйство, макроэкономика (VWL) | Nach der Wahl wurde ein renommierter Professor für [[Volkswirtschaft]] zum neuen Wirtschaftsminister berufen. |  | f
+
+# s2 Предприятие
+das Unternehmen, Unternehmen | предприятие, компания | Das 1903 gegründete [[Unternehmen]] ist seit vier Generationen im Familienbesitz. |  | n
+ein Unternehmen gründen | основать компанию | Wer ein [[Unternehmen gründen]] will, muss meist einen Kredit aufnehmen. |  | v
+ein Geschäft eröffnen | открыть магазин (бизнес) | Nachdem er lange fest angestellt war, hat er jetzt beschlossen, sich selbstständig zu machen und ein eigenes [[Geschäft zu eröffnen]]. |  | v
+ein Geschäft betreiben* | вести бизнес, держать магазин | Bis jetzt [[betreiben]] die Eltern das [[Geschäft]], aber in einigen Jahren soll ihre Tochter diese Aufgabe übernehmen. | betrieb – hat betrieben | v
+die Kette, Ketten | сеть (магазинов) | Die Bäckerei gehört zu einer [[Kette]], die Geschäfte in ganz Süddeutschland betreibt. |  | f
+die Filiale, Filialen | филиал | In jeder größeren Stadt gibt es [[Filialen]] verschiedener großer Fastfood-Ketten. |  | f
+der Betrieb, Betriebe | предприятие | Die Arbeitsagenturen fordern die [[Betriebe]] dazu auf, mehr Ausbildungsplätze für junge Menschen zu schaffen. |  | m
+einen Betrieb leiten | руководить предприятием | Um einen [[Betrieb]] erfolgreich zu [[leiten]], braucht man neben Branchenkenntnissen und fachlicher Kompetenz auch die Fähigkeit, Mitarbeiter zu führen. |  | v
+der Geschäftsführer / die Geschäftsführerin, Geschäftsführer | директор, управляющий | Wegen der ständig sinkenden Verkaufszahlen hat das Unternehmen den [[Geschäftsführer]] entlassen. |  | m
+die Führungskraft, -kräfte | руководитель, менеджер | In Managerseminaren sollen [[Führungskräfte]] lernen, wie sie ihre Mitarbeiter zu Bestleistungen motivieren können. |  | f
+der Inhaber / die Inhaberin, Inhaber | владелец | Unzufriedene Kunden beschweren sich beim [[Inhaber]] des Geschäfts über die Unfreundlichkeit seiner Angestellten. |  | m
+
+# s3 Инвестиции, баланс, банкротство
+investieren in + A | инвестировать во что-то | Das Pharmaunternehmen [[investiert]] jährlich hohe Summen [[in]] Forschung und Entwicklung. | in + Akk. | v
+die Investition, Investitionen | инвестиция |  |  | f
+fusionieren | сливаться (о компаниях) | Zwei große Unternehmen [[fusionieren]], um gemeinsam größere Mengen produzieren zu können. |  | v
+die Fusion, Fusionen | слияние |  |  | f
+die Bilanz, Bilanzen | баланс, итог | Die Jahres[[bilanz]] des noch jungen Unternehmens wird von Wirtschaftsanalysten mit Spannung erwartet. |  | f
+(eine positive / negative) Bilanz ziehen* | подвести (положительный / отрицательный) итог | Nach dem Weihnachtsgeschäft haben die Einzelhändler eine positive [[Bilanz gezogen]]. | zog – hat gezogen | v
+die Insolvenz, Insolvenzen · Insolvenz anmelden | банкротство · объявить о банкротстве | Nach der [[Insolvenz]] wurden zahlreiche Filialen geschlossen und Teile des Unternehmens an Konkurrenten verkauft. |  | f
+Konkurs anmelden | объявить о банкротстве | Nachdem der Betrieb [[Konkurs]] (= Insolvenz) [[anmelden]] musste, fürchten die Mitarbeiter um ihre Arbeitsplätze. | um + Akk. fürchten | v
+die Börse, Börsen | биржа | Die Banken verfolgen aufmerksam die Entwicklungen an der Wall Street und an anderen [[Börsen]] in aller Welt. |  | f
+die Aktie, Aktien | акция | Wenn man [[Aktien]] eines Unternehmens kauft, kann man nicht mit Sicherheit wissen, wie viel diese in Zukunft wert sein werden. |  | f
+
+# s4 Народное хозяйство
+die Marktwirtschaft | рыночная экономика | Das System der [[Marktwirtschaft]] erlaubt es Unternehmen und Betrieben, selbst zu entscheiden, welche Güter sie in welchen Mengen produzieren. |  | f
+der Wettbewerb | конкуренция | Der [[Wettbewerb]] gibt den Kunden die Möglichkeit, aus verschiedenen Angeboten das Beste auszuwählen. |  | m
+das Monopol, Monopole | монополия | Fusionen großer Firmen müssen genehmigt werden, um die Entstehung von [[Monopolen]] zu verhindern. |  | n
+etw. subventionieren | субсидировать | Die Regierung [[subventioniert]] die Erzeugung erneuerbarer Energien, um den CO2-Ausstoß zu senken. |  | v
+die Subventionen (Plural) | субсидии | [[Subventionen]] können in Form von finanziellen Zuschüssen oder durch Steuererleichterungen gewährt werden. |  | pl
+das Bruttoinlandsprodukt | валовой внутренний продукт (ВВП) | Das [[Bruttoinlandsprodukt]] gibt Auskunft über die wirtschaftliche Produktivität eines Landes. |  | n
+das Bruttosozialprodukt | валовой национальный продукт (ВНП) | Das [[Bruttosozialprodukt]] gibt an, wie hoch das Gesamteinkommen aller Bürger eines Landes ist. |  | n
+der Staatshaushalt | государственный бюджет | Die neue Regierung hat angekündigt, keine weiteren Schulden zu machen, um den [[Staatshaushalt]] zu sanieren. |  | m
+das Defizit, Defizite | дефицит | Wegen der hohen [[Defizite]] im Staatshaushalt hat der Finanzminister einen eisernen Sparkurs angekündigt. |  | n
+die Mehrwertsteuer | НДС | Für die meisten Waren und Dienstleistungen müssen die Kunden 19 % [[Mehrwertsteuer]] bezahlen. |  | f
+
+# s5 Экономическое развитие
+wachsen* | расти | Experten sagen voraus, dass die Wirtschaft im kommenden Jahr um ca. 1,3 Prozent [[wachsen]] wird. | wächst – wuchs – ist gewachsen | v
+schrumpfen | сокращаться | In Krisenzeiten [[schrumpft]] die Wirtschaft, da die Menschen deutlich weniger Geld ausgeben als sonst. | ist geschrumpft | v
+die Rezession | рецессия, спад | Die [[Rezession]] hat zu einem Anstieg der Arbeitslosenquote und einer höheren Staatsverschuldung geführt. |  | f
+die Konjunktur | конъюнктура | Durch politische Maßnahmen, z. B. Steuersenkungen, kann der Staat die [[Konjunktur]] beeinflussen. |  | f
+das Industrieland, -länder | индустриальная страна | Für den Ausstoß von Treibhausgasen sind in erster Linie die [[Industrieländer]] verantwortlich. |  | n
+das Schwellenland, -länder | развивающаяся страна с быстрорастущей экономикой | Aufgrund ihrer rasanten wirtschaftlichen Entwicklung sind [[Schwellenländer]] für Investoren sehr attraktiv. |  | n
+das Entwicklungsland, -länder | развивающаяся страна | Mikrokredite können armen Menschen in [[Entwicklungsländern]] dabei helfen, sich eine Existenz aufzubauen und dadurch ihren Lebensunterhalt zu sichern. |  | n
+
+# s6 Производство и внешняя торговля
+etw. herstellen = etw. produzieren | производить | In Handarbeit [[hergestellte]] Waren sind meist teurer als Produkte aus industrieller Herstellung. |  | v
+die Herstellung | производство | Für die [[Herstellung]] von Lebensmitteln gelten strenge Hygienevorschriften. |  | f
+das Fließband, -bänder | конвейер | Die Arbeit am [[Fließband]] ist oft monoton, da eine Person immer die gleichen Handgriffe machen muss. |  | n
+(etw.) liefern | поставлять | Trotz des Streiks konnten alle Waren pünktlich [[geliefert]] werden. |  | v
+die Lieferung | поставка |  |  | f
+etw. einführen = etw. importieren | импортировать, ввозить | Um die Energieversorgung sicherzustellen, müssen große Mengen an Öl und Gas [[eingeführt]] werden. |  | v
+die Einfuhr | импорт, ввоз |  |  | f
+etw. ausführen = etw. exportieren | экспортировать, вывозить | Zu den Produkten, die [[ausgeführt]] werden, gehören Kraftfahrzeuge, Maschinen und andere technische Geräte. |  | v
+die Ausfuhr | экспорт, вывоз |  |  | f
+der Zoll, Zölle | пошлина; таможня | [[Zölle]] dienen dem Schutz der einheimischen Wirtschaft vor Konkurrenz aus dem Ausland und sind außerdem eine Einnahmequelle für den Staat. |  | m
+Zoll / Zölle erheben* | взимать пошлины | Um den Handel innerhalb Europas zu fördern, werden beim Import von Waren aus EU-Staaten keine [[Zölle erhoben]]. | erhob – hat erhoben | v
+
+# s7 Торговля
+handeln mit + D | торговать чем-то | Große Ketten von Buchgeschäften [[handeln]] heutzutage nicht nur [[mit]] Büchern, sondern auch mit DVDs, Schreibwaren und Geschenkartikeln. |  | v
+der Handel | торговля |  |  | m
+der Händler, Händler | торговец | Manche [[Händler]] nehmen die gekaufte Ware auch 4 Wochen nach dem Einkauf noch zurück, wenn der Kunde mit dem Produkt nicht zufrieden ist. |  | m
+der Großhandel | оптовая торговля | Die Inhaber von Restaurants kaufen einen Teil der benötigten Lebensmittel im [[Großhandel]], da sie dort größere Mengen zu günstigeren Preisen erhalten. |  | m
+der Einzelhandel | розничная торговля | Die meisten Menschen kaufen Obst und Gemüse im [[Einzelhandel]], z. B. im Supermarkt, im Bioladen oder auf dem Markt. |  | m
+das Angebot | предложение | Früher war das [[Angebot]] an Lebensmitteln von der Jahreszeit abhängig und deshalb viel begrenzter als heute. | Angebot an + Dat. | n
+die Nachfrage | спрос | Aufgrund des heißen Sommers ist die [[Nachfrage]] nach Klimaanlagen und Ventilatoren stark gestiegen. | nach + Dat. | f
+der Bedarf an + D | потребность в чём-то | Der [[Bedarf an]] Rohstoffen, die für den Bau technischer Geräte verwendet werden, steigt kontinuierlich. |  | m
+den Bedarf decken | покрывать потребность | Wenn der [[Bedarf]] durch die inländische Produktion nicht [[gedeckt]] wird, müssen Waren aus dem Ausland importiert werden. |  | v
+
+# s8 Сбыт, потребители, маркетинг
+Waren absetzen | сбывать, продавать товары | Das Unternehmen konnte nur knapp die Hälfte der [[Waren]] gewinnbringend [[absetzen]] und musste den Rest zu stark reduzierten Preisen anbieten. |  | v
+der Absatz | сбыт | Der geringe [[Absatz]] hat die Firma in eine so schwere Krise gestürzt, dass ein Teil der Mitarbeiter entlassen werden musste. |  | m
+der Markt, Märkte | рынок | Auf dem freien [[Markt]] bestimmen Angebot und Nachfrage den Preis für eine Ware. |  | m
+neue Märkte erschließen* | осваивать новые рынки | Um mehr Waren zu verkaufen, wollen die Unternehmen [[neue Märkte]] im Ausland [[erschließen]]. | erschloss – hat erschlossen | v
+konsumieren · der Konsum | потреблять · потребление | Im Durchschnitt [[konsumieren]] die Deutschen pro Jahr mehr als 100 Liter an alkoholischen Getränken. |  | v
+der Verbraucher, Verbraucher = der Konsument, Konsumenten | потребитель | Informationen auf der Verpackung informieren die [[Verbraucher]] über die Herkunft der Ware. | der Konsument — n-склонение | m
+ein Produkt vermarkten | продвигать товар на рынке | Werbestrategen verbringen viel Zeit damit, sich Gedanken darüber zu machen, wie sie ein [[Produkt]] am besten [[vermarkten]] können. |  | v
+die Vermarktung | маркетинг, продвижение |  |  | f
+die Reklame = die Werbung (nur Singular) | реклама | [[Reklame]] für Tabakwaren darf im Fernsehen nicht gezeigt werden. |  | f
+
+! einführen ↔ ausführen | ein- — импорт (die Einfuhr), aus- — экспорт (die Ausfuhr)
+! das Angebot ↔ die Nachfrage | Angebot an + D, Nachfrage nach + D
+! der Bedarf an + D | Der Bedarf an Rohstoffen; den Bedarf decken
+! die Güter | Только мн. ч. в значении «товары»; das Gut — ещё «имение»
+! investieren in + A | in Forschung investieren (Akk.)
+! der Wettbewerb | В экономике — конкуренция; в спорте — соревнование
+! Insolvenz / Konkurs anmelden | Без артикля: Das Unternehmen hat Insolvenz angemeldet
+! der Konsument | n-склонение: den Konsumenten; но der Verbraucher — обычное

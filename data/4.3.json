@@ -1,0 +1,513 @@
+{
+ "id": "4.3",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Energie",
+ "titleRu": "Энергия",
+ "pages": "161–164",
+ "exercises": "164–166",
+ "solutions": "267",
+ "bookRows": 48,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Производство и потребление энергии",
+   "items": [
+    {
+     "de": "Energie erzeugen / gewinnen* aus + D",
+     "ru": "вырабатывать энергию из чего-то",
+     "ex": "Man kann [[Energie]] z. B. [[aus]] Öl, Sonne oder Kohle [[erzeugen]] / [[gewinnen]].",
+     "note": "gewann – hat gewonnen",
+     "g": "v"
+    },
+    {
+     "de": "die Erzeugung von Energie · die Energiegewinnung",
+     "ru": "производство энергии",
+     "ex": "Windparks an der Küste dienen der [[Energiegewinnung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Energie sparen",
+     "ru": "экономить энергию",
+     "ex": "Aus ökologischen und finanziellen Gründen ist es sinnvoll, [[Energie zu sparen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "energiesparend",
+     "ru": "энергосберегающий",
+     "ex": "Es lohnt sich, [[energiesparende]] Haushaltsgeräte anzuschaffen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Energie verbrauchen",
+     "ru": "потреблять энергию",
+     "ex": "Heute [[verbrauchen]] wir viel mehr [[Energie]] als vor 100 Jahren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Energieverbrauch",
+     "ru": "потребление энергии",
+     "ex": "Im Winter ist der [[Energieverbrauch]] der privaten Haushalte deutlich höher als im Sommer.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Energie benötigen",
+     "ru": "нуждаться в энергии",
+     "ex": "Um einen Großrechner zu kühlen, [[benötigt]] man große Mengen an [[Energie]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Energiebedarf",
+     "ru": "потребность в энергии",
+     "ex": "Durch die Industrialisierung ist unser [[Energiebedarf]] stark gestiegen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Energiequelle, -quellen",
+     "ru": "источник энергии",
+     "ex": "Der Strom, den wir täglich nutzen, stammt aus unterschiedlichen [[Energiequellen]], z. B. Gas, Wind und Wasserkraft.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. mit Energie versorgen",
+     "ru": "снабжать энергией",
+     "ex": "Alle Haushalte müssen [[mit Energie versorgt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Energieversorgung",
+     "ru": "энергоснабжение",
+     "ex": "Die Städte sind für die [[Energieversorgung]] zuständig.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Электричество",
+   "items": [
+    {
+     "de": "der Strom fällt aus*",
+     "ru": "отключается электричество",
+     "ex": "Aufgrund von Sturmschäden an den Leitungen ist der [[Strom ausgefallen]].",
+     "note": "fiel aus – ist ausgefallen",
+     "g": "v"
+    },
+    {
+     "de": "der Stromausfall, -ausfälle",
+     "ru": "отключение электричества",
+     "ex": "Wenn das Stromnetz überlastet ist, kann es zu [[Stromausfällen]] kommen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Generator, Generatoren",
+     "ru": "генератор",
+     "ex": "Krankenhäuser verfügen über [[Generatoren]], um ihre medizinischen Geräte bei einem Stromausfall mit Energie versorgen zu können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Stecker, Stecker · die Steckdose, Steckdosen",
+     "ru": "штекер, вилка · розетка",
+     "ex": "Man muss den [[Stecker]] in die [[Steckdose]] stecken, um das Gerät ans Stromnetz anzuschließen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Stromkabel, Stromkabel",
+     "ru": "электрический кабель",
+     "ex": "Ein defektes [[Stromkabel]] sollte sofort ausgetauscht werden, denn man kann einen Stromschlag bekommen, wenn man es berührt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Batterie, Batterien",
+     "ru": "батарейка",
+     "ex": "Der Radiowecker wird mit [[Batterien]] betrieben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Akku, Akkus · den Akku aufladen*",
+     "ru": "аккумулятор · зарядить аккумулятор",
+     "ex": "[[Akkus]] sind teurer als Batterien, haben aber den Vorteil, dass man sie immer wieder [[aufladen]] kann.",
+     "note": "lädt auf – lud auf – hat aufgeladen",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Атомная энергия",
+   "items": [
+    {
+     "de": "die Kernenergie = die Atomenergie",
+     "ru": "ядерная (атомная) энергия",
+     "ex": "Es ist allgemein bekannt, dass die [[Kernenergie]] mit Risiken verbunden ist.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kernenergie nutzen",
+     "ru": "использовать атомную энергию",
+     "ex": "Trotz ihrer Gefahren wird die [[Kernenergie]] in vielen Ländern [[genutzt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nutzung der Kernenergie",
+     "ru": "использование атомной энергии",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "aus der Atomenergie aussteigen*",
+     "ru": "отказаться от атомной энергии",
+     "ex": "Das deutsche Parlament hat beschlossen, dass Deutschland [[aus der Atomenergie aussteigen]] wird.",
+     "note": "stieg aus – ist ausgestiegen",
+     "g": "v"
+    },
+    {
+     "de": "der Ausstieg aus der Atomenergie · der Atomausstieg",
+     "ru": "отказ от атомной энергии",
+     "ex": "Über den [[Atomausstieg]] wird seit Jahren heftig diskutiert.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kernkraftwerk, -kraftwerke = das Atomkraftwerk",
+     "ru": "АЭС",
+     "ex": "Für [[Kernkraftwerke]] gelten strenge Sicherheitsvorschriften.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Uran",
+     "ru": "уран",
+     "ex": "Man braucht [[Uran]], um Atomenergie zu erzeugen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "radioaktiv",
+     "ru": "радиоактивный",
+     "ex": "Uran ist ein [[radioaktives]] Element.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Радиоактивность и отходы",
+   "items": [
+    {
+     "de": "die Radioaktivität",
+     "ru": "радиоактивность",
+     "ex": "Die [[Radioaktivität]] des Urans ist das große Risiko bei der Nutzung der Kernenergie.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Strahlung",
+     "ru": "излучение",
+     "ex": "Radioaktive [[Strahlung]] ist für Mensch und Natur sehr gefährlich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Strahlung abgeben*",
+     "ru": "испускать излучение",
+     "ex": "Radioaktive Substanzen [[geben Strahlung]] an die Umwelt [[ab]].",
+     "note": "gibt ab – gab ab – hat abgegeben",
+     "g": "v"
+    },
+    {
+     "de": "verseuchen",
+     "ru": "заражать (радиацией, ядом)",
+     "ex": "Bei einem Unfall können große Regionen radioaktiv [[verseucht]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verseuchung",
+     "ru": "заражение",
+     "ex": "Eine radioaktive [[Verseuchung]] bleibt für lange Zeit bestehen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Atommüll",
+     "ru": "радиоактивные отходы",
+     "ex": "Ein weiteres Problem ist die Lagerung von [[Atommüll]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Atommüll lagern · die Lagerung von Atommüll",
+     "ru": "хранить радиоактивные отходы · хранение отходов",
+     "ex": "Wissenschaftler und Politiker beschäftigen sich mit der Frage, wie man [[Atommüll]] sicher [[lagern]] kann.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Ископаемое топливо",
+   "items": [
+    {
+     "de": "der fossile Brennstoff, fossile Brennstoffe",
+     "ru": "ископаемое топливо",
+     "ex": "Öl, Kohle und Gas bezeichnet man als [[fossile Brennstoffe]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Kohle, Kohlen",
+     "ru": "уголь",
+     "ex": "Früher hat man viele Wohnungen mit [[Kohle]] geheizt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Kohle fördern / abbauen",
+     "ru": "добывать уголь",
+     "ex": "Im Ruhrgebiet wird [[Kohle gefördert]] / [[abgebaut]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Förderung von Kohle · der Abbau von Kohle",
+     "ru": "добыча угля",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Kohlekraftwerk, -kraftwerke",
+     "ru": "угольная электростанция",
+     "ex": "Durch den hohen Schadstoffausstoß tragen [[Kohlekraftwerke]] zur Luftverschmutzung bei.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Ölquelle, -quellen",
+     "ru": "нефтяная скважина, месторождение",
+     "ex": "Auf der Arabischen Halbinsel wurden neue [[Ölquellen]] entdeckt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "nach Öl bohren",
+     "ru": "бурить в поисках нефти",
+     "ex": "Ein Mineralölkonzern [[bohrt]] in der Nordsee [[nach Öl]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Bohrinsel, -inseln",
+     "ru": "нефтяная платформа",
+     "ex": "Vor der norwegischen Küste sollen neue [[Bohrinseln]] errichtet werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Schadstoff, Schadstoffe",
+     "ru": "вредное вещество",
+     "ex": "Giftige [[Schadstoffe]] belasten die Luft und das Wasser.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Schadstoffe freisetzen / ausstoßen*",
+     "ru": "выбрасывать вредные вещества",
+     "ex": "Bei der Verbrennung von fossilen Brennstoffen werden [[Schadstoffe freigesetzt]] / [[ausgestoßen]].",
+     "note": "stößt aus – stieß aus – hat ausgestoßen",
+     "g": "v"
+    },
+    {
+     "de": "die Freisetzung von Schadstoffen · der Schadstoffausstoß",
+     "ru": "выброс вредных веществ",
+     "ex": "Durch den Einbau von Filtern soll der [[Schadstoffausstoß]] verringert werden.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Альтернативная энергия",
+   "items": [
+    {
+     "de": "erneuerbare Energien (Plural) = regenerative Energien",
+     "ru": "возобновляемые источники энергии",
+     "ex": "[[Erneuerbare Energien]] sind umweltfreundlicher als Energien aus fossilen Brennstoffen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Wasserkraft",
+     "ru": "гидроэнергия",
+     "ex": "Man kann Energie aus [[Wasserkraft]] gewinnen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Staudamm, -dämme",
+     "ru": "плотина",
+     "ex": "In diesem Tal soll ein großer [[Staudamm]] gebaut werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Solarenergie = die Sonnenenergie",
+     "ru": "солнечная энергия",
+     "ex": "Der Taschenrechner arbeitet mit [[Solarenergie]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Solarzelle, -zellen",
+     "ru": "солнечный элемент",
+     "ex": "[[Solarzellen]] können Sonnenenergie speichern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Windenergie",
+     "ru": "энергия ветра",
+     "ex": "Deutschland will in Zukunft mehr [[Windenergie]] nutzen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Windpark, -parks",
+     "ru": "ветропарк",
+     "ex": "An der Küste entstehen große [[Windparks]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Windkraftanlage, -anlagen",
+     "ru": "ветроустановка",
+     "ex": "Moderne [[Windkraftanlagen]] arbeiten viel leiser als ältere.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Biomasse",
+     "ru": "биомасса",
+     "ex": "[[Biomasse]] kann in Energie umgewandelt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Erdwärme = die Geothermie",
+     "ru": "геотермальная энергия",
+     "ex": "Immer mehr Menschen nutzen [[Erdwärme]], um ihre Häuser zu heizen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: споры об атомной энергии (Infobox)",
+   "items": [
+    {
+     "de": "der Befürworter, -",
+     "ru": "сторонник",
+     "ex": "[[Befürworter]] der Kernenergie weisen darauf hin, dass sie eine saubere Energieform ist.",
+     "note": "↔ der Gegner",
+     "g": "m"
+    },
+    {
+     "de": "die Verbrennung",
+     "ru": "сжигание",
+     "ex": "Anders als bei der [[Verbrennung]] von Öl und Kohle werden keine Schadstoffe produziert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "zum Klimawandel beitragen*",
+     "ru": "способствовать изменению климата",
+     "ex": "… Schadstoffe (z. B. CO2), die [[zum Klimawandel beitragen]].",
+     "note": "trug bei – hat beigetragen",
+     "g": "v"
+    },
+    {
+     "de": "die Energieversorgung sichern",
+     "ru": "обеспечить энергоснабжение",
+     "ex": "Außerdem kann man mit der Atomenergie die [[Energieversorgung sichern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Rohstoff, -e",
+     "ru": "сырьё",
+     "ex": "… ohne [[Rohstoffe]] wie z. B. Öl aus anderen Ländern importieren zu müssen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "gefährdet sein",
+     "ru": "находиться под угрозой",
+     "ex": "Bei einem Unfall sind das Leben und die Gesundheit vieler Menschen [[gefährdet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Krebs auslösen",
+     "ru": "вызывать рак",
+     "ex": "… da die radioaktive Strahlung das Gewebe des Körpers zerstört und [[Krebs auslösen]] kann.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "Energie gewinnen aus + D",
+   "v": "Energie aus Wind gewinnen; die Energiegewinnung (не «Gewinn» — это прибыль)"
+  },
+  {
+   "k": "aus der Atomenergie aussteigen",
+   "v": "Perfekt с sein: Deutschland ist aus der Atomenergie ausgestiegen"
+  },
+  {
+   "k": "der Strom fällt aus",
+   "v": "ist ausgefallen; der Stromausfall"
+  },
+  {
+   "k": "Kohle fördern ↔ jdn. fördern",
+   "v": "fördern: 1) добывать (Kohle, Öl), 2) поддерживать (Kinder, Projekte)"
+  },
+  {
+   "k": "Schadstoffe ausstoßen",
+   "v": "stößt aus – stieß aus – hat ausgestoßen; der Ausstoß"
+  },
+  {
+   "k": "Strahlung abgeben",
+   "v": "gibt ab – gab ab – hat abgegeben"
+  },
+  {
+   "k": "Passiv в описании процессов",
+   "v": "Strom wird aus Kohle erzeugt. Solarzellen wurden installiert. (Übung II)"
+  }
+ ]
+}

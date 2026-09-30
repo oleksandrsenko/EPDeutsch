@@ -1,0 +1,641 @@
+{
+ "id": "1.3",
+ "chapter": 1,
+ "chapterName": "Bildung und Forschung",
+ "title": "Wissenschaft",
+ "titleRu": "Наука",
+ "pages": "34–39",
+ "exercises": "40–43",
+ "solutions": "260–261",
+ "bookRows": 61,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Области науки и учёные",
+   "items": [
+    {
+     "de": "das Fachgebiet, Fachgebiete",
+     "ru": "область знаний, специальность",
+     "ex": "Oft arbeiten Wissenschaftler aus verschiedenen [[Fachbereichen]] gemeinsam an einem Forschungsprojekt.",
+     "note": "= der Fachbereich",
+     "g": "n"
+    },
+    {
+     "de": "auf einem Gebiet",
+     "ru": "в какой-то области",
+     "ex": "Professor Hagen ist ein Experte [[auf dem Gebiet]] der Herzchirurgie.",
+     "note": "auf + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Disziplin, Disziplinen = das Fachgebiet",
+     "ru": "научная дисциплина",
+     "ex": "Jura, Medizin und Theologie sind einige der ältesten wissenschaftlichen [[Disziplinen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "interdisziplinär",
+     "ru": "междисциплинарный",
+     "ex": "[[Interdisziplinäre]] Forschungsprojekte beschäftigen sich mit Themen, die verschiedene Fachbereiche berühren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Naturwissenschaft, Naturwissenschaften",
+     "ru": "естественная наука",
+     "ex": "Biologie, Chemie und Physik zählen zu den klassischen [[Naturwissenschaften]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "naturwissenschaftlich",
+     "ru": "естественнонаучный",
+     "ex": "Viele Themen der [[naturwissenschaftlichen]] Forschung sind sowohl für Biologen als auch für Chemiker und Mediziner interessant.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Geisteswissenschaft, Geisteswissenschaften",
+     "ru": "гуманитарная наука",
+     "ex": "Anders als in den Naturwissenschaften lassen sich Erkenntnisse der [[Geisteswissenschaften]] in der Regel nicht in Formeln ausdrücken.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "geisteswissenschaftlich",
+     "ru": "гуманитарный",
+     "ex": "Ein großer Teil der [[geisteswissenschaftlichen]] Arbeit besteht in der Lektüre und Analyse von Texten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Forscher / die Forscherin, Forscher = der Wissenschaftler / die Wissenschaftlerin, Wissenschaftler",
+     "ru": "исследователь, учёный",
+     "ex": "Insbesondere in den Naturwissenschaften arbeiten viele [[Forscher]] heute nicht mehr alleine, sondern in einem Team.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Nachwuchswissenschaftler / die -wissenschaftlerin, Nachwuchswissenschaftler",
+     "ru": "молодой учёный",
+     "ex": "Durch die Einführung der Juniorprofessur soll [[Nachwuchswissenschaftlern]] der Einstieg in eine Karriere an der Universität erleichtert werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "den Nachwuchs fördern",
+     "ru": "поддерживать молодых учёных (смену)",
+     "ex": "Der wissenschaftliche [[Nachwuchs]] wird durch verschiedene Programme und Stipendien für junge Wissenschaftler [[gefördert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nachwuchsförderung",
+     "ru": "поддержка молодых учёных",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Исследовать и искать информацию",
+   "items": [
+    {
+     "de": "forschen",
+     "ru": "заниматься исследованиями",
+     "ex": "In einem so genannten Forschungssemester können Professoren intensiv an einem Thema [[forschen]], weil sie von den Lehrveranstaltungen freigestellt sind.",
+     "note": "an + Dat.: an einem Thema forschen",
+     "g": "v"
+    },
+    {
+     "de": "forschen nach + D",
+     "ru": "искать, исследовать что-то",
+     "ex": "Seit Jahren [[forschen]] Wissenschaftler [[nach]] einem Heilmittel gegen AIDS.",
+     "note": "nach + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "die Forschung, Forschungen",
+     "ru": "исследование, наука",
+     "ex": "Viele [[Forschungen]] werden nicht nur von den Universitäten finanziell unterstützt, sondern auch von Stiftungen und der Privatwirtschaft.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Forschung(en) betreiben*",
+     "ru": "вести исследования",
+     "ex": "Mitarbeiter des Alfred-Wegener-Instituts [[betreiben]] umfangreiche [[Forschungen]] in der Antarktis.",
+     "note": "betrieb – hat betrieben",
+     "g": "v"
+    },
+    {
+     "de": "etw. erforschen",
+     "ru": "исследовать, изучать что-то",
+     "ex": "Geologen [[erforschen]] ein weitverzweigtes Höhlensystem, das erst vor einigen Jahren entdeckt wurde.",
+     "note": "+ Akk. (без предлога)",
+     "g": "v"
+    },
+    {
+     "de": "die Fachliteratur",
+     "ru": "специальная (научная) литература",
+     "ex": "Wissenschaftler müssen ständig [[Fachliteratur]] lesen, um in ihrem Fach auf dem neuesten Stand zu sein.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Archiv, Archive",
+     "ru": "архив",
+     "ex": "Historiker finden in [[Archiven]] oft interessante Dokumente, die ihnen wertvolle Fakten liefern.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Datenbank, Datenbanken",
+     "ru": "база данных",
+     "ex": "In [[Datenbanken]] lassen sich umfangreiche Informationen übersichtlich speichern und bei Bedarf abrufen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "recherchieren",
+     "ru": "искать информацию, проводить поиск",
+     "ex": "Von einem Wissenschaftler wird erwartet, dass er gründlich [[recherchiert]], bevor er sich eine Meinung bildet oder eine Theorie aufstellt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Recherche, Recherchen",
+     "ru": "поиск информации, изыскание",
+     "ex": "Heutzutage erleichtern Datenbanken und online abrufbare Literaturverzeichnisse die [[Recherche]] zu einem bestimmten Thema.",
+     "note": "zu + Dat.",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Исследования и открытия",
+   "items": [
+    {
+     "de": "die Studie, Studien",
+     "ru": "исследование (научное)",
+     "ex": "Die Wirksamkeit eines Medikaments wird in zahlreichen [[Studien]] untersucht, bevor das Medikament auf den Markt kommt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Studie durchführen",
+     "ru": "проводить исследование",
+     "ex": "Um klimatische Veränderungen genau zu untersuchen, müssen Langzeit-[[Studien durchgeführt]] werden.",
+     "note": "führte durch – hat durchgeführt",
+     "g": "v"
+    },
+    {
+     "de": "etw. dokumentieren",
+     "ru": "документировать, фиксировать",
+     "ex": "Es ist wichtig, die Arbeitsschritte und Ergebnisse einer Studie genau zu [[dokumentieren]], damit sie für andere Wissenschaftler nachvollziehbar sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Dokumentation",
+     "ru": "документирование, документация",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "erkennen*",
+     "ru": "распознать, понять",
+     "ex": "Isaac Newton hat [[erkannt]], dass starke Kräfte zwischen den verschiedenen Himmelskörpern wirken.",
+     "note": "erkannte – hat erkannt",
+     "g": "v"
+    },
+    {
+     "de": "die Erkenntnis, Erkenntnisse",
+     "ru": "научное знание, вывод, открытие",
+     "ex": "Die Menge wissenschaftlicher [[Erkenntnisse]] hat sich im Laufe des 20. Jahrhunderts vervielfacht.",
+     "note": "-nis → -nisse",
+     "g": "f"
+    },
+    {
+     "de": "Erkenntnisse gewinnen*",
+     "ru": "получить новые знания (данные)",
+     "ex": "Auch aus einem misslungenen Experiment lassen sich wichtige [[Erkenntnisse gewinnen]].",
+     "note": "gewann – hat gewonnen",
+     "g": "v"
+    },
+    {
+     "de": "entdecken",
+     "ru": "открывать (обнаруживать)",
+     "ex": "Die technische Verbesserung von Raumsonden und Teleskopen führt dazu, dass immer wieder neue Planeten [[entdeckt]] werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Entdeckung, Entdeckungen",
+     "ru": "открытие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "entwickeln",
+     "ru": "разрабатывать",
+     "ex": "Lebensmitteltechniker haben eine Methode [[entwickelt]], um Obst und Gemüse länger haltbar zu machen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Entwicklung",
+     "ru": "разработка, развитие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Durchbruch",
+     "ru": "прорыв",
+     "ex": "Die Formulierung der Relativitätstheorie gilt als Einsteins wissenschaftlicher [[Durchbruch]].",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Гипотезы и тезисы",
+   "items": [
+    {
+     "de": "die Hypothese, Hypothesen",
+     "ru": "гипотеза",
+     "ex": "Eine [[Hypothese]] ist eine Vermutung, auf der die weitere Forschungsarbeit basiert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Hypothese aufstellen",
+     "ru": "выдвинуть гипотезу",
+     "ex": "Es ist sinnvoll, eine [[Hypothese aufzustellen]], auch wenn diese sich später als falsch erweist.",
+     "note": "stellte auf – hat aufgestellt",
+     "g": "v"
+    },
+    {
+     "de": "eine Hypothese überprüfen",
+     "ru": "проверить гипотезу",
+     "ex": "Experimente werden durchgeführt, um die [[Hypothese zu überprüfen]].",
+     "note": "неотделяемая: hat überprüft",
+     "g": "v"
+    },
+    {
+     "de": "die These, Thesen",
+     "ru": "тезис",
+     "ex": "Mit radikalen [[Thesen]] kann man viel Aufmerksamkeit erregen und eine lebhafte Diskussion in Gang setzen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine These vertreten*",
+     "ru": "отстаивать тезис, придерживаться мнения",
+     "ex": "Einige Politiker [[vertreten die These]], dass gewaltverherrlichende Computerspiele der Grund für viele Gewalttaten sind.",
+     "note": "vertritt – vertrat – hat vertreten",
+     "g": "v"
+    },
+    {
+     "de": "eine These aufstellen",
+     "ru": "выдвинуть тезис",
+     "ex": "Als Barry Marshall und Robin Warren die [[These aufstellten]], dass ein Bakterium Magengeschwüre verursacht, wurde diese zunächst von vielen ihrer Kollegen abgelehnt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "eine These untermauern",
+     "ru": "подкрепить (обосновать) тезис",
+     "ex": "Der Autor führt eine Reihe von Argumenten an, um seine [[These zu untermauern]].",
+     "note": "неотделяемая: hat untermauert",
+     "g": "v"
+    },
+    {
+     "de": "umstritten",
+     "ru": "спорный, неоднозначный",
+     "ex": "Die These, dass die Verbreitung von Computern das Leseverhalten negativ beeinflusst, ist [[umstritten]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Теории",
+   "items": [
+    {
+     "de": "die Theorie, Theorien",
+     "ru": "теория",
+     "ex": "Einer verbreiteten [[Theorie]] zufolge verursachte ein Asteroideneinschlag das Aussterben der Dinosaurier.",
+     "note": "einer Theorie zufolge — согласно теории (Dat.)",
+     "g": "f"
+    },
+    {
+     "de": "eine Theorie aufstellen",
+     "ru": "выдвинуть теорию",
+     "ex": "Der Wissenschaftler Thomas Gold [[stellte]] verschiedene [[Theorien auf]], die der vorherrschenden Lehrmeinung widersprachen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "eine Theorie vertreten*",
+     "ru": "придерживаться теории, отстаивать её",
+     "ex": "Gegen den Widerstand der Kirche [[vertrat]] Galilei die [[Theorie]], dass die Erde sich um die Sonne dreht.",
+     "note": "vertritt – vertrat – hat vertreten",
+     "g": "v"
+    },
+    {
+     "de": "eine Theorie überprüfen",
+     "ru": "проверить теорию",
+     "ex": "Es empfiehlt sich, eine [[Theorie]] gründlich [[zu überprüfen]], bevor man sie einer breiten Öffentlichkeit vorstellt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "eine Theorie widerlegen",
+     "ru": "опровергнуть теорию",
+     "ex": "Die Evolutionstheorie von Jean-Baptiste Lamarck wurde durch weitere Forschungen [[widerlegt]].",
+     "note": "неотделяемая: hat widerlegt",
+     "g": "v"
+    },
+    {
+     "de": "etw. beweisen*",
+     "ru": "доказать что-то",
+     "ex": "Einige Mediziner haben Selbstversuche durchgeführt, um zu [[beweisen]], dass sie mit ihren Behauptungen recht hatten.",
+     "note": "bewies – hat bewiesen",
+     "g": "v"
+    },
+    {
+     "de": "der Beweis, Beweise · Beweise vorlegen für + A",
+     "ru": "доказательство · представить доказательства",
+     "ex": "Die Wissenschaftlerin kann stichhaltige [[Beweise]] für ihre Theorie [[vorlegen]].",
+     "note": "für + Akk.",
+     "g": "m"
+    },
+    {
+     "de": "etw. belegen (= etw. beweisen)",
+     "ru": "подтвердить, доказать (данными)",
+     "ex": "Können Sie Ihre These mit zuverlässigen Daten [[belegen]]?",
+     "note": "неотделяемая: hat belegt",
+     "g": "v"
+    },
+    {
+     "de": "der Beleg, Belege = der Beweis",
+     "ru": "подтверждение, доказательство",
+     "ex": "Der Anstieg der Durchschnittstemperatur ist ein [[Beleg]] für den Klimawandel.",
+     "note": "für + Akk.",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Выводы",
+   "items": [
+    {
+     "de": "schließen* aus + D auf + A",
+     "ru": "заключать, делать вывод из чего-то о чём-то",
+     "ex": "Oft kann man aus der Mimik einer Person auf ihre Gefühle [[schließen]].",
+     "note": "schloss – hat geschlossen",
+     "g": "v"
+    },
+    {
+     "de": "(schluss)folgern aus + D = schließen* aus + D",
+     "ru": "делать вывод из чего-то",
+     "ex": "Aus der Analyse der Boden- und Wasserproben kann man [[schlussfolgern]], dass das Gebiet auf irgendeine Weise mit Giftstoffen kontaminiert wurde.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Schlussfolgerung (= Folgerung), Schlussfolgerungen",
+     "ru": "вывод, заключение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "einen Schluss ziehen aus + D = eine Schlussfolgerung ziehen* aus + D",
+     "ru": "сделать вывод из чего-то",
+     "ex": "Aus den Untersuchungsergebnissen lassen sich unterschiedliche [[Schlüsse ziehen]]; deshalb müssen weitere Experimente durchgeführt werden.",
+     "note": "zog – hat gezogen",
+     "g": "v"
+    },
+    {
+     "de": "etw. veröffentlichen = etw. publizieren",
+     "ru": "опубликовать",
+     "ex": "Er hat seine Forschungsergebnisse in einer renommierten Fachzeitschrift [[veröffentlicht]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Veröffentlichung, Veröffentlichungen = die Publikation, Publikationen",
+     "ru": "публикация",
+     "ex": "Die Arbeit eines Wissenschaftlers wird nicht nur an seinen Forschungsarbeiten gemessen, sondern auch an der Zahl seiner [[Veröffentlichungen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "zitieren",
+     "ru": "цитировать",
+     "ex": "Studienanfänger lernen zu Beginn des Studiums, wie man Texte aus verschiedenen Quellen wissenschaftlich korrekt [[zitiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Zitat, Zitate",
+     "ru": "цитата",
+     "ex": "[[Zitate]] müssen in einem wissenschaftlichen Text klar erkennbar sein und mit einer Quellenangabe versehen werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Plagiat, Plagiate",
+     "ru": "плагиат",
+     "ex": "Heute ist es leicht, [[Plagiate]] anzufertigen, indem man Texte aus dem Internet kopiert und behauptet, sie selbst verfasst zu haben.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Методы: анализ, данные, эксперимент",
+   "items": [
+    {
+     "de": "etw. analysieren",
+     "ru": "анализировать",
+     "ex": "Sprachwissenschaftler [[analysieren]] die Reden berühmter Politiker, um herauszufinden, welche rhetorischen Mittel sie benutzt haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Analyse, Analysen",
+     "ru": "анализ",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. / jdn. beobachten",
+     "ru": "наблюдать",
+     "ex": "Biologen [[beobachten]] Tiere oft über einen langen Zeitraum, um ihr Verhalten zu verstehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Beobachtung, Beobachtungen",
+     "ru": "наблюдение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Daten (Plural)",
+     "ru": "данные",
+     "ex": "Oftmals werden umfangreiche [[Daten]] benötigt, um eine Theorie formulieren zu können.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Daten sammeln / erheben*",
+     "ru": "собирать данные",
+     "ex": "Bei dieser medizinischen Studie werden die Patienten[[daten erhoben]] und anonymisiert.",
+     "note": "erhob – hat erhoben",
+     "g": "v"
+    },
+    {
+     "de": "Daten auswerten",
+     "ru": "обрабатывать (анализировать) данные",
+     "ex": "Inzwischen nutzt man auch Computerprogramme, um [[Daten auszuwerten]] und übersichtlich zusammenzufassen.",
+     "note": "wertete aus – hat ausgewertet",
+     "g": "v"
+    },
+    {
+     "de": "experimentieren mit + D",
+     "ru": "экспериментировать с чем-то",
+     "ex": "Marie Curie hat [[mit]] verschiedenen radioaktiven Substanzen [[experimentiert]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Experiment, Experimente",
+     "ru": "эксперимент",
+     "ex": "Die Planung eines guten [[Experiments]] erfordert neben der Klärung organisatorischer Fragen auch Kreativität vonseiten der Wissenschaftler.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "ein Experiment durchführen",
+     "ru": "проводить эксперимент",
+     "ex": "Tragen Sie Schutzkleidung, wenn Sie [[Experimente]] mit chemischen Substanzen [[durchführen]]!",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Методы: испытуемые, лаборатория, экспедиция",
+   "items": [
+    {
+     "de": "der Proband / die Probandin, Probanden = die Versuchsperson, -en = die Testperson, -en",
+     "ru": "испытуемый, участник эксперимента",
+     "ex": "Das Institut für Angewandte Psychologie sucht [[Probanden]] für ein lernpsychologisches Experiment.",
+     "note": "n-склонение: den Probanden",
+     "g": "m"
+    },
+    {
+     "de": "das Labor, Labore",
+     "ru": "лаборатория",
+     "ex": "Gefährliche Viren werden in einem Hochsicherheits[[labor]] gelagert und untersucht.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Ausstattung",
+     "ru": "оснащение, оборудование",
+     "ex": "Dank der hochmodernen technischen [[Ausstattung]] des Labors lassen sich auch geringe Mengen einer Substanz im Blut nachweisen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Umfrage, Umfragen",
+     "ru": "опрос",
+     "ex": "Meinungsforschungsinstitute führen unter der Bevölkerung regelmäßig [[Umfragen]] zu aktuellen Themen durch.",
+     "note": "eine Umfrage durchführen",
+     "g": "f"
+    },
+    {
+     "de": "die Stichprobe, Stichproben",
+     "ru": "выборочная проверка, выборка",
+     "ex": "Um die Wasserqualität zu überprüfen, führt man in regelmäßigen Abständen [[Stichproben]] durch.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Expedition, Expeditionen",
+     "ru": "экспедиция",
+     "ex": "Bei [[Expeditionen]] in unwirtliche Gebiete, z. B. in die Arktis, sind immer wieder Forscher ums Leben gekommen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Expedition unternehmen*",
+     "ru": "предпринять экспедицию",
+     "ex": "Biologen [[unternehmen]] eine [[Expedition]] auf eine unbewohnte Insel, weil sie hoffen, dort unbekannte Pflanzenarten zu entdecken.",
+     "note": "unternimmt – unternahm – hat unternommen (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "die Ausrüstung",
+     "ru": "снаряжение",
+     "ex": "Bei einer Expedition in den Himalaya gehören Seile, Eispickel, festes Schuhwerk und wetterfeste Kleidung zur unbedingt notwendigen [[Ausrüstung]].",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "k": "Ausstattung ↔ Ausrüstung",
+   "v": "Ausstattung — оборудование помещения (лаборатории), Ausrüstung — снаряжение для экспедиции, спорта"
+  },
+  {
+   "k": "forschen · erforschen · forschen nach",
+   "v": "forschen an + Dat. (над темой), forschen nach + Dat. (искать лекарство), etw. erforschen + Akk. без предлога"
+  },
+  {
+   "k": "schließen aus + D auf + A",
+   "v": "Aus der Mimik auf die Gefühle schließen — «из чего» Dat., «о чём» Akk."
+  },
+  {
+   "k": "Отделяемые и неотделяемые (Übung III)",
+   "v": "aufstellen, vorlegen — отделяемые; beweisen, untermauern, widerlegen, überprüfen, vertreten — неотделяемые"
+  },
+  {
+   "k": "die Erkenntnis ≠ die Kenntnis",
+   "v": "Erkenntnis — научный вывод, открытие; Kenntnisse — знания, которыми человек владеет"
+  },
+  {
+   "k": "die Daten",
+   "v": "Только мн. ч.: die Daten werden erhoben. Ед. ч. — die Angabe"
+  },
+  {
+   "k": "der Proband",
+   "v": "n-склонение: den / dem / des Probanden"
+  },
+  {
+   "k": "einer Theorie zufolge",
+   "v": "zufolge стоит после существительного в Dativ"
+  }
+ ]
+}

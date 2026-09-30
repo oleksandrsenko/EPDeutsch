@@ -1,0 +1,178 @@
+@id 2.1
+@chapter 2
+@chapterName Der Mensch
+@title Ernährung
+@titleRu Питание
+@pages 46–53
+@exercises 54–57
+@solutions 261
+@bookRows 104
+
+# s1 Есть и готовить
+etw. zu sich nehmen* | есть, употреблять что-то | Besonders im Winter ist es wichtig, genug vitaminreiches Obst und Gemüse [[zu sich zu nehmen]]. | nimmt – nahm – hat genommen | v
+etw. verzehren | употреблять в пищу, съедать | Ernährungsexperten empfehlen, regelmäßig Seefisch zu [[verzehren]]. |  | v
+der Verzehr | употребление (в пищу) | Der [[Verzehr]] von rohem Gemüse gilt als besonders gesund, weil beim Kochen Nährstoffe verloren gehen. |  | m
+etw. konsumieren | потреблять | In Deutschland [[konsumiert]] man heute deutlich weniger Kartoffeln als noch vor einigen Jahrzehnten. |  | v
+der Konsum | потребление |  |  | m
+etw. zubereiten | готовить (блюдо) | Gemüse ist am gesündesten, wenn es frisch [[zubereitet]] wird. | bereitete zu – hat zubereitet | v
+die Zubereitung | приготовление | Berufstätige greifen gerne zu Fertiggerichten, da deren [[Zubereitung]] wenig Zeit erfordert. |  | f
+die Mahlzeit, Mahlzeiten | приём пищи, еда | Regelmäßige [[Mahlzeiten]] sind für eine gesunde Ernährung wichtig. |  | f
+eine Mahlzeit einnehmen* | принимать пищу | Heute ist es nicht mehr selbstverständlich, dass eine Familie die [[Mahlzeiten]] gemeinsam [[einnimmt]]. | nimmt ein – nahm ein – hat eingenommen | v
+
+# s2 Еда и блюда
+die Nahrung | пища, питание | Nicht allen Menschen auf der Welt steht genug [[Nahrung]] zur Verfügung. |  | f
+die Nahrungsmittel (Plural) = die Lebensmittel (Plural) | продукты питания | In deutschen Supermärkten wird eine große Auswahl an [[Nahrungsmitteln]] angeboten. |  | pl
+die Speise, Speisen | кушанье, блюдо | Die Vielfalt an Restaurants in größeren Städten bietet die Möglichkeit, [[Speisen]] aus verschiedenen Ländern zu probieren. |  | f
+die Kost | пища, кухня (тип питания) | Mediterrane [[Kost]] gilt als sehr gesund, da zu dieser Art der Ernährung viel Gemüse und Fisch gehören. |  | f
+das Gericht, Gerichte | блюдо | In der Kantine werden nicht nur einheimische Speisen, sondern auch exotische [[Gerichte]] angeboten. | не путать: das Gericht — ещё и «суд» | n
+das Getreide | зерно, злаки | Brot kann aus verschiedenen [[Getreide]]sorten hergestellt werden. |  | n
+das Müsli | мюсли | Man kann fertige Müslimischungen kaufen oder sich sein [[Müsli]] aus Haferflocken, Nüssen und Früchten selbst zusammenstellen. |  | n
+Vollkorn- | цельнозерновой | Wer sich gesund ernähren möchte, sollte viel [[Vollkorn]]brot und wenig Weißbrot essen. |  | v
+der Kern, Kerne | семечко, косточка | Sonnenblumen[[kerne]] und Kürbis[[kerne]] enthalten wertvolle Öle, die z. B. für Salate verwendet werden können. |  | m
+die Schale, Schalen | кожура | Es ist empfehlenswert, bestimmte Obstsorten mit der [[Schale]] zu essen, da diese viele Nährstoffe enthält. |  | f
+das Fertiggericht, -gerichte | готовое блюдо, полуфабрикат | Berufstätige greifen gerne zu [[Fertiggerichten]], da deren Zubereitung wenig Zeit erfordert. | zu etw. greifen | n
+
+# s3 Био и калории
+die Bioprodukte (Plural) | биопродукты, органические продукты | Während man [[Bioprodukte]] früher nur in Bioläden oder direkt beim Biobauern kaufen konnte, bieten mittlerweile auch Supermärkte Biolebensmittel an. |  | pl
+das Biosiegel, Biosiegel | знак «био» (сертификат) | [[Biosiegel]] sollen den Kunden helfen, Bioprodukte von anderen Lebensmitteln zu unterscheiden. |  | n
+etw. kennzeichnen | маркировать, обозначать | Nur Bioprodukte, die bestimmte Kriterien erfüllen, dürfen mit einem Biosiegel [[gekennzeichnet]] werden. | kennzeichnete – hat gekennzeichnet (неотделяемая) | v
+kalorienarm = kalorienreduziert | низкокалорийный | Da die meisten Menschen schlank bleiben wollen, erfreuen sich [[kalorienarme]] Lebensmittel großer Beliebtheit. | sich großer Beliebtheit erfreuen (Gen.) | v
+die Kalorie, Kalorien | калория | Aufdrucke auf Lebensmittelverpackungen informieren die Verbraucher darüber, wie viele [[Kalorien]] im Produkt enthalten sind. |  | f
+Kalorien verbrennen* | сжигать калории | Durch anstrengende Sportarten kann man in einer Stunde viele [[Kalorien verbrennen]]. | verbrannte – hat verbrannt | v
+das Kilojoule, -joule | килоджоуль | Der Energiewert von Nahrungsmitteln kann in Kalorien oder in [[Kilojoule]] angegeben werden. |  | n
+zuckerfrei | без сахара | Für die Herstellung von [[zuckerfreien]] Süßigkeiten oder Limonaden werden Süßstoffe verwendet. |  | v
+fettarm = fettreduziert | нежирный, с пониженной жирностью | Alternativ zu Vollmilchprodukten sind auch [[fettarme]] Milch, Joghurts und andere fettreduzierte Milchprodukte erhältlich. |  | v
+
+# s4 Свежесть и порча
+roh | сырой | Der Verzehr von [[rohem]] Gemüse gilt als besonders gesund, weil beim Kochen Nährstoffe verloren gehen. |  | v
+reif | спелый | Da tropische Früchte oftmals über weite Strecken transportiert werden müssen, werden sie oft gepflückt, wenn sie noch nicht ganz [[reif]] sind. |  | v
+haltbar | долго хранящийся | Frische Milch sollte innerhalb weniger Tage getrunken werden, weil sie nicht lange [[haltbar]] ist. |  | v
+die Haltbarkeit | срок хранения |  |  | f
+verderben* | портиться | Fisch [[verdirbt]] sehr schnell, wenn er nicht ausreichend gekühlt wird. | verdirbt – verdarb – ist verdorben | v
+verdorben | испорченный | [[Verdorbene]] Lebensmittel können zu heftigen Bauchschmerzen und sogar zu Vergiftungen führen. |  | v
+verschimmeln | заплесневеть | Brot [[verschimmelt]], wenn man es zu lange liegen lässt. | ist verschimmelt | v
+verschimmelt | заплесневелый | [[Verschimmelte]] Lebensmittel sollte man auf keinen Fall mehr verzehren. |  | v
+der Schimmel | плесень | Manchmal ist [[Schimmel]] eine Delikatesse, z. B. bei Schimmelkäse, aber in den meisten Fällen ist er gesundheitsschädlich. |  | m
+
+# s5 Состав пищи: питательные вещества
+etw. enthalten* | содержать | Es ist allgemein bekannt, dass einige Erfrischungsgetränke viel Zucker [[enthalten]]. | enthält – enthielt – hat enthalten | v
+die Zutat, Zutaten | ингредиент | In einem Kochrezept sind die [[Zutaten]] für das Gericht und die genauen Mengen aufgelistet. |  | f
+der Nährstoff, -stoffe | питательное вещество | Obst, Gemüse, Getreide und Fleisch liefern uns wertvolle [[Nährstoffe]], die der Körper braucht. |  | m
+das Vitamin, Vitamine | витамин | [[Vitamine]] sind für die Gesunderhaltung des Organismus unverzichtbar. |  | n
+das Protein, Proteine = das Eiweiß, Eiweiße | белок | [[Proteine]] sind sowohl in tierischen als auch in pflanzlichen Lebensmitteln enthalten. |  | n
+die Kohlehydrate (Plural), auch: die Kohlenhydrate | углеводы | Zucker liefert uns [[Kohlehydrate]], die wir für körperliche und geistige Leistungen benötigen. |  | pl
+das Kalzium | кальций | Milchprodukte sind eine wichtige Quelle für [[Kalzium]], das für die Stabilität der Knochen benötigt wird. |  | n
+
+# s6 Жиры и добавки
+das Fett, Fette | жир | Man sollte zwar nicht zu viel [[Fett]] zu sich nehmen, aber nicht alle [[Fette]] sind ungesund. |  | n
+gesättigte Fettsäuren (Plural) | насыщенные жирные кислоты | [[Gesättigte Fettsäuren]] sollten nur in geringen Mengen verzehrt werden. |  | pl
+ungesättigte Fettsäuren (Plural) | ненасыщенные жирные кислоты | Olivenöl gilt als gesund, weil es reich an [[ungesättigten Fettsäuren]] ist. | reich an + Dat. | pl
+chemische Zusätze (Plural), auch: chemische Zusatzstoffe | химические добавки | Auf Verpackungen von Lebensmitteln müssen alle [[chemischen Zusätze]] angegeben werden, die darin enthalten sind. |  | pl
+der Aromastoff, -stoffe | ароматизатор | Manche Fruchtjoghurts enthalten mehr [[Aromastoffe]] als echte Früchte. |  | m
+der Farbstoff, -stoffe | краситель | [[Farbstoffe]] sollen dafür sorgen, dass Speisen besonders appetitlich aussehen. |  | m
+das Konservierungsmittel, -mittel = der Konservierungsstoff, -stoffe | консервант | [[Konservierungsmittel]] verhindern, dass Lebensmittel schnell verderben. |  | n
+
+# s7 Сельское хозяйство: земледелие
+die Landwirtschaft | сельское хозяйство | Die [[Landwirtschaft]] produziert die Lebensmittel, die zur Ernährung der Bevölkerung benötigt werden. |  | f
+agrarisch | аграрный | In [[agrarischen]] Gesellschaften ist die Landwirtschaft der wichtigste Wirtschaftszweig. |  | v
+das Agrarprodukt, -produkte | сельскохозяйственный продукт | Landwirtschaftliche Betriebe haben oft Hofläden, in denen die Kunden [[Agrarprodukte]] direkt vom Bauern kaufen können. |  | n
+etw. anbauen | выращивать, возделывать | In Südamerika und in Teilen Afrikas wird Kaffee auf großen Plantagen [[angebaut]]. | baute an – hat angebaut | v
+der Anbau · aus biologischem Anbau | выращивание · органического выращивания | Immer mehr Verbraucher kaufen Lebensmittel, die [[aus biologischem Anbau]] stammen. |  | m
+der Acker, Äcker = das Feld, Felder | пашня, поле | Auf den [[Äckern]] werden verschiedene Getreidesorten und Feldfrüchte angebaut. |  | m
+der Ackerbau | земледелие | Schon sehr früh in der Geschichte begannen die Menschen mit dem [[Ackerbau]], um sich mit Gemüse und Getreide zu versorgen. |  | m
+der Same, Samen | семя | Wenn man [[Samen]] in die Erde legt, beginnen sie zu keimen und bald entsteht daraus eine Pflanze. | n-склонение: des Samens | m
+(etw.) säen | сеять | Im Frühling [[säen]] die Bauern die Samen, aus denen die Pflanzen wachsen sollen. |  | v
+die Saat | посев, семена | Damit sich aus der [[Saat]] Pflanzen entwickeln, müssen die Felder regelmäßig bewässert werden. |  | f
+etw. bewässern | орошать, поливать | Schon in der Antike wurden Kanäle gebaut, um die Felder zu [[bewässern]] und damit die Ernte zu sichern. |  | v
+die Bewässerung | орошение |  |  | f
+
+# s8 Сельское хозяйство: урожай и удобрения
+etw. düngen | удобрять | Um das Wachstum von Pflanzen zu beschleunigen, werden diese [[gedüngt]]. |  | v
+der Dünger, Dünger | удобрение | Als [[Dünger]] kann man den Mist von Tieren verwenden, aber häufig werden auch chemische Düngemittel eingesetzt. |  | m
+das Pestizid, Pestizide | пестицид | Die Pflanzen werden mit [[Pestiziden]] besprüht, um zu verhindern, dass sie von Kleintieren gefressen werden. |  | n
+(etw.) ernten | собирать урожай | Wenn die Früchte reif sind, können sie [[geerntet]] und verkauft werden. |  | v
+die Ernte | урожай |  |  | f
+die Missernte, -ernten | неурожай | Ungünstige Wetterbedingungen können zu [[Missernten]] führen. |  | f
+ertragreich | урожайный | [[Ertragreiche]] Getreidesorten liefern den Landwirten eine besonders gute Ernte. |  | v
+gentechnisch verändern | генетически модифицировать | Man hat verschiedene Obst- und Gemüsesorten [[gentechnisch verändert]], damit sie beispielsweise weniger Wasser brauchen oder mehr Früchte tragen. |  | v
+gentechnisch manipuliert = gentechnisch verändert | генетически модифицированный | Große Teile der Bevölkerung lehnen [[gentechnisch manipulierte]] Lebensmittel ab. |  | v
+
+# s9 Животноводство и магазины
+etw. züchten | выводить (породу), разводить | Man hat Rinderarten [[gezüchtet]], die besonders viel Milch und Fleisch liefern können. |  | v
+die Zucht | разведение, селекция |  |  | f
+das Vieh | скот | Während manche Landwirte sich auf den Ackerbau konzentrieren, halten andere [[Vieh]], zum Beispiel Rinder, Schweine oder Schafe. | только ед. ч. | n
+Vieh halten* | держать скот | Kleinbauern [[halten Vieh]], um sich selbst mit einigen Nahrungsmitteln versorgen zu können. | hält – hielt – hat gehalten | v
+die Massentierhaltung | промышленное (массовое) животноводство | Die [[Massentierhaltung]] ermöglicht eine günstige Herstellung von Fleisch und anderen tierischen Produkten, ist aber ethisch und gesundheitlich problematisch. |  | f
+der Bioladen, -läden | магазин органических продуктов | Da Bioprodukte immer beliebter werden, nimmt die Zahl der [[Bioläden]] in Deutschland ständig zu. |  | m
+das Reformhaus, -häuser | магазин здорового питания | In [[Reformhäusern]] findet man Lebensmittel, die in normalen Supermärkten oft nicht erhältlich sind, z. B. seltene Getreidesorten. |  | n
+
+# s10 Как питаться
+sich ernähren von + D | питаться чем-то | Die frühen Menschen [[ernährten sich]] überwiegend [[von]] Wurzeln, Beeren und anderen Früchten, die sie im Wald finden konnten. | von + Dat. | v
+die Ernährung | питание |  |  | f
+sich gesund ernähren | правильно (здорово) питаться | Man kann sich vor einer Vielzahl von Krankheiten schützen, indem man [[sich gesund ernährt]]. |  | v
+gesunde Ernährung | здоровое питание |  |  | f
+sich ausgewogen ernähren | сбалансированно питаться | Sie [[ernähren sich ausgewogen]], wenn Sie eine gesunde Mischung aus verschiedenen Lebensmitteln zu sich nehmen. |  | v
+sich einseitig ernähren | однообразно (несбалансированно) питаться | Wer [[sich einseitig ernährt]], indem er beispielsweise viele Kohlehydrate, aber kaum Vitamine zu sich nimmt, muss mit gesundheitlichen Folgen rechnen. |  | v
+ernährungsbedingt | вызванный питанием | [[Ernährungsbedingte]] Krankheiten lassen sich durch eine gesunde, ausgewogene Ernährung vermeiden. |  | v
+verzichten auf + A | отказываться от чего-то | Es ist nicht immer leicht, [[auf]] Nahrungsmittel zu [[verzichten]], die zwar ungesund, aber sehr schmackhaft sind. | auf + Akk. | v
+der Verzicht auf + A | отказ от чего-то |  |  | m
+
+# s11 Вегетарианство, пост и диеты
+vegetarisch | вегетарианский | Viele Restaurants und Kantinen bieten inzwischen auch [[vegetarische]] Gerichte an. |  | v
+der Vegetarier / die Vegetarierin, Vegetarier | вегетарианец | Wie in zahlreichen anderen Ländern wächst auch in Deutschland die Zahl der [[Vegetarier]] kontinuierlich. |  | m
+vegan | веганский | Menschen, die sich [[vegan]] ernähren, verzichten vollständig auf tierische Lebensmittel wie Fleisch, Milch, Eier usw. |  | v
+der Veganer / die Veganerin, Veganer | веган | [[Veganer]] müssen darauf achten, genug pflanzliches Eiweiß zu sich zu nehmen. |  | m
+fasten | поститься | Manche Menschen [[fasten]] aus religiösen Gründen: Sie nehmen nur bestimmte Lebensmittel zu sich oder essen zu bestimmten Zeiten gar nichts. |  | v
+das Fasten | пост |  |  | n
+die Fastenkur, -kuren | лечебное голодание | Bei einer [[Fastenkur]] verzichtet man auf feste Nahrung und nimmt nur Suppen und Getränke zu sich. |  | f
+die Diät, Diäten | диета | Heutzutage gibt es viele verschiedene [[Diäten]], die eine schnelle Gewichtsreduktion versprechen. |  | f
+(eine) Diät machen | сидеть на диете | Besonders gegen Ende des Winters [[machen]] zahlreiche Menschen eine [[Diät]]. |  | v
+zunehmen* | поправляться, набирать вес | Menschen, die mit dem Rauchen aufhören, klagen oft darüber, dass sie [[zunehmen]]. | nimmt zu – nahm zu – hat zugenommen | v
+abnehmen* | худеть | Nicht jeder [[nimmt ab]], um gesünder zu leben – viele wollen vor allem dem gegenwärtigen Schönheitsideal entsprechen. | nimmt ab – nahm ab – hat abgenommen | v
+
+# s12 Голод и лишний вес
+hungern | голодать | International tätige Hilfsorganisationen machen darauf aufmerksam, dass immer noch viele Menschen auf der Welt [[hungern]]. |  | v
+Hunger leiden* | страдать от голода | Während es in einigen Ländern Nahrung im Überfluss gibt, [[leiden]] Menschen in anderen Teilen der Welt [[Hunger]]. | litt – hat gelitten · без артикля | v
+die Hungersnot, -nöte | голод (массовый) | Lange Dürreperioden, in denen wenig oder gar kein Regen fällt, können zu einer [[Hungersnot]] führen. |  | f
+verhungern | умереть от голода | Durch Hungersnöte [[verhungern]] auch heute noch viele Menschen, weil sie nicht mit Nahrung versorgt werden können. | ist verhungert | v
+unterernährt sein | страдать от недоедания | Wenn eine Familie nicht genug zu essen hat, sind oft schon die Babys [[unterernährt]]. |  | v
+die Unterernährung | недоедание | [[Unterernährung]] kann schwerwiegende Gesundheitsschäden verursachen, von denen sich ein Mensch niemals erholt. |  | f
+es mangelt jdm. an + D | кому-то не хватает чего-то | Kinder, denen [[es an]] Vitamin D [[mangelt]], erkranken oft an Rachitis. | безличное: es mangelt mir an Zeit | v
+der Mangel an + D | недостаток, нехватка чего-то | Chronische Müdigkeit kann ein Symptom für einen [[Mangel an]] Eisen sein. |  | m
+die Mangelerscheinungen (Plural) | симптомы недостатка (витаминов и т. п.) | Einseitige oder unzureichende Ernährung ist oft der Grund für [[Mangelerscheinungen]]. |  | pl
+
+übergewichtig | с лишним весом | [[Übergewichtige]] Kinder sollten mehr Sport treiben und auf kalorienreiche Lebensmittel verzichten. |  | v
+das Übergewicht | лишний вес | Ärzte weisen darauf hin, dass [[Übergewicht]] verschiedene Krankheiten zur Folge haben kann. | etw. zur Folge haben | n
+# s13 Пищеварение, аллергия, диабет
+die Essstörung, -störungen | расстройство пищевого поведения | Nach Erkenntnissen von Wissenschaftlern haben [[Essstörungen]] wie Magersucht und Bulimie meist psychische Ursachen. |  | f
+an einer Essstörung leiden* | страдать расстройством пищевого поведения | Die meisten, die [[an Essstörungen leiden]], sind Mädchen im Teenageralter, die ein gestörtes Verhältnis zu ihrem Körper haben. | litt – hat gelitten · an + Dat. | v
+etw. verdauen | переваривать | Verschiedene Säuren helfen dabei, die aufgenommene Nahrung zu [[verdauen]]. |  | v
+die Verdauung | пищеварение |  |  | f
+der Stoffwechsel | обмен веществ | Durch den [[Stoffwechsel]] wird Nahrung in verschiedene chemische Stoffe zerlegt und umgewandelt. |  | m
+allergisch reagieren auf + A | иметь аллергию на что-то | Immer mehr Menschen [[reagieren allergisch auf]] bestimmte Bestandteile unserer Nahrung. | auf + Akk. | v
+die Allergie, Allergien | аллергия | Es ist bekannt, dass der Verzehr bestimmter Zusatzstoffe [[Allergien]] auslösen kann. | eine Allergie auslösen | f
+der Blutzuckerspiegel | уровень сахара в крови | Nach dem Verzehr bestimmter Lebensmittel steigt der [[Blutzuckerspiegel]] sprunghaft an. |  | m
+der Diabetes = die Zuckerkrankheit | диабет | Bei [[Diabetes]] ist der Körper nicht mehr in der Lage, den Blutzuckerspiegel selbstständig zu regulieren. |  | m
+das Cholesterin | холестерин | Man unterscheidet zwei Arten von [[Cholesterin]], und zwar das „gesunde“ HDL-Cholesterin und das „ungesunde“ LDL-Cholesterin. |  | n
+der Cholesterinspiegel | уровень холестерина | Ein hoher LDL-[[Cholesterinspiegel]] gilt als Gesundheitsrisiko, da dieses Cholesterin zur Verengung der Blutgefäße (Arteriosklerose) führt. |  | m
+
+## b1 Бонус: потребление мяса (Infobox)
+der Fleischkonsum | потребление мяса |  |  | m
+das Luxusgut, -güter | предмет роскоши | In der Vergangenheit war Fleisch jedoch ein [[Luxusgut]]. |  | n
+sich etw. leisten können | мочь себе позволить | Und nach wie vor gibt es Menschen auf der Welt, die [[sich]] kein Fleisch [[leisten können]]. | sich (Dat.) | v
+kritisch betrachtet werden | рассматриваться критически | Doch seit einigen Jahren wird der Verzehr von großen Mengen an Fleisch zunehmend [[kritisch betrachtet]]. |  | v
+gesundheitsschädlich | вредный для здоровья | Doch daneben enthält es Substanzen, die [[gesundheitsschädlich]] sein können. |  | v
+krebserregend | канцерогенный | So hat man beispielsweise größere Mengen an Antibiotika oder das [[krebserregende]] Dioxin in Fleisch und anderen tierischen Produkten festgestellt. |  | v
+einen Skandal aufdecken | раскрыть скандал | Hinzu kommt, dass in den vergangenen Jahren mehrere Fleischskandale [[aufgedeckt]] wurden. | deckte auf – hat aufgedeckt | v
+in Maßen | в меру, умеренно | Deshalb wird empfohlen, Fleisch nur [[in Maßen]] zu sich zu nehmen. |  | v
+der Tierschutz | защита животных | [[Tierschutz]]: Manche Menschen verzichten auf Fleisch, weil sie nicht möchten, dass ein Tier ihretwegen getötet wird. |  | m
+etw. an Tiere verfüttern | скармливать животным | Stattdessen wird aber ein erheblicher Teil an die Tiere [[verfüttert]]. |  | v
+
+! verzichten auf + A | Отказываться от чего-то — auf + Akk.: auf Fleisch verzichten, der Verzicht auf Zucker
+! es mangelt jdm. an + D | Безличная конструкция: Es mangelt ihm an Vitamin D (не «er mangelt»). Существительное: der Mangel an + Dat.
+! zunehmen / abnehmen | Отделяемые: Ich nehme ab. Er hat zugenommen. «Похудеть на 5 кг» — um 5 Kilo abnehmen
+! verderben — verdorben | Сильный глагол: verdirbt – verdarb – ist verdorben. Verdorbene Lebensmittel (причастие как прилагательное)
+! die Nahrung · die Nahrungsmittel · die Lebensmittel | Nahrung — пища вообще (ед. ч.), Nahrungs-/Lebensmittel — конкретные продукты (мн. ч.)
+! das Gericht | 1) блюдо, 2) суд. Das Gericht, die Gerichte в обоих значениях
+! der Same | n-склонение с -ns в Gen.: des Samens, мн. ч. die Samen
+! Hunger leiden · an einer Krankheit leiden | Hunger leiden — без артикля и предлога; болезнью — leiden an + Dat.

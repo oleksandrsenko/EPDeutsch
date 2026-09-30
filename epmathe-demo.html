@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>EPMathe — подготовка к Ergänzungsprüfung Mathematik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<style>
+/* ================= ДИЗАЙН-ТОКЕНЫ EPMathe =================
+   Та же система, что у EPDeutsch (имена переменных совпадают),
+   но палитра «математическая»: синий чертёжный + бирюза + цвета графиков. */
+:root{
+  --bg:#F5F7FC; --panel:#FFFFFF; --panel2:#EDF1F8; --hover:#EEF3FC; --fg:#1E2A44; --muted:#5A6785; --line:#D6DDEB; --line2:#E9EEF6;
+  --primary:#2F6FED; --primary-h:#2159CC; --primary-soft:#E7EFFE; --link:#2459C9; --on-primary:#FFFFFF;
+  --teal:#0FA3A3; --teal-soft:#DFF5F4;
+  --yellow:#FFCD1F; --good:#18AE79; --good-soft:#E3F7EF; --mid:#F28C28; --mid-soft:#FFF0E1; --bad:#E8505B; --bad-soft:#FDE9EA;
+  /* цвета графиков: f, f', F, g, точки */
+  --c1:#2F6FED; --c2:#F28C28; --c3:#18AE79; --c4:#8B5CF6; --c5:#E8505B;
+  --grid:rgba(47,111,237,.07); --grid2:rgba(47,111,237,.13);
+  --sh:0 .25rem 1rem 0 rgba(30,42,68,.08);
+  --sh-card:0 .4rem 1.8rem 0 rgba(30,42,68,.14);
+  --r-sm:12px; --r:18px; --r-lg:26px;
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --acc-rgb:47,111,237;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1428; --panel:#15213D; --panel2:#1B2A4A; --hover:#22335A; --fg:#EEF2FB; --muted:#9FACC8; --line:#2E4068; --line2:#22335A;
+  --primary:#5B8CFF; --primary-h:#7AA2FF; --primary-soft:#1D2F5C; --link:#9DB9FF;
+  --teal:#33C9C0; --teal-soft:#123A3D;
+  --good:#3CCFA0; --good-soft:#18423A; --mid:#FFA95E; --mid-soft:#4A3420; --bad:#FF7F87; --bad-soft:#4A2A30;
+  --c1:#6E9BFF; --c2:#FFA95E; --c3:#3CCFA0; --c4:#B69CFF; --c5:#FF7F87;
+  --grid:rgba(157,185,255,.06); --grid2:rgba(157,185,255,.12);
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35); --sh-card:0 .4rem 1.8rem 0 rgba(0,0,0,.45); --acc-rgb:91,140,255; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1428; --panel:#15213D; --panel2:#1B2A4A; --hover:#22335A; --fg:#EEF2FB; --muted:#9FACC8; --line:#2E4068; --line2:#22335A;
+  --primary:#5B8CFF; --primary-h:#7AA2FF; --primary-soft:#1D2F5C; --link:#9DB9FF;
+  --teal:#33C9C0; --teal-soft:#123A3D;
+  --good:#3CCFA0; --good-soft:#18423A; --mid:#FFA95E; --mid-soft:#4A3420; --bad:#FF7F87; --bad-soft:#4A2A30;
+  --c1:#6E9BFF; --c2:#FFA95E; --c3:#3CCFA0; --c4:#B69CFF; --c5:#FF7F87;
+  --grid:rgba(157,185,255,.06); --grid2:rgba(157,185,255,.12);
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35); --sh-card:0 .4rem 1.8rem 0 rgba(0,0,0,.45); --acc-rgb:91,140,255; color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5;overflow-x:hidden}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.muted{color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- миллиметровка ---------- */
+.paper{background-image:
+  linear-gradient(var(--grid2) 1px,transparent 1px),linear-gradient(90deg,var(--grid2) 1px,transparent 1px),
+  linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;background-position:-1px -1px}
+
+/* ---------- шапка ---------- */
+.top{position:sticky;top:0;z-index:30;height:66px;background:color-mix(in srgb,var(--panel) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:14px;padding:0 max(18px,env(safe-area-inset-left))}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:23px;letter-spacing:-.03em;white-space:nowrap;cursor:pointer;border:0;background:none;padding:0}
+.logo b{color:var(--link);font-weight:800}
+.logo .lg-s{font-size:13px;font-weight:800;color:var(--on-primary);background:var(--primary);border-radius:9px;padding:6px 9px;line-height:1}
+.logo svg{overflow:visible;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.logo .lg-d,.logo .lg-b{transform-box:fill-box;transform-origin:center;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.logo:hover svg{transform:translateY(-2px)}
+.logo:hover .lg-d{transform:scale(.88) rotate(-6deg)}
+.logo:hover .lg-b{transform:scale(1.15) rotate(180deg)}
+.tright{margin-left:auto;display:flex;gap:10px;align-items:center}
+.ib{border:0;background:none;cursor:pointer;color:var(--muted);border-radius:999px;padding:8px;display:inline-flex}
+.ib:hover{background:var(--hover);color:var(--fg)}
+.streak{display:inline-flex;align-items:center;gap:5px;border:0;background:var(--mid-soft);color:var(--mid);font-weight:800;border-radius:999px;padding:8px 13px;font-size:15px}
+
+/* ---------- кнопки ---------- */
+.btn{font-weight:700;font-size:14.5px;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:9px 18px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;line-height:1.3;transition:transform .12s,background .15s,box-shadow .2s;text-decoration:none}
+.btn:hover{background:var(--hover)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.btn.primary:hover{background:var(--primary-h);border-color:var(--primary-h)}
+.btn.big{padding:14px 30px;font-size:16.5px}
+.btn.glow{box-shadow:0 10px 28px -8px rgba(var(--acc-rgb),.7)}
+.btn.glow:hover{transform:translateY(-2px)}
+.chip{font-size:13.5px;font-weight:700;border:2px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--primary-soft);border-color:var(--primary);color:var(--link)}
+
+/* ---------- лендинг ---------- */
+.hero-wrap{position:relative;overflow:hidden;border-bottom:1px solid var(--line2)}
+#rain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-wrap::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 40%,transparent 45%,var(--bg) 100%)}
+.page{max-width:1160px;margin:0 auto;padding:0 24px}
+.ld-hero{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding:56px 0 48px}
+.ld-badge{display:inline-flex;align-items:center;gap:9px;background:var(--primary-soft);color:var(--link);font-weight:800;font-size:13px;padding:7px 14px 7px 12px;border-radius:999px}
+.ld-badge i{width:8px;height:8px;border-radius:50%;background:var(--good);position:relative}
+.ld-badge i::after{content:"";position:absolute;inset:-4px;border-radius:50%;background:rgba(24,174,121,.25);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.9);opacity:0}}
+h1{font-size:clamp(34px,4.8vw,56px);line-height:1.06;letter-spacing:-.025em;margin:18px 0 16px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--primary),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 26px;max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.nums{display:flex;gap:34px;margin-top:32px;flex-wrap:wrap}
+.nums b{display:block;font-size:30px;font-weight:800;font-family:var(--mono);letter-spacing:-.02em}
+.nums span{font-size:13.5px;color:var(--muted);font-weight:600}
+
+/* ---------- интерактивный график ---------- */
+.plot{background:var(--panel);border-radius:var(--r-lg);box-shadow:var(--sh-card);padding:16px 16px 12px;position:relative}
+.plot-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:2px 6px 10px;flex-wrap:wrap}
+.plot-head .f{font-size:17px}
+.legend{display:flex;gap:12px;font-size:12.5px;font-weight:700;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.plot svg{width:100%;height:auto;display:block;touch-action:none;cursor:crosshair;border-radius:14px}
+.plot .gl{stroke:var(--grid2);stroke-width:1}
+.plot .ax{stroke:var(--muted);stroke-width:1.4}
+.plot .tk{fill:var(--muted);font:600 10px var(--mono)}
+.plot .curve{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.plot .draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.8s cubic-bezier(.4,.1,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.plot .area{fill:var(--c3);opacity:0;animation:fadeA .8s 1.6s forwards}
+@keyframes fadeA{to{opacity:.16}}
+.plot .pt{stroke:var(--panel);stroke-width:2.5}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.readout div{background:var(--bg);border-radius:12px;padding:8px 12px}
+.readout small{display:block;font-size:11.5px;font-weight:700;color:var(--muted)}
+.readout b{font:700 16px var(--mono)}
+.hint{font-size:12.5px;color:var(--muted);text-align:center;margin-top:8px;font-weight:600}
+
+/* ---------- секции ---------- */
+section{padding:64px 0}
+.eyebrow{font-weight:800;font-size:13px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase}
+h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.02em;margin:8px 0 12px;font-weight:800;line-height:1.15}
+.sub{color:var(--muted);font-size:16.5px;max-width:640px;margin:0 0 30px}
+
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tc{background:var(--panel);border-radius:var(--r-lg);box-shadow:var(--sh);padding:16px 18px 18px;cursor:pointer;transition:transform .2s,box-shadow .2s;border:0;text-align:left;opacity:0;transform:translateY(16px)}
+.tc.in{animation:cardIn .5s cubic-bezier(.2,.8,.3,1) forwards}
+.tc:hover{transform:translateY(-4px);box-shadow:var(--sh-card)}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.tc svg{width:100%;height:84px;display:block;margin-bottom:10px;border-radius:12px;background:var(--bg)}
+.tc b{display:block;font-size:15.5px}
+.tc small{color:var(--muted);font-weight:600;font-size:13px}
+.tc .bar{height:8px;border-radius:99px;background:var(--line2);margin-top:12px;overflow:hidden}
+.tc .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--primary),var(--teal));width:0;transition:width 1.2s cubic-bezier(.3,.8,.3,1)}
+
+/* ---------- карточка задачи ---------- */
+.task-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:22px;align-items:start}
+.task{background:var(--panel);border-radius:var(--r-lg);box-shadow:var(--sh-card);padding:26px 28px;position:relative;overflow:hidden}
+.task .g{position:absolute;top:0;left:28px;right:28px;height:5px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,var(--c1),var(--c3))}
+.task-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{background:var(--primary-soft);color:var(--link);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:800}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--mid-soft);color:var(--mid)}
+.q{font-size:17px;line-height:1.6;margin:0 0 16px}
+.ans{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ans input{font:700 16px var(--mono);border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:14px;padding:10px 14px;width:150px}
+.ans input:focus{border-color:var(--primary);outline:none}
+.ans input.ok{border-color:var(--good);background:var(--good-soft)}
+.ans input.no{border-color:var(--bad);background:var(--bad-soft);animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.steps{margin:18px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 50px;border-radius:14px;background:var(--bg);margin-top:8px;display:none}
+.steps li.show{display:block;animation:cardIn .35s cubic-bezier(.2,.8,.3,1)}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:11px;width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;font:800 13px var(--mono);display:flex;align-items:center;justify-content:center}
+.steps li small{display:block;color:var(--muted);font-weight:600;margin-top:4px;font-size:13px}
+.side{display:flex;flex-direction:column;gap:14px}
+.mini{background:var(--panel);border-radius:var(--r-lg);box-shadow:var(--sh);padding:18px 20px}
+.mini h3{margin:0 0 10px;font-size:15px}
+.grade{display:grid;grid-template-columns:auto 1fr auto;gap:6px 12px;align-items:center;font-size:13.5px}
+.grade .gb{height:10px;border-radius:99px;background:var(--line2);overflow:hidden}
+.grade .gb i{display:block;height:100%;border-radius:99px}
+.grade b{font-family:var(--mono)}
+.timer{display:flex;align-items:center;gap:16px}
+.timer svg{flex:none}
+.timer b{font:700 28px var(--mono);letter-spacing:-.02em}
+
+/* ---------- карточка термина ---------- */
+.flash{perspective:1400px}
+.fcard{background:var(--panel);border-radius:var(--r-lg);box-shadow:var(--sh-card);min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;cursor:pointer;user-select:none;position:relative}
+.fcard .fw{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.fcard .fs{color:var(--muted);font-weight:600;margin-top:8px}
+.fcard.flip{animation:flip .42s cubic-bezier(.3,.7,.3,1)}
+@keyframes flip{from{transform:rotateX(-90deg);opacity:.4}to{transform:none;opacity:1}}
+
+/* ---------- футер-лента формул ---------- */
+.marq{overflow:hidden;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--panel);padding:16px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq-t{display:flex;gap:56px;width:max-content;animation:marq 40s linear infinite;color:var(--muted);font-size:18px}
+@keyframes marq{to{transform:translateX(-50%)}}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 50px}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:12px 20px;border-radius:18px;box-shadow:var(--sh-card);font-weight:700;z-index:70;animation:toastIn .4s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,20px) scale(.9)}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:80;width:100vw;height:100vh}
+
+@media (max-width:900px){
+  .ld-hero,.task-grid{grid-template-columns:1fr}
+  .ld-hero{padding-top:36px}
+}
+@media (max-width:640px){
+  .top{height:58px;padding:0 10px}
+  .logo .lg-s{display:none}
+  .page{padding:0 16px}
+  .nums{gap:22px}
+  .task{padding:22px 18px}
+  .readout b{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <button class="logo" aria-label="EPMathe, на главную">
+    <svg viewBox="0 0 34 34" width="32" height="32" aria-hidden="true">
+      <rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/>
+      <path class="lg-d" d="M8.5 21.5V8.5l6.5 7.5 6.5-7.5v13" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <g class="lg-b"><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel)" stroke-width="2.5"/>
+      <path d="M23.8 26.5h5.4M26.5 23.8v5.4" fill="none" stroke="#1E2A44" stroke-width="2.2" stroke-linecap="round"/></g>
+    </svg>
+    <span>EP<b>Mathe</b></span><small class="lg-s" lang="de">Formeln</small>
+  </button>
+  <div class="tright">
+    <span class="streak">🔥 <b class="num">7</b></span>
+    <button class="ib" id="themeBtn" aria-label="Сменить тему" title="Сменить тему">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <a class="btn primary" href="#start">Войти</a>
+  </div>
+</header>
+
+<div class="hero-wrap paper">
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="page">
+    <div class="ld-hero">
+      <div>
+        <span class="ld-badge"><i></i>Сейчас полностью бесплатно</span>
+        <h1>Сдай <em>Mathematik</em> на EPM и поступи в австрийский вуз</h1>
+        <p class="lead">EPMathe — онлайн-платформа для подготовки к Ergänzungsprüfung Mathematik: все темы экзамена, задачи с пошаговым решением, немецкие термины и пробный экзамен на 180 минут.</p>
+        <div class="cta">
+          <a class="btn primary big glow" href="#start">Начать бесплатно</a>
+          <a class="btn big" href="#task">Решить задачу</a>
+        </div>
+        <div class="nums">
+          <div><b data-count="14">0</b><span>тем экзамена</span></div>
+          <div><b data-count="600" data-plus>0</b><span>задач с решением</span></div>
+          <div><b data-count="180">0</b><span>минут пробного экзамена</span></div>
+        </div>
+      </div>
+
+      <div class="plot" id="plot">
+        <div class="plot-head">
+          <span class="f" data-tex="f(x)=\tfrac{x^3}{6}-x"></span>
+          <div class="legend">
+            <span><i style="background:var(--c1)"></i>f</span>
+            <span><i style="background:var(--c2)"></i>Tangente</span>
+            <span><i style="background:var(--c3)"></i>∫ Fläche</span>
+          </div>
+        </div>
+        <svg viewBox="0 0 480 340" id="plotSvg" role="img" aria-label="График функции f(x)=x³/6−x с касательной"></svg>
+        <div class="readout">
+          <div><small>x</small><b class="num" id="rx">1.00</b></div>
+          <div><small>f(x)</small><b class="num" id="ry">−0.83</b></div>
+          <div><small>f′(x) · Steigung</small><b class="num" id="rk">−0.50</b></div>
+        </div>
+        <div class="hint">Проведи мышкой или пальцем по графику — касательная поедет за тобой</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div class="marq-t" id="marq"></div></div>
+
+<main class="page">
+  <section id="start">
+    <div class="eyebrow">14 тем экзамена</div>
+    <h2>Весь Stoff EPM — по темам, с графиками</h2>
+    <p class="sub">Каждая тема — теория коротко, формулы из Formelsammlung, немецкие термины и задачи в стиле VWU. Полоска показывает твой прогресс.</p>
+    <div class="topics" id="topics"></div>
+  </section>
+
+  <section id="task">
+    <div class="eyebrow">Так выглядит задача</div>
+    <h2>Решай с ходом решения — как на экзамене</h2>
+    <p class="sub">На EPM ответ без Lösungsweg не засчитывают. Поэтому каждое решение раскладываем по шагам.</p>
+    <div class="task-grid">
+      <div class="task">
+        <div class="g"></div>
+        <div class="task-top"><span class="tag">Integralrechnung</span><span class="tag t">Teil 2</span><span class="tag o">★★☆</span></div>
+        <p class="q">Berechne den Inhalt der Fläche, die der Graph von <span data-tex="f(x)=-x^2+4x"></span> mit der <span lang="de">x-Achse</span> einschließt.</p>
+        <div class="ans">
+          <span data-tex="A="></span>
+          <input id="ansIn" inputmode="decimal" placeholder="твой ответ" aria-label="Ответ" autocomplete="off">
+          <button class="btn primary" id="chk">Проверить</button>
+          <button class="btn" id="stepBtn">Показать шаг</button>
+        </div>
+        <ol class="steps" id="steps">
+          <li><span data-tex="-x^2+4x=0\;\Rightarrow\;x(4-x)=0\;\Rightarrow\;x_1=0,\;x_2=4"></span><small>Nullstellen — это границы интегрирования</small></li>
+          <li><span data-tex="F(x)=-\tfrac{x^3}{3}+2x^2"></span><small>Stammfunktion: степень +1, делим на новую степень</small></li>
+          <li><span data-tex="A=\int_0^4(-x^2+4x)\,dx=F(4)-F(0)"></span><small>Hauptsatz der Differential- und Integralrechnung</small></li>
+          <li><span data-tex="A=-\tfrac{64}{3}+32=\tfrac{32}{3}\approx 10{,}67\ \text{FE}"></span><small>Ответ в Flächeneinheiten (FE)</small></li>
+        </ol>
+      </div>
+      <div class="side">
+        <div class="mini">
+          <h3>Оценка на письменном EPM</h3>
+          <div class="grade" id="grade"></div>
+          <p class="muted" style="font-size:12.5px;margin:10px 0 0">В каждом из двух разделов — минимум 50 %.</p>
+        </div>
+        <div class="mini">
+          <h3>Пробный экзамен</h3>
+          <div class="timer">
+            <svg width="64" height="64" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--line2)" stroke-width="4"/><circle id="tArc" cx="18" cy="18" r="15" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="0" transform="rotate(-90 18 18)"/></svg>
+            <div><b id="tLeft">180:00</b><div class="muted" style="font-size:13px;font-weight:600">Teil 1 + Teil 2 · TI-30XIIS</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Fachbegriffe</div>
+    <h2>Немецкие термины — карточками</h2>
+    <p class="sub">Нажми на карточку, чтобы перевернуть. Умные повторения вернут термин, когда он начнёт забываться.</p>
+    <div class="flash" style="max-width:520px"><div class="fcard" id="fcard" tabindex="0" role="button" aria-label="Перевернуть карточку"></div></div>
+    <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+      <button class="chip" id="fcNo">Ещё учу</button>
+      <button class="chip" aria-pressed="true" id="fcYes">Знаю ✓</button>
+    </div>
+  </section>
+</main>
+
+<footer>EPMathe · демо дизайна · Ergänzungsprüfung Mathematik (VWU Wien)</footer>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script>
+const $=s=>document.querySelector(s), css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- тема ---------- */
+$('#themeBtn').onclick=()=>{
+  const r=document.documentElement, dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme=dark?'light':'dark'; drawPlot(); drawTopics();
+};
+
+/* ---------- KaTeX ---------- */
+function tex(){ if(!window.katex) return setTimeout(tex,60);
+  document.querySelectorAll('[data-tex]').forEach(e=>katex.render(e.dataset.tex,e,{throwOnError:false}));
+  const f=['\\int_a^b f(x)\\,dx=F(b)-F(a)','e^{i\\pi}+1=0','\\sin^2\\alpha+\\cos^2\\alpha=1',"(u\\cdot v)'=u'v+uv'",'x_{1,2}=\\tfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}','\\log_a(xy)=\\log_a x+\\log_a y','N(t)=N_0\\cdot e^{\\lambda t}','s_n=\\tfrac{n}{2}(a_1+a_n)','\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\varphi','P(A\\cup B)=P(A)+P(B)-P(A\\cap B)','V=\\pi\\int_a^b f(x)^2\\,dx','\\lim_{x\\to 0}\\tfrac{\\sin x}{x}=1'];
+  const m=$('#marq'); m.innerHTML=''; [...f,...f].forEach(t=>{const s=document.createElement('span');katex.render(t,s,{throwOnError:false});m.appendChild(s)});
+}
+tex();
+
+/* ---------- падающие символы ---------- */
+(function rain(){
+  const c=$('#rain'), x=c.getContext('2d'), S=['∫','∑','π','√','∞','Δ','∂','θ','λ','φ','e','x²','dx','f(x)','sin','cos','log','lim','≈','≠','≤','±','∈','0','1','2','3','5','7','9','n!','a²+b²','dy/dx','∇','α','β'];
+  let W,H,drops=[];
+  const fit=()=>{const d=devicePixelRatio||1;W=c.offsetWidth;H=c.offsetHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+    drops=Array.from({length:Math.round(W*H/9000)},()=>mk(Math.random()*H))};
+  const mk=y=>({x:Math.random()*W,y:y??-30,v:.25+Math.random()*.7,s:12+Math.random()*16,t:S[Math.random()*S.length|0],a:.14+Math.random()*.3,r:(Math.random()-.5)*.4,w:(Math.random()-.5)*.004});
+  addEventListener('resize',fit); fit();
+  function f(){ x.clearRect(0,0,W,H); const col=css('--primary'), col2=css('--teal');
+    drops.forEach((d,i)=>{ d.y+=d.v; d.r+=d.w; if(d.y>H+30) drops[i]=mk();
+      x.save(); x.translate(d.x,d.y); x.rotate(d.r); x.globalAlpha=d.a; x.fillStyle=i%4?col:col2;
+      x.font=`${i%3?600:500} ${d.s}px ${i%3?'"JetBrains Mono",monospace':'Georgia,serif'}`; x.fillText(d.t,0,0); x.restore(); });
+    if(!reduce) requestAnimationFrame(f); }
+  f();
+})();
+
+/* ---------- счётчики ---------- */
+function countUp(){ document.querySelectorAll('[data-count]').forEach(e=>{const n=+e.dataset.count,p=e.dataset.plus!==undefined?'+':'',t0=performance.now();
+  (function s(t){const k=Math.min(1,(t-t0)/1400),v=Math.round(n*(1-Math.pow(1-k,3)));e.textContent=v+(k===1?p:'');if(k<1)requestAnimationFrame(s)})(t0)})}
+countUp();
+
+/* ---------- интерактивный график ---------- */
+const X0=-4,X1=4,Y0=-3,Y1=3,PW=480,PH=340;
+const sx=x=>(x-X0)/(X1-X0)*PW, sy=y=>PH-(y-Y0)/(Y1-Y0)*PH, ix=px=>X0+px/PW*(X1-X0);
+const F=x=>x*x*x/6-x, dF=x=>x*x/2-1, fmt=v=>(v<0?'−':'')+Math.abs(v).toFixed(2);
+let cur=1, drawn=false;
+function drawPlot(){
+  const s=$('#plotSvg'); let h='';
+  for(let i=X0;i<=X1;i+=.5) h+=`<line class="gl" x1="${sx(i)}" x2="${sx(i)}" y1="0" y2="${PH}" opacity="${i%1?.45:1}"/>`;
+  for(let j=Y0;j<=Y1;j+=.5) h+=`<line class="gl" y1="${sy(j)}" y2="${sy(j)}" x1="0" x2="${PW}" opacity="${j%1?.45:1}"/>`;
+  h+=`<line class="ax" x1="0" x2="${PW}" y1="${sy(0)}" y2="${sy(0)}"/><line class="ax" y1="0" y2="${PH}" x1="${sx(0)}" x2="${sx(0)}"/>`;
+  for(let i=X0+1;i<X1;i++) if(i) h+=`<text class="tk" x="${sx(i)}" y="${sy(0)+14}" text-anchor="middle">${i}</text>`;
+  for(let j=Y0+1;j<Y1;j++) if(j) h+=`<text class="tk" x="${sx(0)-7}" y="${sy(j)+3.5}" text-anchor="end">${j}</text>`;
+  // площадь между f и осью на [0, √6]
+  let a=`M${sx(0)} ${sy(0)}`; const r6=Math.sqrt(6);
+  for(let x=0;x<=r6;x+=.05) a+=` L${sx(x)} ${sy(F(x))}`; a+=` L${sx(r6)} ${sy(0)}Z`;
+  h+=`<path class="area" d="${a}"/>`;
+  let p=''; for(let x=X0;x<=X1+1e-9;x+=.04){const y=F(x); p+=(p?' L':'M')+sx(x).toFixed(1)+' '+sy(Math.max(Y0-1,Math.min(Y1+1,y))).toFixed(1)}
+  h+=`<path id="fc" class="curve${drawn?'':' draw'}" d="${p}" style="stroke:var(--c1)"/>`;
+  h+=`<line id="tan" stroke="var(--c2)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="7 6"/>`;
+  h+=`<line id="vl" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4"/>`;
+  // экстремумы
+  [[-Math.SQRT2,'Hochpunkt'],[Math.SQRT2,'Tiefpunkt']].forEach(([x,n])=>h+=`<circle class="pt" cx="${sx(x)}" cy="${sy(F(x))}" r="5.5" fill="var(--c4)"/><text class="tk" x="${sx(x)}" y="${sy(F(x))+(x<0?-12:20)}" text-anchor="middle" style="fill:var(--c4);font-weight:700">${n}</text>`);
+  h+=`<circle id="dot" class="pt" r="7" fill="var(--c2)"/>`;
+  s.innerHTML=h;
+  const c=$('#fc'); if(!drawn){c.style.setProperty('--len',c.getTotalLength()); drawn=true}
+  setX(cur);
+}
+function setX(x){ cur=x; const y=F(x),k=dF(x),L=1.6;
+  const t=$('#tan'); t.setAttribute('x1',sx(x-L));t.setAttribute('y1',sy(y-k*L));t.setAttribute('x2',sx(x+L));t.setAttribute('y2',sy(y+k*L));
+  const v=$('#vl'); v.setAttribute('x1',sx(x));v.setAttribute('x2',sx(x));v.setAttribute('y1',sy(0));v.setAttribute('y2',sy(y));
+  const d=$('#dot'); d.setAttribute('cx',sx(x)); d.setAttribute('cy',sy(y));
+  $('#rx').textContent=fmt(x); $('#ry').textContent=fmt(y); $('#rk').textContent=fmt(k);
+  $('#rk').style.color=Math.abs(k)<.06?'var(--c4)':k>0?'var(--good)':'var(--bad)';
+}
+drawPlot();
+const ps=$('#plotSvg'); let auto=true;
+const mv=e=>{auto=false;const r=ps.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*PW;setX(Math.max(-3.4,Math.min(3.4,ix(px))))};
+ps.addEventListener('pointermove',mv); ps.addEventListener('pointerdown',mv);
+ps.addEventListener('pointerleave',()=>auto=true);
+if(!reduce){let t=0;(function a(){if(auto){t+=.008;setX(Math.sin(t)*3)}requestAnimationFrame(a)})()}
+
+/* ---------- темы с мини-графиками ---------- */
+const TOP=[
+ ['Funktionen & Parabeln','Nullstellen, Scheitel',x=>.5*x*x-1.5,'c1',72],
+ ['Exponentialfunktionen','Wachstum & Zerfall',x=>Math.exp(.6*x)-1.8,'c3',55],
+ ['Logarithmus','Gleichungen lösen',x=>x>-2.95?Math.log(x+3)-1:NaN,'c4',40],
+ ['Trigonometrie','sin, cos, tan',x=>1.5*Math.sin(1.6*x),'c2',64],
+ ['Folgen & Reihen','arithmetisch, geometrisch','seq','c1',30],
+ ['Differentialrechnung','Ableitungsregeln',x=>x*x*x/6-x,'c5',48],
+ ['Kurvendiskussion','Extrema, Wendepunkte',x=>.12*x*x*x*x-.9*x*x+.3,'c4',35],
+ ['Integralrechnung','Flächen, Stammfunktion','area','c3',22],
+ ['Rotationsvolumen','V = π∫f² dx','rot','c1',10],
+ ['Wirtschaft','Kosten, Erlös, Gewinn','eco','c2',18],
+ ['Vektoren','Geraden, Skalarprodukt','vec','c5',26],
+ ['Wahrscheinlichkeit','Baumdiagramm, Binomial',x=>2.6*Math.exp(-x*x/1.3)-1.8,'c3',15],
+];
+function mini(kind,fn,col){
+  const W=240,H=84,X=v=>(v+3)/6*W,Y=v=>H/2-v*H/6.4;
+  let g='';for(let i=1;i<6;i++)g+=`<line x1="${i*W/6}" x2="${i*W/6}" y1="0" y2="${H}" stroke="var(--grid2)"/>`;for(let j=1;j<4;j++)g+=`<line y1="${j*H/4}" y2="${j*H/4}" x1="0" x2="${W}" stroke="var(--grid2)"/>`;
+  g+=`<line x1="0" x2="${W}" y1="${H/2}" y2="${H/2}" stroke="var(--muted)" opacity=".5"/>`;
+  const c=`var(--${col})`;
+  if(kind==='seq'){for(let i=0;i<9;i++){const v=-2.4+i*.55;g+=`<rect x="${14+i*25}" y="${Math.min(Y(v),H/2)}" width="14" height="${Math.abs(Y(v)-H/2)}" rx="4" fill="${c}" opacity="${.35+i*.07}"/>`}return g}
+  if(kind==='vec'){[[[-2.5,-2],[1.5,2.2]],[[-2.5,-2],[2.5,-.6]],[[1.5,2.2],[2.5,-.6]]].forEach(([a,b],i)=>g+=`<line x1="${X(a[0])}" y1="${Y(a[1])}" x2="${X(b[0])}" y2="${Y(b[1])}" stroke="${i==2?'var(--muted)':c}" stroke-width="3" stroke-linecap="round" ${i==2?'stroke-dasharray="4 4"':''}/>`);
+    g+=`<circle cx="${X(-2.5)}" cy="${Y(-2)}" r="4" fill="${c}"/>`;return g}
+  if(kind==='eco'){let a='',b='';for(let x=-3;x<=3;x+=.1){a+=(a?'L':'M')+X(x)+' '+Y(.9*x);b+=(b?'L':'M')+X(x)+' '+Y(.06*x*x*x+.25*x+.6)}
+    return g+`<path d="${b}" fill="none" stroke="var(--c5)" stroke-width="3"/><path d="${a}" fill="none" stroke="${c}" stroke-width="3"/>`}
+  const f=kind==='area'?(x=>1.8-.35*x*x):kind==='rot'?(x=>.9+.25*x):fn;
+  let p='';for(let x=-3;x<=3;x+=.05){const y=f(x);if(isNaN(y))continue;p+=(p?'L':'M')+X(x).toFixed(1)+' '+Y(y).toFixed(1)}
+  if(kind==='area'){let a=`M${X(-2.27)} ${H/2}`;for(let x=-2.27;x<=2.27;x+=.05)a+=`L${X(x)} ${Y(f(x))}`;g+=`<path d="${a}L${X(2.27)} ${H/2}Z" fill="${c}" opacity=".22"/>`}
+  if(kind==='rot'){let a='';for(let x=-2.5;x<=2.5;x+=.05)a+=(a?'L':'M')+X(x)+' '+Y(-f(x));g+=`<path d="${a}" fill="none" stroke="${c}" stroke-width="2" opacity=".5"/>`;
+    for(let x=-2;x<=2.1;x+=1)g+=`<ellipse cx="${X(x)}" cy="${H/2}" rx="5" ry="${Math.abs(Y(f(x))-H/2)}" fill="none" stroke="${c}" opacity=".45"/>`}
+  return g+`<path d="${p}" fill="none" stroke="${c}" stroke-width="3" stroke-linecap="round"/>`;
+}
+function drawTopics(){
+  $('#topics').innerHTML=TOP.map(([n,s,f,c,pr],i)=>`<button class="tc" style="animation-delay:${i*60}ms"><svg viewBox="0 0 240 84" preserveAspectRatio="none">${mini(typeof f==='string'?f:'fn',f,c)}</svg><b lang="de">${n}</b><small lang="de">${s}</small><div class="bar"><i data-w="${pr}"></i></div></button>`).join('');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const b=e.target.querySelector('.bar i');setTimeout(()=>b.style.width=b.dataset.w+'%',300);io.unobserve(e.target)}}),{threshold:.2});
+  document.querySelectorAll('.tc').forEach(t=>io.observe(t));
+}
+drawTopics();
+
+/* ---------- задача ---------- */
+let step=0;
+$('#stepBtn').onclick=()=>{const l=document.querySelectorAll('#steps li');if(step<l.length)l[step++].classList.add('show');if(step===l.length)$('#stepBtn').disabled=true};
+$('#chk').onclick=check; $('#ansIn').addEventListener('keydown',e=>e.key==='Enter'&&check());
+function check(){ const i=$('#ansIn'), raw=i.value.trim().replace(',','.').replace(/\s/g,'');
+  let v=NaN; const m=raw.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/); v=m?m[1]/m[2]:parseFloat(raw);
+  i.classList.remove('ok','no'); void i.offsetWidth;
+  if(Math.abs(v-32/3)<.02){i.classList.add('ok');toast('Richtig! A = 32/3 FE  +10 XP');confetti();document.querySelectorAll('#steps li').forEach(l=>l.classList.add('show'))}
+  else{i.classList.add('no');toast('Noch nicht — открой первый шаг')}
+}
+function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2600)}
+
+/* ---------- шкала оценок ---------- */
+$('#grade').innerHTML=[['1','Sehr gut',87.5,'var(--good)'],['2','Gut',75,'var(--c1)'],['3','Befriedigend',62.5,'var(--c4)'],['4','Genügend',50,'var(--mid)'],['5','Nicht genügend',0,'var(--bad)']]
+ .map(([n,t,p,c])=>`<span style="font-weight:800">${n} · <span lang="de">${t}</span></span><span class="gb"><i style="width:${p||8}%;background:${c}"></i></span><b>${p?'≥ '+String(p).replace('.',','):'< 50'} %</b>`).join('');
+
+/* ---------- таймер ---------- */
+let left=180*60;setInterval(()=>{left=left>0?left-1:180*60;const m=Math.floor(left/60),s=left%60;$('#tLeft').textContent=`${m}:${String(s).padStart(2,'0')}`;$('#tArc').setAttribute('stroke-dashoffset',94.25*(1-left/10800))},1000);
+
+/* ---------- карточки терминов ---------- */
+const FC=[['die Ableitung','производная','f′(x)'],['die Nullstelle','ноль функции','f(x)=0'],['die Stammfunktion','первообразная','F′(x)=f(x)'],['der Wendepunkt','точка перегиба','f″(x)=0'],['die Steigung','угловой коэффициент','k'],['der Scheitelpunkt','вершина параболы','S(x_s|y_s)']];
+let fi=0,back=false;
+function showFc(){const [de,ru,sym]=FC[fi],c=$('#fcard');c.classList.remove('flip');void c.offsetWidth;c.classList.add('flip');
+  c.innerHTML=back?`<div class="fw">${ru}</div><div class="fs num">${sym}</div>`:`<div class="fw" lang="de">${de}</div><div class="fs">нажми, чтобы увидеть перевод</div>`}
+$('#fcard').onclick=()=>{back=!back;showFc()}; $('#fcard').onkeydown=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();back=!back;showFc()}};
+$('#fcYes').onclick=$('#fcNo').onclick=()=>{fi=(fi+1)%FC.length;back=false;showFc()};
+showFc();
+
+/* ---------- конфетти из символов ---------- */
+function confetti(){ if(reduce) return; const c=$('#confetti'),x=c.getContext('2d'),d=devicePixelRatio||1;c.width=innerWidth*d;c.height=innerHeight*d;x.setTransform(d,0,0,d,0,0);
+  const cols=['--c1','--c2','--c3','--c4','--c5'].map(css),S=['π','∑','∫','√','∞','+','=','1','2','3'];
+  const P=Array.from({length:90},()=>({x:innerWidth/2,y:innerHeight*.55,vx:(Math.random()-.5)*14,vy:-Math.random()*14-5,r:Math.random()*6,s:S[Math.random()*S.length|0],c:cols[Math.random()*5|0],z:14+Math.random()*12}));
+  let n=0;(function f(){x.clearRect(0,0,innerWidth,innerHeight);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.4;p.r+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.font=`800 ${p.z}px Manrope`;x.fillText(p.s,0,0);x.restore()});if(++n<120)requestAnimationFrame(f);else x.clearRect(0,0,innerWidth,innerHeight)})()}
+</script>
+</body>
+</html>

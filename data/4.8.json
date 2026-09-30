@@ -1,0 +1,655 @@
+{
+ "id": "4.8",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Medien",
+ "titleRu": "СМИ и медиа",
+ "pages": "205–210",
+ "exercises": "211–215",
+ "solutions": "269–270",
+ "bookRows": 71,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Медиа и информация",
+   "items": [
+    {
+     "de": "das Medium, Medien",
+     "ru": "средство (массовой) информации",
+     "ex": "Mithilfe verschiedener [[Medien]] können Lehrer und Professoren den Lernstoff interessant und abwechslungsreich vermitteln.",
+     "note": "мн. ч. die Medien",
+     "g": "n"
+    },
+    {
+     "de": "medial",
+     "ru": "медийный",
+     "ex": "Prominente klagen häufig über das große [[mediale]] Interesse an ihrer Person und den daraus resultierenden Mangel an Privatsphäre.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "audiovisuelle Medien",
+     "ru": "аудиовизуальные СМИ",
+     "ex": "[[Audiovisuelle Medien]] haben den Vorteil, dass man Informationen gleichzeitig durch Sehen und Hören aufnehmen kann.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Medien nutzen · die Nutzung von Medien",
+     "ru": "пользоваться медиа",
+     "ex": "Nach Angaben des Statistischen Bundesamtes [[nutzen]] die Deutschen pro Tag mehr als 7 Stunden lang audiovisuelle [[Medien]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "mit Medien umgehen* · der Umgang mit Medien",
+     "ru": "обращаться с медиа",
+     "ex": "Die meisten Eltern finden es wichtig, dass ihre Kinder lernen, verantwortungsvoll [[mit Medien umzugehen]].",
+     "note": "ging um – ist umgegangen",
+     "g": "v"
+    },
+    {
+     "de": "der Medienkonsum",
+     "ru": "потребление медиа",
+     "ex": "Psychologen befürchten, dass exzessiver [[Medienkonsum]] zu sozialer Isolation führen kann.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Presse",
+     "ru": "пресса",
+     "ex": "Niemand weiß, wer die streng geheimen Informationen an die [[Presse]] weitergegeben hat.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pressefreiheit",
+     "ru": "свобода прессы",
+     "ex": "Auf der Straße haben sich Tausende Menschen versammelt, die gegen die Einschränkung der [[Pressefreiheit]] demonstrieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "berichten über + A",
+     "ru": "сообщать о чём-то",
+     "ex": "Die Journalistin [[berichtet über]] die zurzeit stattfindende Weltklimakonferenz.",
+     "note": "über + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "der Bericht",
+     "ru": "репортаж, доклад",
+     "ex": "",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Пресса и информационный поток",
+   "items": [
+    {
+     "de": "etw. abonnieren · das Abonnement",
+     "ru": "подписаться · подписка",
+     "ex": "Es ist günstiger, eine Zeitung zu [[abonnieren]], als sie jeden Tag am Kiosk zu kaufen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "auf dem Laufenden sein* / bleiben*",
+     "ru": "быть в курсе событий",
+     "ex": "Wenn man einen Newsletter abonniert, erhält man regelmäßig aktuelle Informationen und bleibt so [[auf dem Laufenden]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Informationen verarbeiten · die Informationsverarbeitung",
+     "ru": "обрабатывать информацию",
+     "ex": "Wissenschaftler weisen darauf hin, dass wir gar nicht alle [[Informationen verarbeiten]] können, die wir erhalten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Informationsflut",
+     "ru": "информационный поток",
+     "ex": "Die [[Informationsflut]], der wir täglich ausgesetzt sind, löst bei vielen Menschen Stress aus.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Zeitschrift, -schriften",
+     "ru": "журнал",
+     "ex": "Der junge Wissenschaftler hat bereits mehrere Artikel in renommierten Fach[[zeitschriften]] veröffentlicht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Auflage, Auflagen",
+     "ru": "тираж",
+     "ex": "Da immer weniger Menschen Tageszeitungen kaufen, sinkt die [[Auflage]] kontinuierlich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. drucken · der Druck",
+     "ru": "печатать · печать",
+     "ex": "Im Gegensatz zu Zeitungen werden Zeitschriften meist farbig [[gedruckt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. nachschlagen*",
+     "ru": "посмотреть в справочнике",
+     "ex": "Es ist nicht notwendig, jedes unbekannte Wort im Wörterbuch [[nachzuschlagen]], um einen Text zu verstehen.",
+     "note": "schlug nach – hat nachgeschlagen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Радио и ТВ: каналы и передачи",
+   "items": [
+    {
+     "de": "der Rundfunk",
+     "ru": "радиовещание, телерадиовещание",
+     "ex": "Der Bayerische [[Rundfunk]] informiert die Bürger über Ereignisse in der Welt und ihrer Region.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Sender, Sender",
+     "ru": "канал, радиостанция",
+     "ex": "Heutzutage gibt es eine Reihe von Fernseh[[sendern]], die sich auf bestimmte Themen spezialisiert haben, z. B. auf Sportsendungen oder auf Dokumentationen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der öffentlich-rechtliche Sender",
+     "ru": "общественный канал",
+     "ex": "Die [[öffentlich-rechtlichen Sender]] sind unabhängig von kommerziellen oder staatlichen Interessen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Privatsender",
+     "ru": "частный канал",
+     "ex": "[[Privatsender]] finanzieren ihr Programmangebot durch Werbung.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Sendung, Sendungen",
+     "ru": "передача",
+     "ex": "Die meisten Eltern achten darauf, dass ihre Kinder im Fernsehen nur solche [[Sendungen]] sehen, die für junge Zuschauer geeignet sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "handeln von + D · die Handlung",
+     "ru": "рассказывать о · сюжет",
+     "ex": "Der Film [[handelt von]] einer jungen Frau, die versucht, sich von ihrer Alkoholsucht zu befreien.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nachrichten (Plural)",
+     "ru": "новости",
+     "ex": "Ein großer Teil der Bevölkerung informiert sich durch die [[Nachrichten]] über das aktuelle Tagesgeschehen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Serie, Serien",
+     "ru": "сериал",
+     "ex": "Erfolgreiche [[Serien]] laufen oft jahrelang im Fernsehen, ohne dass das Interesse der Zuschauer nachlässt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Folge, Folgen",
+     "ru": "серия, эпизод",
+     "ex": "Wer eine Serie regelmäßig im Fernsehen verfolgt, möchte keine [[Folge]] verpassen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. fortsetzen · die Fortsetzung",
+     "ru": "продолжать · продолжение",
+     "ex": "Oft endet eine Folge an einer besonders spannenden Stelle, damit viele Menschen den Fernseher einschalten, wenn die Serie am nächsten Tag [[fortgesetzt]] wird.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Жанры",
+   "items": [
+    {
+     "de": "die Seifenoper, -opern",
+     "ru": "мыльная опера",
+     "ex": "In [[Seifenopern]] stehen die Beziehungen, Liebesgeschichten und Probleme bestimmter Personen im Mittelpunkt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Dokumentation, Dokumentationen",
+     "ru": "документальный фильм",
+     "ex": "Gestern lief im Fernsehen eine interessante [[Dokumentation]] über die so genannten „Trümmerfrauen“, die Deutschland nach dem Zweiten Weltkrieg wieder aufgebaut haben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Doku-Soap, -Soaps",
+     "ru": "докусоп, реалити-сериал",
+     "ex": "In [[Doku-Soaps]] wird eine Handlung so dargestellt, dass der Zuschauer glaubt, eine reale Situation mitzuerleben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Komödie, Komödien",
+     "ru": "комедия",
+     "ex": "Nach einem anstrengenden Arbeitstag ist eine [[Komödie]] genau das Richtige, um den Stress zu vergessen und sich zu amüsieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Drama, Dramen",
+     "ru": "драма",
+     "ex": "Ein [[Drama]] kann die Zuschauer dazu anregen, über gesellschaftliche Probleme nachzudenken, die in dem Film behandelt werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Krimi, Krimis",
+     "ru": "детектив",
+     "ex": "Manche Familien versammeln sich jeden Sonntagabend vor dem Fernseher, um sich einen [[Krimi]] anzusehen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Schauspieler / die Schauspielerin, Schauspieler",
+     "ru": "актёр",
+     "ex": "Filme, in denen bekannte [[Schauspieler]] auftreten, sind oft auch dann erfolgreich, wenn die Handlung des Films nicht besonders interessant ist.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Смотреть телевизор",
+   "items": [
+    {
+     "de": "im Fernsehen laufen* / im Fernsehen gezeigt werden*",
+     "ru": "идти по телевизору",
+     "ex": "Der Programmzeitschrift kann man entnehmen, welche Sendungen im Laufe der Woche [[im Fernsehen laufen]] / [[gezeigt werden]].",
+     "note": "lief – ist gelaufen",
+     "g": "v"
+    },
+    {
+     "de": "etw. übertragen* · die Übertragung",
+     "ru": "транслировать · трансляция",
+     "ex": "Die Verleihung der Oscars wird im Fernsehen live [[übertragen]].",
+     "note": "überträgt – übertrug – hat übertragen",
+     "g": "v"
+    },
+    {
+     "de": "der Zuschauer, Zuschauer",
+     "ru": "зритель",
+     "ex": "Einige [[Zuschauer]] haben sich über die schlechte Tonqualität des Films beschwert.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich (D) etw. im Fernsehen ansehen*",
+     "ru": "смотреть что-то по телевизору",
+     "ex": "Viele Millionen Menschen weltweit [[sehen sich]] die Übertragung der Fußball-Weltmeisterschaft [[im Fernsehen an]].",
+     "note": "sieht an – sah an – hat angesehen",
+     "g": "v"
+    },
+    {
+     "de": "Zeit vor dem Fernseher verbringen*",
+     "ru": "проводить время у телевизора",
+     "ex": "Studien zufolge [[verbringen]] deutsche Jugendliche täglich mehrere Stunden [[vor dem Fernseher]].",
+     "note": "verbrachte – hat verbracht",
+     "g": "v"
+    },
+    {
+     "de": "zappen",
+     "ru": "переключать каналы",
+     "ex": "Wenn nichts Interessantes im Fernsehen gezeigt wird, [[zappt]] man manchmal einfach nur von einem Sender zum nächsten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "abschalten",
+     "ru": "отключиться, расслабиться",
+     "ex": "Viele Menschen sehen fern, um [[abzuschalten]], also um ihren Alltag und ihre Probleme zu vergessen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich berieseln lassen* · die Berieselung",
+     "ru": "пассивно потреблять (ТВ)",
+     "ex": "Es wird häufig kritisiert, dass man sich beim Fernsehen nur [[berieseln lässt]], statt eigene Ideen zu entwickeln und kreativ zu sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdn. unterhalten* · die Unterhaltung",
+     "ru": "развлекать · развлечение",
+     "ex": "Musiksendungen und Quizshows dienen in erster Linie dazu, die Zuschauer zu [[unterhalten]].",
+     "note": "unterhält – unterhielt – hat unterhalten",
+     "g": "v"
+    },
+    {
+     "de": "unterhaltsam",
+     "ru": "развлекательный, занимательный",
+     "ex": "So genannte „Infotainment-Sendungen“ sollen Wissen verständlich und [[unterhaltsam]] präsentieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "seicht",
+     "ru": "поверхностный, «лёгкий»",
+     "ex": "Manche Menschen geben ungern zu, dass sie sich in ihrer Freizeit [[seichte]] Filme und Serien ansehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "anspruchsvoll",
+     "ru": "интеллектуальный, требовательный",
+     "ex": "[[Anspruchsvolle]] Sendungen sollen nicht unbedingt unterhalten, sondern zur Auseinandersetzung mit dem Thema anregen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "spannend",
+     "ru": "захватывающий",
+     "ex": "Ein guter Krimi ist [[spannend]] bis zum Schluss, so dass man erst am Ende des Films erfährt, wer das Verbrechen begangen hat.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Компьютер и интернет",
+   "items": [
+    {
+     "de": "virtuell",
+     "ru": "виртуальный",
+     "ex": "Mithilfe einer computergenerierten [[virtuellen]] Umgebung lassen sich komplexe Simulationen durchführen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Rechner, Rechner",
+     "ru": "компьютер",
+     "ex": "Stundenlange Arbeit am [[Rechner]] kann zu Verspannungen und Rückenschmerzen führen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "abstürzen · der Absturz",
+     "ru": "зависнуть (о компьютере) · сбой",
+     "ex": "Zu große Hitzeentwicklung kann dazu führen, dass der PC [[abstürzt]].",
+     "note": "ist abgestürzt",
+     "g": "v"
+    },
+    {
+     "de": "das / der Virus, Viren",
+     "ru": "вирус",
+     "ex": "Jeder Besitzer eines PCs sollte ein Programm auf seinem Computer haben, das den Rechner vor [[Viren]] schützt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Internetzugang",
+     "ru": "доступ в интернет",
+     "ex": "Mittlerweile verfügen auch viele ältere Menschen über einen [[Internetzugang]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ins Internet gehen*",
+     "ru": "выходить в интернет",
+     "ex": "Seit es Smartphones gibt, sind wir daran gewöhnt, immer und überall [[ins Internet gehen]] zu können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "im Internet surfen",
+     "ru": "сидеть в интернете",
+     "ex": "Es ist individuell unterschiedlich, welchen Browser man am liebsten verwendet, um [[im Internet zu surfen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "drahtlos = kabellos",
+     "ru": "беспроводной",
+     "ex": "Wenn man eine [[drahtlose]] Internetverbindung hat, kann man bei schönem Wetter auch draußen arbeiten.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Интернет, загрузка и поиск",
+   "items": [
+    {
+     "de": "das WLAN",
+     "ru": "Wi-Fi",
+     "ex": "Dank [[WLAN]] kann man an verschiedenen öffentlichen Orten kabellos im Internet surfen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Internetnutzer, -nutzer",
+     "ru": "пользователь интернета",
+     "ex": "Die Zahl der [[Internetnutzer]] ist in den letzten zehn Jahren kontinuierlich gewachsen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. ins Internet stellen",
+     "ru": "выложить в интернет",
+     "ex": "Man sollte sich gut überlegen, welche privaten Informationen und Fotos man [[ins Internet stellt]] und welche nicht.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. herunterladen* = downloaden · der Download",
+     "ru": "скачивать",
+     "ex": "Verschiedene Dienste bieten die Möglichkeit, Musik oder Filme legal aus dem Internet [[herunterzuladen]].",
+     "note": "lädt herunter – lud herunter – hat heruntergeladen",
+     "g": "v"
+    },
+    {
+     "de": "etw. hochladen* · der Upload",
+     "ru": "загружать (в сеть)",
+     "ex": "Viele Nutzer speichern ihre Fotos nicht mehr auf ihrem eigenen Computer, sondern [[laden]] sie ins Internet [[hoch]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Suchmaschine, -maschinen",
+     "ru": "поисковая система",
+     "ex": "Mithilfe von [[Suchmaschinen]] kann man in kurzer Zeit Informationen zu einem Stichwort oder Themengebiet finden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Файлы, данные, соцсети",
+   "items": [
+    {
+     "de": "die Datei, Dateien",
+     "ru": "файл",
+     "ex": "Um diese [[Datei]] zu öffnen, benötigt man ein spezielles Computerprogramm.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Daten (Plural)",
+     "ru": "данные",
+     "ex": "Wenn der Computer plötzlich abstürzt, können nicht gespeicherte [[Daten]] verloren gehen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Daten eingeben* · die Eingabe von Daten",
+     "ru": "вводить данные",
+     "ex": "Beim Kauf eines Produkts im Internet müssen Sie verschiedene persönliche [[Daten eingeben]], z. B. Ihre Adresse und Ihr Geburtsdatum.",
+     "note": "gibt ein – gab ein – hat eingegeben",
+     "g": "v"
+    },
+    {
+     "de": "Daten löschen · das Löschen von Daten",
+     "ru": "удалять данные",
+     "ex": "Um alle Daten auf einem PC zu vernichten, sollte man die Dateien nicht nur [[löschen]], sondern die Festplatte vollständig überschreiben oder zerstören.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Daten speichern · das Speichern von Daten",
+     "ru": "сохранять данные",
+     "ex": "Viele Textverarbeitungsprogramme [[speichern]] in regelmäßigen Abständen automatisch die eingegebenen [[Daten]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Datenschutz",
+     "ru": "защита данных",
+     "ex": "Da heute viele Geschäfte über das Internet getätigt werden, spielt [[Datenschutz]] eine große Rolle.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Internetforum, Internetforen",
+     "ru": "интернет-форум",
+     "ex": "In [[Internetforen]] können sich die Nutzer über bestimmte Themen austauschen, die sie interessieren.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das soziale Netzwerk, -werke",
+     "ru": "социальная сеть",
+     "ex": "[[Soziale Netzwerke]] sind ein beliebtes Mittel, um mit Freunden und Bekannten weltweit in Kontakt zu bleiben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdn. mobben",
+     "ru": "травить, издеваться",
+     "ex": "Jugendliche [[mobben]] Mitschüler, indem sie beleidigende Kommentare oder kompromittierende Fotos im Internet veröffentlichen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Cyber-Mobbing",
+     "ru": "кибербуллинг",
+     "ex": "[[Cyber-Mobbing]] ist für die Betroffenen psychisch sehr belastend.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: общественное вещание (Infobox)",
+   "items": [
+    {
+     "de": "der öffentlich-rechtliche Rundfunk",
+     "ru": "общественное теле- и радиовещание",
+     "ex": "Ein Hauptmerkmal des [[öffentlich-rechtlichen Rundfunks]] ist, dass diese Sender staatsfern sind.",
+     "note": "ARD, ZDF",
+     "g": "m"
+    },
+    {
+     "de": "kommerzielle Interessen verfolgen",
+     "ru": "преследовать коммерческие интересы",
+     "ex": "Neben den Privatsendern, die [[kommerzielle Interessen verfolgen]] …",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "staatsfern",
+     "ru": "независимый от государства",
+     "ex": "Ein Hauptmerkmal des öffentlich-rechtlichen Rundfunks ist, dass diese Sender [[staatsfern]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Verbreitung",
+     "ru": "распространение",
+     "ex": "… als der Staat die Medien zur [[Verbreitung]] seiner politischen Propaganda benutzte.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gremium, Gremien",
+     "ru": "комиссия, совет",
+     "ex": "Aus diesem Grund bestehen die [[Gremien]], die die Sender leiten, aus Vertretern unterschiedlicher gesellschaftlicher Gruppen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Rundfunkbeitrag",
+     "ru": "взнос за теле- и радиовещание",
+     "ex": "Nun muss jeder private Haushalt in Deutschland einen [[Rundfunkbeitrag]] in Höhe von 17,98 Euro pro Monat bezahlen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "von etw. befreit werden",
+     "ru": "быть освобождённым от чего-то",
+     "ex": "Aus bestimmten Gründen kann man von dem Beitrag [[befreit werden]].",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "handeln von + D ↔ handeln mit + D",
+   "v": "Der Film handelt von einer Frau (рассказывает о); mit Waren handeln (торговать)"
+  },
+  {
+   "k": "berichten über + A",
+   "v": "Die Presse berichtet über den Prozess (über + Akk.)"
+  },
+  {
+   "k": "auf dem Laufenden sein / bleiben",
+   "v": "Устойчивое выражение: jdn. auf dem Laufenden halten — держать в курсе"
+  },
+  {
+   "k": "Английские глаголы",
+   "v": "Правильные: posten → hat gepostet, googeln → hat gegoogelt, downloaden → hat downgeloadet"
+  },
+  {
+   "k": "Род англицизмов",
+   "v": "Часто по немецкому аналогу: die Cloud (die Wolke), der Link / das Link, die / das E-Mail"
+  },
+  {
+   "k": "die Folge",
+   "v": "1) серия сериала, 2) последствие (die Folgen des Klimawandels)"
+  },
+  {
+   "k": "herunterladen / hochladen",
+   "v": "Отделяемые: lädt herunter, hat hochgeladen"
+  },
+  {
+   "k": "das Medium → die Medien",
+   "v": "Латинское мн. ч."
+  }
+ ]
+}

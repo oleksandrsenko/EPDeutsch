@@ -1,0 +1,697 @@
+{
+ "id": "4.4",
+ "chapter": 4,
+ "chapterName": "Die Welt der Menschen",
+ "title": "Verkehr",
+ "titleRu": "Транспорт и дорожное движение",
+ "pages": "167–171",
+ "exercises": "172–176",
+ "solutions": "267–268",
+ "bookRows": 70,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Инфраструктура и мобильность",
+   "items": [
+    {
+     "de": "die Infrastruktur",
+     "ru": "инфраструктура",
+     "ex": "Einwohner großer Metropolen schätzen die gute [[Infrastruktur]], die ihnen die Stadt bietet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Verkehrsnetz = die Verkehrsverbindungen (Plural)",
+     "ru": "транспортная сеть",
+     "ex": "Nach dem Erdbeben investierte der Staat große Summen in den schnellen Wiederaufbau des [[Verkehrsnetzes]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "gut ausgebaut sein*",
+     "ru": "быть хорошо развитым",
+     "ex": "Das Verkehrsnetz in der Hauptstadt ist so [[gut ausgebaut]], dass man jeden Stadtteil in relativ kurzer Zeit erreichen kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "mobil sein*",
+     "ru": "быть мобильным",
+     "ex": "Da in ländlichen Gebieten weniger Busse und Bahnen verkehren, braucht man oft ein eigenes Auto, um [[mobil]] zu sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Mobilität",
+     "ru": "мобильность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich fortbewegen",
+     "ru": "передвигаться",
+     "ex": "Bei dichtem Verkehr kann man [[sich]] mit dem Fahrrad oft schneller [[fortbewegen]] als mit dem Auto.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Fortbewegung",
+     "ru": "передвижение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "unterwegs sein*",
+     "ru": "быть в пути, в разъездах",
+     "ex": "Mitarbeiter der Vertriebsabteilung sind viel [[unterwegs]], um die Firmenprodukte im In- und Ausland zu präsentieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gelangen",
+     "ru": "добираться, попадать",
+     "ex": "Da die Insel keinen Flughafen hat, kann man nur mit dem Schiff dorthin [[gelangen]].",
+     "note": "ist gelangt",
+     "g": "v"
+    },
+    {
+     "de": "jdn. / etw. befördern",
+     "ru": "перевозить",
+     "ex": "Nachts [[befördern]] die städtischen Busse deutlich weniger Passagiere als tagsüber.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Расстояния и транспортные средства",
+   "items": [
+    {
+     "de": "die Strecke, Strecken",
+     "ru": "участок пути, маршрут",
+     "ex": "Wegen einer technischen Störung verkehren auf der [[Strecke]] zwischen Münster und Bremen zurzeit keine Züge.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Strecke zurücklegen",
+     "ru": "преодолеть расстояние",
+     "ex": "Die kurze [[Strecke]] vom Wohnheim bis zur Bibliothek kann man problemlos zu Fuß oder mit dem Fahrrad [[zurücklegen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "entfernt sein* von + D",
+     "ru": "находиться на расстоянии от",
+     "ex": "Das Fußballstadion ist nur wenige Kilometer vom Stadtzentrum [[entfernt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Entfernung, -en",
+     "ru": "расстояние",
+     "ex": "Größere [[Entfernungen]] kann man am schnellsten mit dem Flugzeug zurücklegen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "pendeln",
+     "ru": "ездить на работу из другого города",
+     "ex": "Wenn man eine neue Stelle in einer anderen Stadt findet, steht man vor der Frage, ob man umzieht oder jeden Tag [[pendelt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Pendler / die Pendlerin, Pendler",
+     "ru": "маятниковый мигрант (ездящий на работу)",
+     "ex": "Wegen des Streiks im öffentlichen Dienst kommen viele [[Pendler]] zu spät zur Arbeit.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Fahrzeug, -zeuge",
+     "ru": "транспортное средство",
+     "ex": "Wer mit einem [[Fahrzeug]] auf öffentlichen Straßen unterwegs ist, sollte die Verkehrsregeln genau kennen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Pkw, Pkw = der Personenkraftwagen",
+     "ru": "легковой автомобиль",
+     "ex": "Fahren Sie mit Ihrem eigenen [[Pkw]] zur Arbeit oder haben Sie einen Dienstwagen, der der Firma gehört?",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Lkw, Lkw = der Lastkraftwagen",
+     "ru": "грузовик",
+     "ex": "Das Umzugsunternehmen transportiert die Möbel des Kunden mit einem [[Lkw]] zur neuen Wohnung.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Schiene, Schienen",
+     "ru": "рельс",
+     "ex": "Obwohl auf dieser Straße keine Straßenbahn mehr verkehrt, kann man immer noch die alten [[Schienen]] auf der Fahrbahn sehen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Verkehrsteilnehmer, -teilnehmer",
+     "ru": "участник дорожного движения",
+     "ex": "Alle [[Verkehrsteilnehmer]] – Autofahrer, Radfahrer und Fußgänger – müssen die Verkehrsregeln beachten und Rücksicht aufeinander nehmen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Общественный транспорт",
+   "items": [
+    {
+     "de": "öffentliche Verkehrsmittel (Plural)",
+     "ru": "общественный транспорт",
+     "ex": "Umweltverbände weisen darauf hin, dass die Nutzung [[öffentlicher Verkehrsmittel]] umweltfreundlicher ist als das Fahren mit dem eigenen Auto.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "öffentliche Verkehrsmittel benutzen",
+     "ru": "пользоваться общественным транспортом",
+     "ex": "Wer auf einer Karnevalsparty Alkohol getrunken hat, sollte [[öffentliche Verkehrsmittel benutzen]], um sicher nach Hause zu gelangen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Fahrgast, -gäste",
+     "ru": "пассажир",
+     "ex": "Die Kameras in den U-Bahnen sollen der Sicherheit der [[Fahrgäste]] dienen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Fahrschein, -scheine = die Fahrkarte, -karten",
+     "ru": "проездной билет",
+     "ex": "Sie dürfen in diesen Zug nur einsteigen, wenn Sie einen gültigen [[Fahrschein]] bei sich haben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Semesterticket, -tickets",
+     "ru": "студенческий проездной на семестр",
+     "ex": "Studierende erhalten ein [[Semesterticket]], mit dem sie öffentliche Verkehrsmittel benutzen können.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "gelten*",
+     "ru": "действовать, быть действительным",
+     "ex": "Das NeunPlus-Ticket [[gilt]] nur werktags von 9 bis 18 Uhr.",
+     "note": "gilt – galt – hat gegolten",
+     "g": "v"
+    },
+    {
+     "de": "gültig",
+     "ru": "действительный",
+     "ex": "Das Semesterticket ist sechs Monate lang [[gültig]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "schwarzfahren*",
+     "ru": "ездить зайцем",
+     "ex": "Wer [[schwarzfährt]] und in eine Kontrolle gerät, muss eine Geldstrafe bezahlen.",
+     "note": "fuhr schwarz – ist schwarzgefahren",
+     "g": "v"
+    },
+    {
+     "de": "das Schwarzfahren",
+     "ru": "безбилетный проезд",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Водить машину",
+   "items": [
+    {
+     "de": "die Fahrerlaubnis = der Führerschein, -scheine",
+     "ru": "водительские права",
+     "ex": "Bei Verkehrskontrollen überprüfen die Polizeibeamten die [[Fahrerlaubnis]] und den Fahrzeugschein der Autofahrer.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "den Führerschein machen",
+     "ru": "получать права (учиться в автошколе)",
+     "ex": "Man darf den [[Führerschein]] frühestens einen Monat vor dem 17. Geburtstag [[machen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die theoretische Fahrprüfung",
+     "ru": "теоретический экзамен на права",
+     "ex": "Man kann die [[theoretische Fahrprüfung]] nicht nur auf Deutsch, sondern auch in zahlreichen anderen Sprachen ablegen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die praktische Fahrprüfung",
+     "ru": "практический экзамен на права",
+     "ex": "Wer in der [[praktischen Fahrprüfung]] bei Rot über eine Ampel fährt, muss die Prüfung wiederholen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der TÜV",
+     "ru": "техосмотр (организация)",
+     "ex": "Alle zwei Jahre muss man sein Auto vom [[TÜV]] oder einer anderen anerkannten Organisation technisch überprüfen lassen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ein Auto / ein Fahrzeug steuern",
+     "ru": "управлять автомобилем",
+     "ex": "Im Alter von 17 Jahren darf man ein [[Auto]] nur in Begleitung eines Erwachsenen [[steuern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "bremsen",
+     "ru": "тормозить",
+     "ex": "Fahren Sie an einer Kreuzung langsam, damit Sie rechtzeitig [[bremsen]] können, wenn ein Auto von rechts kommt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Gas geben*",
+     "ru": "нажать на газ",
+     "ex": "Lösen Sie die Handbremse und [[geben]] Sie vorsichtig [[Gas]].",
+     "note": "gibt – gab – hat gegeben",
+     "g": "v"
+    },
+    {
+     "de": "beschleunigen",
+     "ru": "разгоняться",
+     "ex": "[[Beschleunigen]] Sie, wenn Sie auf die Autobahn fahren, damit Sie den Verkehr nicht behindern.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "einen Unfall verursachen",
+     "ru": "стать виновником аварии",
+     "ex": "Die Polizei hat Zeugen befragt, um festzustellen, wer den [[Unfall verursacht]] hat.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich anschnallen",
+     "ru": "пристегнуться",
+     "ex": "Jedes Auto muss über Gurte verfügen, damit [[sich]] alle Personen im Auto [[anschnallen]] können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ums Leben kommen*",
+     "ru": "погибнуть",
+     "ex": "Bei einem schweren Verkehrsunfall sind drei Personen [[ums Leben gekommen]].",
+     "note": "kam – ist gekommen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Правила дорожного движения",
+   "items": [
+    {
+     "de": "das Verkehrsschild, -schilder",
+     "ru": "дорожный знак",
+     "ex": "[[Verkehrsschilder]] weisen beispielsweise auf Parkverbote, besondere Gefahren und Tempolimits hin.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Verkehrsregeln (Plural)",
+     "ru": "правила дорожного движения",
+     "ex": "Damit Kinder sicher zur Schule gelangen, sollten die Eltern sie schon früh mit den [[Verkehrsregeln]] vertraut machen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Verkehrsregeln beachten",
+     "ru": "соблюдать ПДД",
+     "ex": "Nicht nur die Autofahrer, sondern auch die Fußgänger müssen die [[Verkehrsregeln beachten]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gegen die Verkehrsregeln verstoßen*",
+     "ru": "нарушать ПДД",
+     "ex": "Einem Fahrer, der zu oft [[gegen die Verkehrsregeln verstößt]], kann der Führerschein entzogen werden.",
+     "note": "verstößt – verstieß – hat verstoßen",
+     "g": "v"
+    },
+    {
+     "de": "das Bußgeld, -gelder",
+     "ru": "штраф",
+     "ex": "Autofahrer, die während der Fahrt mit dem Handy telefonieren, müssen ein [[Bußgeld]] von 60 € bezahlen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Bürgersteig, -steige = der Gehweg, -wege",
+     "ru": "тротуар",
+     "ex": "Hier darf man nicht auf dem [[Bürgersteig]] parken.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Radweg, -wege",
+     "ru": "велодорожка",
+     "ex": "Radfahrer ärgern sich darüber, wenn Autos auf dem [[Radweg]] parken.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Fahrbahn, -bahnen",
+     "ru": "проезжая часть",
+     "ex": "Fahren Sie auf der Autobahn zwischen Hamburg und Lübeck besonders vorsichtig! Dort befinden sich Tiere auf der [[Fahrbahn]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Straße überqueren",
+     "ru": "переходить улицу",
+     "ex": "Kinder müssen lernen, nach rechts und links zu schauen, bevor sie eine [[Straße überqueren]].",
+     "note": "неотделяемая: hat überquert",
+     "g": "v"
+    },
+    {
+     "de": "der Zebrastreifen, -streifen",
+     "ru": "пешеходный переход, «зебра»",
+     "ex": "Autofahrer müssen vor dem [[Zebrastreifen]] anhalten, um Fußgängern das Überqueren der Straße zu ermöglichen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Ampel, Ampeln",
+     "ru": "светофор",
+     "ex": "Wenn die [[Ampel]] gelb ist, müssen Sie schnell entscheiden, ob Sie noch weiterfahren können oder besser anhalten sollten.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Скорость и препятствия",
+   "items": [
+    {
+     "de": "die Geschwindigkeit = das Tempo",
+     "ru": "скорость",
+     "ex": "Autofahrer müssen bei Regen, Schnee oder Nebel ihre [[Geschwindigkeit]] an die Wetterbedingungen anpassen.",
+     "note": "an + Akk. anpassen",
+     "g": "f"
+    },
+    {
+     "de": "die Geschwindigkeitsbegrenzung = das Tempolimit",
+     "ru": "ограничение скорости",
+     "ex": "Es wird viel darüber diskutiert, ob man das Unfallrisiko durch [[Geschwindigkeitsbegrenzungen]] auf Autobahnen reduzieren kann.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die erlaubte Geschwindigkeit überschreiten*",
+     "ru": "превысить допустимую скорость",
+     "ex": "Wer die [[erlaubte Geschwindigkeit überschreitet]], muss mit einem Bußgeld rechnen.",
+     "note": "überschritt – hat überschritten",
+     "g": "v"
+    },
+    {
+     "de": "jdn. überholen",
+     "ru": "обгонять",
+     "ex": "[[Überholen]] Sie ein langsameres Fahrzeug nur dann, wenn Ihnen kein Auto entgegenkommt.",
+     "note": "неотделяемая: hat überholt",
+     "g": "v"
+    },
+    {
+     "de": "die Baustelle, -stellen",
+     "ru": "стройка, дорожные работы",
+     "ex": "Wegen einer [[Baustelle]] staut sich der Verkehr auf der A7.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Hindernis, Hindernisse",
+     "ru": "препятствие",
+     "ex": "Autofahrer sollten so langsam fahren, dass sie bei plötzlich auftauchenden [[Hindernissen]] noch rechtzeitig bremsen können.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdm. / etw. ausweichen*",
+     "ru": "уклоняться, объезжать",
+     "ex": "Der Fahrer des Krankenwagens muss sich konzentrieren, um anderen Autos [[auszuweichen]].",
+     "note": "wich aus – ist ausgewichen · + Dat.",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Перекрытия и пробки",
+   "items": [
+    {
+     "de": "sperren",
+     "ru": "перекрывать",
+     "ex": "Nach dem Unfall musste die Polizei die Autobahn für mehrere Stunden [[sperren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Sperrung, Sperrungen",
+     "ru": "перекрытие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Stau, Staus",
+     "ru": "пробка",
+     "ex": "Während der Sommerferien kommt es oft zu kilometerlangen [[Staus]] auf den Autobahnen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "im Stau stehen*",
+     "ru": "стоять в пробке",
+     "ex": "Manche Autofahrer werden nervös und sogar aggressiv, wenn sie längere Zeit [[im Stau stehen]].",
+     "note": "stand – hat gestanden",
+     "g": "v"
+    },
+    {
+     "de": "dichter Verkehr",
+     "ru": "плотное движение",
+     "ex": "Bei [[dichtem Verkehr]] muss man besonders konzentriert sein und darauf achten, nicht zu nahe an die anderen Autos heranzufahren.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Berufsverkehr",
+     "ru": "час пик (поездки на работу)",
+     "ex": "Man muss damit rechnen, während des [[Berufsverkehrs]] am Morgen und am späten Nachmittag im Stau zu stehen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Stoßzeit, -zeiten",
+     "ru": "час пик",
+     "ex": "Wer die Möglichkeit hat, sollte Autofahrten zu den [[Stoßzeiten]] vermeiden und zu einer anderen Uhrzeit fahren, wenn nicht so viele Menschen unterwegs sind.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Транспорт и экология",
+   "items": [
+    {
+     "de": "der Lärm",
+     "ru": "шум",
+     "ex": "Menschen, die an einer stark befahrenen Straße wohnen, können wegen des [[Lärms]] oft schlecht schlafen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Benzin",
+     "ru": "бензин",
+     "ex": "Sind Sie der Meinung, dass der [[Benzin]]preis weiter erhöht werden sollte, damit die Bürger weniger Auto fahren?",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Treibstoff, -stoffe = der Kraftstoff, -stoffe",
+     "ru": "топливо",
+     "ex": "Automotoren können mit verschiedenen [[Treibstoffen]], z. B. Benzin oder Diesel, angetrieben werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Abgase (Plural)",
+     "ru": "выхлопные газы",
+     "ex": "Katalysatoren filtern die [[Abgase]] von Fahrzeugen, damit weniger Schadstoffe in die Luft gelangen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "Abgase ausstoßen* · der Ausstoß von Abgasen",
+     "ru": "выбрасывать выхлопные газы · выброс",
+     "ex": "Autos, die mit Erdgas angetrieben werden, [[stoßen]] deutlich weniger [[Abgase aus]] als dieselbetriebene Fahrzeuge.",
+     "note": "stößt aus – stieß aus – hat ausgestoßen",
+     "g": "v"
+    },
+    {
+     "de": "das Ozon (O3)",
+     "ru": "озон",
+     "ex": "Der Straßenverkehr trägt in den Sommermonaten erheblich zur Erhöhung der [[Ozon]]werte bei.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Kohlendioxid (CO2)",
+     "ru": "углекислый газ",
+     "ex": "Um dem Klimawandel entgegenzuwirken, muss der Ausstoß von [[Kohlendioxid]] reduziert werden.",
+     "note": "entgegenwirken + Dat.",
+     "g": "n"
+    },
+    {
+     "de": "der Feinstaub",
+     "ru": "мелкодисперсная пыль",
+     "ex": "[[Feinstaub]], der in den menschlichen Körper eindringt, kann Erkrankungen der Atemwege verursachen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Luftverschmutzung",
+     "ru": "загрязнение воздуха",
+     "ex": "Wissenschaftler und Politiker diskutieren darüber, welche Maßnahmen gegen die [[Luftverschmutzung]] ergriffen werden müssen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Smog",
+     "ru": "смог",
+     "ex": "Wegen des starken [[Smogs]] hat die Regierung Fahrverbote für Autofahrer beschlossen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: биотопливо (Infobox)",
+   "items": [
+    {
+     "de": "der Biokraftstoff, -e",
+     "ru": "биотопливо",
+     "ex": "Relativ neu ist der Einsatz von [[Biokraftstoffen]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "unvorstellbar",
+     "ru": "немыслимый",
+     "ex": "Dennoch ist eine Welt ohne Autos und Flugzeuge heutzutage [[unvorstellbar]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "im Zeitalter der Globalisierung",
+     "ru": "в эпоху глобализации",
+     "ex": "… insbesondere [[im Zeitalter der Globalisierung]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "angesichts + G",
+     "ru": "ввиду, учитывая",
+     "ex": "[[Angesichts]] des Klimawandels arbeiten Wissenschaftler intensiv daran, den Schadstoffausstoß zu reduzieren.",
+     "note": "+ Genitiv",
+     "g": "v"
+    },
+    {
+     "de": "etw. antreiben*",
+     "ru": "приводить в движение",
+     "ex": "Fahrzeuge, die mit Gas, Elektrizität oder Wasserstoff [[angetrieben]] werden …",
+     "note": "trieb an – hat angetrieben",
+     "g": "v"
+    },
+    {
+     "de": "der Wasserstoff",
+     "ru": "водород",
+     "ex": "Fahrzeuge, die mit Gas, Elektrizität oder [[Wasserstoff]] angetrieben werden, sind Beispiele für diese Entwicklung.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "essbar",
+     "ru": "съедобный",
+     "ex": "… dass Bioethanol aus [[essbaren]] Pflanzen wie Zuckerrüben und Mais hergestellt wird.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Alternative zu + D",
+     "ru": "альтернатива чему-то",
+     "ex": "… könnten Kraftstoffe aus Pflanzen eine echte [[Alternative zu]] Benzin und Diesel werden.",
+     "note": "",
+     "g": "f"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "der Pkw / der Lkw",
+   "v": "Мн. ч. без окончания или -s: die Pkw / Pkws"
+  },
+  {
+   "k": "gelangen · gelingen",
+   "v": "gelangen — добраться куда-то (ist gelangt); gelingen — удаваться (es ist mir gelungen)"
+  },
+  {
+   "k": "überholen, überqueren, überschreiten",
+   "v": "Неотделяемые: Er hat das Auto überholt, die Straße überquert"
+  },
+  {
+   "k": "ausweichen + D",
+   "v": "Einem Hindernis ausweichen; Perfekt с sein"
+  },
+  {
+   "k": "ums Leben kommen",
+   "v": "Drei Personen sind ums Leben gekommen (sein!)"
+  },
+  {
+   "k": "schwarzfahren",
+   "v": "Отделяемое: Er fährt schwarz; ist schwarzgefahren"
+  },
+  {
+   "k": "gegen + A verstoßen",
+   "v": "gegen die Verkehrsregeln verstoßen; der Verstoß gegen + A"
+  },
+  {
+   "k": "angesichts + G",
+   "v": "Предлог с Genitiv: angesichts des Klimawandels"
+  }
+ ]
+}

@@ -1,0 +1,711 @@
+{
+ "id": "2.2",
+ "chapter": 2,
+ "chapterName": "Der Mensch",
+ "title": "Körper",
+ "titleRu": "Тело",
+ "pages": "58–63",
+ "exercises": "64–65",
+ "solutions": "261",
+ "bookRows": 68,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Как описать строение тела",
+   "items": [
+    {
+     "de": "bestehen* aus + D",
+     "ru": "состоять из чего-то",
+     "ex": "Das Gehirn [[besteht aus]] mehreren Milliarden Nervenzellen.",
+     "note": "bestand – hat bestanden",
+     "g": "v"
+    },
+    {
+     "de": "etw. bilden",
+     "ru": "образовывать",
+     "ex": "Die Knochen [[bilden]] ein stabiles Gerüst, das den Körper stützt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. umgeben*",
+     "ru": "окружать",
+     "ex": "Eine Fettschicht [[umgibt]] die Nieren und schützt sie vor Erschütterungen.",
+     "note": "umgibt – umgab – hat umgeben (неотделяемая)",
+     "g": "v"
+    },
+    {
+     "de": "gelangen in + A / nach + D",
+     "ru": "попадать куда-то",
+     "ex": "Nahrung [[gelangt]] durch die Speiseröhre [[in]] den Magen.",
+     "note": "ist gelangt",
+     "g": "v"
+    },
+    {
+     "de": "etw. steuern",
+     "ru": "управлять, регулировать",
+     "ex": "Verschiedene Hormone [[steuern]] wichtige Körperfunktionen, beispielsweise das Wachstum und den Stoffwechsel.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. produzieren = etw. herstellen",
+     "ru": "вырабатывать, производить",
+     "ex": "Wenn man sich mit einem Virus infiziert, werden Antikörper [[produziert]], die das Virus bekämpfen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. / jdn. versorgen mit + D",
+     "ru": "снабжать чем-то",
+     "ex": "Die Lunge [[versorgt]] den menschlichen Körper [[mit]] lebensnotwendigem Sauerstoff.",
+     "note": "mit + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "etw. weiterleiten",
+     "ru": "передавать дальше",
+     "ex": "Die Nerven [[leiten]] Informationen in Form von elektrischen Impulsen [[weiter]].",
+     "note": "leitete weiter – hat weitergeleitet",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Скелет",
+   "items": [
+    {
+     "de": "das Skelett",
+     "ru": "скелет",
+     "ex": "Das [[Skelett]] besteht aus einer Vielzahl von Knochen, die dem Körper Stabilität verleihen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Knochen, Knochen",
+     "ru": "кость",
+     "ex": "Die Namen verschiedener [[Knochen]] enden auf „-bein“, beispielsweise Schlüsselbein, Schienbein oder Steißbein, weil „Bein“ ein altes Wort für „Knochen“ ist.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Knochenmark",
+     "ru": "костный мозг",
+     "ex": "Im roten [[Knochenmark]], das sich im Inneren bestimmter Knochen befindet, werden Blutzellen gebildet.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Schädel, Schädel",
+     "ru": "череп",
+     "ex": "Der [[Schädel]] umgibt das Gehirn und schützt es vor Verletzungen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Wirbelsäule, -säulen",
+     "ru": "позвоночник",
+     "ex": "Verletzungen der [[Wirbelsäule]] können zu Schmerzen im Rücken, aber auch in anderen Bereichen des Körpers führen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Rippe, Rippen",
+     "ru": "ребро",
+     "ex": "Die [[Rippen]] bilden den Brustkorb, der das Herz und andere innere Organe umgibt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gelenk, Gelenke",
+     "ru": "сустав",
+     "ex": "Die [[Gelenke]], beispielsweise Knie- oder Schultergelenke, ermöglichen die Beweglichkeit des Körpers.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Sehne, Sehnen",
+     "ru": "сухожилие",
+     "ex": "Eine Vielzahl von [[Sehnen]] verbindet Muskeln und Knochen miteinander.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Muskulatur",
+     "ru": "мускулатура",
+     "ex": "Um die [[Muskulatur]] zu stärken, muss man regelmäßig Sport treiben.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Muskel, Muskeln",
+     "ru": "мышца",
+     "ex": "Vor dem Joggen sollte man sich aufwärmen und die [[Muskeln]] dehnen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Нервная система и сердце",
+   "items": [
+    {
+     "de": "das Gehirn, Gehirne = das Hirn, Hirne",
+     "ru": "головной мозг",
+     "ex": "Im [[Gehirn]] werden Informationen verarbeitet und gespeichert.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Hemisphäre, Hemisphären = die Hirnhälfte, -hälften",
+     "ru": "полушарие мозга",
+     "ex": "Die beiden Hirnhälften sind durch einen Balken verbunden, durch den Informationen zwischen den beiden [[Hemisphären]] ausgetauscht werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Rückenmark",
+     "ru": "спинной мозг",
+     "ex": "Das [[Rückenmark]] verläuft innerhalb der Wirbelsäule und verbindet das Gehirn mit den Nerven.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Nerv, Nerven",
+     "ru": "нерв",
+     "ex": "Zahlreiche [[Nerven]] reagieren auf äußere Reize und leiten sie an das Gehirn weiter.",
+     "note": "мн. ч. die Nerven; jdm. auf die Nerven gehen",
+     "g": "m"
+    },
+    {
+     "de": "das Herz, Herzen",
+     "ru": "сердце",
+     "ex": "Das [[Herz]] besteht aus zwei kleinen und zwei großen Kammern, die sich abwechselnd zusammenziehen.",
+     "note": "des Herzens, dem Herzen (особое склонение)",
+     "g": "n"
+    },
+    {
+     "de": "etw. pumpen",
+     "ru": "качать, перекачивать",
+     "ex": "Bei jedem Herzschlag wird Blut durch den Körper [[gepumpt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Blutgefäß, Blutgefäße = die Ader, Adern",
+     "ru": "кровеносный сосуд",
+     "ex": "Durch ein Netz großer und kleiner [[Blutgefäße]] wird der gesamte Körper mit Sauerstoff versorgt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Arterie, Arterien",
+     "ru": "артерия",
+     "ex": "[[Arterien]] transportieren meist sauerstoffreiches Blut durch den Körper.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Vene, Venen",
+     "ru": "вена",
+     "ex": "Durch die [[Venen]] fließt vor allem sauerstoffarmes Blut zum Herzen, von wo es in die Lunge gepumpt wird.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Puls",
+     "ru": "пульс",
+     "ex": "An den Handgelenken und anderen Stellen des Körpers, wo Arterien dicht unter der Haut liegen, kann man den [[Puls]] messen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Внутренние органы",
+   "items": [
+    {
+     "de": "atmen",
+     "ru": "дышать",
+     "ex": "Im Gegensatz zu Fischen kann der Mensch unter Wasser nicht [[atmen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Atmung",
+     "ru": "дыхание",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Atemwege",
+     "ru": "дыхательные пути",
+     "ex": "Über die [[Atemwege]] gelangt Sauerstoff in die Lunge und damit in den Körper.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Lunge, Lungen",
+     "ru": "лёгкое, лёгкие",
+     "ex": "In der [[Lunge]] wird das Blut mit Sauerstoff angereichert.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. verdauen · die Verdauung",
+     "ru": "переваривать · пищеварение",
+     "ex": "Bestandteile der Nahrung, die der Körper nicht [[verdauen]] kann, werden wieder ausgeschieden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Magen, Mägen",
+     "ru": "желудок",
+     "ex": "Die Nahrung gelangt durch die Speiseröhre in den [[Magen]], wo sie mit Verdauungssäften vermischt wird.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Darm, Därme",
+     "ru": "кишечник",
+     "ex": "Mithilfe von Muskelkontraktionen wird die Nahrung durch den Dünn[[darm]] und den Dick[[darm]] geschoben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Leber, Lebern",
+     "ru": "печень",
+     "ex": "In der [[Leber]] wird Galle produziert, die wichtig für die Verdauung der Nahrung ist.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Niere, Nieren",
+     "ru": "почка",
+     "ex": "Der Mensch verfügt über zwei [[Nieren]], aber er kann auch mit einer [[Niere]] leben, wenn die zweite entfernt werden muss.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. reinigen",
+     "ru": "очищать",
+     "ex": "Die beiden Nieren [[reinigen]] das Blut von Giftstoffen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Reinigung",
+     "ru": "очищение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Клетки и гены",
+   "items": [
+    {
+     "de": "die Zelle, Zellen",
+     "ru": "клетка",
+     "ex": "Die Form und Größe einer [[Zelle]] hängt von ihrer Funktion ab.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gewebe",
+     "ru": "ткань (организма)",
+     "ex": "Die Zellen bilden verschiedene Arten von [[Gewebe]], zum Beispiel Haut, Knochen- oder Nervengewebe.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Haut",
+     "ru": "кожа",
+     "ex": "Verschiedene Stoffe aus unserer Umgebung werden über die [[Haut]] in den Körper aufgenommen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die DNA = die DNS",
+     "ru": "ДНК",
+     "ex": "Die 46 Chromosomen eines Menschen bestehen aus [[DNA]], einer chemischen Substanz, die individuell unterschiedlich zusammengesetzt ist.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Erbanlagen (Plural)",
+     "ru": "наследственность, гены",
+     "ex": "Die [[Erbanlagen]] sind die genetischen Eigenschaften eines Menschen, die von den Eltern an die Kinder weitergegeben werden.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "etw. umwandeln in + A",
+     "ru": "превращать во что-то",
+     "ex": "Durch den Verdauungsprozess wird Nahrung in verschiedene chemische Substanzen [[umgewandelt]].",
+     "note": "wandelte um – hat umgewandelt",
+     "g": "v"
+    },
+    {
+     "de": "die Umwandlung",
+     "ru": "превращение, преобразование",
+     "ex": "Enzyme beschleunigen die [[Umwandlung]] chemischer Stoffe und spielen beispielsweise bei der Verdauung eine wichtige Rolle.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Enzym, Enzyme",
+     "ru": "фермент",
+     "ex": "[[Enzyme]] beschleunigen die Umwandlung chemischer Stoffe und spielen beispielsweise bei der Verdauung eine wichtige Rolle.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Гормоны и иммунитет",
+   "items": [
+    {
+     "de": "die Drüse, Drüsen",
+     "ru": "железа",
+     "ex": "[[Drüsen]] sind Organe, die verschiedene Arten von Sekreten, z. B. Hormone, produzieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Hormon, Hormone",
+     "ru": "гормон",
+     "ex": "In der Bauchspeicheldrüse wird das [[Hormon]] Insulin hergestellt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. ausschütten",
+     "ru": "выделять, выбрасывать (гормоны)",
+     "ex": "Bei Stress werden große Mengen des Hormons Adrenalin [[ausgeschüttet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Ausschüttung",
+     "ru": "выброс, выделение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pubertät",
+     "ru": "половое созревание",
+     "ex": "Während der [[Pubertät]] verändert sich die Konzentration verschiedener Hormone im Körper.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Immunsystem",
+     "ru": "иммунная система",
+     "ex": "Das [[Immunsystem]] bekämpft Krankheitserreger, die in den Körper eindringen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Antikörper, Antikörper",
+     "ru": "антитело",
+     "ex": "[[Antikörper]] greifen schädliche Organismen an und zerstören sie.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "etw. / jdn. abwehren",
+     "ru": "отражать, защищаться от",
+     "ex": "Ein gesundes Immunsystem kann zahlreiche Krankheiten [[abwehren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Abwehr",
+     "ru": "защита, отражение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Abwehrkräfte (Plural)",
+     "ru": "защитные силы организма",
+     "ex": "Durch Sport und gesunde Ernährung kann man die körpereigenen [[Abwehrkräfte]] stärken.",
+     "note": "",
+     "g": "pl"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Размножение",
+   "items": [
+    {
+     "de": "sich fortpflanzen",
+     "ru": "размножаться",
+     "ex": "Der Wunsch, [[sich fortzupflanzen]], ist ein natürliches Bedürfnis des Menschen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Fortpflanzung",
+     "ru": "размножение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Fortpflanzungsorgane (Plural) = die Geschlechtsorgane (Plural) = die Genitalien (Plural)",
+     "ru": "половые органы",
+     "ex": "Hormonelle Veränderungen während der Pubertät führen zur vollständigen Entwicklung der [[Fortpflanzungsorgane]].",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "der Geschlechtsverkehr",
+     "ru": "половой акт",
+     "ex": "Früher war [[Geschlechtsverkehr]] vor der Ehe gesellschaftlich nicht akzeptiert.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ein Kind zeugen",
+     "ru": "зачать ребёнка",
+     "ex": "",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Zeugung",
+     "ru": "зачатие",
+     "ex": "Die [[Zeugung]] eines Kindes bringt eine große Verantwortung mit sich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "etw. / jdn. befruchten",
+     "ru": "оплодотворять",
+     "ex": "",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Befruchtung",
+     "ru": "оплодотворение",
+     "ex": "Die [[Befruchtung]] einer Eizelle der Frau mit dem Spermium des Mannes ist der Beginn eines neuen Lebens.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die künstliche Befruchtung",
+     "ru": "искусственное оплодотворение (ЭКО)",
+     "ex": "[[Eine künstliche Befruchtung]] ist eine Alternative für Paare, die auf natürlichem Weg kein Kind zeugen können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "unfruchtbar",
+     "ru": "бесплодный",
+     "ex": "Männer oder Frauen, die sich ein Kind wünschen, leiden sehr darunter, wenn sie erfahren, dass sie [[unfruchtbar]] sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Verhütungsmittel, Verhütungsmittel",
+     "ru": "контрацептив",
+     "ex": "Paare, die kein Kind bekommen möchten, verwenden beim Geschlechtsverkehr [[Verhütungsmittel]].",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Беременность и роды",
+   "items": [
+    {
+     "de": "schwanger",
+     "ru": "беременная",
+     "ex": "[[Schwangere]] Frauen sollten auf Alkohol und Nikotin verzichten, da diese Substanzen dem Kind schaden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Schwangerschaft, Schwangerschaften",
+     "ru": "беременность",
+     "ex": "Besonders die ersten Wochen der [[Schwangerschaft]] sind häufig von Übelkeit begleitet.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Schwangerschaftsabbruch, -abbrüche = die Abtreibung, Abtreibungen",
+     "ru": "прерывание беременности, аборт",
+     "ex": "Schwangere Frauen müssen sich beraten lassen, bevor sie sich für einen [[Schwangerschaftsabbruch]] entscheiden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Gebärmutter",
+     "ru": "матка",
+     "ex": "In der Schwangerschaft wächst das Baby in der [[Gebärmutter]] heran.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Embryo, Embryonen",
+     "ru": "эмбрион",
+     "ex": "In der ersten Lebensphase bezeichnet man das sich entwickelnde Kind als [[Embryo]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "embryonal",
+     "ru": "эмбриональный",
+     "ex": "",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Fötus, Föten",
+     "ru": "плод",
+     "ex": "Ein [[Fötus]] ist weiter entwickelt als ein Embryo.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ein Kind gebären* = ein Kind zur Welt bringen*",
+     "ru": "родить ребёнка",
+     "ex": "Frauen, die ein [[Kind gebären]], werden meist von einer Hebamme und einem Arzt betreut.",
+     "note": "gebar – hat geboren",
+     "g": "v"
+    },
+    {
+     "de": "die Entbindung, Entbindungen = die Geburt, Geburten",
+     "ru": "роды",
+     "ex": "Wenn eine natürliche [[Entbindung]] nicht möglich ist, kann ein Kaiserschnitt durchgeführt werden.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: донорство органов (Infobox)",
+   "items": [
+    {
+     "de": "die Organspende, -n",
+     "ru": "донорство органов",
+     "ex": "Umfragen haben ergeben, dass die Mehrheit der Deutschen [[Organspenden]] positiv gegenübersteht.",
+     "note": "einer Sache positiv gegenüberstehen",
+     "g": "f"
+    },
+    {
+     "de": "ein Organ transplantieren = verpflanzen",
+     "ru": "пересаживать орган",
+     "ex": "Seit Ärzte in der Lage sind, Organe zu [[transplantieren]], hoffen kranke Menschen auf ein Spenderorgan.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Spenderorgan, -e",
+     "ru": "донорский орган",
+     "ex": "Doch es ist nicht leicht, ein [[Spenderorgan]] zu erhalten.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Spender / die Spenderin, Spender",
+     "ru": "донор",
+     "ex": "Oft sind Familienmitglieder am besten als [[Spender]] geeignet.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "ein Organ spenden",
+     "ru": "стать донором органа",
+     "ex": "Menschen, die bereit sind, ihre Organe zu [[spenden]], können einen solchen Ausweis ausfüllen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Organspendeausweis, -e",
+     "ru": "карточка донора органов",
+     "ex": "In Deutschland können einem Menschen nach seinem Tod Organe entnommen werden, wenn er einen [[Organspendeausweis]] hat.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Organe entnehmen*",
+     "ru": "изымать органы",
+     "ex": "In Deutschland können einem Menschen nach seinem Tod Organe [[entnommen]] werden.",
+     "note": "entnimmt – entnahm – hat entnommen",
+     "g": "v"
+    },
+    {
+     "de": "die Angehörigen (!)",
+     "ru": "родственники",
+     "ex": "Wenn jemand keinen solchen Ausweis hat, müssen die [[Angehörigen]] nach seinem Tod entscheiden.",
+     "note": "склоняется как прилагательное: ein Angehöriger",
+     "g": "pl"
+    },
+    {
+     "de": "die Lebensqualität",
+     "ru": "качество жизни",
+     "ex": "Patienten mit schweren Nierenschäden müssen regelmäßig eine Dialyse durchführen lassen, was ihre [[Lebensqualität]] stark einschränkt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Widerspruchslösung",
+     "ru": "«модель несогласия» (донор по умолчанию)",
+     "ex": "Eine Möglichkeit wäre eine [[Widerspruchslösung]].",
+     "note": "",
+     "g": "f"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "bestehen aus + D ≠ bestehen auf + D",
+   "v": "aus — состоять из; auf — настаивать на; eine Prüfung bestehen — сдать экзамен"
+  },
+  {
+   "k": "umgeben — неотделяемая",
+   "v": "Eine Fettschicht umgibt die Nieren (не «gibt … um»); hat umgeben"
+  },
+  {
+   "k": "gelangen in + A",
+   "v": "Движение → Akkusativ: gelangt in den Magen, in die Lunge; Perfekt с sein"
+  },
+  {
+   "k": "das Herz",
+   "v": "Особое склонение: das Herz, dem Herzen, des Herzens"
+  },
+  {
+   "k": "der Nerv",
+   "v": "мн. ч. die Nerven; «Du gehst mir auf die Nerven» — ты меня раздражаешь"
+  },
+  {
+   "k": "der Embryo, der Fötus",
+   "v": "мн. ч. die Embryonen, die Föten"
+  },
+  {
+   "k": "gebären",
+   "v": "gebar – hat geboren; «Ich bin 2000 geboren» / «wurde geboren»"
+  },
+  {
+   "k": "jdn. mit etw. versorgen",
+   "v": "Кого (Akk.) + чем (mit + Dat.): Die Lunge versorgt den Körper mit Sauerstoff"
+  }
+ ]
+}

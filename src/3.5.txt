@@ -1,0 +1,80 @@
+@id 3.5
+@chapter 3
+@chapterName Alltagsleben
+@title Freizeit
+@titleRu Свободное время
+@pages 131–134
+@exercises 134–138
+@solutions 265
+@bookRows 46
+
+# s1 Отдыхать
+frei haben* | быть свободным, иметь выходной | Arbeitnehmer, die in der Gastronomie arbeiten, haben nicht jeden Sonntag [[frei]]. |  | v
+die Freizeit genießen* | наслаждаться свободным временем | Man sollte seine [[Freizeit genießen]] und sie mit angenehmen Aktivitäten verbringen. | genoss – hat genossen | v
+sich ausruhen | отдыхать (физически) | Viele nutzen die freie Zeit, um [[sich auszuruhen]]. | ruhte sich aus – hat sich ausgeruht | v
+sich erholen | восстанавливаться, отдыхать | Ein Spaziergang bei schönem Wetter ist eine gute Möglichkeit, [[sich]] vom Alltagsstress zu [[erholen]]. | von + Dat. | v
+die Erholung | отдых, восстановление |  |  | f
+Stress abbauen | снимать стресс | Körperliche Aktivität, Yoga und verschiedene Entspannungstechniken können dabei helfen, [[Stress abzubauen]]. |  | v
+faulenzen | бездельничать, лениться | Nach einem anstrengenden Arbeitstag möchte man manchmal einfach nur auf dem Sofa liegen und [[faulenzen]]. |  | v
+abschalten | отключиться, расслабиться | Neben der körperlichen Erholung ist es wichtig, auch geistig [[abzuschalten]] und den Alltag zu vergessen. |  | v
+
+# s2 Занятия и хобби
+etw. unternehmen* | предпринимать что-то, куда-то выбраться | Möchten Sie am Wochenende zu Hause bleiben, oder haben Sie Lust, etwas zu [[unternehmen]]? | unternimmt – unternahm – hat unternommen (неотделяемая) | v
+die Unternehmung, Unternehmungen | мероприятие, вылазка |  |  | f
+sich beschäftigen mit + D | заниматься чем-то | Leider muss man [[sich]] in der Freizeit auch [[mit]] Dingen [[beschäftigen]], die man an Arbeitstagen nicht schafft, beispielsweise mit der Gartenarbeit oder dem Hausputz. |  | v
+die Beschäftigung mit + D | занятие чем-то |  |  | f
+einer Freizeitbeschäftigung / einem Hobby nachgehen* | заниматься хобби | Wer regelmäßig [[einem Hobby nachgeht]], kann auf diese Weise wieder Kraft für den Alltag schöpfen. | ging nach – ist nachgegangen · + Dat. | v
+sich jdm. / etw. widmen | посвящать себя кому-то / чему-то | Berufstätige Eltern können [[sich]] am Wochenende ganz ihrer Familie [[widmen]]. | + Dat. | v
+ausgehen* | выходить (развлекаться) | Es ist schwer, am Freitagabend einen Parkplatz im Stadtzentrum zu finden, weil viele Menschen an diesem Abend [[ausgehen]]. | ging aus – ist ausgegangen | v
+sich amüsieren | развлекаться, веселиться | Leider habe ich [[mich]] auf der Party nicht besonders gut [[amüsiert]] – es war ein ziemlich langweiliger Abend. |  | v
+der Ausflug, Ausflüge | поездка, экскурсия | Wenn Sie Berlin besuchen, sollten Sie auf jeden Fall einen [[Ausflug]] nach Potsdam unternehmen und sich das Schloss Sanssouci ansehen. | einen Ausflug machen / unternehmen | m
+
+# s3 Активности на свежем воздухе и дома
+Sport treiben* | заниматься спортом | Fitness-Studios und Sportvereine bieten die Möglichkeit, gemeinsam mit anderen [[Sport zu treiben]]. | trieb – hat getrieben | v
+wandern | ходить в походы | Menschen, die in ihrer Freizeit gerne [[wandern]], können bei Tourismusverbänden umfangreiches Informationsmaterial erhalten. | ist gewandert | v
+eine Fahrradtour unternehmen* | совершить велопрогулку | Wer nicht gerne mit dem Fahrrad einen Berg hinauffährt, kann eine [[Fahrradtour]] an einem Fluss [[unternehmen]], wo der Weg eben ist. | unternimmt – unternahm – hat unternommen | v
+angeln | рыбачить (удочкой) | Es kann sehr entspannend sein zu [[angeln]], weil man dabei intensiv die Ruhe und die Natur genießen kann. |  | v
+Schach spielen | играть в шахматы | Man kann die Konzentrationsfähigkeit und das strategische Denken trainieren, indem man [[Schach spielt]]. |  | v
+etw. sammeln | коллекционировать | Zahlreiche Menschen [[sammeln]] bestimmte Gegenstände, beispielsweise Briefmarken oder Münzen. |  | v
+zeichnen | рисовать (карандашом) | Während man zum Malen Farben, Pinsel und andere Utensilien benötigt, braucht man nur Papier und Bleistift, um eine Landschaft oder ein Objekt zu [[zeichnen]]. | malen — красками | v
+Handarbeiten machen | заниматься рукоделием | Noch immer [[machen]] mehr Frauen als Männer in ihrer Freizeit [[Handarbeiten]], denn nur wenige Männer können nähen, stricken oder häkeln. |  | v
+basteln | мастерить, делать поделки | Vor Ostern und in der Adventszeit [[basteln]] Eltern mit ihren Kindern dekorative Gegenstände aus buntem Papier und anderen Materialien. |  | v
+
+# s4 Музыка
+die Veranstaltung, Veranstaltungen | мероприятие | Auf der Internetseite des Kulturzentrums finden Sie nähere Informationen zu den [[Veranstaltungen]], die diesen Monat dort stattfinden. |  | f
+ein Konzert besuchen | посетить концерт | [[Besuchen]] Sie gern [[Konzerte]] oder andere kulturelle Veranstaltungen? |  | v
+ins Konzert gehen* | пойти на концерт | Ist es Ihrer Meinung nach angemessen, in Jeans [[in]] ein klassisches [[Konzert]] zu [[gehen]]? | ging – ist gegangen | v
+das Orchester, Orchester | оркестр | Die Musiker spielen perfekt zusammen, weil sie alle schon lange Mitglieder des gleichen [[Orchesters]] sind. |  | n
+Musik machen | заниматься музыкой, музицировать | Amateurmusiker treffen sich gerne in ihrer Freizeit, um zusammen [[Musik zu machen]]. |  | v
+ein Instrument spielen | играть на инструменте | Musikalisch begabte Kinder können schon sehr früh lernen, ein [[Instrument zu spielen]]. |  | v
+der Chor, Chöre | хор | Sogar in kleinen Städten oder Dörfern gibt es meist einen Kirchen[[chor]], der bei den Gottesdiensten singt. |  | m
+die Bühne, Bühnen | сцена | Die meisten Pianisten haben Lampenfieber, wenn sie zum ersten Mal vor einem großen Publikum auf der [[Bühne]] stehen. |  | f
+
+# s5 Театр и кино
+der Schauspieler / die Schauspielerin, Schauspieler | актёр | Nur wenige [[Schauspieler]] werden mit einem einzigen Film über Nacht berühmt. |  | m
+das Theaterstück, -stücke | пьеса | Johann Wolfgang von Goethe hat nicht nur Gedichte, sondern auch [[Theaterstücke]] geschrieben. |  | n
+Theater spielen | играть в театре | Während manche Schauspieler sehr gerne Kinofilme drehen, [[spielen]] andere lieber [[Theater]]. |  | v
+ein Theaterstück aufführen | ставить пьесу | Am Ende jedes Schuljahres [[führen]] die Schüler der 10. Klasse ein [[Theaterstück auf]]. | führte auf – hat aufgeführt | v
+sich ein Theaterstück / einen Film ansehen* | посмотреть спектакль / фильм | Ich [[sehe mir]] lieber [[Theaterstücke]] als Kinofilme [[an]], da ich die Atmosphäre im Theater besonders mag. | sieht an – sah an – hat angesehen · sich (Dat.) | v
+einen Film drehen | снимать фильм | Es kostet viel Zeit und Geld, einen Kino[[film zu drehen]]. |  | v
+Regie führen | быть режиссёром | Steven Spielberg hat bei zahlreichen erfolgreichen Filmen [[Regie geführt]]. |  | v
+der Regisseur, Regisseure | режиссёр | Achten Sie auf den Namen des [[Regisseurs]], wenn Sie sich einen Film ansehen möchten, oder interessieren Sie sich mehr für die Schauspieler? |  | m
+
+# s6 Зрители, балет, выставки
+ins Ballett gehen* | пойти на балет | Seit er zum ersten Mal mit seinen Eltern [[ins Ballett gegangen]] ist, möchte er Tänzer werden. | ging – ist gegangen | v
+ins Kabarett gehen* | пойти в кабаре (сатирическое шоу) | Ich [[gehe]] gern [[ins Kabarett]], da ich politische Satire äußerst amüsant finde. | ging – ist gegangen | v
+der Zuschauer, Zuschauer | зритель | Am Ende des Konzerts standen die [[Zuschauer]] auf und klatschten minutenlang. |  | m
+das Publikum = die Zuschauer (Plural) | публика | Obwohl der Film sehr gute Kritiken bekommen hat, hatte er beim [[Publikum]] leider keinen Erfolg. |  | n
+etw. besichtigen | осматривать (достопримечательности) | In Städten gibt es zahlreiche Museen und andere Sehenswürdigkeiten, die kulturell Interessierte [[besichtigen]] können. |  | v
+die Besichtigung, Besichtigungen | осмотр, экскурсия |  |  | f
+die Ausstellung, Ausstellungen | выставка | Museen bieten im Laufe des Jahres [[Ausstellungen]] zu unterschiedlichen Themen an. |  | f
+eine Ausstellung besuchen / besichtigen | посетить выставку | Neben den erwachsenen Besuchern haben auch viele Kinder und Jugendliche die [[Ausstellung besucht]], die zeigt, wie computeranimierte Filme entstehen. |  | v
+
+! sich ausruhen ↔ sich erholen | ausruhen — передохнуть (сесть, полежать); erholen — восстановиться (после болезни, стресса): sich vom Stress erholen
+! einem Hobby nachgehen · sich einer Sache widmen | Оба с Dativ: einem Hobby nachgehen, sich der Familie widmen
+! sich beschäftigen mit + D | mit + Dat.: sich mit Gartenarbeit beschäftigen
+! zeichnen ↔ malen | zeichnen — карандашом, линиями; malen — красками
+! ins Konzert / ins Theater / ins Kino gehen | in + Akk. при движении; im Konzert sein (Dat.)
+! unternehmen | Неотделяемая: Wir unternehmen einen Ausflug. Hast du etwas unternommen?
+! das Publikum | Только ед. ч.; «зрители» = die Zuschauer (мн. ч.)
+! sich etw. ansehen | sich (Dat.): Ich sehe mir einen Film an.

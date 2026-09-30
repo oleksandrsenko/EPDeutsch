@@ -1,0 +1,97 @@
+@id 2.4
+@chapter 2
+@chapterName Der Mensch
+@title Sport
+@titleRu Спорт
+@pages 76–79
+@exercises 80–83
+@solutions 262
+@bookRows 55
+
+# s1 Заниматься спортом
+Sport treiben* | заниматься спортом | Ärzte empfehlen, regelmäßig [[Sport zu treiben]], um Krankheiten vorzubeugen. | trieb – hat getrieben | v
+sportlich aktiv sein* | быть физически активным | Während einige Touristen im Urlaub am liebsten am Strand liegen, möchten andere [[sportlich aktiv sein]]. |  | v
+sich sportlich betätigen | заниматься спортом (офиц.) | Wer [[sich]] mehrmals pro Woche [[sportlich betätigt]], hat ein geringeres Diabetes-Risiko. |  | v
+die sportliche Betätigung | занятия спортом |  |  | f
+sportlich | спортивный | Einige Schüler sind sehr [[sportlich]]: Sie erbringen im Sportunterricht gute Leistungen und treiben auch in ihrer Freizeit oft und gerne Sport. |  | v
+unsportlich | неспортивный | Auch Menschen, die sich für [[unsportlich]] halten, können eine Sportart finden, die für sie geeignet ist. | sich für + Akk. halten | v
+fit | в хорошей форме | Um [[fit]] zu bleiben, braucht man Bewegung, aber auch genügend Schlaf. |  | v
+die Fitness | физическая форма |  |  | f
+sich fit halten* | поддерживать форму | Es muss nicht immer Marathonlauf sein; auch durch Gymnastik, Spaziergänge oder Yoga kann man [[sich fit halten]]. | hält – hielt – hat gehalten | v
+# s2 Сила, выносливость, клубы
+die Kraft, Kräfte | сила | Für das Gewichtheben braucht man viel [[Kraft]], die man durch regelmäßiges Muskeltraining steigern kann. |  | f
+die Ausdauer | выносливость | Andere Sportarten erfordern viel [[Ausdauer]], beispielsweise das Schwimmen oder das Laufen. |  | f
+
+der Sportverein, -vereine | спортивный клуб | [[Sportvereine]] bieten nicht nur regelmäßige Trainingsstunden an, sondern organisieren auch gemeinsame Feste und Wettkämpfe. |  | m
+einem Sportverein beitreten* | вступить в спортклуб | Wer Lust hat, Sport zu treiben, kann [[einem Sportverein beitreten]]. | tritt bei – trat bei – ist beigetreten · + Dat. | v
+das Mitglied, Mitglieder | член | Als [[Mitglied]] des Sportvereins kann man die Sportanlagen oft auch außerhalb der Trainingszeiten kostenlos nutzen. |  | n
+der Leistungssport | профессиональный спорт, спорт высших достижений | [[Leistungssport]] nimmt viel Zeit in Anspruch, da man intensiv trainieren muss, um an Wettkämpfen teilzunehmen. |  | m
+der Breitensport | массовый (любительский) спорт | Im Gegensatz zum Leistungssport stehen beim [[Breitensport]] die Freude an der Bewegung und der Erhalt der körperlichen Fitness im Mittelpunkt. |  | m
+# s2b Виды спорта
+die Sportart, -arten | вид спорта | Jeder sollte verschiedene [[Sportarten]] ausprobieren, um die zu finden, die ihm am meisten Spaß macht. |  | f
+eine Sportart betreiben* | заниматься видом спорта | Erfolgreiche Sportler [[betreiben]] ihre [[Sportart]] oft schon seit frühester Kindheit. | betrieb – hat betrieben | v
+die Leichtathletik | лёгкая атлетика | Zur [[Leichtathletik]] zählen verschiedene Sportarten wie Laufen, Werfen und Springen. |  | f
+turnen | заниматься гимнастикой (на снарядах) |  |  | v
+das Turnen | спортивная гимнастика | Das [[Turnen]] an Sportgeräten, z. B. dem Barren oder dem Reck, erfordert viel Kraft und Geschicklichkeit. |  | n
+der Kampfsport | единоборства | [[Kampfsport]]arten fördern neben Kraft und Beweglichkeit auch Konzentration und Disziplin. |  | m
+der Wintersport | зимние виды спорта | [[Wintersport]] ist in Deutschland sehr beliebt, und die Skigebiete in den Alpen bieten Wintersportlern meist ideale Bedingungen. |  | m
+der Mannschaftssport | командный спорт | [[Mannschaftssport]] fördert nicht nur die Fitness, sondern auch soziale Kompetenzen. |  | m
+
+# s3 Спортсмены и места
+die Mannschaft, Mannschaften | команда | Die Fans stehen treu zu ihrer [[Mannschaft]] – auch dann, wenn sie ein Spiel verliert. | zu jdm. stehen — поддерживать | f
+der Profi, Profis | профессионал | Eine Karriere als Fußball[[profi]] kann Geld und Ruhm bedeuten, erfordert aber vor allem harte Arbeit. |  | m
+der Amateur, Amateure | любитель | Neben Turnieren für professionelle Sportler gibt es auch Wettbewerbe für [[Amateure]]. |  | m
+der Athlet, Athleten | атлет, спортсмен | Am Tag vor dem Wettbewerb absolvieren die [[Athleten]] eine letzte Trainingseinheit. | n-склонение: den Athleten | m
+das Stadion, Stadien | стадион | Für Fußballfans ist es ein besonderes Erlebnis, ein Spiel gemeinsam im [[Stadion]] zu erleben. | мн. ч. die Stadien | n
+das Spielfeld, -felder | игровое поле | Der verletzte Spieler muss das [[Spielfeld]] verlassen, um sich ärztlich behandeln zu lassen. |  | n
+die Sporthalle, -hallen | спортзал | Wenn es zu kalt ist, um draußen zu trainieren, findet das Training in der [[Sporthalle]] statt. |  | f
+
+# s4 Соревнования
+der Wettkampf, -kämpfe | состязание, соревнование | Während der Olympischen Spiele werden die sportlichen [[Wettkämpfe]] im Fernsehen übertragen. |  | m
+der Wettbewerb, -bewerbe | конкурс, соревнование | Die Möglichkeit, an einem [[Wettbewerb]] teilzunehmen und gegen andere Sportler anzutreten, kann die Motivation deutlich erhöhen. |  | m
+an einem Wettbewerb teilnehmen* | участвовать в соревновании | Erfolgreiche Mannschaften können an bundesweiten oder sogar internationalen [[Wettbewerben teilnehmen]]. | nimmt teil – nahm teil – hat teilgenommen | v
+die Olympischen Spiele (Plural) = die Olympiade, Olympiaden | Олимпийские игры | Es ist der Traum jedes Athleten, einmal an den [[Olympischen Spielen]] teilzunehmen. |  | pl
+die Meisterschaft, Meisterschaften | чемпионат | Die junge Schwimmerin hat bei den Landes[[meisterschaften]] den zweiten Platz belegt. | einen Platz belegen | f
+sich qualifizieren für + A | квалифицироваться, пройти отбор | Die Mannschaft hat hart trainiert, um [[sich für]] die Europameisterschaft zu [[qualifizieren]]. | für + Akk. | v
+die Qualifikation | квалификация, отбор |  |  | f
+der Rekord, Rekorde | рекорд | Der Welt[[rekord]] im Kugelstoßen liegt zurzeit bei 23,12 Metern. |  | m
+einen Rekord aufstellen | установить рекорд | Obwohl man denken könnte, dass die Grenzen sportlicher Leistungen erreicht sind, [[stellen]] Sportler immer wieder neue [[Rekorde auf]]. |  | v
+
+# s5 Финал, победа, награды
+das Finale, Finale | финал | Am Ende der Weltmeisterschaft treten zwei Mannschaften im [[Finale]] gegeneinander an. |  | n
+das Finale erreichen = ins Finale kommen = im Finale sein | выйти в финал | Der Trainer erklärte den Journalisten, seine Mannschaft wolle auf jeden Fall das [[Finale erreichen]]. |  | v
+der Gegner, Gegner | противник, соперник | Sportler studieren ihren [[Gegner]] vor einem Wettkampf genau, um sich auf dessen Strategie vorzubereiten. |  | m
+den Gegner besiegen / die gegnerische Mannschaft besiegen | победить соперника | Um die [[gegnerische Mannschaft]] zu [[besiegen]], müssen sich die Athleten nicht nur körperlich, sondern auch mental auf den Wettkampf vorbereiten. |  | v
+der Sieger, Sieger | победитель | Der [[Sieger]] des Halbfinales tritt im Finale gegen einen neuen Gegner an. |  | m
+die Medaille, Medaillen | медаль | Die drei besten Sportler eines Wettbewerbs erhalten eine Gold-, Silber- oder Bronze[[medaille]]. |  | f
+der Pokal, Pokale | кубок | In einer feierlichen Zeremonie wird dem Sieger oder der Siegerin der goldene [[Pokal]] überreicht. |  | m
+eine Medaille / einen Pokal gewinnen* | выиграть медаль / кубок | Die Sportlerin hat bei den Olympischen Spielen zwei [[Medaillen gewonnen]]. | gewann – hat gewonnen | v
+
+# s6 Честная игра и допинг
+sich fair verhalten* | вести себя честно | Beim Sport können Jugendliche lernen, [[sich]] anderen gegenüber [[fair zu verhalten]]. | verhält – verhielt – hat verhalten | v
+die Regeln einhalten* | соблюдать правила | Schiedsrichter oder Wettkampfrichter sorgen dafür, dass die Sportler die [[Regeln einhalten]]. | hält ein – hielt ein – hat eingehalten | v
+gegen die Regeln verstoßen* | нарушать правила | Wenn Sportler [[gegen die Regeln verstoßen]], können sie vom Wettkampf ausgeschlossen werden. | verstößt – verstieß – hat verstoßen | v
+der Schiedsrichter, Schiedsrichter | судья, рефери | Der [[Schiedsrichter]] kann Spieler vom Platz schicken, wenn sie sich nicht fair verhalten. |  | m
+dopen | принимать допинг | Sportler, die [[gedopt]] haben, dürfen für mehrere Jahre nicht bei Wettkämpfen antreten. |  | v
+das Doping | допинг | Es werden immer neue Formen von [[Doping]] entwickelt, die sich teilweise nur schwer nachweisen lassen. |  | n
+jdn. sperren | дисквалифицировать | Der Athlet wurde wegen Dopings für zwei Jahre [[gesperrt]]. |  | v
+die Sperre | дисквалификация |  |  | f
+
+## b1 Бонус: спорт и общество (Infobox)
+das Vorbild, -er | пример для подражания | Erfolgreiche Sportler sind oftmals Identifikationsfiguren und [[Vorbilder]]. |  | n
+für etw. stehen* | олицетворять, символизировать | Sportler gelten als diszipliniert und [[stehen für]] Teamgeist, Fairness und einen gesunden Lebensstil. | stand – hat gestanden | v
+sich etw. zunutze machen | использовать что-то в своих интересах | Dieses positive Image [[macht sich]] beispielsweise die Werbung [[zunutze]]. |  | v
+an Selbstbewusstsein gewinnen* | обретать уверенность в себе | Wenn sie diese Ziele erreichen, [[gewinnen]] sie dadurch [[an Selbstbewusstsein]]. |  | v
+Ziele verfolgen | преследовать цели | Jugendliche lernen auf diese Weise, Ausdauer zu entwickeln und [[Ziele zu verfolgen]]. |  | v
+zum friedlichen Miteinander beitragen* | способствовать мирному сосуществованию | Auf internationaler Ebene kann Sport [[zum friedlichen Miteinander]] der Völker [[beitragen]]. | trug bei – hat beigetragen | v
+das Zusammengehörigkeitsgefühl | чувство единства | Sport kann Einigkeit und ein [[Zusammengehörigkeitsgefühl]] innerhalb eines Landes schaffen. |  | n
+in Gewalt ausarten | перерасти в насилие | … dass die Begeisterung für eine Mannschaft [[in Gewalt]] und Rassismus gegenüber anderen [[ausartet]]. |  | v
+Spiele manipulieren | договариваться о результатах матчей | Da überrascht es nicht, dass in einigen Fällen [[Spiele manipuliert]] werden. |  | v
+
+! Sport treiben · eine Sportart betreiben | Sport treiben (не «machen» в письменной речи); betreiben — конкретный вид спорта или бизнес
+! einem Verein beitreten | + Dativ без предлога, Perfekt с sein: Ich bin dem Verein beigetreten
+! der Wettkampf ↔ der Wettbewerb | Wettkampf — спортивное состязание; Wettbewerb — шире: конкурс, а также конкуренция в экономике
+! gegen die Regeln verstoßen | gegen + Akk.: gegen ein Gesetz verstoßen; der Verstoß gegen + Akk.
+! der Athlet | n-склонение: den / dem / des Athleten
+! das Finale · das Stadion | мн. ч.: die Finale (или Finals), die Stadien
+! sich qualifizieren für + A | Er hat sich für die WM qualifiziert (не «zu»)

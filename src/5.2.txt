@@ -1,0 +1,123 @@
+@id 5.2
+@chapter 5
+@chapterName Natur und Umwelt
+@title Biologie
+@titleRu Биология
+@pages 244–249
+@exercises 249–253
+@solutions 271
+@bookRows 78
+
+# s1 Животный и растительный мир
+die Fauna | фауна | In der Dokumentation über die [[Fauna]] Sibiriens werden unter anderem Bären, Wölfe und Tiger gezeigt. |  | f
+die Flora | флора | Exotische Pflanzen, die aus anderen Teilen der Welt importiert wurden, bedrohen die einheimische [[Flora]]. |  | f
+das Lebewesen, Lebewesen | живое существо | Im Wasser befinden sich kleinste [[Lebewesen]], die man nur unter einem Mikroskop erkennen kann. |  | n
+die Artenvielfalt | биоразнообразие | Umweltveränderungen bedrohen die [[Artenvielfalt]] auf der Erde. |  | f
+etw. bewahren / erhalten* · die Bewahrung / die Erhaltung | сохранять · сохранение | Naturschutzgebiete können dazu beitragen, die Vielfalt der Arten zu [[bewahren]] / zu [[erhalten]]. | erhält – erhielt – hat erhalten | v
+aussterben* | вымирать | In Mitteleuropa waren Wölfe und Braunbären [[ausgestorben]], doch seit einigen Jahren nimmt die Zahl der Tiere wieder zu. | starb aus – ist ausgestorben | v
+vom Aussterben bedroht sein* | быть под угрозой вымирания | Aufgrund des Klimawandels sind zahlreiche Tier- und Pflanzenarten [[vom Aussterben bedroht]]. |  | v
+
+# s2 Виды животных
+das Säugetier, -tiere | млекопитающее | Obwohl sie im Wasser leben, sind Wale keine Fische, sondern [[Säugetiere]]. |  | n
+das Insekt, Insekten | насекомое | Mit mehr als einer Million verschiedener Arten sind die [[Insekten]] die artenreichste Tiergruppe auf der Erde. |  | n
+das Reptil, Reptilien | рептилия | [[Reptilien]] wie Schlangen und Echsen bevorzugen ein warmes Klima. |  | n
+das Raubtier, -tiere | хищник | In Afrika kann man Löwen und andere [[Raubtiere]] in freier Wildbahn beobachten. |  | n
+das Vieh | скот | Menschen halten [[Vieh]], um sich von der Milch und dem Fleisch der Tiere zu ernähren. |  | n
+der Hai, Haie | акула | [[Haie]] können auch kleine Mengen Blut, die sich im Wasser befinden, riechen. |  | m
+die Robbe, Robben | тюлень | Vor allem früher war das Fleisch von [[Robben]] in der Polarregion eine wichtige Nahrungsquelle. |  | f
+der Frosch, Frösche | лягушка | [[Frösche]] entwickeln sich aus Eiern, die im Wasser abgelegt werden. |  | m
+die Schildkröte, -kröten | черепаха | Sowohl im Wasser als auch an Land findet man unterschiedliche Arten von [[Schildkröten]]. |  | f
+die Schnecke, Schnecken | улитка | Es gibt verschiedene Methoden, die verhindern sollen, dass [[Schnecken]] den Salat im Garten fressen. |  | f
+
+# s3 Насекомые и мелкие животные
+die Spinne, Spinnen | паук | Viele Menschen fürchten sich vor [[Spinnen]], obwohl diese faszinierende Lebewesen sind. | sich fürchten vor + Dat. | f
+die Ameise, Ameisen | муравей | [[Ameisen]] sind dazu fähig, Dinge zu tragen, die viel schwerer sind als ihr eigener Körper. |  | f
+die Mücke, Mücken | комар | [[Mücken]] können eine Reihe von Krankheiten, z. B. Malaria und Gelbfieber, übertragen. |  | f
+die Heuschrecke, Heuschrecken | саранча, кузнечик | Manchmal vernichtet eine große Zahl von [[Heuschrecken]] eine ganze Ernte. |  | f
+der Schmetterling, Schmetterlinge | бабочка | In einem Kokon entwickelt sich aus einer Raupe ein [[Schmetterling]]. |  | m
+die Biene, Bienen | пчела | Manche Menschen reagieren allergisch, wenn sie von einer [[Biene]] gestochen werden. |  | f
+die Fledermaus, -mäuse | летучая мышь | [[Fledermäuse]] sind nachtaktive Tiere, die sich im Dunkeln mithilfe von Ultraschallwellen orientieren. |  | f
+der Zugvogel, -vögel | перелётная птица | Ornithologen beobachten die Flugrouten von [[Zugvögeln]], indem sie einzelne Tiere beringen und ihren Weg verfolgen. |  | m
+
+# s4 Внешний вид животных
+die Flosse, Flossen | плавник | Ein auffälliges Merkmal von Haien ist ihre dreieckige Rücken[[flosse]]. |  | f
+die Kieme, Kiemen | жабра | Mit den [[Kiemen]] filtern Fische den Sauerstoff aus dem Wasser. |  | f
+der Rüssel, Rüssel | хобот | Elefanten können mit ihrem [[Rüssel]] Wasser aufsaugen, aber auch Gegenstände transportieren. |  | m
+der Panzer, Panzer | панцирь | Ein starker [[Panzer]] schützt die Schildkröten vor ihren natürlichen Feinden. |  | m
+der Flügel, Flügel | крыло | Junge Vögel müssen erst lernen, ihre [[Flügel]] richtig zu gebrauchen, bevor sie fliegen können. |  | m
+der Schnabel, Schnäbel | клюв | Raubvögel verfügen über einen kräftigen [[Schnabel]], mit dem sie kleinere Tiere töten können. |  | m
+die Feder, Federn · das Gefieder | перо · оперение | Früher wurden Vogel[[federn]] als Schreibgeräte benutzt. | Bei einigen Vogelarten kann man das Geschlecht an der Farbe des Gefieders erkennen. | f
+das Fell, Felle | шерсть, мех | Zebras erkennt man sofort an ihrem auffälligen, schwarz-weiß gestreiften [[Fell]]. |  | n
+
+# s5 Образ жизни животных
+ein Tier jagen · die Jagd | охотиться · охота | Verschiedene Raubtiere verfügen über ein sehr gutes Gehör und können deshalb auch im Dunkeln [[jagen]]. |  | v
+etw. erbeuten · die Beute | добывать · добыча | Löwen jagen gemeinsam und teilen anschließend das Tier, das sie [[erbeutet]] haben. | Raubkatzen können sich … an ihre Beute heranschleichen | v
+das Haustier, Haustiere | домашнее животное | Die Zahl der Deutschen, die Reptilien als [[Haustiere]] halten, hat in den letzten Jahren deutlich zugenommen. |  | n
+ein Tier füttern · das Futter | кормить животное · корм | Früher wurden Schweine mit Abfällen aus dem Haushalt [[gefüttert]]. |  | v
+weiden · die Weide | пастись · пастбище | Wenn Tiere immer auf derselben Fläche [[weiden]], wird diese schnell verschmutzt. | Die Rinder stehen tagsüber auf der Weide … | v
+ein Tier schlachten | забивать животное | Wenn die Hühner ein bestimmtes Gewicht erreicht haben, werden sie [[geschlachtet]]. |  | v
+die Herde, Herden | стадо | Auf der Suche nach neuen Weideflächen ziehen Nomaden mit ihren [[Herden]] durch das Land. |  | f
+das Rudel, Rudel | стая (волков) | Wölfe leben in [[Rudeln]] und gelten als Tiere mit ausgeprägtem Sozialverhalten. |  | n
+der Schwarm, Schwärme | стая, рой | In der Nähe von Gewässern halten sich oft große [[Schwärme]] von Insekten auf. |  | m
+
+# s6 Растения: общее
+die Vegetation | растительность | In Wüsten ist wegen des Wassermangels kaum [[Vegetation]] vorhanden. |  | f
+das Moos, Moose | мох | Bei feuchtem Klima sind Bäume und Steine häufig von [[Moos]] bedeckt. |  | n
+der Pilz, Pilze | гриб | Man sollte im Wald gesammelte [[Pilze]] nur essen, wenn man essbare, ungenießbare und giftige Sorten voneinander unterscheiden kann. |  | m
+das Kraut, Kräuter | трава (пряная) | Wer im eigenen Garten [[Kräuter]] zieht, kann diese zum Würzen von Speisen verwenden. |  | n
+der Samen, Samen | семя | Durch den Wind werden die [[Samen]] von Pflanzen in der ganzen Umgebung verteilt. |  | m
+keimen · der Keim, Keime | прорастать · росток | Nachdem sie in die Erde gelegt worden sind, müssen Samen regelmäßig gegossen werden, damit sie zu [[keimen]] beginnen. | Die Keime von Kartoffeln … enthalten giftige Alkaloide. | v
+die Wurzel, Wurzeln | корень | Einige Bäume haben [[Wurzeln]], die bis tief in den Boden reichen. |  | f
+der Stängel, Stängel | стебель | Durch den [[Stängel]] der Blume gelangen Wasser und Nährstoffe von den Wurzeln zu den Blättern und Blüten. |  | m
+
+# s7 Деревья и цветение
+der Stamm, Stämme | ствол | Die [[Stämme]] von Mammutbäumen können einen Umfang von mehr als dreißig Metern erreichen. |  | m
+der Ast, Äste | сук, толстая ветка | Oft sind die [[Äste]] von Bäumen so kräftig, dass ein Mensch darauf sitzen kann, ohne dass sie abbrechen. |  | m
+der Zweig, Zweige | ветка | Die [[Zweige]] von Obstbäumen sollten regelmäßig geschnitten werden, damit sie besser wachsen und mehr Früchte tragen. |  | m
+das Blatt, Blätter | лист | Lindenbäume kann man an ihren herzförmigen [[Blättern]] erkennen. |  | n
+das Laub | листва | Im Herbst färbt sich das [[Laub]] der Bäume gelb, orange, rot und schließlich braun. |  | n
+der Laubbaum, -bäume | лиственное дерево | Die meisten [[Laubbäume]] verlieren zu Beginn des Winters ihre Blätter. |  | m
+der Nadelbaum, -bäume | хвойное дерево | So genannter Mischwald besteht zum Teil aus Laubbäumen und zum Teil aus [[Nadelbäumen]]. |  | m
+blühen · die Blüte, Blüten | цвести · цветок, цветение | Wenn der Raps [[blüht]], kann man schon aus großer Entfernung die gelb leuchtenden Felder erkennen. |  | v
+der Pollen, Pollen | пыльца | [[Pollen]] von Bäumen und Blumen, die in die Luft gelangen, können bei Allergikern zu heftigen Reaktionen führen. |  | m
+Pflanzen bestäuben / befruchten · die Bestäubung | опылять · опыление | Wenn Bienen von Blüte zu Blüte fliegen, um Nektar zu sammeln, [[bestäuben]] sie die Pflanzen. |  | v
+sich fortpflanzen · die Fortpflanzung | размножаться · размножение | Viele Blumenarten können [[sich]] nur durch die Bestäubung [[fortpflanzen]]. |  | v
+
+# s8 Генетика: клетки и гены
+die Zelle, Zellen | клетка | Die [[Zellen]] des Körpers leben unterschiedlich lange, bevor sie absterben und durch neue ersetzt werden. |  | f
+der Zellkern, -kerne | клеточное ядро | Der größte Teil der genetischen Informationen befindet sich im [[Zellkern]]. |  | m
+die Stammzelle, -zellen | стволовая клетка | Im Gegensatz zu Hautzellen, Nervenzellen und anderen Zellen des Körpers sind [[Stammzellen]] noch nicht auf eine bestimmte Funktion festgelegt. |  | f
+das Chromosom, Chromosomen | хромосома | Männer verfügen über ein Y-[[Chromosom]], während der Zellkern von Frauen nur X-Chromosomen enthält. |  | n
+das Gen, Gene · genetisch | ген · генетический | Es wird oft darüber diskutiert, wie groß der Einfluss der [[Gene]] auf die Persönlichkeit eines Menschen ist. | … winzige genetische Unterschiede | n
+die Gentechnik | генная инженерия | Die [[Gentechnik]] kann in verschiedenen Bereichen der Medizin eingesetzt werden. |  | f
+das Merkmal, Merkmale | признак | Durch ihre Gene geben Eltern bestimmte [[Merkmale]], z. B. die Haarfarbe, an ihre Kinder weiter. |  | n
+die Eigenschaft, Eigenschaften | свойство, качество | Wird man in Zukunft schon vor der Geburt bestimmen können, welche [[Eigenschaften]] ein Mensch haben wird? |  | f
+etw. vererben · die Vererbung | передавать по наследству · наследственность | Gregor Mendel hat untersucht, wie bestimmte Merkmale an die nächste Generation [[vererbt]] werden. |  | v
+die Erbanlagen (Plural) = das Erbgut | наследственность, генотип | Mendels Forschungen haben gezeigt, dass es dominante und rezessive [[Erbanlagen]] gibt. |  | pl
+
+# s9 Генетика: манипуляции и этика
+mutieren · die Mutation | мутировать · мутация | Aufgrund von Umwelteinflüssen können Gene [[mutieren]]. |  | v
+die DNS = die DNA | ДНК | Heutzutage kann man einen Straftäter überführen, indem man seine [[DNS]] mit Spuren am Tatort vergleicht. |  | f
+die DNA manipulieren = die DNA verändern | модифицировать ДНК | Wissenschaftler haben Methoden entwickelt, mit denen sie die [[DNA manipulieren]] können. |  | v
+genmanipuliert = genetisch verändert | генетически модифицированный | Verbraucherschützer fordern schon lange eine deutliche Kennzeichnung von [[genmanipulierten]] Nahrungsmitteln. |  | v
+eine Pflanze / ein Tier züchten · die Zucht | выводить (породу, сорт) · селекция | Durch die Manipulation des Erbguts kann man Tier- und Pflanzenarten mit bestimmten Eigenschaften [[züchten]]. |  | v
+jdn. / etw. klonen · das Klonen · der Klon | клонировать · клонирование · клон | 1996 haben Wissenschaftler mit dem Schaf „Dolly“ zum ersten Mal ein erwachsenes Säugetier [[geklont]]. | Die Klone … waren häufig nicht lebensfähig. | v
+die Moral · moralisch | мораль · моральный | Viele halten das Klonen von Lebewesen für [[moralisch]] fragwürdig. | Wissenschaftler stehen … vor der Frage, inwieweit die Moral ihrer Forschung Grenzen setzt. | f
+die Ethik · ethisch | этика · этический | Aus [[ethischen]] Gründen ist die Nutzung von embryonalen Stammzellen höchst umstritten. | Die Ethik verbietet es, bestimmte Experimente an Menschen durchzuführen. | f
+
+## b1 Бонус: стволовые клетки (Infobox)
+für die Forschung interessant sein | представлять интерес для науки | Da sich aus Stammzellen unterschiedliche Arten von Körperzellen züchten lassen, sind diese für die medizinische [[Forschung]] sehr [[interessant]]. |  | v
+embryonal / fetal | эмбриональный / фетальный | Zudem ist besonders die Verwendung [[embryonaler]] Stammzellen mit ethischen Problemen verbunden. |  | v
+mit Problemen verbunden sein | быть связанным с проблемами | Zudem ist besonders die Verwendung embryonaler Stammzellen mit ethischen [[Problemen verbunden]]. |  | v
+zu wissenschaftlichen Zwecken | в научных целях | Wenn man diese Zellen [[zu wissenschaftlichen]] oder medizinischen [[Zwecken]] verwendet, wird der Embryo zerstört. |  | v
+etw. vernichten | уничтожать | Es werden also Zellen [[vernichtet]], aus denen sich ein menschliches Lebewesen entwickeln könnte. |  | v
+unter bestimmten Bedingungen erlaubt | разрешено при определённых условиях | Deshalb sind der Import und die Verwendung dieser Stammzellen in Deutschland nur [[unter bestimmten Bedingungen erlaubt]]. |  | v
+
+! aussterben | Perfekt с sein: Die Dinosaurier sind ausgestorben
+! der Samen ↔ der Same | Обе формы: der Samen / der Same (des Samens)
+! das Laub ↔ das Blatt | das Laub — листва (собир., только ед. ч.); das Blatt, die Blätter — лист
+! der Ast ↔ der Zweig | Ast — толстая ветка, сук; Zweig — тонкая ветка
+! die Herde · das Rudel · der Schwarm | Herde — стадо (коровы, овцы); Rudel — стая (волки); Schwarm — стая птиц, рой насекомых
+! erhalten | 1) сохранять (die Artenvielfalt erhalten), 2) получать (einen Brief erhalten)
+! etw. vererben ↔ etw. erben | vererben — передавать по наследству; erben — получать наследство
+! züchten | Выводить породу / сорт; die Zucht — разведение

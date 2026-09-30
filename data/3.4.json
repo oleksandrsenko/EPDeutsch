@@ -1,0 +1,441 @@
+{
+ "id": "3.4",
+ "chapter": 3,
+ "chapterName": "Alltagsleben",
+ "title": "Zeit",
+ "titleRu": "Время",
+ "pages": "123–126",
+ "exercises": "126–130",
+ "solutions": "265",
+ "bookRows": 42,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Тратить и требовать время",
+   "items": [
+    {
+     "de": "Zeit verbringen* mit + D",
+     "ru": "проводить время за чем-то",
+     "ex": "Häufig wird beklagt, dass Kinder und Jugendliche zu viel [[Zeit damit verbringen]], Computerspiele zu spielen.",
+     "note": "verbrachte – hat verbracht",
+     "g": "v"
+    },
+    {
+     "de": "Zeit verbringen* + Lokalangabe",
+     "ru": "проводить время где-то",
+     "ex": "Einen großen Teil unserer Lebenszeit [[verbringen]] wir am Arbeitsplatz.",
+     "note": "verbrachte – hat verbracht",
+     "g": "v"
+    },
+    {
+     "de": "Zeit in Anspruch nehmen* = Zeit beanspruchen",
+     "ru": "отнимать время",
+     "ex": "Das Schreiben und Beantworten von E-Mails [[nimmt]] einen großen Teil der Arbeitszeit [[in Anspruch]].",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "Zeit erfordern",
+     "ru": "требовать времени",
+     "ex": "Es [[erfordert]] viel [[Zeit]], sich gründlich auf eine Prüfung vorzubereiten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zeitaufwändig sein*",
+     "ru": "быть трудоёмким, требовать много времени",
+     "ex": "Nicht nur das Schreiben einer wissenschaftlichen Arbeit ist [[zeitaufwändig]]; auch die vorbereitende Literaturrecherche nimmt viel Zeit in Anspruch.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "unter Zeitdruck stehen*",
+     "ru": "быть в цейтноте",
+     "ex": "Menschen in Pflegeberufen [[stehen]] häufig [[unter Zeitdruck]] und können ihren Patienten deshalb nicht so viel Zeit widmen, wie sie es gerne täten.",
+     "note": "stand – hat gestanden",
+     "g": "v"
+    },
+    {
+     "de": "es eilig haben* = in Eile sein*",
+     "ru": "спешить",
+     "ex": "Berufstätige greifen gerne zu Fastfood-Produkten, wenn sie [[es eilig haben]] und schnell etwas essen möchten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich beeilen",
+     "ru": "торопиться",
+     "ex": "Wir müssen [[uns beeilen]], damit wir pünktlich zu unserem Termin kommen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich (D) Zeit lassen*",
+     "ru": "не торопиться",
+     "ex": "Ernährungsexperten weisen darauf hin, dass es gesünder ist, [[sich]] beim Essen [[Zeit zu lassen]].",
+     "note": "lässt – ließ – hat gelassen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Ускорять и задерживать",
+   "items": [
+    {
+     "de": "sich verzögern",
+     "ru": "задерживаться, откладываться",
+     "ex": "Aufgrund der Wetterbedingungen hat [[sich]] der Start des Flugzeugs um mehrere Stunden [[verzögert]].",
+     "note": "um + Akk.: um zwei Stunden",
+     "g": "v"
+    },
+    {
+     "de": "sich verlängern",
+     "ru": "продлеваться",
+     "ex": "Durch einen Auslandsaufenthalt könnte [[sich]] das Studium um ein Semester [[verlängern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "etw. beschleunigen",
+     "ru": "ускорять что-то",
+     "ex": "Es werden mehr Arbeiter eingestellt, um den Bau der Brücke zu [[beschleunigen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich beschleunigen",
+     "ru": "ускоряться",
+     "ex": "Statistiken zeigen, dass [[sich]] das Bevölkerungswachstum in den letzten Jahrzehnten [[beschleunigt]] hat.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Frist, Fristen",
+     "ru": "срок",
+     "ex": "Die Bewerbungs[[frist]] für das Sommersemester endet am 15. Januar.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Frist einhalten*",
+     "ru": "соблюдать срок",
+     "ex": "Für die Abgabe von Examensarbeiten gelten bestimmte [[Fristen]], die von den Studierenden [[eingehalten]] werden müssen.",
+     "note": "hält ein – hielt ein – hat eingehalten",
+     "g": "v"
+    },
+    {
+     "de": "befristet sein*",
+     "ru": "быть ограниченным по сроку",
+     "ex": "Das Visum ist zunächst auf sechs Monate [[befristet]].",
+     "note": "auf + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "kurzfristig",
+     "ru": "краткосрочно, в короткий срок",
+     "ex": "Das Unternehmen hat gerade einen großen Auftrag erhalten und sucht deshalb [[kurzfristig]] neue Mitarbeiter.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "langfristig",
+     "ru": "долгосрочно, в долгосрочной перспективе",
+     "ex": "Sparmaßnahmen im Bildungsbereich können sich zwar zunächst positiv auf die Staatsfinanzen auswirken, doch [[langfristig]] schaden sie der kulturellen, wirtschaftlichen und sozialen Entwicklung eines Landes.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Моменты и периоды",
+   "items": [
+    {
+     "de": "der Zeitpunkt, -punkte",
+     "ru": "момент (времени)",
+     "ex": "Astronomen können den [[Zeitpunkt]] der nächsten Sonnenfinsternis exakt vorhersagen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "zu diesem Zeitpunkt",
+     "ru": "в тот момент",
+     "ex": "Viele Menschen erinnern sich noch daran, wo sie [[zu diesem Zeitpunkt]] gewesen sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Zeitraum, -räume",
+     "ru": "период (времени)",
+     "ex": "Die Arbeit muss innerhalb eines [[Zeitraums]] von 6 Monaten abgeschlossen sein.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "in diesem Zeitraum",
+     "ru": "в этот период",
+     "ex": "Die Daten der Grafik beziehen sich auf die Jahre 2005 bis 2010. [[In diesem Zeitraum]] hat sich der Anteil der ausländischen Studierenden leicht erhöht.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "im dargestellten Zeitraum",
+     "ru": "за представленный период (о графике)",
+     "ex": "Der Grafik zufolge ist die Zahl der Arbeitslosen [[im dargestellten Zeitraum]] leicht gesunken.",
+     "note": "фраза для описания графиков!",
+     "g": "v"
+    },
+    {
+     "de": "im Laufe der Zeit",
+     "ru": "со временем",
+     "ex": "Zu Beginn eines Auslandsaufenthalts ist vieles fremd und ungewohnt, doch [[im Laufe der Zeit]] gewöhnt man sich an die neue Umgebung.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "im Laufe des Studiums",
+     "ru": "в ходе учёбы",
+     "ex": "[[Im Laufe des Studiums]] lernen Studierende, sich selbstständig mit wissenschaftlichen Themen auseinanderzusetzen.",
+     "note": "+ Genitiv",
+     "g": "v"
+    },
+    {
+     "de": "die Phase, Phasen",
+     "ru": "фаза, этап",
+     "ex": "In der ersten [[Phase]] der Krankheit verspürt der Patient noch keine Beschwerden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "nachhaltig",
+     "ru": "устойчивый, долговременный",
+     "ex": "Nur regelmäßiges Üben und Wiederholen des Gelernten garantiert einen [[nachhaltigen]] Lerneffekt.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nachhaltigkeit",
+     "ru": "устойчивость, экологичность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Прошлое, настоящее, будущее",
+   "items": [
+    {
+     "de": "damals",
+     "ru": "тогда (в прошлом)",
+     "ex": "Im Krieg waren die meisten gesunden Männer an der Front. [[Damals]] mussten viele Frauen die alleinige Verantwortung für die Familie übernehmen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "kürzlich",
+     "ru": "недавно",
+     "ex": "[[Kürzlich]] wurde in der Zeitung darüber berichtet, dass immer mehr Menschen ihre Häuser mit Solaranlagen ausstatten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ehemalig",
+     "ru": "бывший",
+     "ex": "[[Ehemalige]] Fabrikgebäude dienen heute als Veranstaltungsorte für Konzerte und Ausstellungen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "seit einiger Zeit",
+     "ru": "с некоторых пор",
+     "ex": "[[Seit einiger Zeit]] bieten große Unternehmen in ihrer Kantine einmal wöchentlich ausschließlich vegetarische Gerichte an.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "heutzutage",
+     "ru": "в наше время",
+     "ex": "[[Heutzutage]] können komplizierte Berechnungen mithilfe eines Computers innerhalb kurzer Zeit durchgeführt werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "in der heutigen Zeit",
+     "ru": "в наше время",
+     "ex": "[[In der heutigen Zeit]] muss man sich ständig weiterbilden, um in seinem Beruf immer auf dem neuesten Stand zu sein.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "künftig = zukünftig",
+     "ru": "будущий; в будущем",
+     "ex": "Durch Praktika können sich die Studierenden ein realistisches Bild von ihrem [[künftigen]] Beruf machen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdm. bevorstehen*",
+     "ru": "предстоять кому-то",
+     "ex": "Klimaforscher weisen darauf hin, dass der Menschheit schwere Naturkatastrophen [[bevorstehen]].",
+     "note": "stand bevor – hat bevorgestanden · + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "im Voraus",
+     "ru": "заранее",
+     "ex": "Manche Menschen verreisen gerne spontan, während andere ihren Urlaub lange [[im Voraus]] planen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Возраст",
+   "items": [
+    {
+     "de": "…-Jährige (!) (aber: zehnjährig)",
+     "ru": "…-летние",
+     "ex": "60 % der 18- bis 35-[[Jährigen]] nutzen häufig das Internet, um online einzukaufen.",
+     "note": "склоняется как прилагательное",
+     "g": "pl"
+    },
+    {
+     "de": "das Lebensjahr, -jahre",
+     "ru": "год жизни",
+     "ex": "Ab dem 17. [[Lebensjahr]] dürfen junge Menschen Auto fahren, bis zum 18. [[Lebensjahr]] allerdings nur in Begleitung eines Erwachsenen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "mit … Jahren",
+     "ru": "в … лет",
+     "ex": "[[Mit]] 18 [[Jahren]] sind junge Leute volljährig und tragen ab diesem Zeitpunkt allein die Verantwortung für ihre Entscheidungen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "im Alter von + D",
+     "ru": "в возрасте",
+     "ex": "Die meisten Kinder gehen [[im Alter von]] sechs Jahren zum ersten Mal in die Schule.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Menschen mittleren Alters",
+     "ru": "люди среднего возраста",
+     "ex": "[[Menschen mittleren Alters]] erleben manchmal eine Krise, in der sie den Wunsch haben, ihr Leben zu ändern.",
+     "note": "Genitiv без артикля",
+     "g": "pl"
+    },
+    {
+     "de": "mit zunehmendem Alter",
+     "ru": "с возрастом",
+     "ex": "Es wird oft behauptet, dass das Lernen [[mit zunehmendem Alter]] schwieriger wird.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: устойчивое развитие (Infobox)",
+   "items": [
+    {
+     "de": "Verwendung finden*",
+     "ru": "находить применение",
+     "ex": "Der Begriff „Nachhaltigkeit“ [[findet]] in ökologischen, wirtschaftlichen und politischen Zusammenhängen immer häufiger [[Verwendung]].",
+     "note": "fand – hat gefunden",
+     "g": "v"
+    },
+    {
+     "de": "Ressourcen verbrauchen",
+     "ru": "расходовать ресурсы",
+     "ex": "… dass zu viele [[Ressourcen verbraucht]] wurden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "rückgängig machen",
+     "ru": "отменить, обратить вспять",
+     "ex": "Teilweise sind ökologische Schäden entstanden, die nur schwer oder gar nicht [[rückgängig gemacht]] werden können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "nachhaltig wirtschaften",
+     "ru": "вести хозяйство устойчиво",
+     "ex": "Das heißt, wir müssen [[nachhaltig wirtschaften]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "fossile Brennstoffe",
+     "ru": "ископаемое топливо",
+     "ex": "Es ist allgemein bekannt, dass [[fossile Brennstoffe]] wie Kohle oder Öl endlich sind.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "endlich",
+     "ru": "конечный, исчерпаемый",
+     "ex": "… dass fossile Brennstoffe wie Kohle oder Öl [[endlich]] sind.",
+     "note": "здесь не «наконец»!",
+     "g": "v"
+    },
+    {
+     "de": "die Energiegewinnung",
+     "ru": "получение энергии",
+     "ex": "Deshalb ist es notwendig, andere Formen der [[Energiegewinnung]] zu entwickeln.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "unbegrenzt verfügbar",
+     "ru": "доступный без ограничений",
+     "ex": "Die Solarenergie beispielsweise ist nachhaltig, weil sie [[unbegrenzt verfügbar]] ist.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "Zeit verbringen ↔ Zeit ausgeben",
+   "v": "Время проводят: Zeit verbringen. Ausgeben — только деньги"
+  },
+  {
+   "k": "sich Zeit lassen",
+   "v": "sich в Dativ: Lass dir Zeit! Ich lasse mir Zeit."
+  },
+  {
+   "k": "damals ↔ dann ↔ als",
+   "v": "damals — тогда (давно, в прошлом); dann — потом; als — союз «когда» (однократно в прошлом)"
+  },
+  {
+   "k": "ehemalig ↔ früher",
+   "v": "Der ehemalige / frühere Präsident — бывший президент"
+  },
+  {
+   "k": "…-Jährige",
+   "v": "die 18- bis 35-Jährigen (сущ., с большой буквы); ein zehnjähriges Kind (прил., с маленькой)"
+  },
+  {
+   "k": "im Laufe + Gen.",
+   "v": "im Laufe der Zeit, im Laufe des Studiums, im Laufe des Jahres"
+  },
+  {
+   "k": "endlich",
+   "v": "1) наконец; 2) конечный, исчерпаемый (endliche Ressourcen)"
+  },
+  {
+   "k": "bevorstehen + D",
+   "v": "Uns steht eine schwere Zeit bevor. Die Prüfung steht bevor"
+  }
+ ]
+}

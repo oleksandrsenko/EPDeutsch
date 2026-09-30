@@ -1,0 +1,95 @@
+@id 4.5
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Tourismus
+@titleRu Туризм
+@pages 177–180
+@exercises 181–183
+@solutions 268
+@bookRows 51
+
+# s1 Отпуск и путешествия
+Urlaub haben* | быть в отпуске | Wenn ich [[Urlaub habe]], schlafe ich lange, lese oder arbeite im Garten. |  | v
+Urlaub machen | проводить отпуск (куда-то ехать) | Dieses Jahr [[machen]] wir keinen [[Urlaub]], sondern bleiben in den Ferien zu Hause. |  | v
+den Urlaub verbringen* | проводить отпуск | Manche Menschen [[verbringen]] ihren Sommer[[urlaub]] immer am gleichen Ort. | verbrachte – hat verbracht | v
+verreisen | уезжать (в поездку) | Jemand muss sich um die Haustiere kümmern, wenn ihre Besitzer [[verreisen]]. | ist verreist | v
+eine Reise unternehmen* | совершить поездку | Es lohnt sich, eine [[Reise zu unternehmen]], um neue Orte und Menschen kennen zu lernen. | unternimmt – unternahm – hat unternommen | v
+auf Reisen | в поездках, в путешествии | Schließen Sie eine Auslandskrankenversicherung ab, damit Sie sich [[auf Reisen]] problemlos medizinisch behandeln lassen können. |  | v
+die Klassenfahrt, -fahrten | школьная поездка класса | Die 11. Klasse des Einstein-Gymnasiums unternimmt im Herbst eine 10-tägige [[Klassenfahrt]] nach London. |  | f
+die Dienstreise, -reisen | командировка | Oft sieht man während einer [[Dienstreise]] nur den Flughafen, das Hotel und den Konferenzraum. |  | f
+
+# s2 Виды путешествий
+die Pauschalreise, -reisen | турпакет | Eine [[Pauschalreise]] hat den Vorteil, dass man nicht selbst den Flug oder das Hotel buchen muss, weil alles im Reisepreis enthalten ist. |  | f
+der Cluburlaub, -urlaube | отдых в клубном отеле | [[Cluburlaub]] ist gut für Familien geeignet, da im Hotel oft auch ein Betreuungsprogramm für Kinder angeboten wird. |  | m
+die Kreuzfahrt, -fahrten | круиз | Eine [[Kreuzfahrt]] bietet die Möglichkeit, verschiedene Orte zu bereisen und gleichzeitig den Komfort an Bord zu genießen. |  | f
+die Studienreise, -reisen | познавательная поездка | Wenn Sie viel über die Geschichte und Kultur eines Landes erfahren möchten, könnte eine [[Studienreise]] interessant für Sie sein. |  | f
+die Individualreise, -reisen | самостоятельное путешествие | Im Gegensatz zu einer Pauschalreise kann man eine [[Individualreise]] ganz nach eigenen Vorstellungen gestalten. |  | f
+der Massentourismus | массовый туризм | Leider besteht die Gefahr, dass die Landschaft durch den [[Massentourismus]] stark verändert oder sogar zerstört wird. |  | m
+der sanfte / nachhaltige Tourismus | мягкий (устойчивый) туризм | Aufgrund des wachsenden Umweltbewusstseins gewinnt der [[sanfte]] / [[nachhaltige Tourismus]] immer mehr Anhänger. |  | m
+
+# s3 Планирование поездки и жильё
+eine Reise buchen | забронировать поездку | Wenn Sie in den Sommerferien verreisen möchten, sollten Sie die [[Reise]] frühzeitig [[buchen]]. |  | v
+die Buchung einer Reise | бронирование поездки |  |  | f
+das Reisebüro, -büros | турагентство | Da Reisen heutzutage leicht im Internet gebucht werden können, verzichten viele Menschen darauf, ein [[Reisebüro]] aufzusuchen. |  | n
+die Fluggesellschaft, -gesellschaften = die Fluglinie, -linien | авиакомпания | Die Zahl der [[Fluggesellschaften]], die günstige Flüge anbieten, ist in den vergangenen Jahren stark gewachsen. |  | f
+übernachten | ночевать | Im Hotel zu [[übernachten]] ist sicherlich bequem, aber nicht unbedingt günstig. | неотделяемая: hat übernachtet | v
+die Übernachtung | ночёвка |  |  | f
+die Unterkunft, Unterkünfte | жильё, размещение | Reisende, die nicht im Hotel übernachten möchten, können zwischen verschiedenen anderen [[Unterkünften]] wählen. |  | f
+die Ferienwohnung, -wohnungen | квартира для отдыха | Eine [[Ferienwohnung]] bietet mehr Freiraum und Unabhängigkeit als ein Hotelzimmer. |  | f
+
+# s4 Кемпинг
+campen | жить в кемпинге | Wer in freier Natur übernachten möchte, sollte sich vorher darüber informieren, ob es erlaubt ist, dort zu [[campen]]. |  | v
+das Camping | кемпинг (отдых) |  |  | n
+der Campingplatz, -plätze | кемпинг (площадка) | Viele [[Campingplätze]] befinden sich inmitten der Natur, z. B. an einem Fluss oder einem See. |  | m
+der Wohnwagen, -wagen | дом на колёсах, трейлер | [[Wohnwagen]] sind zwar ziemlich teuer, doch wenn man einen hat, ist man im Urlaub sehr flexibel und muss kein Geld für ein Hotel ausgeben. |  | m
+zelten | жить в палатке | Für Kinder und Jugendliche ist es oft noch ein Abenteuer, draußen zu [[zelten]]. |  | v
+das Zelt, Zelte | палатка | Ein [[Zelt]] schützt zwar vor Regen, doch bei großer Hitze oder starkem Wind kann es darin recht unangenehm werden. |  | n
+die Jugendherberge, -herbergen | молодёжный хостел | In allen größeren Städten gibt es [[Jugendherbergen]], in denen auch größere Gruppen preisgünstig übernachten können. |  | f
+
+# s5 На месте отдыха
+der Reiseleiter / die Reiseleiterin, Reiseleiter | гид, руководитель группы | Als [[Reiseleiter]] muss man kontaktfreudig sein und gut mit Menschen umgehen können. |  | m
+der Reiseführer, -führer | путеводитель | Ein guter [[Reiseführer]] enthält viele interessante Informationen, Stadtpläne und oft auch einige wichtige Wörter in der Landessprache. | также: гид (человек) | m
+das Reiseziel, -ziele | цель поездки, пункт назначения | Nach einem langen Flug kommt man oft erschöpft am [[Reiseziel]] an und möchte sich erst einmal ausruhen. |  | n
+das Gastland, -länder = das Reiseland, -länder | принимающая страна | Touristen sollten sich vor dem Urlaub über die Kultur des [[Gastlandes]] informieren. |  | n
+die Sehenswürdigkeit, Sehenswürdigkeiten | достопримечательность | Der Eiffelturm zählt zu den berühmtesten [[Sehenswürdigkeiten]] von Paris. | zählen zu + Dat. | f
+besichtigen | осматривать | Nicht alle Touristen haben Interesse daran, im Urlaub Museen zu [[besichtigen]]. |  | v
+Land und Leute kennenlernen | познакомиться со страной и людьми | Um [[Land und Leute]] wirklich [[kennenzulernen]], sollte man nicht nur mit dem Bus herumfahren und Sehenswürdigkeiten besichtigen. |  | v
+# s5b Местные жители и кругозор
+einheimisch | местный | Sie sollten unbedingt einige [[einheimische]] Gerichte probieren, wenn Sie auf Reisen sind. |  | v
+der / die Einheimische, Einheimische (!) | местный житель | Wer den [[Einheimischen]] mit Offenheit und Respekt begegnet, kann die Kultur des Reiselandes hautnah erleben. | склоняется как прилагательное; begegnen + Dat. | m
+
+gastfreundlich | гостеприимный | Oft trifft man [[gastfreundliche]] Menschen, die die Reisenden manchmal sogar zu einem Tee oder Kaffee in ihr Haus einladen. |  | v
+die Gastfreundschaft | гостеприимство |  |  | f
+mit jdm. ins Gespräch kommen* | завязать разговор с кем-то | Wenn man Restaurants besucht, in denen die Einheimischen verkehren, hat man Gelegenheit, mit den Menschen dort [[ins Gespräch zu kommen]]. | kam – ist gekommen | v
+seinen Horizont erweitern | расширять кругозор | Viele Menschen reisen, um die Welt kennen zu lernen und ihren [[Horizont zu erweitern]]. |  | v
+die Lebensweise, -weisen | образ жизни | Das Verständnis für eine völlig andere [[Lebensweise]] kann wachsen, wenn man sich die Zeit nimmt, Land und Leute intensiv kennen zu lernen. |  | f
+# s6 Обычаи и природа
+die Sitte, Sitten | обычай, нравы | Touristen sollten sich der Tatsache bewusst sein, dass sich die [[Sitten]] und Verhaltensweisen im Ausland von den eigenen unterscheiden. | sich + Gen. bewusst sein | f
+der Brauch, Bräuche | обычай, традиция | Auch wenn in mehreren Ländern die gleichen Feste gefeiert werden, können die [[Bräuche]], die mit diesen Festen verbunden sind, sehr unterschiedlich sein. |  | m
+etw. pflegen | поддерживать, хранить (традиции) | Viele Menschen meinen, dass man seine Sitten und Bräuche [[pflegen]] sollte, damit Traditionen nicht verlorengehen. |  | v
+etw. bewahren | сохранять | Der Tourismus kann dazu beitragen, die Traditionen eines Landes zu [[bewahren]]. |  | v
+
+exotisch | экзотический | In tropischen Regionen kann man [[exotische]] Tier- und Pflanzenarten in ihrer natürlichen Umgebung sehen. |  | v
+idyllisch | идиллический | Naturfreunde bringen aus dem Urlaub oft Fotos von [[idyllischen]] Landschaften mit nach Hause. |  | v
+unberührt | нетронутый | Nur auf wenigen Inseln findet man noch [[unberührte]] Strände. |  | v
+abgelegen / entlegen | отдалённый, уединённый | Um sich vom Alltagsstress zu erholen, suchen manche Urlauber Ruhe in [[abgelegenen]] / [[entlegenen]] Dörfern. |  | v
+
+## b1 Бонус: последствия туризма (Infobox)
+die Wachstumsbranche | растущая отрасль | Der Tourismus gilt als [[Wachstumsbranche]] mit jährlichen Umsätzen in Milliardenhöhe. |  | f
+profitieren von + D | получать выгоду от | In wirtschaftlicher Hinsicht können sie vom Tourismus [[profitieren]]. |  | v
+die einheimische Wirtschaft beleben | оживлять местную экономику | … was die [[einheimische Wirtschaft belebt]] und mehr Arbeitsplätze schafft. |  | v
+jdm. zugutekommen* | идти на пользу кому-то | Ein weiterer Vorteil ist der Ausbau der Infrastruktur, der auch der Bevölkerung des Landes [[zugutekommt]]. | kam zugute – ist zugutegekommen | v
+vernachlässigt werden | оставаться без внимания | Andere Branchen entwickeln sich deshalb nicht oder werden [[vernachlässigt]]. |  | v
+die Artenvielfalt | биоразнообразие | Das bedroht auch die [[Artenvielfalt]] in diesen Gebieten. |  | f
+die Schattenseite, -n | теневая сторона | Angesichts der [[Schattenseiten]] des Tourismus … entstanden alternative Konzepte. |  | f
+die Schonung natürlicher Ressourcen | бережное отношение к ресурсам | Ein weiterer wichtiger Aspekt ist die [[Schonung natürlicher Ressourcen]]. |  | f
+jdn. einbeziehen* | вовлекать | Bei der Entwicklung des nachhaltigen Tourismus werden die Einheimischen stärker [[einbezogen]]. | bezog ein – hat einbezogen | v
+
+! Urlaub haben ↔ Urlaub machen | haben — быть в отпуске (не работать); machen — ехать отдыхать
+! verreisen | Perfekt с sein: Sie sind verreist (уехали); не путать с reisen (путешествовать)
+! übernachten | Неотделяемая: Wir haben im Hotel übernachtet
+! der / die Einheimische | Склоняется как прилагательное: ein Einheimischer, mit Einheimischen
+! den Einheimischen begegnen | begegnen + Dat., Perfekt с sein: Ich bin ihm begegnet
+! der Reiseführer | 1) путеводитель (книга); 2) гид. Руководитель группы — der Reiseleiter
+! Sitten und Bräuche | Устойчивая пара: Sitten und Bräuche pflegen / respektieren
+! zählen zu + D | Der Eiffelturm zählt zu den berühmtesten Sehenswürdigkeiten

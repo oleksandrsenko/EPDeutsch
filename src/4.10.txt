@@ -1,0 +1,53 @@
+@id 4.10
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Religion
+@titleRu Религия
+@pages 224–225
+@exercises 226–227
+@solutions 270
+@bookRows 22
+
+# s1 Вера и обряды
+einer Religionsgemeinschaft / einer Kirche angehören | принадлежать к религиозной общине / церкви | Knapp ein Drittel der Deutschen [[gehört]] der katholischen [[Kirche an]]. | + Dat. | v
+gläubig sein* = religiös sein* | быть верующим | Es gibt immer mehr Menschen, die aus der Kirche austreten, obwohl sie [[gläubig]] sind. | aus der Kirche austreten | v
+der / die Gläubige, Gläubige (!) | верующий | Freitags versammeln sich die [[Gläubigen]] in der Moschee. | склоняется как прилагательное | m
+glauben an + A · der Glaube | верить во что-то · вера | Angehörige monotheistischer Religionen [[glauben daran]], dass es nur einen Gott gibt. | der Glaube, des Glaubens | v
+zweifeln an + D · der Zweifel, Zweifel | сомневаться в чём-то · сомнение | Nach einem schweren Schicksalsschlag kann es vorkommen, dass ein Mensch [[an]] seinem Glauben [[zweifelt]]. | an + Dat. | v
+beten · das Gebet, Gebete | молиться · молитва | Im Rahmen einer religiösen Erziehung [[beten]] die Eltern oft gemeinsam mit ihren Kindern. |  | v
+fasten · das Fasten | поститься · пост | Manche Menschen [[fasten]], indem sie auf bestimmte Lebensmittel verzichten, andere nehmen gar keine Nahrung zu sich. |  | v
+pilgern · die Pilgerreise, -reisen | совершать паломничество · паломничество | Jedes Jahr [[pilgern]] Millionen Muslime nach Mekka. | ist gepilgert | v
+das Paradies | рай | Auf Bildern wird das [[Paradies]] oft als schöner Garten dargestellt. |  | n
+die Hölle | ад | Im Gegensatz zum Paradies ist die [[Hölle]] ein schrecklicher Ort, an dem Schmerz und Qual herrschen. |  | f
+wiedergeboren werden* · die Wiedergeburt | перерождаться · перерождение | Die Vorstellung, dass man nicht nur einmal lebt, sondern [[wiedergeboren]] wird, besteht in mehreren Religionen. |  | v
+
+# s2 Святое, обряды, духовенство
+heilig | святой | [[Heilige]] Personen, Orte oder Gegenstände werden mit besonderem Respekt behandelt und verehrt. |  | v
+tabu sein* · das Tabu, Tabus | быть табу · табу | In einigen Religionen ist der Verzehr bestimmter Nahrungsmittel [[tabu]]. | Tabus sind kulturell unterschiedlich … | v
+der Gottesdienst, -dienste | богослужение | Früher war es für Christen selbstverständlich, am Sonntag den [[Gottesdienst]] zu besuchen. |  | m
+jdn. taufen · die Taufe, Taufen | крестить · крещение | Bei einer christlichen [[Taufe]] sind neben den Eltern auch die Taufpaten anwesend, die eine besondere Rolle im Leben des Kindes spielen sollen. |  | v
+jdn. trauen · die Trauung, Trauungen | венчать, регистрировать брак · бракосочетание | Heutzutage lassen sich manche Hochzeitspaare nur noch standesamtlich [[trauen]] und verzichten auf eine kirchliche Trauung. | ≠ jdm. trauen (доверять) | v
+jdn. beerdigen / beisetzen · die Beerdigung / Beisetzung | хоронить · похороны | Wenn ein Mensch [[beerdigt]] wird, haben die Angehörigen Gelegenheit, Abschied von dem Verstorbenen zu nehmen. |  | v
+der Prophet / die Prophetin, Propheten | пророк | Ein [[Prophet]] gibt Botschaften, die er von Gott erhalten hat, an die Menschen weiter. | n-склонение | m
+der Priester / die Priesterin, Priester | священник | In der katholischen Kirche können nur Männer als [[Priester]] tätig sein. |  | m
+das Kloster, Klöster | монастырь | Das Leben im [[Kloster]] folgt festen Regeln und einem strukturierten Tagesablauf. |  | n
+der Mönch, Mönche | монах | Am Morgen versammeln sich die [[Mönche]] zum gemeinsamen Gebet in der Kapelle. |  | m
+die Nonne, Nonnen | монахиня | Eine [[Nonne]] hat innerhalb des Ordens eine feste Aufgabe, der sie tagsüber nachgeht. |  | f
+
+## b1 Бонус: религии и уроки религии (Infobox + Übung I)
+das Christentum · die Christen · christlich · die Kirche | христианство · христиане · христианский · церковь | Knapp ein Drittel der Deutschen gehört der katholischen [[Kirche]] an. |  | n
+der Islam · die Muslime · muslimisch · die Moschee | ислам · мусульмане · мусульманский · мечеть | Freitags versammeln sich die Gläubigen in der [[Moschee]]. |  | m
+das Judentum · die Juden · jüdisch · die Synagoge | иудаизм · евреи · еврейский · синагога |  |  | n
+der Buddhismus / der Hinduismus · der Tempel | буддизм / индуизм · храм |  |  | m
+der Religionsunterricht | урок религии | An den meisten staatlichen Schulen ist [[Religionsunterricht]] ein normales Schulfach. |  | m
+freiwillig | добровольный | Allerdings ist die Teilnahme am Religionsunterricht [[freiwillig]]. |  | v
+die Konfession, -en | вероисповедание, конфессия | … an dem die Schüler teilnehmen, die der jeweiligen [[Konfession]] angehören. |  | f
+das Ersatzfach · die Ethik | заменяющий предмет · этика | … wird in den meisten Bundesländern ein [[Ersatzfach]] angeboten. Oft heißt es Ethik. |  | n
+die Weltanschauung | мировоззрение | … dessen Inhalte unabhängig von einer bestimmten Religion oder [[Weltanschauung]] sind. |  | f
+
+! glauben an + A ↔ zweifeln an + D | Ich glaube an Gott (Akk.), ich zweifle an meinem Glauben (Dat.)
+! jdn. trauen ↔ jdm. trauen | jdn. trauen — венчать (Akk.); jdm. trauen — доверять (Dat.)
+! der Glaube | Особое склонение: des Glaubens, dem Glauben
+! angehören + D | Er gehört keiner Religionsgemeinschaft an
+! der / die Gläubige | Склоняется как прилагательное: ein Gläubiger, die Gläubigen
+! der Prophet | n-склонение: den Propheten

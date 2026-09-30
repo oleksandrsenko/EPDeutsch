@@ -1,0 +1,547 @@
+{
+ "id": "2.4",
+ "chapter": 2,
+ "chapterName": "Der Mensch",
+ "title": "Sport",
+ "titleRu": "Спорт",
+ "pages": "76–79",
+ "exercises": "80–83",
+ "solutions": "262",
+ "bookRows": 55,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Заниматься спортом",
+   "items": [
+    {
+     "de": "Sport treiben*",
+     "ru": "заниматься спортом",
+     "ex": "Ärzte empfehlen, regelmäßig [[Sport zu treiben]], um Krankheiten vorzubeugen.",
+     "note": "trieb – hat getrieben",
+     "g": "v"
+    },
+    {
+     "de": "sportlich aktiv sein*",
+     "ru": "быть физически активным",
+     "ex": "Während einige Touristen im Urlaub am liebsten am Strand liegen, möchten andere [[sportlich aktiv sein]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich sportlich betätigen",
+     "ru": "заниматься спортом (офиц.)",
+     "ex": "Wer [[sich]] mehrmals pro Woche [[sportlich betätigt]], hat ein geringeres Diabetes-Risiko.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die sportliche Betätigung",
+     "ru": "занятия спортом",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sportlich",
+     "ru": "спортивный",
+     "ex": "Einige Schüler sind sehr [[sportlich]]: Sie erbringen im Sportunterricht gute Leistungen und treiben auch in ihrer Freizeit oft und gerne Sport.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "unsportlich",
+     "ru": "неспортивный",
+     "ex": "Auch Menschen, die sich für [[unsportlich]] halten, können eine Sportart finden, die für sie geeignet ist.",
+     "note": "sich für + Akk. halten",
+     "g": "v"
+    },
+    {
+     "de": "fit",
+     "ru": "в хорошей форме",
+     "ex": "Um [[fit]] zu bleiben, braucht man Bewegung, aber auch genügend Schlaf.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Fitness",
+     "ru": "физическая форма",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "sich fit halten*",
+     "ru": "поддерживать форму",
+     "ex": "Es muss nicht immer Marathonlauf sein; auch durch Gymnastik, Spaziergänge oder Yoga kann man [[sich fit halten]].",
+     "note": "hält – hielt – hat gehalten",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Сила, выносливость, клубы",
+   "items": [
+    {
+     "de": "die Kraft, Kräfte",
+     "ru": "сила",
+     "ex": "Für das Gewichtheben braucht man viel [[Kraft]], die man durch regelmäßiges Muskeltraining steigern kann.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ausdauer",
+     "ru": "выносливость",
+     "ex": "Andere Sportarten erfordern viel [[Ausdauer]], beispielsweise das Schwimmen oder das Laufen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Sportverein, -vereine",
+     "ru": "спортивный клуб",
+     "ex": "[[Sportvereine]] bieten nicht nur regelmäßige Trainingsstunden an, sondern organisieren auch gemeinsame Feste und Wettkämpfe.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einem Sportverein beitreten*",
+     "ru": "вступить в спортклуб",
+     "ex": "Wer Lust hat, Sport zu treiben, kann [[einem Sportverein beitreten]].",
+     "note": "tritt bei – trat bei – ist beigetreten · + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "das Mitglied, Mitglieder",
+     "ru": "член",
+     "ex": "Als [[Mitglied]] des Sportvereins kann man die Sportanlagen oft auch außerhalb der Trainingszeiten kostenlos nutzen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Leistungssport",
+     "ru": "профессиональный спорт, спорт высших достижений",
+     "ex": "[[Leistungssport]] nimmt viel Zeit in Anspruch, da man intensiv trainieren muss, um an Wettkämpfen teilzunehmen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Breitensport",
+     "ru": "массовый (любительский) спорт",
+     "ex": "Im Gegensatz zum Leistungssport stehen beim [[Breitensport]] die Freude an der Bewegung und der Erhalt der körperlichen Fitness im Mittelpunkt.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Виды спорта",
+   "items": [
+    {
+     "de": "die Sportart, -arten",
+     "ru": "вид спорта",
+     "ex": "Jeder sollte verschiedene [[Sportarten]] ausprobieren, um die zu finden, die ihm am meisten Spaß macht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Sportart betreiben*",
+     "ru": "заниматься видом спорта",
+     "ex": "Erfolgreiche Sportler [[betreiben]] ihre [[Sportart]] oft schon seit frühester Kindheit.",
+     "note": "betrieb – hat betrieben",
+     "g": "v"
+    },
+    {
+     "de": "die Leichtathletik",
+     "ru": "лёгкая атлетика",
+     "ex": "Zur [[Leichtathletik]] zählen verschiedene Sportarten wie Laufen, Werfen und Springen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "turnen",
+     "ru": "заниматься гимнастикой (на снарядах)",
+     "ex": "",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Turnen",
+     "ru": "спортивная гимнастика",
+     "ex": "Das [[Turnen]] an Sportgeräten, z. B. dem Barren oder dem Reck, erfordert viel Kraft und Geschicklichkeit.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Kampfsport",
+     "ru": "единоборства",
+     "ex": "[[Kampfsport]]arten fördern neben Kraft und Beweglichkeit auch Konzentration und Disziplin.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Wintersport",
+     "ru": "зимние виды спорта",
+     "ex": "[[Wintersport]] ist in Deutschland sehr beliebt, und die Skigebiete in den Alpen bieten Wintersportlern meist ideale Bedingungen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Mannschaftssport",
+     "ru": "командный спорт",
+     "ex": "[[Mannschaftssport]] fördert nicht nur die Fitness, sondern auch soziale Kompetenzen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Спортсмены и места",
+   "items": [
+    {
+     "de": "die Mannschaft, Mannschaften",
+     "ru": "команда",
+     "ex": "Die Fans stehen treu zu ihrer [[Mannschaft]] – auch dann, wenn sie ein Spiel verliert.",
+     "note": "zu jdm. stehen — поддерживать",
+     "g": "f"
+    },
+    {
+     "de": "der Profi, Profis",
+     "ru": "профессионал",
+     "ex": "Eine Karriere als Fußball[[profi]] kann Geld und Ruhm bedeuten, erfordert aber vor allem harte Arbeit.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Amateur, Amateure",
+     "ru": "любитель",
+     "ex": "Neben Turnieren für professionelle Sportler gibt es auch Wettbewerbe für [[Amateure]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Athlet, Athleten",
+     "ru": "атлет, спортсмен",
+     "ex": "Am Tag vor dem Wettbewerb absolvieren die [[Athleten]] eine letzte Trainingseinheit.",
+     "note": "n-склонение: den Athleten",
+     "g": "m"
+    },
+    {
+     "de": "das Stadion, Stadien",
+     "ru": "стадион",
+     "ex": "Für Fußballfans ist es ein besonderes Erlebnis, ein Spiel gemeinsam im [[Stadion]] zu erleben.",
+     "note": "мн. ч. die Stadien",
+     "g": "n"
+    },
+    {
+     "de": "das Spielfeld, -felder",
+     "ru": "игровое поле",
+     "ex": "Der verletzte Spieler muss das [[Spielfeld]] verlassen, um sich ärztlich behandeln zu lassen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Sporthalle, -hallen",
+     "ru": "спортзал",
+     "ex": "Wenn es zu kalt ist, um draußen zu trainieren, findet das Training in der [[Sporthalle]] statt.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Соревнования",
+   "items": [
+    {
+     "de": "der Wettkampf, -kämpfe",
+     "ru": "состязание, соревнование",
+     "ex": "Während der Olympischen Spiele werden die sportlichen [[Wettkämpfe]] im Fernsehen übertragen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Wettbewerb, -bewerbe",
+     "ru": "конкурс, соревнование",
+     "ex": "Die Möglichkeit, an einem [[Wettbewerb]] teilzunehmen und gegen andere Sportler anzutreten, kann die Motivation deutlich erhöhen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "an einem Wettbewerb teilnehmen*",
+     "ru": "участвовать в соревновании",
+     "ex": "Erfolgreiche Mannschaften können an bundesweiten oder sogar internationalen [[Wettbewerben teilnehmen]].",
+     "note": "nimmt teil – nahm teil – hat teilgenommen",
+     "g": "v"
+    },
+    {
+     "de": "die Olympischen Spiele (Plural) = die Olympiade, Olympiaden",
+     "ru": "Олимпийские игры",
+     "ex": "Es ist der Traum jedes Athleten, einmal an den [[Olympischen Spielen]] teilzunehmen.",
+     "note": "",
+     "g": "pl"
+    },
+    {
+     "de": "die Meisterschaft, Meisterschaften",
+     "ru": "чемпионат",
+     "ex": "Die junge Schwimmerin hat bei den Landes[[meisterschaften]] den zweiten Platz belegt.",
+     "note": "einen Platz belegen",
+     "g": "f"
+    },
+    {
+     "de": "sich qualifizieren für + A",
+     "ru": "квалифицироваться, пройти отбор",
+     "ex": "Die Mannschaft hat hart trainiert, um [[sich für]] die Europameisterschaft zu [[qualifizieren]].",
+     "note": "für + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Qualifikation",
+     "ru": "квалификация, отбор",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Rekord, Rekorde",
+     "ru": "рекорд",
+     "ex": "Der Welt[[rekord]] im Kugelstoßen liegt zurzeit bei 23,12 Metern.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Rekord aufstellen",
+     "ru": "установить рекорд",
+     "ex": "Obwohl man denken könnte, dass die Grenzen sportlicher Leistungen erreicht sind, [[stellen]] Sportler immer wieder neue [[Rekorde auf]].",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Финал, победа, награды",
+   "items": [
+    {
+     "de": "das Finale, Finale",
+     "ru": "финал",
+     "ex": "Am Ende der Weltmeisterschaft treten zwei Mannschaften im [[Finale]] gegeneinander an.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Finale erreichen = ins Finale kommen = im Finale sein",
+     "ru": "выйти в финал",
+     "ex": "Der Trainer erklärte den Journalisten, seine Mannschaft wolle auf jeden Fall das [[Finale erreichen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Gegner, Gegner",
+     "ru": "противник, соперник",
+     "ex": "Sportler studieren ihren [[Gegner]] vor einem Wettkampf genau, um sich auf dessen Strategie vorzubereiten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "den Gegner besiegen / die gegnerische Mannschaft besiegen",
+     "ru": "победить соперника",
+     "ex": "Um die [[gegnerische Mannschaft]] zu [[besiegen]], müssen sich die Athleten nicht nur körperlich, sondern auch mental auf den Wettkampf vorbereiten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Sieger, Sieger",
+     "ru": "победитель",
+     "ex": "Der [[Sieger]] des Halbfinales tritt im Finale gegen einen neuen Gegner an.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Medaille, Medaillen",
+     "ru": "медаль",
+     "ex": "Die drei besten Sportler eines Wettbewerbs erhalten eine Gold-, Silber- oder Bronze[[medaille]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Pokal, Pokale",
+     "ru": "кубок",
+     "ex": "In einer feierlichen Zeremonie wird dem Sieger oder der Siegerin der goldene [[Pokal]] überreicht.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "eine Medaille / einen Pokal gewinnen*",
+     "ru": "выиграть медаль / кубок",
+     "ex": "Die Sportlerin hat bei den Olympischen Spielen zwei [[Medaillen gewonnen]].",
+     "note": "gewann – hat gewonnen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Честная игра и допинг",
+   "items": [
+    {
+     "de": "sich fair verhalten*",
+     "ru": "вести себя честно",
+     "ex": "Beim Sport können Jugendliche lernen, [[sich]] anderen gegenüber [[fair zu verhalten]].",
+     "note": "verhält – verhielt – hat verhalten",
+     "g": "v"
+    },
+    {
+     "de": "die Regeln einhalten*",
+     "ru": "соблюдать правила",
+     "ex": "Schiedsrichter oder Wettkampfrichter sorgen dafür, dass die Sportler die [[Regeln einhalten]].",
+     "note": "hält ein – hielt ein – hat eingehalten",
+     "g": "v"
+    },
+    {
+     "de": "gegen die Regeln verstoßen*",
+     "ru": "нарушать правила",
+     "ex": "Wenn Sportler [[gegen die Regeln verstoßen]], können sie vom Wettkampf ausgeschlossen werden.",
+     "note": "verstößt – verstieß – hat verstoßen",
+     "g": "v"
+    },
+    {
+     "de": "der Schiedsrichter, Schiedsrichter",
+     "ru": "судья, рефери",
+     "ex": "Der [[Schiedsrichter]] kann Spieler vom Platz schicken, wenn sie sich nicht fair verhalten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "dopen",
+     "ru": "принимать допинг",
+     "ex": "Sportler, die [[gedopt]] haben, dürfen für mehrere Jahre nicht bei Wettkämpfen antreten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Doping",
+     "ru": "допинг",
+     "ex": "Es werden immer neue Formen von [[Doping]] entwickelt, die sich teilweise nur schwer nachweisen lassen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdn. sperren",
+     "ru": "дисквалифицировать",
+     "ex": "Der Athlet wurde wegen Dopings für zwei Jahre [[gesperrt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Sperre",
+     "ru": "дисквалификация",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: спорт и общество (Infobox)",
+   "items": [
+    {
+     "de": "das Vorbild, -er",
+     "ru": "пример для подражания",
+     "ex": "Erfolgreiche Sportler sind oftmals Identifikationsfiguren und [[Vorbilder]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "für etw. stehen*",
+     "ru": "олицетворять, символизировать",
+     "ex": "Sportler gelten als diszipliniert und [[stehen für]] Teamgeist, Fairness und einen gesunden Lebensstil.",
+     "note": "stand – hat gestanden",
+     "g": "v"
+    },
+    {
+     "de": "sich etw. zunutze machen",
+     "ru": "использовать что-то в своих интересах",
+     "ex": "Dieses positive Image [[macht sich]] beispielsweise die Werbung [[zunutze]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "an Selbstbewusstsein gewinnen*",
+     "ru": "обретать уверенность в себе",
+     "ex": "Wenn sie diese Ziele erreichen, [[gewinnen]] sie dadurch [[an Selbstbewusstsein]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Ziele verfolgen",
+     "ru": "преследовать цели",
+     "ex": "Jugendliche lernen auf diese Weise, Ausdauer zu entwickeln und [[Ziele zu verfolgen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zum friedlichen Miteinander beitragen*",
+     "ru": "способствовать мирному сосуществованию",
+     "ex": "Auf internationaler Ebene kann Sport [[zum friedlichen Miteinander]] der Völker [[beitragen]].",
+     "note": "trug bei – hat beigetragen",
+     "g": "v"
+    },
+    {
+     "de": "das Zusammengehörigkeitsgefühl",
+     "ru": "чувство единства",
+     "ex": "Sport kann Einigkeit und ein [[Zusammengehörigkeitsgefühl]] innerhalb eines Landes schaffen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "in Gewalt ausarten",
+     "ru": "перерасти в насилие",
+     "ex": "… dass die Begeisterung für eine Mannschaft [[in Gewalt]] und Rassismus gegenüber anderen [[ausartet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "Spiele manipulieren",
+     "ru": "договариваться о результатах матчей",
+     "ex": "Da überrascht es nicht, dass in einigen Fällen [[Spiele manipuliert]] werden.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "Sport treiben · eine Sportart betreiben",
+   "v": "Sport treiben (не «machen» в письменной речи); betreiben — конкретный вид спорта или бизнес"
+  },
+  {
+   "k": "einem Verein beitreten",
+   "v": "+ Dativ без предлога, Perfekt с sein: Ich bin dem Verein beigetreten"
+  },
+  {
+   "k": "der Wettkampf ↔ der Wettbewerb",
+   "v": "Wettkampf — спортивное состязание; Wettbewerb — шире: конкурс, а также конкуренция в экономике"
+  },
+  {
+   "k": "gegen die Regeln verstoßen",
+   "v": "gegen + Akk.: gegen ein Gesetz verstoßen; der Verstoß gegen + Akk."
+  },
+  {
+   "k": "der Athlet",
+   "v": "n-склонение: den / dem / des Athleten"
+  },
+  {
+   "k": "das Finale · das Stadion",
+   "v": "мн. ч.: die Finale (или Finals), die Stadien"
+  },
+  {
+   "k": "sich qualifizieren für + A",
+   "v": "Er hat sich für die WM qualifiziert (не «zu»)"
+  }
+ ]
+}

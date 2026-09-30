@@ -1,0 +1,115 @@
+@id 4.8
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Medien
+@titleRu СМИ и медиа
+@pages 205–210
+@exercises 211–215
+@solutions 269–270
+@bookRows 71
+
+# s1 Медиа и информация
+das Medium, Medien | средство (массовой) информации | Mithilfe verschiedener [[Medien]] können Lehrer und Professoren den Lernstoff interessant und abwechslungsreich vermitteln. | мн. ч. die Medien | n
+medial | медийный | Prominente klagen häufig über das große [[mediale]] Interesse an ihrer Person und den daraus resultierenden Mangel an Privatsphäre. |  | v
+audiovisuelle Medien | аудиовизуальные СМИ | [[Audiovisuelle Medien]] haben den Vorteil, dass man Informationen gleichzeitig durch Sehen und Hören aufnehmen kann. |  | pl
+Medien nutzen · die Nutzung von Medien | пользоваться медиа | Nach Angaben des Statistischen Bundesamtes [[nutzen]] die Deutschen pro Tag mehr als 7 Stunden lang audiovisuelle [[Medien]]. |  | v
+mit Medien umgehen* · der Umgang mit Medien | обращаться с медиа | Die meisten Eltern finden es wichtig, dass ihre Kinder lernen, verantwortungsvoll [[mit Medien umzugehen]]. | ging um – ist umgegangen | v
+der Medienkonsum | потребление медиа | Psychologen befürchten, dass exzessiver [[Medienkonsum]] zu sozialer Isolation führen kann. |  | m
+die Presse | пресса | Niemand weiß, wer die streng geheimen Informationen an die [[Presse]] weitergegeben hat. |  | f
+die Pressefreiheit | свобода прессы | Auf der Straße haben sich Tausende Menschen versammelt, die gegen die Einschränkung der [[Pressefreiheit]] demonstrieren. |  | f
+berichten über + A | сообщать о чём-то | Die Journalistin [[berichtet über]] die zurzeit stattfindende Weltklimakonferenz. | über + Akk. | v
+der Bericht | репортаж, доклад |  |  | m
+
+# s2 Пресса и информационный поток
+etw. abonnieren · das Abonnement | подписаться · подписка | Es ist günstiger, eine Zeitung zu [[abonnieren]], als sie jeden Tag am Kiosk zu kaufen. |  | v
+auf dem Laufenden sein* / bleiben* | быть в курсе событий | Wenn man einen Newsletter abonniert, erhält man regelmäßig aktuelle Informationen und bleibt so [[auf dem Laufenden]]. |  | v
+Informationen verarbeiten · die Informationsverarbeitung | обрабатывать информацию | Wissenschaftler weisen darauf hin, dass wir gar nicht alle [[Informationen verarbeiten]] können, die wir erhalten. |  | v
+die Informationsflut | информационный поток | Die [[Informationsflut]], der wir täglich ausgesetzt sind, löst bei vielen Menschen Stress aus. |  | f
+die Zeitschrift, -schriften | журнал | Der junge Wissenschaftler hat bereits mehrere Artikel in renommierten Fach[[zeitschriften]] veröffentlicht. |  | f
+die Auflage, Auflagen | тираж | Da immer weniger Menschen Tageszeitungen kaufen, sinkt die [[Auflage]] kontinuierlich. |  | f
+etw. drucken · der Druck | печатать · печать | Im Gegensatz zu Zeitungen werden Zeitschriften meist farbig [[gedruckt]]. |  | v
+etw. nachschlagen* | посмотреть в справочнике | Es ist nicht notwendig, jedes unbekannte Wort im Wörterbuch [[nachzuschlagen]], um einen Text zu verstehen. | schlug nach – hat nachgeschlagen | v
+
+# s3 Радио и ТВ: каналы и передачи
+der Rundfunk | радиовещание, телерадиовещание | Der Bayerische [[Rundfunk]] informiert die Bürger über Ereignisse in der Welt und ihrer Region. |  | m
+der Sender, Sender | канал, радиостанция | Heutzutage gibt es eine Reihe von Fernseh[[sendern]], die sich auf bestimmte Themen spezialisiert haben, z. B. auf Sportsendungen oder auf Dokumentationen. |  | m
+der öffentlich-rechtliche Sender | общественный канал | Die [[öffentlich-rechtlichen Sender]] sind unabhängig von kommerziellen oder staatlichen Interessen. |  | m
+der Privatsender | частный канал | [[Privatsender]] finanzieren ihr Programmangebot durch Werbung. |  | m
+die Sendung, Sendungen | передача | Die meisten Eltern achten darauf, dass ihre Kinder im Fernsehen nur solche [[Sendungen]] sehen, die für junge Zuschauer geeignet sind. |  | f
+handeln von + D · die Handlung | рассказывать о · сюжет | Der Film [[handelt von]] einer jungen Frau, die versucht, sich von ihrer Alkoholsucht zu befreien. |  | v
+die Nachrichten (Plural) | новости | Ein großer Teil der Bevölkerung informiert sich durch die [[Nachrichten]] über das aktuelle Tagesgeschehen. |  | pl
+die Serie, Serien | сериал | Erfolgreiche [[Serien]] laufen oft jahrelang im Fernsehen, ohne dass das Interesse der Zuschauer nachlässt. |  | f
+die Folge, Folgen | серия, эпизод | Wer eine Serie regelmäßig im Fernsehen verfolgt, möchte keine [[Folge]] verpassen. |  | f
+etw. fortsetzen · die Fortsetzung | продолжать · продолжение | Oft endet eine Folge an einer besonders spannenden Stelle, damit viele Menschen den Fernseher einschalten, wenn die Serie am nächsten Tag [[fortgesetzt]] wird. |  | v
+
+# s4 Жанры
+die Seifenoper, -opern | мыльная опера | In [[Seifenopern]] stehen die Beziehungen, Liebesgeschichten und Probleme bestimmter Personen im Mittelpunkt. |  | f
+die Dokumentation, Dokumentationen | документальный фильм | Gestern lief im Fernsehen eine interessante [[Dokumentation]] über die so genannten „Trümmerfrauen“, die Deutschland nach dem Zweiten Weltkrieg wieder aufgebaut haben. |  | f
+die Doku-Soap, -Soaps | докусоп, реалити-сериал | In [[Doku-Soaps]] wird eine Handlung so dargestellt, dass der Zuschauer glaubt, eine reale Situation mitzuerleben. |  | f
+die Komödie, Komödien | комедия | Nach einem anstrengenden Arbeitstag ist eine [[Komödie]] genau das Richtige, um den Stress zu vergessen und sich zu amüsieren. |  | f
+das Drama, Dramen | драма | Ein [[Drama]] kann die Zuschauer dazu anregen, über gesellschaftliche Probleme nachzudenken, die in dem Film behandelt werden. |  | n
+der Krimi, Krimis | детектив | Manche Familien versammeln sich jeden Sonntagabend vor dem Fernseher, um sich einen [[Krimi]] anzusehen. |  | m
+der Schauspieler / die Schauspielerin, Schauspieler | актёр | Filme, in denen bekannte [[Schauspieler]] auftreten, sind oft auch dann erfolgreich, wenn die Handlung des Films nicht besonders interessant ist. |  | m
+
+# s5 Смотреть телевизор
+im Fernsehen laufen* / im Fernsehen gezeigt werden* | идти по телевизору | Der Programmzeitschrift kann man entnehmen, welche Sendungen im Laufe der Woche [[im Fernsehen laufen]] / [[gezeigt werden]]. | lief – ist gelaufen | v
+etw. übertragen* · die Übertragung | транслировать · трансляция | Die Verleihung der Oscars wird im Fernsehen live [[übertragen]]. | überträgt – übertrug – hat übertragen | v
+der Zuschauer, Zuschauer | зритель | Einige [[Zuschauer]] haben sich über die schlechte Tonqualität des Films beschwert. |  | m
+sich (D) etw. im Fernsehen ansehen* | смотреть что-то по телевизору | Viele Millionen Menschen weltweit [[sehen sich]] die Übertragung der Fußball-Weltmeisterschaft [[im Fernsehen an]]. | sieht an – sah an – hat angesehen | v
+Zeit vor dem Fernseher verbringen* | проводить время у телевизора | Studien zufolge [[verbringen]] deutsche Jugendliche täglich mehrere Stunden [[vor dem Fernseher]]. | verbrachte – hat verbracht | v
+zappen | переключать каналы | Wenn nichts Interessantes im Fernsehen gezeigt wird, [[zappt]] man manchmal einfach nur von einem Sender zum nächsten. |  | v
+abschalten | отключиться, расслабиться | Viele Menschen sehen fern, um [[abzuschalten]], also um ihren Alltag und ihre Probleme zu vergessen. |  | v
+sich berieseln lassen* · die Berieselung | пассивно потреблять (ТВ) | Es wird häufig kritisiert, dass man sich beim Fernsehen nur [[berieseln lässt]], statt eigene Ideen zu entwickeln und kreativ zu sein. |  | v
+jdn. unterhalten* · die Unterhaltung | развлекать · развлечение | Musiksendungen und Quizshows dienen in erster Linie dazu, die Zuschauer zu [[unterhalten]]. | unterhält – unterhielt – hat unterhalten | v
+unterhaltsam | развлекательный, занимательный | So genannte „Infotainment-Sendungen“ sollen Wissen verständlich und [[unterhaltsam]] präsentieren. |  | v
+seicht | поверхностный, «лёгкий» | Manche Menschen geben ungern zu, dass sie sich in ihrer Freizeit [[seichte]] Filme und Serien ansehen. |  | v
+anspruchsvoll | интеллектуальный, требовательный | [[Anspruchsvolle]] Sendungen sollen nicht unbedingt unterhalten, sondern zur Auseinandersetzung mit dem Thema anregen. |  | v
+spannend | захватывающий | Ein guter Krimi ist [[spannend]] bis zum Schluss, so dass man erst am Ende des Films erfährt, wer das Verbrechen begangen hat. |  | v
+
+# s6 Компьютер и интернет
+virtuell | виртуальный | Mithilfe einer computergenerierten [[virtuellen]] Umgebung lassen sich komplexe Simulationen durchführen. |  | v
+der Rechner, Rechner | компьютер | Stundenlange Arbeit am [[Rechner]] kann zu Verspannungen und Rückenschmerzen führen. |  | m
+abstürzen · der Absturz | зависнуть (о компьютере) · сбой | Zu große Hitzeentwicklung kann dazu führen, dass der PC [[abstürzt]]. | ist abgestürzt | v
+das / der Virus, Viren | вирус | Jeder Besitzer eines PCs sollte ein Programm auf seinem Computer haben, das den Rechner vor [[Viren]] schützt. |  | n
+der Internetzugang | доступ в интернет | Mittlerweile verfügen auch viele ältere Menschen über einen [[Internetzugang]]. |  | m
+ins Internet gehen* | выходить в интернет | Seit es Smartphones gibt, sind wir daran gewöhnt, immer und überall [[ins Internet gehen]] zu können. |  | v
+im Internet surfen | сидеть в интернете | Es ist individuell unterschiedlich, welchen Browser man am liebsten verwendet, um [[im Internet zu surfen]]. |  | v
+drahtlos = kabellos | беспроводной | Wenn man eine [[drahtlose]] Internetverbindung hat, kann man bei schönem Wetter auch draußen arbeiten. |  | v
+# s7 Интернет, загрузка и поиск
+das WLAN | Wi-Fi | Dank [[WLAN]] kann man an verschiedenen öffentlichen Orten kabellos im Internet surfen. |  | n
+der Internetnutzer, -nutzer | пользователь интернета | Die Zahl der [[Internetnutzer]] ist in den letzten zehn Jahren kontinuierlich gewachsen. |  | m
+
+etw. ins Internet stellen | выложить в интернет | Man sollte sich gut überlegen, welche privaten Informationen und Fotos man [[ins Internet stellt]] und welche nicht. |  | v
+etw. herunterladen* = downloaden · der Download | скачивать | Verschiedene Dienste bieten die Möglichkeit, Musik oder Filme legal aus dem Internet [[herunterzuladen]]. | lädt herunter – lud herunter – hat heruntergeladen | v
+etw. hochladen* · der Upload | загружать (в сеть) | Viele Nutzer speichern ihre Fotos nicht mehr auf ihrem eigenen Computer, sondern [[laden]] sie ins Internet [[hoch]]. |  | v
+die Suchmaschine, -maschinen | поисковая система | Mithilfe von [[Suchmaschinen]] kann man in kurzer Zeit Informationen zu einem Stichwort oder Themengebiet finden. |  | f
+# s8 Файлы, данные, соцсети
+die Datei, Dateien | файл | Um diese [[Datei]] zu öffnen, benötigt man ein spezielles Computerprogramm. |  | f
+die Daten (Plural) | данные | Wenn der Computer plötzlich abstürzt, können nicht gespeicherte [[Daten]] verloren gehen. |  | pl
+Daten eingeben* · die Eingabe von Daten | вводить данные | Beim Kauf eines Produkts im Internet müssen Sie verschiedene persönliche [[Daten eingeben]], z. B. Ihre Adresse und Ihr Geburtsdatum. | gibt ein – gab ein – hat eingegeben | v
+Daten löschen · das Löschen von Daten | удалять данные | Um alle Daten auf einem PC zu vernichten, sollte man die Dateien nicht nur [[löschen]], sondern die Festplatte vollständig überschreiben oder zerstören. |  | v
+Daten speichern · das Speichern von Daten | сохранять данные | Viele Textverarbeitungsprogramme [[speichern]] in regelmäßigen Abständen automatisch die eingegebenen [[Daten]]. |  | v
+
+der Datenschutz | защита данных | Da heute viele Geschäfte über das Internet getätigt werden, spielt [[Datenschutz]] eine große Rolle. |  | m
+das Internetforum, Internetforen | интернет-форум | In [[Internetforen]] können sich die Nutzer über bestimmte Themen austauschen, die sie interessieren. |  | n
+das soziale Netzwerk, -werke | социальная сеть | [[Soziale Netzwerke]] sind ein beliebtes Mittel, um mit Freunden und Bekannten weltweit in Kontakt zu bleiben. |  | n
+jdn. mobben | травить, издеваться | Jugendliche [[mobben]] Mitschüler, indem sie beleidigende Kommentare oder kompromittierende Fotos im Internet veröffentlichen. |  | v
+das Cyber-Mobbing | кибербуллинг | [[Cyber-Mobbing]] ist für die Betroffenen psychisch sehr belastend. |  | n
+
+## b1 Бонус: общественное вещание (Infobox)
+der öffentlich-rechtliche Rundfunk | общественное теле- и радиовещание | Ein Hauptmerkmal des [[öffentlich-rechtlichen Rundfunks]] ist, dass diese Sender staatsfern sind. | ARD, ZDF | m
+kommerzielle Interessen verfolgen | преследовать коммерческие интересы | Neben den Privatsendern, die [[kommerzielle Interessen verfolgen]] … |  | v
+staatsfern | независимый от государства | Ein Hauptmerkmal des öffentlich-rechtlichen Rundfunks ist, dass diese Sender [[staatsfern]] sind. |  | v
+die Verbreitung | распространение | … als der Staat die Medien zur [[Verbreitung]] seiner politischen Propaganda benutzte. |  | f
+das Gremium, Gremien | комиссия, совет | Aus diesem Grund bestehen die [[Gremien]], die die Sender leiten, aus Vertretern unterschiedlicher gesellschaftlicher Gruppen. |  | n
+der Rundfunkbeitrag | взнос за теле- и радиовещание | Nun muss jeder private Haushalt in Deutschland einen [[Rundfunkbeitrag]] in Höhe von 17,98 Euro pro Monat bezahlen. |  | m
+von etw. befreit werden | быть освобождённым от чего-то | Aus bestimmten Gründen kann man von dem Beitrag [[befreit werden]]. |  | v
+
+! handeln von + D ↔ handeln mit + D | Der Film handelt von einer Frau (рассказывает о); mit Waren handeln (торговать)
+! berichten über + A | Die Presse berichtet über den Prozess (über + Akk.)
+! auf dem Laufenden sein / bleiben | Устойчивое выражение: jdn. auf dem Laufenden halten — держать в курсе
+! Английские глаголы | Правильные: posten → hat gepostet, googeln → hat gegoogelt, downloaden → hat downgeloadet
+! Род англицизмов | Часто по немецкому аналогу: die Cloud (die Wolke), der Link / das Link, die / das E-Mail
+! die Folge | 1) серия сериала, 2) последствие (die Folgen des Klimawandels)
+! herunterladen / hochladen | Отделяемые: lädt herunter, hat hochgeladen
+! das Medium → die Medien | Латинское мн. ч.

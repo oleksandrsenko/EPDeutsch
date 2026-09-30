@@ -1,0 +1,104 @@
+// тип | предложение с [[маркированной частью]] | начало ответа | эталон | правило
+@nv Номинальный стиль → придаточное / инфинитив
+nv | [[Wegen der steigenden Lebenshaltungskosten]] arbeiten viele Menschen länger. | Viele Menschen arbeiten länger, | weil die Lebenshaltungskosten steigen. | wegen / aufgrund + G → weil / da
+nv | Gute Ausbildung hilft jungen Menschen [[beim Einstieg in den Arbeitsmarkt]]. | Gute Ausbildung hilft jungen Menschen dabei, | in den Arbeitsmarkt einzusteigen. | helfen bei + D → helfen (dabei), … zu + Inf.
+nv | [[Zur Verbesserung der Wirtschaft]] investieren viele Firmen in neue Technologien. | Viele Firmen investieren in neue Technologien, | um die Wirtschaft zu verbessern. | zu + D (цель) → um … zu (один субъект) / damit
+nv | Flexible Arbeitszeiten tragen [[zu einer besseren Work-Life-Balance]] bei. (Passiv) | Flexible Arbeitszeiten tragen dazu bei, | dass die Work-Life-Balance verbessert wird. | beitragen zu + D → dazu beitragen, dass …
+nv | [[Durch die Digitalisierung]] entstehen viele neue Berufe. | Es entstehen viele neue Berufe, | weil die Wirtschaft / Arbeitswelt digitalisiert wird. / dadurch, dass digitalisiert wird. | durch + A (причина/способ) → dadurch, dass / indem / weil
+nv | [[Die Gründung einer eigenen Firma]] ist für viele Menschen ein großes Risiko. | Es ist für viele Menschen ein großes Risiko, | eine eigene Firma zu gründen. | субъект-номинализация → es ist …, … zu + Inf.
+nv | [[Trotz der herrschenden Wirtschaftskrise]] investieren manche Unternehmen weiter. | Manche Unternehmen investieren weiter, | obwohl eine Wirtschaftskrise herrscht. | trotz + G → obwohl / obgleich
+nv | [[Wegen des Fachkräftemangels]] suchen viele Firmen neue Mitarbeiter. | Viele Firmen suchen neue Mitarbeiter, | weil es an Fachkräften mangelt / weil Fachkräfte fehlen. | der Mangel an → es mangelt an + D
+nv | Weiterbildung hilft Arbeitnehmern [[bei der Verbesserung ihrer beruflichen Chancen]]. | Weiterbildung hilft Arbeitnehmern dabei, | ihre beruflichen Chancen zu verbessern. | Genitivattribut → Akkusativobjekt
+nv | [[Zur Steigerung der Produktivität]] führen viele Firmen neue Technologien ein. | Viele Firmen führen neue Technologien ein, | um die Produktivität zu steigern. | zur Steigerung → um … zu steigern
+nv | [[Durch internationale Zusammenarbeit]] können Unternehmen schneller wachsen. | Unternehmen können schneller wachsen, | indem sie international zusammenarbeiten. | durch (способ) → indem
+nv | [[Die Führung eines eigenen Unternehmens]] erfordert viel Verantwortung. | Es erfordert viel Verantwortung, | ein eigenes Unternehmen zu führen. | Nominalisierung als Subjekt → es …, zu + Inf.
+nv | [[Trotz hoher Arbeitsbelastung]] bleiben viele Menschen motiviert. | Viele Menschen bleiben motiviert, | obwohl sie stark belastet sind / obwohl die Arbeitsbelastung hoch ist. | trotz → obwohl
+nv | Praktika helfen Studenten [[bei der Vorbereitung auf das Berufsleben]]. | Praktika helfen Studenten dabei, | sich auf das Berufsleben vorzubereiten. | die Vorbereitung auf → sich vorbereiten auf
+nv | [[Nach dem Abschluss des Studiums]] suchen viele Absolventen eine Stelle im Ausland. | Viele Absolventen suchen eine Stelle im Ausland, | nachdem sie das Studium abgeschlossen haben. | nach + D → nachdem (Plusquamperfekt/Perfekt)
+nv | [[Vor Beginn des Semesters]] muss man sich immatrikulieren. | Man muss sich immatrikulieren, | bevor das Semester beginnt. | vor + D → bevor
+nv | [[Bei Nichteinhaltung der Frist]] wird die Arbeit nicht angenommen. | Die Arbeit wird nicht angenommen, | wenn die Frist nicht eingehalten wird. | bei + D (условие) → wenn / falls
+nv | [[Ohne Kenntnis der Fachliteratur]] kann man keine gute Hausarbeit schreiben. | Man kann keine gute Hausarbeit schreiben, | ohne die Fachliteratur zu kennen. | ohne + A → ohne … zu / ohne dass
+nv | [[Statt einer Erhöhung der Steuern]] sollte der Staat Ausgaben senken. | Der Staat sollte Ausgaben senken, | statt die Steuern zu erhöhen. | statt + G → (an)statt … zu / statt dass
+nv | [[Infolge des Klimawandels]] schmelzen die Gletscher. | Die Gletscher schmelzen, | weil sich das Klima wandelt / verändert. | infolge + G → weil / sodass (следствие)
+nv | [[Im Falle eines Stromausfalls]] schalten sich die Generatoren automatisch ein. | Die Generatoren schalten sich automatisch ein, | falls der Strom ausfällt. | im Falle + G → falls
+nv | [[Seit der Einführung der Studiengebühren]] ist die Zahl der Studienanfänger gesunken. | Die Zahl der Studienanfänger ist gesunken, | seit(dem) Studiengebühren eingeführt wurden. | seit + D → seit(dem)
+nv | [[Während der Verhandlungen]] durften keine Journalisten im Saal sein. | Es durften keine Journalisten im Saal sein, | während verhandelt wurde / während man verhandelte. | während + G → während (одновременность)
+nv | [[Bis zur Veröffentlichung der Ergebnisse]] bleibt die Studie geheim. | Die Studie bleibt geheim, | bis die Ergebnisse veröffentlicht werden. | bis zu + D → bis
+@vn Придаточное → номинальный стиль
+vn | Viele Studierende jobben, [[weil die Mieten stark gestiegen sind]]. | | Wegen des starken Anstiegs der Mieten jobben viele Studierende. | weil → wegen / aufgrund + G; Verb → Nomen, Adverb → Adjektiv
+vn | [[Wenn man regelmäßig Sport treibt]], kann man Krankheiten vorbeugen. | | Durch regelmäßigen Sport / Bei regelmäßigem Sport kann man Krankheiten vorbeugen. | wenn (условие) → bei + D; indem → durch + A
+vn | [[Obwohl die Ergebnisse eindeutig waren]], zweifelten einige Forscher an der Theorie. | | Trotz der Eindeutigkeit der Ergebnisse zweifelten einige Forscher an der Theorie. | obwohl → trotz + G
+vn | Die Regierung senkt die Steuern, [[um die Konjunktur zu beleben]]. | | Zur Belebung der Konjunktur senkt die Regierung die Steuern. | um … zu → zur / zum + Nomen
+vn | [[Nachdem das Gesetz verabschiedet worden war]], protestierten Tausende. | | Nach der Verabschiedung des Gesetzes protestierten Tausende. | nachdem → nach + D
+vn | [[Bevor man eine Prüfung ablegt]], sollte man sich gründlich vorbereiten. | | Vor dem Ablegen einer Prüfung / Vor einer Prüfung sollte man sich gründlich vorbereiten. | bevor → vor + D
+vn | Man spart Energie, [[indem man energiesparende Geräte benutzt]]. | | Durch die Benutzung energiesparender Geräte spart man Energie. | indem → durch + A
+vn | [[Falls die Verbindung unterbrochen wird]], werden die Daten automatisch gespeichert. | | Im Falle einer Unterbrechung der Verbindung werden die Daten automatisch gespeichert. | falls → im Falle + G / bei + D
+vn | [[Solange die Bauarbeiten dauern]], ist die Straße gesperrt. | | Während der Bauarbeiten ist die Straße gesperrt. | solange / während → während + G
+vn | Er fand eine Stelle, [[ohne dass er sich lange bewerben musste]]. | | Er fand ohne lange Bewerbungsphase eine Stelle. | ohne dass → ohne + A
+vn | [[Da immer mehr Menschen in die Städte ziehen]], wächst der Wohnungsmangel. | | Aufgrund des Zuzugs immer mehr Menschen in die Städte wächst der Wohnungsmangel. / Wegen der Landflucht … | da → aufgrund + G
+vn | Man muss die Umwelt schützen, [[damit die Artenvielfalt erhalten bleibt]]. | | Zur Erhaltung der Artenvielfalt muss man die Umwelt schützen. | damit → zur + Nomen
+vn | [[Als die Mauer fiel]], änderte sich das Leben vieler Menschen. | | Mit dem Fall / Nach dem Fall der Mauer änderte sich das Leben vieler Menschen. | als → bei / mit / nach + D
+@ps Пассив и заменители пассива
+ps | Man [[kann]] diese Theorie leicht [[widerlegen]]. | Diese Theorie … | Diese Theorie lässt sich leicht widerlegen. / … kann leicht widerlegt werden. / … ist leicht zu widerlegen. / … ist leicht widerlegbar. | können + Passiv → sich lassen / sein + zu / -bar
+ps | Die Ergebnisse [[müssen]] genau [[dokumentiert werden]]. | Die Ergebnisse sind … | Die Ergebnisse sind genau zu dokumentieren. | müssen + Passiv → sein + zu + Inf.
+ps | Man [[muss]] die Frist [[einhalten]]. | Die Frist … | Die Frist ist einzuhalten. / Die Frist muss eingehalten werden. | müssen → sein + zu
+ps | Das Material [[kann recycelt werden]]. | Das Material ist … | Das Material ist recycelbar. | kann + Passiv → -bar
+ps | Die Substanz [[kann in Wasser aufgelöst werden]]. | Die Substanz ist … | Die Substanz ist wasserlöslich. | -lich как свойство
+ps | Die Polizei [[verhaftete]] den Verdächtigen gestern. | Der Verdächtige … | Der Verdächtige wurde gestern (von der Polizei) verhaftet. | Aktiv → Passiv Präteritum: wurde + Partizip II
+ps | Man [[hat]] das Gesetz 1949 [[verabschiedet]]. | Das Gesetz … | Das Gesetz ist 1949 verabschiedet worden. | Perfekt Passiv: ist … worden
+ps | Man [[wird]] die Studiengebühren wahrscheinlich [[abschaffen]]. | Die Studiengebühren … | Die Studiengebühren werden wahrscheinlich abgeschafft werden. | Futur Passiv
+ps | Die Stadt [[schenkt]] den Studierenden ein Semesterticket. | Die Studierenden bekommen … | Die Studierenden bekommen (von der Stadt) ein Semesterticket geschenkt. | bekommen-Passiv (Dativ-Objekt → Subjekt)
+ps | In der Mensa [[isst man]] günstig. | In der Mensa wird … | In der Mensa wird günstig gegessen. | unpersönliches Passiv
+ps | Man [[konnte]] den Fehler nicht [[erklären]]. | Der Fehler … | Der Fehler ließ sich nicht erklären. / Der Fehler war nicht zu erklären. / … war unerklärlich. | Präteritum: ließ sich / war zu
+ps | Das Problem [[ist lösbar]]. | Das Problem … | Das Problem kann gelöst werden. / Das Problem lässt sich lösen. / Das Problem ist zu lösen. | -bar → können + Passiv
+@pa Причастный оборот ↔ относительное придаточное
+pa | Die Studie, [[die im letzten Jahr veröffentlicht wurde]], zeigt interessante Ergebnisse. | Die … Studie … | Die im letzten Jahr veröffentlichte Studie zeigt interessante Ergebnisse. | Passiv (vergangen) → Partizip II
+pa | Die Zahl der Studierenden, [[die neben dem Studium jobben]], steigt. | Die Zahl der … Studierenden … | Die Zahl der neben dem Studium jobbenden Studierenden steigt. | Aktiv (gleichzeitig) → Partizip I
+pa | Die Gletscher, [[die immer schneller schmelzen]], gefährden die Küstenregionen. | Die … Gletscher … | Die immer schneller schmelzenden Gletscher gefährden die Küstenregionen. | Partizip I = aktiv, одновременно
+pa | Die Probleme, [[die gelöst werden müssen]], sind zahlreich. | Die … Probleme … | Die zu lösenden Probleme sind zahlreich. | müssen + Passiv → zu + Partizip I (Gerundiv)
+pa | Die [[in Deutschland lebenden]] Migranten müssen einen Integrationskurs besuchen. | Die Migranten, … | Die Migranten, die in Deutschland leben, müssen einen Integrationskurs besuchen. | Partizip I → Relativsatz Aktiv Präsens
+pa | Die [[von der Regierung angekündigten]] Reformen stoßen auf Kritik. | Die Reformen, … | Die Reformen, die von der Regierung angekündigt worden sind / wurden, stoßen auf Kritik. | Partizip II (переходный) → Passiv
+pa | Die [[in den letzten Jahren stark gestiegenen]] Mieten belasten viele Familien. | Die Mieten, … | Die Mieten, die in den letzten Jahren stark gestiegen sind, belasten viele Familien. | Partizip II непереходного → Perfekt Aktiv (sein)
+pa | Der [[nicht zu unterschätzende]] Einfluss der Medien wird oft ignoriert. | Der Einfluss der Medien, … | Der Einfluss der Medien, der nicht unterschätzt werden darf / den man nicht unterschätzen darf, wird oft ignoriert. | zu + Partizip I → Modalverb + Passiv
+pa | Die Arbeitnehmer, [[die befristet beschäftigt sind]], haben weniger Rechte. | Die … Arbeitnehmer … | Die befristet beschäftigten Arbeitnehmer haben weniger Rechte. | Zustandspassiv → Partizip II
+pa | Eine Maßnahme, [[die sich gut umsetzen lässt]], ist die Förderung des Radverkehrs. | Eine … Maßnahme … | Eine gut umzusetzende / gut umsetzbare Maßnahme ist die Förderung des Radverkehrs. | sich lassen → zu + Partizip I / -bar
+@mv Модальные глаголы ↔ перифраз
+mv | Studierende [[müssen]] die Prüfungsordnung beachten. | Studierende … | Studierende haben die Prüfungsordnung zu beachten. / Es ist notwendig / erforderlich, dass … | müssen → haben + zu / es ist notwendig
+mv | Man [[kann]] das Visum online beantragen. | Es … | Es ist möglich, das Visum online zu beantragen. / Das Visum lässt sich online beantragen. | können → es ist möglich / sich lassen / die Möglichkeit haben
+mv | Ohne Führerschein [[darf]] man kein Auto fahren. | Es … | Es ist nicht erlaubt / verboten, ohne Führerschein Auto zu fahren. | dürfen (nicht) → erlaubt / verboten sein
+mv | Der Patient [[kann]] nach der Operation nicht mehr laufen. | Der Patient … | Der Patient ist nach der Operation nicht mehr in der Lage / nicht mehr imstande zu laufen. | können (способность) → in der Lage sein
+mv | Die Firma [[will]] neue Märkte erschließen. | Die Firma … | Die Firma hat die Absicht / beabsichtigt, neue Märkte zu erschließen. | wollen → beabsichtigen / die Absicht haben / planen
+mv | Der Minister [[soll]] von dem Skandal gewusst haben. | Es … | Es wird behauptet / Man sagt, dass der Minister von dem Skandal gewusst hat. | sollen (слух) → es wird behauptet
+mv | Der Angeklagte [[will]] zur Tatzeit zu Hause gewesen sein. | Der Angeklagte … | Der Angeklagte behauptet, zur Tatzeit zu Hause gewesen zu sein. | wollen (утверждение о себе) → behaupten
+mv | Die Temperatur [[dürfte]] morgen weiter steigen. | Wahrscheinlich … | Wahrscheinlich / Vermutlich steigt die Temperatur morgen weiter. | dürfte → wahrscheinlich
+mv | Er [[muss]] den Termin vergessen haben. | Sicher … | Sicher / Bestimmt hat er den Termin vergessen. | muss (вывод) → sicher, bestimmt
+mv | Du [[brauchst]] das Formular nicht auszudrucken. | Es … | Es ist nicht nötig / notwendig, das Formular auszudrucken. | nicht brauchen zu → nicht müssen
+@kj Косвенная речь (Konjunktiv I)
+kj | Der Minister sagte: „[[Die Regierung plant keine Steuererhöhungen.]]“ | Der Minister sagte, … | Der Minister sagte, die Regierung plane keine Steuererhöhungen. | Konj. I: er/sie plane, sei, habe, werde
+kj | Die Forscherin erklärte: „[[Wir haben neue Erkenntnisse gewonnen.]]“ | Die Forscherin erklärte, … | Die Forscherin erklärte, sie hätten neue Erkenntnisse gewonnen. | «haben» у wir совпадает с индикативом → Konj. II hätten
+kj | Der Sprecher betonte: „[[Das Unternehmen ist nicht zahlungsunfähig.]]“ | Der Sprecher betonte, … | Der Sprecher betonte, das Unternehmen sei nicht zahlungsunfähig. | sein → sei
+kj | Die Studie zeigt: „[[Jugendliche verbringen täglich vier Stunden im Internet.]]“ | Laut der Studie … | Laut der Studie verbrächten Jugendliche täglich vier Stunden im Internet. / … würden … verbringen. | Pl. совпадает → Konj. II / würde
+kj | Der Arzt fragte: „[[Nehmen Sie regelmäßig Medikamente?]]“ | Der Arzt fragte, … | Der Arzt fragte, ob ich regelmäßig Medikamente nehme. | Ja/Nein-Frage → ob
+kj | Die Polizei teilte mit: „[[Der Täter wird bald gefasst werden.]]“ | Die Polizei teilte mit, … | Die Polizei teilte mit, der Täter werde bald gefasst werden. | werden → werde
+@nvv Устойчивые сочетания (Nomen-Verb-Verbindungen)
+nvv | Die Kommission [[kritisierte]] das Projekt scharf. | Die Kommission … | Die Kommission übte scharfe Kritik an dem Projekt. | kritisieren → Kritik üben an + D
+nvv | Die Stadt [[stellt]] den Studierenden Wohnheimplätze [[bereit]]. | Die Stadt … | Die Stadt stellt den Studierenden Wohnheimplätze zur Verfügung. | bereitstellen → zur Verfügung stellen
+nvv | Diese Frage [[wird]] im nächsten Kapitel [[besprochen]]. | Diese Frage … | Diese Frage kommt im nächsten Kapitel zur Sprache. | besprochen werden → zur Sprache kommen
+nvv | Viele [[bezweifeln]] die Wirksamkeit der Maßnahme. | Viele … | Viele stellen die Wirksamkeit der Maßnahme in Frage. | bezweifeln → in Frage stellen
+nvv | Das Gesetz [[gilt]] ab Januar. | Das Gesetz … | Das Gesetz tritt im Januar in Kraft. | gelten ab → in Kraft treten
+nvv | Die Firma [[entschied]] schnell. | Die Firma … | Die Firma traf schnell eine Entscheidung. | entscheiden → eine Entscheidung treffen
+nvv | Die Ergebnisse [[beeinflussen]] die Politik stark. | Die Ergebnisse … | Die Ergebnisse üben starken Einfluss auf die Politik aus. / … nehmen Einfluss auf … | beeinflussen → Einfluss ausüben auf + A
+nvv | Man [[berücksichtigt]] die Wünsche der Bürger nicht. | Die Wünsche der Bürger … | Die Wünsche der Bürger werden nicht in Betracht gezogen / nicht berücksichtigt. | berücksichtigen → in Betracht ziehen / Rücksicht nehmen auf
+nvv | Der Vorschlag [[wurde]] von allen [[akzeptiert]]. | Der Vorschlag … | Der Vorschlag fand bei allen Zustimmung / Anklang. | akzeptiert werden → Zustimmung finden
+nvv | Die Stadt [[muss]] das Problem endlich [[lösen]]. | Die Stadt … | Die Stadt muss endlich eine Lösung für das Problem finden. | lösen → eine Lösung finden für
+@kn Коннекторы (парные союзы и наречия)
+kn | Das Studium ist teuer. Es dauert auch lange. (sowohl … als auch) | Das Studium … | Das Studium ist sowohl teuer als auch langwierig / dauert sowohl lange als auch kostet viel. | sowohl … als auch = и … и
+kn | Er hat keine Zeit. Er hat auch kein Geld. (weder … noch) | Er hat … | Er hat weder Zeit noch Geld. | weder … noch = ни … ни
+kn | Man lernt mehr. Man versteht die Zusammenhänge besser. (je … desto) | Je … | Je mehr man lernt, desto besser versteht man die Zusammenhänge. | je + NS, desto + HS (инверсия)
+kn | Die Stadt ist attraktiv. Die Mieten sind sehr hoch. (zwar … aber) | Die Stadt … | Die Stadt ist zwar attraktiv, aber die Mieten sind sehr hoch. | zwar … aber = хотя … но
+kn | Man kann mit dem Zug fahren. Man kann auch fliegen. (entweder … oder) | Man kann … | Man kann entweder mit dem Zug fahren oder fliegen. | entweder … oder = либо … либо
+kn | Die Nachfrage steigt. Die Preise steigen deshalb. (sodass) | Die Nachfrage steigt, … | Die Nachfrage steigt, sodass (auch) die Preise steigen. | sodass = так что (следствие)
+kn | Er hat viel gelernt. Er hat die Prüfung trotzdem nicht bestanden. (obwohl) | Obwohl … | Obwohl er viel gelernt hat, hat er die Prüfung nicht bestanden. | trotzdem (наречие) ↔ obwohl (союз)
+kn | Die einen arbeiten Vollzeit. Die anderen arbeiten Teilzeit. (während) | Während … | Während die einen Vollzeit arbeiten, arbeiten die anderen Teilzeit. | während = в то время как (противопоставление)
+kn | Das Klima erwärmt sich. Der Meeresspiegel steigt. (infolgedessen) | Das Klima erwärmt sich; … | Das Klima erwärmt sich; infolgedessen steigt der Meeresspiegel. | infolgedessen / folglich / demzufolge + инверсия
+kn | Man muss nicht nur Vokabeln lernen. Man muss sie auch anwenden. (nicht nur … sondern auch) | Man muss … | Man muss Vokabeln nicht nur lernen, sondern auch anwenden. | nicht nur … sondern auch

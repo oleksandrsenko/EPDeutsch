@@ -1,0 +1,114 @@
+@id 4.2
+@chapter 4
+@chapterName Die Welt der Menschen
+@title Sprache
+@titleRu Язык
+@pages 152–156
+@exercises 157–160
+@solutions 266–267
+@bookRows 64
+
+# s1 Коммуникация
+kommunizieren mit + D | общаться с кем-то | Die moderne Technik ermöglicht es, [[mit]] Menschen in aller Welt zu [[kommunizieren]]. |  | v
+die Kommunikation | коммуникация, общение |  |  | f
+etw. äußern | высказывать | Der Moderator achtet darauf, dass jeder Gast Gelegenheit hat, seine Meinung zum Thema zu [[äußern]]. |  | v
+etw. darstellen | изображать, представлять | Professor Rossbach kann auch komplizierte Zusammenhänge leicht verständlich [[darstellen]]. | stellte dar – hat dargestellt | v
+die Darstellung | изображение, представление |  |  | f
+jdm. etw. vermitteln | передавать кому-то что-то | Die Autorin des Reiseführers [[vermittelt]] dem Leser einen lebendigen Eindruck vom Leben der Menschen vor Ort. |  | v
+sich ausdrücken (können) | (уметь) выражать свои мысли | Schon als Zehnjährige hatte sie einen großen Wortschatz und konnte [[sich]] deshalb besser [[ausdrücken]] als die meisten ihrer Mitschüler. |  | v
+der Ausdruck, Ausdrücke | выражение | In wissenschaftlichen Texten sollte man informelle [[Ausdrücke]] vermeiden. |  | m
+sich verständigen (können) | (уметь) объясниться | Er legt keinen Wert auf grammatische Perfektion, sondern ist zufrieden, wenn er [[sich verständigen]] kann. |  | v
+die Gebärdensprache, -sprachen | язык жестов (глухих) | Gehörlose verwenden eine [[Gebärdensprache]], um miteinander zu kommunizieren. |  | f
+die Mimik | мимика | Die [[Mimik]], z. B. ein Lächeln oder ein Stirnrunzeln, zeigt oft, was wir denken oder fühlen. |  | f
+die Gestik · die Geste, Gesten | жестикуляция · жест | Auch wenn wir telefonieren, verwenden wir Mimik und [[Gestik]], obwohl unser Gesprächspartner uns nicht sehen kann. | Gesten können … unterschiedliche Bedeutungen haben. | f
+
+# s2 Звуки и термины
+die Aussprache | произношение | Wenn Kinder eine Fremdsprache lernen, eignen sie sich schnell die korrekte [[Aussprache]] an. |  | f
+die Phonetik | фонетика | Anglistikstudenten müssen sich auch mit der [[Phonetik]] des Englischen beschäftigen. |  | f
+phonetisch | фонетический | In der mündlichen Prüfung wird nicht nur die grammatische Korrektheit, sondern auch die [[phonetische]] Verständlichkeit bewertet. |  | v
+der Laut, Laute | звук (речи) | Bevor Kinder sprechen lernen, kommunizieren sie mit Mimik, Gestik und einzelnen [[Lauten]]. |  | m
+die Rhetorik | риторика | Wenn man in der Lage sein will, gute Reden zu halten, sollte man sich mit [[Rhetorik]] beschäftigen. |  | f
+der Begriff, Begriffe | понятие | Bevor wir über Demokratie diskutieren, sollten wir zunächst einmal klären, wie wir diesen [[Begriff]] definieren. |  | m
+der Fachbegriff, -begriffe | специальный термин | Übersetzer verwenden spezielle Wörterbücher, um z. B. medizinische, juristische oder technische [[Fachbegriffe]] nachzuschlagen. |  | m
+der Terminus, Termini | термин | Medizinische [[Termini]], die Ärzte verwenden, wenn sie miteinander sprechen, sind für Patienten oft unverständlich. | мн. ч. die Termini | m
+die Terminologie | терминология | Im Laufe des Studiums erlernt man die [[Terminologie]], die in dem jeweiligen Fach verwendet wird. |  | f
+das Fremdwort, -wörter | иностранное (заимствованное) слово | Zum deutschen Wortschatz gehört eine große Zahl von [[Fremdwörtern]], die aus verschiedenen Sprachen stammen. |  | n
+
+# s3 Выражения, диалекты, языкознание
+die Redewendung, -wendungen | идиома, оборот речи | Die [[Redewendung]] „jemanden im Regen stehen lassen“ bedeutet, dass man jemanden mit seinem Problem alleine lässt. |  | f
+das Sprichwort, -wörter | пословица | [[Sprichwörter]] wie „Lügen haben kurze Beine“ haben wir oft schon als Kinder von unseren Eltern gehört. |  | n
+die Amtssprache, -sprachen | официальный язык | Länder, in denen verschiedene Sprachen gesprochen werden, z. B. Luxemburg, Belgien und die Schweiz, haben oft auch mehrere [[Amtssprachen]]. |  | f
+der Dialekt, Dialekte | диалект | Viele Menschen fühlen sich stark mit ihrer Heimat verbunden, wenn sie den [[Dialekt]] aus dieser Region hören oder sprechen. |  | m
+die Umgangssprache | разговорный язык | In der [[Umgangssprache]] verwendet man andere Wörter und Formulierungen als in der Standardsprache. |  | f
+die Linguistik = die Sprachwissenschaft | лингвистика, языкознание | Studierende der [[Linguistik]] können sich mit vielen verschiedenen Aspekten von Sprache beschäftigen, beispielsweise mit Phonetik und Rhetorik. |  | f
+die Philologie, Philologien | филология | Der Verlag veröffentlicht fremdsprachige Literatur und sucht Mitarbeiter, die eine moderne [[Philologie]] studiert haben, z. B. Romanistik, Anglistik oder Slawistik. |  | f
+
+# s4 Речевые действия: сообщать и утверждать
+jdm. etw. mitteilen | сообщать кому-то что-то | Der Regierungssprecher [[teilte]] den Journalisten [[mit]], der Minister wolle aus persönlichen Gründen zurücktreten. | teilte mit – hat mitgeteilt | v
+die Mitteilung | сообщение |  |  | f
+etw. behaupten | утверждать | Mein Kollege [[behauptet]], mir eine E-Mail geschickt zu haben, aber ich habe keine bekommen. |  | v
+die Behauptung | утверждение |  |  | f
+hinweisen* auf + A | указывать на что-то | Kritiker des dreigliedrigen Schulsystems [[weisen darauf hin]], dass dadurch zu früh über die Zukunft der Kinder entschieden wird. | wies hin – hat hingewiesen | v
+der Hinweis | указание, подсказка |  |  | m
+etw. bestreiten* | оспаривать, отрицать | Der Bankdirektor [[bestreitet]], etwas von den illegalen Transaktionen gewusst zu haben. | bestritt – hat bestritten | v
+etw. widerlegen | опровергать | Gegen Ende des 19. Jahrhunderts wurde die Theorie, dass Atome unteilbar sind, [[widerlegt]]. | неотделяемая: hat widerlegt | v
+etw. definieren | определять (давать определение) | Abstrakte Begriffe wie „Ehre“, „Liebe“ und „Treue“ kann man schwer [[definieren]], da diese Wörter oft für jeden Menschen etwas anderes bedeuten. |  | v
+die Definition | определение |  |  | f
+etw. verstehen* unter + D | понимать под чем-то | Bitte erklären Sie, was Sie [[unter]] „Sozialkompetenz“ [[verstehen]]. | verstand – hat verstanden | v
+
+# s5 Речевые действия: позиция и аргументы
+Stellung nehmen* zu + D | высказать позицию по поводу чего-то | In Internetforen können die Leser [[Stellung zu]] einem Thema [[nehmen]]. | nimmt – nahm – hat genommen | v
+die Stellungnahme | позиция, заключение |  |  | f
+jdm. zustimmen | соглашаться с кем-то | [[Stimmen]] Sie mir [[zu]] oder sind Sie anderer Meinung? | + Dat. | v
+die Zustimmung | согласие |  |  | f
+etw. ablehnen | отклонять, отвергать | Aus finanziellen Gründen hat das Studentenwerk die Vorschläge der Studierenden zur Umgestaltung der Mensa [[abgelehnt]]. |  | v
+die Ablehnung | отказ, отклонение |  |  | f
+argumentieren | аргументировать | Obwohl sie sehr überzeugend [[argumentiert]] hat, stimme ich ihren Thesen nicht zu. |  | v
+das Argument, Argumente | аргумент |  |  | n
+ein Argument anführen / nennen* | привести аргумент | Ich möchte ein weiteres [[Argument anführen]], um meine Meinung zu begründen. | nannte – hat genannt | v
+ein Beispiel anführen / nennen* | привести пример | Als [[Beispiel]] für den medizinischen Fortschritt kann man die Entwicklung neuer Medikamente [[nennen]], die weniger Nebenwirkungen haben. | nannte – hat genannt | v
+# s6 Угрозы и способ изложения
+jdm. drohen (mit + D) | угрожать кому-то (чем-то) | Die Polizei [[droht]] den Demonstranten [[mit]] dem Einsatz von Tränengas, wenn sie den Platz nicht sofort verlassen. | + Dat. | v
+die Drohung | угроза |  |  | f
+jdn. bedrohen | угрожать (кому-то, с оружием) | Ein maskierter Mann hat eine Bank überfallen und den Kassierer mit einer Waffe [[bedroht]]. | + Akk. | v
+
+ausführlich | подробно | Der Arzt hat sich viel Zeit genommen, um der Patientin den Ablauf und die Risiken der geplanten Operation [[ausführlich]] zu erklären. |  | v
+detailliert | детально | Der Zeuge hat ein so gutes Gedächtnis, dass er der Polizei den Täter [[detailliert]] beschreiben kann. |  | v
+knapp | кратко, сжато | Am Ende Ihres Vortrags sollten Sie die wichtigsten Erkenntnisse kurz und [[knapp]] zusammenfassen. |  | v
+
+# s7 Иностранные языки
+eine Fremdsprache beherrschen | владеть иностранным языком | Da sie mehrere Jahre in Moskau gelebt hat, [[beherrscht]] sie die russische [[Sprache]] sehr gut. |  | v
+die Beherrschung einer Fremdsprache | владение иностранным языком |  |  | f
+eine Sprache fließend sprechen* | свободно говорить на языке | Seine Eltern haben mit ihm von Kindheit an Deutsch und Türkisch gesprochen, deshalb [[spricht]] er beide [[Sprachen fließend]]. | spricht – sprach – hat gesprochen | v
+die Fremdsprachenkenntnisse (Plural) | знание иностранных языков | Heutzutage braucht man in vielen Berufen [[Fremdsprachenkenntnisse]]. |  | pl
+die Sprachkenntnisse (Plural) | знание языков | Bevor sie mit dem Studium beginnen kann, muss sie ihre [[Sprachkenntnisse]] durch ein Zertifikat nachweisen. | nachweisen — подтвердить | pl
+Sprachkenntnisse erwerben* | приобрести знание языка | Studierende eines philologischen Faches [[erwerben]] im Rahmen ihres Studiums auch [[Sprachkenntnisse]]. | erwirbt – erwarb – hat erworben | v
+über Sprachkenntnisse verfügen | обладать знанием языков | Wer [[über]] gute [[Sprachkenntnisse verfügt]], hat bessere Chancen im Beruf. |  | v
+# s8 Применение языка и перевод
+die / seine Sprachkenntnisse erweitern / vertiefen | расширять / углублять знание языка | Auch nach der Schul- oder Studienzeit gibt es viele Möglichkeiten, seine [[Sprachkenntnisse zu erweitern]] / [[zu vertiefen]]. |  | v
+die / seine Sprachkenntnisse anwenden* | применять знание языка | Ein Auslandspraktikum ist eine gute Gelegenheit, die im Studium erworbenen [[Sprachkenntnisse]] praktisch [[anzuwenden]]. | wandte an – hat angewandt | v
+
+dolmetschen | переводить устно | Da keiner der Urlauber die Landessprache beherrscht, muss der Reiseleiter bei Gesprächen mit Einheimischen [[dolmetschen]]. |  | v
+der Dolmetscher / die Dolmetscherin, Dolmetscher | устный переводчик | Der Beruf des [[Dolmetschers]] erfordert hohe Konzentration, da man meist gleichzeitig zuhören und sprechen muss. | письменный — der Übersetzer | m
+der Untertitel, Untertitel | субтитр | Nur selten sieht man in Deutschland Filme in der Originalsprache, die mit [[Untertiteln]] versehen sind. |  | m
+synchronisieren | дублировать (фильм) | Die meisten ausländischen Filme, die im deutschen Fernsehen gezeigt werden, sind [[synchronisiert]]. |  | v
+die Synchronisation | дубляж |  |  | f
+
+## b1 Бонус: языковая политика ЕС (Infobox)
+unverzichtbar | незаменимый, необходимый | In einem vereinten Europa sind Sprachkenntnisse [[unverzichtbar]]. |  | v
+die Lingua franca = die Verkehrssprache | язык межнационального общения | Englisch wäre dann die [[Lingua franca]], also die Sprache, in der Menschen miteinander kommunizieren, wenn sie nicht die gleiche Muttersprache sprechen. |  | f
+die Mehrsprachigkeit | многоязычие | Sie fördert die [[Mehrsprachigkeit]] ihrer Bürger, ohne eine Sprache zu bevorzugen. |  | f
+etw. bevorzugen | предпочитать, отдавать предпочтение | Sie fördert die Mehrsprachigkeit ihrer Bürger, ohne eine Sprache zu [[bevorzugen]]. |  | v
+die Denkweise | образ мыслей | Sprache gilt als Ausdruck einer bestimmten kulturellen Identität und [[Denkweise]]. |  | f
+die Vielfalt | многообразие | Eine [[Vielfalt]] der Sprachen bedeutet deshalb eine [[Vielfalt]] der Kulturen. |  | f
+Ziele verwirklichen | осуществлять цели | Um ihre sprachenpolitischen [[Ziele zu verwirklichen]], gibt es in der EU verschiedene Programme. |  | v
+die Minderheitensprache | язык меньшинства | Andere Initiativen sollen zum Schutz von Regional- und [[Minderheitensprachen]] beitragen. |  | f
+
+! jdm. zustimmen ↔ etw. ablehnen | zustimmen + Dat. (Ich stimme Ihnen zu); ablehnen + Akk. (einen Vorschlag ablehnen)
+! jdm. drohen ↔ jdn. bedrohen | drohen + Dat. (+ mit): Er droht ihm mit der Polizei; bedrohen + Akk.: Er bedroht ihn mit einer Waffe
+! Er spricht Deutsch / ein gutes Deutsch | Язык без артикля; с прилагательным — с артиклем: ein sehr gutes Deutsch; с предлогом: ins Deutsche, im Deutschen
+! auf Deutsch | Er liest ein Buch auf Deutsch (доп. информация), но Er spricht Deutsch (объект — без auf)
+! dolmetschen ↔ übersetzen | dolmetschen — устно, übersetzen — письменно
+! Stellung nehmen zu + D | Stellung zum Thema nehmen (zu + Dat.)
+! etw. verstehen unter + D | Was verstehen Sie unter Nachhaltigkeit?
+! der Terminus → die Termini | Латинское мн. ч.

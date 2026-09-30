@@ -1,0 +1,718 @@
+{
+ "id": "3.1",
+ "chapter": 3,
+ "chapterName": "Alltagsleben",
+ "title": "Beziehungen",
+ "titleRu": "Отношения",
+ "pages": "94–98",
+ "exercises": "98–103",
+ "solutions": "263",
+ "bookRows": 65,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Отношения между людьми",
+   "items": [
+    {
+     "de": "die Beziehung, Beziehungen zu + D",
+     "ru": "отношения с кем-то",
+     "ex": "Die [[Beziehung zu]] den Eltern verändert sich meist, wenn die Kinder erwachsen werden.",
+     "note": "zu + Dat.",
+     "g": "f"
+    },
+    {
+     "de": "die Beziehung, Beziehungen zwischen D + D",
+     "ru": "отношения между",
+     "ex": "Obwohl beide Länder in der Vergangenheit mehrere Kriege gegeneinander geführt haben, bestehen heute freundschaftliche [[Beziehungen zwischen]] Frankreich und Deutschland.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Verhältnis zu + D",
+     "ru": "отношения с кем-то",
+     "ex": "Haben Sie ein gutes [[Verhältnis zu]] Ihrer Schwiegermutter?",
+     "note": "мн. ч. die Verhältnisse",
+     "g": "n"
+    },
+    {
+     "de": "das Verhältnis zwischen D + D",
+     "ru": "отношения между",
+     "ex": "Das [[Verhältnis zwischen]] Lehrern und Schülern ist heute offener und weniger distanziert als früher.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "eine enge Beziehung / ein enges Verhältnis haben* zu + D",
+     "ru": "иметь близкие отношения с кем-то",
+     "ex": "Trotz häufiger Streitigkeiten haben die Geschwister [[eine enge Beziehung]] zueinander.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "eine freundschaftliche Beziehung / ein freundschaftliches Verhältnis haben* zu + D",
+     "ru": "быть в дружеских отношениях",
+     "ex": "Sie hat [[ein freundschaftliches Verhältnis]] zu ihrer Schwägerin und trifft sich oft mit ihr.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich gut verstehen* mit + D",
+     "ru": "хорошо ладить с кем-то",
+     "ex": "Man hat großes Glück, wenn man [[sich]] auch [[mit]] der Familie seines Ehepartners [[gut versteht]].",
+     "note": "verstand – hat verstanden",
+     "g": "v"
+    },
+    {
+     "de": "jdm. vertrauen",
+     "ru": "доверять кому-то",
+     "ex": "Beim Klettern ist es wichtig, einen Partner zu haben, dem man [[vertrauen]] kann.",
+     "note": "+ Dat.",
+     "g": "v"
+    },
+    {
+     "de": "das Vertrauen zu + D",
+     "ru": "доверие к кому-то",
+     "ex": "Es ist besser, den Arzt zu wechseln, wenn Sie kein [[Vertrauen zu]] ihm haben.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Общение и компромисс",
+   "items": [
+    {
+     "de": "gut umgehen* können* mit + D",
+     "ru": "уметь обращаться (ладить) с кем-то",
+     "ex": "Sebastian hat sich entschieden, Erzieher zu werden, weil er gut [[mit]] Kindern [[umgehen kann]].",
+     "note": "ging um – ist umgegangen",
+     "g": "v"
+    },
+    {
+     "de": "der Umgang mit + D",
+     "ru": "обращение, общение с кем-то",
+     "ex": "Der [[Umgang mit]] Jugendlichen ist nicht immer einfach und stellt für Lehrer oft eine Herausforderung dar.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "Rücksicht nehmen* auf + A",
+     "ru": "считаться с кем-то",
+     "ex": "Im Interesse guter Beziehungen sollten Sie [[Rücksicht auf]] Ihre Nachbarn [[nehmen]].",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "der Konflikt, Konflikte",
+     "ru": "конфликт",
+     "ex": "Leider werden nicht alle politischen [[Konflikte]] mit diplomatischen Mitteln gelöst.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Kompromiss, Kompromisse",
+     "ru": "компромисс",
+     "ex": "Ein offenes Gespräch kann helfen, einen [[Kompromiss]] zu finden, mit dem alle zufrieden sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "einen Kompromiss schließen* / eingehen*",
+     "ru": "пойти на компромисс",
+     "ex": "Nach langen Verhandlungen haben beide Parteien einen [[Kompromiss geschlossen]].",
+     "note": "schloss – hat geschlossen · ging ein – ist eingegangen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Ссоры, примирение, дружба",
+   "items": [
+    {
+     "de": "sich streiten* mit + D",
+     "ru": "ссориться с кем-то",
+     "ex": "Er [[streitet sich]] ständig [[mit]] seinem Kollegen, den er für unorganisiert und unzuverlässig hält.",
+     "note": "stritt – hat gestritten",
+     "g": "v"
+    },
+    {
+     "de": "der Streit, Streitigkeiten",
+     "ru": "ссора, спор",
+     "ex": "",
+     "note": "мн. ч. die Streitigkeiten",
+     "g": "m"
+    },
+    {
+     "de": "einen Streit beilegen",
+     "ru": "уладить спор",
+     "ex": "Manchmal muss eine neutrale Person eingeschaltet werden, die den Beteiligten hilft, ihren [[Streit beizulegen]].",
+     "note": "legte bei – hat beigelegt",
+     "g": "v"
+    },
+    {
+     "de": "sich versöhnen mit + D",
+     "ru": "помириться с кем-то",
+     "ex": "Eltern sollten ihren Kindern beibringen, wie sie [[sich]] nach einem Streit mit anderen Kindern wieder [[versöhnen]] können.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Versöhnung",
+     "ru": "примирение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Freundschaft schließen* (mit + D)",
+     "ru": "подружиться (с кем-то)",
+     "ex": "Wir haben schnell [[Freundschaft geschlossen]] und sind seitdem unzertrennlich.",
+     "note": "schloss – hat geschlossen · без артикля",
+     "g": "v"
+    },
+    {
+     "de": "befreundet sein* mit + D",
+     "ru": "дружить с кем-то",
+     "ex": "Mit einigen unserer Freunde sind wir schon seit der Kindergartenzeit [[befreundet]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "jdm. die Freundschaft kündigen",
+     "ru": "порвать дружбу с кем-то",
+     "ex": "Als ich herausgefunden habe, dass er mich belogen hat, habe ich ihm die [[Freundschaft gekündigt]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Freundeskreis, -kreise",
+     "ru": "круг друзей",
+     "ex": "Mein [[Freundeskreis]] besteht vor allem aus ehemaligen Mitschülern und Kommilitonen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "in meinem Freundeskreis",
+     "ru": "среди моих друзей",
+     "ex": "[[In meinem Freundeskreis]] ist es nicht üblich, sich bis zur Bewusstlosigkeit zu betrinken.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Любовь и брак",
+   "items": [
+    {
+     "de": "das Verhältnis mit + D",
+     "ru": "роман, связь с кем-то",
+     "ex": "Meine Nachbarin hat seit einiger Zeit ein [[Verhältnis mit]] einem verheirateten Mann.",
+     "note": "mit + Dat. = любовная связь!",
+     "g": "n"
+    },
+    {
+     "de": "die Beziehung mit + D",
+     "ru": "(любовные) отношения с кем-то",
+     "ex": "Eine [[Beziehung mit]] einem Kollegen bzw. einer Kollegin kann zu privaten und beruflichen Konflikten führen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine feste Beziehung haben*",
+     "ru": "иметь постоянные отношения",
+     "ex": "Heutzutage ist es nicht ungewöhnlich, dass Menschen [[eine feste Beziehung haben]], aber nicht heiraten wollen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Trauschein, -scheine = die Heiratsurkunde, -urkunden",
+     "ru": "свидетельство о браке",
+     "ex": "Vor 100 Jahren war es gesellschaftlich nicht akzeptiert, ohne [[Trauschein]] zusammenzuleben.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Ehe, Ehen",
+     "ru": "брак",
+     "ex": "Manche Menschen sind der Meinung, dass gemeinsame Interessen eine wichtige Voraussetzung für eine glückliche [[Ehe]] sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Ehe schließen* / eingehen*",
+     "ru": "вступить в брак",
+     "ex": "Mit 16 Jahren darf man nur mit Zustimmung der Eltern eine [[Ehe schließen]] / [[eingehen]].",
+     "note": "schloss – hat geschlossen · ging ein – ist eingegangen",
+     "g": "v"
+    },
+    {
+     "de": "eine Ehe führen",
+     "ru": "состоять в браке, жить в браке",
+     "ex": "Früher hat man sich nur selten scheiden lassen, selbst wenn man eine unglückliche [[Ehe geführt]] hat.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich scheiden* lassen*",
+     "ru": "развестись",
+     "ex": "Im Normalfall müssen die Ehepartner ein Jahr lang getrennt leben, bevor sie [[sich scheiden lassen]] können.",
+     "note": "ließ sich scheiden – hat sich scheiden lassen",
+     "g": "v"
+    },
+    {
+     "de": "die Scheidung",
+     "ru": "развод",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Scheidungsquote, -quoten",
+     "ru": "доля разводов",
+     "ex": "In den letzten Jahrzehnten hat sich die [[Scheidungsquote]] in Deutschland deutlich erhöht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "schwul = homosexuell (Männer)",
+     "ru": "гей, гомосексуальный (о мужчинах)",
+     "ex": "Obwohl die Gesellschaft offener ist als früher, begegnen [[schwule]] Männer manchmal noch Vorurteilen.",
+     "note": "begegnen + Dat.",
+     "g": "v"
+    },
+    {
+     "de": "lesbisch = homosexuell (Frauen)",
+     "ru": "лесбиянка, гомосексуальная (о женщинах)",
+     "ex": "Es wird darüber diskutiert, ob schwule und [[lesbische]] Paare das Recht haben sollten, Kinder zu adoptieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die eingetragene Lebenspartnerschaft, -partnerschaften",
+     "ru": "зарегистрированное партнёрство",
+     "ex": "Homosexuelle Paare können eine [[eingetragene Lebenspartnerschaft]] eingehen, die beim Standesamt registriert wird.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Семья",
+   "items": [
+    {
+     "de": "die Kleinfamilie, -familien",
+     "ru": "малая семья",
+     "ex": "Die meisten deutschen Familien sind heutzutage [[Kleinfamilien]] mit einem oder zwei Kindern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Großfamilie, -familien",
+     "ru": "большая семья",
+     "ex": "In einer [[Großfamilie]] leben manchmal drei oder sogar vier Generationen unter einem Dach.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Patchworkfamilie, -familien",
+     "ru": "смешанная семья (с детьми от прошлых браков)",
+     "ex": "Wenn zwei Menschen sich verlieben, die schon Kinder haben, müssen sich die neuen „Geschwister“ erst an das Leben in einer [[Patchworkfamilie]] gewöhnen.",
+     "note": "sich an + Akk. gewöhnen",
+     "g": "f"
+    },
+    {
+     "de": "Stief-",
+     "ru": "отчим / мачеха / сводный (приставка)",
+     "ex": "Nach der Scheidung meiner Eltern hat meine Mutter meinen [[Stiefvater]] geheiratet, und jetzt wohnen wir mit ihm und meiner [[Stiefschwester]] zusammen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Familienmitglied, -mitglieder",
+     "ru": "член семьи",
+     "ex": "Meine Eltern legen Wert darauf, dass alle [[Familienmitglieder]] im Haushalt helfen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Verwandte / die Verwandte, die Verwandten (!)",
+     "ru": "родственник",
+     "ex": "Große Familienfeste wie runde Geburtstage und Hochzeiten feiern wir mit allen [[Verwandten]] und Freunden.",
+     "note": "склоняется как прилагательное: ein Verwandter",
+     "g": "m"
+    },
+    {
+     "de": "die Angehörigen (Plural)",
+     "ru": "близкие, родные",
+     "ex": "Krankenhäuser geben nur den [[Angehörigen]] Auskunft über den Gesundheitszustand eines Patienten.",
+     "note": "склоняется как прилагательное",
+     "g": "pl"
+    },
+    {
+     "de": "allein erziehend",
+     "ru": "воспитывающий ребёнка в одиночку",
+     "ex": "In Deutschland gibt es mehr [[allein erziehende]] Mütter als allein erziehende Väter, da die Kinder nach einer Trennung der Eltern meist bei der Mutter bleiben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Elternteil, -teile",
+     "ru": "один из родителей",
+     "ex": "Bei einer Scheidung muss entschieden werden, bei welchem [[Elternteil]] die Kinder künftig leben sollen.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Опека и забота",
+   "items": [
+    {
+     "de": "das Sorgerecht haben* (für + A)",
+     "ru": "иметь право опеки (над кем-то)",
+     "ex": "Wenn es große Konflikte zwischen den geschiedenen Eltern gibt, ist es manchmal besser, wenn nur ein Elternteil das [[Sorgerecht]] für die Kinder [[hat]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sorgen für + A",
+     "ru": "заботиться о ком-то",
+     "ex": "Die Eltern [[sorgen für]] ihre Kinder, bis diese erwachsen sind und ihr Leben selbst in die Hand nehmen können.",
+     "note": "für + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "jdn. vernachlässigen",
+     "ru": "пренебрегать, запускать (заботу)",
+     "ex": "Manchmal kommt es vor, dass Eltern sich nicht um ihr Kind kümmern, sondern es [[vernachlässigen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Vernachlässigung",
+     "ru": "пренебрежение, отсутствие заботы",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Jugendamt, -ämter",
+     "ru": "ведомство по делам молодёжи (опека)",
+     "ex": "Das [[Jugendamt]] betreut Kinder, die elternlos sind oder von ihren Eltern vernachlässigt werden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Waise, Waisen",
+     "ru": "сирота",
+     "ex": "Seit dem Tod ihrer Eltern leben die [[Waisen]] in einem staatlichen Heim.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "ein Kind adoptieren",
+     "ru": "усыновить ребёнка",
+     "ex": "Da die Eheleute keine eigenen Kinder bekommen können, möchten sie ein [[Kind adoptieren]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Adoption, Adoptionen",
+     "ru": "усыновление",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. pflegen",
+     "ru": "ухаживать за кем-то",
+     "ex": "Nicht jeder ist in der Lage, die Eltern zu [[pflegen]], wenn sie alt oder krank sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Pflege",
+     "ru": "уход",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Pflegefamilie",
+     "ru": "приёмная семья",
+     "ex": "Das Jugendamt sucht [[Pflegefamilien]] für Kinder, deren Eltern sich nicht genug um sie kümmern können.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Воспитание",
+   "items": [
+    {
+     "de": "ein Kind erziehen*",
+     "ru": "воспитывать ребёнка",
+     "ex": "Besonders in der Pubertät ist es nicht immer leicht, ein [[Kind zu erziehen]].",
+     "note": "erzog – hat erzogen",
+     "g": "v"
+    },
+    {
+     "de": "die Kindererziehung",
+     "ru": "воспитание детей",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "streng",
+     "ru": "строгий",
+     "ex": "[[Strenge]] Eltern erwarten Disziplin und Gehorsam von ihren Kindern.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Strenge",
+     "ru": "строгость",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. bestrafen",
+     "ru": "наказывать",
+     "ex": "Wenn Kinder sich nicht an Regeln halten, müssen sie damit rechnen, [[bestraft]] zu werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Bestrafung, Bestrafungen",
+     "ru": "наказание",
+     "ex": "Eine [[Bestrafung]] durch Schläge ist heutzutage gesetzlich verboten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "nachsichtig",
+     "ru": "снисходительный",
+     "ex": "[[Nachsichtige]] Eltern haben Verständnis für ihre Kinder und bestrafen sie nur selten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Nachsicht",
+     "ru": "снисходительность",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "verständnisvoll",
+     "ru": "понимающий",
+     "ex": "Wenn die Eltern [[verständnisvoll]] zuhören, fällt es einem Kind leichter, mit ihnen über seine Probleme zu sprechen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Verständnis",
+     "ru": "понимание",
+     "ex": "Nachsichtige Eltern haben [[Verständnis]] für ihre Kinder.",
+     "note": "Verständnis für + Akk.",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Похвала и детский сад",
+   "items": [
+    {
+     "de": "geduldig",
+     "ru": "терпеливый",
+     "ex": "Mein Vater war sehr [[geduldig]] und hat mir alles so oft erklärt, bis ich es verstanden habe.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Geduld",
+     "ru": "терпение",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn. loben",
+     "ru": "хвалить",
+     "ex": "Um Kinder zu motivieren, sollte man sie nicht nur kritisieren, sondern sie vor allem [[loben]], wenn sie etwas gut gemacht haben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Lob",
+     "ru": "похвала",
+     "ex": "",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "jdn. verwöhnen",
+     "ru": "баловать",
+     "ex": "Ich finde, dass Eltern ein Kind zu sehr [[verwöhnen]], wenn es alles bekommt, was es sich wünscht.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ein Kind betreuen",
+     "ru": "присматривать за ребёнком",
+     "ex": "Wenn beide Eltern berufstätig sind, müssen sie sich Gedanken darüber machen, wer ihr [[Kind]] während der Arbeitszeit [[betreuen]] soll.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Kinderbetreuung",
+     "ru": "присмотр за детьми",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kinderkrippe, -krippen",
+     "ru": "ясли",
+     "ex": "Manche Eltern wollen ihre Kinder selbst betreuen, solange sie noch klein sind, andere entscheiden sich für eine Betreuung in der [[Kinderkrippe]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kindertagesstätte, -stätten = die Kita, Kitas",
+     "ru": "детский сад",
+     "ex": "Manche Unternehmen haben eigene [[Kindertagesstätten]], in denen die Kinder ihrer Mitarbeiter tagsüber betreut werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Tagesmutter, -mütter",
+     "ru": "няня (частный присмотр за детьми)",
+     "ex": "Eine [[Tagesmutter]] kann Geld verdienen und sich gleichzeitig auch um ihre eigenen Kinder kümmern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Elternzeit",
+     "ru": "отпуск по уходу за ребёнком",
+     "ex": "Während der [[Elternzeit]] muss die Mutter oder der Vater nicht arbeiten und kann sich intensiv um das Kind kümmern.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: семейная политика (Infobox)",
+   "items": [
+    {
+     "de": "das Grundgesetz",
+     "ru": "Основной закон (конституция ФРГ)",
+     "ex": "Laut Artikel 6 des [[Grundgesetzes]] werden Ehe und Familie vom Staat besonders geschützt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Mutterschutz",
+     "ru": "охрана материнства",
+     "ex": "[[Mutterschutz]]: Schwangere Frauen genießen am Arbeitsplatz besonderen Schutz.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Elterngeld",
+     "ru": "пособие по уходу за ребёнком",
+     "ex": "Im Jahr 2007 wurde das [[Elterngeld]] eingeführt.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Kindergeld",
+     "ru": "детское пособие",
+     "ex": "Eltern erhalten für jedes Kind monatlich [[Kindergeld]], bis das Kind mindestens 18 Jahre alt ist.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "aus dem Beruf aussteigen*",
+     "ru": "уйти с работы (временно)",
+     "ex": "… das Eltern ermöglichen soll, für einige Zeit [[aus dem Beruf auszusteigen]].",
+     "note": "stieg aus – ist ausgestiegen",
+     "g": "v"
+    },
+    {
+     "de": "ruhen lassen*",
+     "ru": "приостановить",
+     "ex": "Ein Elternteil oder beide Eltern gleichzeitig können ihre Berufstätigkeit für höchstens 3 Jahre [[ruhen lassen]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Anspruch auf + A",
+     "ru": "право на что-то",
+     "ex": "[[Anspruch auf]] Kinderbetreuung für Kinder ab dem ersten Lebensjahr.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Betreuungsplatz, -plätze",
+     "ru": "место в детском учреждении",
+     "ex": "Seit dem 01.08.2013 haben Eltern ein Recht auf einen [[Betreuungsplatz]] in einer Kindertagesstätte oder bei einer Tagesmutter.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "verpflichtet sein*",
+     "ru": "быть обязанным",
+     "ex": "Der Staat ist [[verpflichtet]], genug Betreuungsplätze zu schaffen.",
+     "note": "zu + Dat.",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "das Verhältnis zu ↔ das Verhältnis mit",
+   "v": "zu + D — отношения вообще (ein gutes Verhältnis zur Mutter); mit + D — любовная связь!"
+  },
+  {
+   "k": "Freundschaft schließen · eine Ehe schließen · einen Kompromiss schließen",
+   "v": "Все три с schließen: schloss – hat geschlossen. Но eine Ehe / einen Kompromiss eingehen — ist eingegangen"
+  },
+  {
+   "k": "Rücksicht nehmen auf + A",
+   "v": "Rücksicht auf die Nachbarn nehmen (auf + Akk.)"
+  },
+  {
+   "k": "sorgen für + A ↔ sich kümmern um + A",
+   "v": "Оба «заботиться»: für die Kinder sorgen, sich um die Kinder kümmern"
+  },
+  {
+   "k": "der Verwandte, die Angehörigen",
+   "v": "Склоняются как прилагательные: ein Verwandter, mit Verwandten, die Angehörigen"
+  },
+  {
+   "k": "jdm. vertrauen ↔ das Vertrauen zu + D",
+   "v": "Глагол + Dativ: Ich vertraue ihm. Существительное: Vertrauen zu ihm haben"
+  },
+  {
+   "k": "sich scheiden lassen",
+   "v": "Perfekt: Sie haben sich scheiden lassen (двойной инфинитив)"
+  },
+  {
+   "k": "befreundet sein mit + D",
+   "v": "Ich bin mit ihm befreundet (не «ich bin sein Freund befreundet»)"
+  }
+ ]
+}

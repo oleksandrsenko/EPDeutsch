@@ -1,0 +1,124 @@
+@id 3.1
+@chapter 3
+@chapterName Alltagsleben
+@title Beziehungen
+@titleRu Отношения
+@pages 94–98
+@exercises 98–103
+@solutions 263
+@bookRows 65
+
+# s1 Отношения между людьми
+die Beziehung, Beziehungen zu + D | отношения с кем-то | Die [[Beziehung zu]] den Eltern verändert sich meist, wenn die Kinder erwachsen werden. | zu + Dat. | f
+die Beziehung, Beziehungen zwischen D + D | отношения между | Obwohl beide Länder in der Vergangenheit mehrere Kriege gegeneinander geführt haben, bestehen heute freundschaftliche [[Beziehungen zwischen]] Frankreich und Deutschland. |  | f
+das Verhältnis zu + D | отношения с кем-то | Haben Sie ein gutes [[Verhältnis zu]] Ihrer Schwiegermutter? | мн. ч. die Verhältnisse | n
+das Verhältnis zwischen D + D | отношения между | Das [[Verhältnis zwischen]] Lehrern und Schülern ist heute offener und weniger distanziert als früher. |  | n
+eine enge Beziehung / ein enges Verhältnis haben* zu + D | иметь близкие отношения с кем-то | Trotz häufiger Streitigkeiten haben die Geschwister [[eine enge Beziehung]] zueinander. |  | v
+eine freundschaftliche Beziehung / ein freundschaftliches Verhältnis haben* zu + D | быть в дружеских отношениях | Sie hat [[ein freundschaftliches Verhältnis]] zu ihrer Schwägerin und trifft sich oft mit ihr. |  | v
+sich gut verstehen* mit + D | хорошо ладить с кем-то | Man hat großes Glück, wenn man [[sich]] auch [[mit]] der Familie seines Ehepartners [[gut versteht]]. | verstand – hat verstanden | v
+jdm. vertrauen | доверять кому-то | Beim Klettern ist es wichtig, einen Partner zu haben, dem man [[vertrauen]] kann. | + Dat. | v
+das Vertrauen zu + D | доверие к кому-то | Es ist besser, den Arzt zu wechseln, wenn Sie kein [[Vertrauen zu]] ihm haben. |  | n
+
+# s2 Общение и компромисс
+gut umgehen* können* mit + D | уметь обращаться (ладить) с кем-то | Sebastian hat sich entschieden, Erzieher zu werden, weil er gut [[mit]] Kindern [[umgehen kann]]. | ging um – ist umgegangen | v
+der Umgang mit + D | обращение, общение с кем-то | Der [[Umgang mit]] Jugendlichen ist nicht immer einfach und stellt für Lehrer oft eine Herausforderung dar. |  | m
+Rücksicht nehmen* auf + A | считаться с кем-то | Im Interesse guter Beziehungen sollten Sie [[Rücksicht auf]] Ihre Nachbarn [[nehmen]]. | nimmt – nahm – hat genommen | v
+der Konflikt, Konflikte | конфликт | Leider werden nicht alle politischen [[Konflikte]] mit diplomatischen Mitteln gelöst. |  | m
+der Kompromiss, Kompromisse | компромисс | Ein offenes Gespräch kann helfen, einen [[Kompromiss]] zu finden, mit dem alle zufrieden sind. |  | m
+einen Kompromiss schließen* / eingehen* | пойти на компромисс | Nach langen Verhandlungen haben beide Parteien einen [[Kompromiss geschlossen]]. | schloss – hat geschlossen · ging ein – ist eingegangen | v
+# s3 Ссоры, примирение, дружба
+sich streiten* mit + D | ссориться с кем-то | Er [[streitet sich]] ständig [[mit]] seinem Kollegen, den er für unorganisiert und unzuverlässig hält. | stritt – hat gestritten | v
+der Streit, Streitigkeiten | ссора, спор |  | мн. ч. die Streitigkeiten | m
+einen Streit beilegen | уладить спор | Manchmal muss eine neutrale Person eingeschaltet werden, die den Beteiligten hilft, ihren [[Streit beizulegen]]. | legte bei – hat beigelegt | v
+sich versöhnen mit + D | помириться с кем-то | Eltern sollten ihren Kindern beibringen, wie sie [[sich]] nach einem Streit mit anderen Kindern wieder [[versöhnen]] können. |  | v
+die Versöhnung | примирение |  |  | f
+
+Freundschaft schließen* (mit + D) | подружиться (с кем-то) | Wir haben schnell [[Freundschaft geschlossen]] und sind seitdem unzertrennlich. | schloss – hat geschlossen · без артикля | v
+befreundet sein* mit + D | дружить с кем-то | Mit einigen unserer Freunde sind wir schon seit der Kindergartenzeit [[befreundet]]. |  | v
+jdm. die Freundschaft kündigen | порвать дружбу с кем-то | Als ich herausgefunden habe, dass er mich belogen hat, habe ich ihm die [[Freundschaft gekündigt]]. |  | v
+der Freundeskreis, -kreise | круг друзей | Mein [[Freundeskreis]] besteht vor allem aus ehemaligen Mitschülern und Kommilitonen. |  | m
+in meinem Freundeskreis | среди моих друзей | [[In meinem Freundeskreis]] ist es nicht üblich, sich bis zur Bewusstlosigkeit zu betrinken. |  | v
+
+# s4 Любовь и брак
+das Verhältnis mit + D | роман, связь с кем-то | Meine Nachbarin hat seit einiger Zeit ein [[Verhältnis mit]] einem verheirateten Mann. | mit + Dat. = любовная связь! | n
+die Beziehung mit + D | (любовные) отношения с кем-то | Eine [[Beziehung mit]] einem Kollegen bzw. einer Kollegin kann zu privaten und beruflichen Konflikten führen. |  | f
+eine feste Beziehung haben* | иметь постоянные отношения | Heutzutage ist es nicht ungewöhnlich, dass Menschen [[eine feste Beziehung haben]], aber nicht heiraten wollen. |  | v
+der Trauschein, -scheine = die Heiratsurkunde, -urkunden | свидетельство о браке | Vor 100 Jahren war es gesellschaftlich nicht akzeptiert, ohne [[Trauschein]] zusammenzuleben. |  | m
+die Ehe, Ehen | брак | Manche Menschen sind der Meinung, dass gemeinsame Interessen eine wichtige Voraussetzung für eine glückliche [[Ehe]] sind. |  | f
+eine Ehe schließen* / eingehen* | вступить в брак | Mit 16 Jahren darf man nur mit Zustimmung der Eltern eine [[Ehe schließen]] / [[eingehen]]. | schloss – hat geschlossen · ging ein – ist eingegangen | v
+eine Ehe führen | состоять в браке, жить в браке | Früher hat man sich nur selten scheiden lassen, selbst wenn man eine unglückliche [[Ehe geführt]] hat. |  | v
+sich scheiden* lassen* | развестись | Im Normalfall müssen die Ehepartner ein Jahr lang getrennt leben, bevor sie [[sich scheiden lassen]] können. | ließ sich scheiden – hat sich scheiden lassen | v
+die Scheidung | развод |  |  | f
+die Scheidungsquote, -quoten | доля разводов | In den letzten Jahrzehnten hat sich die [[Scheidungsquote]] in Deutschland deutlich erhöht. |  | f
+schwul = homosexuell (Männer) | гей, гомосексуальный (о мужчинах) | Obwohl die Gesellschaft offener ist als früher, begegnen [[schwule]] Männer manchmal noch Vorurteilen. | begegnen + Dat. | v
+lesbisch = homosexuell (Frauen) | лесбиянка, гомосексуальная (о женщинах) | Es wird darüber diskutiert, ob schwule und [[lesbische]] Paare das Recht haben sollten, Kinder zu adoptieren. |  | v
+die eingetragene Lebenspartnerschaft, -partnerschaften | зарегистрированное партнёрство | Homosexuelle Paare können eine [[eingetragene Lebenspartnerschaft]] eingehen, die beim Standesamt registriert wird. |  | f
+
+# s5 Семья
+die Kleinfamilie, -familien | малая семья | Die meisten deutschen Familien sind heutzutage [[Kleinfamilien]] mit einem oder zwei Kindern. |  | f
+die Großfamilie, -familien | большая семья | In einer [[Großfamilie]] leben manchmal drei oder sogar vier Generationen unter einem Dach. |  | f
+die Patchworkfamilie, -familien | смешанная семья (с детьми от прошлых браков) | Wenn zwei Menschen sich verlieben, die schon Kinder haben, müssen sich die neuen „Geschwister“ erst an das Leben in einer [[Patchworkfamilie]] gewöhnen. | sich an + Akk. gewöhnen | f
+Stief- | отчим / мачеха / сводный (приставка) | Nach der Scheidung meiner Eltern hat meine Mutter meinen [[Stiefvater]] geheiratet, und jetzt wohnen wir mit ihm und meiner [[Stiefschwester]] zusammen. |  | v
+das Familienmitglied, -mitglieder | член семьи | Meine Eltern legen Wert darauf, dass alle [[Familienmitglieder]] im Haushalt helfen. |  | n
+der Verwandte / die Verwandte, die Verwandten (!) | родственник | Große Familienfeste wie runde Geburtstage und Hochzeiten feiern wir mit allen [[Verwandten]] und Freunden. | склоняется как прилагательное: ein Verwandter | m
+die Angehörigen (Plural) | близкие, родные | Krankenhäuser geben nur den [[Angehörigen]] Auskunft über den Gesundheitszustand eines Patienten. | склоняется как прилагательное | pl
+allein erziehend | воспитывающий ребёнка в одиночку | In Deutschland gibt es mehr [[allein erziehende]] Mütter als allein erziehende Väter, da die Kinder nach einer Trennung der Eltern meist bei der Mutter bleiben. |  | v
+der Elternteil, -teile | один из родителей | Bei einer Scheidung muss entschieden werden, bei welchem [[Elternteil]] die Kinder künftig leben sollen. |  | m
+
+# s6 Опека и забота
+das Sorgerecht haben* (für + A) | иметь право опеки (над кем-то) | Wenn es große Konflikte zwischen den geschiedenen Eltern gibt, ist es manchmal besser, wenn nur ein Elternteil das [[Sorgerecht]] für die Kinder [[hat]]. |  | v
+sorgen für + A | заботиться о ком-то | Die Eltern [[sorgen für]] ihre Kinder, bis diese erwachsen sind und ihr Leben selbst in die Hand nehmen können. | für + Akk. | v
+jdn. vernachlässigen | пренебрегать, запускать (заботу) | Manchmal kommt es vor, dass Eltern sich nicht um ihr Kind kümmern, sondern es [[vernachlässigen]]. |  | v
+die Vernachlässigung | пренебрежение, отсутствие заботы |  |  | f
+das Jugendamt, -ämter | ведомство по делам молодёжи (опека) | Das [[Jugendamt]] betreut Kinder, die elternlos sind oder von ihren Eltern vernachlässigt werden. |  | n
+die Waise, Waisen | сирота | Seit dem Tod ihrer Eltern leben die [[Waisen]] in einem staatlichen Heim. |  | f
+ein Kind adoptieren | усыновить ребёнка | Da die Eheleute keine eigenen Kinder bekommen können, möchten sie ein [[Kind adoptieren]]. |  | v
+die Adoption, Adoptionen | усыновление |  |  | f
+jdn. pflegen | ухаживать за кем-то | Nicht jeder ist in der Lage, die Eltern zu [[pflegen]], wenn sie alt oder krank sind. |  | v
+die Pflege | уход |  |  | f
+die Pflegefamilie | приёмная семья | Das Jugendamt sucht [[Pflegefamilien]] für Kinder, deren Eltern sich nicht genug um sie kümmern können. |  | f
+
+# s7 Воспитание
+ein Kind erziehen* | воспитывать ребёнка | Besonders in der Pubertät ist es nicht immer leicht, ein [[Kind zu erziehen]]. | erzog – hat erzogen | v
+die Kindererziehung | воспитание детей |  |  | f
+streng | строгий | [[Strenge]] Eltern erwarten Disziplin und Gehorsam von ihren Kindern. |  | v
+die Strenge | строгость |  |  | f
+jdn. bestrafen | наказывать | Wenn Kinder sich nicht an Regeln halten, müssen sie damit rechnen, [[bestraft]] zu werden. |  | v
+die Bestrafung, Bestrafungen | наказание | Eine [[Bestrafung]] durch Schläge ist heutzutage gesetzlich verboten. |  | f
+nachsichtig | снисходительный | [[Nachsichtige]] Eltern haben Verständnis für ihre Kinder und bestrafen sie nur selten. |  | v
+die Nachsicht | снисходительность |  |  | f
+verständnisvoll | понимающий | Wenn die Eltern [[verständnisvoll]] zuhören, fällt es einem Kind leichter, mit ihnen über seine Probleme zu sprechen. |  | v
+das Verständnis | понимание | Nachsichtige Eltern haben [[Verständnis]] für ihre Kinder. | Verständnis für + Akk. | n
+
+# s8 Похвала и детский сад
+geduldig | терпеливый | Mein Vater war sehr [[geduldig]] und hat mir alles so oft erklärt, bis ich es verstanden habe. |  | v
+die Geduld | терпение |  |  | f
+jdn. loben | хвалить | Um Kinder zu motivieren, sollte man sie nicht nur kritisieren, sondern sie vor allem [[loben]], wenn sie etwas gut gemacht haben. |  | v
+das Lob | похвала |  |  | n
+jdn. verwöhnen | баловать | Ich finde, dass Eltern ein Kind zu sehr [[verwöhnen]], wenn es alles bekommt, was es sich wünscht. |  | v
+ein Kind betreuen | присматривать за ребёнком | Wenn beide Eltern berufstätig sind, müssen sie sich Gedanken darüber machen, wer ihr [[Kind]] während der Arbeitszeit [[betreuen]] soll. |  | v
+die Kinderbetreuung | присмотр за детьми |  |  | f
+die Kinderkrippe, -krippen | ясли | Manche Eltern wollen ihre Kinder selbst betreuen, solange sie noch klein sind, andere entscheiden sich für eine Betreuung in der [[Kinderkrippe]]. |  | f
+die Kindertagesstätte, -stätten = die Kita, Kitas | детский сад | Manche Unternehmen haben eigene [[Kindertagesstätten]], in denen die Kinder ihrer Mitarbeiter tagsüber betreut werden. |  | f
+die Tagesmutter, -mütter | няня (частный присмотр за детьми) | Eine [[Tagesmutter]] kann Geld verdienen und sich gleichzeitig auch um ihre eigenen Kinder kümmern. |  | f
+die Elternzeit | отпуск по уходу за ребёнком | Während der [[Elternzeit]] muss die Mutter oder der Vater nicht arbeiten und kann sich intensiv um das Kind kümmern. |  | f
+
+## b1 Бонус: семейная политика (Infobox)
+das Grundgesetz | Основной закон (конституция ФРГ) | Laut Artikel 6 des [[Grundgesetzes]] werden Ehe und Familie vom Staat besonders geschützt. |  | n
+der Mutterschutz | охрана материнства | [[Mutterschutz]]: Schwangere Frauen genießen am Arbeitsplatz besonderen Schutz. |  | m
+das Elterngeld | пособие по уходу за ребёнком | Im Jahr 2007 wurde das [[Elterngeld]] eingeführt. |  | n
+das Kindergeld | детское пособие | Eltern erhalten für jedes Kind monatlich [[Kindergeld]], bis das Kind mindestens 18 Jahre alt ist. |  | n
+aus dem Beruf aussteigen* | уйти с работы (временно) | … das Eltern ermöglichen soll, für einige Zeit [[aus dem Beruf auszusteigen]]. | stieg aus – ist ausgestiegen | v
+ruhen lassen* | приостановить | Ein Elternteil oder beide Eltern gleichzeitig können ihre Berufstätigkeit für höchstens 3 Jahre [[ruhen lassen]]. |  | v
+der Anspruch auf + A | право на что-то | [[Anspruch auf]] Kinderbetreuung für Kinder ab dem ersten Lebensjahr. |  | m
+der Betreuungsplatz, -plätze | место в детском учреждении | Seit dem 01.08.2013 haben Eltern ein Recht auf einen [[Betreuungsplatz]] in einer Kindertagesstätte oder bei einer Tagesmutter. |  | m
+verpflichtet sein* | быть обязанным | Der Staat ist [[verpflichtet]], genug Betreuungsplätze zu schaffen. | zu + Dat. | v
+
+! das Verhältnis zu ↔ das Verhältnis mit | zu + D — отношения вообще (ein gutes Verhältnis zur Mutter); mit + D — любовная связь!
+! Freundschaft schließen · eine Ehe schließen · einen Kompromiss schließen | Все три с schließen: schloss – hat geschlossen. Но eine Ehe / einen Kompromiss eingehen — ist eingegangen
+! Rücksicht nehmen auf + A | Rücksicht auf die Nachbarn nehmen (auf + Akk.)
+! sorgen für + A ↔ sich kümmern um + A | Оба «заботиться»: für die Kinder sorgen, sich um die Kinder kümmern
+! der Verwandte, die Angehörigen | Склоняются как прилагательные: ein Verwandter, mit Verwandten, die Angehörigen
+! jdm. vertrauen ↔ das Vertrauen zu + D | Глагол + Dativ: Ich vertraue ihm. Существительное: Vertrauen zu ihm haben
+! sich scheiden lassen | Perfekt: Sie haben sich scheiden lassen (двойной инфинитив)
+! befreundet sein mit + D | Ich bin mit ihm befreundet (не «ich bin sein Freund befreundet»)

@@ -1,0 +1,159 @@
+// раздел | русское предложение | эталонный немецкий перевод
+1.1 | В Германии большинство детей идут в первый класс в шесть лет. | In Deutschland werden die meisten Kinder mit sechs Jahren eingeschult.
+1.1 | Кто бросил школу, может позже получить аттестат в вечерней школе. | Wer die Schule abgebrochen hat, kann den Schulabschluss später an einer Abendschule nachholen.
+1.1 | Хороший учитель умеет передавать ученикам учебный материал понятно и живо. | Ein guter Lehrer kann den Schülern den Lernstoff verständlich und lebendig vermitteln.
+1.1 | Если ученик показывает плохие результаты, его могут оставить на второй год. | Wenn ein Schüler schlechte Leistungen erbringt, kann er sitzen bleiben / nicht versetzt werden.
+1.1 | Перед экзаменом стоит запомнить важнейшие понятия, а не просто учить всё наизусть. | Vor einer Prüfung sollte man sich die wichtigsten Begriffe einprägen, statt einfach alles auswendig zu lernen.
+1.1 | Она записалась на вечерний курс, чтобы расширить свои знания английского. | Sie hat einen Abendkurs belegt, um ihre Englischkenntnisse zu erweitern.
+1.1 | Кто располагает широкой эрудицией, может поддержать разговор почти на любую тему. | Wer über eine umfangreiche Allgemeinbildung verfügt, kann sich über fast jedes Thema unterhalten.
+1.2 | Прежде чем начать учёбу, нужно зачислиться в университет. | Bevor man ein Studium aufnimmt, muss man sich an der Universität immatrikulieren / einschreiben.
+1.2 | Для некоторых специальностей действует ограничение приёма, потому что абитуриентов больше, чем мест. | Für bestimmte Fächer gelten Zulassungsbeschränkungen, weil es mehr Studienbewerber als Studienplätze gibt.
+1.2 | Многие студенты превышают нормативный срок обучения, потому что подрабатывают параллельно с учёбой. | Viele Studierende überschreiten die Regelstudienzeit, weil sie neben dem Studium jobben.
+1.2 | На семинаре каждый студент должен сделать доклад и написать курсовую. | Im Seminar muss jeder Studierende ein Referat halten und eine Hausarbeit schreiben.
+1.2 | Научный руководитель помогает докторанту выбрать тему и написать диссертацию. | Der Doktorvater hilft dem Doktoranden, ein Thema zu wählen und die Dissertation zu verfassen.
+1.2 | Если у вас трудности с учёбой, обратитесь в службу консультации студентов. | Wenn Sie im Studium Schwierigkeiten haben, wenden Sie sich an die Studienberatung.
+1.2 | Из-за беременности студентка прервала учёбу на два семестра. | Wegen ihrer Schwangerschaft hat die Studentin das Studium für zwei Semester unterbrochen.
+1.3 | Учёные выдвинули гипотезу, которую теперь нужно проверить с помощью экспериментов. | Die Wissenschaftler haben eine Hypothese aufgestellt, die jetzt durch Experimente überprüft werden muss.
+1.3 | Эта теория была опровергнута дальнейшими исследованиями. | Diese Theorie wurde durch weitere Forschungen widerlegt.
+1.3 | Из результатов исследования можно сделать разные выводы. | Aus den Untersuchungsergebnissen lassen sich unterschiedliche Schlüsse ziehen.
+1.3 | Прежде чем высказать мнение, учёный должен тщательно поискать информацию. | Bevor ein Wissenschaftler sich eine Meinung bildet, sollte er gründlich recherchieren.
+1.3 | Данные были собраны и обработаны с помощью компьютерной программы. | Die Daten wurden erhoben und mithilfe eines Computerprogramms ausgewertet.
+1.3 | Автор приводит ряд аргументов, чтобы подкрепить свой тезис. | Der Autor führt eine Reihe von Argumenten an, um seine These zu untermauern.
+1.3 | Результаты исследования были опубликованы в известном научном журнале. | Die Forschungsergebnisse wurden in einer renommierten Fachzeitschrift veröffentlicht.
+2.1 | Кто питается однообразно, должен считаться с последствиями для здоровья. | Wer sich einseitig ernährt, muss mit gesundheitlichen Folgen rechnen.
+2.1 | Сырые овощи считаются особенно полезными, так как при варке теряются питательные вещества. | Rohes Gemüse gilt als besonders gesund, da beim Kochen Nährstoffe verloren gehen.
+2.1 | Многим трудно отказаться от вредной, но вкусной еды. | Vielen fällt es schwer, auf ungesunde, aber schmackhafte Nahrungsmittel zu verzichten.
+2.1 | Детям, которым не хватает витамина D, грозит рахит. | Kinder, denen es an Vitamin D mangelt, erkranken oft an Rachitis.
+2.1 | Во многих странах мира люди до сих пор страдают от голода. | In vielen Ländern der Welt leiden die Menschen immer noch Hunger.
+2.1 | Лишний вес может повлечь за собой различные заболевания. | Übergewicht kann verschiedene Krankheiten zur Folge haben.
+2.1 | Всё больше покупателей выбирают продукты органического выращивания. | Immer mehr Verbraucher kaufen Lebensmittel aus biologischem Anbau.
+2.2 | Лёгкие снабжают организм жизненно необходимым кислородом. | Die Lunge versorgt den Körper mit lebensnotwendigem Sauerstoff.
+2.2 | Мозг состоит из миллиардов нервных клеток. | Das Gehirn besteht aus Milliarden von Nervenzellen.
+2.2 | При стрессе выделяется большое количество адреналина. | Bei Stress werden große Mengen Adrenalin ausgeschüttet.
+2.2 | Здоровая иммунная система может отразить множество болезней. | Ein gesundes Immunsystem kann zahlreiche Krankheiten abwehren.
+2.2 | Через пищевод пища попадает в желудок. | Durch die Speiseröhre gelangt die Nahrung in den Magen.
+2.2 | Большинство немцев положительно относятся к донорству органов. | Die meisten Deutschen stehen der Organspende positiv gegenüber.
+2.3 | Пациентка жалуется на сильные боли в животе и отсутствие аппетита. | Die Patientin klagt über starke Bauchschmerzen und Appetitlosigkeit.
+2.3 | Зимой многие заболевают гриппом, потому что легко заражаются друг от друга. | Im Winter erkranken viele an Grippe, weil sie sich leicht beieinander anstecken.
+2.3 | Здоровый образ жизни помогает предотвратить многие болезни. | Eine gesunde Lebensweise hilft, vielen Krankheiten vorzubeugen.
+2.3 | Врач выписал мне лекарство, которое почти не имеет побочных действий. | Der Arzt hat mir ein Medikament verschrieben, das kaum Nebenwirkungen hat.
+2.3 | Профилактические осмотры помогают распознать болезни на ранней стадии. | Vorsorgeuntersuchungen helfen, Krankheiten in einem frühen Stadium zu erkennen.
+2.3 | После инфаркта его сразу же доставили в больницу. | Nachdem er einen Herzinfarkt erlitten hatte, wurde er sofort ins Krankenhaus gebracht.
+2.4 | Врачи рекомендуют регулярно заниматься спортом, чтобы поддерживать форму. | Ärzte empfehlen, regelmäßig Sport zu treiben, um sich fit zu halten.
+2.4 | Кто хочет заниматься спортом вместе с другими, может вступить в спортклуб. | Wer gemeinsam mit anderen Sport treiben möchte, kann einem Sportverein beitreten.
+2.4 | Команда усердно тренировалась, чтобы пройти отбор на чемпионат Европы. | Die Mannschaft hat hart trainiert, um sich für die Europameisterschaft zu qualifizieren.
+2.4 | Кто нарушает правила, может быть отстранён от соревнования. | Wer gegen die Regeln verstößt, kann vom Wettkampf ausgeschlossen werden.
+2.4 | Спортсмена дисквалифицировали на два года из-за допинга. | Der Athlet wurde wegen Dopings für zwei Jahre gesperrt.
+2.4 | На международном уровне спорт может способствовать мирному сосуществованию народов. | Auf internationaler Ebene kann Sport zum friedlichen Miteinander der Völker beitragen.
+2.5 | Некоторые звуки мы вообще не воспринимаем осознанно. | Manche Geräusche nehmen wir gar nicht bewusst wahr.
+2.5 | Лучше всего мы учимся, когда связываем новую информацию с уже известными фактами. | Am besten lernen wir, wenn wir neue Informationen mit bereits bekannten Fakten verknüpfen.
+2.5 | Я не могу запомнить имена, даже если слышу их несколько раз. | Ich kann mir keine Namen merken, auch wenn ich sie mehrmals höre.
+2.5 | Постарайтесь сохранять спокойствие и не впадать в панику. | Versuchen Sie, ruhig zu bleiben und nicht in Panik zu geraten.
+2.5 | Опыт детства и юности формирует характер человека. | Erfahrungen in der Kindheit und Jugend prägen den Charakter eines Menschen.
+2.5 | Стресс и финансовые заботы угнетают не только больных, но и их близких. | Stress und finanzielle Sorgen belasten nicht nur die Betroffenen, sondern auch ihre Angehörigen.
+3.1 | У меня хорошие отношения со свекровью, и мы часто встречаемся. | Ich habe ein gutes Verhältnis zu meiner Schwiegermutter, und wir treffen uns oft.
+3.1 | В интересах добрососедских отношений вам следует считаться с соседями. | Im Interesse guter Beziehungen sollten Sie Rücksicht auf Ihre Nachbarn nehmen.
+3.1 | После долгих переговоров обе стороны пошли на компромисс. | Nach langen Verhandlungen haben beide Parteien einen Kompromiss geschlossen.
+3.1 | Когда я узнала, что он мне солгал, я порвала с ним дружбу. | Als ich herausgefunden habe, dass er mich belogen hat, habe ich ihm die Freundschaft gekündigt.
+3.1 | Родители заботятся о детях, пока те не станут взрослыми. | Die Eltern sorgen für ihre Kinder, bis diese erwachsen sind.
+3.1 | Если оба родителя работают, им нужно подумать, кто будет присматривать за ребёнком. | Wenn beide Eltern berufstätig sind, müssen sie sich Gedanken darüber machen, wer das Kind betreuen soll.
+3.2 | Если вы хотите заниматься трудовой деятельностью, вам нужно платить подоходный налог. | Wenn Sie einer Erwerbstätigkeit nachgehen möchten, müssen Sie Einkommensteuer zahlen.
+3.2 | После школы подростки задумываются, какую профессию им выбрать. | Nach der Schule machen sich junge Leute Gedanken darüber, welchen Beruf sie ergreifen wollen.
+3.2 | Кандидат, обладающий особой квалификацией, имеет лучшие шансы найти работу. | Ein Bewerber, der über besondere Qualifikationen verfügt, hat bessere Chancen, eine Stelle zu finden.
+3.2 | Фирма находится в кризисе и вынуждена сокращать рабочие места. | Die Firma steckt in einer Krise und muss Arbeitsplätze abbauen.
+3.2 | Чтобы сэкономить на персонале, решили уволить часть сотрудников. | Um Personalkosten zu sparen, wurde beschlossen, einen Teil der Mitarbeiter zu entlassen.
+3.2 | На предприятии сначала подписывают срочный договор на три года, потом можно получить бессрочный. | Im Unternehmen erhält man zunächst einen auf drei Jahre befristeten Arbeitsvertrag, danach kann man einen unbefristeten bekommen.
+3.2 | Выпускники определённых специальностей имеют лучшие перспективы карьерного роста. | Absolventen bestimmter Studiengänge haben bessere Aufstiegschancen.
+3.3 | Чтобы оплатить ремонт машины, в этом месяце мне придётся уйти в минус по счёту. | Um die Autoreparatur zu bezahlen, muss ich diesen Monat mein Konto überziehen.
+3.3 | Предприниматель берёт кредит, чтобы модернизировать своё предприятие. | Der Unternehmer nimmt einen Kredit auf, um seinen Betrieb zu modernisieren.
+3.3 | Многим студентам приходится подрабатывать, чтобы заработать себе на жизнь. | Viele Studierende müssen jobben, um sich ihren Lebensunterhalt zu verdienen.
+3.3 | Без второй работы я бы не сводил концы с концами. | Ohne meinen Zweitjob würde ich finanziell nicht über die Runden kommen.
+3.3 | Студенты с хорошими оценками могут претендовать на стипендию. | Studierende mit guten Noten können sich um ein Stipendium bewerben.
+3.3 | Получает ли кто-то BAföG, обычно зависит от дохода родителей. | Ob jemand BAföG bekommt, hängt normalerweise vom Einkommen der Eltern ab.
+3.4 | Дети и подростки проводят слишком много времени за компьютерными играми. | Kinder und Jugendliche verbringen zu viel Zeit damit, Computerspiele zu spielen.
+3.4 | Написание научной работы отнимает много времени. | Das Schreiben einer wissenschaftlichen Arbeit nimmt viel Zeit in Anspruch.
+3.4 | Из-за погоды вылет задержался на несколько часов. | Aufgrund des Wetters hat sich der Start um mehrere Stunden verzögert.
+3.4 | Согласно графику, число безработных за представленный период немного снизилось. | Der Grafik zufolge ist die Zahl der Arbeitslosen im dargestellten Zeitraum leicht gesunken.
+3.4 | Со временем привыкаешь к новому окружению. | Im Laufe der Zeit gewöhnt man sich an die neue Umgebung.
+3.4 | Экономия на образовании в долгосрочной перспективе вредит развитию страны. | Sparmaßnahmen im Bildungsbereich schaden langfristig der Entwicklung eines Landes.
+3.5 | После тяжёлого рабочего дня хочется просто полежать на диване и отключиться. | Nach einem anstrengenden Arbeitstag möchte man einfach auf dem Sofa liegen und abschalten.
+3.5 | Прогулка — хороший способ восстановиться после повседневного стресса. | Ein Spaziergang ist eine gute Möglichkeit, sich vom Alltagsstress zu erholen.
+3.5 | По выходным работающие родители могут полностью посвятить себя семье. | Am Wochenende können sich berufstätige Eltern ganz ihrer Familie widmen.
+3.5 | Кто регулярно занимается хобби, набирается сил для повседневной жизни. | Wer regelmäßig einem Hobby nachgeht, kann dadurch wieder Kraft für den Alltag schöpfen.
+3.5 | В конце учебного года десятиклассники ставят спектакль. | Am Ende des Schuljahres führen die Schüler der 10. Klasse ein Theaterstück auf.
+3.5 | Хочешь остаться дома или выберемся куда-нибудь на выходных? | Möchtest du zu Hause bleiben, oder wollen wir am Wochenende etwas unternehmen?
+4.1 | Ожидается, что население Германии в ближайшие десятилетия заметно сократится. | Es wird erwartet, dass die Bevölkerung in Deutschland in den kommenden Jahrzehnten deutlich schrumpfen wird.
+4.1 | Социальное происхождение ребёнка сильно влияет на его шансы получить образование. | Die soziale Herkunft eines Kindes hat großen Einfluss auf seine Bildungschancen.
+4.1 | Личные контакты с местными жителями помогают иммигрантам интегрироваться. | Private Kontakte zu den Einheimischen helfen Einwanderern, sich zu integrieren.
+4.1 | Чтобы получить гражданство, нужно владеть немецким на уровне B1. | Um eingebürgert zu werden, muss man über Deutschkenntnisse auf dem Niveau B1 verfügen.
+4.1 | Тысячи людей бегут из зоны боевых действий в соседние страны. | Tausende von Menschen fliehen aus den umkämpften Gebieten in die Nachbarländer.
+4.1 | Кто не имеет собственного дохода, может подать заявление на пособие по безработице. | Wer kein eigenes Einkommen hat, kann einen Antrag auf Arbeitslosengeld stellen.
+4.2 | Современная техника позволяет общаться с людьми по всему миру. | Die moderne Technik ermöglicht es, mit Menschen in aller Welt zu kommunizieren.
+4.2 | Критики указывают на то, что о будущем детей решают слишком рано. | Kritiker weisen darauf hin, dass zu früh über die Zukunft der Kinder entschieden wird.
+4.2 | Директор банка отрицает, что знал о незаконных операциях. | Der Bankdirektor bestreitet, etwas von den illegalen Transaktionen gewusst zu haben.
+4.2 | Вы согласны со мной или придерживаетесь другого мнения? | Stimmen Sie mir zu oder sind Sie anderer Meinung?
+4.2 | Прежде чем начать учёбу, она должна подтвердить знание языка сертификатом. | Bevor sie mit dem Studium beginnen kann, muss sie ihre Sprachkenntnisse durch ein Zertifikat nachweisen.
+4.2 | Стажировка за границей — хорошая возможность применить знания языка на практике. | Ein Auslandspraktikum ist eine gute Gelegenheit, die Sprachkenntnisse praktisch anzuwenden.
+4.3 | Энергию можно получать из ветра, солнца или воды. | Energie kann aus Wind, Sonne oder Wasser gewonnen werden.
+4.3 | Германия решила отказаться от атомной энергии. | Deutschland hat beschlossen, aus der Atomenergie auszusteigen.
+4.3 | При сжигании ископаемого топлива выбрасываются вредные вещества. | Bei der Verbrennung von fossilen Brennstoffen werden Schadstoffe freigesetzt.
+4.3 | Больницы располагают генераторами на случай отключения электричества. | Krankenhäuser verfügen über Generatoren für den Fall eines Stromausfalls.
+4.3 | Возобновляемые источники энергии экологичнее, чем энергия из угля и нефти. | Erneuerbare Energien sind umweltfreundlicher als Energie aus Kohle und Öl.
+4.3 | Учёные размышляют над тем, как безопасно хранить радиоактивные отходы. | Wissenschaftler beschäftigen sich mit der Frage, wie man Atommüll sicher lagern kann.
+4.4 | Кто выпил алкоголь, должен пользоваться общественным транспортом. | Wer Alkohol getrunken hat, sollte öffentliche Verkehrsmittel benutzen.
+4.4 | Кто превышает допустимую скорость, должен рассчитывать на штраф. | Wer die erlaubte Geschwindigkeit überschreitet, muss mit einem Bußgeld rechnen.
+4.4 | В час пик часто приходится стоять в пробке. | Während des Berufsverkehrs muss man damit rechnen, im Stau zu stehen.
+4.4 | Остров находится далеко от материка, и добраться туда можно только на корабле. | Die Insel ist weit vom Festland entfernt und man kann nur mit dem Schiff dorthin gelangen.
+4.4 | В тяжёлой аварии погибли три человека. | Bei einem schweren Verkehrsunfall sind drei Personen ums Leben gekommen.
+4.4 | Ввиду изменения климата учёные работают над сокращением выбросов. | Angesichts des Klimawandels arbeiten Wissenschaftler daran, den Schadstoffausstoß zu reduzieren.
+4.5 | Если вы хотите поехать летом, забронируйте поездку заранее. | Wenn Sie im Sommer verreisen möchten, sollten Sie die Reise frühzeitig buchen.
+4.5 | Туристам стоит заранее узнать о культуре принимающей страны. | Touristen sollten sich vorher über die Kultur des Gastlandes informieren.
+4.5 | Кто относится к местным жителям с уважением, может близко узнать культуру страны. | Wer den Einheimischen mit Respekt begegnet, kann die Kultur des Landes hautnah erleben.
+4.5 | Путешествия расширяют кругозор. | Reisen erweitert den Horizont.
+4.5 | Существует опасность, что массовый туризм разрушит ландшафт. | Es besteht die Gefahr, dass die Landschaft durch den Massentourismus zerstört wird.
+4.5 | Развитие инфраструктуры идёт на пользу и местному населению. | Der Ausbau der Infrastruktur kommt auch der einheimischen Bevölkerung zugute.
+4.6 | Фармацевтическая компания ежегодно инвестирует крупные суммы в исследования. | Das Pharmaunternehmen investiert jährlich hohe Summen in Forschung und Entwicklung.
+4.6 | После Рождества розничные торговцы подвели положительный итог. | Nach dem Weihnachtsgeschäft haben die Einzelhändler eine positive Bilanz gezogen.
+4.6 | Компания была вынуждена объявить о банкротстве. | Das Unternehmen musste Insolvenz anmelden.
+4.6 | Из-за жаркого лета спрос на кондиционеры сильно вырос. | Aufgrund des heißen Sommers ist die Nachfrage nach Klimaanlagen stark gestiegen.
+4.6 | Если потребность не покрывается внутренним производством, товары импортируются. | Wenn der Bedarf nicht durch die inländische Produktion gedeckt wird, werden Waren importiert.
+4.6 | Предприятия хотят осваивать новые рынки за рубежом. | Die Unternehmen wollen neue Märkte im Ausland erschließen.
+4.7 | Инженеры разработали новый материал, который очень устойчив к жаре. | Ingenieure haben ein neues Material entwickelt, das sehr hitzebeständig ist.
+4.7 | Чтобы защитить права на изобретение, его нужно запатентовать. | Um sich die Nutzungsrechte an einer Erfindung zu sichern, muss man sie patentieren lassen.
+4.7 | Лишь небольшая часть энергии превращается в свет. | Nur ein kleiner Teil der Energie wird in Licht umgewandelt.
+4.7 | Копировальный аппарат нужно регулярно обслуживать. | Der Kopierer muss regelmäßig gewartet werden.
+4.7 | Из-за технической неполадки телефонная сеть временно не работает. | Aufgrund einer technischen Störung funktioniert das Telefonnetz momentan nicht.
+4.7 | Данные передаются без кабеля и шифруются перед отправкой. | Die Daten werden kabellos übertragen und vor dem Senden verschlüsselt.
+4.8 | Родители хотят, чтобы дети научились ответственно обращаться с медиа. | Eltern möchten, dass ihre Kinder lernen, verantwortungsvoll mit Medien umzugehen.
+4.8 | Информационный поток, которому мы подвергаемся каждый день, вызывает стресс. | Die Informationsflut, der wir täglich ausgesetzt sind, löst Stress aus.
+4.8 | Фильм рассказывает о молодой женщине, которая пытается избавиться от зависимости. | Der Film handelt von einer jungen Frau, die versucht, sich von ihrer Sucht zu befreien.
+4.8 | Стоит хорошо подумать, какие фото выкладывать в интернет. | Man sollte sich gut überlegen, welche Fotos man ins Internet stellt.
+4.8 | Если компьютер зависнет, несохранённые данные могут пропасть. | Wenn der Computer abstürzt, können nicht gespeicherte Daten verloren gehen.
+4.8 | Кибербуллинг психологически очень тяжёл для пострадавших. | Cyber-Mobbing ist für die Betroffenen psychisch sehr belastend.
+4.9 | Чтобы общество функционировало, все должны соблюдать законы. | Damit das Zusammenleben funktioniert, müssen sich alle an die Gesetze halten.
+4.9 | Кто совершает преступление, должен рассчитывать на наказание. | Wer eine Straftat begeht, muss mit einer Strafe rechnen.
+4.9 | Полиция подозревает жену погибшего в совершении преступления. | Die Polizei verdächtigt die Ehefrau des Opfers, die Tat begangen zu haben.
+4.9 | Так как прокурор не смог доказать вину, обвиняемого оправдали. | Da der Staatsanwalt die Schuld nicht beweisen konnte, wurde der Angeklagte freigesprochen.
+4.9 | Суд приговорил компанию к крупному штрафу. | Das Gericht hat das Unternehmen zu einer hohen Geldstrafe verurteilt.
+4.9 | Её приговорили к восьми месяцам лишения свободы условно. | Sie wurde zu einer achtmonatigen Haftstrafe auf Bewährung verurteilt.
+4.10 | Около трети немцев принадлежат к католической церкви. | Knapp ein Drittel der Deutschen gehört der katholischen Kirche an.
+4.10 | Всё больше людей выходят из церкви, хотя остаются верующими. | Immer mehr Menschen treten aus der Kirche aus, obwohl sie gläubig sind.
+4.10 | После тяжёлого удара судьбы человек может усомниться в своей вере. | Nach einem schweren Schicksalsschlag kann ein Mensch an seinem Glauben zweifeln.
+4.10 | Участие в уроках религии добровольное. | Die Teilnahme am Religionsunterricht ist freiwillig.
+4.10 | Некоторые пары регистрируют брак только в ЗАГСе и отказываются от венчания. | Manche Paare lassen sich nur standesamtlich trauen und verzichten auf eine kirchliche Trauung.
+5.1 | Озоновый слой защищает Землю от ультрафиолетового излучения. | Die Ozonschicht schützt die Erde vor ultravioletter Strahlung.
+5.1 | Из-за изменения климата ледники становятся всё меньше. | Aufgrund des Klimawandels werden die Gletscher immer kleiner.
+5.1 | Промышленно развитые страны обязались выбрасывать меньше парниковых газов. | Die Industrieländer haben sich dazu verpflichtet, weniger Treibhausgase auszustoßen.
+5.1 | Метеорологи предупреждают о сильных наводнениях. | Meteorologen warnen vor schweren Überschwemmungen.
+5.1 | Нужно немедленно принять меры, чтобы предотвратить распространение эпидемии. | Es müssen sofort Maßnahmen ergriffen werden, um die Ausbreitung der Epidemie zu verhindern.
+5.1 | Ввиду нехватки воды во многих регионах не стоит расточать воду. | Angesichts des Wassermangels in vielen Regionen sollte man kein Wasser verschwenden.
+5.2 | Из-за изменения климата многие виды находятся под угрозой вымирания. | Aufgrund des Klimawandels sind zahlreiche Arten vom Aussterben bedroht.
+5.2 | Заповедники могут помочь сохранить многообразие видов. | Naturschutzgebiete können dazu beitragen, die Artenvielfalt zu erhalten.
+5.2 | Родители передают детям определённые признаки через гены. | Durch ihre Gene geben Eltern bestimmte Merkmale an ihre Kinder weiter.
+5.2 | Многие считают клонирование живых существ морально сомнительным. | Viele halten das Klonen von Lebewesen für moralisch fragwürdig.
+5.2 | Пчёлы опыляют растения, когда летают от цветка к цветку. | Wenn Bienen von Blüte zu Blüte fliegen, bestäuben sie die Pflanzen.
+5.3 | Соль растворяется в воде. | Salz löst sich in Wasser auf.
+5.3 | Когда атомные ядра распадаются, высвобождается радиоактивное излучение. | Wenn Atomkerne zerfallen, wird radioaktive Strahlung freigesetzt.
+5.3 | Бытовые чистящие средства часто содержат едкие вещества. | Haushaltsreiniger enthalten oft ätzende Stoffe.
+5.3 | Биоразлагаемые вещества со временем распадаются на природные субстанции. | Biologisch abbaubare Stoffe zerfallen mit der Zeit in natürliche Substanzen.
+5.3 | Когда жидкость испаряется, она превращается в газ. | Wenn eine Flüssigkeit verdampft, verwandelt sie sich in ein Gas.

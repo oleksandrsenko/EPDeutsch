@@ -1,0 +1,760 @@
+{
+ "id": "1.1",
+ "chapter": 1,
+ "chapterName": "Bildung und Forschung",
+ "title": "Schule und Bildung",
+ "titleRu": "Школа и образование",
+ "pages": "8–15",
+ "exercises": "15–19",
+ "solutions": "259",
+ "bookRows": 72,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Школьные годы и классы",
+   "items": [
+    {
+     "de": "eingeschult werden*",
+     "ru": "пойти в первый класс, быть зачисленным в школу",
+     "ex": "Die meisten Kinder werden im Alter von sechs Jahren [[eingeschult]].",
+     "note": "wurde eingeschult – ist eingeschult worden",
+     "g": "v"
+    },
+    {
+     "de": "die Einschulung",
+     "ru": "поступление в первый класс",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "zur Schule gehen*",
+     "ru": "ходить в школу, учиться в школе",
+     "ex": "Wenn man Abitur machen will, muss man 12 oder 13 Jahre [[zur Schule gehen]].",
+     "note": "ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "eine Schule besuchen",
+     "ru": "посещать школу, учиться в школе",
+     "ex": "Die Eltern legen großen Wert darauf, dass ihr Kind eine gute Schule [[besucht]].",
+     "note": "+ Akk. без предлога: eine Schule besuchen",
+     "g": "v"
+    },
+    {
+     "de": "die Schulpflicht",
+     "ru": "обязательное школьное обучение",
+     "ex": "Die Dauer der allgemeinen [[Schulpflicht]] beträgt in Deutschland mindestens neun Schuljahre.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "schulpflichtig",
+     "ru": "обязанный посещать школу, школьного возраста",
+     "ex": "[[Schulpflichtige]] Kinder dürfen der Schule nur aus wichtigen Gründen fernbleiben, z. B. wenn sie krank sind.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Schule schwänzen",
+     "ru": "прогуливать школу",
+     "ex": "Eigentlich müsste sie jetzt im Unterricht sein, aber sie [[schwänzt die Schule]] und trifft sich mit ihren Freunden im Park.",
+     "note": "разговорное; в книге стоит дважды (с. 9 и 11)",
+     "g": "v"
+    },
+    {
+     "de": "die Klasse, Klassen",
+     "ru": "класс (год обучения; группа учеников)",
+     "ex": "Die Grundschulzeit dauert in Bayern von der 1. bis zur 4. [[Klasse]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die … Klasse besuchen",
+     "ru": "учиться в …-м классе",
+     "ex": "Wenn man die erste [[Klasse besucht]], lernt man lesen und schreiben.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "in die … Klasse gehen*",
+     "ru": "ходить в …-й класс",
+     "ex": "Wer [[in die]] 12. [[Klasse geht]], muss sich auf das Abitur vorbereiten.",
+     "note": "ging – ist gegangen",
+     "g": "v"
+    },
+    {
+     "de": "auf die Hauptschule gehen* / auf die Realschule gehen* / aufs Gymnasium gehen*",
+     "ru": "учиться в Hauptschule / Realschule / гимназии",
+     "ex": "Am Ende der Grundschulzeit wird entschieden, ob man [[auf die Hauptschule]], die Realschule oder [[aufs Gymnasium geht]].",
+     "note": "auf + Akk.: auf die Realschule, aufs Gymnasium (не in die)",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Типы школ и аттестат",
+   "items": [
+    {
+     "de": "die öffentliche Schule = die staatliche Schule",
+     "ru": "государственная школа",
+     "ex": "Die meisten Schülerinnen und Schüler in Deutschland besuchen [[öffentliche Schulen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Privatschule, -schulen",
+     "ru": "частная школа",
+     "ex": "Die Zahl der Schüler, die [[Privatschulen]] besuchen, steigt kontinuierlich.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Ganztagsschule, -schulen",
+     "ru": "школа полного дня (с продлёнкой)",
+     "ex": "In Deutschland werden immer mehr [[Ganztagsschulen]] eingerichtet, in denen Schüler auch am Nachmittag unterrichtet und betreut werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Internat, Internate",
+     "ru": "интернат, школа-пансион",
+     "ex": "Im [[Internat]] teilen sich meistens zwei Schüler ein Zimmer.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Schule abschließen*",
+     "ru": "окончить школу",
+     "ex": "Wenn man die Schule mit guten Noten [[abgeschlossen]] hat, hat man bessere Chancen, einen Ausbildungsplatz zu finden.",
+     "note": "schloss ab – hat abgeschlossen",
+     "g": "v"
+    },
+    {
+     "de": "der Schulabschluss",
+     "ru": "окончание школы; аттестат",
+     "ex": "Nach ihrem [[Schulabschluss]] hat sie ein Jahr lang als Au-pair-Mädchen im Ausland gearbeitet.",
+     "note": "мн. ч. die Schulabschlüsse",
+     "g": "m"
+    },
+    {
+     "de": "einen Schulabschluss machen",
+     "ru": "получить аттестат, окончить школу",
+     "ex": "Viele Schüler, die nächstes Jahr ihren [[Schulabschluss machen]], sind schon auf der Suche nach einem Ausbildungsplatz.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "einen Schulabschluss haben*",
+     "ru": "иметь аттестат",
+     "ex": "Heutzutage ist es sehr wichtig, einen guten [[Schulabschluss zu haben]].",
+     "note": "hat – hatte – hat gehabt",
+     "g": "v"
+    },
+    {
+     "de": "die Schule abbrechen*",
+     "ru": "бросить школу",
+     "ex": "Wer die Schule [[abgebrochen]] hat, hat keinen Schulabschluss und findet deshalb nur schwer einen guten Arbeitsplatz.",
+     "note": "bricht ab – brach ab – hat abgebrochen",
+     "g": "v"
+    },
+    {
+     "de": "einen Schulabschluss nachholen",
+     "ru": "получить аттестат позже (например, в вечерней школе)",
+     "ex": "Wer keinen Schulabschluss gemacht hat, kann eine Abendschule besuchen und den [[Schulabschluss nachholen]].",
+     "note": "holte nach – hat nachgeholt",
+     "g": "v"
+    },
+    {
+     "de": "(das) Abitur machen",
+     "ru": "сдавать Abitur, получать аттестат зрелости",
+     "ex": "Wenn man (das) [[Abitur gemacht]] hat, kann man sich um einen Studienplatz bewerben.",
+     "note": "можно с артиклем или без: das Abitur / Abitur machen",
+     "g": "v"
+    },
+    {
+     "de": "(das) Abitur haben*",
+     "ru": "иметь аттестат зрелости (Abitur)",
+     "ex": "Wenn du (das) [[Abitur hast]], stehen dir alle Türen offen.",
+     "note": "hat – hatte – hat gehabt",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Предметы и уроки",
+   "items": [
+    {
+     "de": "das Fach, die Fächer",
+     "ru": "учебный предмет",
+     "ex": "Die Schüler haben Unterricht in verschiedenen naturwissenschaftlichen [[Fächern]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Hauptfach, -fächer",
+     "ru": "основной предмет",
+     "ex": "Der Unterricht in den [[Hauptfächern]] Deutsch, Englisch und Mathematik wird als besonders wichtig angesehen.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Nebenfach, -fächer",
+     "ru": "второстепенный предмет",
+     "ex": "In den [[Nebenfächern]] haben die Schüler weniger Unterricht als in den Hauptfächern.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "etw. unterrichten",
+     "ru": "преподавать что-то (предмет)",
+     "ex": "Der Lehrer [[unterrichtet]] seit 15 Jahren Englisch und Sport an einer Hauptschule.",
+     "note": "неотделяемая приставка: hat unterrichtet",
+     "g": "v"
+    },
+    {
+     "de": "(jdn.) unterrichten",
+     "ru": "учить, обучать кого-то",
+     "ex": "Wer sich für den Lehrerberuf entscheidet, sollte Freude daran haben, junge Menschen zu [[unterrichten]].",
+     "note": "jdn. (Akk.) unterrichten",
+     "g": "v"
+    },
+    {
+     "de": "der Unterricht",
+     "ru": "занятия, уроки, обучение",
+     "ex": "Die Lehrer versuchen, ihren [[Unterricht]] abwechslungsreich zu gestalten, um das Interesse der Schüler zu wecken.",
+     "note": "только ед. ч.; один урок — die Unterrichtsstunde",
+     "g": "m"
+    },
+    {
+     "de": "(jdm.) Unterricht geben* / erteilen",
+     "ru": "вести занятия, давать уроки",
+     "ex": "Die Hauptaufgabe von Lehrern ist es, (den Schülern) [[Unterricht zu geben]] / [[zu erteilen]], aber auch die Durchführung von Prüfungen gehört zu ihren Aufgaben.",
+     "note": "gibt – gab – hat gegeben · без артикля: Unterricht erteilen",
+     "g": "v"
+    },
+    {
+     "de": "die Unterrichtsstunde, -stunden",
+     "ru": "урок (академический час)",
+     "ex": "In den [[Unterrichtsstunden]] am Mittag können sich die Schüler nicht mehr so gut konzentrieren.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "der Lernstoff",
+     "ru": "учебный материал",
+     "ex": "Genetik gehört zum [[Lernstoff]] der 9. Klasse.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Schuluniform, -uniformen",
+     "ru": "школьная форма",
+     "ex": "Da es an deutschen Schulen normalerweise keine [[Schuluniformen]] gibt, können die Schüler selbst entscheiden, was sie anziehen.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Преподавание и репетиторы",
+   "items": [
+    {
+     "de": "jdm. etw. vermitteln · den Schülern den Lernstoff vermitteln",
+     "ru": "передавать кому-то что-то (знания, материал)",
+     "ex": "Der Lehrer soll den Schülern den Lernstoff auf verständliche und lebendige Weise [[vermitteln]].",
+     "note": "jdm. (Dat.) etw. (Akk.)",
+     "g": "v"
+    },
+    {
+     "de": "den Schülern Wissen / Kenntnisse vermitteln",
+     "ru": "передавать ученикам знания",
+     "ex": "",
+     "note": "без артикля: Wissen vermitteln (не das Wissen)",
+     "g": "v"
+    },
+    {
+     "de": "die Vermittlung des Lernstoffs / von Wissen / von Kenntnissen",
+     "ru": "передача учебного материала / знаний",
+     "ex": "Die Aufgabe der Schulen ist die [[Vermittlung von Wissen]] / Kenntnissen in verschiedenen Bereichen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Didaktik",
+     "ru": "дидактика, методика преподавания",
+     "ex": "Zukünftige Lehrer müssen sich nicht nur mit ihren Unterrichtsfächern, sondern auch mit [[Didaktik]] beschäftigen, damit sie den Lernstoff gut vermitteln können.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "didaktisch",
+     "ru": "дидактический, с точки зрения методики",
+     "ex": "Wenn komplexe Themen [[didaktisch]] gut aufbereitet werden, können die Schüler sie leichter verstehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "der Lehrplan, -pläne",
+     "ru": "учебная программа",
+     "ex": "Die Schul- oder Kultusministerien erstellen [[Lehrpläne]], in denen die Unterrichtsinhalte festgelegt sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Mitschüler, Mitschüler / die Mitschülerin, Mitschülerinnen",
+     "ru": "одноклассник, соученик",
+     "ex": "Kinder sollen in der Schule auch lernen, mit ihren [[Mitschülern]] zusammenzuarbeiten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "die Nachhilfe = der Nachhilfeunterricht",
+     "ru": "репетиторство, дополнительные занятия",
+     "ex": "Spezielle Institute bieten [[Nachhilfe]] in einzelnen Fächern an, um Schüler beim Lernen zu unterstützen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Nachhilfeunterricht nehmen*",
+     "ru": "заниматься с репетитором",
+     "ex": "Wenn man in einem Fach Schwierigkeiten hat, sollte man [[Nachhilfeunterricht nehmen]].",
+     "note": "nimmt – nahm – hat genommen",
+     "g": "v"
+    },
+    {
+     "de": "Nachhilfeunterricht geben* / erteilen",
+     "ru": "давать частные уроки, репетиторствовать",
+     "ex": "Manche Studenten verdienen Geld, indem sie Schülern [[Nachhilfeunterricht geben]] / [[erteilen]].",
+     "note": "gibt – gab – hat gegeben · erteilen — неотделяемая: hat erteilt",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Оценки и успеваемость",
+   "items": [
+    {
+     "de": "die Klassenarbeit, -arbeiten",
+     "ru": "контрольная работа",
+     "ex": "Auf [[Klassenarbeiten]] müssen sich die Schüler gründlich vorbereiten.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Klassenarbeit schreiben*",
+     "ru": "писать контрольную",
+     "ex": "In den Hauptfächern werden regelmäßig [[Klassenarbeiten geschrieben]].",
+     "note": "schrieb – hat geschrieben",
+     "g": "v"
+    },
+    {
+     "de": "die Note, Noten",
+     "ru": "оценка, отметка",
+     "ex": "Kinder sind enttäuscht, wenn sie bei einer Prüfung keine gute [[Note]] bekommen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "den Schülern Noten geben*",
+     "ru": "ставить ученикам оценки",
+     "ex": "Ist es sinnvoll, [[Schülern]] schon im ersten Schuljahr [[Noten zu geben]]?",
+     "note": "gibt – gab – hat gegeben",
+     "g": "v"
+    },
+    {
+     "de": "etw. benoten",
+     "ru": "оценивать что-то (ставить оценку)",
+     "ex": "Wenn Schüler wissen, dass eine Hausaufgabe [[benotet]] wird, arbeiten sie meist konzentrierter daran.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Benotung",
+     "ru": "выставление оценок, оценивание",
+     "ex": "Die Schüler empfinden die [[Benotung]] ihrer Prüfungen nicht immer als gerecht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kopfnote, -noten",
+     "ru": "оценка за поведение и прилежание",
+     "ex": "In manchen Ländern bekommen die Schüler [[Kopfnoten]], z. B. für ihr soziales Verhalten und ihre Mitarbeit im Unterricht.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Leistung, Leistungen",
+     "ru": "успеваемость, результаты",
+     "ex": "Früher war sie eine gute Schülerin, aber im letzten Schuljahr haben ihre [[Leistungen]] nachgelassen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine Leistung erbringen*",
+     "ru": "показывать (хорошие) результаты",
+     "ex": "Wenn ein Schüler gute [[Leistungen erbringt]], bekommt er gute Noten.",
+     "note": "erbrachte – hat erbracht",
+     "g": "v"
+    },
+    {
+     "de": "das Zeugnis, Zeugnisse",
+     "ru": "табель успеваемости; аттестат",
+     "ex": "Schüler bekommen am Ende jedes Schulhalbjahres [[Zeugnisse]] mit Noten in den einzelnen Fächern.",
+     "note": "-nis → -nisse",
+     "g": "n"
+    },
+    {
+     "de": "nicht versetzt werden* = sitzen bleiben*",
+     "ru": "остаться на второй год",
+     "ex": "Schlechte Schüler werden [[nicht versetzt]] / [[bleiben sitzen]] und müssen das Schuljahr wiederholen.",
+     "note": "bleibt sitzen – blieb sitzen – ist sitzen geblieben",
+     "g": "v"
+    },
+    {
+     "de": "die Versetzung",
+     "ru": "перевод в следующий класс",
+     "ex": "Die Lehrer informieren die Eltern darüber, wenn die [[Versetzung]] ihres Kindes gefährdet ist.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "name": "Способности и знания",
+   "items": [
+    {
+     "de": "begabt sein*",
+     "ru": "быть одарённым, способным",
+     "ex": "Die Schülerin ist mathematisch und naturwissenschaftlich [[begabt]].",
+     "note": "begabt für + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Begabung, Begabungen",
+     "ru": "одарённость, талант",
+     "ex": "Das Kind verfügt über eine große musische [[Begabung]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "jdn./etw. fördern",
+     "ru": "поддерживать, развивать (способности)",
+     "ex": "Die Eltern [[fördern]] ihr Kind / die Begabung ihres Kindes durch zusätzlichen Musikunterricht.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Förderung",
+     "ru": "поддержка, развитие",
+     "ex": "",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Kenntnisse (Plural)",
+     "ru": "знания",
+     "ex": "Die Lehrerin vermittelt den Schülern [[Kenntnisse]] in Physik und Chemie.",
+     "note": "почти всегда во мн. ч.",
+     "g": "pl"
+    },
+    {
+     "de": "Kenntnisse erwerben*",
+     "ru": "приобретать знания",
+     "ex": "In der Schule [[erwerben]] die Schüler [[Grundkenntnisse]] in verschiedenen Fächern.",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "sich Kenntnisse aneignen",
+     "ru": "усваивать, осваивать знания",
+     "ex": "Er hat [[sich]] seine Kenntnisse mithilfe von Büchern [[angeeignet]].",
+     "note": "sich (Dat.) etw. aneignen: ich eigne mir … an",
+     "g": "v"
+    },
+    {
+     "de": "seine Kenntnisse erweitern",
+     "ru": "расширять знания",
+     "ex": "Die Krankenschwester besucht einen Kurs, um ihre [[Kenntnisse]] im Bereich Intensivpflege [[zu erweitern]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "seine Kenntnisse praktisch anwenden*",
+     "ru": "применять знания на практике",
+     "ex": "Wenn man eine Reise ins Ausland macht, kann man seine Sprachkenntnisse [[praktisch anwenden]].",
+     "note": "wandte an / wendete an – hat angewandt / angewendet",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "name": "Навыки, память и экзамены",
+   "items": [
+    {
+     "de": "die Fähigkeit, Fähigkeiten",
+     "ru": "способность, умение",
+     "ex": "Es ist wichtig, besondere [[Fähigkeiten]] eines Kindes zu erkennen und zu fördern.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "Fähigkeiten erwerben*",
+     "ru": "приобретать навыки",
+     "ex": "Den Schülern soll nicht nur theoretisches Wissen vermittelt werden, sondern sie sollen auch praktische [[Fähigkeiten erwerben]].",
+     "note": "erwirbt – erwarb – hat erworben",
+     "g": "v"
+    },
+    {
+     "de": "etw. auswendig lernen",
+     "ru": "учить что-то наизусть",
+     "ex": "Früher mussten die Schüler viel [[auswendig lernen]], aber heute wird mehr Wert darauf gelegt, Zusammenhänge zu verstehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Auswendiglernen",
+     "ru": "заучивание наизусть",
+     "ex": "[[Auswendiglernen]] ist ein gutes Gedächtnistraining.",
+     "note": "субстантивированный инфинитив — всегда das",
+     "g": "n"
+    },
+    {
+     "de": "sich etw. einprägen",
+     "ru": "запоминать, запечатлевать в памяти",
+     "ex": "Vor einer Prüfung sollte man [[sich]] wichtige Daten und Begriffe gut [[einprägen]].",
+     "note": "sich (Dat.): ich präge mir etw. ein",
+     "g": "v"
+    },
+    {
+     "de": "eine Prüfung ablegen",
+     "ru": "сдавать экзамен",
+     "ex": "Die meisten Menschen sind nervös, wenn sie eine [[Prüfung ablegen]] müssen.",
+     "note": "ablegen — процесс, bestehen — успешный результат",
+     "g": "v"
+    },
+    {
+     "de": "eine Prüfung bestehen*",
+     "ru": "сдать (выдержать) экзамен",
+     "ex": "Er hat die [[Prüfung bestanden]], obwohl die Aufgaben sehr schwierig waren.",
+     "note": "bestand – hat bestanden",
+     "g": "v"
+    },
+    {
+     "de": "bei einer Prüfung durchfallen*",
+     "ru": "провалиться на экзамене",
+     "ex": "Geben Sie nicht auf, wenn Sie [[bei einer Prüfung durchfallen]], sondern versuchen Sie es noch einmal!",
+     "note": "fällt durch – fiel durch – ist durchgefallen",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "name": "Образованность и курсы",
+   "items": [
+    {
+     "de": "verfügen über + A.",
+     "ru": "располагать чем-то, обладать",
+     "ex": "Aufgrund jahrelanger Berufserfahrung [[verfügt]] sie [[über]] umfangreiche Fachkenntnisse.",
+     "note": "über + Akk.",
+     "g": "v"
+    },
+    {
+     "de": "die Allgemeinbildung",
+     "ru": "общая эрудиция, общее образование",
+     "ex": "Es gehört zur [[Allgemeinbildung]], die wichtigsten internationalen Organisationen zu kennen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine geringe Allgemeinbildung",
+     "ru": "слабая общая эрудиция",
+     "ex": "Der Junge verfügte über [[eine geringe Allgemeinbildung]], weil er die Schule nicht regelmäßig besuchen konnte.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "eine umfangreiche Allgemeinbildung",
+     "ru": "широкая эрудиция",
+     "ex": "Als sie erwachsen war, las sie sehr viel und eignete sich dadurch [[eine umfangreiche Allgemeinbildung]] an.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "gebildet sein*",
+     "ru": "быть образованным",
+     "ex": "Da er sehr [[gebildet]] ist, kann er sich über fast jedes Thema unterhalten.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "das Bildungsniveau · ein hohes / ein niedriges Bildungsniveau",
+     "ru": "уровень образования (высокий / низкий)",
+     "ex": "Wenn man über [[ein hohes Bildungsniveau]] verfügt, hat man bessere Berufsaussichten als mit [[einem niedrigen Bildungsniveau]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Analphabet, Analphabeten",
+     "ru": "неграмотный человек",
+     "ex": "Etwa 4 % der Deutschen sind [[Analphabeten]], weil sie nie richtig schreiben und lesen gelernt haben.",
+     "note": "n-склонение: den/dem/des Analphabeten",
+     "g": "m"
+    },
+    {
+     "de": "der Analphabetismus",
+     "ru": "неграмотность",
+     "ex": "Mit verschiedenen Bildungsprogrammen soll der [[Analphabetismus]] bekämpft werden.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "sich fortbilden / sich weiterbilden",
+     "ru": "повышать квалификацию, учиться дальше",
+     "ex": "Da das Wissen der Menschheit in allen Bereichen ständig wächst, muss man [[sich]] regelmäßig [[fortbilden]].",
+     "note": "bildete sich fort – hat sich fortgebildet",
+     "g": "v"
+    },
+    {
+     "de": "die Fortbildung / die Weiterbildung",
+     "ru": "повышение квалификации",
+     "ex": "Angestellte können Bildungsurlaub bekommen, um an [[Fortbildungen]] teilzunehmen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "einen Kurs belegen",
+     "ru": "записаться на курс",
+     "ex": "Er hat einen Abendkurs [[belegt]], um seine Englischkenntnisse aufzufrischen.",
+     "note": "belegte – hat belegt",
+     "g": "v"
+    },
+    {
+     "de": "an einem Kurs teilnehmen*",
+     "ru": "посещать курс, участвовать в курсе",
+     "ex": "Wer regelmäßig [[an]] diesem [[Kurs teilnimmt]], erhält am Ende eine Bescheinigung.",
+     "note": "nimmt teil – nahm teil – hat teilgenommen · an + Dat.",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: школьная система Германии (Infobox)",
+   "bonus": true,
+   "items": [
+    {
+     "de": "die Grundschule, -n",
+     "ru": "начальная школа (1–4 класс)",
+     "ex": "Alle Kinder müssen - normalerweise ab 6 Jahren - die [[Grundschule]] besuchen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die weiterführende Schule",
+     "ru": "средняя школа (после начальной)",
+     "ex": "Nach der vierten Klasse wechseln sie auf eine [[weiterführende Schule]]: die Hauptschule, die Realschule oder das Gymnasium.",
+     "note": "auf eine Schule wechseln",
+     "g": "f"
+    },
+    {
+     "de": "das dreigliedrige Schulsystem",
+     "ru": "трёхступенчатая школьная система",
+     "ex": "Deshalb bezeichnet man das deutsche Schulsystem auch als [[dreigliedriges Schulsystem]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Hauptschule / die Realschule",
+     "ru": "основная школа (5–9/10 кл.) / реальная школа (5–10 кл.)",
+     "ex": "Nach der [[Hauptschule]] oder der [[Realschule]] kann man eine Berufsausbildung machen.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gymnasium, Gymnasien",
+     "ru": "гимназия (до Abitur)",
+     "ex": "Nach der Realschule kann man aber auch aufs [[Gymnasium]] wechseln und dort das Abitur machen.",
+     "note": "мн. ч. die Gymnasien",
+     "g": "n"
+    },
+    {
+     "de": "die Hochschulreife",
+     "ru": "аттестат, дающий право поступать в вуз",
+     "ex": "Man nennt das Abitur auch „[[Hochschulreife]]“, weil man danach an einer Hochschule, also einer Fachhochschule oder einer Universität, studieren kann.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Fachhochschule, -n",
+     "ru": "высшая школа прикладных наук",
+     "ex": "[[Fachhochschulen]] sind in der Regel stärker praxisorientiert als Universitäten und bereiten meist auf einen konkreten Beruf vor.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Gesamtschule, -n",
+     "ru": "единая общеобразовательная школа",
+     "ex": "Es gibt in Deutschland auch [[Gesamtschulen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Förderschule, -n",
+     "ru": "коррекционная школа",
+     "ex": "Menschen mit Beeinträchtigung besuchen häufig [[Förderschulen]].",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Inklusion",
+     "ru": "инклюзия",
+     "ex": "Dieses Konzept wird „[[Inklusion]]“ genannt und basiert auf einer Konvention der Vereinten Nationen (UN) aus dem Jahr 2006.",
+     "note": "",
+     "g": "f"
+    }
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "k": "eine Prüfung ablegen · bestehen · durchfallen",
+   "v": "ablegen — сдавать (сам процесс), bestehen — сдать успешно, bei einer Prüfung durchfallen — провалить (ist durchgefallen)"
+  },
+  {
+   "k": "eine Schule besuchen · zur Schule gehen · auf die Realschule gehen",
+   "v": "besuchen + Akk. без предлога; zur Schule gehen — вообще ходить в школу; конкретный тип школы — auf + Akk.: aufs Gymnasium"
+  },
+  {
+   "k": "Abitur machen, Unterricht erteilen, Wissen vermitteln",
+   "v": "Часто без артикля (Übung II в книге): (das) Abitur machen, Unterricht erteilen, den Schülern Wissen vermitteln"
+  },
+  {
+   "k": "sich etw. aneignen / einprägen",
+   "v": "sich в Dativ: Ich eigne mir Kenntnisse an. Ich präge mir die Formeln ein."
+  },
+  {
+   "k": "unterrichten, erteilen, bestehen",
+   "v": "Неотделяемые: hat unterrichtet, hat erteilt, hat bestanden. Отделяемые: teilnehmen → nimmt teil, einprägen → prägt ein"
+  },
+  {
+   "k": "sitzen bleiben / durchfallen",
+   "v": "Перфект с sein: ist sitzen geblieben, ist durchgefallen"
+  },
+  {
+   "k": "der Analphabet",
+   "v": "n-склонение: den / dem / des Analphabeten"
+  },
+  {
+   "k": "die Kenntnisse",
+   "v": "Почти всегда во мн. ч.: Kenntnisse erwerben, Sprachkenntnisse. «Знание» в ед. ч. — das Wissen"
+  }
+ ]
+}

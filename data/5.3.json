@@ -1,0 +1,398 @@
+{
+ "id": "5.3",
+ "chapter": 5,
+ "chapterName": "Natur und Umwelt",
+ "title": "Chemie",
+ "titleRu": "Химия",
+ "pages": "254–256",
+ "exercises": "257–258",
+ "solutions": "271–272",
+ "bookRows": 41,
+ "sets": [
+  {
+   "id": "s1",
+   "name": "Основы: элементы и молекулы",
+   "items": [
+    {
+     "de": "das Element, Elemente",
+     "ru": "элемент",
+     "ex": "Das Periodensystem ist eine strukturierte Darstellung der bekannten chemischen [[Elemente]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Atom, Atome",
+     "ru": "атом",
+     "ex": "Chemische Elemente bestehen aus [[Atomen]] oder Verbindungen von Atomen, die je nach Element unterschiedliche Eigenschaften haben.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Kern, Kerne",
+     "ru": "ядро",
+     "ex": "Der [[Kern]] eines Atoms macht den größten Teil seiner Masse aus.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Molekül, Moleküle",
+     "ru": "молекула",
+     "ex": "Eine Verbindung mehrerer Atome bezeichnet man als [[Molekül]].",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Säure, Säuren",
+     "ru": "кислота",
+     "ex": "Der menschliche Magen enthält [[Säure]], die Bakterien abtötet und zur Verdauung beiträgt.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "die Base, Basen",
+     "ru": "основание, щёлочь",
+     "ex": "Die Augen werden rot und brennen, wenn sie mit [[Basen]] in Kontakt kommen, die z. B. in vielen Seifen enthalten sind.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "das Gas, Gase",
+     "ru": "газ",
+     "ex": "Im Gegensatz zu festen Stoffen sind die Moleküle von [[Gasen]] weit voneinander entfernt.",
+     "note": "",
+     "g": "n"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Газы",
+   "items": [
+    {
+     "de": "der Sauerstoff (O2)",
+     "ru": "кислород",
+     "ex": "Ein Feuer erlischt, wenn es in seiner Umgebung nicht genug [[Sauerstoff]] gibt.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Ozon (O3)",
+     "ru": "озон",
+     "ex": "[[Ozon]] ist ein Gas, das aus drei Sauerstoffatomen besteht.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Wasserstoff (H)",
+     "ru": "водород",
+     "ex": "Techniker haben Motoren entwickelt, die mit [[Wasserstoff]] betrieben werden können.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Kohlenstoff (C)",
+     "ru": "углерод",
+     "ex": "Unter starkem Druck und bei hohen Temperaturen entstehen aus [[Kohlenstoff]] Diamanten.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Kohlendioxid (CO2)",
+     "ru": "углекислый газ",
+     "ex": "Beim Atmen nehmen wir Sauerstoff auf und geben [[Kohlendioxid]] ab.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Kohlenmonoxid (CO)",
+     "ru": "угарный газ",
+     "ex": "Bei Bränden entsteht giftiges [[Kohlenmonoxid]], das in größeren Mengen tödlich ist.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "das Methan (CH4)",
+     "ru": "метан",
+     "ex": "Aus gefrorenem [[Methan]] lässt sich Energie gewinnen, doch seine Förderung ist mit Risiken verbunden.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "die Fluorchlorkohlenwasserstoffe = FCKW (Plural)",
+     "ru": "фреоны (ХФУ)",
+     "ex": "Wissenschaftler haben nachgewiesen, dass die Freisetzung von [[FCKW]] die Ozonschicht zerstört.",
+     "note": "",
+     "g": "pl"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Вещества",
+   "items": [
+    {
+     "de": "der Schwefel (S)",
+     "ru": "сера",
+     "ex": "[[Schwefel]] findet sich häufig in der Umgebung von Vulkanen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Quecksilber (Hg)",
+     "ru": "ртуть",
+     "ex": "Statt des giftigen [[Quecksilbers]] enthalten moderne Fieberthermometer eine ungefährliche Flüssigkeit.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Stickstoff (N)",
+     "ru": "азот",
+     "ex": "Unsere Atemluft besteht zum größten Teil aus [[Stickstoff]].",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "das Nitrat, Nitrate",
+     "ru": "нитрат",
+     "ex": "Durch Düngemittel in der Landwirtschaft wird das Trinkwasser mit [[Nitraten]] kontaminiert.",
+     "note": "",
+     "g": "n"
+    },
+    {
+     "de": "der Schadstoff, -stoffe",
+     "ru": "вредное вещество",
+     "ex": "Eine hohe Konzentration von [[Schadstoffen]] in der Luft kann die Lebenserwartung der Bevölkerung deutlich verkürzen.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Kunststoff, -stoffe",
+     "ru": "пластмасса",
+     "ex": "Viele Gegenstände, die wir im Alltag benutzen, bestehen aus [[Kunststoffen]], weil diese leicht, praktisch und relativ günstig sind.",
+     "note": "",
+     "g": "m"
+    },
+    {
+     "de": "der Sprengstoff, -stoffe",
+     "ru": "взрывчатое вещество",
+     "ex": "Um Attentate mit [[Sprengstoff]] zu verhindern, wird das Gepäck von Reisenden vor Besteigen des Flugzeugs gründlich untersucht.",
+     "note": "",
+     "g": "m"
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "name": "Превращения веществ",
+   "items": [
+    {
+     "de": "sich / etw. auflösen · die Auflösung",
+     "ru": "растворяться · растворение",
+     "ex": "Salz [[löst sich]] in Wasser [[auf]], bis die Salzlösung gesättigt ist und kein Salz mehr aufnehmen kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "sich / etw. zersetzen · die Zersetzung",
+     "ru": "разлагать(ся) · разложение",
+     "ex": "Bakterien [[zersetzen]] Pflanzenreste und anderes organisches Material.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zerfallen* · der Zerfall",
+     "ru": "распадаться · распад",
+     "ex": "Wenn Atomkerne [[zerfallen]], wird radioaktive Strahlung freigesetzt.",
+     "note": "zerfällt – zerfiel – ist zerfallen",
+     "g": "v"
+    },
+    {
+     "de": "etw. spalten · die Spaltung",
+     "ru": "расщеплять · расщепление",
+     "ex": "Der Physiker Enrico Fermi hat untersucht, wie man Atomkerne [[spalten]] kann.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "die Kernspaltung",
+     "ru": "деление ядра",
+     "ex": "Durch die [[Kernspaltung]] können große Mengen an nuklearer Energie erzeugt werden.",
+     "note": "",
+     "g": "f"
+    },
+    {
+     "de": "gefrieren*",
+     "ru": "замерзать",
+     "ex": "Obwohl allgemein gilt, dass Wasser bei 0 Grad Celsius [[gefriert]], hängt der genaue Gefrierpunkt von verschiedenen Faktoren ab.",
+     "note": "gefror – ist gefroren",
+     "g": "v"
+    },
+    {
+     "de": "schmelzen*",
+     "ru": "плавиться, таять",
+     "ex": "Gold [[schmilzt]] bei einer Temperatur von etwa 1064 Grad Celsius.",
+     "note": "schmilzt – schmolz – ist geschmolzen",
+     "g": "v"
+    },
+    {
+     "de": "etw. schmelzen*",
+     "ru": "плавить что-то",
+     "ex": "In einem Hochofen wird Metall [[geschmolzen]], bis es flüssig ist.",
+     "note": "schmolz – hat geschmolzen",
+     "g": "v"
+    },
+    {
+     "de": "verdampfen",
+     "ru": "испаряться",
+     "ex": "Wenn eine Flüssigkeit [[verdampft]], verwandelt sie sich in ein Gas.",
+     "note": "ist verdampft",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "name": "Свойства веществ",
+   "items": [
+    {
+     "de": "organisch",
+     "ru": "органический",
+     "ex": "Die Biochemie beschäftigt sich in erster Linie mit [[organischen]] Stoffen, aus denen Lebewesen bestehen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "anorganisch",
+     "ru": "неорганический",
+     "ex": "Metalle und verschiedene Minerale zählen zu den [[anorganischen]] Elementen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "gasförmig",
+     "ru": "газообразный",
+     "ex": "In der Natur kommt Sauerstoff in [[gasförmigem]] Zustand vor.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "flüssig",
+     "ru": "жидкий",
+     "ex": "Carl von Linde hat ein Verfahren entwickelt, um [[flüssigen]] Sauerstoff herzustellen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "fest",
+     "ru": "твёрдый",
+     "ex": "Chemische Elemente können in [[festem]], flüssigem oder gasförmigem Zustand existieren.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ätzend",
+     "ru": "едкий",
+     "ex": "Da Haushaltsreiniger oft [[ätzende]] Stoffe enthalten, sollten sie nicht mit der Haut in Kontakt kommen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "wasserlöslich",
+     "ru": "растворимый в воде",
+     "ex": "Viele Medikamente sind [[wasserlöslich]] und sollten deshalb nicht ins Trinkwasser gelangen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "brennbar",
+     "ru": "горючий",
+     "ex": "Im Gegensatz zu anorganischen Substanzen sind viele organische Stoffe [[brennbar]].",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "spaltbar",
+     "ru": "делящийся",
+     "ex": "[[Spaltbares]] radioaktives Material kann dazu verwendet werden, Energie zu erzeugen.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "biologisch abbaubar",
+     "ru": "биоразлагаемый",
+     "ex": "[[Biologisch abbaubare]] Stoffe zerfallen innerhalb einer gewissen Zeit in natürliche Substanzen.",
+     "note": "",
+     "g": "v"
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "name": "Бонус: словообразование (Sprachliche Besonderheiten)",
+   "items": [
+    {
+     "de": "-bar = kann … werden",
+     "ru": "-bar = «можно …»",
+     "ex": "Das Material ist [[spaltbar]]. = Das Material kann gespalten werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "-lich (физическое свойство)",
+     "ru": "-lich — свойство вещества",
+     "ex": "Das Pulver ist [[wasserlöslich]]. = Das Pulver kann in Wasser aufgelöst werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "-abel (в иностранных словах)",
+     "ru": "-abel = «можно …» в заимствованиях",
+     "ex": "Der Schaden ist [[irreparabel]]. = Der Schaden kann nicht repariert werden.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "ver- (изменение, исчезновение)",
+     "ru": "ver- — изменение, исчезновение",
+     "ex": "Das Wasser [[verdampft]]. = Das Wasser verwandelt sich in Dampf und verschwindet.",
+     "note": "",
+     "g": "v"
+    },
+    {
+     "de": "zer- (разрушение на части)",
+     "ru": "zer- — разрушение, распад на части",
+     "ex": "Organisches Material wird [[zersetzt]]. = … in kleine Teile und schließlich in Atome zerlegt.",
+     "note": "",
+     "g": "v"
+    }
+   ],
+   "bonus": true
+  }
+ ],
+ "traps": [
+  {
+   "k": "schmelzen (неперех.) ↔ etw. schmelzen (перех.)",
+   "v": "Das Eis ist geschmolzen (sein); Man hat das Metall geschmolzen (haben)"
+  },
+  {
+   "k": "zerfallen, gefrieren, verdampfen",
+   "v": "Perfekt с sein: Der Kern ist zerfallen, das Wasser ist gefroren"
+  },
+  {
+   "k": "sich auflösen",
+   "v": "Zucker löst sich in Wasser auf; die Lösung — раствор"
+  },
+  {
+   "k": "-bar / -lich / -abel",
+   "v": "spaltbar = kann gespalten werden; wasserlöslich; irreparabel"
+  },
+  {
+   "k": "der Stoff в сложных словах",
+   "v": "Sauerstoff, Wasserstoff, Kohlenstoff, Stickstoff — все der"
+  },
+  {
+   "k": "das Gas → die Gase",
+   "v": "Ein farb- und geruchloses Gas (Übung II)"
+  }
+ ]
+}

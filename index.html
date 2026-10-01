@@ -948,6 +948,18 @@ body.focus .tabbar{display:none!important}
 .pr-res .fix{background:var(--good-soft);border-radius:var(--r-sm);padding:10px 12px;margin:8px 0;font-weight:600}
 .pr-res .mine{background:var(--panel2);border-radius:var(--r-sm);padding:10px 12px;margin:8px 0}
 .pr-res ul{margin:8px 0 0;padding-left:20px}.pr-res li{margin:4px 0}
+.pr-res.v-good{border-left-color:var(--good)}.pr-res.v-mid{border-left-color:var(--mid)}.pr-res.v-bad{border-left-color:var(--bad)}
+.pr-rh{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}.pr-rh h3{margin:0}
+.pr-score{display:inline-flex;align-items:center;gap:4px}.pr-score i{width:10px;height:10px;border-radius:50%;background:var(--line)}.pr-score i.on{background:var(--good)}
+.v-mid .pr-score i.on{background:var(--mid)}.v-bad .pr-score i.on{background:var(--bad)}.pr-score b{font-size:13px;margin-left:6px;color:var(--muted)}
+.pr-res mark{border-radius:5px;padding:0 3px;color:inherit}.pr-res mark.m-bad{background:var(--bad-soft);text-decoration:line-through;text-decoration-color:var(--bad)}.pr-res mark.m-good{background:var(--good-soft);font-weight:800}
+.pr-res .say{border:0;background:none;color:var(--muted);cursor:pointer;padding:0;vertical-align:middle}.pr-res .say svg{width:16px;height:16px}
+.pr-errs{list-style:none;padding:0!important}.pr-errs li{padding:8px 0;border-top:1px solid var(--line2);line-height:1.5}.pr-errs li:first-child{border-top:0}
+.pr-errs s{color:var(--bad);text-decoration-thickness:1.5px}.pr-errs span{display:block;color:var(--muted);font-size:14px}
+.pr-wordnote{display:flex;gap:8px;align-items:flex-start;margin:10px 0 0;padding:10px 12px;border-radius:var(--r-sm);line-height:1.5}.pr-wordnote svg{flex:none;margin-top:3px}
+.pr-wordnote.ok{background:var(--good-soft)}.pr-wordnote.ok svg{color:var(--good)}.pr-wordnote.no{background:var(--bad-soft)}.pr-wordnote.no svg{color:var(--bad)}
+.pr-tip{margin:10px 0 0;line-height:1.5}
+.pr-foot{justify-content:space-between;margin-top:14px;gap:10px;flex-wrap:wrap;display:flex;align-items:center}.pr-foot .muted{font-size:13px;flex:1 1 220px}
 .pr-ph{display:inline-block;height:10px;border-radius:6px;background:var(--panel2);vertical-align:middle}
 .pr-topics{margin-bottom:14px}
 .pr-lbl{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
@@ -1000,6 +1012,10 @@ body.guest .langsw{display:inline-flex}
 .akpi small{color:var(--muted);font-weight:700;font-size:12.5px}
 .akpi b{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.2}
 .akpi span{color:var(--muted);font-size:12.5px;font-weight:600}
+.acard2 .akpi{background:var(--panel2);box-shadow:none}.akpi.warn{background:var(--bad-soft)}.akpi.warn b{color:var(--bad)}
+.aai-h{margin:0 0 8px;font-size:14px}
+.aai-bl div{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line2);font-size:13.5px}.aai-bl div:first-child{border-top:0}
+.aai-bl span{color:var(--bad)}.aai-bl small{color:var(--muted)}
 .akpi.live b::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--good);margin-right:8px;vertical-align:4px;box-shadow:0 0 0 4px var(--good-soft)}
 .agrid{display:grid;gap:12px;margin-bottom:12px}
 .agrid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -3387,6 +3403,20 @@ function admChart(rows,key,opt){
   return'<svg class="achart" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" role="img" aria-label="'+esc(opt.title||"")+'"><line x1="0" x2="'+W+'" y1="'+(H-pb)+'" y2="'+(H-pb)+'" class="ax"/>'+bars+
     (opt.line?'<polyline points="'+pts.join(" ")+'" class="al"/>':"")+'</svg><div class="adays">'+lbl+"</div>";
 }
+// Расходы ИИ и срабатывания предохранителя («подозрительная активность»)
+function admAI(a,days){
+  const usd=v=>v?"$"+(v<10?v.toFixed(v<1?3:2):v.toFixed(0)):"$0",L=a.limits;
+  const kp=(t,v,sub,cls)=>'<div class="akpi'+(cls?" "+cls:"")+'"><small>'+t+"</small><b>"+v+"</b><span>"+sub+"</span></div>";
+  return'<div class="akpis">'+
+      kp("Сегодня",usd(a.today.usd),admNum(a.today.req)+" "+plural(a.today.req,"запрос","запроса","запросов")+(a.today.errors?" · ошибок "+a.today.errors:""))+
+      kp("За "+days+" дн.",usd(a.period.usd),admNum(a.period.req)+" "+plural(a.period.req,"запрос","запроса","запросов"))+
+      kp("Бюджет на сегодня",Math.round(a.today.usd/L.siteDayUsd*100)+"%","из "+usd(L.siteDayUsd)+" в день")+
+      kp("Подозрительная активность",a.blocks.length,a.blocks.length?"срабатываний за "+days+" дн.":"не было",a.blocks.length?"warn":"")+
+    "</div>"+
+    '<div class="agrid g2" style="margin-top:12px"><div><h4 class="aai-h">Кто тратит</h4>'+(a.byUser.length?'<div class="alist">'+a.byUser.map(r=>'<div class="ali"><span class="alt" title="'+esc(r[0])+'">'+esc(r[0])+" · "+admNum(r[1])+'</span><span class="alb"><i style="width:'+(r[2]/Math.max(1e-9,a.byUser[0][2])*100)+'%"></i></span><b>'+usd(r[2])+"</b></div>").join("")+"</div>":'<p class="muted" style="margin:0">Запросов пока не было</p>')+"</div>"+
+    '<div><h4 class="aai-h">Предохранитель</h4>'+(a.blocks.length?'<div class="aai-bl">'+a.blocks.map(b=>"<div><b>"+esc(b.name)+"</b><span>"+esc(b.why)+"</span><small>"+admAgo(b.ts)+"</small></div>").join("")+"</div>":'<p class="muted" style="margin:0">Срабатываний не было.</p>')+
+      '<p class="muted" style="margin:10px 0 0;font-size:13px">Отключает ИИ, если на аккаунт больше '+L.userMin+" запросов в минуту или "+L.userDay+" в день, или сайт потратил "+usd(L.siteDayUsd)+" за день. Владельцу приходит письмо.</p></div></div>";
+}
 function admList(rows,opt){
   opt=opt||{};if(!rows||!rows.length)return'<p class="muted" style="margin:0">Пока нет данных</p>';
   const max=Math.max(...rows.map(r=>r[1]));
@@ -3440,6 +3470,7 @@ function drawAdmin(){
       card("Трудные слова <small>чаще всего «Не знаю»</small>",o.hard.length?'<div class="ahard">'+o.hard.slice(0,ADM.hardOpen?10:3).map(w=>"<div><b>"+esc(w.de)+"</b><span>"+esc(w.ru)+"</span><em>"+w.miss+"</em></div>").join("")+"</div>"+(o.hard.length>3?'<button class="amore" data-admhard>'+(ADM.hardOpen?"Свернуть":"Показать все ("+Math.min(10,o.hard.length)+")")+"</button>":""):'<p class="muted" style="margin:0">Пока нет ошибок</p>')+
       card("Режимы <small>точность ответов</small>",admList(o.modes.map(m=>[(MN[m[0]]||m[0])+" · "+admNum(m[2]),m[2]?Math.round(m[1]/m[2]*100):0]),{pct:1}))+
     "</div>"+
+    (o.ai?card("Расходы ИИ <small>вкладка «Практика» · "+(o.ai.key?"модель "+esc(o.ai.model):"тестовый режим: ключ Claude не подключён, проверяет только LanguageTool")+"</small>",admAI(o.ai,o.days),"wide"):"")+
     card("Пользователи <small>"+users.length+" из "+U.length+" · нажми на строку, чтобы открыть карточку</small>",'<div class="row" style="margin-bottom:12px"><label class="search asearch">'+ic("search",18)+'<input type="search" id="admQ" placeholder="Имя, почта, страна" value="'+esc(ADM.q)+'"></label><button class="btn sm" data-admmails title="Только те, кто не отписался от писем (с учётом поиска)">'+ic("copy",16)+"Почты для рассылки</button></div>"+admTable(users),"wide");
   el.querySelector("#admQ").oninput=e=>{ADM.q=e.target.value;const t=el.querySelector(".atable-w");t.outerHTML=admTable(admFilterUsers());};
 }
@@ -3552,16 +3583,43 @@ function prWrite(){
     '<div id="prRes"></div>';
   $("#prSay").onclick=()=>speak(prDe(c));
   $("#prNext").onclick=()=>{prWord=prPick();prWrite()};
-  $("#prForm").onsubmit=ev=>{ev.preventDefault();const t=$("#prText").value.trim();
+  const go_=$("#prForm").querySelector("[type=submit]"),idle=ic("check",16)+"Проверить";
+  $("#prText").onkeydown=ev=>{if(ev.key==="Enter"&&(ev.metaKey||ev.ctrlKey)){ev.preventDefault();$("#prForm").requestSubmit()}};
+  $("#prForm").onsubmit=async ev=>{ev.preventDefault();const t=$("#prText").value.trim();
     if(!t){toast("Сначала напиши предложение");return}
+    if(go_.disabled)return;
+    go_.disabled=true;go_.innerHTML=ic("refresh",16)+"Проверяю…";
+    let r;
+    try{r=await api("POST","/practice/check",{text:t,de:prDe(c),ru:c.ru,ex:c.ex?exPlain(c.ex):"",note:c.note||""})}
+    catch(e){toast("⚠️ "+e.message);return}
+    finally{go_.disabled=false;go_.innerHTML=idle}
+    if(prWord!==c)return; // пока ждали ответ, ученик взял другое слово
     prDone(c);
-    // заглушка: показываем, как будет выглядеть ответ проверки
-    $("#prRes").innerHTML='<div class="acard pr-res"><h3>'+ic("spark",18)+'Проверка ИИ<span class="pr-soon">скоро</span></h3>'+
-      '<div class="mine"><small class="muted">Твой вариант</small><br>'+esc(t)+"</div>"+
-      '<div class="fix"><small class="muted">Исправленный вариант</small><br><span class="pr-ph" style="width:70%"></span></div>'+
-      '<ul><li><b>Ошибки:</b> где ошибка, что не так и почему, одной строкой по-русски</li><li><b>Слово «'+esc(prDe(c))+'»:</b> подходит ли по смыслу и стилю</li><li><b>Оценка:</b> от 1 до 5 и один совет, как сказать естественнее</li></ul>'+
-      '<div class="row" style="justify-content:space-between;margin-top:12px;gap:10px;flex-wrap:wrap"><span class="muted" style="font-size:13px">Проверка пока не подключена. Так будет выглядеть ответ.</span><button class="btn sm" id="prNext2">Следующее слово'+ic("chev",16)+"</button></div></div>";
-    $("#prNext2").onclick=()=>{prWord=prPick();prWrite();window.scrollTo(0,0)}};
+    $("#prRes").innerHTML=prResult(t,r,c);
+    $("#prRes [data-prsay]").onclick=()=>speak(r.corrected);
+    $("#prNext2").onclick=()=>{prWord=prPick();prWrite();window.scrollTo(0,0)};
+    $("#prRes").scrollIntoView({behavior:reduced()?"auto":"smooth",block:"nearest"})};
+}
+// подсвечивает фрагменты (каждый — первое ещё не занятое вхождение) и экранирует остальное
+function prMark(text,frags,cls){
+  const spans=[];frags.forEach(f=>{if(!f)return;let i=text.indexOf(f);while(i>=0&&spans.some(s=>i<s[1]&&i+f.length>s[0]))i=text.indexOf(f,i+1);if(i>=0)spans.push([i,i+f.length])});
+  spans.sort((a,b)=>a[0]-b[0]);let out="",p=0;
+  spans.forEach(s=>{out+=esc(text.slice(p,s[0]))+'<mark class="'+cls+'">'+esc(text.slice(s[0],s[1]))+"</mark>";p=s[1]});
+  return out+esc(text.slice(p));
+}
+const PR_VERDICT={ok:["Без ошибок","good"],minor:["Почти верно","mid"],wrong:["Есть серьёзные ошибки","bad"]};
+function prResult(t,r,c){
+  const v=PR_VERDICT[r.verdict]||PR_VERDICT.minor,errs=r.errors||[],same=r.corrected.trim()===t;
+  return'<div class="acard pr-res v-'+v[1]+'"><div class="pr-rh"><h3>'+(r.verdict==="ok"?ic("check",18):ic("spark",18))+v[0]+"</h3>"+
+      '<span class="pr-score" title="Оценка как на EPD">'+[1,2,3,4,5].map(i=>"<i"+(i<=r.score?' class="on"':"")+"></i>").join("")+"<b>"+r.score+" из 5</b></span></div>"+
+    (same?'<div class="mine">'+esc(t)+"</div>":
+      '<div class="mine"><small class="muted">Твой вариант</small><br>'+prMark(t,errs.map(e=>e.wrong),"m-bad")+"</div>"+
+      '<div class="fix"><small class="muted">Правильно</small><br>'+prMark(r.corrected,errs.map(e=>e.right),"m-good")+
+        ' <button class="say" data-prsay aria-label="Послушать">'+ic("speaker",16)+"</button></div>")+
+    (errs.length?'<ul class="pr-errs">'+errs.map(e=>"<li>"+(e.wrong?'<s>'+esc(e.wrong)+"</s> → ":"")+(e.right?"<b>"+esc(e.right)+"</b>":"")+(e.why?"<span>"+esc(e.why)+"</span>":"")+"</li>").join("")+"</ul>":"")+
+    (r.word_ok===true||r.word_ok===false?'<p class="pr-wordnote '+(r.word_ok?"ok":"no")+'">'+ic(r.word_ok?"check":"x",16)+"<span><b>«"+esc(prDe(c))+"»</b>: "+esc(r.word_note||(r.word_ok?"слово употреблено верно":"слово употреблено неверно"))+"</span></p>":"")+
+    (r.tip?'<p class="pr-tip">💡 '+esc(r.tip)+"</p>":"")+
+    '<div class="row pr-foot"><span class="muted">'+(r.demo?"Тестовый режим: проверил только LanguageTool, объяснения на немецком. С ключом Claude будут объяснения по-русски и проверка слова.":"⌘ или Ctrl + Enter — проверить быстрее")+'</span><button class="btn sm primary" id="prNext2">Следующее слово →</button></div></div>';
 }
 // Форматы устной части EPD: презентация, обсуждение, ответы на вопросы. Плюс свободный разговор для разминки.
 const PR_FMT=[

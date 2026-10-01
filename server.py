@@ -915,6 +915,33 @@ def s_int(v, lo=0, hi=10**9):
         return lo
 
 
+# ---------- род существительного (de.wiktionary.org) ----------
+ART = {"m": "der", "f": "die", "n": "das"}
+
+
+def wiki_gender(word):
+    """Артикль для немецкого существительного или "" (не нашли / только мн. число).
+    Если слова нет, пробуем хвосты сложного слова: Abschlussprüfung → Prüfung."""
+    tails = [word] + [word[i:].capitalize() for i in range(1, len(word) - 2)]
+    q = urllib.parse.urlencode({"action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main",
+                                "format": "json", "formatversion": "2", "titles": "|".join(tails[:50])})
+    j = http_json(urllib.request.Request("https://de.wiktionary.org/w/api.php?" + q,
+                                         headers={"User-Agent": "EPDeutsch/1 (word-gender lookup)"}))
+    found = {}
+    for pg in (j.get("query") or {}).get("pages") or []:
+        revs = pg.get("revisions") or []
+        if not revs:
+            continue
+        txt = revs[0].get("slots", {}).get("main", {}).get("content", "")
+        m = re.search(r"\{\{Deutsch Substantiv Übersicht[^\n]*\n\|Genus(?: 1)?=(\w)", txt)
+        if m:
+            found[pg["title"]] = ART.get(m.group(1), "")
+    for t in tails:  # самый длинный найденный хвост
+        if t in found:
+            return found[t]
+    return ""
+
+
 def s_str(v, n):
     return str(v or "").strip()[:n]
 
@@ -1366,6 +1393,24 @@ class Handler(BaseHTTPRequestHandler):
                 raise ApiError(502, "Переводчик сейчас недоступен")
             c.execute("INSERT OR REPLACE INTO translations(src,sl,tl,out,prov) VALUES(?,?,?,?,?)", (text, sl, tl, out, prov))
             return self.send_json(200, {"text": out, "provider": prov})
+
+        if method == "POST" and p == "/article":
+            word = s_str(self.read_json().get("word"), 60)
+            if not re.fullmatch(r"[A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜa-zäöüß]+)*", word or ""):
+                raise ApiError(400, "Нужно одно существительное с большой буквы")
+            row = c.execute("SELECT out FROM translations WHERE src=? AND sl='de' AND tl='gn'", (word,)).fetchone()
+            if row:
+                return self.send_json(200, {"article": row["out"]})
+            if tr_limited(self.client_ip()):
+                raise ApiError(429, "Слишком много запросов подряд, подожди минуту")
+            try:
+                art = wiki_gender(word)
+            except Exception as e:  # noqa: BLE001
+                sys.stderr.write("article error: %r\n" % e)
+                raise ApiError(502, "Словарь сейчас недоступен")
+            c.execute("INSERT OR REPLACE INTO translations(src,sl,tl,out,prov) VALUES(?,?,'gn',?,'wiktionary')",
+                      (word, "de", art))
+            return self.send_json(200, {"article": art})
 
         m = re.fullmatch(r"/share/([A-Z0-9]{4,12})", p)
         if method == "GET" and m:

@@ -2435,11 +2435,12 @@ function renderEditor(){
   '<div id="eRows">'+ED.rows.map((r,i)=>'<div class="erow"><div class="er-h"><b>'+(i+1)+'</b><button class="ib" data-del="'+i+'" aria-label="Удалить карточку">'+ic("trash",18)+'</button></div><div class="er-f">'+edPair(r)+'<div class="tr-st"></div><label class="wide"><input type="text" class="e-ex" value="'+esc(r.ex||"")+'"><span>Пример (необязательно)</span></label></div></div>').join("")+"</div>"+
   '<button class="addrow" id="eAdd">'+ic("plus",18)+"Добавить карточку</button>"+
   '<div class="row" style="margin-top:18px"><button class="btn primary" id="eSave2">Сохранить</button><button class="btn" id="eCancel">Отмена</button>'+(ED.id?'<button class="btn danger" id="eDel" style="margin-left:auto">'+ic("trash",18)+"Удалить набор</button>":"")+"</div>"+
-  '<p class="muted" style="margin-top:14px">Пиши существительные с артиклем (der / die / das): карточка получит цвет рода и попадёт в режим «Артикль». Слово в примере подсветится само, это нужно для режима «Вставь слово».</p>';
+  '<p class="muted" style="margin-top:14px">Артикль к существительному (der / die / das) подставится сам, достаточно написать слово с большой буквы. С артиклем карточка получит цвет рода и попадёт в режим «Артикль». Слово в примере подсветится само, это нужно для режима «Вставь слово».</p>';
   el.querySelectorAll("#eRows .erow").forEach(row=>{
     const de=row.querySelector(".e-de"),ru=row.querySelector(".e-ru");
     de.addEventListener("input",()=>{de.dataset.auto="0";clearTimeout(row._t);row._t=setTimeout(()=>autoTr(row,"de"),600)});
     ru.addEventListener("input",()=>{ru.dataset.auto="0";clearTimeout(row._t);row._t=setTimeout(()=>autoTr(row,"ru"),600)});
+    de.addEventListener("change",()=>addArticle(de));
   });
   $("#eFlip").onclick=()=>{edCollect();ED.flip=!ED.flip;S.edFlip=ED.flip;save();renderEditor()};
   $("#eAdd").onclick=()=>{edCollect();ED.rows.push(blankRow());renderEditor();const r=document.querySelectorAll("#eRows .er-f input");r[r.length-3].focus()};
@@ -2460,6 +2461,21 @@ const normRu=v=>v.toLowerCase().replace(/ё/g,"е").replace(/\s*\(.*?\)\s*/g," "
 let DICT=null;
 function bookDict(){if(DICT)return DICT;DICT={de:{},ru:{}};BOOK.forEach(sec=>sec.sets.forEach(st=>st.ids.forEach(id=>{const c=BYID[id];const k=normDe(c.de);if(k&&!DICT.de[k])DICT.de[k]=c;c.ru.replace(/\(.*?\)/g,"").split(/[,;]/).forEach(x=>{const r=normRu(x);if(r&&!DICT.ru[r])DICT.ru[r]=c})})));return DICT}
 function withArticle(w){const c=bookDict().de[w.toLowerCase()];return c&&/^(der|die|das) /.test(c.de)?c.de:w}
+// артикль сам: «Schule» → «die Schule». Сначала словарь книги, потом сервер (Викисловарь).
+// Только одно слово с большой буквы (можно с мн. числом «Schule, -n»); убранный руками артикль второй раз не ставим.
+const ART_CACHE={};
+async function lookupArticle(w){
+  const c=bookDict().de[w.toLowerCase()];if(c){const m=c.de.match(/^(der|die|das) /);return m?m[1]:""}
+  if(!(w in ART_CACHE))ART_CACHE[w]=api("POST","/article",{word:w}).then(j=>j.article||"",()=>{delete ART_CACHE[w];return""});
+  return ART_CACHE[w];
+}
+async function addArticle(inp){
+  const v=inp.value.trim(),m=v.match(/^([A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜa-zäöüß]+)*)(\s*,.*)?$/);
+  if(!m||inp.dataset.noart===v)return;
+  const a=await lookupArticle(m[1]);
+  if(!a||inp.value.trim()!==v)return;
+  inp.value=a+" "+v;inp.dataset.noart=v;inp.classList.remove("flash");void inp.offsetWidth;inp.classList.add("flash");
+}
 async function autoTr(row,from){
   const src=row.querySelector(from==="de"?".e-de":".e-ru"),dst=row.querySelector(from==="de"?".e-ru":".e-de"),st=row.querySelector(".tr-st"),v=src.value.trim();
   if(!v){if(dst.dataset.auto==="1"){dst.value="";dst.dataset.auto="0"}st.textContent="";return}
@@ -2473,6 +2489,7 @@ async function autoTr(row,from){
     if(row._seq!==seq||src.value.trim()!==v)return;
     if(dst.value.trim()&&dst.dataset.auto!=="1"){st.textContent="";return}
     dst.value=from==="ru"?withArticle(j.text):j.text;dst.dataset.auto="1";dst.classList.remove("flash");void dst.offsetWidth;dst.classList.add("flash");
+    if(from==="ru")addArticle(dst);
     st.className="tr-st";st.textContent="";
   }catch(e){if(row._seq!==seq)return;st.className="tr-st err";st.textContent=e.status===0?"Автоперевод работает, когда сайт открыт через server.py":"Перевод не получился: "+e.message}
 }

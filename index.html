@@ -1606,7 +1606,7 @@ body.focus .app-foot{display:none}
   <a href="/" data-tab="prog"><i data-ic="chart"></i>Прогресс</a>
 </nav>
 
-<dialog id="dlg"><form method="dialog"><h3 id="dlgT"></h3><div id="dlgB"></div><div class="dlg-btns"><button class="btn primary" value="ok" id="dlgOk">Готово</button><button class="btn" type="button" id="dlgNo">Отмена</button></div></form></dialog>
+<dialog id="dlg"><form method="dialog"><h3 id="dlgT"></h3><div id="dlgB"></div><div class="dlg-btns"><button class="btn primary" value="ok" id="dlgOk">Готово</button><button class="btn" type="button" id="dlgNo">Отмена</button><button class="btn" type="button" id="dlgStay" hidden></button></div></form></dialog>
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
 <script>
@@ -2442,7 +2442,7 @@ function renderList(){
 let listTimer;$("#q").oninput=()=>{if(curTab!=="list")go("list");clearTimeout(listTimer);listTimer=setTimeout(renderList,150)};$("#listSec").onchange=renderList;
 
 // ---------- свои наборы и папки ----------
-function ask(title,body,ok,okTxt,noTxt,no){const d=$("#dlg");$("#dlgT").textContent=title;$("#dlgB").innerHTML=body;$("#dlgOk").textContent=okTxt||"Готово";$("#dlgNo").textContent=noTxt||"Отмена";
+function ask(title,body,ok,okTxt,noTxt,no,stayTxt){const d=$("#dlg"),st=$("#dlgStay");$("#dlgT").textContent=title;$("#dlgB").innerHTML=body;$("#dlgOk").textContent=okTxt||"Готово";$("#dlgNo").textContent=noTxt||"Отмена";st.hidden=!stayTxt;st.textContent=stayTxt||"";st.onclick=e=>{e.preventDefault();fin("")};
   let done=false;const fin=res=>{if(done)return;done=true;d.close();if(res==="ok")ok(d);else if(no)no(res)};
   d.querySelector("form").onsubmit=e=>{e.preventDefault();fin("ok")};$("#dlgNo").onclick=e=>{e.preventDefault();fin("cancel")};d.oncancel=e=>{e.preventDefault();fin("")};d.onclose=null;
   d.showModal();const f=d.querySelector("input[type=text]");if(f){f.focus();f.select()}}
@@ -2479,8 +2479,17 @@ const blankRow=()=>({de:"",ru:"",ex:""});
 function openEditor(sid,fid){
   const u=sid?(S.usets||[]).find(x=>"u:"+x.id===sid):null;
   ED={flip:!!S.edFlip,id:u?u.id:null,folder:fid||"",name:u?u.name:"",desc:u?u.desc||"":"",rows:u?u.cards.map(c=>Object.assign({},c)):[blankRow(),blankRow(),blankRow()]};
-  go("edit");
+  ED.base=edSnap();go("edit");
 }
+// снимок содержимого редактора без пустых строк: по нему понимаем, есть ли несохранённые изменения
+function edSnap(){const t=v=>(v||"").trim();return JSON.stringify([t(ED.name),t(ED.desc),ED.rows.map(r=>[t(r.de),t(r.ru),t(r.ex)]).filter(r=>r.join(""))])}
+function edDirty(){if(!ED||curTab!=="edit"||!$("#eName"))return false;edCollect();return edSnap()!==ED.base}
+// уходим из редактора с несохранёнными правками — спрашиваем; leave() выполняется после «Сохранить» или «Не сохранять»
+function edLeave(leave){
+  if(!edDirty()){ED=null;leave();return}
+  ask("Сохранить изменения?","<p>В наборе «"+esc(ED.name.trim()||"Без названия")+"» есть несохранённые изменения. Без сохранения они пропадут.</p>",()=>{if(edSave(true)){ED=null;leave()}},"Сохранить","Не сохранять",res=>{if(res==="cancel"){ED=null;leave()}else syncUrl("edit")},"Остаться");
+}
+addEventListener("beforeunload",e=>{if(edDirty()){e.preventDefault();e.returnValue=""}});
 function edCollect(){
   ED.name=$("#eName").value;ED.desc=$("#eDesc").value;
   ED.rows=[...document.querySelectorAll("#eRows .erow")].map((r,i)=>{const de=r.querySelector(".e-de"),ru=r.querySelector(".e-ru");return{k:ED.rows[i].k,de:de.value,ru:ru.value,ex:r.querySelector(".e-ex").value,ad:de.dataset.auto==="1",ar:ru.dataset.auto==="1"}});
@@ -2496,7 +2505,7 @@ function edPair(r){
   return ED.flip?ru+de:de+ru;
 }
 function renderEditor(){
-  if(!ED)ED={flip:!!S.edFlip,id:null,folder:"",name:"",desc:"",rows:[blankRow(),blankRow(),blankRow()]};
+  if(!ED){ED={flip:!!S.edFlip,id:null,folder:"",name:"",desc:"",rows:[blankRow(),blankRow(),blankRow()]};ED.base=edSnap()}
   const el=$("#p-edit");
   el.innerHTML='<div class="ed-top"><h1>'+(ED.id?"Редактировать набор":"Создать новый набор")+'</h1><button class="btn primary" id="eSave">Сохранить</button></div>'+
   '<input type="text" class="e-name" id="eName" placeholder="Название, например «Wörter aus Kapitel 3»" value="'+esc(ED.name)+'">'+
@@ -2521,8 +2530,8 @@ function renderEditor(){
     const add=$("#eImp").value.split(/\n/).map(l=>l.trim()).filter(Boolean).map(l=>{const m=l.split(/\t| — | – | - |;|=/);const a=(m[0]||"").trim(),b=m.slice(1).join(", ").trim();return ED.flip?{de:b,ru:a,ex:""}:{de:a,ru:b,ex:""}}).filter(r=>r.de||r.ru).slice(0,200);
     ED.rows=ED.rows.filter(r=>r.de||r.ru).concat(add);if(!ED.rows.length)ED.rows.push(blankRow());renderEditor();
     let delay=0;document.querySelectorAll("#eRows .erow").forEach(row=>{const de=row.querySelector(".e-de"),ru=row.querySelector(".e-ru");if(de.value.trim()&&!ru.value.trim()){setTimeout(()=>autoTr(row,"de"),delay);delay+=250}else if(ru.value.trim()&&!de.value.trim()){setTimeout(()=>autoTr(row,"ru"),delay);delay+=250}})};
-  $("#eSave").onclick=$("#eSave2").onclick=edSave;
-  $("#eCancel").onclick=()=>{const back=ED.id?"u:"+ED.id:null;ED=null;back?openSec(back):go("home")};
+  $("#eSave").onclick=$("#eSave2").onclick=()=>edSave();
+  $("#eCancel").onclick=()=>{const back=ED.id?"u:"+ED.id:null;edLeave(()=>back?openSec(back):go("home"))};
   if($("#eDel"))$("#eDel").onclick=()=>{if(!confirm("Удалить набор «"+ED.name+"» и прогресс по нему?"))return;const id=ED.id;ED=null;delUset(id);go("home")};
 }
 // автоперевод: пишешь в одном поле — второе заполняется само (если оно пустое или тоже было заполнено автоматически)
@@ -2565,16 +2574,17 @@ async function autoTr(row,from){
     st.className="tr-st";st.textContent="";
   }catch(e){if(row._seq!==seq)return;st.className="tr-st err";st.textContent=e.status===0?"Автоперевод работает, когда сайт открыт через server.py":"Перевод не получился: "+e.message}
 }
-function edSave(){
+function edSave(quiet){
   edCollect();
   const cards=ED.rows.filter(r=>r.de.trim()&&r.ru.trim());
-  if(!cards.length){alert("Добавь хотя бы одну карточку: термин и перевод.");return}
+  if(!cards.length){alert("Добавь хотя бы одну карточку: термин и перевод.");return false}
   S.usets=S.usets||[];
   let u=ED.id&&S.usets.find(x=>x.id===ED.id);
   if(!u){u={id:newId(""),name:"",desc:"",cards:[],n:0};S.usets.push(u);const f=(S.folders||[]).find(x=>x.id===ED.folder);if(f)f.secs.push("u:"+u.id)}
   u.name=ED.name.trim()||"Без названия";u.desc=ED.desc.trim();
   u.cards=cards.map(r=>({k:r.k!==undefined?r.k:u.n++,de:r.de.trim(),ru:r.ru.trim(),ex:(r.ex||"").trim()}));
-  save();rebuildUser();renderListSel();ED=null;renderFolders();checkAch();openSec("u:"+u.id);toast("✍️ Набор сохранён");
+  save();rebuildUser();renderListSel();ED=null;renderFolders();checkAch();toast("✍️ Набор сохранён");
+  if(!quiet)openSec("u:"+u.id);return true;
 }
 
 // ---------- план ----------
@@ -3679,6 +3689,7 @@ function unmask(){const d=document.documentElement;if(unmasking||!d.classList.co
 setTimeout(unmask,6000); // страховка, если сервер не ответил
 function go(t){
   const fromTab=curTab;
+  if(fromTab==="edit"&&t!=="edit"&&edDirty()){edLeave(()=>go(t));return}
   if(t==="admin"&&!isAdmin())t="home";
   if(!ME&&t!=="acct"&&t!=="legal"&&t!=="guide")t="land";
   // лендинга или гида нет на этой странице (у каждой свой адрес) — переходим туда полной загрузкой

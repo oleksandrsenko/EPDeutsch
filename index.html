@@ -3776,7 +3776,7 @@ function setFocus(on){
 }
 $("#focusBtn").onclick=()=>setFocus(true);
 // облачко-подсказка про фокус: не чаще раза в 3 дня, максимум 4 раза, и больше никогда, если человек уже пользуется фокусом
-const FH_NOLIMIT=true; // ВРЕМЕННО: облачко после 1-го ответа при каждой загрузке страницы, без лимитов. Перед запуском: false и порог fhAns<7
+const FH_NOLIMIT=false; // true — облачко после 1-го ответа при каждой загрузке, без лимитов (для отладки)
 let fhAns=0,fhShown=false,fhTimer=null;
 function fhTick(){
   fhAns++;if(TR||fhShown||fhAns<(FH_NOLIMIT?1:7)||curTab!=="learn"||document.body.classList.contains("focus"))return;

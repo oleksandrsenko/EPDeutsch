@@ -962,6 +962,9 @@ body.focus .tabbar{display:none!important}
 .pr-acts{display:flex;gap:8px;flex-wrap:wrap;flex:none}
 .pr-in{display:flex;flex-direction:column;gap:10px}
 .pr-in .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pr-in textarea{resize:none;overflow:hidden;min-height:84px;line-height:1.5}
+.pr-um{margin:0;justify-content:flex-start;gap:6px}.pr-um .umk{width:38px;height:38px;font-size:17px}.pr-um .umk.sh{width:34px}
+@media (max-width:640px){.pr-um .umk{width:42px;height:42px}}
 .pr-res{border-left:4px solid var(--primary)}
 .pr-res h3{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
 .pr-res .fix{background:var(--good-soft);border-radius:var(--r-sm);padding:10px 12px;margin:8px 0;font-weight:600}
@@ -980,7 +983,7 @@ body.focus .tabbar{display:none!important}
 .pr-tip{margin:10px 0 0;line-height:1.5}
 .pr-foot{justify-content:space-between;margin-top:14px;gap:10px;flex-wrap:wrap;display:flex;align-items:center}.pr-foot .muted{font-size:13px;flex:1 1 220px}
 .pr-ph{display:inline-block;height:10px;border-radius:6px;background:var(--panel2);vertical-align:middle}
-@media (max-width:640px){.pr-word b{font-size:21px}}
+@media (max-width:640px){.pr-word{flex-direction:column-reverse;gap:10px}.pr-word b{font-size:21px}.pr-acts{align-self:flex-end}}
 
 /* ---------- переключатель языка, гид по EPD, блок «как готовиться» ---------- */
 .langsw{display:none;align-items:center;justify-content:center;height:36px;min-width:40px;padding:0 10px;border-radius:999px;font-weight:800;font-size:13px;color:var(--muted);text-decoration:none;border:2px solid var(--line2)}
@@ -3648,12 +3651,19 @@ function prWrite(){
   if(!c){b.innerHTML='<div class="acard"><p style="margin-top:0">Сначала добавь слова: выбери главы на главной, и здесь появятся слова для практики.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
   b.innerHTML='<div class="acard pr-word"><div><small>'+esc(prTag(c))+'</small><b>'+esc(prDe(c))+'</b><span class="ru">'+esc(c.ru)+"</span>"+
       (c.ex?'<p class="ex">Пример: '+esc(exPlain(c.ex))+"</p>":"")+'</div><div class="pr-acts"><button class="btn sm" id="prSay" aria-label="Послушать слово">'+ic("speaker",16)+'</button><button class="btn sm" id="prNext">'+ic("refresh",16)+"Другое слово</button></div></div>"+
-    '<form class="acard pr-in" id="prForm"><label class="muted" for="prText" style="font-size:13.5px;font-weight:700">Составь своё предложение с этим словом</label><textarea id="prText" maxlength="400" placeholder="Напиши предложение по-немецки…" autocomplete="off" spellcheck="false" lang="de"></textarea>'+
-      '<div class="row"><span class="muted" style="font-size:13px">Не копируй пример, придумай свою ситуацию</span><button class="btn primary" type="submit">'+ic("check",16)+"Проверить</button></div></form>"+
+    '<form class="acard pr-in" id="prForm"><label class="muted" for="prText" style="font-size:13.5px;font-weight:700">Составь своё предложение с этим словом <span style="font-weight:600">· не копируй пример, придумай свою ситуацию</span></label><textarea id="prText" rows="2" maxlength="400" placeholder="Напиши предложение по-немецки…" autocomplete="off" spellcheck="false" lang="de"></textarea>'+
+      '<div class="row"><div class="umkeys pr-um" id="prUm" role="group" aria-label="Немецкие буквы">'+["ä","ö","ü","ß"].map(k=>'<button type="button" class="umk" data-um="'+k+'">'+k+"</button>").join("")+'<button type="button" class="umk sh" id="prShift" aria-pressed="false" title="Заглавные: Ä Ö Ü">'+ic("shift",16)+'</button></div><button class="btn primary" type="submit">'+ic("check",16)+"Проверить</button></div></form>"+
     '<div id="prRes"></div>';
   $("#prSay").onclick=()=>speak(prDe(c));
   $("#prNext").onclick=()=>{prWord=prPick();prWrite()};
   const go_=$("#prForm").querySelector("[type=submit]"),idle=ic("check",16)+"Проверить";
+  // поле растёт вместе с текстом; немецкие буквы — кнопками, фокус остаётся в поле
+  const tx=$("#prText"),grow=()=>{tx.style.height="auto";tx.style.height=tx.scrollHeight+2+"px"};tx.addEventListener("input",grow);
+  const um=$("#prUm");um.onpointerdown=e=>{if(e.target.closest(".umk"))e.preventDefault()};
+  um.onclick=e=>{const k=e.target.closest(".umk");if(!k)return;const sh=$("#prShift"),up=sh.getAttribute("aria-pressed")==="true";
+    if(k===sh){sh.setAttribute("aria-pressed",String(!up));um.querySelectorAll("[data-um]").forEach(x=>{if(x.dataset.um!=="ß")x.textContent=!up?x.dataset.um.toUpperCase():x.dataset.um});return}
+    tx.focus({preventScroll:true});tx.setRangeText(k.textContent,tx.selectionStart,tx.selectionEnd,"end");tx.dispatchEvent(new Event("input"));
+    k.classList.remove("hit");void k.offsetWidth;k.classList.add("hit")};
   $("#prText").onkeydown=ev=>{if(ev.key==="Enter"&&(ev.metaKey||ev.ctrlKey)){ev.preventDefault();$("#prForm").requestSubmit()}};
   $("#prForm").onsubmit=async ev=>{ev.preventDefault();const t=$("#prText").value.trim();
     if(!t){toast("Сначала напиши предложение");return}

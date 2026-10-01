@@ -97,7 +97,7 @@
 try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}"),a=localStorage.getItem("epd_authed");
 // кто уже вошёл и открывает сайт с главной, сначала попадает на экран модулей (/start); оттуда в Wörter уже без переброса
 if(a&&location.pathname==="/"&&!location.search&&!location.hash&&!sessionStorage.getItem("ep_hub")){location.replace("/start");return}
-if(o.theme)d.setAttribute("data-theme",o.theme);if(o.accent)d.setAttribute("data-accent",o.accent);
+if(o.theme)d.setAttribute("data-theme",o.theme);
 if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc");if(a&&o.navHide)d.classList.add("bootnav")}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,22 +127,10 @@ if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc"
   --good:#3CCFA0; --good-soft:#18423A; --mid:#FFA95E; --mid-soft:#4A3420; --bad:#FF8A76; --bad-soft:#4A2A2A;
   --m:#7FA6FF; --f:#FF7F87; --n:#3CCFA0; --pl:#B69CFF; --v:#FFCD1F;
   --mark:#5A4A12; --sh:0 .25rem 1rem 0 rgba(0,0,0,.35); --sh-card:0 .4rem 1.8rem 0 rgba(0,0,0,.45); color-scheme:dark}
-/* акцентный цвет из профиля (по умолчанию — фиолетовый) */
+/* у каждой платформы свой цвет: Wörter — фиолетовый, в настройках не меняется */
 :root{--acc-rgb:126,111,184}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--acc-rgb:142,127,203}}
 :root[data-theme="dark"]{--acc-rgb:142,127,203}
-:root[data-accent="blue"]{--primary:#4255FF;--primary-h:#3547E0;--primary-soft:#EDEFFF;--link:#4255FF;--acc-rgb:66,85,255}
-@media (prefers-color-scheme: dark){:root[data-accent="blue"]:not([data-theme="light"]){--primary:#4255FF;--primary-h:#5B6BFF;--primary-soft:#282E6B;--link:#A8B1FF;--acc-rgb:66,85,255}}
-:root[data-theme="dark"][data-accent="blue"]{--primary:#4255FF;--primary-h:#5B6BFF;--primary-soft:#282E6B;--link:#A8B1FF;--acc-rgb:66,85,255}
-:root[data-accent="teal"]{--primary:#3A8C84;--primary-h:#2F7770;--primary-soft:#E2F2EF;--link:#2E7A72;--acc-rgb:58,140,132}
-@media (prefers-color-scheme: dark){:root[data-accent="teal"]:not([data-theme="light"]){--primary:#5DB2A8;--primary-h:#72C1B8;--primary-soft:#1E3A37;--link:#8ED3CA;--acc-rgb:93,178,168}}
-:root[data-theme="dark"][data-accent="teal"]{--primary:#5DB2A8;--primary-h:#72C1B8;--primary-soft:#1E3A37;--link:#8ED3CA;--acc-rgb:93,178,168}
-:root[data-accent="rose"]{--primary:#C0678A;--primary-h:#A95677;--primary-soft:#FAEAF0;--link:#AE587A;--acc-rgb:192,103,138}
-@media (prefers-color-scheme: dark){:root[data-accent="rose"]:not([data-theme="light"]){--primary:#D98BA8;--primary-h:#E39EB7;--primary-soft:#46283A;--link:#EEB4C9;--acc-rgb:217,139,168}}
-:root[data-theme="dark"][data-accent="rose"]{--primary:#D98BA8;--primary-h:#E39EB7;--primary-soft:#46283A;--link:#EEB4C9;--acc-rgb:217,139,168}
-:root[data-accent="sand"]{--primary:#BD7C4A;--primary-h:#A66C3F;--primary-soft:#F8EEE4;--link:#A5693A;--acc-rgb:189,124,74}
-@media (prefers-color-scheme: dark){:root[data-accent="sand"]:not([data-theme="light"]){--primary:#D8A078;--primary-h:#E2B08C;--primary-soft:#46331F;--link:#ECC4A4;--acc-rgb:216,160,120}}
-:root[data-theme="dark"][data-accent="sand"]{--primary:#D8A078;--primary-h:#E2B08C;--primary-soft:#46331F;--link:#ECC4A4;--acc-rgb:216,160,120}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{margin:0}
@@ -666,10 +654,6 @@ input.e-name{font-size:18px}
 .lv-me b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .lv-me .owner{margin-left:auto}
 .acc-h{font-weight:700;margin:16px 0 8px}
-.accs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.accb{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:7px 14px 7px 8px;font:inherit;font-weight:700;font-size:14px;cursor:pointer}
-.accb i{width:20px;height:20px;border-radius:50%;flex:none}
-.accb[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft)}
 body.guest .nav,body.guest .search,body.guest .tright>:not(#acctBtn):not(.langsw),body.guest .burger{display:none!important}
 .addrow{width:100%;border:0;background:var(--panel);box-shadow:var(--sh);border-radius:var(--r);padding:22px;font-weight:800;font-size:15px;color:var(--fg);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;border-bottom:4px solid var(--primary)}
 .addrow:hover{color:var(--link)}
@@ -838,7 +822,6 @@ div.plbl{flex-direction:row;align-items:center;flex-wrap:wrap}
 /* профиль: воздух между блоками «Имя», «Цвет аватара», «Цвет оформления», рассылкой и кнопкой */
 .pc-edit{padding-top:24px}
 .pc-edit .acc-h{margin:30px 0 12px}
-.pc-edit .accs{margin-bottom:0}
 .pc-edit .pc-news{margin:30px 0 0;align-items:center}
 .pc-edit .pc-news span{padding-top:0}
 .avc{width:36px;height:36px;border-radius:50%;border:3px solid transparent;cursor:pointer;box-shadow:0 0 0 2px var(--panel) inset}
@@ -1760,8 +1743,7 @@ if(!SECS[curSec])curSec=BOOK[0].id;
 function persistSel(){S.sel=[...sel];save()}
 
 // ---------- тема ----------
-const ACCENTS=[["violet","Лаванда","#7E6FB8"],["blue","Синий","#4255FF"],["teal","Мята","#3A8C84"],["rose","Пудра","#C0678A"],["sand","Песок","#BD7C4A"]];
-function applyTheme(){if(S.accent&&ACCENTS.some(a=>a[0]===S.accent))document.documentElement.setAttribute("data-accent",S.accent);else document.documentElement.removeAttribute("data-accent");if(S.theme)document.documentElement.setAttribute("data-theme",S.theme);else document.documentElement.removeAttribute("data-theme")}
+function applyTheme(){if(S.theme)document.documentElement.setAttribute("data-theme",S.theme);else document.documentElement.removeAttribute("data-theme")}
 applyTheme();
 $("#themeBtn2").onclick=()=>{const dark=S.theme?S.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;S.theme=dark?"light":"dark";save();applyTheme()};
 
@@ -2861,6 +2843,7 @@ async function handleHash(){
         const u={id:newId(""),name:j.name,desc:j.desc||"",n:j.cards.length,cards:j.cards.map((c,i)=>({k:i,de:c.de,ru:c.ru,ex:c.ex||""}))};
         S.usets=(S.usets||[]).concat(u);save();rebuildUser();renderListSel();renderFolders();checkAch();openSec("u:"+u.id);toast("📥 Набор добавлен в «Мои наборы»")},"Добавить себе")
     }catch(e){toast("⚠️ "+e.message)}return}
+  if(k==="acct"){go("acct");return} // аватар из других модулей (Schreiben) ведёт сюда, в профиль
   if(k==="verify"&&v){try{await api("POST","/verify",{token:v});if(ME){ME.verified=true;if(curTab==="home")renderHome()}toast("✅ Почта подтверждена","Спасибо! Теперь аккаунт защищён")}catch(e){toast("⚠️ "+e.message)}return}
   if(k==="reset"&&v){if(ME)return toast(LT("Ты уже в аккаунте","You are already logged in"));resetTok=v;authTab="reset";go("acct");return}
   if(k==="friend"&&v){if(!ME){S.pendingFriend=v;save();go("acct");return toast("Войди или зарегистрируйся, и друг добавится сам")}addFriend(v)}
@@ -2939,11 +2922,10 @@ function renderAcct(){
   }
   el.innerHTML='<h1>Аккаунт</h1><div class="acard"><div class="prof-card">'+uava(ME,72)+'<div class="pc-t"><b>'+esc(ME.name)+ownerTag(ME)+"</b><small>"+esc(ME.email)+'</small><small>Код друга: <b class="fcode">'+esc(ME.code)+'</b></small></div><div class="pc-act">'+(isAdmin()?'<button class="btn sm primary" data-tab="admin">'+ic("shield",16)+"Админ-панель</button>":"")+'<button class="btn sm" id="syncBtn" title="Сохранить прогресс в аккаунт сейчас">'+ic("refresh",16)+'Синхронизировать</button><button class="btn sm" id="logoutBtn">'+ic("logout",16)+"Выйти</button></div></div>"+
     '<p class="pc-sync '+(syncErr?"aerr":"muted")+'">'+ic("cloud",16)+"<span>"+(syncErr?"Не удалось сохранить: "+esc(syncErr):syncAt?"Прогресс сохранён в аккаунте · "+new Date(syncAt*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):"Прогресс сохраняется в аккаунт сам, через пару секунд после каждого ответа.")+"</span></p>"+
-    '<div class="pc-edit"><label class="aform" style="max-width:420px">Имя<input type="text" id="pName" maxlength="40" value="'+esc(ME.name)+'"></label><p class="acc-h">Цвет аватара</p><div class="avs">'+AV.map((c,i)=>'<button class="avc'+(+ME.avatar===i?" on":"")+'" data-av="'+i+'" style="background:'+c+'" aria-label="Цвет '+(i+1)+'"></button>').join("")+'</div><p class="acc-h">Цвет оформления</p><div class="accs">'+ACCENTS.map(a=>'<button class="accb" data-acc="'+a[0]+'" aria-pressed="'+((S.accent||"violet")===a[0])+'"><i style="background:'+a[2]+'"></i>'+a[1]+"</button>").join("")+'</div><label class="acheck pc-news"><input type="checkbox" id="pNews"'+(ME.news?" checked":"")+'><span>Присылать мне напоминания, новости платформы и советы по подготовке к EPD</span></label><button class="btn primary" id="pSave">Сохранить профиль</button></div></div>'+
+    '<div class="pc-edit"><label class="aform" style="max-width:420px">Имя<input type="text" id="pName" maxlength="40" value="'+esc(ME.name)+'"></label><p class="acc-h">Цвет аватара</p><div class="avs">'+AV.map((c,i)=>'<button class="avc'+(+ME.avatar===i?" on":"")+'" data-av="'+i+'" style="background:'+c+'" aria-label="Цвет '+(i+1)+'"></button>').join("")+'</div><label class="acheck pc-news"><input type="checkbox" id="pNews"'+(ME.news?" checked":"")+'><span>Присылать мне напоминания, новости платформы и советы по подготовке к EPD</span></label><button class="btn primary" id="pSave">Сохранить профиль</button></div></div>'+
     '<a href="#" class="acard acc-link" data-tab="plan">'+ic("calendar",20)+"<span><b>"+(S.plan?"Мой план":"Составить личный план")+"</b><small>"+(S.plan?"Что учить сегодня и до экзамена":"Укажи дату экзамена, и расписание построится само")+"</small></span>"+ic("chev",18)+"</a>";
   let av=+ME.avatar;
   el.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{av=+b.dataset.av;el.querySelectorAll("[data-av]").forEach(x=>x.classList.toggle("on",x===b))});
-  el.querySelectorAll("[data-acc]").forEach(b=>b.onclick=()=>{S.accent=b.dataset.acc==="violet"?"":b.dataset.acc;save();applyTheme();el.querySelectorAll("[data-acc]").forEach(x=>x.setAttribute("aria-pressed",x===b))});
   $("#pSave").onclick=async()=>{try{const j=await api("PATCH","/profile",{name:$("#pName").value.trim(),avatar:av,news:$("#pNews").checked});ME=j.user;renderAcctBtn();renderAcct();toast("✅ Профиль сохранён")}catch(e){toast("⚠️ "+e.message)}};
   $("#syncBtn").onclick=async()=>{await pushProgress();toast(syncErr?"⚠️ "+syncErr:"☁️ Прогресс синхронизирован")};
   el.insertAdjacentHTML("beforeend",'<details class="danger-z"><summary>Удалить аккаунт</summary><div class="acard"><p style="margin-top:0" class="muted">Аккаунт и все данные (прогресс, статистика, свои наборы, друзья и общие ссылки) будут удалены навсегда. Отменить это нельзя.</p><button class="btn danger" id="delAcct">'+ic("trash",16)+"Удалить аккаунт</button></div></details>");
@@ -3136,7 +3118,7 @@ function ldRain(el){
       x.restore()}};
   colors();fit();frame(false);
   const ro=new ResizeObserver(()=>{fit();frame(false)});ro.observe(c);
-  const mo=new MutationObserver(()=>{colors();frame(false)});mo.observe(document.documentElement,{attributes:true,attributeFilter:["data-theme","data-accent"]});
+  const mo=new MutationObserver(()=>{colors();frame(false)});mo.observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
   if("IntersectionObserver" in window)new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(c);
   (function loop(){if(!c.isConnected){ro.disconnect();mo.disconnect();return}if(!reduced()&&vis&&!document.hidden)frame(true);requestAnimationFrame(loop)})();
 }

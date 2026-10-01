@@ -160,7 +160,7 @@ body.guest .logo .lg-s{display:none}
 .search:focus-within{border-color:var(--primary);background:var(--panel)}
 .search input{flex:1;min-width:0;border:0;background:none;font:inherit;font-weight:600;color:var(--fg);outline:none}
 .search input::placeholder{color:var(--muted);font-weight:500}
-.tright{display:flex;align-items:center;gap:10px}
+.tright{display:flex;align-items:center;gap:10px;margin-left:auto}
 .ib{border:0;background:none;cursor:pointer;color:var(--muted);border-radius:999px;padding:8px;display:inline-flex;align-items:center;justify-content:center}
 .ib:hover{background:var(--hover);color:var(--fg)}
 .plusbtn{width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;border:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none;transition:transform .15s}
@@ -269,7 +269,6 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .hf-more{margin-left:auto;display:inline-flex;align-items:center;gap:2px;color:var(--link);font-weight:700;text-decoration:none;border-radius:8px}
 .hf-more:hover{text-decoration:underline}
 .hf-more svg{transform:rotate(-90deg)}
-body.at-home #dueBtn{display:none}
 .vbanner{display:flex;align-items:center;gap:14px;background:var(--primary-soft);color:var(--fg);border-radius:var(--r);padding:14px 18px;margin-bottom:16px}
 .vbanner>svg{color:var(--link);flex:none}.vbanner span{flex:1;min-width:0}.vbanner b{display:block}.vbanner small{color:var(--muted);font-weight:600;font-size:13px}
 @media (max-width:560px){.vbanner{flex-wrap:wrap}}
@@ -1416,18 +1415,71 @@ body.focus .app-foot{display:none}
 .ld-faq details p{margin:0;padding:0 22px 20px;color:var(--muted);line-height:1.65;font-size:15px}
 @media (max-width:980px){.ld-road{grid-template-columns:repeat(2,minmax(0,1fr))}.ld-road::before{display:none}}
 @media (max-width:560px){.ld-road{grid-template-columns:1fr}.ld-faq summary{padding:16px 18px}.ld-faq details p{padding:0 18px 18px}}
+
+/* ---------- меню по разделам ---------- */
+.nav a{gap:12px;padding:7px 10px}
+.nav .ni{--c:var(--muted);width:34px;height:34px;border-radius:11px;flex:none;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s}
+.nav .ni svg{width:19px;height:19px}
+.nav a:hover .ni{transform:scale(1.08) rotate(-4deg)}
+.nav a[aria-current="page"] .ni{background:var(--c);color:#fff;box-shadow:0 4px 12px -4px var(--c)}
+.nav-gt{font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;padding:14px 12px 5px;opacity:.85}
+.nav a.nav-ai{position:relative;margin:2px 0;padding:10px;border-radius:16px;background:linear-gradient(135deg,rgba(var(--acc-rgb),.16),rgba(139,92,246,.10) 55%,rgba(255,205,31,.16));overflow:hidden}
+.nav a.nav-ai .ni{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:#fff;box-shadow:0 4px 12px -4px rgba(var(--acc-rgb),.8)}
+.nav a.nav-ai .ni svg{animation:aiTw 3.2s ease-in-out infinite}
+@keyframes aiTw{0%,70%,100%{transform:none}80%{transform:rotate(18deg) scale(1.15)}90%{transform:rotate(-8deg) scale(.95)}}
+.nav a.nav-ai::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-100%);animation:aiShine 6s ease-in-out infinite;pointer-events:none}
+@keyframes aiShine{0%,75%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.nav a.nav-ai[aria-current="page"]{background:linear-gradient(135deg,rgba(var(--acc-rgb),.28),rgba(139,92,246,.18) 55%,rgba(255,205,31,.22));color:var(--fg)}
+.nav-l{display:flex;flex-direction:column;min-width:0;line-height:1.2}
+.nav-l b{font-weight:800}
+.nav-l small{font-size:11.5px;font-weight:600;color:var(--muted);margin-top:2px}
+.nav .nav-hub{color:var(--muted)}
+.nav .nav-hub .ni{background:var(--panel2);color:var(--muted)}
+/* бургер: на телефоне превращается в крестик */
+.burger .bx{display:none}
+body.navopen .burger .bm{display:none}
+body.navopen .burger .bx{display:inline}
+/* ---------- плавающая «+» ---------- */
+.fab{position:fixed;right:max(24px,env(safe-area-inset-right));bottom:max(24px,env(safe-area-inset-bottom));z-index:44;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+.fab>*{pointer-events:auto}
+.fab-btn{width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--primary),#8B5CF6);box-shadow:0 12px 28px -8px rgba(var(--acc-rgb),.75),0 2px 6px rgba(40,46,62,.15);display:grid;place-items:center;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+.fab-btn svg{width:26px;height:26px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.fab-btn:hover{transform:translateY(-2px) scale(1.05)}
+.fab.open .fab-btn svg{transform:rotate(135deg)}
+.fab-menu{display:flex;flex-direction:column;gap:8px;align-items:stretch;background:var(--panel);border-radius:20px;padding:8px;box-shadow:var(--sh-card);transform-origin:bottom right;transform:translateY(10px) scale(.92);opacity:0;visibility:hidden;transition:transform .22s cubic-bezier(.3,1.4,.5,1),opacity .15s,visibility 0s .22s}
+.fab.open .fab-menu{transform:none;opacity:1;visibility:visible;transition:transform .25s cubic-bezier(.3,1.4,.5,1),opacity .15s}
+.fab-menu button{display:flex;align-items:center;gap:12px;border:0;background:none;border-radius:14px;padding:8px 14px 8px 8px;cursor:pointer;text-align:left;font:inherit;color:var(--fg);min-width:230px}
+.fab-menu button:hover{background:var(--hover)}
+.fab-menu .ni{--c:var(--primary);width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);flex:none}
+.fab-menu b{display:block;font-size:14.5px;font-weight:800}
+.fab-menu small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+body.guest .fab,body.focus .fab,body.navopen .fab,body[data-curtab="edit"] .fab,body[data-curtab="acct"] .fab,body[data-curtab="admin"] .fab,body[data-curtab="legal"] .fab,body[data-curtab="land"] .fab,body[data-curtab="guide"] .fab,body[data-curtab="practice"] .fab,html.boot .fab{display:none}
+@media (prefers-reduced-motion:reduce){.nav a.nav-ai::after,.nav a.nav-ai .ni svg{animation:none}}
+/* ---------- телефон/планшет: меню выпадает сверху ---------- */
+@media (max-width:980px){
+  .top{z-index:42}
+  .nav{left:0;right:0;width:auto;top:66px;height:auto;max-height:calc(100dvh - 66px);z-index:41;border-radius:0 0 26px 26px;padding:6px 16px 18px;transform:translateY(-14px);opacity:0;visibility:hidden;transition:transform .28s cubic-bezier(.3,1.2,.5,1),opacity .2s,visibility 0s .28s;box-shadow:0 24px 40px -18px rgba(10,9,45,.35)}
+  body.navopen .nav{transform:none;opacity:1;visibility:visible;transition:transform .3s cubic-bezier(.3,1.2,.5,1),opacity .2s}
+  body.navopen .veil{z-index:40;animation:pageIn .2s ease-out}
+  .nav>*{max-width:640px;margin-left:auto!important;margin-right:auto!important}
+  .nav-gt{padding-top:12px}
+  body.navopen{overflow:hidden}
+}
+@media (max-width:640px){
+  .nav{top:58px;max-height:calc(100dvh - 58px - 64px - env(safe-area-inset-bottom))}
+  .fab{bottom:calc(76px + env(safe-area-inset-bottom));right:max(16px,env(safe-area-inset-right))}
+  .fab-btn{width:52px;height:52px}
+  body[data-curtab="learn"] .fab{display:none}
+}
 </style>
 </head>
 <body class="guest">
 <header class="top">
-  <button class="burger" id="burger" aria-label="Меню"><i data-ic="menu"></i></button>
+  <button class="burger" id="burger" aria-label="Меню" aria-controls="nav"><span class="bm"><i data-ic="menu"></i></span><span class="bx"><i data-ic="x"></i></span></button>
   <button class="logo" data-tab="home" aria-label="EPDeutsch Wörter, на главную"><svg viewBox="0 0 34 34" width="32" height="32" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path class="lg-d" d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><g class="lg-b"><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="lg-t"><span class="lg-n">EP<b>Deutsch</b></span><small class="lg-s" lang="de">Wörter</small></span></button>
-  <label class="search"><i data-ic="search"></i><input type="search" id="q" placeholder="Найти слово по-немецки или по-русски" aria-label="Поиск"></label>
   <div class="tright">
     <button class="streak" id="streakBtn" data-tab="prog" title="Серия дней с выполненной целью">🔥 <b id="stN">0</b></button>
     <button class="goal" data-tab="prog" title="Цель дня"><svg viewBox="0 0 36 36" width="40" height="40"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--line2)" stroke-width="4"/><circle id="goalArc" cx="18" cy="18" r="15" fill="none" stroke="var(--good)" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="94.25"/></svg><span id="goalN">0</span></button>
-    <button class="plusbtn" data-new title="Создать набор" aria-label="Создать набор"><i data-ic="plus"></i></button>
-    <button class="btn due" id="dueBtn"><i data-ic="bell"></i><span class="lbl">Повторить</span> <span id="dueN">0</span></button>
     <!--B:ru--><a class="langsw" href="/en" hreflang="en" lang="en" title="English version">EN</a><!--/B:ru--><!--B:en--><a class="langsw" href="/" hreflang="ru" lang="ru" title="Русская версия">RU</a><!--/B:en--><!--B:epd--><a class="langsw" href="/en" hreflang="en" lang="en" title="English version">EN</a><!--/B:epd-->
     <button class="acct" id="acctBtn" data-tab="acct" aria-label="Аккаунт">Войти</button>
   </div>
@@ -1435,14 +1487,17 @@ body.focus .app-foot{display:none}
 
 <div class="shell">
   <nav class="nav" id="nav" aria-label="Разделы">
-    <a href="/start" class="nav-hub"><i data-ic="grid"></i>Все модули</a>
-    <a href="#" data-tab="home"><i data-ic="home"></i>Главная</a>
-    <a href="#" data-tab="learn"><i data-ic="cards"></i>Карточки</a>
-    <a href="#" data-tab="practice"><i data-ic="chat"></i>Практика</a>
-    <a href="#" data-tab="list"><i data-ic="list"></i>Все слова</a>
-    <a href="#" data-tab="plan"><i data-ic="calendar"></i>Мой план</a>
-    <a href="#" data-tab="friends"><i data-ic="users"></i>Друзья</a>
-    <a href="#" data-tab="prog"><i data-ic="chart"></i>Прогресс и настройки</a>
+    <a href="/start" class="nav-hub"><span class="ni"><i data-ic="grid"></i></span>Все модули</a>
+    <div class="nav-gt">Слова</div>
+    <a href="#" data-tab="home"><span class="ni" style="--c:#6F5BD6"><i data-ic="home"></i></span>Главная</a>
+    <a href="#" data-tab="learn"><span class="ni" style="--c:#2F7BEA"><i data-ic="cards"></i></span>Карточки</a>
+    <a href="#" data-tab="list"><span class="ni" style="--c:#18AE79"><i data-ic="list"></i></span>Слова по темам EPD</a>
+    <div class="nav-gt">С ИИ</div>
+    <a href="#" data-tab="practice" class="nav-ai"><span class="ni"><i data-ic="spark"></i></span><span class="nav-l"><b>Практика с ИИ</b><small>Пиши — ИИ проверит, как на EPD</small></span></a>
+    <div class="nav-gt">Мой путь</div>
+    <a href="#" data-tab="plan"><span class="ni" style="--c:#F28C28"><i data-ic="calendar"></i></span>Мой план</a>
+    <a href="#" data-tab="prog"><span class="ni" style="--c:#0EA5B7"><i data-ic="chart"></i></span>Прогресс и настройки</a>
+    <a href="#" data-tab="friends"><span class="ni" style="--c:#E8505B"><i data-ic="users"></i></span>Друзья</a>
     <hr>
     <button class="nt" id="foldTog" aria-expanded="true"><span>Папки</span><i data-ic="chev"></i></button>
     <div id="folders"></div>
@@ -1486,7 +1541,7 @@ body.focus .app-foot{display:none}
     </section>
 
     <section id="p-list" class="page" hidden>
-      <div class="plan"><h1>Все слова</h1></div>
+      <div class="plan"><h1>Слова по темам EPD</h1><p class="muted" style="margin:6px 0 0">Вся лексика из твоей библиотеки, разложенная по темам экзамена.</p></div>
       <div class="row" style="margin-top:12px">
         <select id="listSec" aria-label="Раздел"></select>
         <span class="muted" id="listInfo"></span>
@@ -1616,11 +1671,12 @@ body.focus .app-foot{display:none}
     <footer class="app-foot ld-foot" id="appFoot"></footer>
   </main>
 </div>
+<div class="fab" id="fab"><div class="fab-menu" id="fabMenu" role="menu"><button type="button" role="menuitem" data-new><span class="ni" style="--c:#6F5BD6"><i data-ic="cards"></i></span><span><b>Новый набор</b><small>Свои слова с переводом</small></span></button><button type="button" role="menuitem" data-newfolder><span class="ni" style="--c:#F28C28"><i data-ic="folder"></i></span><span><b>Новая папка</b><small>Сложить наборы вместе</small></span></button></div><button type="button" class="fab-btn" id="fabBtn" aria-label="Добавить" aria-expanded="false" aria-controls="fabMenu"><i data-ic="plus"></i></button></div>
 <nav class="tabbar" id="tabbar" aria-label="Быстрая навигация">
   <a href="/" data-tab="home"><i data-ic="home"></i>Главная</a>
   <a href="/" data-tab="learn"><i data-ic="cards"></i>Учить</a>
   <a href="/" data-tab="practice"><i data-ic="chat"></i>Практика</a>
-  <button type="button" data-due id="tbDue"><i data-ic="bell"></i>Повторить<span class="tb-n" id="tbDueN"></span></button>
+  <a href="/" data-tab="list"><i data-ic="list"></i>Темы</a>
   <a href="/" data-tab="plan"><i data-ic="calendar"></i>План</a>
   <a href="/" data-tab="prog"><i data-ic="chart"></i>Прогресс</a>
 </nav>
@@ -1850,6 +1906,7 @@ function smartMode(c,easier){
 }
 const prio=c=>(isDue(c.id)?3:0)+(S.l[c.id]||0)*1.5+(learned(c.id)?0:2)-box(c.id)*.6+Math.random()*2;
 function modeProfile(){return MODES.map(m=>m[0]).filter(k=>k!=="smart"&&S.ms[k]&&S.ms[k][1]>=5).map(k=>({k,acc:S.ms[k][0]/S.ms[k][1],n:S.ms[k][1]}))}
+
 function recommendText(){
   const p=modeProfile();
   if(p.length<2)return"Отвечай в разных режимах: через пару кругов я пойму, что тебе даётся легче, и «Умный режим» начнёт подстраиваться под тебя.";
@@ -1909,7 +1966,6 @@ function libSec(){const L=libSecs();return L.includes(curSec)?curSec:L[0]}
 function renderTotals(){
   const lc=libCards(),n=lc.length,k=lc.filter(c=>learned(c.id)).length,t=today(),d=dayRec(t),sk=streak(),lv=lvlOf(S.xp),a=lvlXP(lv),b=lvlXP(lv+1);
   $("#totTxt").textContent=k+" / "+n;$("#totBar").style.width=(n?k/n*100:0)+"%";
-  const dn=CARDS.filter(c=>isDue(c.id)).length;$("#dueN").textContent=dn;const tb=$("#tbDueN");tb.textContent=dn>99?"99+":dn;tb.toggleAttribute("data-z",!dn);
   $("#stN").textContent=sk;$("#streakBtn").classList.toggle("off",!goalDone(t));
   $("#goalN").textContent=Math.min(goalN(d),S.goal);$("#goalArc").style.strokeDashoffset=94.25*(1-Math.min(1,goalN(d)/S.goal));
   $("#lvN").textContent=lv;$("#lvT").textContent="Уровень "+lv+" · "+lvlName(lv);$("#lvX").textContent=(S.xp-a)+" / "+(b-a)+" XP";$("#lvBar").style.width=((S.xp-a)/(b-a)*100)+"%";
@@ -1923,16 +1979,6 @@ function setCard(sec){
   const[k,n]=cntSec(sec),p=isPin(sec.id),pt=p?"Убрать из избранного":"В избранное на главную";
   return'<div class="scw"><button class="sc-pin'+(p?" on":"")+'" data-pin="'+esc(sec.id)+'" aria-pressed="'+p+'" title="'+pt+'" aria-label="'+pt+'">'+ic("star",20)+'</button><button class="setcard" data-open="'+esc(sec.id)+'"><span class="sc-t">'+esc(secName(sec))+'</span><span class="sc-s">'+esc(sec.titleRu)+'</span><span class="pill">'+terms(n)+'</span><span class="sc-bar" style="margin-top:14px"><i style="width:'+(n?k/n*100:0)+'%"></i></span><span class="sc-f"><span class="ava">'+(sec.verbs?"V":sec.user?"★":sec.chapter)+"</span>"+k+" из "+n+" выучено</span></button></div>";
 }
-// фиолетовая подсказка-совет: один «показ» висит, пока его не закроют (или час), новый — не чаще раза в 2 часа, до 3 в день
-const TIP_MAX=3,TIP_GAP=2*36e5,TIP_LIFE=36e5;
-function tipVisible(){
-  const now=Date.now(),d=today();let o=S.tipS;if(!o||o.d!==d)o=S.tipS={d,n:0,t:0,open:false};
-  if(o.open&&now-o.t<TIP_LIFE)return true;
-  if(o.open){o.open=false;save()}
-  if(o.n<TIP_MAX&&now-o.t>=TIP_GAP){o.n++;o.t=now;o.open=true;save();return true}
-  return false;
-}
-function tipHtml(cls){return tipVisible()?'<div class="tip'+cls+'"><span class="ti">✨</span><span>'+esc(recommendText())+'</span><button class="tip-x" data-tipclose aria-label="Закрыть подсказку" title="Закрыть">'+ic("x",16)+"</button></div>":""}
 function renderHome(){
   const due=CARDS.filter(c=>isDue(c.id)).length,t=today(),d=dayRec(t),sk=streak(),lv=lvlOf(S.xp),ta=totalAns();
   const hi=new Date().getHours(),hello=hi<5?"Доброй ночи":hi<12?"Доброе утро":hi<18?"Добрый день":"Добрый вечер";
@@ -1951,7 +1997,7 @@ function renderHome(){
   const facts=[sk?'<span class="hf"><span class="hs-i">🔥</span>'+sk+" "+plural(sk,"день","дня","дней")+" подряд</span>":"",
     '<span class="hf">'+ic("spark",16)+"Уровень "+lv+"</span>",
     ta?'<span class="hf">'+ic("check",16)+"Точность "+Math.round(totalOk()/ta*100)+"%</span>":""].join("");
-  let h=verifyBanner()+tipHtml(" tip-top")+'<div class="hero"><div class="hero-top"><div><h1>'+hello+nm+"!</h1><p class=\"hero-sub\">"+sub+'</p></div>'+
+  let h=verifyBanner()+'<div class="hero"><div class="hero-top"><div><h1>'+hello+nm+"!</h1><p class=\"hero-sub\">"+sub+'</p></div>'+
     '<button class="btn primary big" '+(due?"data-due":'data-open="'+esc(ls)+'"')+">"+(due?"Повторить "+due+" "+plural(due,"слово","слова","слов"):gn?"Продолжить":"Начать")+"</button></div>"+
     '<div class="hgoal'+(gd?" done":"")+'"><div class="hg-t"><span>Цель дня</span><b>'+gn+" из "+S.goal+'</b></div><div class="bar"><i style="width:'+Math.round(gn/S.goal*100)+'%"></i></div></div>'+
     '<div class="hfacts">'+facts+'<a href="#" class="hf-more" data-tab="prog">Подробный отчёт'+ic("chev",16)+"</a></div></div>";
@@ -2153,7 +2199,6 @@ function roundEnd(){
   st.innerHTML='<div class="done"><span class="done-ic">'+ic0+"</span><h2>"+title+'</h2><p class="muted">Круг пройден. Слова, которые ты не знал, вернутся в повторении.</p>'+
     '<div class="done-st"><div><b>'+stats.total+"</b><small>карточек</small></div><div><b>"+acc+"%</b><small>точность</small></div><div><b>+"+stats.xp+"</b><small>XP</small></div><div><b>🔥 "+stats.best+"</b><small>лучшее комбо</small></div></div>"+
     (notes.length?'<div class="done-notes">'+notes.map(x=>"<span>"+esc(x[0])+(x[1]?"<small>"+esc(x[1])+"</small>":"")+"</span>").join("")+"</div>":"")+
-    tipHtml("")+
     '<div class="row"><button class="btn primary big" id="again">'+ic("refresh",18)+"Ещё круг</button>"+(stats.miss.size?'<button class="btn big" id="againMiss">Только ошибки ('+stats.miss.size+")</button>":"")+(mode!=="smart"&&sessionKind!=="due"?'<button class="btn big" id="goSmart">'+ic("spark",18)+"Умный режим</button>":"")+"</div></div>";
   $("#again").onclick=sessionKind==="due"?startDue:start;
   const miss=[...stats.miss];
@@ -2438,7 +2483,7 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="ArrowRight"||e.key==="2"){e.preventDefault();answer(1)}
   else if(e.key==="ArrowLeft"||e.key==="1"){e.preventDefault();answer(0)}
 });
-$("#start").onclick=start;$("#dueBtn").onclick=startDue;
+$("#start").onclick=start;
 $("#weak").onchange=start;
 
 // ---------- все слова ----------
@@ -2447,13 +2492,13 @@ function renderListSel(){
   $("#listSec").innerHTML=h;
 }
 function renderList(){
-  const q=$("#q").value.trim().toLowerCase(),fs=$("#listSec").value;let h="",shown=0;renderListSel();$("#listSec").value=fs;const LS=new Set(libSecs());
+  const fs=$("#listSec").value;let h="",shown=0;renderListSel();$("#listSec").value=fs;const LS=new Set(libSecs());
   if(!LS.size){$("#list").innerHTML='<p class="muted">В твоей библиотеке пока нет слов. Добавь главы из книги или создай свой набор на главной.</p>';$("#listInfo").textContent="";return}
   ALL().filter(x=>LS.has(x.id)).forEach(sec=>{
     if(fs&&sec.id!==fs)return;
     let part="",cnt=0,k=0;
     sec.sets.forEach(st=>{
-      const rows=st.ids.map(id=>BYID[id]).filter(c=>!q||(c.de+" "+c.ru).toLowerCase().includes(q));
+      const rows=st.ids.map(id=>BYID[id]);
       if(!rows.length)return;
       part+='<div class="sub-h">'+esc(st.name)+"</div>";
       rows.forEach(c=>{cnt++;if(learned(c.id))k++;part+=termRow(c)});
@@ -2461,10 +2506,10 @@ function renderList(){
     if(!cnt)return;shown+=cnt;
     h+="<h3><span>"+esc(secName(sec))+' <span class="muted" style="font-size:14px;font-weight:600">'+esc(sec.titleRu)+"</span></span><small>"+k+"/"+cnt+" выучено</small></h3>"+part;
   });
-  $("#listInfo").textContent=q?"Найдено: "+shown:"";
+  $("#listInfo").textContent=shown?shown+" "+plural(shown,"слово","слова","слов"):"";
   $("#list").innerHTML=h||'<p class="muted">Ничего не найдено.</p>';
 }
-let listTimer;$("#q").oninput=()=>{if(curTab!=="list")go("list");clearTimeout(listTimer);listTimer=setTimeout(renderList,150)};$("#listSec").onchange=renderList;
+$("#listSec").onchange=renderList;
 
 // ---------- свои наборы и папки ----------
 function ask(title,body,ok,okTxt,noTxt,no,stayTxt){const d=$("#dlg"),st=$("#dlgStay");$("#dlgT").textContent=title;$("#dlgB").innerHTML=body;$("#dlgOk").textContent=okTxt||"Готово";$("#dlgNo").textContent=noTxt||"Отмена";st.hidden=!stayTxt;st.textContent=stayTxt||"";st.onclick=e=>{e.preventDefault();fin("")};
@@ -3232,7 +3277,7 @@ const INIT={path:PATH_LEGAL?"/":location.pathname==="/en"?"/en":PATH_GUIDE?"/epd
 const META={
   terms:["Условия использования · EPDeutsch","Условия использования EPDeutsch: аккаунт, авторские права, ответственность и применимое право."],
   privacy:["Политика конфиденциальности · EPDeutsch","Какие данные обрабатывает EPDeutsch, зачем и какие у вас права по DSGVO / GDPR."],
-  home:["Главная · EPDeutsch Wörter"],learn:["Карточки · EPDeutsch Wörter"],practice:["Практика · EPDeutsch Wörter"],list:["Все слова · EPDeutsch Wörter"],plan:["Мой план · EPDeutsch Wörter"],
+  home:["Главная · EPDeutsch Wörter"],learn:["Карточки · EPDeutsch Wörter"],practice:["Практика · EPDeutsch Wörter"],list:["Слова по темам EPD · EPDeutsch Wörter"],plan:["Мой план · EPDeutsch Wörter"],
   prog:["Прогресс · EPDeutsch Wörter"],friends:["Друзья · EPDeutsch Wörter"],acct:["Аккаунт · EPDeutsch Wörter"],admin:["Админ-панель · EPDeutsch"],edit:["Редактор набора · EPDeutsch Wörter"]
 };
 function syncUrl(t){
@@ -3286,7 +3331,6 @@ function renderLegal(){
   $("#p-legal").innerHTML='<button class="crumb" data-legalback>← Назад</button><h1>'+d[0]+'</h1><p class="lg-date">Редакция от '+LEGAL_DATE+'</p><div class="seg"><button data-legal="terms" aria-pressed="'+(legalTab==="terms")+'">Условия использования</button><button data-legal="privacy" aria-pressed="'+(legalTab==="privacy")+'">Конфиденциальность</button></div>'+d[1];
 }
 document.addEventListener("click",e=>{
-  const tx=e.target.closest("[data-tipclose]");if(tx){if(S.tipS){S.tipS.open=false;save()}const t=tx.closest(".tip");t.classList.add("out");setTimeout(()=>t.remove(),250);return}
   if(e.target.closest("[data-legalback]")){go(legalBack==="legal"?"land":legalBack);return}
   const lg=e.target.closest("[data-legal]");if(lg){e.preventDefault();openLegal(lg.dataset.legal)}
 });
@@ -3323,7 +3367,7 @@ const TOUR=[
    prep(){if(!cur)return false;if(!flipped){flipped=true;anim="";draw()}},
    el:()=>$("#stage .grade"),
    text:()=>"Отвечай честно: «Не знаю», и слово вернётся в этом же круге. "+(narrow()?"Можно и свайпом: вправо «знаю», влево «нет».":touch()?"Можно и свайпом: вправо «знаю», влево «нет».":"Можно стрелками: <kbd>→</kbd> знаю, <kbd>←</kbd> нет.")},
-  {emo:"🔔",title:()=>"Тут повторяешь",el:()=>narrow()?$("#tbDue"):$("#dueBtn"),
+  {emo:"🔔",title:()=>"Тут повторяешь",prep(){if(curTab!=="home"){go("home");return 250}},el:()=>$("#p-home [data-due]")||$("#p-home .hero"),
    text:"Каждое слово возвращается через 1, 3, 7, 14 и 30 дней, ровно тогда, когда начинает забываться. Заглядывай сюда каждый день.",btn:"Дальше"},
   {emo:"🤝",title:()=>"А здесь друзья",
    prep(){if(mqNarrow.matches)document.body.classList.add("navopen");else document.body.classList.remove("navhide");return 320},
@@ -3444,7 +3488,7 @@ const isOwner=()=>!!(ME&&ME.owner),isAdmin=()=>!!(ME&&ME.admin);
 const admDate=d=>new Date(d*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"short",timeZone:"UTC"});
 const admAgo=ts=>{if(!ts)return"—";const m=Math.floor((Date.now()/1000-ts)/60);return m<2?"сейчас":m<60?m+" мин назад":m<1440?Math.floor(m/60)+" ч назад":Math.floor(m/1440)+" дн назад"};
 const admNum=n=>(+n||0).toLocaleString("ru-RU");
-const TAB_RU={home:"Главная",learn:"Карточки",practice:"Практика",list:"Все слова",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
+const TAB_RU={home:"Главная",learn:"Карточки",practice:"Практика",list:"Слова по темам",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
 // столбики (+ линия второго ряда); подписи дат — через одну-две, подсказка при наведении
 function admChart(rows,key,opt){
   opt=opt||{};const W=640,H=160,pb=2,pt=8,n=rows.length,bw=W/n,max=Math.max(1,...rows.map(r=>Math.max(r[key],opt.line?r[opt.line]:0)));
@@ -3734,7 +3778,7 @@ function go(t){
   if(t==="learn"&&!libSecs().length){t="home";setTimeout(()=>toast("Сначала добавь слова","Выбери главы в «Предложениях от сайта» или создай свой набор"),50)}
   else if(t==="learn"&&!libSecs().includes(curSec)&&!SECS[curSec].user){curSec=libSec();const k=SECS[curSec].sets.map(x=>x.key);sel=new Set(k);persistSel();start()}
   curTab=t;
-  document.body.classList.toggle("at-home",t==="home");
+  document.body.classList.toggle("at-home",t==="home");document.body.dataset.curtab=t;fabOpen(false);
   if(ME&&LAST_TABS.includes(t))lsSet("epd_last",t);
   document.querySelectorAll(".nav [data-tab],.tabbar [data-tab]").forEach(x=>x.setAttribute("aria-current",x.dataset.tab===t?"page":"false"));
   syncUrl(t);
@@ -3817,6 +3861,11 @@ function fhTick(){
   fhTimer=setTimeout(hide,12000);
 }
 $("#focusExit").onclick=()=>setFocus(false);
+// плавающая «+»: набор или папка из любого раздела
+function fabOpen(on){const f=$("#fab");if(!f)return;f.classList.toggle("open",on);$("#fabBtn").setAttribute("aria-expanded",on)}
+$("#fabBtn").onclick=e=>{e.stopPropagation();fabOpen(!$("#fab").classList.contains("open"))};
+document.addEventListener("click",e=>{if(!e.target.closest("#fabBtn"))fabOpen(false)},true);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")fabOpen(false)});
 $("#veil").onclick=()=>document.body.classList.remove("navopen");
 function renderAll(){renderTotals();renderFolders();if(curTab==="home")renderHome();if(curTab==="learn")renderSet()}
 renderListSel();renderAll();

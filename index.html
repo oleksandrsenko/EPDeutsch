@@ -643,6 +643,10 @@ input.e-name{font-size:18px}
 .tr-st:empty{display:none}
 .tr-st.ok{color:var(--good)}.tr-st.err{color:var(--bad)}
 .er-f input.flash{animation:trFlash .9s ease}
+/* артикль в поле немецкого слова красится по роду: текст рисует «зеркало» поверх прозрачного input */
+.e-box{position:relative;display:block}.e-box input{width:100%;line-height:24px;color:transparent;caret-color:var(--fg)}
+.er-f .e-mir{position:absolute;inset:0 0 2px;padding:6px 0;font-size:16px;font-weight:500;line-height:24px;white-space:pre;overflow:hidden;pointer-events:none;color:var(--fg);text-transform:none;letter-spacing:normal}
+.er-f .e-box{font-size:16px;font-weight:500;color:inherit;text-transform:none;letter-spacing:normal}.e-mir b{font-weight:inherit}.e-mir .am{color:var(--m)}.e-mir .af{color:var(--f)}.e-mir .an{color:var(--n)}
 @keyframes trFlash{0%{background:var(--primary-soft)}100%{background:transparent}}
 @media (max-width:640px){.tr-st{grid-column:1}}
 .ed-dir{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px;color:var(--muted);font-weight:700;font-size:13.5px}
@@ -2481,9 +2485,13 @@ function edCollect(){
   ED.name=$("#eName").value;ED.desc=$("#eDesc").value;
   ED.rows=[...document.querySelectorAll("#eRows .erow")].map((r,i)=>{const de=r.querySelector(".e-de"),ru=r.querySelector(".e-ru");return{k:ED.rows[i].k,de:de.value,ru:ru.value,ex:r.querySelector(".e-ex").value,ad:de.dataset.auto==="1",ar:ru.dataset.auto==="1"}});
 }
+// немецкое слово с артиклем, покрашенным по роду: der синий, die красный, das зелёный
+const ART_CLS={der:"am",die:"af",das:"an"};
+function deMir(v){const m=v.match(/^(\s*)(der|die|das)(?=\s)/i);return m?esc(m[1])+'<b class="'+ART_CLS[m[2].toLowerCase()]+'">'+esc(m[2])+"</b>"+esc(v.slice(m[0].length)):esc(v)}
+function paintDe(inp){const mir=inp&&inp.nextElementSibling;if(!mir||!mir.classList.contains("e-mir"))return;mir.innerHTML=deMir(inp.value);mir.scrollLeft=inp.scrollLeft}
 // поля карточки в выбранном порядке: немецкий → русский или русский → немецкий
 function edPair(r){
-  const de='<label><input type="text" class="e-de" lang="de" spellcheck="false" data-auto="'+(r.ad?1:0)+'" value="'+esc(r.de)+'"><span>'+(ED.flip?"Перевод · немецкий":"Термин · немецкий")+'</span></label>',
+  const de='<label><span class="e-box"><input type="text" class="e-de" lang="de" spellcheck="false" data-auto="'+(r.ad?1:0)+'" value="'+esc(r.de)+'"><span class="e-mir" aria-hidden="true">'+deMir(r.de)+'</span></span><span>'+(ED.flip?"Перевод · немецкий":"Термин · немецкий")+'</span></label>',
         ru='<label><input type="text" class="e-ru" lang="ru" spellcheck="false" data-auto="'+(r.ar?1:0)+'" value="'+esc(r.ru)+'"><span>'+(ED.flip?"Термин · русский":"Определение · русский")+'</span></label>';
   return ED.flip?ru+de:de+ru;
 }
@@ -2504,6 +2512,7 @@ function renderEditor(){
     de.addEventListener("input",()=>{de.dataset.auto="0";clearTimeout(row._t);row._t=setTimeout(()=>autoTr(row,"de"),600)});
     ru.addEventListener("input",()=>{ru.dataset.auto="0";clearTimeout(row._t);row._t=setTimeout(()=>autoTr(row,"ru"),600)});
     de.addEventListener("change",()=>addArticle(de));
+    ["input","scroll","keyup","click","select"].forEach(e=>de.addEventListener(e,()=>paintDe(de)));
   });
   $("#eFlip").onclick=()=>{edCollect();ED.flip=!ED.flip;S.edFlip=ED.flip;save();renderEditor()};
   $("#eAdd").onclick=()=>{edCollect();ED.rows.push(blankRow());renderEditor();const r=document.querySelectorAll("#eRows .er-f input");r[r.length-3].focus()};
@@ -2537,21 +2546,21 @@ async function addArticle(inp){
   if(!m||inp.dataset.noart===v)return;
   const a=await lookupArticle(m[1]);
   if(!a||inp.value.trim()!==v)return;
-  inp.value=a+" "+v;inp.dataset.noart=v;inp.classList.remove("flash");void inp.offsetWidth;inp.classList.add("flash");
+  inp.value=a+" "+v;inp.dataset.noart=v;paintDe(inp);inp.classList.remove("flash");void inp.offsetWidth;inp.classList.add("flash");
 }
 async function autoTr(row,from){
   const src=row.querySelector(from==="de"?".e-de":".e-ru"),dst=row.querySelector(from==="de"?".e-ru":".e-de"),st=row.querySelector(".tr-st"),v=src.value.trim();
-  if(!v){if(dst.dataset.auto==="1"){dst.value="";dst.dataset.auto="0"}st.textContent="";return}
+  if(!v){if(dst.dataset.auto==="1"){dst.value="";dst.dataset.auto="0";paintDe(dst)}st.textContent="";return}
   if(dst.value.trim()&&dst.dataset.auto!=="1")return;
   const seq=(row._seq||0)+1;row._seq=seq;
   const hit=from==="de"?bookDict().de[normDe(v)]:bookDict().ru[normRu(v)];
-  if(hit){dst.value=from==="de"?hit.ru:hit.de;dst.dataset.auto="1";dst.classList.remove("flash");void dst.offsetWidth;dst.classList.add("flash");st.className="tr-st";st.textContent="";return}
+  if(hit){dst.value=from==="de"?hit.ru:hit.de;dst.dataset.auto="1";paintDe(dst);dst.classList.remove("flash");void dst.offsetWidth;dst.classList.add("flash");st.className="tr-st";st.textContent="";return}
   st.className="tr-st";st.textContent="Перевожу…";
   try{
     const j=await api("POST","/translate",{text:from==="de"?cleanDe(v):v,from,to:from==="de"?"ru":"de"});
     if(row._seq!==seq||src.value.trim()!==v)return;
     if(dst.value.trim()&&dst.dataset.auto!=="1"){st.textContent="";return}
-    dst.value=from==="ru"?withArticle(j.text):j.text;dst.dataset.auto="1";dst.classList.remove("flash");void dst.offsetWidth;dst.classList.add("flash");
+    dst.value=from==="ru"?withArticle(j.text):j.text;dst.dataset.auto="1";paintDe(dst);dst.classList.remove("flash");void dst.offsetWidth;dst.classList.add("flash");
     if(from==="ru")addArticle(dst);
     st.className="tr-st";st.textContent="";
   }catch(e){if(row._seq!==seq)return;st.className="tr-st err";st.textContent=e.status===0?"Автоперевод работает, когда сайт открыт через server.py":"Перевод не получился: "+e.message}

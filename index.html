@@ -1421,6 +1421,7 @@ body.focus .app-foot{display:none}
 
 <div class="shell">
   <nav class="nav" id="nav" aria-label="Разделы">
+    <a href="/start" class="nav-hub"><i data-ic="grid"></i>Все модули</a>
     <a href="#" data-tab="home"><i data-ic="home"></i>Главная</a>
     <a href="#" data-tab="learn"><i data-ic="cards"></i>Карточки</a>
     <a href="#" data-tab="practice"><i data-ic="chat"></i>Практика</a>
@@ -1623,6 +1624,7 @@ const IP={
   shift:'<path d="M12 4l8 8h-4v7H8v-7H4z"/>',
   search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
   home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
+  grid:'<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>',
   cards:'<rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/>',
   pencil:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/>',
   list:'<path d="M9 6h12M9 12h12M9 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/>',
@@ -2899,7 +2901,10 @@ function renderAcct(){
         if(reset){j=await api("POST","/reset",{token:resetTok,password:pw.value});resetTok="";authTab="login";adopt(j);toast(LT("🔑 Пароль обновлён","🔑 Password updated"),LT("Ты уже в аккаунте","You are logged in"));go("home");return}
         const body={email:$("#aEmail").value.trim(),password:pw.value};if(reg){body.name=$("#aName").value.trim();body.accept=true}
         j=await api("POST",reg?"/register":"/login",body);adopt(j);if(!reg)toast("👋 Привет, "+j.user.name+"!");
-        if(S.pendingFriend){const c=S.pendingFriend;delete S.pendingFriend;save();addFriend(c)}go("home");if(reg&&!S.tourDone)setTimeout(startTour,350)}
+        if(S.pendingFriend){const c=S.pendingFriend;delete S.pendingFriend;save();await addFriend(c)}
+        // после входа — хаб «Что учим сегодня?» (если не нужно выбирать, чей прогресс оставить)
+        if(!EN&&S.acct===ME.id){await pushProgress();location.href="/start";return}
+        go("home");if(reg&&!S.tourDone)setTimeout(startTour,350)}
       catch(e){err.textContent=e.message;btn.disabled=reg&&!acc.checked}};
     return;
   }

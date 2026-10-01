@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Что учим сегодня? | EPDeutsch</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<script>
+(function(){var d=document.documentElement;try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");if(o.theme)d.setAttribute("data-theme",o.theme);if(o.accent)d.setAttribute("data-accent",o.accent)}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F6F7FB;--panel:#FFFFFF;--panel2:#EDEFF4;--fg:#282E3E;--muted:#586380;--line:#D9DDE8;--line2:#EDEFF4;
+  --primary:#7E6FB8;--primary-h:#6E5FA8;--primary-soft:#EFEBFA;--good:#18AE79;--good-soft:#E3F7EF;--yellow:#FFCD1F;
+  --c-w:#7E6FB8;--c-s:#E8505B;--c-l:#3D7BF7;--c-g:#F28C28;--c-p:#18AE79;
+  --sh:0 .25rem 1rem 0 rgba(40,46,62,.08);--sh-card:0 .6rem 2rem 0 rgba(40,46,62,.16);
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
+  --primary:#8E7FCB;--primary-h:#A092D6;--primary-soft:#3A3160;--good:#3CCFA0;--good-soft:#18423A;
+  --c-w:#A092D6;--c-s:#FF7F87;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
+  --primary:#8E7FCB;--primary-h:#A092D6;--primary-soft:#3A3160;--good:#3CCFA0;--good-soft:#18423A;
+  --c-w:#A092D6;--c-s:#FF7F87;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);min-height:100vh;-webkit-font-smoothing:antialiased}
+.top{display:flex;align-items:center;gap:12px;padding:14px 24px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--fg);text-decoration:none}
+.sp{flex:1}
+.me{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--muted);font-size:14px}
+.uava{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-weight:800;width:34px;height:34px;font-size:15px}
+.out{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.out:hover{color:var(--fg);border-color:var(--muted)}
+main{max-width:1120px;margin:0 auto;padding:24px 24px 64px}
+h1{font-size:clamp(28px,4.4vw,44px);line-height:1.1;margin:18px 0 8px;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:17px;margin:0 0 30px}
+.exam{display:inline-flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line2);border-radius:999px;padding:8px 16px 8px 10px;font-weight:700;font-size:14px;box-shadow:var(--sh);margin-bottom:26px}
+.exam b{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:999px;background:var(--primary);color:#fff;padding:0 8px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{--c:var(--c-w);grid-column:span 2;position:relative;display:flex;flex-direction:column;gap:10px;background:var(--panel);border-radius:24px;padding:24px;box-shadow:var(--sh);color:inherit;text-decoration:none;border:2px solid transparent;overflow:hidden;
+  opacity:0;transform:translateY(18px) scale(.98);animation:in .55s cubic-bezier(.2,.8,.2,1) forwards;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card.big{grid-column:span 3;min-height:250px}
+.card::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:var(--c);opacity:.10;transition:transform .5s}
+a.card:hover{transform:translateY(-4px);box-shadow:var(--sh-card);border-color:var(--c)}
+a.card:hover::after{transform:scale(1.35)}
+.ic{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff}
+.card h2{margin:6px 0 0;font-size:24px;letter-spacing:-.01em}
+.card h2 span{color:var(--c)}
+.card p{margin:0;color:var(--muted);line-height:1.55;font-size:15px}
+.meta{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;padding-top:8px}
+.chip{font-size:13px;font-weight:700;background:var(--panel2);border-radius:999px;padding:6px 12px;color:var(--fg)}
+.go{position:absolute;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s}
+a.card:hover .go{transform:translateX(4px)}
+.soon{cursor:default;opacity:0;filter:saturate(.55)}
+.soon .badge{position:absolute;top:22px;right:22px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--panel2);padding:6px 10px;border-radius:999px;z-index:1}
+.new{position:absolute;top:22px;right:22px;font-size:12px;font-weight:800;color:#fff;background:var(--c);padding:6px 10px;border-radius:999px;z-index:1}
+@keyframes in{to{opacity:1;transform:none}}
+.soon{animation-name:in-soon}
+@keyframes in-soon{to{opacity:.72;transform:none}}
+.note{margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:860px){.grid{grid-template-columns:1fr 1fr}.card,.card.big{grid-column:span 1}.card.big{min-height:0}}
+@media (max-width:560px){.top,main{padding-left:16px;padding-right:16px}.grid{grid-template-columns:1fr}.me span{display:none}}
+@media (prefers-reduced-motion:reduce){.card{animation:none;opacity:1;transform:none}.soon{opacity:.72}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="/start"><svg viewBox="0 0 34 34" width="32" height="32" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--bg)" stroke-width="2.5"/></svg>EPDeutsch</a>
+  <div class="sp"></div>
+  <div class="me" id="me"></div>
+</header>
+<main>
+  <h1 id="hi">Что учим сегодня?</h1>
+  <p class="lead">Один аккаунт на всё. Слова из Wörter помогают в каждом модуле.</p>
+  <div id="exam"></div>
+  <div class="grid" id="grid">
+    <a class="card big" href="/" style="--c:var(--c-w);animation-delay:.05s">
+      <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/></svg></div>
+      <h2><span>EPD</span> Wörter</h2>
+      <p>2000+ слов по темам экзамена, карточки, тесты и «Практика» с ИИ: свои предложения и разговор.</p>
+      <div class="meta" id="mW"></div>
+      <span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card big" href="/schreiben" style="--c:var(--c-s);animation-delay:.12s">
+      <span class="new">Новое</span>
+      <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+      <h2><span>EPD</span> Schreiben</h2>
+      <p>Stellungnahme и Erörterung как на EPD и бонус-тестах VWU. Фразы-заготовки, задания с графиками и проверка ИИ по критериям экзаменатора.</p>
+      <div class="meta" id="mS"></div>
+      <span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <div class="card soon" style="--c:var(--c-l);animation-delay:.19s" aria-disabled="true">
+      <span class="badge">Скоро</span>
+      <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h6a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H21z"/></svg></div>
+      <h2><span>EPD</span> Lesen</h2>
+      <p>Научно-популярные статьи как на экзамене, все 10 типов заданий. Выделил слово — оно уже в карточках.</p>
+    </div>
+    <div class="card soon" style="--c:var(--c-g);animation-delay:.26s" aria-disabled="true">
+      <span class="badge">Скоро</span>
+      <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div>
+      <h2><span>EPD</span> Grammatik</h2>
+      <p>Konjunktiv II, Passiversatz, Partizipien, Nominal- und Verbalstil: всё, что проверяют в бонус-тестах.</p>
+    </div>
+    <div class="card soon" style="--c:var(--c-p);animation-delay:.33s" aria-disabled="true">
+      <span class="badge">Скоро</span>
+      <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4"/></svg></div>
+      <h2><span>EPD</span> Sprechen</h2>
+      <p>Устная часть: монолог по графику или цитате и диалог с экзаменатором-ИИ.</p>
+    </div>
+  </div>
+  <p class="note">Переключиться между модулями можно в любой момент через этот экран.</p>
+</main>
+<script>
+const AV=["#7E6FB8","#8B5CF6","#E8505B","#F28C28","#18AE79","#0EA5B7","#E0A800","#282E3E"];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chip=t=>'<span class="chip">'+t+"</span>";
+function plural(n,a,b,c){const m=n%10,h=n%100;return m===1&&h!==11?a:m>=2&&m<=4&&(h<12||h>14)?b:c}
+async function get(p){const r=await fetch("/api"+p,{credentials:"same-origin"});if(!r.ok)throw new Error(r.status);return r.json()}
+(async()=>{
+  let me;
+  try{me=await get("/me")}catch(e){me=null}
+  if(!me||!me.user){location.replace("/");return}
+  const u=me.user;
+  $("#hi").textContent="Привет, "+u.name.split(" ")[0]+"! Что учим сегодня?";
+  $("#me").innerHTML='<span>'+esc(u.name)+'</span><span class="uava" style="background:'+AV[(+u.avatar||0)%8]+'">'+esc((u.name.trim()[0]||"?").toUpperCase())+'</span><button class="out" id="out">Выйти</button>';
+  $("#out").onclick=async()=>{try{await fetch("/api/logout",{method:"POST",credentials:"same-origin",headers:{"X-USD":"1"}})}catch(e){}try{localStorage.removeItem("epd_authed")}catch(e){}location.href="/"};
+  const pr=me.progress||{};const words=Object.keys(pr.b||{}).length;
+  $("#mW").innerHTML=words?chip(words+" "+plural(words,"слово","слова","слов")+" в работе")+chip("⭐ "+(pr.xp||0)+" XP"):chip("Начни с первой темы");
+  try{
+    const s=await get("/schreiben/state");const n=s.essays.length;const d=(s.data||{});
+    const best=n?Math.max(...s.essays.map(e=>e.points/e.max_points)):0;
+    $("#mS").innerHTML=n?chip(n+" "+plural(n,"текст","текста","текстов")+" проверено")+chip("лучший: "+Math.round(best*100)+" %"):chip("Первое задание ждёт");
+    const ex=d.exam&&d.exam.date;if(ex){const days=Math.ceil((new Date(ex+"T09:00")-Date.now())/864e5);if(days>=0)$("#exam").innerHTML='<div class="exam"><b>'+days+'</b>'+plural(days,"день","дня","дней")+" до "+esc(d.exam.name||"экзамена")+"</div>"}
+  }catch(e){$("#mS").innerHTML=chip("Stellungnahme · Erörterung")}
+})();
+</script>
+</body>
+</html>

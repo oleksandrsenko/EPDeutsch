@@ -189,6 +189,17 @@ BLOCK_RE = re.compile(r"<!--B:(\w+)-->(.*?)<!--/B:\1-->", re.S)
 # Подтверждение прав на сайт в поисковиках: GOOGLE_SITE_VERIFICATION=…, YANDEX_VERIFICATION=…, BING_VERIFICATION=…
 VERIFY = [("google-site-verification", "GOOGLE_SITE_VERIFICATION"), ("yandex-verification", "YANDEX_VERIFICATION"), ("msvalidate.01", "BING_VERIFICATION")]
 STATIC_DIR = os.path.join(ROOT, "static")
+# Модули платформы рядом в ~/EPDeutsch: хаб «Что учим сегодня?» (/start) и EP Schreiben (/schreiben, /api/schreiben/*).
+# Аккаунт, база и ключ ИИ общие. Папку Schreiben можно переопределить переменной SCHREIBEN_DIR.
+HUB_FILE = os.path.join(ROOT, "hub.html")
+SCHREIBEN_DIR = os.environ.get("SCHREIBEN_DIR") or os.path.join(os.path.dirname(ROOT), "EPSchreiben")
+if not os.path.isdir(SCHREIBEN_DIR):  # запуск из рабочей копии агента (.claude/…): папка проектов выше
+    SCHREIBEN_DIR = os.path.join(ROOT.split(os.sep + ".claude" + os.sep)[0], os.pardir, "EPSchreiben")
+SCHREIBEN_DIR = os.path.abspath(SCHREIBEN_DIR)
+schreiben = None
+if os.path.isfile(os.path.join(SCHREIBEN_DIR, "schreiben_api.py")):
+    sys.path.insert(0, SCHREIBEN_DIR)
+    import schreiben_api as schreiben  # noqa: E402
 YEAR = 365 * 86400
 STATIC_FILES = {
     "/robots.txt": "text/plain; charset=utf-8",
@@ -468,6 +479,8 @@ def init_db():
         c.execute("DELETE FROM presence WHERE ts<?", (int(time.time()) - 86400,))
         c.execute("DELETE FROM ai_log WHERE ts<?", (int(time.time()) - 400 * 86400,))
         c.execute("DELETE FROM ai_cache WHERE ts<?", (int(time.time()) - 30 * 86400,))
+        if schreiben:
+            schreiben.init(c)
 
 
 # ---------- аналитика для админки ----------
@@ -1352,7 +1365,47 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path in STATIC_FILES or re.fullmatch(r"/assets/book\.[0-9a-f]{12}\.js", path):
             return self.send_static(path, head)
+        if path == "/assets/book.js":  # словарь Wörter для модулей: всегда на актуальную версию с хэшем
+            self.send_response(302)
+            self.send_header("Location", "/assets/book.%s.js" % load_page()["hash"])
+            self.send_header("Cache-Control", "no-cache")
+            self.end_headers()
+            return
+        if path == "/start":
+            return self.send_file(HUB_FILE, "text/html; charset=utf-8", head)
+        if schreiben and path == "/schreiben":
+            return self.send_file(os.path.join(SCHREIBEN_DIR, "schreiben.html"), "text/html; charset=utf-8", head)
+        m = re.fullmatch(r"/schreiben/data/([a-z_]+)\.json", path)
+        if schreiben and m:
+            return self.send_file(os.path.join(SCHREIBEN_DIR, "data", m.group(1) + ".json"), "application/json; charset=utf-8", head)
         self.send_error(404)
+
+    def send_file(self, fp, ctype, head=False):
+        """Файл модуля с диска: gzip, ETag/304, без долгого кэша (правки видны сразу)."""
+        if not os.path.isfile(fp):
+            return self.send_error(404)
+        with open(fp, "rb") as f:
+            body = f.read()
+        etag = '"%s"' % hashlib.sha1(body).hexdigest()[:20]
+        if self.headers.get("If-None-Match") == etag:
+            self.send_response(304)
+            self.send_header("ETag", etag)
+            self.end_headers()
+            return
+        gz = "gzip" in (self.headers.get("Accept-Encoding") or "") and len(body) > 1024
+        out = gzip_bytes(body) if gz else body
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(out)))
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("ETag", etag)
+        self.send_header("Vary", "Accept-Encoding")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        if gz:
+            self.send_header("Content-Encoding", "gzip")
+        self.end_headers()
+        if not head:
+            self.wfile.write(out)
 
     # ---------- маршруты ----------
     def do_GET(self):
@@ -1661,6 +1714,10 @@ class Handler(BaseHTTPRequestHandler):
                       (word, "de", art))
             return self.send_json(200, {"article": art})
 
+        if schreiben and p.startswith("/schreiben/"):
+            u = self.need_user(c)
+            body = self.read_json() if method in ("POST", "PUT") else {}
+            return self.send_json(200, schreiben.route(sys.modules[__name__], c, u, method, p[len("/schreiben/"):], body))
         if method == "POST" and p == "/practice/check":
             return self.send_json(200, practice_check(c, self.need_user(c), self.read_json()))
 

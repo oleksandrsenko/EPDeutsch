@@ -808,7 +808,7 @@ div.plbl{flex-direction:row;align-items:center;flex-wrap:wrap}
 .au-perks svg{color:var(--link)}
 .au-note{margin:12px 0 0;text-align:center;font-size:12.5px;color:var(--muted)}
 @media (max-width:520px){.au-card{padding:28px 20px 22px;border-radius:22px}.au-h{font-size:23px}.au::before{width:100vw}}
-@media (prefers-reduced-motion:reduce){.au{animation:none}}
+@media (prefers-reduced-motion:reduce){.au,#p-acct .acard,.prof-card>.uava.bump{animation:none}}
 .aerr{color:var(--bad);font-weight:700;font-size:14px;margin:0;min-height:1em}
 .prof-card{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .pc-t{flex:1 1 220px;min-width:0}.pc-t small{overflow:hidden;text-overflow:ellipsis}.pc-t b{display:block;font-size:20px;font-weight:800}.pc-t small{display:block;color:var(--muted);font-weight:600}
@@ -824,8 +824,14 @@ div.plbl{flex-direction:row;align-items:center;flex-wrap:wrap}
 .pc-edit .acc-h{margin:30px 0 12px}
 .pc-edit .pc-news{margin:30px 0 0;align-items:center}
 .pc-edit .pc-news span{padding-top:0}
-.avc{width:36px;height:36px;border-radius:50%;border:3px solid transparent;cursor:pointer;box-shadow:0 0 0 2px var(--panel) inset}
-.avc.on{border-color:var(--fg)}
+.avc{width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;box-shadow:0 0 0 0 var(--panel),0 0 0 0 var(--fg);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.avc:hover{transform:scale(1.1)}
+.avc.on{box-shadow:0 0 0 3px var(--panel),0 0 0 5px var(--fg)}
+.prof-card>.uava{box-shadow:0 0 0 7px color-mix(in srgb,var(--av) 13%,transparent);transition:background .5s ease,box-shadow .5s ease}
+.prof-card>.uava.bump{animation:avb .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes avb{40%{transform:scale(1.07)}}
+#p-acct .acard{animation:acin .5s cubic-bezier(.2,.8,.2,1) both}#p-acct .acard~.acard{animation-delay:.08s}
+@keyframes acin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .fr-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .addf{display:flex;gap:10px;flex-wrap:wrap}
 .addf input{flex:1;min-width:200px;font:inherit;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:14px;padding:10px 14px}
@@ -2789,7 +2795,7 @@ const PW_RULES=[[v=>v.length>=8,"Не короче 8 символов","At least
 let resetTok="",MAIL=false;
 let ME=null,API=null,syncTimer=null,syncAt=0,syncErr="",applying=false,friendsCache=null,lbSort="week_xp",openFriend=null,authTab="reg";
 const ownerTag=u=>u&&u.owner?'<span class="owner" title="Создатель сайта">'+ic("crown",13)+"Owner</span>":"";
-function uava(u,sz){return'<span class="uava" style="background:'+AV[(+u.avatar||0)%8]+";width:"+(sz||32)+"px;height:"+(sz||32)+"px;font-size:"+Math.round((sz||32)*.45)+'px">'+esc(((u.name||"?").trim()[0]||"?").toUpperCase())+"</span>"}
+function uava(u,sz){return'<span class="uava" style="--av:'+AV[(+u.avatar||0)%8]+";background:"+AV[(+u.avatar||0)%8]+";width:"+(sz||32)+"px;height:"+(sz||32)+"px;font-size:"+Math.round((sz||32)*.45)+'px">'+esc(((u.name||"?").trim()[0]||"?").toUpperCase())+"</span>"}
 async function api(method,path,body){
   const r=await fetch("/api"+path,{method,credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:body?JSON.stringify(body):undefined});
   const ct=r.headers.get("Content-Type")||"";if(!ct.includes("json"))throw Object.assign(new Error("Сервер не запущен"),{status:0});
@@ -2843,7 +2849,8 @@ async function handleHash(){
         const u={id:newId(""),name:j.name,desc:j.desc||"",n:j.cards.length,cards:j.cards.map((c,i)=>({k:i,de:c.de,ru:c.ru,ex:c.ex||""}))};
         S.usets=(S.usets||[]).concat(u);save();rebuildUser();renderListSel();renderFolders();checkAch();openSec("u:"+u.id);toast("📥 Набор добавлен в «Мои наборы»")},"Добавить себе")
     }catch(e){toast("⚠️ "+e.message)}return}
-  if(k==="acct"){go("acct");return} // аватар из других модулей (Schreiben) ведёт сюда, в профиль
+  if(k==="acct"){go("acct");return}
+  if(k==="admin"){if(isAdmin())go("admin");return} // аватар из других модулей (Schreiben) ведёт сюда, в профиль
   if(k==="verify"&&v){try{await api("POST","/verify",{token:v});if(ME){ME.verified=true;if(curTab==="home")renderHome()}toast("✅ Почта подтверждена","Спасибо! Теперь аккаунт защищён")}catch(e){toast("⚠️ "+e.message)}return}
   if(k==="reset"&&v){if(ME)return toast(LT("Ты уже в аккаунте","You are already logged in"));resetTok=v;authTab="reset";go("acct");return}
   if(k==="friend"&&v){if(!ME){S.pendingFriend=v;save();go("acct");return toast("Войди или зарегистрируйся, и друг добавится сам")}addFriend(v)}
@@ -2925,7 +2932,9 @@ function renderAcct(){
     '<div class="pc-edit"><label class="aform" style="max-width:420px">Имя<input type="text" id="pName" maxlength="40" value="'+esc(ME.name)+'"></label><p class="acc-h">Цвет аватара</p><div class="avs">'+AV.map((c,i)=>'<button class="avc'+(+ME.avatar===i?" on":"")+'" data-av="'+i+'" style="background:'+c+'" aria-label="Цвет '+(i+1)+'"></button>').join("")+'</div><label class="acheck pc-news"><input type="checkbox" id="pNews"'+(ME.news?" checked":"")+'><span>Присылать мне напоминания, новости платформы и советы по подготовке к EPD</span></label><button class="btn primary" id="pSave">Сохранить профиль</button></div></div>'+
     '<a href="#" class="acard acc-link" data-tab="plan">'+ic("calendar",20)+"<span><b>"+(S.plan?"Мой план":"Составить личный план")+"</b><small>"+(S.plan?"Что учить сегодня и до экзамена":"Укажи дату экзамена, и расписание построится само")+"</small></span>"+ic("chev",18)+"</a>";
   let av=+ME.avatar;
-  el.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{av=+b.dataset.av;el.querySelectorAll("[data-av]").forEach(x=>x.classList.toggle("on",x===b))});
+  const big=el.querySelector(".prof-card>.uava");
+  el.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{av=+b.dataset.av;el.querySelectorAll("[data-av]").forEach(x=>x.classList.toggle("on",x===b));
+    big.style.background=AV[av];big.style.setProperty("--av",AV[av]);big.classList.remove("bump");void big.offsetWidth;big.classList.add("bump")}); // аватар сразу показывает выбранный цвет
   $("#pSave").onclick=async()=>{try{const j=await api("PATCH","/profile",{name:$("#pName").value.trim(),avatar:av,news:$("#pNews").checked});ME=j.user;renderAcctBtn();renderAcct();toast("✅ Профиль сохранён")}catch(e){toast("⚠️ "+e.message)}};
   $("#syncBtn").onclick=async()=>{await pushProgress();toast(syncErr?"⚠️ "+syncErr:"☁️ Прогресс синхронизирован")};
   el.insertAdjacentHTML("beforeend",'<details class="danger-z"><summary>Удалить аккаунт</summary><div class="acard"><p style="margin-top:0" class="muted">Аккаунт и все данные (прогресс, статистика, свои наборы, друзья и общие ссылки) будут удалены навсегда. Отменить это нельзя.</p><button class="btn danger" id="delAcct">'+ic("trash",16)+"Удалить аккаунт</button></div></details>");

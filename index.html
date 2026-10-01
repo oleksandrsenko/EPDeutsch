@@ -316,6 +316,10 @@ body.at-home #dueBtn{display:none}
 .rc-go svg{transform:rotate(-90deg);transition:transform .18s}
 .rc-open:hover .rc-go svg{transform:rotate(-90deg) translateY(3px)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.scw{position:relative;display:flex;min-width:0}.scw>.setcard{flex:1;min-width:0}.scw .sc-t{padding-right:30px}
+.sc-pin{position:absolute;top:10px;right:10px;z-index:1;width:36px;height:36px;display:grid;place-items:center;border:0;border-radius:50%;background:none;color:var(--muted);opacity:.55;cursor:pointer;transition:opacity .15s,color .15s,transform .15s}
+.sc-pin:hover,.sc-pin:focus-visible{opacity:1}.sc-pin:active{transform:scale(.9)}.sc-pin.on{opacity:1;color:#f5b400}.sc-pin.on svg{fill:currentColor}
+.grid.fav{margin-bottom:8px}
 .setcard{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;background:var(--panel);border:0;border-radius:var(--r);padding:18px 18px 14px;cursor:pointer;box-shadow:var(--sh);position:relative;min-height:160px;transition:transform .18s,box-shadow .18s}
 .setcard:hover{transform:translateY(-4px);box-shadow:var(--sh-card)}
 .sc-t{font-weight:800;font-size:16px;line-height:1.3}
@@ -1656,6 +1660,7 @@ const IP={
   focus:'<path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4"/><circle cx="12" cy="12" r="2.5"/>',
   key:'<circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3L20 3M16 7l3 3M14 9l2 2"/>',
   lock:'<rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+  star:'<path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/>',
   mail:'<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/>'
 };
 const ic=(n,s)=>'<svg viewBox="0 0 24 24" width="'+(s||20)+'" height="'+(s||20)+'" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IP[n]+"</svg>";
@@ -1711,7 +1716,7 @@ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random
 
 // ---------- хранилище ----------
 const KEY="usd3-v1";
-const DEF=()=>({v:1,b:{},sel:["1.1/s1"],mode:"de",tr:{},gr:{},own:[],theme:"",recent:[],folders:[],usets:[],hidden:["c1","c2","c3","c4","c5","c6"],minGoal:30,voice:"",rate:.95,
+const DEF=()=>({v:1,b:{},sel:["1.1/s1"],mode:"de",tr:{},gr:{},own:[],theme:"",recent:[],folders:[],usets:[],pins:[],hidden:["c1","c2","c3","c4","c5","c6"],minGoal:30,voice:"",rate:.95,
   ms:{},l:{},pw:{},days:{},xp:0,ach:{},goal:20,bestStreak:0,bestCombo:0,rounds:0,perfect:0,navFold:false,openF:null});
 let S=DEF();
 try{const o=JSON.parse(localStorage.getItem(KEY)||"null");if(o&&o.v===1)S=Object.assign(S,o)}catch(e){}
@@ -1883,7 +1888,7 @@ function renderFolders(){
 }
 $("#foldTog").onclick=()=>{S.navFold=!S.navFold;save();renderFolders()};
 // моя библиотека: разделы в папках на главной + свои наборы
-function libSecs(){const ids=new Set();allFolders().forEach(f=>{if(!isHidden(f.id))f.secs.forEach(id=>ids.add(id))});USER.forEach(x=>ids.add(x.id));return[...ids].filter(id=>SECS[id])}
+function libSecs(){const ids=new Set(S.pins||[]);allFolders().forEach(f=>{if(!isHidden(f.id))f.secs.forEach(id=>ids.add(id))});USER.forEach(x=>ids.add(x.id));return[...ids].filter(id=>SECS[id])}
 function libCards(){const L=new Set(libSecs());return CARDS.filter(c=>L.has(c.sec))}
 function libSec(){const L=libSecs();return L.includes(curSec)?curSec:L[0]}
 function renderTotals(){
@@ -1896,9 +1901,12 @@ function renderTotals(){
 }
 
 // ---------- главная ----------
+// избранное: отдельные наборы прямо на главной, без папки
+const isPin=id=>(S.pins||[]).includes(id);
+function pins(){return(S.pins||[]).filter(id=>SECS[id])}
 function setCard(sec){
-  const[k,n]=cntSec(sec);
-  return'<button class="setcard" data-open="'+esc(sec.id)+'"><span class="sc-t">'+esc(secName(sec))+'</span><span class="sc-s">'+esc(sec.titleRu)+'</span><span class="pill">'+terms(n)+'</span><span class="sc-bar" style="margin-top:14px"><i style="width:'+(n?k/n*100:0)+'%"></i></span><span class="sc-f"><span class="ava">'+(sec.verbs?"V":sec.user?"★":sec.chapter)+"</span>"+k+" из "+n+" выучено</span></button>";
+  const[k,n]=cntSec(sec),p=isPin(sec.id),pt=p?"Убрать из избранного":"В избранное на главную";
+  return'<div class="scw"><button class="sc-pin'+(p?" on":"")+'" data-pin="'+esc(sec.id)+'" aria-pressed="'+p+'" title="'+pt+'" aria-label="'+pt+'">'+ic("star",20)+'</button><button class="setcard" data-open="'+esc(sec.id)+'"><span class="sc-t">'+esc(secName(sec))+'</span><span class="sc-s">'+esc(sec.titleRu)+'</span><span class="pill">'+terms(n)+'</span><span class="sc-bar" style="margin-top:14px"><i style="width:'+(n?k/n*100:0)+'%"></i></span><span class="sc-f"><span class="ava">'+(sec.verbs?"V":sec.user?"★":sec.chapter)+"</span>"+k+" из "+n+" выучено</span></button></div>";
 }
 // фиолетовая подсказка-совет: один «показ» висит, пока его не закроют (или час), новый — не чаще раза в 2 часа, до 3 в день
 const TIP_MAX=3,TIP_GAP=2*36e5,TIP_LIFE=36e5;
@@ -1968,6 +1976,8 @@ function homeFolders(empty){
     h+='<h2 class="h-sec">Недавние</h2><div class="recent">'+recent.map(id=>{const s=SECS[id],[a,b]=cntSec(s);
       return'<div class="rc"><button class="rc-open" data-open="'+esc(id)+'"><span class="ric">'+ic("cards")+"</span><span><b>"+esc(secName(s))+"</b><small>"+terms(b)+" · выучено "+a+'</small><span class="rc-bar"><i style="width:'+(b?Math.round(a/b*100):0)+'%"></i></span></span><span class="rc-go" title="Продолжить">'+ic("chev",20)+'</span></button><button class="ib" data-unrecent="'+esc(id)+'" title="Убрать из недавних" aria-label="Убрать из недавних">'+ic("x",16)+"</button></div>"}).join("")+"</div>";
   }
+  const pn=pins();
+  if(pn.length)h+='<h2 class="h-sec">'+ic("star")+"Избранное<small>"+pn.length+" "+plural(pn.length,"набор","набора","наборов")+'</small></h2><div class="grid fav">'+pn.map(id=>setCard(SECS[id])).join("")+"</div>";
   const fs=allFolders(),vis=fs.filter(f=>!isHidden(f.id));
   h+='<h2 class="h-sec">'+ic("folder")+'Папки<span class="h-act"><button class="chip" data-newfolder>'+ic("plus",16)+'Папка</button><button class="chip" data-new>'+ic("plus",16)+"Набор</button></span></h2>";
   h+='<div class="frows">'+vis.map(f=>{const[a,b]=folderCnt(f),op=isOpen(f.id),nn=f.secs.length;
@@ -3719,6 +3729,8 @@ document.addEventListener("click",e=>{
   if(!e.target.closest("#p-land")){if(e.target.closest("[data-reg]")){e.preventDefault();authTab="reg";go("acct");return}if(e.target.closest("[data-login]")){e.preventDefault();authTab="login";go("acct");return}}
   const tab=e.target.closest("[data-tab]");if(tab){e.preventDefault();go(tab.dataset.tab);return}
   const ur=e.target.closest("[data-unrecent]");if(ur){S.recent=(S.recent||[]).filter(x=>x!==ur.dataset.unrecent);save();renderHome();return}
+  const pi=e.target.closest("[data-pin]");if(pi){const id=pi.dataset.pin,on=!isPin(id);S.pins=on?pins().concat(id):pins().filter(x=>x!==id);save();homeAnim=false;renderAll();
+    toast(on?"⭐ Набор в избранном":"Убрано из избранного",on?"«"+secName(SECS[id])+"» теперь наверху главной. Папку можно удалить, набор останется":"");return}
   const op=e.target.closest("[data-open]");if(op){openSec(op.dataset.open);return}
   if(e.target.closest("[data-due]")){startDue();return}
   const f=e.target.closest("[data-folder]");if(f){openFolder(f.dataset.folder);return}

@@ -952,11 +952,8 @@ body.guest .tright{margin-left:auto}
 }
 @media (max-width:380px){.grid{grid-template-columns:1fr}.streak{padding:6px 8px;font-size:14px}}
 body.focus .tabbar{display:none!important}
-/* ---------- Практика: свои предложения и разговор с ИИ ---------- */
+/* ---------- Практика: свои предложения с проверкой ИИ ---------- */
 .prx .pr-sub{margin:0 0 16px;color:var(--muted)}
-.prx .seg{margin-bottom:16px}
-.prx .seg button{display:inline-flex;align-items:center;gap:7px}
-.pr-soon{display:inline-block;background:var(--yellow);color:#282E3E;font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.02em}
 .pr-word{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .pr-word small{color:var(--muted);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
 .pr-word b{display:block;font-size:24px;font-weight:800;letter-spacing:-.01em;margin:4px 0 2px}
@@ -983,27 +980,7 @@ body.focus .tabbar{display:none!important}
 .pr-tip{margin:10px 0 0;line-height:1.5}
 .pr-foot{justify-content:space-between;margin-top:14px;gap:10px;flex-wrap:wrap;display:flex;align-items:center}.pr-foot .muted{font-size:13px;flex:1 1 220px}
 .pr-ph{display:inline-block;height:10px;border-radius:6px;background:var(--panel2);vertical-align:middle}
-.pr-topics{margin-bottom:14px}
-.pr-lbl{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
-.pr-topics .chip[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft);color:var(--link)}
-.pr-chat{display:flex;flex-direction:column;gap:10px;min-height:220px;max-height:52vh;overflow-y:auto;padding:4px 2px 8px}
-.pr-msg{max-width:82%;padding:10px 14px;border-radius:18px;line-height:1.5;font-size:15px;position:relative}
-.pr-msg.ai{align-self:flex-start;background:var(--panel2);border-bottom-left-radius:6px}
-.pr-msg.me{align-self:flex-end;background:var(--primary);color:var(--on-primary);border-bottom-right-radius:6px}
-.pr-msg .who{display:block;font-size:11.5px;font-weight:800;opacity:.7;margin-bottom:2px}
-.pr-msg .say{border:0;background:none;color:inherit;cursor:pointer;padding:0 0 0 6px;vertical-align:middle;opacity:.7}
-.pr-msg .say svg{width:16px;height:16px}
-.pr-talk{display:flex;align-items:center;gap:10px;margin-top:10px}
-.pr-talk input{flex:1;min-width:0}
-.pr-mic{flex:none;width:64px;height:64px;border-radius:50%;border:0;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -8px rgba(var(--acc-rgb,126,111,184),.8)}
-.pr-mic svg{width:28px;height:28px}
-.pr-mic:hover{background:var(--primary-h)}
-.pr-send{flex:none}
-.pr-how{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
-.pr-how div{background:var(--panel2);border-radius:var(--r-sm);padding:12px}
-.pr-how b{display:block;font-size:14px;margin-bottom:4px}
-.pr-how small{color:var(--muted);line-height:1.45;display:block}
-@media (max-width:640px){.pr-topics{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-16px;padding-right:16px}.pr-topics::-webkit-scrollbar{display:none}.pr-topics .chip{flex:none;white-space:nowrap}.pr-how{grid-template-columns:1fr}.pr-word b{font-size:21px}.pr-msg{max-width:90%}.pr-mic{width:56px;height:56px}}
+@media (max-width:640px){.pr-word b{font-size:21px}}
 
 /* ---------- переключатель языка, гид по EPD, блок «как готовиться» ---------- */
 .langsw{display:none;align-items:center;justify-content:center;height:36px;min-width:40px;padding:0 10px;border-radius:999px;font-weight:800;font-size:13px;color:var(--muted);text-decoration:none;border:2px solid var(--line2)}
@@ -3633,10 +3610,9 @@ document.addEventListener("click",e=>{
   const ur=e.target.closest("[data-admuser]");if(ur&&curTab==="admin"&&!e.target.closest("#dlg")){admUser(+ur.dataset.admuser)}
 });
 
-// ---------- практика: свои предложения и разговор с ИИ ----------
-// Пока заглушка: интерфейс готов, проверка и ответы ИИ появятся, когда подключим сервер (/api/practice/*).
-// Схема: «Пиши» — LanguageTool + Claude Haiku, «Разговор» — распознавание речи в облаке + Haiku + озвучка браузером.
-let prMode="",prFmt="",prWord=null,prTopic=null,prChat=[];
+// ---------- практика: свои предложения, проверка — LanguageTool + Claude Haiku (/api/practice/check) ----------
+// Разговор с ИИ отсюда убран: устная часть будет в отдельном модуле EPD Sprechen.
+let prWord=null;
 // Слова для «Пиши» — выученные в карточках. Каждое слово после практики возвращается через растущий интервал,
 // так что старые слова время от времени снова попадаются вперемешку с новыми. S.pw[id]=[день практики, сколько раз]
 const PR_INT=[0,2,5,12,30,60];
@@ -3663,12 +3639,8 @@ function prTag(c){const r=prRec(c.id);
   const d=today()-r[0];return"Повторение · практиковал "+(d<1?"сегодня":d+" "+plural(d,"день","дня","дней")+" назад")}
 function renderPractice(){
   const el=$("#p-practice");
-  if(!prMode)prMode=lsGet("epd_prac")==="talk"?"talk":"write";
-  el.innerHTML='<h1>Практика</h1><p class="pr-sub">Здесь ты сам пишешь и говоришь по-немецки, а ИИ проверяет и объясняет ошибки по-русски.</p>'+
-    '<div class="seg" id="prSeg"><button data-pr="write" aria-pressed="'+(prMode==="write")+'">'+ic("pencil",16)+'Пиши предложения</button><button data-pr="talk" aria-pressed="'+(prMode==="talk")+'">'+ic("mic",16)+"Разговор с ИИ</button></div>"+
-    '<div id="prBody"></div>';
-  el.querySelectorAll("[data-pr]").forEach(b=>b.onclick=()=>{prMode=b.dataset.pr;lsSet("epd_prac",prMode);renderPractice()});
-  prMode==="talk"?prTalk():prWrite();
+  el.innerHTML='<h1>Практика</h1><p class="pr-sub">Пиши свои предложения с выученными словами, а ИИ проверит их и объяснит ошибки по-русски.</p><div id="prBody"></div>';
+  prWrite();
 }
 function prWrite(){
   if(!prWord||!prCards().includes(prWord))prWord=prPick();
@@ -3719,37 +3691,6 @@ function prResult(t,r,c){
     (r.tip?'<p class="pr-tip">💡 '+esc(r.tip)+"</p>":"")+
     '<div class="row pr-foot"><span class="muted">'+(r.demo?"Тестовый режим: проверил только LanguageTool, объяснения на немецком. С ключом Claude будут объяснения по-русски и проверка слова.":"⌘ или Ctrl + Enter — проверить быстрее")+'</span><button class="btn sm primary" id="prNext2">Следующее слово →</button></div></div>';
 }
-// Форматы устной части EPD: презентация, обсуждение, ответы на вопросы. Плюс свободный разговор для разминки.
-const PR_FMT=[
-  ["chat","Свободный разговор",T=>"Hallo! Heute sprechen wir über das Thema „"+T+"“. Was ist für dich persönlich dabei am wichtigsten?"],
-  ["pres","Презентация",T=>"Bitte halten Sie eine kurze Präsentation zum Thema „"+T+"“, etwa zwei bis drei Minuten. Gliedern Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss. Sie können beginnen."],
-  ["disc","Дискуссия",T=>"Diskutieren wir über das Thema „"+T+"“. Ich vertrete die Gegenposition. Sagen Sie zuerst Ihre Meinung und begründen Sie sie."],
-  ["ques","Вопросы экзаменатора",T=>"Ich stelle Ihnen einige Fragen zum Thema „"+T+"“. Erste Frage: Welche Rolle spielt dieses Thema in Ihrem Heimatland?"]
-];
-function prTalk(){
-  if(!prFmt)prFmt=PR_FMT.some(f=>f[0]===lsGet("epd_pracf"))?lsGet("epd_pracf"):"chat";
-  const secs=libSecs().map(id=>SECS[id]).filter(s=>!s.user&&!s.verbs);
-  if(!prTopic||!secs.includes(SECS[prTopic]))prTopic=(secs.find(s=>s.id===curSec)||secs[0]||{}).id||null;
-  const T=SECS[prTopic],F=PR_FMT.find(f=>f[0]===prFmt),b=$("#prBody");
-  if(!T){b.innerHTML='<div class="acard"><p style="margin-top:0">Чтобы начать разговор, добавь главы учебника на главной: темы разговора берутся из них.</p><button class="btn primary" data-tab="home">На главную</button></div>';return}
-  const key=prFmt+"|"+prTopic;
-  if(!prChat.length||prChat.key!==key){prChat=[{ai:1,t:F[2](T.title)}];prChat.key=key}
-  b.innerHTML='<div class="pr-lbl">Формат устной части EPD</div><div class="chips pr-topics" id="prFmts">'+PR_FMT.map(f=>'<button class="chip" data-prf="'+f[0]+'" aria-pressed="'+(f[0]===prFmt)+'">'+f[1]+"</button>").join("")+"</div>"+
-    '<div class="pr-lbl">Тема из учебника</div><div class="chips pr-topics" id="prTopics">'+secs.map(s=>'<button class="chip" data-prt="'+s.id+'" aria-pressed="'+(s.id===prTopic)+'">'+esc(secName(s))+"</button>").join("")+"</div>"+
-    '<div class="acard"><div class="pr-chat" id="prChat">'+prChat.map(m=>'<div class="pr-msg '+(m.ai?"ai":"me")+'"><span class="who">'+(m.ai?"Экзаменатор":"Ты")+"</span>"+esc(m.t)+
-      (m.ai?'<button class="say" data-prsay="'+esc(m.t)+'" aria-label="Озвучить">'+ic("speaker",16)+"</button>":"")+"</div>").join("")+"</div>"+
-    '<form class="pr-talk" id="prTalkF"><button type="button" class="pr-mic" id="prMic" aria-label="Говорить">'+ic("mic",28)+'</button><input type="text" id="prMsg" maxlength="300" placeholder="Ответь по-немецки…" autocomplete="off" lang="de"><button class="btn primary pr-send" type="submit" aria-label="Отправить">'+ic("send",16)+"</button></form></div>"+
-    '<div class="acard"><h3 style="margin:0 0 4px">Разбор после разговора<span class="pr-soon">скоро</span></h3><p class="muted" style="margin:0 0 10px">Когда закончишь, ИИ покажет:</p>'+
-      '<div class="pr-how"><div><b>3 главные ошибки</b><small>с исправлением и объяснением по-русски</small></div><div><b>Слова из темы</b><small>которые стоило использовать в ответах</small></div><div><b>Оценка</b><small>беглость, грамматика и словарный запас</small></div></div></div>';
-  const chatEl=$("#prChat");chatEl.scrollTop=chatEl.scrollHeight;
-  b.querySelectorAll("[data-prf]").forEach(x=>x.onclick=()=>{prFmt=x.dataset.prf;lsSet("epd_pracf",prFmt);prTalk()});
-  b.querySelectorAll("[data-prt]").forEach(x=>x.onclick=()=>{prTopic=x.dataset.prt;prTalk()});
-  b.querySelectorAll("[data-prsay]").forEach(x=>x.onclick=()=>speak(x.dataset.prsay));
-  $("#prMic").onclick=()=>toast("🎙️ Голосовой разговор скоро заработает","Пока можно написать ответ текстом");
-  $("#prTalkF").onsubmit=ev=>{ev.preventDefault();const t=$("#prMsg").value.trim();if(!t)return;
-    prChat.push({t},{ai:1,t:"(Здесь ответит ИИ-экзаменатор. Разговор пока не подключён.)"});prTalk();$("#prMsg").focus()};
-}
-
 // ---------- навигация ----------
 const TABS=["home","learn","practice","list","plan","prog","edit","acct","friends","land","legal","admin","guide"];
 let curTab="";

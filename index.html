@@ -95,6 +95,8 @@
 // отрисован (прокрутка после обновления сохраняется); bootacc — у тех, кто уже входил: им сначала нужен аккаунт
 (function(){var d=document.documentElement;d.classList.add("boot");
 try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}"),a=localStorage.getItem("epd_authed");
+// кто уже вошёл и открывает сайт с главной, сначала попадает на экран модулей (/start); оттуда в Wörter уже без переброса
+if(a&&location.pathname==="/"&&!location.search&&!location.hash&&!sessionStorage.getItem("ep_hub")){location.replace("/start");return}
 if(o.theme)d.setAttribute("data-theme",o.theme);if(o.accent)d.setAttribute("data-accent",o.accent);
 if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc");if(a&&o.navHide)d.classList.add("bootnav")}catch(e){}})();
 </script>
@@ -2900,12 +2902,15 @@ function renderAcct(){
         let j;
         if(reset){j=await api("POST","/reset",{token:resetTok,password:pw.value});resetTok="";authTab="login";adopt(j);toast(LT("🔑 Пароль обновлён","🔑 Password updated"),LT("Ты уже в аккаунте","You are logged in"));go("home");return}
         const body={email:$("#aEmail").value.trim(),password:pw.value};if(reg){body.name=$("#aName").value.trim();body.accept=true}
-        j=await api("POST",reg?"/register":"/login",body);adopt(j);if(!reg)toast("👋 Привет, "+j.user.name+"!");
+        // сразу после нажатия — экран загрузки, а после входа — экран модулей (/start), где всё уже прогружено
+        const toHub=!EN;if(toHub)document.documentElement.classList.add("boot");
+        j=await api("POST",reg?"/register":"/login",body);adopt(j);
         if(S.pendingFriend){const c=S.pendingFriend;delete S.pendingFriend;save();await addFriend(c)}
-        // после входа — хаб «Что учим сегодня?» (если не нужно выбирать, чей прогресс оставить)
-        if(!EN&&S.acct===ME.id){await pushProgress();location.href="/start";return}
+        if(toHub&&S.acct===ME.id){await pushProgress();location.href="/start";return}
+        document.documentElement.classList.remove("boot"); // нужно выбрать, чей прогресс оставить, — остаёмся здесь
+        if(!reg)toast("👋 Привет, "+j.user.name+"!");
         go("home");if(reg&&!S.tourDone)setTimeout(startTour,350)}
-      catch(e){err.textContent=e.message;btn.disabled=reg&&!acc.checked}};
+      catch(e){document.documentElement.classList.remove("boot");err.textContent=e.message;btn.disabled=reg&&!acc.checked}};
     return;
   }
   el.innerHTML='<h1>Аккаунт</h1><div class="acard"><div class="prof-card">'+uava(ME,72)+'<div class="pc-t"><b>'+esc(ME.name)+ownerTag(ME)+"</b><small>"+esc(ME.email)+'</small><small>Код друга: <b class="fcode">'+esc(ME.code)+'</b></small></div><div class="pc-act">'+(isAdmin()?'<button class="btn sm primary" data-tab="admin">'+ic("shield",16)+"Админ-панель</button>":"")+'<button class="btn sm" id="syncBtn" title="Сохранить прогресс в аккаунт сейчас">'+ic("refresh",16)+'Синхронизировать</button><button class="btn sm" id="logoutBtn">'+ic("logout",16)+"Выйти</button></div></div>"+

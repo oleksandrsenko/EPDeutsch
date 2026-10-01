@@ -953,6 +953,35 @@ body.guest .tright{margin-left:auto}
 @media (max-width:380px){.grid{grid-template-columns:1fr}.streak{padding:6px 8px;font-size:14px}}
 body.focus .tabbar{display:none!important}
 /* ---------- Практика: свои предложения с проверкой ИИ ---------- */
+.pr-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.pr-hist{position:sticky;top:86px;max-height:calc(100vh - 106px);overflow:auto;background:var(--panel);border-radius:var(--r);box-shadow:var(--sh);padding:16px;scrollbar-width:thin}
+.ph-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.plan .ph-h h2{margin:0;font-size:16px;display:flex;align-items:center;gap:8px}.ph-h h2 svg{color:var(--link)}
+.ph-h small{background:var(--primary-soft);color:var(--link);font-weight:800;font-size:12px;border-radius:999px;padding:2px 9px}
+.ph-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
+.ph-sum div{background:var(--panel2);border-radius:12px;padding:8px 6px;text-align:center}
+.ph-sum b{display:block;font-size:17px;font-weight:800;font-variant-numeric:tabular-nums}.ph-sum small{display:block;font-size:11px;color:var(--muted);font-weight:600;line-height:1.25}
+.ph-f{margin:0 0 6px;width:100%}.ph-f button{flex:1;font-size:12.5px;padding:6px 6px;white-space:nowrap}
+.ph-day{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 2px 6px}
+.ph-it{border-radius:14px;border:1.5px solid var(--line2);border-left:4px solid var(--mid);margin-bottom:8px;background:var(--panel)}
+.ph-it.v-good{border-left-color:var(--good)}.ph-it.v-bad{border-left-color:var(--bad)}
+.ph-it summary{list-style:none;cursor:pointer;padding:9px 11px;display:flex;flex-direction:column;gap:4px;border-radius:12px}
+.ph-it summary::-webkit-details-marker{display:none}
+.ph-it summary:hover{background:var(--hover)}
+.ph-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.ph-top b{font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-top .pr-score i{width:7px;height:7px}
+.ph-txt{font-size:13.5px;line-height:1.5;color:var(--fg)}
+.ph-meta{font-size:11.5px;color:var(--muted);font-weight:600}
+.ph-it mark{border-radius:5px;padding:0 3px;color:inherit}.ph-it mark.m-bad{background:var(--bad-soft);text-decoration:line-through;text-decoration-color:var(--bad)}.ph-it mark.m-good{background:var(--good-soft);font-weight:700}
+.ph-body{padding:0 11px 11px;font-size:13.5px}
+.ph-body .fix{background:var(--good-soft);border-radius:10px;padding:8px 10px;margin:2px 0 8px;font-weight:600;line-height:1.5}
+.ph-body .pr-errs li{padding:6px 0}.ph-body .pr-errs span{font-size:13px}
+.ph-body .pr-wordnote,.ph-body .pr-tip{font-size:13px;margin:8px 0}
+.ph-body .btn{margin-top:6px}
+.ph-more{width:100%;justify-content:center;margin-top:4px}
+.ph-none{font-size:13.5px;margin:12px 2px}
+.ph-empty{display:flex;flex-direction:column;gap:6px;text-align:center;padding:22px 8px;color:var(--muted);font-size:13.5px;line-height:1.5}.ph-empty b{color:var(--fg);font-size:15px}
+@media (max-width:1180px){.pr-grid{grid-template-columns:minmax(0,1fr)}.pr-hist{position:static;max-height:none}}
 .prx .pr-sub{margin:0 0 16px;color:var(--muted)}
 .pr-word{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .pr-word small{color:var(--muted);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
@@ -3642,8 +3671,10 @@ function prTag(c){const r=prRec(c.id);
   const d=today()-r[0];return"Повторение · практиковал "+(d<1?"сегодня":d+" "+plural(d,"день","дня","дней")+" назад")}
 function renderPractice(){
   const el=$("#p-practice");
-  el.innerHTML='<h1>Практика</h1><p class="pr-sub">Пиши свои предложения с выученными словами, а ИИ проверит их и объяснит ошибки по-русски.</p><div id="prBody"></div>';
-  prWrite();
+  el.classList.add("wide");
+  el.innerHTML='<div class="pr-grid"><div class="pr-main"><h1>Практика</h1><p class="pr-sub">Пиши свои предложения с выученными словами, а ИИ проверит их и объяснит ошибки по-русски.</p><div id="prBody"></div></div>'+
+    '<aside class="pr-hist" id="prHist" aria-label="История ответов"></aside></div>';
+  prWrite();prHist();
 }
 function prWrite(){
   if(!prWord||!prCards().includes(prWord))prWord=prPick();
@@ -3674,7 +3705,7 @@ function prWrite(){
     catch(e){toast("⚠️ "+e.message);return}
     finally{go_.disabled=false;go_.innerHTML=idle}
     if(prWord!==c)return; // пока ждали ответ, ученик взял другое слово
-    prDone(c);
+    prDone(c);prSave(t,r,c);prHist();
     $("#prRes").innerHTML=prResult(t,r,c);
     $("#prRes [data-prsay]").onclick=()=>speak(r.corrected);
     $("#prNext2").onclick=()=>{prWord=prPick();prWrite();window.scrollTo(0,0)};
@@ -3686,6 +3717,43 @@ function prMark(text,frags,cls){
   spans.sort((a,b)=>a[0]-b[0]);let out="",p=0;
   spans.forEach(s=>{out+=esc(text.slice(p,s[0]))+'<mark class="'+cls+'">'+esc(text.slice(s[0],s[1]))+"</mark>";p=s[1]});
   return out+esc(text.slice(p));
+}
+
+// ---------- история ответов в практике: S.ph — последние 200 проверок, синхронизируются с аккаунтом ----------
+const PH_MAX=200;let phF="all",phN=20;
+function prSave(t,r,c){
+  if(!S.ph)S.ph=[];
+  S.ph.unshift({t:Date.now(),id:c.id,de:prDe(c),ru:c.ru,x:t,c:r.corrected,v:r.verdict,s:r.score,w:r.word_ok,wn:r.word_note||"",tip:r.tip||"",
+    e:(r.errors||[]).map(e=>({w:e.wrong||"",r:e.right||"",y:e.why||""})),d:r.demo?1:0});
+  if(S.ph.length>PH_MAX)S.ph.length=PH_MAX;save();
+}
+const phDay=ts=>Math.floor((ts-new Date(ts).getTimezoneOffset()*60000)/864e5);
+const phHM=ts=>{const x=new Date(ts);return String(x.getHours()).padStart(2,"0")+":"+String(x.getMinutes()).padStart(2,"0")};
+const phBad=h=>h.v!=="ok"||(h.e||[]).length>0;
+function prHist(){
+  const el=$("#prHist");if(!el)return;const all=(S.ph||[]).slice().sort((a,b)=>b.t-a.t);
+  if(!all.length){el.innerHTML='<div class="ph-h"><h2>'+ic("chart",18)+'История ответов</h2></div><div class="ph-empty"><b>Пока пусто</b><span>Каждое проверенное предложение попадёт сюда: твой вариант, исправление и объяснение. Потом удобно вернуться и разобрать ошибки.</span></div>';return}
+  const ok=all.filter(h=>!phBad(h)).length,avg=all.reduce((a,h)=>a+(h.s||0),0)/all.length,ww=all.filter(h=>h.w===false).length;
+  const list=all.filter(h=>phF==="err"?phBad(h):phF==="word"?h.w===false:true),show=list.slice(0,phN);
+  let h='<div class="ph-h"><h2>'+ic("chart",18)+'История ответов</h2><small>'+all.length+"</small></div>"+
+    '<div class="ph-sum"><div><b>'+Math.round(ok/all.length*100)+'%</b><small>без ошибок</small></div><div><b>'+avg.toFixed(1).replace(".",",")+'</b><small>средняя оценка</small></div><div><b>'+ww+'</b><small>'+plural(ww,"слово","слова","слов")+" не к месту</small></div></div>"+
+    '<div class="seg ph-f">'+[["all","Все"],["err","С ошибками"],["word","Не то слово"]].map(f=>'<button data-phf="'+f[0]+'" aria-pressed="'+(phF===f[0])+'">'+f[1]+"</button>").join("")+"</div>";
+  if(!show.length)h+='<p class="muted ph-none">'+(phF==="err"?"Ошибок нет, все предложения верные 🎉":"Все слова употреблены верно 🎉")+"</p>";
+  let lastD=null;
+  show.forEach(x=>{const d=phDay(x.t);if(d!==lastD){h+='<div class="ph-day">'+dLabel(d)+"</div>";lastD=d}
+    const v=(PR_VERDICT[x.v]||PR_VERDICT.minor)[1],errs=x.e||[],same=(x.c||"").trim()===x.x;
+    h+='<details class="ph-it v-'+v+'"><summary><span class="ph-top"><b lang="de">'+esc(x.de)+'</b><span class="pr-score">'+[1,2,3,4,5].map(i=>"<i"+(i<=x.s?' class="on"':"")+"></i>").join("")+'</span></span>'+
+      '<span class="ph-txt" lang="de">'+prMark(x.x,errs.map(e=>e.w),"m-bad")+'</span><span class="ph-meta">'+phHM(x.t)+(errs.length?" · "+errs.length+" "+plural(errs.length,"ошибка","ошибки","ошибок"):x.v==="ok"?" · без ошибок":"")+"</span></summary>"+
+      '<div class="ph-body">'+(same?"":'<div class="fix" lang="de"><small class="muted">Правильно</small><br>'+prMark(x.c,errs.map(e=>e.r),"m-good")+"</div>")+
+      (errs.length?'<ul class="pr-errs">'+errs.map(e=>"<li>"+(e.w?"<s>"+esc(e.w)+"</s> → ":"")+(e.r?"<b>"+esc(e.r)+"</b>":"")+(e.y?"<span>"+esc(e.y)+"</span>":"")+"</li>").join("")+"</ul>":"")+
+      (x.w===false?'<p class="pr-wordnote no">'+ic("x",16)+"<span><b>«"+esc(x.de)+"»</b>: "+esc(x.wn||"слово употреблено неверно")+"</span></p>":"")+
+      (x.tip?'<p class="pr-tip">💡 '+esc(x.tip)+"</p>":"")+
+      (BYID[x.id]?'<button class="btn sm" data-phagain="'+esc(x.id)+'">'+ic("refresh",16)+"Ещё раз с этим словом</button>":"")+"</div></details>"});
+  if(list.length>show.length)h+='<button class="btn sm ph-more" data-phmore>Показать ещё '+Math.min(20,list.length-show.length)+"</button>";
+  el.innerHTML=h;
+  el.querySelectorAll("[data-phf]").forEach(b=>b.onclick=()=>{phF=b.dataset.phf;phN=20;prHist()});
+  const m=el.querySelector("[data-phmore]");if(m)m.onclick=()=>{phN+=20;prHist()};
+  el.querySelectorAll("[data-phagain]").forEach(b=>b.onclick=()=>{prWord=BYID[b.dataset.phagain];prWrite();window.scrollTo({top:0,behavior:reduced()?"auto":"smooth"});setTimeout(()=>{const t=$("#prText");if(t)t.focus({preventScroll:true})},300)});
 }
 const PR_VERDICT={ok:["Без ошибок","good"],minor:["Почти верно","mid"],wrong:["Есть серьёзные ошибки","bad"]};
 function prResult(t,r,c){

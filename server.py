@@ -170,6 +170,25 @@ CREATE TABLE IF NOT EXISTS ai_log(
   err TEXT NOT NULL DEFAULT ''
 );
 CREATE INDEX IF NOT EXISTS ai_log_day ON ai_log(day);
+CREATE TABLE IF NOT EXISTS races(
+  id INTEGER PRIMARY KEY,
+  a INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  b INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  metric TEXT NOT NULL,
+  start INTEGER NOT NULL,
+  end INTEGER NOT NULL,
+  a0 INTEGER NOT NULL DEFAULT 0,
+  b0 INTEGER NOT NULL DEFAULT 0,
+  created INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS word_inbox(
+  id INTEGER PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  de TEXT NOT NULL,
+  ru TEXT NOT NULL,
+  ctx TEXT NOT NULL DEFAULT '',
+  ts INTEGER NOT NULL
+);
 CREATE TABLE IF NOT EXISTS ai_cache(
   key TEXT PRIMARY KEY,
   out TEXT NOT NULL,
@@ -383,6 +402,33 @@ def admin_overview(c, n):
         "modes": sorted(([k, v[0], v[1]] for k, v in modes.items()), key=lambda x: -x[2]),
         "owners": c.execute("SELECT COUNT(*) FROM users WHERE role='owner'").fetchone()[0],
         "ai": ai_stats(c, n),
+        "schreiben": admin_schreiben(c, n),
+    }
+
+
+def admin_schreiben(c, n):
+    """Schreiben для админки: проверенные тексты по дням, средний балл, зачёты, цена одной проверки."""
+    if not _has_table(c, "schreiben_essays"):
+        return None
+    today = local_day()
+    since = int(time.time()) - n * 86400
+    rows = c.execute("SELECT e.user_id,e.ts,e.typ,e.points,e.max_points,e.words,u.name FROM schreiben_essays e LEFT JOIN users u ON u.id=e.user_id WHERE e.ts>?", (since,)).fetchall()
+    days, by = {}, {}
+    for r in rows:
+        d = local_day(r["ts"])
+        days[d] = days.get(d, 0) + 1
+        b = by.setdefault(r["user_id"], [r["name"] or "Удалён", 0, 0.0])
+        b[1] += 1
+        b[2] += r["points"] / r["max_points"]
+    passed = sum(1 for r in rows if r["points"] >= (12 if r["typ"] == "stell" else 10))
+    g = c.execute("SELECT COUNT(*) n, COALESCE(AVG(cost),0) a, COALESCE(AVG(ms),0) t FROM ai_log WHERE kind='schreiben_grade' AND err='' AND ts>?", (since,)).fetchone()
+    return {
+        "total": c.execute("SELECT COUNT(*) FROM schreiben_essays").fetchone()[0], "period": len(rows),
+        "writers": len(by), "avg": round(sum(r["points"] / r["max_points"] for r in rows) / len(rows) * 100) if rows else 0,
+        "passed": passed, "words": round(sum(r["words"] for r in rows) / len(rows)) if rows else 0,
+        "gradeUsd": round(g["a"] / 1e6, 4), "grades": g["n"], "gradeSec": round(g["t"] / 1000),
+        "series": [{"day": d, "n": days.get(d, 0)} for d in range(today - n + 1, today + 1)],
+        "byUser": sorted(([v[0], v[1], round(v[2] / v[1] * 100)] for v in by.values()), key=lambda x: -x[1])[:10],
     }
 
 
@@ -391,7 +437,7 @@ def admin_users(c):
     bw = book_words()
     st = {r["user_id"]: r for r in c.execute("SELECT * FROM stats")}
     out = []
-    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until,role,verified FROM users ORDER BY created DESC"):
+    for u in c.execute("SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until,role,verified,ui_lang FROM users ORDER BY created DESC"):
         s_ = prog.get(u["id"]) or progress_summary({})
         t = st.get(u["id"])
         out.append({
@@ -403,7 +449,9 @@ def admin_users(c):
             "active_days": s_["active_days"], "tour": s_["tour"], "exam": s_["exam"],
             "cur": bw["sec"].get(s_["cur"], "Свой набор" if str(s_["cur"]).startswith("u:") else s_["cur"]),
             "usets": s_["usets"], "news": bool(u["news"]), "plan": u["plan"] or "free", "plan_until": u["plan_until"] or 0,
+            "lang": u["ui_lang"] or "ru",
         })
+        out[-1].update(schreiben_summary(c, u["id"]))
     return out
 
 
@@ -452,7 +500,8 @@ def init_db():
         # news — согласие на рассылку (0/1, по умолчанию нет); plan/plan_until — тариф на будущее (free / premium до даты)
         for col, typ in (("last_seen", "INTEGER"), ("tz", "TEXT"), ("device", "TEXT"), ("lang", "TEXT"),
                          ("news", "INTEGER NOT NULL DEFAULT 0"), ("plan", "TEXT NOT NULL DEFAULT 'free'"), ("plan_until", "INTEGER"),
-                         ("role", "TEXT NOT NULL DEFAULT 'user'"), ("verified", "INTEGER NOT NULL DEFAULT 0"), ("last_nudge", "INTEGER")):
+                         ("role", "TEXT NOT NULL DEFAULT 'user'"), ("verified", "INTEGER NOT NULL DEFAULT 0"), ("last_nudge", "INTEGER"),
+                         ("ui_lang", "TEXT NOT NULL DEFAULT 'ru'")):
             if col not in cols:
                 c.execute("ALTER TABLE users ADD COLUMN %s %s" % (col, typ))
         if "verified" not in cols:
@@ -1208,10 +1257,14 @@ def s_str(v, n):
     return str(v or "").strip()[:n]
 
 
+AVATAR_MAX = 63          # 0–7 — цвет с буквой, 8+ — рисованные аватары из /ep.js
+LANGS = ("ru", "en")     # язык объяснений, переводов и писем
+
+
 def user_json(u):
     return {"id": u["id"], "name": u["name"], "email": u["email"], "avatar": u["avatar"], "code": u["code"],
             "owner": u["role"] == "owner", "admin": u["role"] in ("admin", "owner"), "role": u["role"],
-            "news": bool(u["news"]), "verified": bool(u["verified"]), "plan": u["plan"] or "free"}
+            "news": bool(u["news"]), "verified": bool(u["verified"]), "plan": u["plan"] or "free", "lang": u["ui_lang"] or "ru"}
 
 
 def friend_rows(c, uid):
@@ -1229,8 +1282,79 @@ def friend_rows(c, uid):
             d[k] = d[k] or 0
         d["level"] = d["level"] or 1
         d["me"] = r["id"] == uid
+        d.update(schreiben_summary(c, r["id"]))
         out.append(d)
     return out
+
+
+def _has_table(c, name):
+    return bool(c.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (name,)).fetchone())
+
+
+def schreiben_xp(c, uid):
+    """XP из модуля Schreiben (хранится в его состоянии)."""
+    if not _has_table(c, "schreiben_state"):
+        return 0
+    r = c.execute("SELECT data FROM schreiben_state WHERE user_id=?", (uid,)).fetchone()
+    try:
+        return s_int((json.loads(r["data"]) or {}).get("xp")) if r else 0
+    except ValueError:
+        return 0
+
+
+def schreiben_summary(c, uid):
+    """Для друзей и рейтинга: тексты за неделю и всего, средний процент, XP в Schreiben."""
+    out = {"s_xp": schreiben_xp(c, uid), "s_week": 0, "s_total": 0, "s_avg": 0}
+    if not _has_table(c, "schreiben_essays"):
+        return out
+    week = int(time.time()) - 7 * 86400
+    r = c.execute("SELECT COUNT(*) n, COALESCE(AVG(points*1.0/max_points),0) a, SUM(ts>?) w FROM schreiben_essays WHERE user_id=?", (week, uid)).fetchone()
+    out.update(s_total=r["n"] or 0, s_avg=round((r["a"] or 0) * 100), s_week=r["w"] or 0)
+    return out
+
+
+# ---------- дружеские забеги: кто больше наберёт за 3–14 дней ----------
+RACE_METRICS = {"xp": "XP во всех модулях", "texts": "тексты в Schreiben"}
+
+
+def race_value(c, uid, metric, start, end):
+    if metric == "texts":
+        if not _has_table(c, "schreiben_essays"):
+            return 0
+        return c.execute("SELECT COUNT(*) FROM schreiben_essays WHERE user_id=? AND ts BETWEEN ? AND ?", (uid, start, end)).fetchone()[0]
+    r = c.execute("SELECT xp FROM stats WHERE user_id=?", (uid,)).fetchone()
+    return (r["xp"] if r else 0) + schreiben_xp(c, uid)
+
+
+def race_rows(c, uid):
+    finish_races(c)
+    now = int(time.time())
+    rows = c.execute("""SELECT r.*, ua.name an, ua.avatar aa, ub.name bn, ub.avatar ba FROM races r
+                        JOIN users ua ON ua.id=r.a JOIN users ub ON ub.id=r.b
+                        WHERE (r.a=? OR r.b=?) AND r.end>? ORDER BY r.end DESC""", (uid, uid, now - 14 * 86400)).fetchall()
+    out = []
+    for r in rows:
+        live = r["end"] > now
+        if r["metric"] == "texts":
+            va, vb = race_value(c, r["a"], "texts", r["start"], r["end"]), race_value(c, r["b"], "texts", r["start"], r["end"])
+        else:  # XP считаем от снимка на старте; после финиша — из сохранённого итога
+            va = max(0, race_value(c, r["a"], "xp", 0, 0) - r["a0"]) if live else r["a0"]
+            vb = max(0, race_value(c, r["b"], "xp", 0, 0) - r["b0"]) if live else r["b0"]
+        me_a = r["a"] == uid
+        out.append({"id": r["id"], "metric": r["metric"], "metricName": RACE_METRICS.get(r["metric"], r["metric"]),
+                    "start": r["start"], "end": r["end"], "live": live,
+                    "me": {"id": uid, "name": r["an"] if me_a else r["bn"], "avatar": r["aa"] if me_a else r["ba"], "v": va if me_a else vb},
+                    "rival": {"id": r["b"] if me_a else r["a"], "name": r["bn"] if me_a else r["an"], "avatar": r["ba"] if me_a else r["aa"], "v": vb if me_a else va}})
+    return out
+
+
+def finish_races(c):
+    """У закончившихся XP-забегов сохраняем итог (иначе после финиша XP продолжал бы расти)."""
+    now = int(time.time())
+    for r in c.execute("SELECT * FROM races WHERE metric='xp' AND end<=? AND created>0", (now,)).fetchall():
+        va = max(0, race_value(c, r["a"], "xp", 0, 0) - r["a0"])
+        vb = max(0, race_value(c, r["b"], "xp", 0, 0) - r["b0"])
+        c.execute("UPDATE races SET a0=?, b0=?, created=0 WHERE id=?", (va, vb, r["id"]))
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -1373,6 +1497,13 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path == "/start":
             return self.send_file(HUB_FILE, "text/html; charset=utf-8", head)
+        if path == "/admin":  # отдельная страница админки: открывается с любого устройства, данные отдаёт только владельцу/админу
+            return self.send_file(os.path.join(ROOT, "admin.html"), "text/html; charset=utf-8", head)
+        if path == "/ep.js":  # общее для всех модулей: аватары, талисман, переключатель языка
+            return self.send_file(os.path.join(STATIC_DIR, "ep.js"), "text/javascript; charset=utf-8", head)
+        m = re.fullmatch(r"/mail/([a-z0-9-]+)\.png", path)  # картинки талисмана для писем
+        if m:
+            return self.send_file(os.path.join(STATIC_DIR, "mail", m.group(1) + ".png"), "image/png", head)
         if schreiben and path == "/schreiben":
             return self.send_file(os.path.join(SCHREIBEN_DIR, "schreiben.html"), "text/html; charset=utf-8", head)
         m = re.fullmatch(r"/schreiben/data/([a-z_]+)\.json", path)
@@ -1613,9 +1744,10 @@ class Handler(BaseHTTPRequestHandler):
             u = self.need_user(c)
             d = self.read_json()
             name = s_str(d.get("name"), 40) or u["name"]
-            avatar = s_int(d.get("avatar", u["avatar"]), 0, 7)
+            avatar = s_int(d.get("avatar", u["avatar"]), 0, AVATAR_MAX)
             news = (1 if d["news"] is True else 0) if "news" in d else u["news"]
-            c.execute("UPDATE users SET name=?, avatar=?, news=? WHERE id=?", (name, avatar, news, u["id"]))
+            lang = d.get("lang") if d.get("lang") in LANGS else (u["ui_lang"] or "ru")
+            c.execute("UPDATE users SET name=?, avatar=?, news=?, ui_lang=? WHERE id=?", (name, avatar, news, lang, u["id"]))
             u = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
             return self.send_json(200, {"user": user_json(u)})
 
@@ -1659,6 +1791,56 @@ class Handler(BaseHTTPRequestHandler):
                       (u["id"], fid, fid, u["id"]))
             return self.send_json(200, {"ok": True})
 
+        if p == "/races" and method == "GET":
+            u = self.need_user(c)
+            return self.send_json(200, {"races": race_rows(c, u["id"]), "metrics": RACE_METRICS})
+
+        if p == "/races" and method == "POST":
+            u = self.need_user(c)
+            d = self.read_json()
+            fid, metric, days = s_int(d.get("friend")), s_str(d.get("metric"), 10), s_int(d.get("days"), 3, 14)
+            if metric not in RACE_METRICS:
+                raise ApiError(400, "Такого забега нет")
+            if not c.execute("SELECT 1 FROM friends WHERE user_id=? AND friend_id=?", (u["id"], fid)).fetchone():
+                raise ApiError(400, "Забег можно начать только с другом")
+            if c.execute("SELECT 1 FROM races WHERE ((a=? AND b=?) OR (a=? AND b=?)) AND end>?", (u["id"], fid, fid, u["id"], now)).fetchone():
+                raise ApiError(409, "С этим другом забег уже идёт")
+            c.execute("INSERT INTO races(a,b,metric,start,end,a0,b0,created) VALUES(?,?,?,?,?,?,?,?)",
+                      (u["id"], fid, metric, now, now + days * 86400,
+                       race_value(c, u["id"], "xp", 0, 0) if metric == "xp" else 0,
+                       race_value(c, fid, "xp", 0, 0) if metric == "xp" else 0, now))
+            return self.send_json(200, {"races": race_rows(c, u["id"])})
+
+        m = re.fullmatch(r"/races/(\d+)", p)
+        if m and method == "DELETE":
+            u = self.need_user(c)
+            c.execute("DELETE FROM races WHERE id=? AND (a=? OR b=?)", (int(m.group(1)), u["id"], u["id"]))
+            return self.send_json(200, {"ok": True})
+
+        # слова, которые человек сохранил в других модулях (выделил в тексте) — Wörter забирает их в набор
+        if p == "/words" and method == "GET":
+            u = self.need_user(c)
+            rows = c.execute("SELECT id,de,ru,ctx,ts FROM word_inbox WHERE user_id=? ORDER BY id", (u["id"],)).fetchall()
+            return self.send_json(200, {"words": [dict(r) for r in rows]})
+
+        if p == "/words" and method == "POST":
+            u = self.need_user(c)
+            d = self.read_json()
+            de, ru = s_str(d.get("de"), 120), s_str(d.get("ru"), 200)
+            if not de or not ru:
+                raise ApiError(400, "Нужны слово и перевод")
+            if c.execute("SELECT COUNT(*) FROM word_inbox WHERE user_id=?", (u["id"],)).fetchone()[0] >= 500:
+                raise ApiError(400, "Слишком много несохранённых слов. Открой Wörter, они перенесутся в набор")
+            if not c.execute("SELECT 1 FROM word_inbox WHERE user_id=? AND lower(de)=lower(?)", (u["id"], de)).fetchone():
+                c.execute("INSERT INTO word_inbox(user_id,de,ru,ctx,ts) VALUES(?,?,?,?,?)", (u["id"], de, ru, s_str(d.get("ctx"), 300), now))
+            return self.send_json(200, {"ok": True})
+
+        if p == "/words" and method == "DELETE":
+            u = self.need_user(c)
+            upto = s_int(self.read_json().get("upto"))
+            c.execute("DELETE FROM word_inbox WHERE user_id=? AND id<=?", (u["id"], upto))
+            return self.send_json(200, {"ok": True})
+
         if method == "POST" and p == "/share":
             u = self.need_user(c)
             d = self.read_json()
@@ -1679,7 +1861,7 @@ class Handler(BaseHTTPRequestHandler):
         if method == "POST" and p == "/translate":
             d = self.read_json()
             text, sl, tl = s_str(d.get("text"), 300), s_str(d.get("from"), 2), s_str(d.get("to"), 2)
-            if sl not in ("de", "ru") or tl not in ("de", "ru") or sl == tl:
+            if sl not in ("de", "ru", "en") or tl not in ("de", "ru", "en") or sl == tl:
                 raise ApiError(400, "Неверная пара языков")
             if not text:
                 raise ApiError(400, "Пустой текст")

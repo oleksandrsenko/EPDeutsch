@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Админ-панель · EPDeutsch</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement;d.classList.add("boot");try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");if(o.theme)d.setAttribute("data-theme",o.theme)}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<script src="/ep.js"></script>
+<style>
+:root{
+  --bg:#F6F7FB; --panel:#FFFFFF; --panel2:#EDEFF4; --hover:#F0F2FA; --fg:#282E3E; --muted:#586380; --line:#D9DDE8; --line2:#EDEFF4;
+  --primary:#7E6FB8; --primary-h:#6E5FA8; --primary-soft:#EFEBFA; --link:#6C5CAC; --on-primary:#FFFFFF;
+  --yellow:#FFCD1F; --good:#18AE79; --good-soft:#E3F7EF; --mid:#F28C28; --mid-soft:#FFF0E1; --bad:#FF725B; --bad-soft:#FFECE8;
+  --m:#3D7BF7; --f:#E8505B; --n:#18AE79; --pl:#8B5CF6; --v:#E0A800;
+  --mark:#FFF1B8;
+  --sh:0 .25rem 1rem 0 rgba(40,46,62,.08);
+  --sh-card:0 .4rem 1.8rem 0 rgba(40,46,62,.14);
+  --r-sm:12px; --r:18px; --r-lg:26px;
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A092D; --panel:#2E3856; --panel2:#232B47; --hover:#39436A; --fg:#F6F7FB; --muted:#A8B1CF; --line:#4A5578; --line2:#39436A;
+  --primary:#8E7FCB; --primary-h:#A092D6; --primary-soft:#3A3160; --link:#C3B8EC;
+  --good:#3CCFA0; --good-soft:#18423A; --mid:#FFA95E; --mid-soft:#4A3420; --bad:#FF8A76; --bad-soft:#4A2A2A;
+  --m:#7FA6FF; --f:#FF7F87; --n:#3CCFA0; --pl:#B69CFF; --v:#FFCD1F;
+  --mark:#5A4A12; --sh:0 .25rem 1rem 0 rgba(0,0,0,.35); --sh-card:0 .4rem 1.8rem 0 rgba(0,0,0,.45); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A092D; --panel:#2E3856; --panel2:#232B47; --hover:#39436A; --fg:#F6F7FB; --muted:#A8B1CF; --line:#4A5578; --line2:#39436A;
+  --primary:#8E7FCB; --primary-h:#A092D6; --primary-soft:#3A3160; --link:#C3B8EC;
+  --good:#3CCFA0; --good-soft:#18423A; --mid:#FFA95E; --mid-soft:#4A3420; --bad:#FF8A76; --bad-soft:#4A2A2A;
+  --m:#7FA6FF; --f:#FF7F87; --n:#3CCFA0; --pl:#B69CFF; --v:#FFCD1F;
+  --mark:#5A4A12; --sh:0 .25rem 1rem 0 rgba(0,0,0,.35); --sh-card:0 .4rem 1.8rem 0 rgba(0,0,0,.45); color-scheme:dark}
+/* у каждой платформы свой цвет: Wörter — фиолетовый, в настройках не меняется */
+:root{--acc-rgb:126,111,184}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--acc-rgb:142,127,203}}
+:root[data-theme="dark"]{--acc-rgb:142,127,203}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5;min-height:100vh}
+button,input{font:inherit;color:inherit}
+a{color:var(--link)}
+*{scrollbar-width:thin;scrollbar-color:rgba(var(--acc-rgb),.5) transparent}
+*::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-thumb{background:rgba(var(--acc-rgb),.5);border-radius:999px;border:2px solid var(--bg)}*::-webkit-scrollbar-track{background:transparent}
+html.boot body::after{content:"";position:fixed;inset:0;z-index:9998;background:var(--bg);transition:opacity .5s}
+html.boot body::before{content:"";position:fixed;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;z-index:10000;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect x='1' y='1' width='28' height='28' rx='8' fill='%23282E3E'/%3E%3Cpath d='M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Ccircle cx='26.5' cy='26.5' r='6.5' fill='%23FFCD1F' stroke='%23fff' stroke-width='2.5'/%3E%3C/svg%3E") center/contain no-repeat;animation:bootBob 1.2s ease-in-out infinite;transition:opacity .35s}
+html.boot::after{content:"";position:fixed;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;z-index:9999;border-radius:50%;border:3px solid rgba(var(--acc-rgb),.14);border-top-color:var(--primary);animation:bootSpin .9s linear infinite;transition:opacity .35s}
+html.boot.bootout body::after,html.boot.bootout body::before,html.boot.bootout::after{opacity:0}
+@keyframes bootBob{0%,100%{transform:translateY(0)}45%{transform:translateY(-7px)}}
+@keyframes bootSpin{to{transform:rotate(360deg)}}
+@keyframes cardIn{from{opacity:0;transform:translateY(8px) scale(.98)}}
+.top{position:sticky;top:0;z-index:30;height:62px;background:var(--panel);border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:12px;padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px;letter-spacing:-.03em;color:var(--fg);text-decoration:none}
+.logo b{color:var(--link)}.logo small{font-size:12.5px;font-weight:800;color:#fff;background:#282E3E;border-radius:9px;padding:5px 9px;letter-spacing:.01em}
+.top .sp{flex:1}
+.mods{display:flex;gap:6px}.mods a{font-weight:700;font-size:13.5px;text-decoration:none;color:var(--muted);padding:7px 12px;border-radius:999px}.mods a:hover{background:var(--hover);color:var(--fg)}
+#me{display:flex;align-items:center;gap:8px;font-size:14px}
+.iconbtn{border:0;background:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;cursor:pointer;color:var(--muted)}.iconbtn:hover{background:var(--hover);color:var(--fg)}
+.page{max-width:1280px;margin:0 auto;padding:24px 20px 60px}
+.uava{border-radius:50%;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex:none;line-height:1}
+.btn{font:inherit;font-weight:700;font-size:14.5px;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:9px 18px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn:hover{background:var(--hover)}.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn.sm{padding:6px 13px;font-size:13.5px}.btn:disabled{opacity:.45;cursor:default}
+.btn.danger{color:var(--bad)}.btn.danger:hover{background:var(--bad-soft);border-color:var(--bad)}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.muted{color:var(--muted)}.aerr{color:var(--bad);font-weight:700}
+.seg{display:inline-flex;background:var(--panel2);border-radius:999px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:0;background:none;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--panel);color:var(--fg);box-shadow:var(--sh)}
+.search{display:flex;align-items:center;gap:10px;border-radius:999px;padding:0 16px;height:42px;color:var(--muted);border:2px solid transparent;flex:1}
+.search input{flex:1;min-width:0;border:0;background:none;font-weight:600;outline:none}
+.search:focus-within{border-color:var(--primary)}
+.rep-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.rep-g div{background:var(--bg);border-radius:14px;padding:10px 14px}.rep-g small{display:block;font-size:12px;color:var(--muted);font-weight:600}.rep-g b{font-size:22px;font-weight:800;margin-right:8px}
+dialog{border:0;border-radius:var(--r-lg);padding:24px;background:var(--panel);color:var(--fg);box-shadow:var(--sh-card);width:min(520px,calc(100vw - 32px));max-height:calc(100vh - 48px)}
+dialog[open]{animation:cardIn .25s}dialog::backdrop{background:rgba(10,9,45,.45)}dialog h3{margin:0 0 14px;font-size:19px;font-weight:800}
+.dlg-btns{display:flex;flex-direction:row-reverse;gap:10px;margin-top:18px}
+.aform{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--muted)}
+.aform input{font-size:16px;font-weight:600;color:var(--fg);border:2px solid var(--line);background:var(--panel);border-radius:14px;padding:11px 14px}
+#toasts{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:70;pointer-events:none}
+.toast{background:var(--fg);color:var(--bg);padding:12px 20px;border-radius:18px;box-shadow:var(--sh-card);text-align:center;transition:opacity .4s;animation:cardIn .3s}
+.toast b{display:block}.toast small{opacity:.75;font-weight:600}
+.deny{max-width:460px;margin:60px auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.todo{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px}
+/* ---------- админ-панель ---------- */
+.admin h1{margin:0}
+.adm-h{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.adm-h p{margin:4px 0 0;font-size:13px}.adm-h .seg{margin:0}
+.akpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:14px}
+.akpi{background:var(--panel);border-radius:var(--r);box-shadow:var(--sh);padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.akpi small{color:var(--muted);font-weight:700;font-size:12.5px}
+.akpi b{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.2}
+.akpi span{color:var(--muted);font-size:12.5px;font-weight:600}
+.acard2 .akpi{background:var(--panel2);box-shadow:none}.akpi.warn{background:var(--bad-soft)}.akpi.warn b{color:var(--bad)}
+.aai-h{margin:0 0 8px;font-size:14px}
+.aai-bl div{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line2);font-size:13.5px}.aai-bl div:first-child{border-top:0}
+.aai-bl span{color:var(--bad)}.aai-bl small{color:var(--muted)}
+.akpi.live b::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--good);margin-right:8px;vertical-align:4px;box-shadow:0 0 0 4px var(--good-soft)}
+.agrid{display:grid;gap:12px;margin-bottom:12px}
+.agrid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.agrid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.acard2{background:var(--panel);border-radius:var(--r);box-shadow:var(--sh);padding:16px 18px;min-width:0}
+.acard2 h3{margin:0 0 12px;font-size:15.5px;font-weight:800}
+.acard2 h3 small{display:block;font-size:12.5px;color:var(--muted);font-weight:600;margin-top:2px}
+.achart{width:100%;height:160px;display:block}
+.adays{position:relative;height:18px;margin-top:4px}.adays span{position:absolute;transform:translateX(-50%);font-size:11px;font-weight:600;color:var(--muted);white-space:nowrap}.adays span:last-child{transform:translateX(-100%)}.adays span:first-child{transform:none}
+.achart .ab{fill:rgba(var(--acc-rgb),.55)}.achart .ab:hover{fill:var(--primary)}
+.achart .al{fill:none;stroke:var(--good);stroke-width:2.5;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.achart .ax{stroke:var(--line2);vector-effect:non-scaling-stroke}
+.achart .at{fill:var(--muted);font-size:11px;font-weight:600;text-anchor:middle;font-family:var(--font)}
+.aleg{display:flex;gap:16px;font-size:12.5px;font-weight:700;color:var(--muted);margin-top:6px}.aleg span{display:inline-flex;align-items:center}
+.aleg span::before{content:"";display:inline-block;width:12px;height:8px;border-radius:3px;margin-right:6px;vertical-align:0}
+.aleg .k1::before{background:rgba(var(--acc-rgb),.55)}.aleg .k2::before{height:3px;background:var(--good)}
+.alist,.afun{display:flex;flex-direction:column;gap:8px}
+.ali,.afr{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13.5px;font-weight:600}
+.afr{grid-template-columns:130px minmax(0,1fr) auto 42px}.afr small{color:var(--muted);text-align:right;font-weight:700}
+.alt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.alb{height:8px;border-radius:9px;background:var(--line2);overflow:hidden}.alb i{display:block;height:100%;border-radius:9px;background:var(--primary)}
+.ali b,.afr b{font-variant-numeric:tabular-nums;font-size:13.5px}
+.aonl{display:flex;flex-direction:column;gap:4px;max-height:280px;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+.aon{display:flex;align-items:center;gap:10px}.aon b{display:block;font-size:14px}.aon small{color:var(--muted);font-weight:600;font-size:12px}
+.aon .dot{width:9px;height:9px;border-radius:50%;background:var(--good);flex:none}
+.ahard{display:flex;flex-direction:column;gap:6px}
+.amore{border:0;background:none;font:inherit;font-size:13px;font-weight:700;color:var(--link);cursor:pointer;padding:8px 0 0}.amore:hover{text-decoration:underline}
+.ahard div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:10px;font-size:13.5px;align-items:baseline;border-bottom:1px solid var(--line2);padding-bottom:6px}
+.ahard span{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ahard em{font-style:normal;font-weight:800;color:var(--bad)}
+.asearch{max-width:360px;margin:0;background:var(--bg)}
+.atable-w{overflow-x:auto;margin:0 -18px;padding:0 18px}
+.atable{width:100%;border-collapse:collapse;font-size:13.5px;min-width:1100px}
+.atable th{text-align:left;padding:0;border-bottom:2px solid var(--line2);white-space:nowrap}
+.atable th button{border:0;background:none;font:inherit;font-size:12px;font-weight:800;color:var(--muted);padding:8px;cursor:pointer}
+.atable td{padding:9px 8px;border-bottom:1px solid var(--line2);font-weight:600;white-space:nowrap;max-width:220px;overflow:hidden;text-overflow:ellipsis}
+.atable tbody tr{cursor:pointer}.atable tbody tr:hover{background:var(--hover)}
+.aus{display:flex;align-items:center;gap:10px}.aus b{display:block}.aus small{color:var(--muted);font-size:12px}
+dialog.wide{width:min(760px,calc(100vw - 32px))}
+.aon{border:0;background:none;font:inherit;color:inherit;text-align:left;padding:6px 8px;margin:0;width:100%;min-width:0;border-radius:12px;cursor:pointer}.aon span{min-width:0}.aon small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aon:hover{background:var(--hover)}
+.aonline{color:var(--good);font-weight:800}
+.aplan{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:2px 10px;background:var(--panel2);color:var(--muted)}
+.aplan.premium{background:linear-gradient(90deg,#F5B400,#F28C28);color:#fff}
+.anow{display:flex;align-items:center;gap:12px;background:var(--bg);border-radius:14px;padding:12px 14px;margin:0 0 14px}
+.anow .dot{width:10px;height:10px;border-radius:50%;background:var(--line);flex:none}
+.anow.on .dot{background:var(--good);box-shadow:0 0 0 4px var(--good-soft)}
+.anow b{display:block;font-size:14.5px}.anow small{color:var(--muted);font-weight:600;font-size:13px}
+.aacc{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:12px}
+.aacc div{background:var(--bg);border-radius:14px;padding:10px 14px}.aacc small{display:block;font-size:12px;color:var(--muted);font-weight:600}.aacc b{font-size:15px}
+.aact{flex-wrap:wrap;gap:8px}
+.arole{font-style:normal;font-size:11px;font-weight:800;color:var(--link);background:var(--primary-soft);border-radius:999px;padding:1px 8px;vertical-align:1px}
+.pc-news{display:flex;align-items:flex-start;gap:10px;margin:14px 0 4px;max-width:520px;font-size:14px;font-weight:600;cursor:pointer}
+.aud h4{margin:18px 0 8px;font-size:14.5px}
+@media (max-width:980px){.agrid.g2,.agrid.g3{grid-template-columns:1fr}}
+@media (max-width:640px){.akpis{grid-template-columns:1fr 1fr}.akpi b{font-size:21px}.afr{grid-template-columns:100px minmax(0,1fr) auto 38px}}
+@media (max-width:720px){.mods{display:none}#me b{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="/start" aria-label="EPDeutsch, к модулям"><svg viewBox="0 0 34 34" width="30" height="30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" fill="#282E3E"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel)" stroke-width="2.5"/></svg><span>EP<b>Deutsch</b></span><small>Admin</small></a>
+<div class="sp"></div><nav class="mods"><a href="/">Wörter</a><a href="/schreiben">Schreiben</a><a href="/start">Все модули</a></nav><button class="iconbtn" id="themeBtn" title="Сменить тему"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button><span id="me"></span></header>
+<main class="page admin"><div id="p-admin"></div></main>
+<dialog id="dlg"><form method="dialog"><h3 id="dlgT"></h3><div id="dlgB"></div><div class="dlg-btns"><button class="btn primary" id="dlgOk">Готово</button><button class="btn" id="dlgNo" type="button">Отмена</button></div></form></dialog>
+<div id="toasts" aria-live="polite"></div>
+<script>
+"use strict";
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const plural=(n,a,b,c)=>{const m=Math.abs(n)%100,d=m%10;return m>10&&m<20?c:d===1?a:d>=2&&d<=4?b:c};
+const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}},lsSet=(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}};
+const IC={refresh:'<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>',search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',copy:'<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>',crown:'<path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/>',key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',moon:'<path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10z"/>'};
+const ic=(n,s)=>'<svg viewBox="0 0 24 24" width="'+s+'" height="'+s+'" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(IC[n]||"")+"</svg>";
+async function api(method,path,body){const r=await fetch("/api"+path,{method,credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:body?JSON.stringify(body):undefined});const j=await r.json().catch(()=>({}));if(!r.ok)throw Object.assign(new Error(j.error||"Ошибка "+r.status),{status:r.status});return j}
+function toast(t,s){const el=document.createElement("div");el.className="toast";el.innerHTML="<b>"+esc(t)+"</b>"+(s?"<small>"+esc(s)+"</small>":"");$("#toasts").append(el);setTimeout(()=>{el.style.opacity=0;setTimeout(()=>el.remove(),400)},3200)}
+function copyText(t,ok){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(ok||"📋 Скопировано"),()=>toast("Не удалось скопировать"))}
+function ask(title,body,ok,okTxt,noTxt,no){const d=$("#dlg");$("#dlgT").textContent=title;$("#dlgB").innerHTML=body;$("#dlgOk").textContent=okTxt||"Готово";$("#dlgNo").textContent=noTxt||"Отмена";
+  let done=false;const fin=res=>{if(done)return;done=true;d.close();if(res==="ok")ok(d);else if(no)no(res)};
+  d.querySelector("form").onsubmit=e=>{e.preventDefault();fin("ok")};$("#dlgNo").onclick=e=>{e.preventDefault();fin("cancel")};d.oncancel=e=>{e.preventDefault();fin("")};d.showModal()}
+const uava=(u,sz)=>window.EP?EP.uava(u,sz):'<span class="uava" style="width:'+sz+'px;height:'+sz+'px;background:#7E6FB8">'+esc((u.name||"?")[0])+"</span>";
+const MODES=[["de","Карточки","Немецкий → русский","cards","var(--primary)"],["ru","Обратные","Русский → немецкий","swap","#8B5CF6"],["smart","Умный режим","Подстраивается под тебя","spark","#E0A800"],["test","Тест","4 варианта ответа","test","#18AE79"],["cloze","Вставь слово","Пропуск в примере","gap","#F28C28"],["art","Артикль","der / die / das","tag","#E8505B"],["forms","Три формы","Präsens · Prät. · Perfekt","layers","#0EA5B7"]];
+const MN={};MODES.forEach(m=>MN[m[0]]=m[1]);
+let ME=null;
+let ADM={days:30,data:null,users:null,q:"",sort:"last_seen",dir:-1,timer:0,at:0,hardOpen:false};
+const isOwner=()=>!!(ME&&ME.owner),isAdmin=()=>!!(ME&&ME.admin);
+const admDate=d=>new Date(d*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"short",timeZone:"UTC"});
+const admAgo=ts=>{if(!ts)return"—";const m=Math.floor((Date.now()/1000-ts)/60);return m<2?"сейчас":m<60?m+" мин назад":m<1440?Math.floor(m/60)+" ч назад":Math.floor(m/1440)+" дн назад"};
+// Schreiben: сколько текстов проверено, средний балл, зачёты и цена одной проверки
+function admSchreiben(w,days){
+  const usd=v=>v?"$"+v.toFixed(v<1?3:2):"—";
+  const kp=(t,v,sub)=>'<div class="akpi"><small>'+t+"</small><b>"+v+"</b><span>"+sub+"</span></div>";
+  return'<div class="akpis">'+kp("Текстов за "+days+" дн.",admNum(w.period),admNum(w.total)+" всего · пишут "+w.writers)+kp("Средний балл",w.avg+"%","минимум для зачёта 48%")+
+    kp("Зачёт",w.period?Math.round(w.passed/w.period*100)+"%":"—",w.passed+" из "+w.period+" текстов")+kp("Цена одной проверки",usd(w.gradeUsd),w.grades?"по "+w.grades+" проверкам · ~"+w.gradeSec+" с":"проверок ещё не было")+"</div>"+
+    '<div class="agrid g2" style="margin:0"><div>'+admChart(w.series.map(r=>({day:r.day,n:r.n})),"n",{unit:"текстов",title:"Тексты"})+'</div><div><h4 class="aai-h">Кто пишет больше всех</h4>'+(w.byUser.length?'<div class="alist">'+w.byUser.map(r=>'<div class="ali"><span class="alt">'+esc(r[0])+'</span><span class="alb"><i style="width:'+(r[1]/w.byUser[0][1]*100)+'%"></i></span><b>'+r[1]+" · "+r[2]+"%</b></div>").join("")+"</div>":'<p class="muted" style="margin:0">Пока никто</p>')+"</div></div>";
+}
+const admNum=n=>(+n||0).toLocaleString("ru-RU");
+const TAB_RU={home:"Главная",learn:"Карточки",practice:"Практика",list:"Слова по темам",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
+// столбики (+ линия второго ряда); подписи дат — через одну-две, подсказка при наведении
+function admChart(rows,key,opt){
+  opt=opt||{};const W=640,H=160,pb=2,pt=8,n=rows.length,bw=W/n,max=Math.max(1,...rows.map(r=>Math.max(r[key],opt.line?r[opt.line]:0)));
+  const y=v=>pt+(H-pt-pb)*(1-v/max);
+  let bars="",pts=[],lbl="";const step=Math.ceil(n/5);
+  rows.forEach((r,i)=>{const x=i*bw,h=(H-pt-pb)*(r[key]/max);
+    bars+='<rect x="'+(x+bw*.18).toFixed(1)+'" y="'+y(r[key]).toFixed(1)+'" width="'+(bw*.64).toFixed(1)+'" height="'+Math.max(r[key]?2:0,h).toFixed(1)+'" rx="3" class="ab"><title>'+admDate(r.day)+": "+r[key]+" "+(opt.unit||"")+(opt.line?" · "+r[opt.line]+" "+(opt.lunit||""):"")+"</title></rect>";
+    if(opt.line)pts.push((x+bw/2).toFixed(1)+","+y(r[opt.line]).toFixed(1));
+    if(i%step===0&&n-1-i>=step/2||i===n-1)lbl+='<span style="left:'+((i+.5)/n*100).toFixed(2)+'%">'+new Date(r.day*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"numeric",timeZone:"UTC"})+"</span>"});
+  return'<svg class="achart" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" role="img" aria-label="'+esc(opt.title||"")+'"><line x1="0" x2="'+W+'" y1="'+(H-pb)+'" y2="'+(H-pb)+'" class="ax"/>'+bars+
+    (opt.line?'<polyline points="'+pts.join(" ")+'" class="al"/>':"")+'</svg><div class="adays">'+lbl+"</div>";
+}
+// Расходы ИИ и срабатывания предохранителя («подозрительная активность»)
+function admAI(a,days){
+  const usd=v=>v?"$"+(v<10?v.toFixed(v<1?3:2):v.toFixed(0)):"$0",L=a.limits;
+  const kp=(t,v,sub,cls)=>'<div class="akpi'+(cls?" "+cls:"")+'"><small>'+t+"</small><b>"+v+"</b><span>"+sub+"</span></div>";
+  return'<div class="akpis">'+
+      kp("Сегодня",usd(a.today.usd),admNum(a.today.req)+" "+plural(a.today.req,"запрос","запроса","запросов")+(a.today.errors?" · ошибок "+a.today.errors:""))+
+      kp("За "+days+" дн.",usd(a.period.usd),admNum(a.period.req)+" "+plural(a.period.req,"запрос","запроса","запросов"))+
+      kp("Бюджет на сегодня",Math.round(a.today.usd/L.siteDayUsd*100)+"%","из "+usd(L.siteDayUsd)+" в день")+
+      kp("Подозрительная активность",a.blocks.length,a.blocks.length?"срабатываний за "+days+" дн.":"не было",a.blocks.length?"warn":"")+
+    "</div>"+
+    '<div class="agrid g2" style="margin-top:12px"><div><h4 class="aai-h">Кто тратит</h4>'+(a.byUser.length?'<div class="alist">'+a.byUser.map(r=>'<div class="ali"><span class="alt" title="'+esc(r[0])+'">'+esc(r[0])+" · "+admNum(r[1])+'</span><span class="alb"><i style="width:'+(r[2]/Math.max(1e-9,a.byUser[0][2])*100)+'%"></i></span><b>'+usd(r[2])+"</b></div>").join("")+"</div>":'<p class="muted" style="margin:0">Запросов пока не было</p>')+"</div>"+
+    '<div><h4 class="aai-h">Предохранитель</h4>'+(a.blocks.length?'<div class="aai-bl">'+a.blocks.map(b=>"<div><b>"+esc(b.name)+"</b><span>"+esc(b.why)+"</span><small>"+admAgo(b.ts)+"</small></div>").join("")+"</div>":'<p class="muted" style="margin:0">Срабатываний не было.</p>')+
+      '<p class="muted" style="margin:10px 0 0;font-size:13px">Отключает ИИ, если на аккаунт больше '+L.userMin+" запросов в минуту или "+L.userDay+" в день, или сайт потратил "+usd(L.siteDayUsd)+" за день. Владельцу приходит письмо.</p></div></div>";
+}
+function admList(rows,opt){
+  opt=opt||{};if(!rows||!rows.length)return'<p class="muted" style="margin:0">Пока нет данных</p>';
+  const max=Math.max(...rows.map(r=>r[1]));
+  return'<div class="alist">'+rows.slice(0,opt.n||8).map(r=>'<div class="ali"><span class="alt" title="'+esc(r[0])+'">'+esc(r[0])+'</span><span class="alb"><i style="width:'+(r[1]/max*100)+'%"></i></span><b>'+admNum(r[1])+(opt.pct?"%":"")+"</b></div>").join("")+"</div>";
+}
+async function renderAdmin(){
+  const el=$("#p-admin");ADM.hardOpen=lsGet("epd_admhard")==="1";
+  if(!isAdmin()){el.innerHTML='<h1>Нет доступа</h1>';return}
+  if(!ADM.data)el.innerHTML='<div class="adm-h"><h1>Админ-панель</h1></div><p class="muted">Загружаю данные…</p>';
+  try{
+    const [o,u]=await Promise.all([api("GET","/admin/overview?days="+ADM.days),api("GET","/admin/users")]);
+    ADM.data=o;ADM.users=u.users;ADM.at=Date.now();
+  }catch(e){el.innerHTML='<h1>Админ-панель</h1><p class="aerr">'+esc(e.message)+"</p>";return}
+    drawAdmin();
+  clearTimeout(ADM.timer);ADM.timer=setTimeout(()=>{if(!document.hidden)renderAdmin()},30000);
+}
+const PLAN_RU={free:"Бесплатный",premium:"Premium"},ROLE_RU={owner:"Владелец",admin:"Админ",user:""};
+const admOnline=uid=>(ADM.data&&ADM.data.online||[]).find(o=>o.uid===uid);
+const admDoing=o=>esc(o.what||TAB_RU[o.tab]||o.tab||"на сайте");
+function drawAdmin(){
+  const el=$("#p-admin"),o=ADM.data,k=o.kpi,S0=o.series,U=ADM.users;
+  const sum=f=>S0.reduce((a,r)=>a+r[f],0);
+  const kpi=(t,v,sub,cls)=>'<div class="akpi'+(cls?" "+cls:"")+'"><small>'+t+"</small><b>"+v+"</b>"+(sub?"<span>"+sub+"</span>":"")+"</div>";
+  const card=(t,body,cls)=>'<section class="acard2'+(cls?" "+cls:"")+'"><h3>'+t+"</h3>"+body+"</section>";
+  const fun=o.funnel,f0=Math.max(1,fun[0][1]);
+  const subs=U.filter(u=>u.news).length,prem=U.filter(u=>u.plan==="premium").length;
+  // онлайн: сначала те, кто в аккаунте, с тем, чем заняты; гостей одной строкой
+  const inAcc=o.online.filter(x=>x.uid),guests=o.online.length-inAcc.length;
+  const online='<div class="aonl">'+(inAcc.length?inAcc.slice(0,12).map(x=>'<button class="aon" data-admuser="'+x.uid+'"><i class="dot"></i><span><b>'+esc(x.name||"Без имени")+"</b><small>"+admDoing(x)+" · "+esc(x.device||"")+"</small></span></button>").join(""):'<p class="muted" style="margin:0">Из пользователей сейчас никого</p>')+
+    (guests?'<p class="muted" style="margin:4px 0 0;font-size:13px">и ещё '+guests+" "+plural(guests,"гость","гостя","гостей")+" на лендинге</p>":"")+"</div>";
+  const users=admFilterUsers();
+  el.innerHTML='<div class="adm-h"><div><h1>Админ-панель</h1><p class="muted">Обновлено '+new Date(ADM.at).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})+' · обновляется само каждые 30 с</p></div><div class="row"><div class="seg" id="admDays">'+[7,30,90].map(d=>'<button data-admdays="'+d+'" aria-pressed="'+(ADM.days===d)+'">'+d+" дней</button>").join("")+'</div><button class="btn sm" data-admrefresh>'+ic("refresh",16)+"Обновить</button></div></div>"+
+    '<div class="akpis">'+
+      kpi("Онлайн сейчас",k.online,k.onlineUsers+" в аккаунте · "+(k.online-k.onlineUsers)+" гостей","live")+
+      kpi("Пользователей",admNum(k.users),"+"+k.newToday+" сегодня · +"+k.new7+" за 7 дней")+
+      kpi("Активны",k.active1+" сегодня",k.active7+" за 7 дней")+
+      kpi("Ответов сегодня",admNum(k.answersToday),admNum(k.answers)+" всего · точность "+k.acc+"%")+
+      kpi("Посетители сегодня",admNum(k.visitorsToday),admNum(k.viewsToday)+" просмотров")+
+      kpi("Рассылка · Premium",subs+" · "+prem,"получают письма · платных")+
+    "</div>"+
+    '<div class="agrid g2">'+
+      card("Сейчас на сайте",online)+
+      card("Воронка <small>за "+o.days+" дн.</small>",'<div class="afun">'+fun.map((x,i)=>'<div class="afr"><span>'+x[0]+'</span><span class="alb"><i style="width:'+(x[1]/f0*100)+'%"></i></span><b>'+admNum(x[1])+"</b><small>"+(i?Math.round(x[1]/Math.max(1,fun[i-1][1])*100)+"%":"")+"</small></div>").join("")+"</div>")+
+      card("Посещаемость <small>за "+o.days+" дн.: "+admNum(sum("visitors"))+" посетителей · "+admNum(sum("regs"))+" регистраций</small>",admChart(S0,"visitors",{line:"regs",unit:"посетителей",lunit:"регистраций",title:"Посещаемость"})+'<div class="aleg"><span class="k1">посетители</span><span class="k2">регистрации</span></div>')+
+      card("Учёба <small>ответы на карточки и сколько человек училось</small>",admChart(S0,"answers",{line:"learners",unit:"ответов",lunit:"учеников",title:"Учёба"})+'<div class="aleg"><span class="k1">ответы</span><span class="k2">ученики</span></div>')+
+    "</div>"+
+    '<div class="agrid g3">'+
+      card("Откуда пришли",admList(o.refs.length?o.refs:[["Прямые заходы",0]].filter(x=>x[1])))+card("Страны <small>по часовому поясу</small>",admList(o.countries))+card("Устройства",admList(o.devices))+
+      card("Что учат <small>открытые разделы</small>",admList(o.popular))+
+      card("Трудные слова <small>чаще всего «Не знаю»</small>",o.hard.length?'<div class="ahard">'+o.hard.slice(0,ADM.hardOpen?10:3).map(w=>"<div><b>"+esc(w.de)+"</b><span>"+esc(w.ru)+"</span><em>"+w.miss+"</em></div>").join("")+"</div>"+(o.hard.length>3?'<button class="amore" data-admhard>'+(ADM.hardOpen?"Свернуть":"Показать все ("+Math.min(10,o.hard.length)+")")+"</button>":""):'<p class="muted" style="margin:0">Пока нет ошибок</p>')+
+      card("Режимы <small>точность ответов</small>",admList(o.modes.map(m=>[(MN[m[0]]||m[0])+" · "+admNum(m[2]),m[2]?Math.round(m[1]/m[2]*100):0]),{pct:1}))+
+    "</div>"+
+    (o.schreiben?card("EPD Schreiben <small>проверенные тексты за "+o.days+" дн.</small>",admSchreiben(o.schreiben,o.days),"wide"):"")+
+    card("Напоминания владельцу <small>что обсудить перед запуском</small>",'<ul class="todo"><li><b>Платная подписка.</b> Решить модель: подготовка бесплатно, подписка на ИИ-помощника. Обсудить с агентом цены, лимиты, Stripe.</li><li><b>Юридическое.</b> Контактная почта в правовых текстах, Impressum, проверка условий юристом.</li><li><b>Репозиторий</b> на GitHub сейчас публичный: сделать приватным.</li></ul>',"wide")+
+    (o.ai?card("Расходы ИИ <small>«Практика» в Wörter и проверка текстов в Schreiben · "+(o.ai.key?"модель "+esc(o.ai.model):"тестовый режим: ключ Claude не подключён, проверяет только LanguageTool")+"</small>",admAI(o.ai,o.days),"wide"):"")+
+    card("Пользователи <small>"+users.length+" из "+U.length+" · нажми на строку, чтобы открыть карточку</small>",'<div class="row" style="margin-bottom:12px"><label class="search asearch">'+ic("search",18)+'<input type="search" id="admQ" placeholder="Имя, почта, страна" value="'+esc(ADM.q)+'"></label><button class="btn sm" data-admmails title="Только те, кто не отписался от писем (с учётом поиска)">'+ic("copy",16)+"Почты для рассылки</button></div>"+admTable(users),"wide");
+  el.querySelector("#admQ").oninput=e=>{ADM.q=e.target.value;const t=el.querySelector(".atable-w");t.outerHTML=admTable(admFilterUsers());};
+}
+function admFilterUsers(){
+  const q=ADM.q.trim().toLowerCase();
+  const rows=ADM.users.filter(u=>!q||[u.name,u.email,u.country,u.device,PLAN_RU[u.plan]].join(" ").toLowerCase().includes(q));
+  return rows.sort((a,b)=>{const x=a[ADM.sort],y=b[ADM.sort];return(typeof x==="string"?String(x).localeCompare(String(y)):(x||0)-(y||0))*ADM.dir});
+}
+const ADM_COLS=[["name","Пользователь"],["plan","Тариф"],["last_seen","Был(а)"],["cur","Сейчас учит"],["learned","Выучено"],["acc","Точность"],["streak","Серия"],["s_total","Тексты"],["xp","XP"],["country","Страна"],["created","Регистрация"]];
+function admTable(rows){
+  const th=ADM_COLS.map(c=>'<th><button data-admsort="'+c[0]+'">'+c[1]+(ADM.sort===c[0]?(ADM.dir<0?" ↓":" ↑"):"")+"</button></th>").join("");
+  const td=u=>{const on=admOnline(u.id);return"<tr data-admuser=\""+u.id+'"><td><span class="aus">'+uava(u,28)+"<span><b>"+esc(u.name)+(u.owner?" 👑":"")+(u.role==="admin"?' <em class="arole">админ</em>':"")+"</b><small>"+esc(u.email)+"</small></span></span></td>"+
+    '<td><span class="aplan '+esc(u.plan)+'">'+(PLAN_RU[u.plan]||esc(u.plan))+"</span></td><td>"+(on?'<span class="aonline">онлайн</span>':admAgo(u.last_seen))+"</td><td>"+esc(u.cur||"—")+"</td><td>"+u.learned+"</td><td>"+(u.answers?u.acc+"%":"—")+"</td><td>"+(u.streak?"🔥 "+u.streak:"—")+"</td><td>"+(u.s_total?u.s_total+" · "+u.s_avg+"%":"—")+"</td><td>"+admNum(u.xp)+"</td><td>"+esc(u.country)+"</td><td>"+new Date(u.created*1000).toLocaleDateString("ru-RU")+"</td></tr>"};
+  return'<div class="atable-w"><table class="atable"><thead><tr>'+th+"</tr></thead><tbody>"+(rows.length?rows.map(td).join(""):'<tr><td colspan="'+ADM_COLS.length+'" class="muted">Никого не нашлось</td></tr>')+"</tbody></table></div>";
+}
+async function admUser(id){
+  try{
+    const j=await api("GET","/admin/user/"+id),u=j.user,on=admOnline(id);
+    const days=j.days.map(d=>({day:d.day,a:d.a,k:d.k}));
+    ask(u.name,'<div class="aud"><p class="muted" style="margin-top:0">'+esc(u.email)+" · код друга "+esc(u.code)+"<br>"+esc(u.country)+(u.tz?" ("+esc(u.tz)+")":"")+" · "+esc(u.device||"устройство неизвестно")+" · язык "+esc(u.lang||"—")+"<br>Регистрация "+new Date(u.created*1000).toLocaleString("ru-RU")+"</p>"+
+      '<div class="anow '+(on?"on":"")+'"><i class="dot"></i><span><b>'+(on?"Сейчас на сайте":"Не на сайте")+"</b><small>"+(on?admDoing(on)+" · "+esc(on.device||""):"Был(а) "+admAgo(u.last_seen)+(u.cur?" · последнее, что учил(а): "+esc(u.cur):""))+"</small></span></div>"+
+      '<div class="rep-g"><div><small>XP · уровень</small><b>'+admNum(u.xp)+"</b>ур. "+u.level+'</div><div><small>Выучено</small><b>'+u.learned+"</b>из "+u.started+' начатых</div><div><small>Ответов</small><b>'+admNum(u.answers)+"</b>"+u.acc+'%</div><div><small>Серия</small><b>'+u.streak+"</b>"+u.active_days+" дн. учёбы</div></div>"+
+      '<h4>Последние 30 дней</h4>'+admChart(days,"a",{line:"k",unit:"ответов",lunit:"верно"})+
+      "<h4>Недавно открывал(а)</h4><p>"+(j.recent.length?j.recent.map(esc).join(" · "):"пока ничего")+"</p>"+
+      "<h4>Трудные слова</h4>"+(j.hard.length?'<div class="ahard">'+j.hard.map(w=>"<div><b>"+esc(w.de)+"</b><span>"+esc(w.ru)+"</span><em>"+w.miss+"</em></div>").join("")+"</div>":"<p>ошибок пока нет</p>")+
+      '<p class="muted">Цель дня: '+j.goal+" · папок: "+j.folders+" · своих наборов: "+u.usets+" · друзей: "+j.friends+" · общих ссылок: "+j.shares+" · экзамен: "+esc(u.exam||"не указан")+" · обучение: "+(u.tour?"пройдено":"нет")+"</p>"+
+      "<h4>Аккаунт</h4>"+
+      '<div class="aacc"><div><small>Роль</small><b>'+(ROLE_RU[u.role]||"Пользователь")+'</b></div><div><small>Почта</small><b>'+(u.verified?"подтверждена":"не подтверждена")+'</b></div><div><small>Тариф</small><b><span class="aplan '+esc(u.plan)+'">'+(PLAN_RU[u.plan]||esc(u.plan))+"</span></b></div><div><small>Рассылка</small><b>"+(u.news?"получает":"отписан(а)")+"</b></div></div>"+
+      (isOwner()?'<div class="row aact"><button type="button" class="btn sm" disabled title="Появится вместе с платной подпиской">'+ic("crown",16)+'Выдать Premium · скоро</button><button type="button" class="btn sm" data-admreset="'+u.id+'">'+ic("key",16)+'Ссылка для нового пароля</button><a class="btn sm" href="mailto:'+esc(u.email)+'" style="text-decoration:none">'+ic("mail",16)+"Написать письмо</a></div>"+
+        (u.owner?'<p class="muted" style="margin:12px 0 0">Это владелец сайта. Удалить его или снять роль нельзя, права можно только передать.</p>':
+        '<h4>Роль и права</h4><div class="row aact"><button type="button" class="btn sm" data-admrole="'+u.id+'" data-r="'+(u.role==="admin"?"user":"admin")+'">'+ic("shield",16)+(u.role==="admin"?"Убрать из админов":"Сделать админом")+'</button><button type="button" class="btn sm" data-admowner="'+u.id+'">'+ic("crown",16)+'Передать права владельца</button><button type="button" class="btn sm danger" data-admdel="'+u.id+'">'+ic("trash",16)+"Удалить аккаунт</button></div>"+
+        '<p class="muted" style="margin:8px 0 0;font-size:13px">Админ видит всю админ-панель, но не может удалять аккаунты, менять роли и отправлять письма.</p>'):
+       '<p class="muted" style="margin:12px 0 0">У тебя доступ администратора: можно смотреть, но менять и удалять может только владелец.</p>')+"</div>",()=>{},"Закрыть");
+    $("#dlgNo").hidden=true;$("#dlg").classList.add("wide");
+    $("#dlg").addEventListener("close",()=>{$("#dlgNo").hidden=false;$("#dlg").classList.remove("wide")},{once:true});
+    ADM.cur=u;
+  }catch(e){toast("⚠️ "+e.message)}
+}
+// передача прав владельца: только с паролем текущего владельца; после этого ты становишься админом
+function admOwner(u,err){
+  ask("Передать права владельца «"+u.name+"»?",'<p style="margin-top:0">'+esc(u.name)+" станет владельцем: сможет удалять аккаунты, менять роли и передавать права дальше. Ты станешь админом и сможешь только смотреть. Вернуть права сможет только новый владелец.</p>"+'<label class="aform" style="max-width:none">Введи свой пароль для подтверждения<input type="password" id="admOwnPw" autocomplete="current-password"></label><p class="aerr" role="alert">'+esc(err||"")+"</p>",async()=>{
+    try{await api("POST","/admin/user/"+u.id+"/owner",{password:$("#admOwnPw").value});const j=await api("GET","/me");ME=j.user;renderAcctBtn();toast("👑 Права переданы",u.name+" теперь владелец");renderAdmin()}catch(e){admOwner(u,e.message)}
+  },"Передать права","Отмена");
+}
+// удаление аккаунта из админки: подтверждаем, вписав почту пользователя
+function admDelete(u,err){
+  ask("Удалить аккаунт «"+u.name+"»?",'<p style="margin-top:0">Удалятся <b>навсегда</b>: аккаунт, прогресс, статистика, свои наборы, друзья и общие ссылки. Отменить нельзя.</p><label class="aform" style="max-width:none">Для подтверждения впиши почту <b>'+esc(u.email)+'</b><input type="text" id="admDelMail" autocomplete="off"></label><p class="aerr" role="alert">'+esc(err||"")+"</p>",async()=>{
+    const m=$("#admDelMail").value.trim();if(m.toLowerCase()!==u.email.toLowerCase())return admDelete(u,"Почта не совпадает");
+    try{await api("DELETE","/admin/user/"+u.id,{email:m});toast("🗑️ Аккаунт удалён",u.email);renderAdmin()}catch(e){admDelete(u,e.message)}
+  },"Удалить навсегда","Отмена");
+}
+document.addEventListener("click",e=>{
+  const d=e.target.closest("[data-admdays]");if(d){ADM.days=+d.dataset.admdays;renderAdmin();return}
+  if(e.target.closest("[data-admrefresh]")){renderAdmin();return}
+  if(e.target.closest("[data-admmails]")){const m=[...new Set(admFilterUsers().filter(u=>u.news).map(u=>(u.email||"").trim().toLowerCase()).filter(Boolean))];if(!m.length)return toast("Все отписались от писем");copyText(m.join(", "),"📋 Скопировано адресов: "+m.length);return}
+  if(e.target.closest("[data-admhard]")){ADM.hardOpen=!ADM.hardOpen;lsSet("epd_admhard",ADM.hardOpen?"1":null);drawAdmin();return}
+  const rs=e.target.closest("[data-admreset]");if(rs){e.preventDefault();api("POST","/admin/user/"+rs.dataset.admreset+"/reset").then(j=>toast(j.mail?"✉️ Письмо отправлено":"✉️ Почта не настроена",j.mail?"Ссылка действует час":"Ссылка напечатана в консоли сервера"),er=>toast("⚠️ "+er.message));return}
+  const ro=e.target.closest("[data-admrole]");if(ro){e.preventDefault();api("POST","/admin/user/"+ro.dataset.admrole+"/role",{role:ro.dataset.r}).then(()=>{$("#dlg").close();toast(ro.dataset.r==="admin"?"🛡️ Теперь админ":"Больше не админ");renderAdmin()},er=>toast("⚠️ "+er.message));return}
+  const ow=e.target.closest("[data-admowner]");if(ow){e.preventDefault();const u=ADM.cur;$("#dlg").close();if(u)setTimeout(()=>admOwner(u),60);return}
+  const dl=e.target.closest("[data-admdel]");if(dl){e.preventDefault();const u=ADM.cur;$("#dlg").close();if(u)setTimeout(()=>admDelete(u),60);return}
+  const so=e.target.closest("[data-admsort]");if(so){const k=so.dataset.admsort;ADM.dir=ADM.sort===k?-ADM.dir:-1;ADM.sort=k;$(".atable-w").outerHTML=admTable(admFilterUsers());return}
+  const ur=e.target.closest("[data-admuser]");if(ur&&!e.target.closest("#dlg")){admUser(+ur.dataset.admuser)}
+});
+
+// ---------- практика: свои предложения, проверка — LanguageTool + Claude Haiku (/api/practice/check) ----------
+// Разговор с ИИ отсюда убран: устная часть будет в отдельном модуле EPD Sprechen.
+let prWord=null;
+// Слова для «Пиши» — выученные в карточках. Каждое слово после практики возвращается через растущий интервал,
+// так что старые слова время от времени снова попадаются вперемешку с новыми. S.pw[id]=[день практики, сколько раз]
+const PR_INT=[0,2,5,12,30,60];
+const prRec=id=>(S.pw||{})[id];
+
+// запуск: только владелец и админы; остальным — вежливый отказ
+function unmask(){const d=document.documentElement;const out=()=>{d.classList.add("bootout");setTimeout(()=>d.classList.remove("boot","bootout"),560)};setTimeout(()=>document.hidden?out():requestAnimationFrame(out),450)}
+$("#themeBtn").onclick=()=>{const d=document.documentElement,dark=d.getAttribute("data-theme")==="dark"||(!d.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches),t=dark?"light":"dark";d.setAttribute("data-theme",t);try{const o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");o.theme=t;localStorage.setItem("usd3-v1",JSON.stringify(o))}catch(e){}};
+(async()=>{
+  try{const j=await api("GET","/me");ME=j.user}catch(e){}
+  const el=$("#p-admin");
+  if(!ME){el.innerHTML='<div class="deny">'+(window.EP?EP.mascot("think",110):"")+'<h1>Нужно войти</h1><p class="muted">Админ-панель открывается после входа в аккаунт владельца или администратора.</p><a class="btn primary" href="/">Войти на EPDeutsch</a></div>';unmask();return}
+  if(!isAdmin()){el.innerHTML='<div class="deny">'+(window.EP?EP.mascot("sad",110):"")+'<h1>Сюда нельзя</h1><p class="muted">Эта страница только для владельца и администраторов EPDeutsch.</p><a class="btn primary" href="/start">К модулям</a></div>';unmask();return}
+  $("#me").innerHTML=uava(ME,34)+"<b>"+esc(ME.name)+"</b>";
+  await renderAdmin();unmask();
+})();
+
+</script>
+</body>
+</html>

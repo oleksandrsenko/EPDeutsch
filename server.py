@@ -1106,7 +1106,7 @@ CHECK_SYSTEM = """Ты проверяешь одно предложение ст
 Что вернуть:
 - verdict: "ok" — ошибок нет; "minor" — смысл понятен, но есть ошибки (окончание, артикль, падеж, порядок слов, запятая); "wrong" — грубые ошибки, смысл искажён, заданное слово употреблено неверно или это не немецкое предложение.
 - corrected: исправленный вариант. Меняй минимум, сохраняй мысль и слова студента. Если ошибок нет, повтори предложение без изменений.
-- errors: каждая ошибка отдельно. wrong — неверный фрагмент точно как в тексте студента, right — исправленный фрагмент, why — объяснение по-русски одной короткой фразой (до 15 слов) с правилом, например «после wegen — Genitiv». Не больше 5 ошибок, важные первыми. Вкусовые замены не ошибки. Если ошибок нет — пустой список.
+- errors: каждая ошибка отдельно. wrong — неверный фрагмент точно как в тексте студента, right — исправленный фрагмент, why — объяснение по-русски одной фразой (до 20 слов) живым языком, как хороший учитель говорит ученику на «ты»: что не так именно здесь и как запомнить, например «wegen любит Genitiv: wegen des Wetters, а не wegen dem Wetter». Не больше 5 ошибок, важные первыми. Вкусовые замены не ошибки. Если ошибок нет — пустой список.
 - word_ok: true, если заданное слово использовано (в любой грамматической форме, глагол с отделяемой приставкой — и в разделённом виде) правильно по смыслу и управлению.
 - word_note: по-русски одна-две короткие фразы: что получилось с заданным словом; если слово не использовано, скажи это прямо.
 - score: оценка предложения как на EPD: 5 — без ошибок и естественно; 4 — одна мелкая ошибка; 3 — несколько мелких или одна заметная; 2 — понятно с трудом; 1 — непонятно или не по заданию.
@@ -1154,7 +1154,8 @@ def practice_check(c, u, d):
     if not re.search(r"[A-Za-zÄÖÜäöüß]{2}", text):
         raise ApiError(400, "Напиши предложение по-немецки")
     key = ai_key()
-    ck = hashlib.sha256(json.dumps([AI_MODEL if key else "lt", de, text], ensure_ascii=False).encode()).hexdigest()
+    lang = d.get("lang") if d.get("lang") in LANGS else (u["ui_lang"] or "ru")
+    ck = hashlib.sha256(json.dumps([AI_MODEL if key else "lt", de, text, lang], ensure_ascii=False).encode()).hexdigest()
     row = c.execute("SELECT out FROM ai_cache WHERE key=?", (ck,)).fetchone()
     if row:  # то же предложение с тем же словом уже проверяли — ИИ не зовём
         return dict(json.loads(row["out"]), cached=True)
@@ -1178,7 +1179,8 @@ def practice_check(c, u, d):
         content = ("Заданное слово: %s (%s)%s\nПример из учебника: %s\nПредложение студента: «%s»\nНаходки LanguageTool:\n%s"
                    % (de, ru, ("; пометка: " + note) if note else "", ex or "—", text, found))
         try:
-            res, inp, outp = claude(CHECK_SYSTEM, content, CHECK_SCHEMA)
+            system = CHECK_SYSTEM if lang == "ru" else CHECK_SYSTEM.replace("по-русски", "по-английски (in English)")
+            res, inp, outp = claude(system, content, CHECK_SCHEMA)
         except Exception as e:  # noqa: BLE001
             sys.stderr.write("Claude: %r\n" % e)
             ai_log(c, u["id"], "check", AI_MODEL, ms=int((time.time() - t0) * 1000), err=str(e)[:200])
@@ -1314,7 +1316,7 @@ def schreiben_summary(c, uid):
 
 
 # ---------- дружеские забеги: кто больше наберёт за 3–14 дней ----------
-RACE_METRICS = {"xp": "XP во всех модулях", "texts": "тексты в Schreiben"}
+RACE_METRICS = {"xp": "XP во всех модулях", "texts": "Тексты в Schreiben"}
 
 
 def race_value(c, uid, metric, start, end):

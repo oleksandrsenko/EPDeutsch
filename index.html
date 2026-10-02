@@ -99,7 +99,7 @@ try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}"),a=localStorage.getIt
 // кто уже вошёл и открывает сайт с главной, сначала попадает на экран модулей (/start); оттуда в Wörter уже без переброса
 if(a&&location.pathname==="/"&&!location.search&&!location.hash&&!sessionStorage.getItem("ep_hub")){location.replace("/start");return}
 if(o.theme)d.setAttribute("data-theme",o.theme);
-if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc");if(a&&o.navHide)d.classList.add("bootnav")}catch(e){}})();
+if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc");if(a&&o.navHide!==false)d.classList.add("bootnav")}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3447,6 +3447,10 @@ const TOUR=[
    text:()=>"Отвечай честно: «Не знаю», и слово вернётся в этом же круге. "+(narrow()?"Можно и свайпом: вправо «знаю», влево «нет».":touch()?"Можно и свайпом: вправо «знаю», влево «нет».":"Можно стрелками: <kbd>→</kbd> знаю, <kbd>←</kbd> нет.")},
   {emo:"🔔",title:()=>"Тут повторяешь",prep(){if(curTab!=="home"){go("home");return 250}},el:()=>$("#p-home [data-due]")||$("#p-home .hero"),
    text:"Каждое слово возвращается через 1, 3, 7, 14 и 30 дней, ровно тогда, когда начинает забываться. Заглядывай сюда каждый день.",btn:"Дальше"},
+  {emo:"☰",title:()=>"Здесь меню",
+   prep(){document.body.classList.remove("navopen");applyNav();return 300},
+   el:()=>$("#burger"),
+   text:"Нажми на три полоски, и откроется меню со всеми разделами: карточки, слова по темам, «Практика с ИИ», план, прогресс и друзья. Закрывается так же.",btn:"Дальше"},
   {emo:"🤝",title:()=>"А здесь друзья",
    prep(){if(mqNarrow.matches)document.body.classList.add("navopen");else document.body.classList.remove("navhide");return 320},
    el:()=>$('.nav a[data-tab="friends"]'),
@@ -3930,10 +3934,12 @@ document.addEventListener("click",e=>{
 });
 // меню: на широком экране сворачивается влево; на странице карточек по умолчанию свёрнуто
 const mqNarrow=matchMedia("(max-width:980px)");
-function applyNav(){document.body.classList.toggle("navhide",!!S.navHide)}
+// меню на компьютере по умолчанию закрыто: про кнопку ☰ рассказывает обучение; выбор общий с Schreiben
+const navHidden=()=>S.navHide!==false;
+function applyNav(){document.body.classList.toggle("navhide",navHidden())}
 $("#burger").onclick=()=>{
   if(mqNarrow.matches){document.body.classList.toggle("navopen");return}
-  S.navHide=!S.navHide;save()
+  S.navHide=!navHidden();save()
   applyNav();
 };
 // фокус-режим: только карточка

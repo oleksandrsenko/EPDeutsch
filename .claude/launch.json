@@ -1,1 +1,18 @@
-{"version": "0.0.1", "configurations": [{"name": "epd", "runtimeExecutable": "python3", "runtimeArgs": ["server.py", "8791"], "port": 8791}, {"name": "epm-demo", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8933", "--bind", "127.0.0.1"], "port": 8933}]}
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "epd-v2",
+      "runtimeExecutable": "/usr/bin/env",
+      "runtimeArgs": [
+        "SCHREIBEN_DIR=/Users/aleksandrsenko/EPDeutsch/EPSchreiben/.claude/worktrees/schreiben-v2",
+        "UNISICHER_DB=/private/tmp/claude-501/-Users-aleksandrsenko-EPDeutsch-EPDeutschWorter/3f2f8247-8005-4a08-899c-0d1b841641a1/scratchpad/testdb/test.db",
+        "OWNER_EMAILS=owner.test@example.test",
+        "python3",
+        "server.py",
+        "8771"
+      ],
+      "port": 8771
+    }
+  ]
+}

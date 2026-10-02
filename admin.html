@@ -83,7 +83,8 @@ dialog[open]{animation:cardIn .25s}dialog::backdrop{background:rgba(10,9,45,.45)
 .toast{background:var(--fg);color:var(--bg);padding:12px 20px;border-radius:18px;box-shadow:var(--sh-card);text-align:center;transition:opacity .4s;animation:cardIn .3s}
 .toast b{display:block}.toast small{opacity:.75;font-weight:600}
 .deny{max-width:460px;margin:60px auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
-.todo{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px}
+.todo{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+.todo li{padding:10px 14px;border-radius:14px;background:var(--panel2)}
 /* ---------- админ-панель ---------- */
 .admin h1{margin:0}
 .adm-h{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px}
@@ -93,7 +94,11 @@ dialog[open]{animation:cardIn .25s}dialog::backdrop{background:rgba(10,9,45,.45)
 .akpi small{color:var(--muted);font-weight:700;font-size:12.5px}
 .akpi b{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.2}
 .akpi span{color:var(--muted);font-size:12.5px;font-weight:600}
-.acard2 .akpi{background:var(--panel2);box-shadow:none}.akpi.warn{background:var(--bad-soft)}.akpi.warn b{color:var(--bad)}
+.acard2 .akpis{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:0}
+.acard2 .akpi{background:var(--panel2);box-shadow:none}.acard2 .akpi b{font-size:22px}
+.acard2.wide{margin-bottom:12px}
+.acard2 .agrid{margin-bottom:0}
+.aempty{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px;padding:6px 0}.aempty .em{line-height:0;flex:none}.akpi.warn{background:var(--bad-soft)}.akpi.warn b{color:var(--bad)}
 .aai-h{margin:0 0 8px;font-size:14px}
 .aai-bl div{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line2);font-size:13.5px}.aai-bl div:first-child{border-top:0}
 .aai-bl span{color:var(--bad)}.aai-bl small{color:var(--muted)}
@@ -190,8 +195,10 @@ function admSchreiben(w,days){
   const kp=(t,v,sub)=>'<div class="akpi"><small>'+t+"</small><b>"+v+"</b><span>"+sub+"</span></div>";
   return'<div class="akpis">'+kp("Текстов за "+days+" дн.",admNum(w.period),admNum(w.total)+" всего · пишут "+w.writers)+kp("Средний балл",w.avg+"%","минимум для зачёта 48%")+
     kp("Зачёт",w.period?Math.round(w.passed/w.period*100)+"%":"—",w.passed+" из "+w.period+" текстов")+kp("Цена одной проверки",usd(w.gradeUsd),w.grades?"по "+w.grades+" проверкам · ~"+w.gradeSec+" с":"проверок ещё не было")+"</div>"+
-    '<div class="agrid g2" style="margin:0"><div>'+admChart(w.series.map(r=>({day:r.day,n:r.n})),"n",{unit:"текстов",title:"Тексты"})+'</div><div><h4 class="aai-h">Кто пишет больше всех</h4>'+(w.byUser.length?'<div class="alist">'+w.byUser.map(r=>'<div class="ali"><span class="alt">'+esc(r[0])+'</span><span class="alb"><i style="width:'+(r[1]/w.byUser[0][1]*100)+'%"></i></span><b>'+r[1]+" · "+r[2]+"%</b></div>").join("")+"</div>":'<p class="muted" style="margin:0">Пока никто</p>')+"</div></div>";
+    (!w.period?admEmpty("sleep","За "+days+" дн. проверенных текстов не было. Здесь появятся график и самые активные авторы."):
+    '<div class="agrid g2" style="margin:12px 0 0"><div>'+admChart(w.series.map(r=>({day:r.day,n:r.n})),"n",{unit:"текстов",title:"Тексты"})+'</div><div><h4 class="aai-h">Кто пишет больше всех</h4>'+(w.byUser.length?'<div class="alist">'+w.byUser.map(r=>'<div class="ali"><span class="alt">'+esc(r[0])+'</span><span class="alb"><i style="width:'+(r[1]/w.byUser[0][1]*100)+'%"></i></span><b>'+r[1]+" · "+r[2]+"%</b></div>").join("")+"</div>":'<p class="muted" style="margin:0">Пока никто</p>')+"</div></div>");
 }
+const admEmpty=(mood,t)=>'<div class="aempty" style="margin-top:12px">'+(window.EP?'<span class="em">'+EP.mascot(mood,48)+"</span>":"")+"<span>"+t+"</span></div>";
 const admNum=n=>(+n||0).toLocaleString("ru-RU");
 const TAB_RU={home:"Главная",learn:"Карточки",practice:"Практика",list:"Слова по темам",plan:"План",prog:"Прогресс",edit:"Редактор",acct:"Аккаунт",friends:"Друзья",land:"Лендинг",legal:"Правила",admin:"Админка",guide:"Гид по EPD"};
 // столбики (+ линия второго ряда); подписи дат — через одну-две, подсказка при наведении
@@ -273,9 +280,9 @@ function drawAdmin(){
       card("Режимы <small>точность ответов</small>",admList(o.modes.map(m=>[(MN[m[0]]||m[0])+" · "+admNum(m[2]),m[2]?Math.round(m[1]/m[2]*100):0]),{pct:1}))+
     "</div>"+
     (o.schreiben?card("EPD Schreiben <small>проверенные тексты за "+o.days+" дн.</small>",admSchreiben(o.schreiben,o.days),"wide"):"")+
-    card("Напоминания владельцу <small>что обсудить перед запуском</small>",'<ul class="todo"><li><b>Платная подписка.</b> Решить модель: подготовка бесплатно, подписка на ИИ-помощника. Обсудить с агентом цены, лимиты, Stripe.</li><li><b>Юридическое.</b> Контактная почта в правовых текстах, Impressum, проверка условий юристом.</li><li><b>Репозиторий</b> на GitHub сейчас публичный: сделать приватным.</li></ul>',"wide")+
     (o.ai?card("Расходы ИИ <small>«Практика» в Wörter и проверка текстов в Schreiben · "+(o.ai.key?"модель "+esc(o.ai.model):"тестовый режим: ключ Claude не подключён, проверяет только LanguageTool")+"</small>",admAI(o.ai,o.days),"wide"):"")+
-    card("Пользователи <small>"+users.length+" из "+U.length+" · нажми на строку, чтобы открыть карточку</small>",'<div class="row" style="margin-bottom:12px"><label class="search asearch">'+ic("search",18)+'<input type="search" id="admQ" placeholder="Имя, почта, страна" value="'+esc(ADM.q)+'"></label><button class="btn sm" data-admmails title="Только те, кто не отписался от писем (с учётом поиска)">'+ic("copy",16)+"Почты для рассылки</button></div>"+admTable(users),"wide");
+    card("Пользователи <small>"+users.length+" из "+U.length+" · нажми на строку, чтобы открыть карточку</small>",'<div class="row" style="margin-bottom:12px"><label class="search asearch">'+ic("search",18)+'<input type="search" id="admQ" placeholder="Имя, почта, страна" value="'+esc(ADM.q)+'"></label><button class="btn sm" data-admmails title="Только те, кто не отписался от писем (с учётом поиска)">'+ic("copy",16)+"Почты для рассылки</button></div>"+admTable(users),"wide")+
+    card("Напоминания владельцу <small>что обсудить перед запуском</small>",'<ul class="todo"><li><b>Платная подписка.</b> Решить модель: подготовка бесплатно, подписка на ИИ-помощника. Обсудить с агентом цены, лимиты, Stripe.</li><li><b>Юридическое.</b> Контактная почта в правовых текстах, Impressum, проверка условий юристом.</li><li><b>Репозиторий</b> на GitHub сейчас публичный: сделать приватным.</li></ul>',"wide");
   el.querySelector("#admQ").oninput=e=>{ADM.q=e.target.value;const t=el.querySelector(".atable-w");t.outerHTML=admTable(admFilterUsers());};
 }
 function admFilterUsers(){

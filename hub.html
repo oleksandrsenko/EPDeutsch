@@ -70,9 +70,9 @@ a.card:hover .go{transform:translateX(4px)}
 .note{margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
 /* экран загрузки: пока не пришли данные, человек видит только логотип */
 .load{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .45s ease,visibility .45s}
-.load .lg{animation:breathe 1.6s ease-in-out infinite}
+.load .lg{position:relative;z-index:1}
 .load{position:fixed}.load .sp2{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;border:3px solid var(--primary-soft);border-top-color:var(--primary);animation:spin .9s linear infinite}
-.load .lg{animation:bob 1.2s ease-in-out infinite}
+.load .lg{animation:none}
 @keyframes bob{45%{transform:translateY(-7px) scale(1.04)}}
 .load p{position:absolute;top:calc(50% + 66px)}
 .load p{margin:0;color:var(--muted);font-weight:600;font-size:14px}

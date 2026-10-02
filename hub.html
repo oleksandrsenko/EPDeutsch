@@ -16,20 +16,20 @@
 <style>
 :root{
   --bg:#F6F7FB;--panel:#FFFFFF;--panel2:#EDEFF4;--fg:#282E3E;--muted:#586380;--line:#D9DDE8;--line2:#EDEFF4;
-  --primary:#7E6FB8;--primary-h:#6E5FA8;--primary-soft:#EFEBFA;--good:#18AE79;--good-soft:#E3F7EF;--yellow:#FFCD1F;
-  --c-w:#7E6FB8;--c-s:#E8505B;--c-l:#3D7BF7;--c-g:#F28C28;--c-p:#18AE79;
+  --primary:#0E8C7F;--primary-h:#0B7569;--primary-soft:#DDF3EF;--acc-rgb:14,140,127;--oli:#2BB3A3;--oli-d:#159283;--good:#18AE79;--good-soft:#E3F7EF;--yellow:#FFCD1F;
+  --c-w:#7E6FB8;--c-s:#C4687A;--c-l:#3D7BF7;--c-g:#F28C28;--c-p:#18AE79;
   --sh:0 .25rem 1rem 0 rgba(40,46,62,.08);--sh-card:0 .6rem 2rem 0 rgba(40,46,62,.16);
   --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
-  --primary:#8E7FCB;--primary-h:#A092D6;--primary-soft:#3A3160;--good:#3CCFA0;--good-soft:#18423A;
-  --c-w:#A092D6;--c-s:#FF7F87;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
+  --primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--acc-rgb:59,194,178;--good:#3CCFA0;--good-soft:#18423A;
+  --c-w:#A092D6;--c-s:#D98DA0;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
   --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
-  --primary:#8E7FCB;--primary-h:#A092D6;--primary-soft:#3A3160;--good:#3CCFA0;--good-soft:#18423A;
-  --c-w:#A092D6;--c-s:#FF7F87;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
+  --primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--acc-rgb:59,194,178;--good:#3CCFA0;--good-soft:#18423A;
+  --c-w:#A092D6;--c-s:#D98DA0;--c-l:#7FA6FF;--c-g:#FFA95E;--c-p:#3CCFA0;
   --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -87,12 +87,12 @@ body:not(.ready) .card{animation-play-state:paused}
 </head>
 <body>
 <div class="load" id="load" role="status" aria-live="polite">
-  <svg class="lg" viewBox="0 0 34 34" width="56" height="56" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--bg)" stroke-width="2.5"/></svg>
+  <svg class="lg" viewBox="-4.5 -4.5 39 39" width="64" height="64" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--bg)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div class="sp2"></div>
   <p id="loadTxt">Загружаем твои модули…</p>
 </div>
 <header class="top">
-  <a class="logo" href="/start"><svg viewBox="0 0 34 34" width="32" height="32" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--bg)" stroke-width="2.5"/></svg>EPDeutsch</a>
+  <a class="logo" href="/start"><svg viewBox="0 0 34 34" width="32" height="32" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" style="fill:var(--primary)"/><path d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--bg)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>EPDeutsch</a>
   <div class="sp"></div>
   <div class="me" id="me"></div>
 </header>

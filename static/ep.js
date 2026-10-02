@@ -48,11 +48,12 @@ function picker(cur,lang){
     COLORS.map((c,i)=>`<button type="button" class="ep-av ep-avc${+cur===i?" on":""}" data-av="${i}" role="radio" aria-checked="${+cur===i}" title="${en?"Letter":"Буква"}" style="background:${c}"><b>Aa</b></button>`).join("")+"</div>";
 }
 
-/* Талисман Öli: круглый, жёлтый, а точки умлаута над ним — его глаза. Ö → Öli.
+/* Талисман Öli: круглый, а точки умлаута над ним — его глаза. Ö → Öli.
+   Цвет — цвет платформы: страница задаёт --oli (тело) и --oli-d (тень, ручки); без них Öli жёлтый.
    Настроения: happy, cheer, wow, think, sad, sleep, write. */
 function mascot(mood,size,cls){
   mood=mood||"happy";const s=size||96;
-  const body="#FFCD1F",shade="#F5B700";
+  const body="var(--oli,#FFCD1F)",shade="var(--oli-d,#F5B700)";
   const look=mood==="think"?{dx:-1.6,dy:-1.4}:{dx:0,dy:0};
   const eyeG=(x)=>mood==="sleep"
     ?`<circle cx="${x}" cy="34" r="11" fill="#fff"/><path d="M${x-6} 34q6 5 12 0" fill="none" stroke="${INK}" stroke-width="2.8" stroke-linecap="round"/>`
@@ -67,18 +68,18 @@ function mascot(mood,size,cls){
     sleep:`<ellipse cx="60" cy="77" rx="3.5" ry="2.6" fill="${INK}"/>`,
     write:`<path d="M51 74q9 8 18 0" fill="none" stroke="${INK}" stroke-width="3.2" stroke-linecap="round"/>`}[mood]||"";
   const arms=mood==="cheer"
-    ?`<path d="M28 62q-10-8-8-20" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M92 62q10-8 8-20" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/>`
+    ?`<path d="M28 62q-10-8-8-20" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M92 62q10-8 8-20" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/>`
     :mood==="write"
-    ?`<path d="M27 72q-8 4-8 10" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M93 70q9 0 12 6" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><g transform="rotate(35 106 78)"><rect x="102" y="62" width="8" height="26" rx="2" fill="#E8505B"/><path d="M102 88h8l-4 7z" fill="#F7D9A8"/><path d="M104.6 92.5h2.8l-1.4 2.5z" fill="${INK}"/></g>`
-    :`<path d="M27 70q-9 3-9 11" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M93 70q9 3 9 11" stroke="${shade}" stroke-width="8" stroke-linecap="round" fill="none"/>`;
+    ?`<path d="M27 72q-8 4-8 10" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M93 70q9 0 12 6" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><g transform="rotate(35 106 78)"><rect x="102" y="62" width="8" height="26" rx="2" fill="#E8505B"/><path d="M102 88h8l-4 7z" fill="#F7D9A8"/><path d="M104.6 92.5h2.8l-1.4 2.5z" fill="${INK}"/></g>`
+    :`<path d="M27 70q-9 3-9 11" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M93 70q9 3 9 11" style="stroke:${shade}" stroke-width="8" stroke-linecap="round" fill="none"/>`;
   const extra=mood==="sleep"?`<text x="88" y="30" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="15" fill="#8E98B0">z</text><text x="98" y="18" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="11" fill="#8E98B0">z</text>`
     :mood==="cheer"?`<path d="M14 26l3 6 6 1-5 4 1 6-5-3-5 3 1-6-5-4 6-1z" fill="#FF8FA3"/><path d="M104 18l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z" fill="#7FA6FF"/>`
     :mood==="think"?`<circle cx="98" cy="30" r="3" fill="#C9CEDC"/><circle cx="106" cy="20" r="4.5" fill="#C9CEDC"/>`:"";
   return `<svg class="oli oli-${mood}${cls?" "+cls:""}" viewBox="0 0 120 120" width="${s}" height="${s}" role="img" aria-label="Öli">
 <ellipse cx="60" cy="112" rx="28" ry="5" fill="${INK}" opacity=".10" class="oli-shadow"/>
 <g class="oli-body">${arms}
-<path d="M60 38c22 0 36 15 36 36 0 19-15 34-36 34S24 93 24 74c0-21 14-36 36-36z" fill="${body}"/>
-<path d="M30 86c6 13 17 20 30 20s24-7 30-20c-8 8-18 11-30 11s-22-3-30-11z" fill="${shade}" opacity=".7"/>
+<path d="M60 38c22 0 36 15 36 36 0 19-15 34-36 34S24 93 24 74c0-21 14-36 36-36z" style="fill:${body}"/>
+<path d="M30 86c6 13 17 20 30 20s24-7 30-20c-8 8-18 11-30 11s-22-3-30-11z" style="fill:${shade}" opacity=".55"/>
 <ellipse cx="44" cy="58" rx="7" ry="4" fill="#fff" opacity=".45" transform="rotate(-25 44 58)"/>
 <ellipse cx="38" cy="80" rx="6" ry="3.6" fill="#FF8FA3" opacity=".6"/><ellipse cx="82" cy="80" rx="6" ry="3.6" fill="#FF8FA3" opacity=".6"/>
 ${mouth}

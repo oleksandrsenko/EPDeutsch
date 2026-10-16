@@ -1529,9 +1529,7 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
 <script>EP.boot("woerter")</script>
 <header class="top">
   <script>document.write(EP.burger("burger","Меню: разделы, папки, уровень")+EP.logo("woerter","#",' data-tab="home"'))</script>
-  <a class="home-de" href="/" title="Выбор языка"><i><svg viewBox="0 0 5 3" width="26" height="18" preserveAspectRatio="none"><rect width="5" height="1" fill="#000"/><rect width="5" height="1" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg></i><span>DE</span></a>
-  <div id="epMods" style="display:contents"></div>
-  <script>document.getElementById("epMods").innerHTML=EP.modbar("woerter")</script>
+  <script>document.write(EP.searchField())</script>
   <div class="tright">
     <button class="streak" id="streakBtn" data-tab="prog" title="Серия дней с выполненной целью"><script>document.write(EP.icon("flame",18))</script><b id="stN">0</b></button>
     <button class="goal" data-tab="prog" title="Цель дня"><svg viewBox="0 0 36 36" width="40" height="40"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--line2)" stroke-width="4"/><circle id="goalArc" cx="18" cy="18" r="15" fill="none" stroke="var(--good)" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="94.25"/></svg><span id="goalN">0</span></button>
@@ -1550,7 +1548,7 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
 </nav>
 <div class="shell">
   <nav class="nav" id="nav" aria-label="Разделы">
-    <div class="ep-modwrap"><div class="nav-gt">Модули</div><script>document.write(EP.modlist("woerter"))</script></div>
+    <script>document.write(EP.switcher("woerter"))</script>
     <div class="nav-gt">Слова</div>
     <a href="#" data-tab="home"><span class="ni" style="--c:#6F5BD6"><i data-ic="home"></i></span>Главная</a>
     <a href="#" data-tab="learn"><span class="ni" style="--c:#2F7BEA"><i data-ic="cards"></i></span>Карточки</a>
@@ -1561,6 +1559,7 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
     <a href="#" data-tab="plan"><span class="ni" style="--c:#F28C28"><i data-ic="calendar"></i></span>Мой план</a>
     <a href="#" data-tab="prog"><span class="ni" style="--c:#0EA5B7"><i data-ic="chart"></i></span>Прогресс и настройки</a>
     <a href="#" data-tab="friends"><span class="ni" style="--c:#E8505B"><i data-ic="users"></i></span>Друзья</a>
+    <script>document.write(EP.tip("woerter"))</script>
     <hr>
     <button class="nt" id="foldTog" aria-expanded="true"><span>Папки</span><i data-ic="chev"></i></button>
     <div id="folders"></div>

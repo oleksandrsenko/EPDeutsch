@@ -132,6 +132,8 @@ const I={
  flame:'<path d="M12 22c4 0 7-2.7 7-6.6 0-3.1-1.8-5.3-3.4-7-.4 1.9-1.5 3-2.6 3.4.3-3.3-1.3-6.6-4.3-8.8.3 3-1.2 5-2.7 6.8C4.8 11.3 5 12.6 5 15.4 5 19.3 8 22 12 22z"/><path d="M12 22c-1.7 0-3-1.2-3-3 0-1.6 1.3-2.6 2-3.6.4 1 1.2 1.5 2 1.6.6-.6 1-1.4 1.1-2.3 1 .9 1.9 2.4 1.9 4.3 0 1.8-1.3 3-4 3z"/>',
  video:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>',
  chev:'<path d="M9 6l6 6-6 6"/>',
+ spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>',
+ bulb:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
  menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
  speaker:'<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/>',
  gear:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
@@ -172,6 +174,22 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-sbtn kbd{font:inherit;font-size:11px;background:var(--panel2);border-radius:6px;padding:1px 5px;color:var(--muted)}
 @media (max-width:1480px){.ep-mods .ep-ml{display:none}.ep-mods a{padding:6px}.ep-mods a[aria-current="page"] .ep-ml{display:inline}.ep-mods a[aria-current="page"]{padding-right:10px}}
 @media (max-width:760px){.ep-sbtn span,.ep-sbtn kbd{display:none}.ep-sbtn{padding:8px}}
+.ep-sf{position:relative;flex:1 1 auto;min-width:0;max-width:560px;margin:0 auto;display:flex;align-items:center;gap:10px;background:var(--bg);border-radius:999px;padding:0 14px 0 16px;height:42px;color:var(--muted);border:2px solid transparent;transition:border-color .15s,background .15s}
+.ep-sf:focus-within{border-color:var(--primary);background:var(--panel)}
+.ep-sf input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:14.5px;font-weight:600;color:var(--fg);outline:none;padding:0}
+.ep-sf input::placeholder{color:var(--muted);font-weight:500}
+.ep-sf input::-webkit-search-cancel-button{display:none}
+.ep-sf kbd{font:inherit;font-size:11px;font-weight:700;background:var(--panel2);border-radius:6px;padding:2px 6px;color:var(--muted)}
+.ep-sf:focus-within kbd{display:none}
+.ep-sdrop{position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--panel);border-radius:18px;box-shadow:0 24px 50px -18px rgba(10,9,45,.45);padding:8px;max-height:min(460px,70vh);overflow:auto;z-index:50;color:var(--fg)}
+.ep-sdrop a{display:flex;gap:12px;align-items:baseline;justify-content:space-between;padding:9px 10px;border-radius:12px;color:inherit;text-decoration:none}
+.ep-sdrop a:hover{background:var(--hover,var(--panel2))}
+.ep-sdrop .ep-sg{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 10px 4px}
+.ep-sdrop b{font-weight:800}.ep-sdrop small{color:var(--muted);font-size:12.5px;text-align:right;flex:none;max-width:45%}
+.ep-sdrop .ep-sru{color:var(--muted);font-weight:500;margin-left:6px}
+.ep-sdrop mark{background:var(--mark,#FFF1B8);color:inherit;border-radius:3px}
+.ep-sfbtn{display:none;flex:none;width:40px;height:40px;border:0;border-radius:12px;background:var(--panel2);color:var(--fg);cursor:pointer;place-items:center;margin-left:auto}
+@media (max-width:640px){.ep-sf{display:none}.ep-sfbtn{display:grid}}
 .ep-sov{position:fixed;inset:0;z-index:200;background:rgba(10,9,45,.42);display:flex;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;animation:epIn .15s ease-out}
 .ep-sbox{width:min(640px,100%);max-height:78vh;display:flex;flex-direction:column;background:var(--panel);color:var(--fg);border-radius:22px;box-shadow:0 30px 70px -20px rgba(10,9,45,.5);overflow:hidden;font-family:var(--font)}
 .ep-shead{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line2)}
@@ -209,36 +227,49 @@ async function buildIndex(){
   return out;
 }
 function hl(s,q){const f=fold(s),i=f.indexOf(q);if(i<0||!q)return esc(s);return esc(s.slice(0,i))+"<mark>"+esc(s.slice(i,i+q.length))+"</mark>"+esc(s.slice(i+q.length))}
-function search(){
+// результаты поиска в любой контейнер: и в окно ⌘K, и в выпадашку под полем в шапке
+function results(res,val){
+  const q=fold(val),qs=strip(val);
+  if(!q){res.innerHTML='<div class="ep-sempty">Есть ли слово в твоих наборах? Начни печатать.</div>';return}
+  if(!IDX){res.innerHTML='<div class="ep-sempty">Собираю словарь…</div>';return}
+  const hits=IDX.map(o=>{let sc=-1;if(o.fd===qs)sc=0;else if(o.fd.startsWith(qs))sc=1;else if(o.fd.includes(qs))sc=2;else if(o.fr.split(/[,;\/ ]+/).includes(q))sc=1.5;else if(o.fr.includes(q))sc=3;return [sc,o]}).filter(x=>x[0]>=0).sort((a,b)=>a[0]-b[0]||a[1].de.length-b[1].de.length).slice(0,60);
+  if(!hits.length){res.innerHTML=`<div class="ep-sempty">«${esc(val)}» нет ни в одном наборе.<br><a href="/woerter" style="color:var(--link,var(--primary));font-weight:700">Добавить в свой набор в Wörter →</a></div>`;return}
+  const groups={};hits.forEach(([,o])=>(groups[o.g]=groups[o.g]||[]).push(o));
+  res.innerHTML=`<div class="ep-sempty" style="padding:6px 10px;text-align:left">Нашлось: ${hits.length}${hits.length===60?"+":""}</div>`+Object.entries(groups).map(([g,a])=>`<div class="ep-sg">${esc(g)}</div>`+a.map(o=>`<a href="${o.href}"><span><b>${hl(o.de,qs)}</b>${o.ru?`<span class="ep-sru">${hl(o.ru,q)}</span>`:""}</span><small>${esc(o.where)}</small></a>`).join("")).join("");
+}
+const need=cb=>{if(IDX)return;if(!loading)loading=buildIndex().then(x=>{IDX=x});loading.then(cb)};
+function search(val){
   if(document.querySelector(".ep-sov"))return;
   const ov=document.createElement("div");ov.className="ep-sov";
-  ov.innerHTML=`<div class="ep-sbox" role="dialog" aria-label="Поиск"><div class="ep-shead">${ic("search",20)}<input type="search" placeholder="Слово по-немецки или по-русски…" autocomplete="off" spellcheck="false"><button type="button" aria-label="Закрыть">${ic("x",16)}</button></div><div class="ep-sres"><div class="ep-sempty">Есть ли слово в твоих наборах? Начни печатать.</div></div></div>`;
+  ov.innerHTML=`<div class="ep-sbox" role="dialog" aria-label="Поиск"><div class="ep-shead">${ic("search",20)}<input type="search" placeholder="Слово по-немецки или по-русски…" autocomplete="off" spellcheck="false"><button type="button" aria-label="Закрыть">${ic("x",16)}</button></div><div class="ep-sres"></div></div>`;
   document.body.appendChild(ov);
-  const inp=ov.querySelector("input"),res=ov.querySelector(".ep-sres");
+  const inp=ov.querySelector("input"),res=ov.querySelector(".ep-sres");inp.value=val||"";
   const close=()=>{ov.remove();document.removeEventListener("keydown",key,true)};
   ov.addEventListener("click",e=>{if(e.target===ov||e.target.closest(".ep-shead button"))close()});
   function key(e){if(e.key==="Escape"){e.stopPropagation();close()}}
   document.addEventListener("keydown",key,true);
   setTimeout(()=>inp.focus(),20);
-  if(!IDX&&!loading)loading=buildIndex().then(x=>{IDX=x;render()});
-  function render(){
-    const q=fold(inp.value),qs=strip(inp.value);
-    if(!q){res.innerHTML='<div class="ep-sempty">Есть ли слово в твоих наборах? Начни печатать.</div>';return}
-    if(!IDX){res.innerHTML='<div class="ep-sempty">Собираю словарь…</div>';return}
-    const hits=IDX.map(o=>{let sc=-1;if(o.fd===qs)sc=0;else if(o.fd.startsWith(qs))sc=1;else if(o.fd.includes(qs))sc=2;else if(o.fr.split(/[,;\/ ]+/).includes(q))sc=1.5;else if(o.fr.includes(q))sc=3;return [sc,o]}).filter(x=>x[0]>=0).sort((a,b)=>a[0]-b[0]||a[1].de.length-b[1].de.length).slice(0,60);
-    if(!hits.length){res.innerHTML=`<div class="ep-sempty">«${esc(inp.value)}» нет ни в одном наборе.<br><a href="/woerter" style="color:var(--link,var(--primary));font-weight:700">Добавить в свой набор в Wörter →</a></div>`;return}
-    const groups={};hits.forEach(([,o])=>(groups[o.g]=groups[o.g]||[]).push(o));
-    res.innerHTML=`<div class="ep-sempty" style="padding:6px 10px;text-align:left">✓ Нашлось: ${hits.length}${hits.length===60?"+":""}</div>`+Object.entries(groups).map(([g,a])=>`<div class="ep-sg">${esc(g)}</div>`+a.map(o=>`<a href="${o.href}"><span><b>${hl(o.de,qs)}</b>${o.ru?`<span class="ep-sru">${hl(o.ru,q)}</span>`:""}</span><small>${esc(o.where)}</small></a>`).join("")).join("");
-  }
+  const render=()=>results(res,inp.value);need(render);render();
   inp.addEventListener("input",render);
 }
+// поле поиска в шапке (вместо полосы модулей); на телефоне — кнопка, открывающая окно поиска
+function searchField(){return `<div class="ep-sf" role="search"><span class="ep-sfi">${ic("search",18)}</span><input type="search" placeholder="Найти слово: по-немецки или по-русски" autocomplete="off" spellcheck="false" aria-label="Поиск слова"><kbd>⌘K</kbd><div class="ep-sdrop" hidden></div></div><button type="button" class="ep-sfbtn" data-ep-search aria-label="Поиск">${ic("search",20)}</button>`}
+function sfOpen(f,on){const d=f.querySelector(".ep-sdrop");d.hidden=!on;f.classList.toggle("on",on)}
+document.addEventListener("input",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(!f)return;const d=f.querySelector(".ep-sdrop"),v=e.target.value;sfOpen(f,!!v.trim());const r=()=>results(d,e.target.value);need(r);r()});
+document.addEventListener("focusin",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(f){need(()=>{});if(e.target.value.trim())sfOpen(f,true)}});
+document.addEventListener("mousedown",e=>{document.querySelectorAll(".ep-sf.on").forEach(f=>{if(!f.contains(e.target))sfOpen(f,false)})});
 document.addEventListener("keydown",e=>{
   const t=e.target,typing=t&&(t.tagName==="INPUT"||t.tagName==="TEXTAREA"||t.isContentEditable);
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();search()}
-  else if(e.key==="/"&&!typing&&!e.metaKey&&!e.ctrlKey){e.preventDefault();search()}
+  const f=t&&t.closest&&t.closest(".ep-sf");
+  if(f&&e.key==="Escape"){sfOpen(f,false);t.blur();return}
+  if(f&&e.key==="Enter"){const a=f.querySelector(".ep-sdrop a");if(a){e.preventDefault();location.href=a.getAttribute("href");sfOpen(f,false)}return}
+  const field=[...document.querySelectorAll(".ep-sf input")].find(x=>x.offsetParent);
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();field?field.focus():search()}
+  else if(e.key==="/"&&!typing&&!e.metaKey&&!e.ctrlKey){e.preventDefault();field?field.focus():search()}
 });
-document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e.preventDefault();search()}});
-Object.assign(window.EP,{modbar,search,icon:ic,MODS});
+document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e.preventDefault();search()}
+  const a=e.target.closest(".ep-sdrop a");if(a){const f=a.closest(".ep-sf");setTimeout(()=>sfOpen(f,false),0)}});
+Object.assign(window.EP,{modbar,search,searchField,icon:ic,MODS});
 })();
 
 /* Общая «рамка» всех страниц: бургер, логотип EPDeutsch с названием модуля, экран загрузки,
@@ -258,6 +289,28 @@ function logo(k,href,attrs){const n=NAME[k]||k;
 function burger(id,label){return `<button type="button" class="ep-burger" id="${id||"burger"}" aria-label="${label||"Меню"}" aria-controls="nav"><span class="bm">${ic("menu",22)}</span><span class="bx">${ic("x",22)}</span></button>`}
 function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span></a>`).join("")}</div>`}
 
+// ---------- бургер: «Выбрать модуль» → вторая панель со списком модулей ----------
+function switcher(cur){const m=modOf(cur)||modOf("home"),n=cur==="home"?"Обзор":(NAME[cur]||m[1]);
+  return `<button type="button" class="ep-swbtn" data-ep-sw style="--c:${m[4]}"><span class="ep-mi">${ic(m[3],18)}</span><span class="ep-swt"><small>Модуль</small><b>${esc(n)}</b></span><span class="ep-swgo">Выбрать${ic("chev",16)}</span></button>`+
+    `<div class="ep-swpanel"><button type="button" class="ep-swback" data-ep-swback>${ic("chev",16)}Назад</button><div class="ep-dgt">Выбери модуль</div>${modlist(cur)}<div class="ep-dlinks"><a href="/">${ic("globe",18)}Выбор языка</a></div></div>`}
+const TIPS={
+ woerter:["Повторяй слова каждый день понемногу: 20 карточек ежедневно лучше, чем 150 раз в неделю.","Учи слово в связке: глагол с предлогом и падежом (sich beschäftigen mit + D).","Существительное — всегда с артиклем и формой мн. числа: der Antrag, die Anträge.","Не уверен — жми «Не знаю»: честный ответ ставит повторение вовремя."],
+ schreiben:["На EPD считают слова: недобор режет баллы за выполнение задания.","План за 5 минут экономит 15: тезис, 2–3 аргумента, пример, вывод.","Связки дают баллы за связность: einerseits … andererseits, folglich, zudem.","Оставь 5 минут на проверку: артикли, окончания, порядок слов в придаточных."],
+ grammatik:["Passiversatz: «lässt sich + Infinitiv», «ist zu + Infinitiv», «-bar».","Nominalstil: «weil die Preise steigen» → «wegen des Anstiegs der Preise».","Konjunktiv II Vergangenheit: hätte/wäre + Partizip II.","Partizip I — действие одновременно и активно: die steigenden Preise."],
+ lesen:["Сначала прочитай задания, потом текст: так ищешь нужное, а не читаешь всё подряд.","«Nicht im Text» — если в тексте об этом нет ни подтверждения, ни опровержения.","Заголовки к абзацам: ищи главную мысль абзаца, а не совпадающее слово.","Не знаешь слово — смотри на контекст и корень: Abwanderung ← wandern."],
+ hoeren:["На EPD текст звучит дважды: первый раз — общий смысл, второй — детали.","Записывай ключевые слова, а не предложения целиком.","Числа и даты — частая ловушка: проверяй их при втором прослушивании.","Оценивают понимание: в открытых ответах хватает кратких формулировок."],
+ sprechen:["Говори 5 минут по Leitfragen: каждая — 40–60 секунд.","Не понял вопрос — так и скажи: «Könnten Sie die Frage bitte wiederholen?»","Начни презентацию с плана: «Zuerst … dann … abschließend …».","Своё мнение обосновывай примером из Австрии или своей страны."],
+ frei:["Живой немецкий учится ушами: сериалы с немецкими субтитрами.","Австрийские словечки: Paradeiser, Erdäpfel, Jänner — пригодятся в Вене.","Разговорная речь сокращает: «hast du» → «haste», «ich habe» → «ich hab’»."],
+ plan:["Укажи дату EPD — норма карточек подстроится под неё.","Одна тема в неделю: слова, текст, аудио и Sprechen по ней складываются."],
+ home:["Начни с плана дня: шаги подобраны по теме недели.","Короткие занятия каждый день работают лучше длинных раз в неделю."]};
+function tip(cur){const a=TIPS[cur]||TIPS.home,t=a[Math.floor(Date.now()/864e5)%a.length];
+  return `<div class="ep-tip"><span class="ep-tipi">${ic("bulb",16)}</span><div><b>Совет</b><p>${esc(t)}</p></div></div>`}
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-ep-sw]"),b=e.target.closest("[data-ep-swback]");
+  if(o){const w=o.parentElement;w.classList.add("ep-swon");w.scrollTop=0}
+  if(b){b.closest(".ep-swon").classList.remove("ep-swon")}
+});
+
 // ---------- экран загрузки ----------
 let bootT0=0;
 function boot(k){
@@ -276,12 +329,13 @@ function ready(){const d=document.documentElement;if(!d.classList.contains("boot
 }
 
 // ---------- выезжающее меню (для /de, где нет своей боковой панели) ----------
-function drawer(cur,extra){
+function drawer(cur,sections){
   let dr=document.getElementById("ep-drawer");
   if(!dr){dr=document.createElement("div");dr.id="ep-drawer";dr.innerHTML='<div class="ep-dveil"></div><nav class="ep-dpanel" aria-label="Меню"></nav>';document.body.appendChild(dr);
     dr.addEventListener("click",e=>{if(e.target.closest(".ep-dveil")||e.target.closest("a"))toggle(false);if(e.target.closest("[data-ep-theme]"))theme()});
     addEventListener("keydown",e=>{if(e.key==="Escape")toggle(false)})}
-  dr.querySelector(".ep-dpanel").innerHTML=`<div class="ep-dgt">Модули</div>${modlist(cur)}${extra||""}<button type="button" class="ep-dtheme" data-ep-theme>${ic("moon",18)}<span>Сменить тему</span></button>`;
+  const p=dr.querySelector(".ep-dpanel");p.classList.remove("ep-swon");
+  p.innerHTML=`${switcher(cur)}${sections||""}${tip(cur)}<button type="button" class="ep-dtheme" data-ep-theme>${ic("moon",18)}<span>Сменить тему</span></button>`;
   return dr;
 }
 function toggle(on){const b=document.body;on=on===undefined?!b.classList.contains("ep-dopen"):on;b.classList.toggle("ep-dopen",on);document.querySelectorAll(".ep-burger").forEach(x=>x.setAttribute("aria-expanded",on))}
@@ -314,9 +368,28 @@ body.navopen .ep-burger .bx,body.ep-dopen .ep-burger .bx{display:inline-flex}
 .ep-modlist small{color:var(--muted);font-size:12px;font-weight:600;line-height:1.3}
 .ep-modlist a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
 .ep-modlist a[aria-current="page"] .ep-mi{background:var(--c);color:#fff}
-.nav .ep-modlist{margin:0 0 6px}
-.nav .ep-modwrap{display:none}
-@media (max-width:760px){.nav .ep-modwrap{display:block}}
+/* ---- выбор модуля и совет в меню ---- */
+.ep-swbtn{--c:var(--primary);display:flex;align-items:center;gap:12px;width:100%;border:1.5px solid color-mix(in srgb,var(--c) 30%,transparent);background:color-mix(in srgb,var(--c) 8%,var(--panel));border-radius:16px;padding:10px 12px;margin:0 0 10px;cursor:pointer;font:inherit;color:var(--fg);text-align:left;transition:border-color .15s,transform .15s}
+.ep-swbtn:hover{border-color:var(--c)}.ep-swbtn:active{transform:scale(.98)}
+.ep-swbtn .ep-mi{width:36px;height:36px;border-radius:11px;background:var(--c);color:#fff}
+.ep-swt{display:flex;flex-direction:column;line-height:1.2;min-width:0;flex:1}
+.ep-swt small{font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.ep-swt b{font-size:15.5px;font-weight:800}
+.ep-swgo{display:inline-flex;align-items:center;gap:2px;font-size:13px;font-weight:700;color:var(--c)}
+.ep-swpanel{display:none}
+.ep-swon>*:not(.ep-swpanel){display:none!important}
+.ep-swon>.ep-swpanel{display:block;animation:epSw .28s cubic-bezier(.2,.9,.3,1)}
+.ep-swback{display:inline-flex;align-items:center;gap:4px;border:0;background:none;color:var(--muted);font:inherit;font-weight:700;font-size:13.5px;padding:6px 8px;border-radius:10px;cursor:pointer;margin-bottom:2px}
+.ep-swback svg{transform:rotate(180deg)}.ep-swback:hover{background:var(--hover);color:var(--fg)}
+@keyframes epSw{from{opacity:0;transform:translateX(24px)}}
+.ep-tip{display:flex;gap:10px;margin:12px 4px 4px;padding:12px 14px;border-radius:16px;background:color-mix(in srgb,#FFCD1F 16%,var(--panel));box-shadow:var(--sh)}
+.ep-tipi{width:28px;height:28px;border-radius:9px;background:#FFCD1F;color:#282E3E;display:grid;place-items:center;flex:none}
+.ep-tip b{font-size:13px;font-weight:800}.ep-tip p{margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--muted)}
+.ep-dsec a{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:14px;color:var(--fg);text-decoration:none;font-weight:600;font-size:14.5px}
+.ep-dsec a:hover{background:var(--hover)}
+.ep-dsec .ep-mi{width:30px;height:30px;border-radius:10px}
+.ep-dsec a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--fg)}
+.ep-dsec a[aria-current="page"] .ep-mi{background:var(--c);color:#fff}
 /* ---- выезжающее меню ---- */
 #ep-drawer .ep-dveil{position:fixed;inset:0;z-index:60;background:rgba(10,9,45,.38);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
 #ep-drawer .ep-dpanel{position:fixed;left:0;top:0;bottom:0;z-index:61;width:min(300px,86vw);background:var(--panel);box-shadow:var(--sh-card);border-radius:0 26px 26px 0;padding:max(14px,env(safe-area-inset-top)) 12px calc(14px + env(safe-area-inset-bottom));overflow:auto;transform:translateX(-102%);transition:transform .3s cubic-bezier(.3,1.1,.5,1)}
@@ -347,5 +420,5 @@ html.bootout .ep-bbar b{width:100%!important;animation:none;transition:width .25
 `;
 const st=document.createElement("style");st.id="ep-frame";st.textContent=css;(document.head||document.documentElement).appendChild(st);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-ep-drawer]");if(b){e.preventDefault();toggle()}});
-Object.assign(window.EP,{logo,burger,mark,boot,ready,modlist,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
+Object.assign(window.EP,{logo,burger,mark,boot,ready,modlist,switcher,tip,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
 })();

@@ -239,6 +239,21 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .score b{font-size:26px;color:var(--c)}
 .pop{position:absolute;z-index:120;background:var(--panel);border-radius:16px;box-shadow:0 18px 40px -12px rgba(10,9,45,.45);padding:12px 14px;max-width:300px;font-size:14px;border:1px solid var(--line2);animation:pageIn .15s}
 .pop .tr{font-weight:800;color:var(--c);font-size:16px}
+.wpop{width:min(330px,calc(100vw - 20px));max-width:none;padding:12px 14px 12px;border-radius:18px;animation:wpIn .16s ease-out}
+.wpop::before{content:"";position:absolute;left:calc(var(--ax,50%) - 7px);top:-7px;width:14px;height:14px;background:var(--panel);border-left:1px solid var(--line2);border-top:1px solid var(--line2);transform:rotate(45deg)}
+.wpop.up::before{top:auto;bottom:-7px;transform:rotate(225deg)}
+@keyframes wpIn{from{opacity:0;transform:translateY(4px)}}
+.wpop .wp-h{display:flex;align-items:baseline;gap:8px;padding-right:26px;position:relative}
+.wpop .w{font-family:var(--serif);font-size:19px;font-weight:700}
+.wpop .lem{color:var(--muted);font-size:13px;font-weight:700}
+.wpop .wp-x{position:absolute;right:-4px;top:-2px;border:0;background:none;color:var(--muted);width:26px;height:26px;border-radius:8px;display:grid;place-items:center;cursor:pointer}
+.wpop .wp-x:hover{background:var(--hover);color:var(--fg)}
+.wpop .tr{font-size:18px;margin:6px 0 0;line-height:1.3}
+.wpop .prov{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.wpop .ctx{margin-top:8px;font-size:13.5px;line-height:1.45}
+.wpop .nt{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.45}
+.wpop .ph{color:var(--muted);font-size:13.5px;margin-top:6px}
+.wpop .acts{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
 /* ---------- аудио ---------- */
 .player{display:flex;align-items:center;gap:16px;background:var(--panel);border-radius:24px;box-shadow:var(--sh);padding:18px 22px;margin-bottom:16px}
 .pbtn{width:62px;height:62px;border-radius:50%;border:0;background:var(--c);color:#fff;display:grid;place-items:center;cursor:pointer;flex:none;box-shadow:0 10px 24px -10px var(--c);transition:transform .15s}
@@ -354,8 +369,7 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 <header class="top">
   <script>document.write(EP.burger("deBurger","Меню").replace("<button",'<button data-ep-drawer'))</script>
   <span id="logo" style="display:contents"></span>
-  <a class="home" href="/" title="Выбор языка"><i><svg viewBox="0 0 5 3" width="26" height="18" preserveAspectRatio="none"><rect width="5" height="1" fill="#000"/><rect width="5" height="1" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg></i><span>DE</span></a>
-  <div id="mods" style="display:contents"></div>
+  <script>document.write(EP.searchField())</script>
   <div class="uwrap"><a class="cdchip" href="#/plan" id="cdChip" hidden></a><a class="ubtn" href="#/settings" id="ubtn" title="Настройки"></a></div>
 </header>
 <nav class="subnav" id="subnav" aria-label="Разделы"></nav>
@@ -422,12 +436,11 @@ function header(cur){
   const k=cur||"home",h=(location.hash||"#/").slice(1).split("/").filter(Boolean),frei=k==="frei";
   const on=frei?(h[1]||"karten"):(h[0]||"home"),sub=frei?SUB_FREI:SUB_EPD;
   $("#logo").innerHTML=EP.logo(k==="settings"?"home":k,frei?"#/frei":"#/");
-  $("#mods").innerHTML=EP.modbar(k==="settings"?"":k);
   const link=([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}><span class="ni">${EP.icon(i,16)}</span>${t}</a>`;
   $("#subnav").innerHTML=(frei?`<a href="#/frei" style="--c:var(--c-f)"${h.length===1?' aria-current="page"':""}><span class="ni">${EP.icon("star",16)}</span>Свободный</a>`:"")+sub.map(link).join("");
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD.slice(0,4);
   $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-ep-drawer>${EP.icon("menu",22)}Меню</button>`;
-  EP.drawer(k,`<div class="ep-dgt">Ещё</div><div class="ep-dlinks"><a href="#/settings"${k==="settings"?' aria-current="page"':""}>${EP.icon("gear",18)}Настройки</a><a href="/">${EP.icon("globe",18)}Выбор языка</a></div>`);
+  EP.drawer(k,`<div class="ep-dgt">${frei?"Свободный немецкий":"Подготовка к EPD"}</div><div class="ep-dsec">${(frei?[["frei-home","Обзор","#/frei","star","var(--c-f)"],...SUB_FREI]:SUB_EPD).map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on||(key==="frei-home"&&h.length===1)?' aria-current="page"':""}><span class="ep-mi">${EP.icon(i,16)}</span>${t}</a>`).join("")}${frei?"":`<a href="/woerter#tab=practice" style="--c:#8B5CF6"><span class="ep-mi">${EP.icon("spark",16)}</span>Практика с ИИ</a><a href="/schreiben#theory" style="--c:#0EA5B7"><span class="ep-mi">${EP.icon("book",16)}</span>Теория письма</a>`}</div>`);
   if(ST.user)$("#ubtn").innerHTML=EP.uava(ST.user,34);
   const p=get("plan",{}),d=dateToDay(p.epd),cd=$("#cdChip");
   if(d&&d>=today()){cd.hidden=false;cd.innerHTML=`${EP.icon("cal",17)}<b>${d-today()}</b><small>дн. до EPD</small>`;cd.title="Дней до EPD"}else cd.hidden=true;
@@ -683,23 +696,40 @@ function bindLookup(root,side){
   root.addEventListener("mouseup",handler);root.addEventListener("touchend",handler);
   root.addEventListener("dblclick",handler);
 }
+// перевод — в окошке прямо у выделенного слова: сразу DeepL, потом (если есть ключ Claude) пояснение по контексту
 async function lookup(word,sentence,rect){
-  const box=LOOK&&LOOK.side;const narrow=matchMedia("(max-width:1020px)").matches;
-  const html=(r,loading)=>`<div class="w">${esc(word)}</div>${loading?'<div class="ph"><span class="spin"></span> перевожу…</div>':`${r.lemma&&r.lemma.toLowerCase()!==word.toLowerCase()?`<div class="lem">${esc(r.lemma)}</div>`:""}<div class="tr">${esc(r.tr_ctx||r.tr)}</div>${r.tr_ctx&&r.tr&&r.tr_ctx.toLowerCase()!==r.tr.toLowerCase()?`<div class="ph">также: ${esc(r.tr)}</div>`:""}${r.note?`<div class="nt">${esc(r.note)}</div>`:""}<div class="acts"><button class="btn sm" data-say aria-label="Озвучить">${ic("speaker",16)}</button><button class="btn sm" data-add>+ в карточки Wörter</button></div>`}`;
-  const show=(r,loading)=>{
-    if(narrow||!box){closePop();POP=document.createElement("div");POP.className="pop wordbox";POP.innerHTML=html(r,loading);document.body.appendChild(POP);
-      const x=Math.min(innerWidth-310,Math.max(10,rect.left+scrollX)),y=rect.bottom+scrollY+8;POP.style.left=x+"px";POP.style.top=y+"px"}
-    else{box.querySelector(".wordbox").innerHTML=html(r,loading)}
-    const el=narrow||!box?POP:box.querySelector(".wordbox");
-    if(!loading){const s=el.querySelector("[data-say]");if(s)s.onclick=()=>say(r.lemma||word);const a=el.querySelector("[data-add]");if(a)a.onclick=async()=>{try{await api("/words",{method:"POST",body:JSON.stringify({de:r.lemma||word,ru:r.tr_ctx||r.tr,ctx:sentence})});a.textContent="✓ добавлено";a.disabled=true;toast("Слово появится в наборе Wörter")}catch(e){toast(e.message)}}}
+  const box=LOOK&&LOOK.side;
+  closePop();POP=document.createElement("div");POP.className="pop wpop";POP.setAttribute("role","dialog");POP.setAttribute("aria-label","Перевод");document.body.appendChild(POP);
+  const place=()=>{if(!POP)return;const w=POP.offsetWidth,hh=POP.offsetHeight;let x=rect.left+rect.width/2-w/2;x=Math.max(10,Math.min(innerWidth-w-10,x));
+    const below=rect.bottom+10+hh<innerHeight||rect.top<hh+20;POP.classList.toggle("up",!below);
+    POP.style.left=(x+scrollX)+"px";POP.style.top=(below?rect.bottom+10:rect.top-hh-10)+scrollY+"px";
+    POP.style.setProperty("--ax",Math.max(16,Math.min(w-16,rect.left+rect.width/2-x))+"px")};
+  let R={};
+  const draw=(state)=>{if(!POP)return;const tr=R.tr||"",ctx=R.tr_ctx&&R.tr_ctx.toLowerCase()!==tr.toLowerCase()?R.tr_ctx:"";
+    POP.innerHTML=`<div class="wp-h"><span class="w">${esc(word)}</span>${R.lemma&&R.lemma.toLowerCase()!==word.toLowerCase()?`<span class="lem">${esc(R.lemma)}</span>`:""}<button class="wp-x" aria-label="Закрыть">${ic("x",14)}</button></div>`+
+      (state==="load"?'<div class="ph"><span class="spin"></span> перевожу…</div>':state==="err"?`<div class="ph">${esc(R.err||"Не удалось перевести")}</div>`:
+      `<div class="tr">${esc(tr)}</div>${R.provider?`<div class="prov">${esc(R.provider)}</div>`:""}${ctx?`<div class="ctx"><b>В этом предложении:</b> ${esc(ctx)}</div>`:""}${R.note?`<div class="nt">${esc(R.note)}</div>`:""}${state==="more"?'<div class="ph" style="margin-top:6px"><span class="spin"></span> пояснение по контексту…</div>':""}
+      <div class="acts"><button class="btn sm" data-say aria-label="Озвучить">${ic("speaker",16)}</button><button class="btn sm" data-add>+ в карточки Wörter</button></div>`);
+    place();
+    POP.querySelector(".wp-x").onclick=closePop;
+    const sb=POP.querySelector("[data-say]");if(sb)sb.onclick=()=>say(R.lemma||word);
+    const ab=POP.querySelector("[data-add]");if(ab)ab.onclick=async()=>{try{await api("/words",{method:"POST",body:JSON.stringify({de:R.lemma||word,ru:R.tr_ctx||R.tr,ctx:sentence})});ab.textContent="✓ добавлено";ab.disabled=true;toast("Слово появится в наборе Wörter")}catch(e){toast(e.message)}};
   };
-  show({},true);
-  try{
-    const r=await api("/de/ctx",{method:"POST",body:JSON.stringify({word,sentence})});
-    show(r,false);
-    if(LOOK&&!LOOK.list.some(x=>x.w===word)){LOOK.list.unshift({w:word,tr:r.tr_ctx||r.tr});const vl=box&&box.querySelector(".vlist");if(vl)vl.innerHTML=LOOK.list.slice(0,30).map(x=>`<div><b>${esc(x.w)}</b><span>${esc(x.tr)}</span></div>`).join("")}
-    const V=get("vocab",[]);if(!V.some(x=>x.w===word)){V.unshift({w:word,tr:r.tr_ctx||r.tr,l:r.lemma||"",d:today()});save("vocab",V.slice(0,500))}
-  }catch(e){show({tr:"—",note:e.message},false)}
+  const remember=()=>{const tr=R.tr_ctx||R.tr;if(!tr)return;
+    if(LOOK&&!LOOK.list.some(x=>x.w===word)){LOOK.list.unshift({w:word,tr});const vl=box&&box.querySelector(".vlist");if(vl)vl.innerHTML=LOOK.list.slice(0,30).map(x=>`<div><b>${esc(x.w)}</b><span>${esc(x.tr)}</span></div>`).join("")}
+    const V=get("vocab",[]),i=V.findIndex(x=>x.w===word);if(i<0)V.unshift({w:word,tr,l:R.lemma||"",d:today()});else V[i]=Object.assign(V[i],{tr,l:R.lemma||V[i].l});save("vocab",V.slice(0,500))};
+  draw("load");
+  const me=POP;
+  try{R=await api("/de/ctx",{method:"POST",body:JSON.stringify({word,sentence,explain:false})})}catch(e){R={err:e.message}}
+  if(POP!==me)return;
+  if(R.err&&!ST.keys.anthropic){draw("err");return}
+  remember();
+  if(!ST.keys.anthropic){draw("done");return}
+  draw(R.tr?"more":"load");
+  try{const r2=await api("/de/ctx",{method:"POST",body:JSON.stringify({word,sentence})});R=Object.assign({},R,r2,{tr:R.tr||r2.tr,provider:R.provider||r2.provider})}catch(e){}
+  if(POP!==me)return;
+  if(!R.tr&&!R.tr_ctx){R.err=R.err||"Не удалось перевести";draw("err");return}
+  remember();draw("done");
 }
 document.addEventListener("mousedown",e=>{if(POP&&!POP.contains(e.target))closePop()});
 
@@ -754,7 +784,7 @@ async function vLesen(area,id){
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
       ${(t.paras||[]).map((p,i)=>`<p class="pa"><span class="pn">${i+1}</span>${esc(p)}</p>`).join("")}</article>
     <aside class="side" id="side">
-      <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик) — здесь появится перевод и короткое пояснение.</div></div>
+      <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик) — перевод DeepL появится прямо у слова.</div></div>
       <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">${t.tasks.length} шт.</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div></div>
       <div class="wordbox"><b style="font-size:14px">Слова из этого текста</b><div class="vlist"><div><span>пока пусто</span></div></div></div>
     </aside>
@@ -785,7 +815,7 @@ async function vHoeren(area,id){
    <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене — два прослушивания"><i></i><i></i></div></div></div>
    <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button></div></div>
      <div class="script" id="script" style="margin-top:16px" ${showScript?"":"hidden"}>${(it.lines||[]).map(([s,tx])=>`<p><b>${esc((names[s]||{}).name||s)}</b>${esc(tx)}</p>`).join("")}</div></div>
-   <aside class="side" id="side"><div class="wordbox"><div class="ph">После проверки открой текст и выделяй незнакомые слова — перевод будет здесь.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
+   <aside class="side" id="side"><div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте — перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
   bindLookup($("#script"),$("#side"));
   let playing=false,stopFlag=false;
   const setPlays=()=>$$(".plays i").forEach((x,i)=>x.classList.toggle("used",i<plays));

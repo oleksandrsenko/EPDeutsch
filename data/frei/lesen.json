@@ -1,0 +1,295 @@
+{
+ "texts": [
+  {
+   "id": "grant",
+   "level": "C1",
+   "topic": "Wien & Kultur",
+   "kicker": "Glosse",
+   "title": "Der Wiener Grant: Eine Gebrauchsanweisung für Zugezogene",
+   "lead": "Wer neu in Wien ist, hält den Kellner für unhöflich und den Nachbarn für feindselig. Ein Irrtum – meistens.",
+   "paras": [
+    "Es beginnt meist im Kaffeehaus. Man bestellt freundlich eine Melange, vielleicht sogar mit einem Lächeln, und erntet vom Ober einen Blick, als hätte man ihm gerade eine persönliche Beleidigung zugefügt. Die Melange kommt zwanzig Minuten später, wortlos abgestellt, ein Tropfen Kaffee schwappt über den Rand. Willkommen in Wien, wo der Grant nicht nur eine Stimmung, sondern eine Lebensform ist.",
+    "Der Grant, das sei vorausgeschickt, ist nicht dasselbe wie schlechte Laune. Schlechte Laune vergeht. Der Grant ist eine Grundhaltung, eine Art liebevoll gepflegter Missmut gegenüber der Welt im Allgemeinen und dem Wetter, der Politik, den Touristen und den Öffis im Besonderen. Der echte Wiener sudert, und zwar mit Hingabe. Sudern bedeutet so viel wie jammern, aber auf hohem Niveau: wortreich, ironisch und mit der stillen Gewissheit, dass ohnehin nichts besser wird.",
+    "Für Zugezogene ist das zunächst verwirrend, besonders wenn sie aus Kulturen kommen, in denen Freundlichkeit an der Oberfläche großgeschrieben wird. Doch wer genauer hinhört, merkt bald, dass der Grant selten persönlich gemeint ist. Der grantige Ober wird, sobald man zum dritten Mal kommt, plötzlich ein „Wie immer?“ murmeln. Die Nachbarin, die einen monatelang ignoriert hat, steht eines Tages mit selbst gebackenen Vanillekipferln vor der Tür. Der Grant ist eine Schale. Darunter verbirgt sich erstaunlich oft ein weicher Kern.",
+    "Eng verwandt mit dem Grant ist der berühmte Wiener Schmäh, eine Form des Humors, die zwischen Charme, Ironie und leiser Bosheit pendelt. Wer den Schmäh nicht versteht, nimmt vieles wörtlich, was gar nicht so gemeint ist. „Na, Sie haben's aber eilig“, sagt der Verkäufer, wenn man ungeduldig wird, und meint damit natürlich: Beruhigen Sie sich, wir sind hier in Wien.",
+    "Ratschläge für Neuankömmlinge? Erstens: nicht beleidigt sein. Zweitens: mitjammern, aber dosiert. Ein gepflegtes „Es ist eh alles a Wahnsinn“ öffnet mehr Türen als jedes Kompliment. Und drittens: Zeit lassen. Die Wienerinnen und Wiener mögen Neue nicht sofort ins Herz schließen. Aber wenn sie es einmal getan haben, bleibt man drin – ob man will oder nicht."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Laut Text ist der Grant dasselbe wie schlechte Laune.",
+     "a": "f",
+     "ex": "Er ist eine Grundhaltung."
+    },
+    {
+     "t": "tf",
+     "q": "Sudern bedeutet, auf ironische und wortreiche Weise zu jammern.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Was meint der Autor mit „Der Grant ist eine Schale“?",
+     "o": [
+      "Wiener sind immer unfreundlich.",
+      "Hinter der unfreundlichen Fassade steckt oft Herzlichkeit.",
+      "Der Grant ist eine Krankheit."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Was ist der Wiener Schmäh?",
+     "o": [
+      "eine Kaffeesorte",
+      "eine ironische, charmante Form des Humors",
+      "ein Dialektwort für Touristen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Der Autor empfiehlt, sich über unfreundliche Kellner zu beschweren.",
+     "a": "f",
+     "ex": "Rat: nicht beleidigt sein."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie die drei Ratschläge für Neuankömmlinge.",
+     "a": "nicht beleidigt sein; dosiert mitjammern; Zeit lassen"
+    }
+   ],
+   "src": "Übungstext",
+   "words": 343,
+   "minutes": 9
+  },
+  {
+   "id": "kaffeehaus",
+   "level": "B2",
+   "topic": "Wien & Kultur",
+   "kicker": "Genuss",
+   "title": "Ein Glas Wasser und viel Zeit: Warum das Kaffeehaus überlebt",
+   "lead": "Kaffee gibt es heute an jeder Ecke, oft schneller und billiger. Trotzdem sind die traditionellen Wiener Kaffeehäuser voll.",
+   "paras": [
+    "Wer in einem traditionellen Wiener Kaffeehaus einen Kaffee bestellt, bekommt ihn auf einem kleinen Silbertablett serviert, dazu ein Glas Leitungswasser. Und wenn das Wasser leer ist, bringt der Ober ein neues, ohne dass man darum bitten muss. Das ist das stille Signal: Sie dürfen bleiben, so lange Sie wollen. Hier drängt niemand zum Zahlen.",
+    "Genau das macht für viele Gäste den Reiz aus. Im Kaffeehaus liest man Zeitung – die gibt es gratis, oft in mehreren Sprachen –, man schreibt, man trifft Freunde oder sitzt einfach nur da und schaut den anderen zu. Schon im 19. und frühen 20. Jahrhundert waren Kaffeehäuser Treffpunkte für Schriftsteller, Künstler und Wissenschaftler. Manche von ihnen sollen dort mehr Zeit verbracht haben als in ihrer eigenen Wohnung.",
+    "Seit 2011 gehört die Wiener Kaffeehauskultur sogar zum immateriellen Kulturerbe der UNESCO. Damit wird nicht ein bestimmtes Gebäude geschützt, sondern eine Lebensweise: die Ruhe, die Rituale, die besondere Art des Servierens und die Rolle des Kaffeehauses als „öffentliches Wohnzimmer“ der Stadt.",
+    "Natürlich hat sich auch hier einiges verändert. Viele junge Leute arbeiten heute mit dem Laptop im Kaffeehaus, was nicht alle Betreiber gern sehen. Und in den bekannten Häusern in der Innenstadt stehen Touristinnen und Touristen oft in langen Schlangen, um ein Foto von der berühmten Torte zu machen. Die Stammgäste weichen dann in kleinere Kaffeehäuser in den Außenbezirken aus.",
+    "Wer zum ersten Mal ein Wiener Kaffeehaus besucht, sollte übrigens die Speisekarte genau lesen. Einen „normalen Kaffee“ gibt es nämlich nicht. Es gibt die Melange, den Einspänner, den Verlängerten, den kleinen und großen Braunen – und für jede Variante eine eigene Philosophie."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Im Kaffeehaus muss man für das Wasser extra bezahlen.",
+     "a": "n",
+     "ex": "Der Text sagt nichts über den Preis des Wassers, nur dass es gebracht wird."
+    },
+    {
+     "t": "tf",
+     "q": "Das neue Glas Wasser bedeutet, dass man bleiben darf.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die UNESCO schützt ein bestimmtes Kaffeehausgebäude.",
+     "a": "f",
+     "ex": "Sie schützt eine Lebensweise."
+    },
+    {
+     "t": "mc",
+     "q": "Wohin gehen viele Stammgäste wegen der Touristen?",
+     "o": [
+      "nach Hause",
+      "in kleinere Kaffeehäuser in den Außenbezirken",
+      "in moderne Coffeeshops"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Kaffeesorten aus dem Text.",
+     "a": "Melange, Einspänner, Verlängerter, kleiner/großer Brauner"
+    }
+   ],
+   "src": "Übungstext",
+   "words": 282,
+   "minutes": 8
+  },
+  {
+   "id": "dating",
+   "level": "B2+",
+   "topic": "Beziehungen",
+   "kicker": "Leben",
+   "title": "Swipen bis zur Erschöpfung: Liebe in Zeiten der Dating-Apps",
+   "lead": "Noch nie war es so leicht, neue Menschen kennenzulernen – und so schwer, sich zu entscheiden. Viele Singles sind müde.",
+   "paras": [
+    "Julia ist 27, wohnt in Graz und hat drei Dating-Apps auf ihrem Handy. Abends nach der Arbeit wischt sie sich durch Profile: links für Nein, rechts für Ja. „Am Anfang war das spannend“, erzählt sie. „Inzwischen fühlt es sich an wie ein zweiter Job.“ Dutzende Matches, viele Chats, die nach drei Nachrichten einschlafen, und Treffen, bei denen schon nach fünf Minuten klar ist, dass es nicht passt.",
+    "Julia ist mit diesem Gefühl nicht allein. Psychologen sprechen von „Dating-Burnout“. Die schier unbegrenzte Auswahl führe dazu, dass Menschen sich schwerer festlegen. Wer ständig das Gefühl hat, dass hinter dem nächsten Swipe vielleicht jemand noch Besseres wartet, gibt der Person vor sich weniger Chancen. Hinzu kommt das sogenannte „Ghosting“: Der Kontakt bricht plötzlich ohne Erklärung ab, was viele als verletzend empfinden.",
+    "Gleichzeitig haben die Apps unbestreitbare Vorteile. Menschen, die wenig ausgehen, die schüchtern sind oder in einer neuen Stadt niemanden kennen, finden so leichter Kontakte. Für queere Menschen in ländlichen Regionen sind sie oft die einzige realistische Möglichkeit, Partnerinnen oder Partner zu finden. Und tatsächlich lernt inzwischen ein beträchtlicher Teil der Paare einander online kennen.",
+    "Manche Singles reagieren auf die Müdigkeit, indem sie bewusst offline suchen: in Laufgruppen, Kochkursen oder bei Speed-Dating-Abenden, die eine kleine Renaissance erleben. Julia hat sich ein Limit gesetzt: höchstens eine App, höchstens zwanzig Minuten am Tag. „Und wenn mir jemand gefällt, frage ich nach ein paar Nachrichten direkt nach einem Treffen. Endlose Chats bringen nichts.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Julia findet das Online-Dating heute noch genauso spannend wie am Anfang.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Ghosting bedeutet, dass jemand ohne Erklärung den Kontakt abbricht.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Warum fällt es laut Psychologen schwer, sich festzulegen?",
+     "o": [
+      "weil die Profile gefälscht sind",
+      "wegen der scheinbar unbegrenzten Auswahl",
+      "weil die Apps zu teuer sind"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Für wen sind die Apps laut Text besonders nützlich?",
+     "o": [
+      "für Menschen, die oft ausgehen",
+      "für schüchterne Menschen und queere Menschen auf dem Land",
+      "für ältere Ehepaare"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche Regeln hat sich Julia gesetzt?",
+     "a": "höchstens eine App, höchstens 20 Minuten pro Tag, nach wenigen Nachrichten direkt nach einem Treffen fragen"
+    }
+   ],
+   "src": "Übungstext",
+   "words": 257,
+   "minutes": 8
+  },
+  {
+   "id": "sprachstreit",
+   "level": "C1",
+   "topic": "Sprache",
+   "kicker": "Kultur",
+   "title": "Paradeiser oder Tomate? Der kleine Sprachkrieg zwischen Wien und Berlin",
+   "lead": "Österreicher und Deutsche sprechen dieselbe Sprache – angeblich. Im Alltag sorgt der Unterschied für Missverständnisse, Witze und manchmal echten Ärger.",
+   "paras": [
+    "Als Österreich 1995 der Europäischen Union beitrat, sorgte eine scheinbar banale Frage für erhitzte Debatten: Würde man künftig auf der Speisekarte „Tomate“ statt „Paradeiser“ schreiben müssen? Die Sorge war so groß, dass dem Beitrittsvertrag ein eigenes Protokoll beigefügt wurde, das 23 österreichische Begriffe aus dem Lebensmittelbereich ausdrücklich als gleichberechtigt anerkennt – darunter Erdäpfel, Marillen, Topfen und Schlagobers.",
+    "Was komisch wirken mag, berührt einen sensiblen Punkt. Sprache ist Identität, und viele Österreicherinnen und Österreicher empfinden die zunehmende Verbreitung deutschländischer Ausdrücke als schleichende Vereinnahmung. Durch Fernsehen, Streamingdienste und YouTube wachsen Kinder heute mit „Tüte“ statt „Sackerl“ und „lecker“ statt „gut“ auf. Sprachwissenschaftler sprechen von einer „Deutschlandisierung“, wobei sie betonen, dass sich Sprachen schon immer gegenseitig beeinflusst haben.",
+    "Die Linguistik hat für die Situation einen eigenen Begriff: Deutsch ist eine plurizentrische Sprache. Es gibt also nicht ein „richtiges“ Deutsch und mehrere Abweichungen davon, sondern mehrere gleichwertige Standardvarietäten – die deutsche, die österreichische und die schweizerische. Österreichisches Deutsch ist demnach kein Dialekt, sondern eine eigene Norm, die im Österreichischen Wörterbuch festgehalten ist. Dass Lernende im Ausland dennoch fast ausschließlich mit Lehrbüchern aus Deutschland arbeiten, ärgert viele Lehrkräfte.",
+    "Im Alltag zwischen den Nachbarländern führt das zu kuriosen Missverständnissen. Ein Deutscher, der in Wien „einen Pfannkuchen“ bestellt, bekommt womöglich etwas anderes als erwartet. Und wer in Österreich sagt, er habe „heuer im Jänner“ Urlaub gemacht, erntet in Hamburg ratlose Blicke. Umgekehrt schmunzeln Wiener über Deutsche, die „Grüß Gott“ für altmodisch halten oder sich wundern, warum man im Supermarkt nach einem Sackerl gefragt wird.",
+    "Für Deutschlernende in Österreich lautet die gute Nachricht: Beide Varianten sind korrekt, auch bei Prüfungen. Wer „Jänner“ schreibt, macht keinen Fehler. Und wer die österreichischen Wörter kennt, versteht seine Umgebung besser – und wird von den Einheimischen oft mit einem anerkennenden Lächeln belohnt."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Dem EU-Beitrittsvertrag wurde eine Liste österreichischer Lebensmittelbegriffe beigefügt.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Sprachwissenschaftler halten jede Beeinflussung zwischen Sprachen für gefährlich.",
+     "a": "f",
+     "ex": "Sie betonen, dass Sprachen sich schon immer beeinflusst haben."
+    },
+    {
+     "t": "mc",
+     "q": "Was bedeutet „plurizentrische Sprache“?",
+     "o": [
+      "Es gibt mehrere gleichwertige Standardvarietäten.",
+      "Es gibt nur ein korrektes Deutsch.",
+      "Die Sprache wird in vielen Zentren unterrichtet."
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Österreichisches Deutsch ist laut Text ein Dialekt.",
+     "a": "f",
+     "ex": "eine eigene Norm"
+    },
+    {
+     "t": "tf",
+     "q": "Bei Prüfungen in Österreich gilt „Jänner“ als Fehler.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Warum ärgern sich viele Lehrkräfte laut Text?",
+     "a": "Weil Lernende im Ausland fast nur mit Lehrbüchern aus Deutschland arbeiten."
+    }
+   ],
+   "src": "Übungstext",
+   "words": 310,
+   "minutes": 9
+  },
+  {
+   "id": "stadion",
+   "level": "B2",
+   "topic": "Freizeit",
+   "kicker": "Sport",
+   "title": "Neunzig Minuten Ausnahmezustand: Ein Abend im Fußballstadion",
+   "lead": "Ein Derby zwischen Rapid und Austria ist mehr als ein Spiel. Ein Besuch mitten in der Fankurve.",
+   "paras": [
+    "Schon zwei Stunden vor Anpfiff ist die U-Bahn voll. Grün-weiße Schals, Gesänge, der Geruch von Bier und Bratwurst. Wer an diesem Sonntag in Richtung Stadion fährt, merkt sofort: Heute ist kein normaler Tag. Das Wiener Derby zwischen Rapid und Austria ist das Spiel des Jahres, und das seit über hundert Jahren.",
+    "Im Stadion steht die Fankurve, eine dichte Masse aus Menschen, die das ganze Spiel über singen, springen und schreien. Ein Vorsänger mit Megafon gibt den Takt vor. Ruhig sitzen? Unmöglich. „Hier vergisst du alles: die Arbeit, die Uni, die Freundin, die dich verlassen hat“, ruft mir ein junger Mann zu, ohne den Blick vom Spielfeld zu nehmen.",
+    "Die Rivalität hat eine lange Geschichte. Rapid galt traditionell als Klub der Arbeiter aus dem Westen der Stadt, die Austria als Verein des Bürgertums und der Intellektuellen. Diese Unterschiede spielen heute kaum noch eine Rolle, aber die Geschichten werden von Generation zu Generation weitergegeben. In vielen Familien ist die Vereinsliebe so etwas wie ein Erbe.",
+    "Nicht alles am Derby ist schön. Immer wieder kommt es zu Pyrotechnik und Auseinandersetzungen, die Polizei ist mit einem Großaufgebot vor Ort. Die meisten Fans distanzieren sich von Gewalt, doch der Ruf des Derbys leidet unter den Schlagzeilen einzelner Abende.",
+    "Am Ende steht es 1:1. Die Fans singen trotzdem, als hätten sie gewonnen. Auf dem Weg zurück zur U-Bahn höre ich zum ersten Mal ein Wort, das ich später noch oft hören werde: „Leiwand!“ Was es bedeutet? Ungefähr: Das war richtig gut."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Das Wiener Derby wird seit über hundert Jahren gespielt.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "In der Fankurve sitzen die Zuschauer ruhig auf ihren Plätzen.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Welches Image hatte Rapid traditionell?",
+     "o": [
+      "Klub der Intellektuellen",
+      "Klub der Arbeiter aus dem Westen Wiens",
+      "Klub der Studenten"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Das Spiel endete mit einem Sieg für Rapid.",
+     "a": "f",
+     "ex": "1:1"
+    },
+    {
+     "t": "open",
+     "q": "Was bedeutet „leiwand“?",
+     "a": "richtig gut, toll"
+    }
+   ],
+   "src": "Übungstext",
+   "words": 262,
+   "minutes": 8
+  }
+ ]
+}

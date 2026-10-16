@@ -112,3 +112,123 @@ if(document.head)injectCSS();else document.addEventListener("DOMContentLoaded",i
 
 window.EP={COLORS,AVATARS,avatarSVG,uava,picker,mascot,esc};
 })();
+
+/* Верхняя панель модулей (вместо бургера) и поиск по всем словам. Общие для Wörter, Schreiben и /de.
+   EP.modbar(текущий) → HTML полосы вкладок; EP.search() — открыть поиск (⌘K / Ctrl+K / «/»). */
+(function(){
+"use strict";
+const esc=window.EP.esc;
+const I={
+ home:'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>',
+ cards:'<rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/>',
+ pen:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+ gram:'<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>',
+ book:'<path d="M3 5h6a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H21z"/>',
+ ear:'<path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/>',
+ mic:'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4"/>',
+ star:'<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+ cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+ x:'<path d="M6 6l12 12M18 6L6 18"/>'
+};
+const ic=(n,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
+// [ключ, подпись, адрес, иконка, цвет]
+const MODS=[
+ ["home","Обзор","/de#/","home","#0E8C7F"],
+ ["woerter","Wörter","/woerter","cards","#7E6FB8"],
+ ["schreiben","Schreiben","/schreiben","pen","#C4687A"],
+ ["grammatik","Grammatik","/de#/grammatik","gram","#F28C28"],
+ ["lesen","Lesen","/de#/lesen","book","#3D7BF7"],
+ ["hoeren","Hören","/de#/hoeren","ear","#0EA5B7"],
+ ["sprechen","Sprechen","/de#/sprechen","mic","#18AE79"],
+ ["frei","Свободный","/de#/frei","star","#E8505B"],
+ ["plan","План","/de#/plan","cal","#E0A800"]
+];
+function modbar(cur){
+  return `<nav class="ep-mods" aria-label="Модули">${MODS.map(([k,t,h,i,c],n)=>
+    (k==="frei"?'<span class="ep-msep" aria-hidden="true"></span>':"")+
+    `<a href="${h}" data-m="${k}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span class="ep-ml">${t}</span></a>`).join("")}</nav>`+
+    `<button type="button" class="ep-sbtn" data-ep-search title="Поиск слова (⌘K)" aria-label="Поиск">${ic("search",18)}<span>Поиск</span><kbd>⌘K</kbd></button>`;
+}
+const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1 1 auto;padding:4px 2px}
+.ep-mods::-webkit-scrollbar{display:none}
+.ep-mods a{--c:var(--primary);display:inline-flex;align-items:center;gap:7px;flex:none;padding:6px 10px 6px 6px;border-radius:12px;color:var(--fg);font-weight:700;font-size:13.5px;text-decoration:none;white-space:nowrap;transition:background .15s}
+.ep-mods a:hover{background:var(--hover,var(--panel2))}
+.ep-mi{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s}
+.ep-mods a:hover .ep-mi{transform:scale(1.08) rotate(-4deg)}
+.ep-mods a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
+.ep-mods a[aria-current="page"] .ep-mi{background:var(--c);color:#fff;box-shadow:0 4px 12px -4px var(--c)}
+.ep-msep{width:1px;height:24px;background:var(--line);margin:0 6px;flex:none}
+.ep-sbtn{display:inline-flex;align-items:center;gap:8px;flex:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:12px;padding:7px 10px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.ep-sbtn:hover{color:var(--fg);border-color:var(--muted)}
+.ep-sbtn kbd{font:inherit;font-size:11px;background:var(--panel2);border-radius:6px;padding:1px 5px;color:var(--muted)}
+@media (max-width:1480px){.ep-mods .ep-ml{display:none}.ep-mods a{padding:6px}.ep-mods a[aria-current="page"] .ep-ml{display:inline}.ep-mods a[aria-current="page"]{padding-right:10px}}
+@media (max-width:760px){.ep-sbtn span,.ep-sbtn kbd{display:none}.ep-sbtn{padding:8px}}
+.ep-sov{position:fixed;inset:0;z-index:200;background:rgba(10,9,45,.42);display:flex;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;animation:epIn .15s ease-out}
+.ep-sbox{width:min(640px,100%);max-height:78vh;display:flex;flex-direction:column;background:var(--panel);color:var(--fg);border-radius:22px;box-shadow:0 30px 70px -20px rgba(10,9,45,.5);overflow:hidden;font-family:var(--font)}
+.ep-shead{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line2)}
+.ep-shead input{flex:1;border:0;outline:0;background:none;font:inherit;font-size:18px;font-weight:600;color:var(--fg);min-width:0}
+.ep-shead button{border:0;background:var(--panel2);color:var(--muted);border-radius:10px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer}
+.ep-sres{overflow:auto;padding:8px}
+.ep-sres .ep-sg{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 10px 4px}
+.ep-sres a,.ep-sres div.ep-si{display:flex;gap:12px;align-items:baseline;justify-content:space-between;padding:9px 10px;border-radius:12px;color:inherit;text-decoration:none}
+.ep-sres a:hover,.ep-sres .ep-si:hover,.ep-sres .on{background:var(--hover,var(--panel2))}
+.ep-sres b{font-weight:800}.ep-sres small{color:var(--muted);font-size:12.5px;text-align:right;flex:none;max-width:45%}
+.ep-sres .ep-sru{color:var(--muted);font-weight:500;margin-left:6px}
+.ep-sres mark{background:var(--mark,#FFF1B8);color:inherit;border-radius:3px}
+.ep-sempty{padding:26px 16px;text-align:center;color:var(--muted)}
+@keyframes epIn{from{opacity:0}}`;
+const st=document.createElement("style");st.textContent=css;(document.head||document.documentElement).appendChild(st);
+
+// ---------- поиск ----------
+const fold=s=>String(s||"").toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/ё/g,"е").replace(/[*()\[\]]/g,"").trim();
+const strip=s=>fold(s).replace(/^(der|die|das|sich|ein|eine)\s+/,"");
+let IDX=null,loading=null;
+function loadScript(src){return new Promise((ok,bad)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=bad;document.head.appendChild(s)})}
+const getJSON=u=>fetch(u,{credentials:"same-origin"}).then(r=>r.ok?r.json():null).catch(()=>null);
+async function buildIndex(){
+  const out=[];
+  try{if(typeof BOOK==="undefined")await loadScript("/assets/book.js")}catch(e){}
+  try{if(typeof BOOK!=="undefined")BOOK.forEach(ch=>(ch.sets||[]).forEach(s=>(s.items||[]).forEach(it=>{
+    const de=Array.isArray(it)?it[0]:it.de,ru=Array.isArray(it)?it[1]:it.ru;
+    out.push({g:"EPD · Wörter",de,ru,where:ch.id+" "+ch.title+" › "+s.name,href:"/woerter"})})))}catch(e){}
+  const [me,wd,gde,gfr,lde,lfr,hde,hfr]=await Promise.all(["/api/me","/data/frei/wendungen.json","/data/de/grammatik.json","/data/frei/grammatik.json","/data/de/lesen.json","/data/frei/lesen.json","/data/de/hoeren.json","/data/frei/hoeren.json"].map(getJSON));
+  const pr=me&&me.progress;(pr&&pr.usets||[]).forEach(u=>(u.cards||[]).forEach(c=>out.push({g:"Мои наборы",de:c.de,ru:c.ru,where:u.name,href:"/woerter"})));
+  (wd&&wd.decks||[]).forEach(d=>(d.cards||[]).forEach(c=>out.push({g:"Свободный · "+d.title,de:c.de,ru:c.ru,where:d.title,href:"/de#/frei/karten/"+d.id})));
+  [[gde,"EPD · Grammatik","/de#/grammatik/"],[gfr,"Свободный · Grammatik","/de#/frei/grammatik/"]].forEach(([g,n,h])=>(g&&g.topics||[]).forEach(t=>out.push({g:n,de:t.title,ru:t.ru||"",where:t.level||"",href:h+t.id,topic:1})));
+  [[lde,"EPD · Lesen","/de#/lesen/"],[lfr,"Свободный · Lesen","/de#/frei/lesen/"],[hde,"EPD · Hören","/de#/hoeren/"],[hfr,"Свободный · Hören","/de#/frei/hoeren/"]].forEach(([g,n,h])=>(g&&(g.texts||g.items)||[]).forEach(t=>out.push({g:n,de:t.title,ru:t.topic||"",where:t.level||"",href:h+t.id,topic:1})));
+  out.forEach(o=>{o.fd=strip(o.de);o.fr=fold(o.ru)});
+  return out;
+}
+function hl(s,q){const f=fold(s),i=f.indexOf(q);if(i<0||!q)return esc(s);return esc(s.slice(0,i))+"<mark>"+esc(s.slice(i,i+q.length))+"</mark>"+esc(s.slice(i+q.length))}
+function search(){
+  if(document.querySelector(".ep-sov"))return;
+  const ov=document.createElement("div");ov.className="ep-sov";
+  ov.innerHTML=`<div class="ep-sbox" role="dialog" aria-label="Поиск"><div class="ep-shead">${ic("search",20)}<input type="search" placeholder="Слово по-немецки или по-русски…" autocomplete="off" spellcheck="false"><button type="button" aria-label="Закрыть">${ic("x",16)}</button></div><div class="ep-sres"><div class="ep-sempty">Есть ли слово в твоих наборах? Начни печатать.</div></div></div>`;
+  document.body.appendChild(ov);
+  const inp=ov.querySelector("input"),res=ov.querySelector(".ep-sres");
+  const close=()=>{ov.remove();document.removeEventListener("keydown",key,true)};
+  ov.addEventListener("click",e=>{if(e.target===ov||e.target.closest(".ep-shead button"))close()});
+  function key(e){if(e.key==="Escape"){e.stopPropagation();close()}}
+  document.addEventListener("keydown",key,true);
+  setTimeout(()=>inp.focus(),20);
+  if(!IDX&&!loading)loading=buildIndex().then(x=>{IDX=x;render()});
+  function render(){
+    const q=fold(inp.value),qs=strip(inp.value);
+    if(!q){res.innerHTML='<div class="ep-sempty">Есть ли слово в твоих наборах? Начни печатать.</div>';return}
+    if(!IDX){res.innerHTML='<div class="ep-sempty">Собираю словарь…</div>';return}
+    const hits=IDX.map(o=>{let sc=-1;if(o.fd===qs)sc=0;else if(o.fd.startsWith(qs))sc=1;else if(o.fd.includes(qs))sc=2;else if(o.fr.split(/[,;\/ ]+/).includes(q))sc=1.5;else if(o.fr.includes(q))sc=3;return [sc,o]}).filter(x=>x[0]>=0).sort((a,b)=>a[0]-b[0]||a[1].de.length-b[1].de.length).slice(0,60);
+    if(!hits.length){res.innerHTML=`<div class="ep-sempty">«${esc(inp.value)}» нет ни в одном наборе.<br><a href="/woerter" style="color:var(--link,var(--primary));font-weight:700">Добавить в свой набор в Wörter →</a></div>`;return}
+    const groups={};hits.forEach(([,o])=>(groups[o.g]=groups[o.g]||[]).push(o));
+    res.innerHTML=`<div class="ep-sempty" style="padding:6px 10px;text-align:left">✓ Нашлось: ${hits.length}${hits.length===60?"+":""}</div>`+Object.entries(groups).map(([g,a])=>`<div class="ep-sg">${esc(g)}</div>`+a.map(o=>`<a href="${o.href}"><span><b>${hl(o.de,qs)}</b>${o.ru?`<span class="ep-sru">${hl(o.ru,q)}</span>`:""}</span><small>${esc(o.where)}</small></a>`).join("")).join("");
+  }
+  inp.addEventListener("input",render);
+}
+document.addEventListener("keydown",e=>{
+  const t=e.target,typing=t&&(t.tagName==="INPUT"||t.tagName==="TEXTAREA"||t.isContentEditable);
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();search()}
+  else if(e.key==="/"&&!typing&&!e.metaKey&&!e.ctrlKey){e.preventDefault();search()}
+});
+document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e.preventDefault();search()}});
+Object.assign(window.EP,{modbar,search,icon:ic,MODS});
+})();

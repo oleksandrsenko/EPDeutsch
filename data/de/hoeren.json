@@ -1,0 +1,1094 @@
+{
+ "items": [
+  {
+   "id": "nachrichten",
+   "level": "B2",
+   "kind": "Radionachrichten",
+   "topic": "Gesellschaft und soziales Engagement",
+   "title": "Ö-Journal kompakt: Nachrichten am Morgen",
+   "intro": "Sie hören Kurznachrichten aus dem Radio. Zu jeder Meldung gibt es eine Aufgabe.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Sprecherin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Guten Morgen, es ist sieben Uhr. Hier sind die Nachrichten."
+    ],
+    [
+     "M",
+     "Wien. Die Stadt Wien will bis zum Jahr 2030 rund fünfundzwanzigtausend neue geförderte Wohnungen errichten. Das hat der Wohnbaustadtrat gestern bei einer Pressekonferenz angekündigt. Ziel sei es, den Anstieg der Mieten zu bremsen. Die Opposition kritisiert, das Programm komme zu spät und reiche bei Weitem nicht aus."
+    ],
+    [
+     "M",
+     "Bildung. An den österreichischen Universitäten haben sich für das laufende Wintersemester so viele Erstsemestrige angemeldet wie seit zehn Jahren nicht mehr. Besonders gefragt sind Informatik, Psychologie und Lehramtsstudien. Rückläufig sind dagegen die Anmeldungen in den Rechtswissenschaften."
+    ],
+    [
+     "M",
+     "Verkehr. Wegen Bauarbeiten ist die Westbahnstrecke zwischen St. Pölten und Amstetten ab Samstag für zwei Wochen gesperrt. Die ÖBB richten einen Schienenersatzverkehr mit Bussen ein. Reisende müssen mit bis zu vierzig Minuten längeren Fahrzeiten rechnen."
+    ],
+    [
+     "M",
+     "Gesundheit. Eine neue Studie der Medizinischen Universität Wien zeigt, dass Jugendliche im Durchschnitt fast eine Stunde weniger schlafen, als Fachleute empfehlen. Als wichtigsten Grund nennen die Forscherinnen die Nutzung des Smartphones am Abend. Sie empfehlen, die Geräte mindestens eine Stunde vor dem Schlafengehen wegzulegen."
+    ],
+    [
+     "M",
+     "Und zum Wetter: Im Westen zunächst noch Regen, im Laufe des Tages auch im Osten zunehmend bewölkt. Die Höchstwerte liegen zwischen acht und vierzehn Grad. Am Wochenende wird es deutlich kälter, in höheren Lagen ist Schnee möglich."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Was plant die Stadt Wien?",
+     "o": [
+      "die Mieten per Gesetz zu senken",
+      "bis 2030 rund 25.000 geförderte Wohnungen zu bauen",
+      "alte Gemeindebauten zu verkaufen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Opposition unterstützt das Wohnbauprogramm.",
+     "a": "f",
+     "two": true,
+     "ex": "Sie kritisiert es."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Studienrichtung verzeichnet weniger Anmeldungen?",
+     "o": [
+      "Informatik",
+      "Psychologie",
+      "Rechtswissenschaften"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Westbahnstrecke ist für einen Monat gesperrt.",
+     "a": "f",
+     "two": true,
+     "ex": "für zwei Wochen"
+    },
+    {
+     "t": "open",
+     "q": "Wie viel länger dauern die Fahrten mit dem Ersatzverkehr?",
+     "a": "bis zu 40 Minuten"
+    },
+    {
+     "t": "mc",
+     "q": "Was empfehlen die Forscherinnen den Jugendlichen?",
+     "o": [
+      "früher aufzustehen",
+      "das Smartphone eine Stunde vor dem Schlafen wegzulegen",
+      "am Wochenende länger zu schlafen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Am Wochenende kann es in den Bergen schneien.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    }
+   ],
+   "words": 209,
+   "minutes": 3
+  },
+  {
+   "id": "umfrage",
+   "level": "B2",
+   "kind": "Straßenumfrage",
+   "topic": "Umwelt und Verkehr",
+   "title": "Umfrage auf der Mariahilfer Straße: Wie kommen Sie zur Arbeit?",
+   "intro": "Ein Radioreporter fragt Passantinnen und Passanten in Wien, wie sie täglich unterwegs sind. Sie hören fünf Personen.",
+   "voices": {
+    "R": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Professionell und freundlich wie ein Radiomoderator.",
+     "name": "Reporter"
+    },
+    "A": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und lebendig, wie eine Studentin, die von ihren Erfahrungen erzählt.",
+     "name": "Person 1"
+    },
+    "B": {
+     "voice": "ballad",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Älterer Herr, gemütlich, etwas langsamer.",
+     "name": "Person 2"
+    },
+    "C": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Person 3"
+    },
+    "D": {
+     "voice": "verse",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, spontan, mit natürlichen kleinen Pausen.",
+     "name": "Person 4"
+    },
+    "E": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Person 5"
+    }
+   },
+   "lines": [
+    [
+     "R",
+     "Grüß Gott, wir machen eine Umfrage für das Radio. Wie kommen Sie normalerweise zur Arbeit oder zur Uni?"
+    ],
+    [
+     "A",
+     "Ich fahre eigentlich immer mit dem Rad, auch im Winter. Von Ottakring bis zur Uni brauche ich zwanzig Minuten, mit der U-Bahn wär's ungefähr gleich lang. Aber am Rad bin ich an der frischen Luft, und ein Fitnessstudio brauch ich dadurch auch nicht."
+    ],
+    [
+     "R",
+     "Und Sie?"
+    ],
+    [
+     "B",
+     "Ich bin seit zwei Jahren in Pension, aber früher bin ich jeden Tag mit dem Auto nach Schwechat gefahren. Mit den Öffis wär das eine halbe Weltreise gewesen. Heute hab ich die Jahreskarte und das Auto steht meistens in der Garage. Eigentlich könnt ich's verkaufen, aber für den Urlaub ist es halt praktisch."
+    ],
+    [
+     "C",
+     "Ich arbeite im Homeoffice, drei Tage in der Woche. An den anderen zwei Tagen nehme ich die U3. Ehrlich gesagt, seit ich weniger pendle, bin ich viel entspannter. Die Zeit, die ich früher im Verkehr verbracht habe, nutze ich jetzt zum Laufen."
+    ],
+    [
+     "D",
+     "Ich hab einen E-Scooter. Das geht super schnell, aber ich muss zugeben: Wenn's regnet, ist es furchtbar. Dann fahre ich mit dem Bus, und der steht oft im Stau. Ich finde, die Stadt sollte mehr eigene Busspuren bauen."
+    ],
+    [
+     "E",
+     "Ich wohne in Niederösterreich und pendle mit dem Zug. Das Problem ist der letzte Kilometer: Vom Bahnhof zu meinem Büro gibt's keine gute Verbindung, deshalb hab ich ein Klapprad dabei. Würde der Zug öfter fahren, würden sicher noch mehr Leute das Auto stehen lassen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Person 1 ist mit dem Rad schneller als mit der U-Bahn.",
+     "a": "f",
+     "two": true,
+     "ex": "ungefähr gleich lang"
+    },
+    {
+     "t": "tf",
+     "q": "Person 2 hat sein Auto bereits verkauft.",
+     "a": "f",
+     "two": true,
+     "ex": "Es steht meistens in der Garage."
+    },
+    {
+     "t": "tf",
+     "q": "Person 3 fährt fünf Tage pro Woche mit der U-Bahn.",
+     "a": "f",
+     "two": true,
+     "ex": "nur zwei Tage"
+    },
+    {
+     "t": "tf",
+     "q": "Person 3 fühlt sich durch weniger Pendeln entspannter.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was wünscht sich Person 4 von der Stadt?",
+     "a": "mehr eigene Busspuren"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Problem nennt Person 5?",
+     "o": [
+      "Die Züge sind zu teuer.",
+      "Vom Bahnhof zum Büro gibt es keine gute Verbindung.",
+      "Im Zug gibt es keinen Platz für Fahrräder."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was würde laut Person 5 mehr Menschen zum Umsteigen bewegen?",
+     "a": "wenn der Zug öfter fahren würde"
+    }
+   ],
+   "words": 240,
+   "minutes": 3
+  },
+  {
+   "id": "erasmus",
+   "level": "B2+",
+   "kind": "Radiointerview",
+   "topic": "Tourismus und Reisen",
+   "title": "Interview: Ein Semester in Lissabon – was Erasmus wirklich bringt",
+   "intro": "Sie hören ein Interview mit einer Studentin, die ein Auslandssemester in Portugal verbracht hat.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Professionell und freundlich wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "S": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und lebendig, wie eine Studentin, die von ihren Erfahrungen erzählt.",
+     "name": "Studentin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Bei uns im Studio ist heute Sophie Berger. Sie studiert Wirtschaft in Linz und ist gerade von einem Erasmus-Semester in Lissabon zurückgekommen. Frau Berger, warum gerade Portugal?"
+    ],
+    [
+     "S",
+     "Ehrlich gesagt war Portugal nicht meine erste Wahl. Ich wollte eigentlich nach Spanien, aber dort waren alle Plätze vergeben. Im Nachhinein bin ich aber sehr froh darüber. Lissabon ist eine unglaublich offene Stadt, und weil Portugiesisch für mich völlig neu war, habe ich viel mehr gelernt, als ich erwartet hätte."
+    ],
+    [
+     "M",
+     "Viele denken bei Erasmus vor allem an Partys. Wie viel wurde denn tatsächlich studiert?"
+    ],
+    [
+     "S",
+     "Das Klischee stimmt nicht ganz. Natürlich haben wir viel unternommen, aber die Kurse an der Uni waren anspruchsvoll. Der größte Unterschied zu Österreich war, dass es viel mehr Gruppenarbeiten und Präsentationen gab. Am Anfang war das ungewohnt, aber dadurch habe ich gelernt, vor Leuten frei zu sprechen – auf Englisch und am Ende sogar ein bisschen auf Portugiesisch."
+    ],
+    [
+     "M",
+     "Wie war das mit der Finanzierung? Lissabon gilt ja inzwischen als teure Stadt."
+    ],
+    [
+     "S",
+     "Das war tatsächlich das größte Problem. Die Mieten sind in den letzten Jahren extrem gestiegen, auch wegen der vielen Ferienwohnungen für Touristen. Ich habe für ein kleines Zimmer fast sechshundert Euro bezahlt. Das Erasmus-Stipendium hat davon nur einen Teil abgedeckt, den Rest habe ich mit Ersparnissen aus meinem Sommerjob finanziert."
+    ],
+    [
+     "M",
+     "Hat das Auslandssemester Ihre Pläne für die Zukunft verändert?"
+    ],
+    [
+     "S",
+     "Ja, auf jeden Fall. Ich habe gemerkt, dass ich gern international arbeiten möchte, vielleicht in einer Organisation, die mit Südeuropa zu tun hat. Und ich bin selbstständiger geworden. Wenn man in einem fremden Land eine Wohnung suchen, sich bei Behörden anmelden und mit einer neuen Sprache zurechtkommen muss, wächst man einfach."
+    ],
+    [
+     "M",
+     "Was würden Sie anderen Studierenden raten?"
+    ],
+    [
+     "S",
+     "Sich früh zu bewerben und sich nicht nur auf die beliebtesten Städte zu konzentrieren. Und: nicht nur mit anderen Erasmus-Studierenden zusammen zu sein. Die schönsten Erfahrungen habe ich gemacht, als ich mit Portugiesinnen und Portugiesen in einem Chor gesungen habe. Da habe ich die Sprache und die Kultur wirklich kennengelernt."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Portugal war von Anfang an Sophies Wunschziel.",
+     "a": "f",
+     "two": true,
+     "ex": "eigentlich Spanien"
+    },
+    {
+     "t": "tf",
+     "q": "Laut Sophie wurde während des Semesters kaum studiert.",
+     "a": "f",
+     "two": true,
+     "ex": "Die Kurse waren anspruchsvoll."
+    },
+    {
+     "t": "mc",
+     "q": "Was war an der Universität in Lissabon anders als in Österreich?",
+     "o": [
+      "Es gab mehr Prüfungen.",
+      "Es gab mehr Gruppenarbeiten und Präsentationen.",
+      "Alle Kurse waren auf Portugiesisch."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wie viel kostete Sophies Zimmer ungefähr?",
+     "a": "fast 600 Euro"
+    },
+    {
+     "t": "mc",
+     "q": "Wie hat Sophie ihren Aufenthalt finanziert?",
+     "o": [
+      "nur mit dem Stipendium",
+      "mit dem Stipendium und Ersparnissen aus einem Sommerjob",
+      "mit Unterstützung ihrer Eltern"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Veränderungen, die das Auslandssemester bei Sophie bewirkt hat.",
+     "a": "möchte international arbeiten; ist selbstständiger geworden"
+    },
+    {
+     "t": "open",
+     "q": "Welche zwei Ratschläge gibt Sophie?",
+     "a": "früh bewerben / nicht nur beliebte Städte; nicht nur mit Erasmus-Studierenden zusammen sein"
+    }
+   ],
+   "words": 328,
+   "minutes": 3
+  },
+  {
+   "id": "secondhand",
+   "level": "B2+",
+   "kind": "Podcast",
+   "topic": "Konsumgesellschaft",
+   "title": "Podcast „Zweite Runde“: Lohnt sich Secondhand wirklich?",
+   "intro": "Sie hören einen Ausschnitt aus einem Podcast. Zwei Moderatoren sprechen über gebrauchte Kleidung und Online-Plattformen.",
+   "voices": {
+    "J": {
+     "voice": "verse",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, spontan, mit natürlichen kleinen Pausen.",
+     "name": "Jonas"
+    },
+    "L": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und lebendig, wie eine Studentin, die von ihren Erfahrungen erzählt.",
+     "name": "Lisa"
+    }
+   },
+   "lines": [
+    [
+     "J",
+     "Servus und willkommen zu einer neuen Folge von „Zweite Runde“. Heute geht's um ein Thema, über das Lisa und ich schon lange streiten: Secondhand. Lisa, du kaufst ja fast nur noch gebraucht, oder?"
+    ],
+    [
+     "L",
+     "Ja, seit ungefähr drei Jahren. Angefangen hat es eigentlich aus Geldmangel während des Studiums. Inzwischen mache ich es aber vor allem aus Überzeugung. Für ein neues T-Shirt braucht man unglaublich viel Wasser, und wenn ich eins kaufe, das schon jemand getragen hat, fällt das einfach weg."
+    ],
+    [
+     "J",
+     "Das klingt gut, aber ich sehe da ein Problem. Auf diesen Online-Plattformen kaufen viele Leute nicht weniger, sondern mehr. Sie verkaufen ihre Sachen nach zweimal Tragen und kaufen mit dem Geld gleich wieder Neues. Das ist doch auch nur eine andere Form von Konsum."
+    ],
+    [
+     "L",
+     "Da hast du nicht ganz unrecht. Es gibt Studien, die zeigen, dass ein Teil der Leute die Plattformen genau so nutzt. Aber das ist nicht die Schuld von Secondhand an sich. Entscheidend ist, dass ich ein Kleidungsstück lange trage. Ob es neu oder gebraucht ist, kommt erst danach."
+    ],
+    [
+     "J",
+     "Und was ist mit dem Versand? Wenn jedes einzelne Teil quer durch Europa geschickt wird, ist die Ökobilanz ja auch nicht mehr so toll."
+    ],
+    [
+     "L",
+     "Stimmt. Deswegen gehe ich lieber in Secondhand-Läden hier in Wien oder auf Flohmärkte. Da kann ich die Sachen auch anprobieren, und es gibt keine Retouren. Am Naschmarkt-Flohmarkt am Samstag findest du manchmal echte Schätze."
+    ],
+    [
+     "J",
+     "Okay, aber jetzt mal ehrlich: Ist Secondhand überhaupt noch billig? Manche Vintage-Läden verlangen für eine alte Jacke mehr als ein normales Geschäft für eine neue."
+    ],
+    [
+     "L",
+     "Das ist leider so, gerade bei bekannten Marken oder im angesagten Vintage-Stil. Secondhand ist ein Trend geworden, und das merkt man an den Preisen. Mein Tipp: Sozialmärkte und Läden von Hilfsorganisationen. Dort ist es immer noch günstig, und das Geld geht an einen guten Zweck."
+    ],
+    [
+     "J",
+     "Gut, ich gebe zu, du hast mich ein bisschen überzeugt. Vielleicht probiere ich's beim nächsten Wintermantel aus."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Lisa kaufte zunächst aus finanziellen Gründen gebraucht.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Was kritisiert Jonas an Online-Plattformen?",
+     "o": [
+      "Die Qualität der Kleidung ist schlecht.",
+      "Viele Leute kaufen dadurch sogar mehr.",
+      "Die Plattformen verlangen zu hohe Gebühren."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist für Lisa wichtiger als die Frage, ob ein Kleidungsstück neu oder gebraucht ist?",
+     "a": "dass man es lange trägt"
+    },
+    {
+     "t": "mc",
+     "q": "Warum kauft Lisa lieber in Läden und auf Flohmärkten?",
+     "o": [
+      "weil es dort billiger ist",
+      "wegen Versand und Retouren beim Online-Kauf",
+      "weil sie dort Freunde trifft"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Laut Lisa sind Vintage-Läden immer günstiger als normale Geschäfte.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welchen Tipp gibt Lisa für günstige Secondhand-Kleidung?",
+     "a": "Sozialmärkte und Läden von Hilfsorganisationen"
+    },
+    {
+     "t": "tf",
+     "q": "Am Ende bleibt Jonas komplett bei seiner Meinung.",
+     "a": "f",
+     "two": true,
+     "ex": "Er ist ein bisschen überzeugt."
+    }
+   ],
+   "words": 316,
+   "minutes": 3
+  },
+  {
+   "id": "mieten_diskussion",
+   "level": "C1",
+   "kind": "Radiodiskussion",
+   "topic": "Wohnen",
+   "title": "Diskussion: Braucht Österreich eine strengere Mietpreisbremse?",
+   "intro": "Sie hören eine Diskussion im Radio. Es sprechen eine Vertreterin einer Mieterorganisation und ein Vertreter der Immobilienwirtschaft.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "K": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Karin Fuchs, Mieterschutz"
+    },
+    "H": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Mag. Thomas Hofer, Immobilienwirtschaft"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Die Mieten in Österreich sind in den vergangenen Jahren deutlich stärker gestiegen als die Löhne. Darüber diskutiere ich heute mit Karin Fuchs von der Mietervereinigung und Thomas Hofer vom Verband der Immobilienwirtschaft. Frau Fuchs, wie dramatisch ist die Lage?"
+    ],
+    [
+     "K",
+     "Sehr dramatisch. Wir haben in unserer Beratung Familien, die mittlerweile mehr als die Hälfte ihres Einkommens fürs Wohnen ausgeben. Besonders betroffen sind Menschen, die neu einen Mietvertrag abschließen müssen, also junge Leute, Alleinerziehende, Zugewanderte. Und das Problem sind vor allem die befristeten Verträge. Wer nach drei Jahren nicht weiß, ob er bleiben darf, traut sich auch nicht, sich gegen eine überhöhte Miete zu wehren."
+    ],
+    [
+     "M",
+     "Herr Hofer, ist eine strengere Mietpreisbremse die Lösung?"
+    ],
+    [
+     "H",
+     "Ich verstehe die Sorgen, aber ich halte das für einen Irrweg. Wenn man die Mieten zu stark deckelt, lohnt es sich für Investoren nicht mehr, neue Wohnungen zu bauen oder alte zu sanieren. Das Ergebnis wäre ein noch kleineres Angebot. Das sieht man in anderen Städten, wo es solche Regelungen gibt: Die Wartelisten werden länger, und am Ende bekommen nur diejenigen eine Wohnung, die die richtigen Kontakte haben."
+    ],
+    [
+     "K",
+     "Da muss ich widersprechen. Niemand verlangt, dass Vermieter keinen Gewinn mehr machen dürfen. Aber Wohnen ist ein Grundbedürfnis und keine normale Ware. Wien zeigt ja seit Jahrzehnten, dass es anders geht: Der hohe Anteil an Gemeindewohnungen und geförderten Genossenschaftswohnungen dämpft die Mieten in der ganzen Stadt."
+    ],
+    [
+     "H",
+     "Das ist richtig, und ich bin der Letzte, der den sozialen Wohnbau schlechtreden will. Aber gerade deshalb sage ich: Wir brauchen mehr Neubau, schnellere Genehmigungsverfahren und weniger Bürokratie. Ein Bauprojekt dauert in Österreich oft fünf Jahre, bis es überhaupt starten kann. Das ist das eigentliche Problem."
+    ],
+    [
+     "M",
+     "Frau Fuchs, wären Sie mit schnelleren Verfahren einverstanden?"
+    ],
+    [
+     "K",
+     "Grundsätzlich ja, solange dabei der Umweltschutz und die Mitsprache der Anrainer nicht unter die Räder kommen. Aber Neubau allein hilft kurzfristig niemandem, der heute seine Miete nicht zahlen kann. Wir fordern daher zweierlei: ein Ende der befristeten Verträge für große Vermieter und klare Obergrenzen bei Neuvermietungen."
+    ],
+    [
+     "H",
+     "Bei den Befristungen bin ich übrigens gar nicht so weit weg von Ihnen. Für private Kleinvermieter, die vielleicht in ein paar Jahren selbst einziehen wollen, braucht es sie. Für große Gesellschaften könnte man über längere Mindestlaufzeiten durchaus reden."
+    ],
+    [
+     "M",
+     "Das ist doch ein Ansatzpunkt. Vielen Dank Ihnen beiden für die Diskussion."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Welche Gruppe ist laut Frau Fuchs besonders betroffen?",
+     "o": [
+      "Menschen mit alten Mietverträgen",
+      "Menschen, die neue Mietverträge abschließen",
+      "Eigentümer von Wohnungen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Warum sind befristete Verträge laut Frau Fuchs problematisch?",
+     "a": "Mieter wehren sich nicht gegen überhöhte Mieten, weil sie nicht wissen, ob sie bleiben dürfen."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Folge einer strengen Mietpreisbremse befürchtet Herr Hofer?",
+     "o": [
+      "mehr Leerstand",
+      "weniger Neubau und Sanierung, also ein kleineres Angebot",
+      "höhere Steuern"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Herr Hofer lehnt den sozialen Wohnbau grundsätzlich ab.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Herrn Hofer das „eigentliche Problem“?",
+     "a": "zu lange Genehmigungsverfahren / zu viel Bürokratie beim Bauen"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie die zwei Forderungen von Frau Fuchs.",
+     "a": "Ende der Befristungen für große Vermieter; Obergrenzen bei Neuvermietungen"
+    },
+    {
+     "t": "tf",
+     "q": "Bei der Frage der Befristungen nähern sich die beiden Positionen an.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    }
+   ],
+   "words": 375,
+   "minutes": 3
+  },
+  {
+   "id": "algorithmen",
+   "level": "C1",
+   "kind": "Vortrag",
+   "topic": "Medien",
+   "title": "Vortrag: Wie Algorithmen unsere Meinung formen",
+   "intro": "Sie hören einen Ausschnitt aus einem öffentlichen Vortrag an der Universität Wien.",
+   "voices": {
+    "D": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Wie eine Wissenschaftlerin bei einem öffentlichen Vortrag: klar, engagiert, gut strukturiert.",
+     "name": "Vortragende"
+    }
+   },
+   "lines": [
+    [
+     "D",
+     "Guten Abend, meine Damen und Herren. Wenn Sie heute Morgen Ihr Smartphone in die Hand genommen haben, dann hat innerhalb von Sekunden ein Algorithmus entschieden, welche Nachrichten Sie zuerst sehen. Über diese unsichtbaren Entscheidungen möchte ich heute sprechen – und darüber, was sie mit unserer Demokratie zu tun haben."
+    ],
+    [
+     "D",
+     "Beginnen wir mit dem Grundprinzip. Plattformen wie Instagram, TikTok oder YouTube verdienen ihr Geld mit Werbung. Je länger wir bleiben, desto mehr Werbung können sie uns zeigen. Die Algorithmen sind daher darauf optimiert, unsere Aufmerksamkeit zu binden. Und was bindet Aufmerksamkeit besonders gut? Inhalte, die starke Gefühle auslösen – Empörung, Angst oder Begeisterung. Sachliche, ausgewogene Beiträge haben es in diesem System schwer."
+    ],
+    [
+     "D",
+     "Daraus ergibt sich ein zweites Phänomen, das Sie vielleicht unter dem Begriff „Filterblase“ kennen. Die Idee: Weil uns der Algorithmus vor allem zeigt, was zu unseren bisherigen Interessen passt, sehen wir immer seltener andere Meinungen. Ich muss Sie hier allerdings etwas enttäuschen – oder beruhigen. Die Forschung zeigt, dass die Filterblase weniger dicht ist als oft behauptet. Die meisten Menschen begegnen online durchaus unterschiedlichen Positionen. Das Problem ist eher, wie sie ihnen begegnen: nämlich oft in Form von zugespitzten, verzerrten Darstellungen, die die andere Seite lächerlich oder bedrohlich erscheinen lassen."
+    ],
+    [
+     "D",
+     "Damit sind wir beim dritten Punkt, der Polarisierung. Wer ständig die extremsten Vertreter der Gegenseite sieht, bekommt ein falsches Bild davon, wie die Menschen mit anderer Meinung wirklich denken. Studien zeigen, dass wir die Gegenseite systematisch für radikaler halten, als sie tatsächlich ist. Das erschwert Kompromisse – und Kompromisse sind das Herzstück jeder Demokratie."
+    ],
+    [
+     "D",
+     "Was kann man dagegen tun? Auf politischer Ebene verpflichtet der Digital Services Act der Europäischen Union große Plattformen inzwischen dazu, ihre Empfehlungssysteme transparenter zu machen und Risiken für den öffentlichen Diskurs zu bewerten. Nutzerinnen und Nutzer müssen außerdem die Möglichkeit haben, einen Feed zu wählen, der nicht auf ihrem persönlichen Profil beruht."
+    ],
+    [
+     "D",
+     "Aber auch jede und jeder Einzelne kann etwas tun. Erstens: bewusst Quellen nutzen, die nicht von Algorithmen ausgewählt werden, etwa eine Tageszeitung oder ein Nachrichtenprogramm. Zweitens: innehalten, bevor man etwas teilt, das einen empört. Und drittens – vielleicht das Wichtigste: mit Menschen, die anders denken, auch offline sprechen. Sie werden feststellen, dass sie meist weniger extrem sind als ihr Bild im Netz. Vielen Dank."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Worauf sind die Algorithmen der Plattformen laut Vortrag optimiert, und warum?",
+     "a": "auf möglichst lange Aufmerksamkeit, weil die Plattformen mit Werbung Geld verdienen"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Inhalte werden besonders häufig verbreitet?",
+     "o": [
+      "sachliche und ausgewogene Beiträge",
+      "Inhalte, die starke Gefühle auslösen",
+      "kurze Nachrichten ohne Bilder"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Vortragende bestätigt, dass Menschen online kaum andere Meinungen sehen.",
+     "a": "f",
+     "two": true,
+     "ex": "Die Filterblase ist weniger dicht als behauptet."
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Vortragender das eigentliche Problem bei der Begegnung mit anderen Meinungen?",
+     "a": "Andere Meinungen erscheinen in zugespitzter, verzerrter Form – die Gegenseite wirkt lächerlich oder bedrohlich."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Folge hat Polarisierung laut Studien?",
+     "o": [
+      "Man hält die Gegenseite für radikaler, als sie ist.",
+      "Man interessiert sich weniger für Politik.",
+      "Man wählt häufiger extreme Parteien."
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Pflichten großer Plattformen nach dem Digital Services Act.",
+     "a": "Empfehlungssysteme transparenter machen; Risiken für den Diskurs bewerten; Feed ohne Profiling anbieten"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie die drei Tipps für Einzelne.",
+     "a": "Quellen ohne Algorithmus nutzen; vor dem Teilen innehalten; mit Andersdenkenden offline sprechen"
+    }
+   ],
+   "words": 371,
+   "minutes": 3
+  },
+  {
+   "id": "pflege",
+   "level": "C1+",
+   "kind": "Expertengespräch",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "title": "Im Gespräch: Wer pflegt uns morgen?",
+   "intro": "Sie hören ein Gespräch mit einem Gesundheitsökonomen über den Personalmangel in der Pflege.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "E": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Gesundheitsökonom"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "In den kommenden Jahren gehen in Österreich zehntausende Pflegekräfte in Pension, gleichzeitig steigt die Zahl der Pflegebedürftigen. Herr Professor, wie groß ist die Lücke tatsächlich?"
+    ],
+    [
+     "E",
+     "Je nach Berechnung fehlen bis zum Ende des Jahrzehnts mehrere zehntausend Pflegekräfte. Das klingt abstrakt, bedeutet aber ganz konkret: Betten in Pflegeheimen können nicht belegt werden, obwohl sie gebraucht würden, und in Spitälern werden Operationen verschoben, weil das Personal fehlt. Das Problem ist also nicht mehr eines der Zukunft, wir sind bereits mittendrin."
+    ],
+    [
+     "M",
+     "Woran liegt es, dass so wenige Menschen in der Pflege arbeiten wollen?"
+    ],
+    [
+     "E",
+     "Ich würde die Frage etwas anders stellen. Es wollen gar nicht so wenige Menschen in die Pflege, das Interesse an den Ausbildungen ist durchaus vorhanden. Das Problem ist, dass viele den Beruf nach wenigen Jahren wieder verlassen. Die Gründe sind bekannt: Schichtdienste, hohe körperliche und psychische Belastung und das Gefühl, nie genug Zeit für die Menschen zu haben, die man betreut. Wenn man das ändert, gewinnt man mehr, als wenn man ausschließlich neue Leute ausbildet."
+    ],
+    [
+     "M",
+     "Die Politik setzt stark auf Pflegekräfte aus dem Ausland. Ist das ein Ausweg?"
+    ],
+    [
+     "E",
+     "Es ist ein Baustein, aber kein Allheilmittel. Österreich steht hier in Konkurrenz zu Deutschland, der Schweiz und den skandinavischen Ländern, die oft bessere Bedingungen bieten. Hinzu kommt, dass die Anerkennung ausländischer Abschlüsse bei uns noch immer viel zu lange dauert. Ich kenne Fälle, in denen ausgebildete Krankenpflegerinnen anderthalb Jahre als Hilfskräfte gearbeitet haben, bis ihre Ausbildung anerkannt war. Und man muss auch die ethische Frage stellen: Wenn wir Pflegekräfte aus Ländern abwerben, die selbst Personal brauchen, verschieben wir das Problem nur."
+    ],
+    [
+     "M",
+     "Welche Rolle können Technik und Digitalisierung spielen?"
+    ],
+    [
+     "E",
+     "Eine unterstützende, aber eine begrenzte. Digitale Dokumentation kann viel Zeit sparen, Sensoren können Stürze erkennen, und Roboter können schwere Lasten heben. Was die Technik nicht ersetzen kann, ist die Zuwendung. Pflege ist Beziehungsarbeit. Ich warne davor, die Digitalisierung als Ausrede zu benutzen, um nicht in Personal und bessere Arbeitsbedingungen investieren zu müssen."
+    ],
+    [
+     "M",
+     "Wenn Sie drei Wünsche an die Politik frei hätten?"
+    ],
+    [
+     "E",
+     "Erstens eine verlässliche Personalbemessung, damit nicht eine Pflegekraft in der Nacht für vierzig Menschen zuständig ist. Zweitens schnellere Anerkennungsverfahren. Und drittens mehr Unterstützung für pflegende Angehörige, denn sie tragen heute den Großteil der Pflege, meist unbezahlt und oft bis an die Grenze ihrer Kräfte."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei konkrete Folgen des Personalmangels, die der Experte erwähnt.",
+     "a": "Pflegeheimbetten können nicht belegt werden; Operationen werden verschoben"
+    },
+    {
+     "t": "tf",
+     "q": "Laut dem Experten interessieren sich kaum Menschen für eine Pflegeausbildung.",
+     "a": "f",
+     "two": true,
+     "ex": "Das Interesse ist vorhanden; viele verlassen den Beruf aber wieder."
+    },
+    {
+     "t": "mc",
+     "q": "Was wäre laut dem Experten am wirksamsten?",
+     "o": [
+      "mehr Werbung für den Beruf",
+      "die Arbeitsbedingungen so verbessern, dass Pflegekräfte bleiben",
+      "die Ausbildung verkürzen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Probleme bei der Anwerbung ausländischer Pflegekräfte.",
+     "a": "Konkurrenz mit anderen Ländern mit besseren Bedingungen; lange Anerkennung der Abschlüsse; ethisches Problem der Abwerbung"
+    },
+    {
+     "t": "tf",
+     "q": "Der Experte hält Roboter für einen vollwertigen Ersatz für Pflegekräfte.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wovor warnt der Experte in Bezug auf die Digitalisierung?",
+     "a": "sie als Ausrede zu nutzen, um nicht in Personal und Arbeitsbedingungen zu investieren"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie die drei Wünsche des Experten an die Politik.",
+     "a": "verlässliche Personalbemessung; schnellere Anerkennungsverfahren; mehr Unterstützung für pflegende Angehörige"
+    }
+   ],
+   "words": 371,
+   "minutes": 3
+  },
+  {
+   "id": "alt_h1",
+   "level": "B2",
+   "kind": "Vortrag",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "title": "Jobben neben dem Studium",
+   "intro": "Sie hören einen Vortrag über die Erwerbstätigkeit von Studierenden. Sie hören den Text zweimal. Beim ersten Hören dürfen Sie nur Notizen machen. Beantworten Sie die Fragen nach dem zweiten Hören.",
+   "voices": {
+    "D": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Wie eine Wissenschaftlerin bei einem öffentlichen Vortrag: klar, engagiert, gut strukturiert.",
+     "name": "Vortrag"
+    }
+   },
+   "lines": [
+    [
+     "D",
+     "Meine Damen und Herren, ich begrüße Sie herzlich zu unserem heutigen Vortrag. Das Thema lautet: Jobben neben dem Studium – Notwendigkeit oder Chance?"
+    ],
+    [
+     "D",
+     "Lassen Sie mich mit einigen Zahlen beginnen. Nach Angaben des Deutschen Studentenwerks gehen heute etwa zwei Drittel aller Studierenden neben ihrem Studium einer Erwerbstätigkeit nach. Vor zwanzig Jahren lag dieser Anteil noch bei ungefähr der Hälfte. Im Durchschnitt arbeiten die Studierenden etwa fünfzehn Stunden pro Woche, also fast zwei volle Arbeitstage."
+    ],
+    [
+     "D",
+     "Warum jobben so viele junge Menschen? Der wichtigste Grund ist ohne Zweifel die Finanzierung des Lebensunterhalts. Vor allem die Mieten in den Universitätsstädten sind in den letzten Jahren stark gestiegen. In München oder Frankfurt kostet ein Zimmer in einer Wohngemeinschaft heute oft mehr als fünfhundert Euro im Monat. Nicht alle Eltern sind in der Lage, ihre Kinder finanziell ausreichend zu unterstützen, und nur etwa elf Prozent der Studierenden erhalten BAföG."
+    ],
+    [
+     "D",
+     "Es gibt aber auch andere Motive. Viele Studierende möchten bereits während des Studiums Berufserfahrung sammeln. Wer als Werkstudent in einem Unternehmen arbeitet, lernt den Arbeitsalltag kennen, knüpft Kontakte und hat nach dem Abschluss bessere Chancen auf dem Arbeitsmarkt. Personalleiter bestätigen, dass sie Bewerber mit praktischer Erfahrung bevorzugen."
+    ],
+    [
+     "D",
+     "Allerdings hat das Jobben auch Schattenseiten. Wer mehr als zwanzig Stunden pro Woche arbeitet, überschreitet häufig die Regelstudienzeit. Außerdem zeigen Untersuchungen, dass erwerbstätige Studierende ihr Studium öfter abbrechen. Die Doppelbelastung führt bei manchen zu Stress und Erschöpfung, besonders in der Prüfungszeit."
+    ],
+    [
+     "D",
+     "Was kann man also empfehlen? Erstens sollte die Arbeit möglichst einen Bezug zum Studienfach haben. Ein Job als wissenschaftliche Hilfskraft oder ein Werkstudentenvertrag im eigenen Fachgebiet ist sinnvoller als eine Tätigkeit ohne jeden Bezug zum Studium. Zweitens sollte man die Arbeitszeit begrenzen und in der Prüfungsphase reduzieren. Und drittens lohnt es sich, sich über Stipendien zu informieren: Viele Studierende wissen gar nicht, dass sie sich um ein Stipendium bewerben könnten."
+    ],
+    [
+     "D",
+     "Zusammenfassend lässt sich sagen: Das Jobben neben dem Studium ist für viele eine finanzielle Notwendigkeit, es kann aber auch eine Chance sein – vorausgesetzt, man findet die richtige Balance. Vielen Dank für Ihre Aufmerksamkeit."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Wie hoch ist heute der Anteil der Studierenden, die neben dem Studium arbeiten?",
+     "a": "etwa zwei Drittel (vor zwanzig Jahren etwa die Hälfte)"
+    },
+    {
+     "t": "open",
+     "q": "Wie viele Stunden pro Woche arbeiten Studierende im Durchschnitt?",
+     "a": "etwa fünfzehn Stunden (fast zwei Arbeitstage)"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie den wichtigsten Grund für das Jobben und eine Ursache dafür.",
+     "a": "Finanzierung des Lebensunterhalts; stark gestiegene Mieten / Eltern können nicht ausreichend unterstützen / nur 11 % erhalten BAföG"
+    },
+    {
+     "t": "mc",
+     "q": "Warum bevorzugen Personalleiter manche Bewerber?",
+     "o": [
+      "Weil sie jünger sind.",
+      "Weil sie praktische Erfahrung haben.",
+      "Weil sie ein Stipendium hatten."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Wer mehr als 20 Stunden pro Woche arbeitet, schließt das Studium meist schneller ab.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Erwerbstätige Studierende brechen das Studium häufiger ab.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie die drei Empfehlungen der Referentin / des Referenten.",
+     "a": "1) Job mit Bezug zum Studienfach; 2) Arbeitszeit begrenzen, in der Prüfungsphase reduzieren; 3) sich über Stipendien informieren"
+    },
+    {
+     "t": "open",
+     "q": "Welches Fazit zieht der Vortrag?",
+     "a": "Jobben ist oft finanzielle Notwendigkeit, kann aber eine Chance sein, wenn man die richtige Balance findet"
+    }
+   ],
+   "words": 336,
+   "minutes": 3
+  },
+  {
+   "id": "alt_h2",
+   "level": "B2+",
+   "kind": "Interview",
+   "topic": "Umwelt und Verkehr",
+   "title": "Wasser – ein knappes Gut",
+   "intro": "Sie hören ein Interview mit einer Hydrologin über Wasserknappheit. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+   "voices": {
+    "S1": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Professionell und freundlich wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "S2": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Lehmann"
+    }
+   },
+   "lines": [
+    [
+     "S1",
+     "Frau Dr. Lehmann, Sie sind Hydrologin und beschäftigen sich seit zwanzig Jahren mit dem Thema Wasser. Viele Menschen in Deutschland glauben, Wasser sei bei uns unbegrenzt verfügbar. Stimmt das?"
+    ],
+    [
+     "S2",
+     "Leider nicht mehr. Deutschland galt lange als wasserreiches Land, und im internationalen Vergleich stehen wir immer noch gut da. Aber in den trockenen Sommern der letzten Jahre ist der Grundwasserspiegel in vielen Regionen deutlich gesunken. In einigen Gemeinden in Brandenburg und Niedersachsen musste die Wasserentnahme bereits eingeschränkt werden. Man durfte zum Beispiel tagsüber keine Gärten mehr bewässern."
+    ],
+    [
+     "S1",
+     "Woran liegt das?"
+    ],
+    [
+     "S2",
+     "Es gibt mehrere Ursachen. Die wichtigste ist der Klimawandel: Die Niederschläge verteilen sich anders über das Jahr. Im Winter regnet es zwar mehr, aber im Sommer gibt es lange Dürreperioden, und bei hohen Temperaturen verdunstet ein großer Teil des Wassers, bevor es ins Grundwasser gelangt. Hinzu kommt, dass immer mehr Flächen versiegelt werden, also mit Beton oder Asphalt bedeckt sind. Dort kann der Regen nicht versickern."
+    ],
+    [
+     "S1",
+     "Und wie viel Wasser verbrauchen wir eigentlich?"
+    ],
+    [
+     "S2",
+     "Im Haushalt verbraucht jeder Deutsche etwa 125 Liter pro Tag. Das klingt viel, ist aber nur ein kleiner Teil. Viel größer ist das sogenannte virtuelle Wasser, also das Wasser, das für die Herstellung von Produkten benötigt wird. Für ein Kilogramm Rindfleisch braucht man rund 15.000 Liter, für eine Baumwoll-Jeans etwa 8.000 Liter. Rechnet man das mit ein, liegt der tägliche Verbrauch pro Person bei über 7.000 Litern."
+    ],
+    [
+     "S1",
+     "Was kann der Einzelne tun?"
+    ],
+    [
+     "S2",
+     "Natürlich sollte man kein Wasser verschwenden. Aber wirkungsvoller ist ein bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel. Gleichzeitig ist die Politik gefordert. Wir brauchen Regeln, wer in Krisenzeiten Vorrang hat – die Trinkwasserversorgung, die Landwirtschaft oder die Industrie. Außerdem müssen Städte so umgebaut werden, dass sie Regenwasser speichern können, statt es in die Kanalisation abzuleiten. Man spricht von der „Schwammstadt“."
+    ],
+    [
+     "S1",
+     "Frau Dr. Lehmann, vielen Dank für das Gespräch."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Deutschland hat im internationalen Vergleich große Wasserprobleme.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche Maßnahme mussten einige Gemeinden ergreifen?",
+     "a": "Wasserentnahme einschränken, z. B. tagsüber keine Gärten bewässern"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Ursachen für den sinkenden Grundwasserspiegel.",
+     "a": "Klimawandel (andere Verteilung der Niederschläge, Dürre im Sommer, Verdunstung); Versiegelung von Flächen"
+    },
+    {
+     "t": "mc",
+     "q": "Wie viel Wasser verbraucht ein Deutscher täglich im Haushalt?",
+     "o": [
+      "etwa 15 Liter",
+      "etwa 125 Liter",
+      "etwa 7.000 Liter"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was versteht man unter „virtuellem Wasser“?",
+     "a": "Wasser, das für die Herstellung von Produkten benötigt wird"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie ein Beispiel für virtuelles Wasser mit Zahl.",
+     "a": "1 kg Rindfleisch ≈ 15.000 l; eine Jeans ≈ 8.000 l"
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Dr. Lehmann wirkungsvoller als Wassersparen im Haushalt?",
+     "a": "bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel"
+    },
+    {
+     "t": "open",
+     "q": "Was bedeutet der Begriff „Schwammstadt“?",
+     "a": "eine Stadt, die Regenwasser speichert, statt es in die Kanalisation abzuleiten"
+    }
+   ],
+   "words": 303,
+   "minutes": 3
+  },
+  {
+   "id": "alt_h3",
+   "level": "B2+",
+   "kind": "Vortrag",
+   "topic": "Gesundheit",
+   "title": "Warum wir mehr schlafen sollten",
+   "intro": "Sie hören einen populärwissenschaftlichen Vortrag über Schlaf. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+   "voices": {
+    "D": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Wie ein Universitätsdozent bei einem Vortrag: deutlich, gut strukturiert, mit Betonung der wichtigsten Punkte.",
+     "name": "Vortrag"
+    }
+   },
+   "lines": [
+    [
+     "D",
+     "Guten Abend, meine Damen und Herren. Wir verbringen ungefähr ein Drittel unseres Lebens im Schlaf – und trotzdem wissen die meisten von uns erstaunlich wenig darüber. Heute möchte ich Ihnen zeigen, warum Schlaf keine verlorene Zeit ist, sondern eine der wichtigsten Voraussetzungen für Gesundheit und Lernen."
+    ],
+    [
+     "D",
+     "Beginnen wir mit dem Gedächtnis. Während wir schlafen, ist unser Gehirn keineswegs untätig. Im Gegenteil: In bestimmten Schlafphasen werden die Informationen, die wir tagsüber aufgenommen haben, verarbeitet und mit bereits vorhandenem Wissen verknüpft. In einem bekannten Experiment lernten Probanden am Abend eine Liste von Vokabeln. Die eine Gruppe schlief danach acht Stunden, die andere blieb wach. Am nächsten Morgen konnte die ausgeschlafene Gruppe sich an rund zwanzig bis dreißig Prozent mehr Wörter erinnern. Wer also vor einer Prüfung die Nacht durcharbeitet, schadet sich eher, als dass er sich nützt."
+    ],
+    [
+     "D",
+     "Zweitens stärkt Schlaf das Immunsystem. Menschen, die regelmäßig weniger als sechs Stunden schlafen, erkranken deutlich häufiger an Erkältungen. Langfristig steigt bei chronischem Schlafmangel außerdem das Risiko für Übergewicht, Diabetes und Herz-Kreislauf-Erkrankungen."
+    ],
+    [
+     "D",
+     "Drittens beeinflusst Schlaf unsere Psyche. Nach einer schlaflosen Nacht reagieren wir gereizter, sind weniger konzentriert und nehmen Probleme als bedrohlicher wahr. Studien zeigen einen engen Zusammenhang zwischen dauerhaftem Schlafmangel und Depressionen."
+    ],
+    [
+     "D",
+     "Warum schlafen wir trotzdem so wenig? Ein Hauptgrund ist das Smartphone. Viele Menschen nutzen ihr Handy bis unmittelbar vor dem Einschlafen. Das blaue Licht des Bildschirms hemmt die Ausschüttung des Hormons Melatonin, das uns müde macht. Hinzu kommt, dass Nachrichten und soziale Netzwerke unser Gehirn aktiv halten."
+    ],
+    [
+     "D",
+     "Was empfehlen Schlafforscher? Gehen Sie möglichst zur gleichen Zeit ins Bett, auch am Wochenende. Legen Sie das Handy mindestens eine Stunde vor dem Schlafen weg. Halten Sie das Schlafzimmer kühl und dunkel. Und verzichten Sie am Abend auf Kaffee und schwere Mahlzeiten. Schlaf, meine Damen und Herren, ist kein Luxus – er ist eine Investition in Ihre Gesundheit. Vielen Dank."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Welchen Anteil unseres Lebens verbringen wir im Schlaf?",
+     "a": "etwa ein Drittel"
+    },
+    {
+     "t": "open",
+     "q": "Was geschieht laut Vortrag im Schlaf mit den Informationen des Tages?",
+     "a": "sie werden verarbeitet und mit vorhandenem Wissen verknüpft"
+    },
+    {
+     "t": "open",
+     "q": "Beschreiben Sie kurz das Experiment und sein Ergebnis.",
+     "a": "Probanden lernten abends Vokabeln; eine Gruppe schlief 8 Stunden, die andere blieb wach; die ausgeschlafene Gruppe erinnerte sich an 20–30 % mehr Wörter"
+    },
+    {
+     "t": "tf",
+     "q": "Wer vor einer Prüfung die Nacht durcharbeitet, lernt effektiver.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei langfristige Risiken von chronischem Schlafmangel.",
+     "a": "Übergewicht, Diabetes, Herz-Kreislauf-Erkrankungen, Depressionen, häufigere Erkältungen"
+    },
+    {
+     "t": "mc",
+     "q": "Warum stört das Smartphone den Schlaf?",
+     "o": [
+      "Es erzeugt Lärm.",
+      "Das blaue Licht hemmt die Ausschüttung von Melatonin.",
+      "Es erhöht die Temperatur im Schlafzimmer."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie drei Empfehlungen der Schlafforscher.",
+     "a": "gleiche Schlafenszeit; Handy 1 Stunde vorher weglegen; Schlafzimmer kühl und dunkel; abends kein Kaffee, keine schweren Mahlzeiten"
+    },
+    {
+     "t": "tf",
+     "q": "Der Referent bezeichnet Schlaf als Luxus.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    }
+   ],
+   "words": 304,
+   "minutes": 3
+  }
+ ]
+}

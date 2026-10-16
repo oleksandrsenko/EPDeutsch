@@ -1,0 +1,435 @@
+{
+ "items": [
+  {
+   "id": "heuriger",
+   "level": "B2",
+   "kind": "Alltagsgespräch",
+   "topic": "Wien & Kultur",
+   "title": "Beim Heurigen: Ein Abend in Grinzing",
+   "intro": "Zwei Freunde und eine Bekannte aus Deutschland sitzen beim Heurigen. Hören Sie das Gespräch.",
+   "voices": {
+    "F": {
+     "name": "Flo (Wiener)",
+     "voice": "verse",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Locker, gemütlich, mit Wiener Schmäh."
+    },
+    "A": {
+     "name": "Anna (aus Hamburg)",
+     "voice": "nova",
+     "style": "Sprich Hochdeutsch mit norddeutscher Färbung, neugierig und fröhlich."
+    },
+    "K": {
+     "name": "Kellnerin",
+     "voice": "coral",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Freundlich, aber schnell, wie eine Kellnerin am vollen Heurigen."
+    }
+   },
+   "lines": [
+    [
+     "F",
+     "So, Anna, willkommen beim Heurigen! Das hier ist echtes Wien, nicht das, was die Touristen am Stephansplatz sehen."
+    ],
+    [
+     "A",
+     "Wahnsinn, ist das schön hier. Aber erklär mir mal: Was genau ist ein Heuriger? Ist das ein Restaurant?"
+    ],
+    [
+     "F",
+     "Na ja, nicht ganz. Ein Heuriger ist ein Lokal von einem Winzer, der seinen eigenen Wein ausschenkt, vor allem den jungen Wein von heuer. Daher auch der Name. Und wenn der grüne Buschen über der Tür hängt, heißt das: ausg'steckt, also offen."
+    ],
+    [
+     "K",
+     "Grüß Gott, was darf's sein?"
+    ],
+    [
+     "F",
+     "Für mich bitte einen weißen Gspritzten. Anna?"
+    ],
+    [
+     "A",
+     "Äh … ich nehme, was er nimmt. Und was ist ein Gspritzter?"
+    ],
+    [
+     "K",
+     "Wein mit Soda, halb-halb. Gibt's auch was zum Essen? Das Buffet ist da drüben, selbst holen."
+    ],
+    [
+     "F",
+     "Passt, danke! … Siehst du, beim Heurigen holt man sich das Essen selbst. Liptauer, Schweinsbraten, Erdäpfelsalat. Und manche bringen sogar ihre eigene Jause mit."
+    ],
+    [
+     "A",
+     "Liptauer? Erdäpfel? Ich versteh nur Bahnhof."
+    ],
+    [
+     "F",
+     "Erdäpfel sind Kartoffeln, und Liptauer ist ein Aufstrich aus Topfen mit Paprika. Topfen ist … Quark bei euch. Keine Sorge, nach drei Gspritzten verstehst du eh alles."
+    ],
+    [
+     "A",
+     "Haha, oder gar nichts mehr. Sag mal, ist das hier immer so voll?"
+    ],
+    [
+     "F",
+     "Am Wochenende schon. Unter der Woche ist es gemütlicher. Aber genau das ist der Heurige: Man sitzt mit fremden Leuten am Tisch, und nach einer Stunde redet man, als würde man sich seit Jahren kennen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Was ist ein Heuriger?",
+     "o": [
+      "ein Lokal eines Winzers mit eigenem Wein",
+      "ein teures Restaurant im Zentrum",
+      "ein Weinfest einmal im Jahr"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Ein grüner Buschen über der Tür bedeutet, dass das Lokal geschlossen ist.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist ein Gspritzter?",
+     "a": "Wein mit Soda(wasser), halb-halb"
+    },
+    {
+     "t": "tf",
+     "q": "Beim Heurigen wird das Essen an den Tisch gebracht.",
+     "a": "f",
+     "two": true,
+     "ex": "Man holt es selbst am Buffet."
+    },
+    {
+     "t": "open",
+     "q": "Wie heißt „Quark“ auf Österreichisch?",
+     "a": "Topfen"
+    }
+   ],
+   "words": 223,
+   "minutes": 2
+  },
+  {
+   "id": "wg_streit",
+   "level": "B2",
+   "kind": "Streitgespräch",
+   "topic": "Alltag",
+   "title": "Krach in der WG: Wer hat den Abwasch nicht gemacht?",
+   "intro": "Zwei Mitbewohner streiten in der Küche. Achten Sie auf umgangssprachliche Ausdrücke.",
+   "voices": {
+    "M": {
+     "name": "Max",
+     "voice": "ash",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Genervt und gereizt, aber nicht schreiend."
+    },
+    "S": {
+     "name": "Sara",
+     "voice": "shimmer",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Erst defensiv, dann ironisch."
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Sara, ehrlich jetzt? Schon wieder steht dein Geschirr seit drei Tagen in der Spüle. Das geht mir echt auf den Keks."
+    ],
+    [
+     "S",
+     "Moment mal, das ist nicht nur meins. Die Pfanne da, die hast du am Sonntag benutzt."
+    ],
+    [
+     "M",
+     "Okay, die Pfanne, ja. Aber der ganze Rest? Die Teller, die Tassen, der Topf mit den angebrannten Nudeln?"
+    ],
+    [
+     "S",
+     "Ich hatte diese Woche drei Prüfungen, Max. Ich bin total am Arsch. Ich hab einfach keine Zeit gehabt."
+    ],
+    [
+     "M",
+     "Das versteh ich ja. Aber dann sag halt was. Ich hätte dir doch geholfen. Stattdessen muss ich mir jeden Morgen meinen Kaffee zwischen dreckigen Tellern machen."
+    ],
+    [
+     "S",
+     "Jetzt übertreib nicht. Du tust ja so, als würde ich nie was machen. Wer hat letzte Woche das Bad geputzt? Ich!"
+    ],
+    [
+     "M",
+     "Stimmt, das war leiwand von dir. Okay, Vorschlag: Wir machen einen Putzplan. Jeder hat seine Woche, und wer's nicht schafft, sagt rechtzeitig Bescheid."
+    ],
+    [
+     "S",
+     "Passt. Aber dann bitte ohne Zettel mit Ausrufezeichen am Kühlschrank. Das ist so passiv-aggressiv."
+    ],
+    [
+     "M",
+     "Deal. Und heute? Wer wäscht ab?"
+    ],
+    [
+     "S",
+     "Schere, Stein, Papier?"
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Worüber beschwert sich Max?",
+     "o": [
+      "über laute Musik",
+      "über das schmutzige Geschirr",
+      "über die Miete"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Pfanne gehört Max.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Warum hatte Sara keine Zeit?",
+     "a": "Sie hatte drei Prüfungen."
+    },
+    {
+     "t": "open",
+     "q": "Was bedeutet „Das geht mir auf den Keks“?",
+     "a": "Das nervt mich."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Lösung schlagen sie vor?",
+     "o": [
+      "eine Spülmaschine kaufen",
+      "einen Putzplan",
+      "eine Putzfrau"
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ],
+   "words": 166,
+   "minutes": 2
+  },
+  {
+   "id": "arzt",
+   "level": "B1+",
+   "kind": "Telefonat",
+   "topic": "Alltag",
+   "title": "Ein Termin beim Hausarzt",
+   "intro": "Ein Student ruft in einer Arztpraxis an. Hören Sie das Telefongespräch.",
+   "voices": {
+    "P": {
+     "name": "Ordination",
+     "voice": "sage",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Freundlich, routiniert, etwas schnell wie eine Arzthelferin am Telefon."
+    },
+    "D": {
+     "name": "Daniel",
+     "voice": "echo",
+     "style": "Sprich Hochdeutsch mit leichtem Akzent, etwas heiser und müde, weil krank."
+    }
+   },
+   "lines": [
+    [
+     "P",
+     "Ordination Dr. Huber, Grüß Gott, Sie sprechen mit Frau Berger."
+    ],
+    [
+     "D",
+     "Grüß Gott, mein Name ist Daniel Kovač. Ich hätte gern einen Termin. Mir geht's seit zwei Tagen nicht gut, ich hab Fieber und Halsschmerzen."
+    ],
+    [
+     "P",
+     "Waren Sie schon einmal bei uns?"
+    ],
+    [
+     "D",
+     "Nein, ich bin neu in Wien. Ich wohne seit September im Bezirk."
+    ],
+    [
+     "P",
+     "Kein Problem. Bitte bringen Sie Ihre e-card und einen Ausweis mit. Wie hoch ist das Fieber?"
+    ],
+    [
+     "D",
+     "Heute früh achtunddreißig fünf."
+    ],
+    [
+     "P",
+     "Gut. Heute Vormittag ist leider alles voll, aber ich kann Ihnen um sechzehn Uhr dreißig etwas anbieten. Geht sich das aus?"
+    ],
+    [
+     "D",
+     "Ja, das passt. Brauche ich auch eine Krankmeldung für die Uni? Ich hab morgen eine Prüfung."
+    ],
+    [
+     "P",
+     "Das klären Sie am besten direkt mit dem Herrn Doktor. Eine Bestätigung stellen wir Ihnen aus, wenn Sie krank sind. Bitte setzen Sie im Wartezimmer eine Maske auf."
+    ],
+    [
+     "D",
+     "Mach ich. Vielen Dank!"
+    ],
+    [
+     "P",
+     "Gerne, gute Besserung und bis später!"
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Welche Beschwerden hat Daniel?",
+     "a": "Fieber und Halsschmerzen"
+    },
+    {
+     "t": "open",
+     "q": "Was soll Daniel mitbringen?",
+     "a": "e-card und Ausweis"
+    },
+    {
+     "t": "mc",
+     "q": "Wann ist der Termin?",
+     "o": [
+      "heute Vormittag",
+      "heute um 16:30",
+      "morgen früh"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Daniel war schon oft in dieser Praxis.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was bedeutet „Geht sich das aus?“",
+     "a": "Passt das zeitlich? / Schaffen Sie das?"
+    }
+   ],
+   "words": 147,
+   "minutes": 2
+  },
+  {
+   "id": "party",
+   "level": "B2+",
+   "kind": "Smalltalk",
+   "topic": "Beziehungen",
+   "title": "Auf der Party: Smalltalk mit Hindernissen",
+   "intro": "Auf einer Geburtstagsparty kommen zwei Fremde ins Gespräch.",
+   "voices": {
+    "L": {
+     "name": "Lea",
+     "voice": "nova",
+     "style": "Sprich natürliches, umgangssprachliches Deutsch mit österreichischer, leicht wienerischer Färbung. Fröhlich, offen, leicht ironisch."
+    },
+    "T": {
+     "name": "Tarek",
+     "voice": "verse",
+     "style": "Sprich Hochdeutsch mit leichtem Akzent, charmant und etwas nervös."
+    }
+   },
+   "lines": [
+    [
+     "T",
+     "Hi … sorry, kennst du hier zufällig das Bad? Ich bin das erste Mal in der Wohnung."
+    ],
+    [
+     "L",
+     "Den Gang runter, zweite Tür links. Aber Achtung, die Tür klemmt. Du bist auch kein Stammgast hier, oder?"
+    ],
+    [
+     "T",
+     "Nein, ich kenn eigentlich nur Martin von der Uni. Ich bin Tarek."
+    ],
+    [
+     "L",
+     "Lea. Woher kennst du Martin? Studierst du auch Architektur?"
+    ],
+    [
+     "T",
+     "Nein, Informatik. Wir haben uns im Deutschkurs kennengelernt, vor zwei Jahren. Er hat mir damals beigebracht, was „leiwand“ heißt."
+    ],
+    [
+     "L",
+     "Haha, typisch Martin. Und, wie lange bist du schon in Wien?"
+    ],
+    [
+     "T",
+     "Drei Jahre. Am Anfang war's hart, ehrlich gesagt. Die Leute wirkten so grantig. Ich hab gedacht, die mögen mich nicht."
+    ],
+    [
+     "L",
+     "Das ist der berühmte Wiener Grant. Nicht persönlich nehmen, wir sind zu allen so. Sogar zu uns selbst."
+    ],
+    [
+     "T",
+     "Das hab ich inzwischen gecheckt. Jetzt finde ich's fast sympathisch. Sag mal, was machst du eigentlich, wenn du nicht auf Partys Leuten das Bad erklärst?"
+    ],
+    [
+     "L",
+     "Ich bin Lehrerin, Volksschule. Also eigentlich erkläre ich den ganzen Tag Leuten, wo das Klo ist."
+    ],
+    [
+     "T",
+     "Dann bist du ja Profi. Darf ich dir nachher einen Drink holen, als Dankeschön?"
+    ],
+    [
+     "L",
+     "Gern. Aber erst, wenn du die klemmende Tür überlebt hast."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Woher kennt Tarek den Gastgeber?",
+     "a": "aus dem Deutschkurs (vor zwei Jahren)"
+    },
+    {
+     "t": "tf",
+     "q": "Tarek studiert Architektur.",
+     "a": "f",
+     "two": true,
+     "ex": "Informatik"
+    },
+    {
+     "t": "mc",
+     "q": "Wie fand Tarek die Wiener am Anfang?",
+     "o": [
+      "sehr herzlich",
+      "grantig",
+      "langweilig"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist Leas Beruf?",
+     "a": "Volksschullehrerin"
+    },
+    {
+     "t": "tf",
+     "q": "Lea lehnt den Drink ab.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    }
+   ],
+   "words": 189,
+   "minutes": 2
+  }
+ ]
+}

@@ -21,6 +21,8 @@ if len(sys.argv) > 1:
 rows = []
 for path in files:
     d = json.load(open(path, encoding="utf-8"))
+    if not isinstance(d, dict) or "sets" not in d:  # exams.json, hoeren.json — другой формат
+        continue
     sid = d["id"]
     print(f"— {sid} {d['title']}")
     seen = {}

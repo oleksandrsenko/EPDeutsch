@@ -1,0 +1,591 @@
+{
+ "topics": [
+  {
+   "id": "partikeln",
+   "title": "Modalpartikeln: doch, mal, halt, eben, ja, eh",
+   "ru": "Маленькие слова, без которых речь звучит как робот",
+   "level": "B2",
+   "theory": "<p>Модальные частицы не меняют смысл предложения, но меняют <b class=\"k\">тон</b>: делают просьбу мягче, упрёк — заметнее, объяснение — естественнее. В учебниках их почти нет, в живой речи — в каждом втором предложении.</p>\n<table><tr><th>Частица</th><th>Что добавляет</th><th>Пример</th></tr>\n<tr><td><b>mal</b></td><td>смягчает просьбу</td><td>Komm <b>mal</b> her. · Kannst du <b>mal</b> helfen?</td></tr>\n<tr><td><b>doch</b></td><td>«ну же», «ведь» (настойчивость, напоминание, возражение)</td><td>Komm <b>doch</b> mit! · Das weißt du <b>doch</b>!</td></tr>\n<tr><td><b>ja</b></td><td>«ведь, как известно»; удивление</td><td>Das ist <b>ja</b> bekannt. · Du bist <b>ja</b> ganz nass!</td></tr>\n<tr><td><b>halt / eben</b></td><td>«ну так уж есть», смирение</td><td>Das ist <b>halt</b> so. · Dann nehmen wir <b>eben</b> den Bus.</td></tr>\n<tr><td><b>eh</b> (AT)</td><td>«и так, всё равно, конечно»</td><td>Ich komm <b>eh</b> morgen. · Das weiß ich <b>eh</b>.</td></tr>\n<tr><td><b>schon</b></td><td>успокаивает; «вообще-то»</td><td>Das wird <b>schon</b> klappen. · Das ist <b>schon</b> teuer.</td></tr>\n<tr><td><b>denn</b></td><td>интерес в вопросе</td><td>Was ist <b>denn</b> los?</td></tr>\n<tr><td><b>wohl</b></td><td>предположение</td><td>Er ist <b>wohl</b> krank.</td></tr></table>\n<div class=\"tip\">Частицы безударные и стоят обычно после глагола и местоимений: <i>Kannst du <b>mir mal</b> das Salz geben?</i></div>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Zeig ___ her, was du gekauft hast!",
+     "o": [
+      "mal",
+      "denn",
+      "eh"
+     ],
+     "a": 0,
+     "ex": "Просьба → mal."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Was ist ___ los mit dir?",
+     "o": [
+      "denn",
+      "halt",
+      "mal"
+     ],
+     "a": 0,
+     "ex": "Интерес в вопросе → denn."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Zug ist weg. Dann gehen wir ___ zu Fuß.",
+     "o": [
+      "eben",
+      "denn",
+      "ja"
+     ],
+     "a": 0,
+     "ex": "Ну что поделать → eben/halt."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Du bist ___ ganz blass! Geht's dir nicht gut?",
+     "o": [
+      "ja",
+      "mal",
+      "eben"
+     ],
+     "a": 0,
+     "ex": "Удивление → ja."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Keine Sorge, das wird ___ klappen.",
+     "o": [
+      "schon",
+      "denn",
+      "mal"
+     ],
+     "a": 0,
+     "ex": "Успокоить → schon."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Komm ___ mit, das wird lustig!",
+     "o": [
+      "doch",
+      "eben",
+      "wohl"
+     ],
+     "a": 0,
+     "ex": "Уговорить → doch."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "„Soll ich dir das erklären?“ – „Nein, danke, das weiß ich ___.“ (AT)",
+     "o": [
+      "eh",
+      "denn",
+      "mal"
+     ],
+     "a": 0,
+     "ex": "eh = и так знаю."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er antwortet nicht. Er ist ___ schon im Bett.",
+     "o": [
+      "wohl",
+      "mal",
+      "denn"
+     ],
+     "a": 0,
+     "ex": "Предположение → wohl."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Gib mir das Salz. (freundlicher!)",
+     "s": "Kannst du …",
+     "a": [
+      "Kannst du mir mal das Salz geben?",
+      "Kannst du mir bitte mal das Salz geben?",
+      "Kannst du mir mal bitte das Salz geben?"
+     ],
+     "ex": "Вопрос + mal звучит вежливо и естественно.",
+     "task": "Machen Sie den Satz freundlicher mit einer Partikel."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Das Leben ist so. Man kann nichts machen.",
+     "s": "Das ist …",
+     "a": [
+      "Das ist halt so.",
+      "Das ist eben so.",
+      "Das ist halt so, man kann nichts machen."
+     ],
+     "ex": "halt/eben — смирение.",
+     "task": "Drücken Sie Resignation mit einer Partikel aus."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ich habe es dir gestern gesagt! (Vorwurf)",
+     "s": "Ich hab's dir …",
+     "a": [
+      "Ich hab's dir doch gestern gesagt!",
+      "Ich hab's dir ja gestern gesagt!"
+     ],
+     "ex": "doch/ja — «я же тебе говорил».",
+     "task": "Machen Sie einen Vorwurf mit Partikel."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Setz dich. (einladend)",
+     "s": "Setz dich …",
+     "a": [
+      "Setz dich doch!",
+      "Setz dich doch mal!",
+      "Setz dich mal!"
+     ],
+     "ex": "doch/mal — приглашение.",
+     "task": "Einladung mit Partikel."
+    }
+   ]
+  },
+  {
+   "id": "vermutung",
+   "title": "Vermutungen: dürfte, wird wohl, muss, soll",
+   "ru": "Как сказать «наверное», «должно быть», «говорят, что»",
+   "level": "B2+",
+   "theory": "<p>Модальные глаголы умеют выражать <b class=\"k\">степень уверенности</b>, а не только «мочь/должен».</p>\n<table><tr><th>Уверенность</th><th>Пример</th><th>Перевод</th></tr>\n<tr><td>~ 100 %</td><td>Er <b>muss</b> zu Hause sein, das Licht brennt.</td><td>Он наверняка дома.</td></tr>\n<tr><td>~ 80 %</td><td>Er <b>wird wohl</b> zu Hause sein. · Er <b>dürfte</b> zu Hause sein.</td><td>Скорее всего дома.</td></tr>\n<tr><td>~ 50 %</td><td>Er <b>könnte</b> / <b>kann</b> zu Hause sein.</td><td>Может быть, дома.</td></tr>\n<tr><td>чужие слова</td><td>Er <b>soll</b> sehr reich sein.</td><td>Говорят, он очень богат.</td></tr>\n<tr><td>сам утверждает</td><td>Er <b>will</b> den Präsidenten kennen.</td><td>Утверждает, что знаком с президентом.</td></tr></table>\n<h3>О прошлом: модальный глагол + Infinitiv Perfekt</h3>\n<div class=\"ex\">Er <b>muss</b> den Zug <b>verpasst haben</b>. · Sie <b>dürfte</b> schon <b>angekommen sein</b>. · Er <b>wird</b> es <b>vergessen haben</b>. (Futur II)</div>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Licht brennt. Er ___ zu Hause sein. (fast sicher)",
+     "o": [
+      "muss",
+      "soll",
+      "will"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Laut Zeitung ___ der Minister zurücktreten. (Gerücht)",
+     "o": [
+      "soll",
+      "muss",
+      "dürfte"
+     ],
+     "a": 0,
+     "ex": "soll = говорят."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie ___ etwa dreißig sein. (Schätzung)",
+     "o": [
+      "dürfte",
+      "will",
+      "soll"
+     ],
+     "a": 0,
+     "ex": "dürfte = вероятно."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er ___ perfekt Chinesisch sprechen – aber ich glaube ihm nicht.",
+     "o": [
+      "will",
+      "muss",
+      "dürfte"
+     ],
+     "a": 0,
+     "ex": "will = утверждает сам."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wahrscheinlich hat er den Termin vergessen.",
+     "s": "Er wird …",
+     "a": [
+      "Er wird den Termin wohl vergessen haben.",
+      "Er wird den Termin vergessen haben."
+     ],
+     "ex": "Futur II = предположение о прошлом.",
+     "task": "Drücken Sie die Vermutung mit Futur II aus."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich bin sicher, dass sie schon angekommen ist.",
+     "s": "Sie muss …",
+     "a": [
+      "Sie muss schon angekommen sein."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „müssen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man sagt, dass das Restaurant sehr gut ist.",
+     "s": "Das Restaurant soll …",
+     "a": [
+      "Das Restaurant soll sehr gut sein."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sollen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Es ist wahrscheinlich, dass die Preise steigen.",
+     "s": "Die Preise dürften …",
+     "a": [
+      "Die Preise dürften steigen."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „dürfte“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man sagt, er hat im Lotto gewonnen.",
+     "s": "Er soll …",
+     "a": [
+      "Er soll im Lotto gewonnen haben."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sollen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er behauptet, dass er nichts davon gewusst hat.",
+     "s": "Er will …",
+     "a": [
+      "Er will nichts davon gewusst haben."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „wollen“ um."
+    }
+   ]
+  },
+  {
+   "id": "gesprochen",
+   "title": "Gesprochene Sprache",
+   "ru": "weil + V2, Ellipsen, oder?, gell, Verkürzungen: так говорят, но не пишут",
+   "level": "B2",
+   "theory": "<p>Живая речь отличается от письменной. Понимать это нужно, чтобы не теряться в разговоре; использовать — в неформальном общении (но <b>не в Schreiben на экзамене</b>).</p>\n<table>\n<tr><td><b>weil</b> с порядком главного предложения</td><td>Ich komm nicht mit, <b>weil ich hab</b> keine Zeit. (письм.: weil ich keine Zeit habe)</td></tr>\n<tr><td>Пропуск начала</td><td>(Ich) <b>Weiß nicht</b>. · (Das) <b>Kann sein</b>. · (Hast du) <b>Lust</b>?</td></tr>\n<tr><td>Слияния</td><td>hast du → <b>haste</b>, ist es → <b>isses</b>, ein/eine → <b>'n/'ne</b>, habe ich → <b>hab ich</b>, gibt es → <b>gibt's</b></td></tr>\n<tr><td>Хвостики-вопросы</td><td>…, <b>oder?</b> · …, <b>ne?</b> (DE) · …, <b>gell/gö?</b> (AT, Süd)</td></tr>\n<tr><td>Перфект вместо претерита</td><td>Gestern <b>bin ich</b> ins Kino <b>gegangen</b>. (не: ging ich)</td></tr>\n<tr><td>Сапожок «tun»</td><td>Ich <b>tu</b> grad kochen. (разговорно, юг)</td></tr>\n<tr><td>Вежливые смягчения</td><td><b>Ich würde sagen</b>, … · <b>Ich hätte gern</b> … · <b>Wär's möglich</b>, dass …</td></tr></table>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welche Form ist typisch gesprochen (nicht schriftlich)?",
+     "o": [
+      "Ich komme nicht, weil ich hab keine Zeit.",
+      "Ich komme nicht, weil ich keine Zeit habe.",
+      "Ich komme nicht, da ich keine Zeit habe."
+     ],
+     "a": 0,
+     "ex": "weil + V2 — только в устной речи."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "„Haste mal 'nen Euro?“ bedeutet:",
+     "o": [
+      "Hast du mal einen Euro?",
+      "Hast du einen Euro verloren?",
+      "Hast du keinen Euro?"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Was bedeutet „gell“?",
+     "o": [
+      "nicht wahr?",
+      "vielleicht",
+      "leider"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "„Kann sein.“ ist die Kurzform von:",
+     "o": [
+      "Das kann sein.",
+      "Ich kann sein.",
+      "Kannst du sein?"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich weiß das nicht. (sehr kurz, gesprochen)",
+     "s": "",
+     "a": [
+      "Weiß nicht.",
+      "Keine Ahnung.",
+      "Weiß ich nicht."
+     ],
+     "ex": "",
+     "task": "Wie sagt man das kurz im Gespräch?"
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Gestern ging ich ins Kino. (gesprochen)",
+     "s": "Gestern …",
+     "a": [
+      "Gestern bin ich ins Kino gegangen."
+     ],
+     "ex": "В речи — Perfekt.",
+     "task": "Wie sagt man das im Gespräch?"
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Das Wetter ist schön, nicht wahr? (österreichisch)",
+     "s": "Das Wetter ist schön, …",
+     "a": [
+      "Das Wetter ist schön, gell?",
+      "Das Wetter ist schön, gö?",
+      "Das Wetter ist schön, oder?"
+     ],
+     "ex": "",
+     "task": "Benutzen Sie eine typische Rückfrage."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Schriftlich machen: „Ich komm nicht, weil ich bin krank.“",
+     "s": "Ich komme nicht, weil …",
+     "a": [
+      "Ich komme nicht, weil ich krank bin."
+     ],
+     "ex": "В письме — глагол в конец!",
+     "task": "Formen Sie in korrektes Schriftdeutsch um."
+    }
+   ]
+  },
+  {
+   "id": "fvg",
+   "title": "Funktionsverbgefüge",
+   "ru": "eine Entscheidung treffen, in Frage kommen, zur Verfügung stehen",
+   "level": "C1",
+   "theory": "<p>Устойчивые сочетания «существительное + глагол», где глагол почти пустой, а смысл несёт существительное. Звучат солидно — для C1 и в Schreiben очень полезны.</p>\n<table><tr><th>Funktionsverbgefüge</th><th>= простой глагол</th></tr>\n<tr><td>eine Entscheidung <b>treffen</b></td><td>entscheiden</td></tr>\n<tr><td>Kritik <b>üben</b> an</td><td>kritisieren</td></tr>\n<tr><td>einen Beitrag <b>leisten</b> zu</td><td>beitragen</td></tr>\n<tr><td>in Frage <b>kommen</b></td><td>möglich sein</td></tr>\n<tr><td>zur Verfügung <b>stehen / stellen</b></td><td>verfügbar sein / bereitstellen</td></tr>\n<tr><td>in Kauf <b>nehmen</b></td><td>akzeptieren (минусы)</td></tr>\n<tr><td>Rücksicht <b>nehmen</b> auf</td><td>berücksichtigen</td></tr>\n<tr><td>zum Ausdruck <b>bringen</b></td><td>ausdrücken</td></tr>\n<tr><td>in Betracht <b>ziehen</b></td><td>erwägen</td></tr>\n<tr><td>eine Rolle <b>spielen</b></td><td>wichtig sein</td></tr>\n<tr><td>Bescheid <b>geben / sagen</b></td><td>informieren</td></tr>\n<tr><td>Anspruch <b>haben</b> auf</td><td>berechtigt sein</td></tr></table>",
+   "items": [
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir müssen bald eine Entscheidung ___.",
+     "a": [
+      "treffen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Opposition ___ scharfe Kritik an der Reform.",
+     "a": [
+      "übt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Jeder kann einen Beitrag zum Umweltschutz ___.",
+     "a": [
+      "leisten"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Für diese Stelle ___ nur Bewerber mit Erfahrung in Frage.",
+     "a": [
+      "kommen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Gib mir bitte ___, wenn du angekommen bist.",
+     "a": [
+      "Bescheid"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Universität stellt den Studierenden Laptops bereit.",
+     "s": "Die Universität stellt den Studierenden Laptops …",
+     "a": [
+      "Die Universität stellt den Studierenden Laptops zur Verfügung."
+     ],
+     "ex": "",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir akzeptieren die längere Fahrzeit.",
+     "s": "Wir nehmen …",
+     "a": [
+      "Wir nehmen die längere Fahrzeit in Kauf."
+     ],
+     "ex": "",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man sollte die Bedürfnisse älterer Menschen berücksichtigen.",
+     "s": "Man sollte auf …",
+     "a": [
+      "Man sollte auf die Bedürfnisse älterer Menschen Rücksicht nehmen."
+     ],
+     "ex": "",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er drückte seine Dankbarkeit aus.",
+     "s": "Er brachte …",
+     "a": [
+      "Er brachte seine Dankbarkeit zum Ausdruck."
+     ],
+     "ex": "",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Wir erwägen einen Umzug nach Graz.",
+     "s": "Wir ziehen …",
+     "a": [
+      "Wir ziehen einen Umzug nach Graz in Betracht."
+     ],
+     "ex": "",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    }
+   ]
+  },
+  {
+   "id": "ndekl",
+   "title": "n-Deklination",
+   "ru": "den Kollegen, dem Studenten, des Herrn: мужской род с -n",
+   "level": "B2",
+   "theory": "<p>Небольшая группа существительных мужского рода получает <b class=\"k\">-(e)n во всех падежах, кроме именительного</b>. Ошибки здесь сразу слышны.</p>\n<table><tr><th></th><th>der Student</th><th>der Kollege</th><th>der Herr</th></tr>\n<tr><td>Nom</td><td>der Student</td><td>der Kollege</td><td>der Herr</td></tr>\n<tr><td>Akk</td><td>den Student<b>en</b></td><td>den Kollege<b>n</b></td><td>den Herr<b>n</b></td></tr>\n<tr><td>Dat</td><td>dem Student<b>en</b></td><td>dem Kollege<b>n</b></td><td>dem Herr<b>n</b></td></tr>\n<tr><td>Gen</td><td>des Student<b>en</b></td><td>des Kollege<b>n</b></td><td>des Herr<b>n</b></td></tr></table>\n<p>Кто сюда входит: мужского рода на <b>-e</b> (der Kunde, der Junge, der Experte, der Löwe), на <b>-ent, -ant, -ist, -at, -oge</b> (der Präsident, der Praktikant, der Journalist, der Kandidat, der Psychologe), а также der Mensch, der Nachbar, der Bauer, der Held, der Herr. Особые: <i>der Name → des Namens</i>, <i>der Gedanke → des Gedankens</i>.</p>",
+   "items": [
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich habe gestern meinen Kolleg___ getroffen.",
+     "a": [
+      "en"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir haben dem Kund___ ein Angebot gemacht.",
+     "a": [
+      "en"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Kennst du ___?",
+     "o": [
+      "den neuen Praktikanten",
+      "den neuen Praktikant",
+      "der neue Praktikant"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich habe mit ___ gesprochen.",
+     "o": [
+      "dem Präsidenten",
+      "dem Präsident",
+      "den Präsident"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Meinung des Expert___ war eindeutig.",
+     "a": [
+      "en"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wie ist der Name Ihres Nachbar___?",
+     "a": [
+      "n"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das ist die Tasche ___.",
+     "o": [
+      "des Jungen",
+      "des Junges",
+      "des Jung"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Wie war noch mal die Bedeutung ___?",
+     "o": [
+      "des Namens",
+      "des Namen",
+      "des Name"
+     ],
+     "a": 0,
+     "ex": "Особая форма: des Namens."
+    }
+   ]
+  }
+ ]
+}

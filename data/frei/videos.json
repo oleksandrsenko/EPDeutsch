@@ -1,0 +1,143 @@
+{
+ "groups": [
+  {
+   "title": "YouTube-Kanäle zum Deutschlernen",
+   "items": [
+    {
+     "title": "Easy German",
+     "by": "YouTube",
+     "level": "A2–C1",
+     "url": "https://www.youtube.com/@EasyGerman",
+     "what": "Straßeninterviews mit echten Menschen, Untertitel Deutsch + Englisch. Bestes Material für Hören im echten Tempo."
+    },
+    {
+     "title": "DW Learn German",
+     "by": "Deutsche Welle",
+     "level": "A1–C1",
+     "url": "https://www.youtube.com/@dwlearngerman",
+     "what": "Serien, Grammatik, Alltagsvideos der Deutschen Welle."
+    },
+    {
+     "title": "Deutsch mit Marija",
+     "by": "YouTube",
+     "level": "B1–C1",
+     "url": "https://www.youtube.com/@DeutschmitMarija",
+     "what": "Grammatik und Prüfungsvorbereitung, sehr klar erklärt."
+    },
+    {
+     "title": "Deutsch für Euch",
+     "by": "YouTube",
+     "level": "B1–C1",
+     "url": "https://www.youtube.com/@DeutschFuerEuch",
+     "what": "Grammatik ausführlich und mit Humor."
+    },
+    {
+     "title": "Learn German with Anja",
+     "by": "YouTube",
+     "level": "A2–B2",
+     "url": "https://www.youtube.com/@LearnGermanwithAnja",
+     "what": "Alltagssprache, Redewendungen, Fehler, die alle machen."
+    }
+   ]
+  },
+  {
+   "title": "Nachrichten und Radio (österreichisch)",
+   "items": [
+    {
+     "title": "Ö1 – Radio und Podcasts",
+     "by": "ORF",
+     "level": "C1",
+     "url": "https://oe1.orf.at",
+     "what": "Journale, Interviews, Wissenschaft – genau der Stil des EPD-Hörverstehens."
+    },
+    {
+     "title": "ORF ON (TVthek)",
+     "by": "ORF",
+     "level": "B2–C1",
+     "url": "https://on.orf.at",
+     "what": "ZIB-Nachrichten, Dokus und österreichische Serien online."
+    },
+    {
+     "title": "Der Standard",
+     "by": "derstandard.at",
+     "level": "C1",
+     "url": "https://www.derstandard.at",
+     "what": "Die Zeitung, aus der viele EPD-Lesetexte stammen. Jeden Tag einen Artikel lesen."
+    },
+    {
+     "title": "Langsam gesprochene Nachrichten",
+     "by": "Deutsche Welle",
+     "level": "B1–B2",
+     "url": "https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332",
+     "what": "Tägliche Nachrichten, langsam gelesen, mit Text."
+    },
+    {
+     "title": "Tagesschau in 100 Sekunden",
+     "by": "ARD",
+     "level": "B2–C1",
+     "url": "https://www.tagesschau.de/multimedia/sendung/tagesschau_in_100_sekunden",
+     "what": "Die wichtigsten Nachrichten in unter zwei Minuten."
+    }
+   ]
+  },
+  {
+   "title": "Filme und Serien (mit Untertiteln)",
+   "items": [
+    {
+     "title": "Braunschlag",
+     "by": "ORF-Serie",
+     "level": "C1",
+     "url": "https://www.youtube.com/results?search_query=Braunschlag+Serie",
+     "what": "Schwarze Komödie aus dem Waldviertel – österreichischer Dialekt pur."
+    },
+    {
+     "title": "Vorstadtweiber",
+     "by": "ORF-Serie",
+     "level": "B2–C1",
+     "url": "https://www.youtube.com/results?search_query=Vorstadtweiber",
+     "what": "Wiener Gesellschaftssatire, viel Alltagssprache."
+    },
+    {
+     "title": "Fack ju Göhte",
+     "by": "Film",
+     "level": "B2",
+     "url": "https://www.youtube.com/results?search_query=Fack+ju+G%C3%B6hte+Trailer",
+     "what": "Jugendsprache und Schimpfwörter – mit Untertiteln ansehen."
+    },
+    {
+     "title": "Good Bye, Lenin!",
+     "by": "Film",
+     "level": "B2",
+     "url": "https://www.youtube.com/results?search_query=Good+Bye+Lenin+Trailer",
+     "what": "Klassiker über die Wende, klares Hochdeutsch."
+    },
+    {
+     "title": "Dark",
+     "by": "Netflix-Serie",
+     "level": "B2–C1",
+     "url": "https://www.netflix.com/title/80100172",
+     "what": "Mystery-Serie, auf Deutsch mit deutschen Untertiteln schauen."
+    }
+   ]
+  },
+  {
+   "title": "Podcasts",
+   "items": [
+    {
+     "title": "Easy German Podcast",
+     "by": "Easy German",
+     "level": "B1–C1",
+     "url": "https://www.easygerman.fm",
+     "what": "Gespräche über Alltag in Deutschland, Transkripte verfügbar."
+    },
+    {
+     "title": "Wienerisch lernen",
+     "by": "YouTube-Suche",
+     "level": "B2+",
+     "url": "https://www.youtube.com/results?search_query=wienerisch+lernen",
+     "what": "Videos über den Wiener Dialekt und Schmäh."
+    }
+   ]
+  }
+ ]
+}

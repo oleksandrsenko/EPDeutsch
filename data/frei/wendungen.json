@@ -1,0 +1,1029 @@
+{
+ "decks": [
+  {
+   "id": "idiome",
+   "title": "Redewendungen",
+   "ru": "Идиомы, которые немцы и австрийцы говорят каждый день",
+   "color": "#E8505B",
+   "cards": [
+    {
+     "de": "Ich verstehe nur Bahnhof.",
+     "ru": "Ничего не понимаю.",
+     "ex": "Er hat mir die Steuererklärung erklärt, aber ich hab nur Bahnhof verstanden.",
+     "note": ""
+    },
+    {
+     "de": "Das ist nicht mein Bier.",
+     "ru": "Это не моё дело.",
+     "ex": "Ob er sich trennt? Das ist nicht mein Bier.",
+     "note": ""
+    },
+    {
+     "de": "die Daumen drücken",
+     "ru": "держать кулачки",
+     "ex": "Morgen ist meine Prüfung – drück mir die Daumen!",
+     "note": ""
+    },
+    {
+     "de": "Tomaten auf den Augen haben",
+     "ru": "не замечать очевидного",
+     "ex": "Hast du Tomaten auf den Augen? Das Schild steht direkt vor dir!",
+     "note": ""
+    },
+    {
+     "de": "jemandem auf den Keks gehen",
+     "ru": "действовать на нервы",
+     "ex": "Sein ständiges Jammern geht mir echt auf den Keks.",
+     "note": ""
+    },
+    {
+     "de": "die Nase voll haben",
+     "ru": "быть сытым по горло",
+     "ex": "Ich hab die Nase voll vom Regen.",
+     "note": ""
+    },
+    {
+     "de": "ins Fettnäpfchen treten",
+     "ru": "сесть в лужу, ляпнуть неловкость",
+     "ex": "Ich hab sie nach ihrem Mann gefragt – dabei sind sie seit einem Jahr geschieden. Voll ins Fettnäpfchen getreten.",
+     "note": ""
+    },
+    {
+     "de": "auf dem Holzweg sein",
+     "ru": "заблуждаться",
+     "ex": "Wenn du glaubst, dass das ohne Lernen geht, bist du auf dem Holzweg.",
+     "note": ""
+    },
+    {
+     "de": "Schwein haben",
+     "ru": "повезти",
+     "ex": "Der Zug hatte Verspätung, ich hab ihn noch erwischt – Schwein gehabt!",
+     "note": ""
+    },
+    {
+     "de": "Da steppt der Bär.",
+     "ru": "Там жара/весело, вечеринка огонь.",
+     "ex": "Komm am Samstag mit, da steppt der Bär!",
+     "note": ""
+    },
+    {
+     "de": "um den heißen Brei herumreden",
+     "ru": "ходить вокруг да около",
+     "ex": "Red nicht um den heißen Brei herum – sag einfach, was los ist.",
+     "note": ""
+    },
+    {
+     "de": "die Katze im Sack kaufen",
+     "ru": "покупать кота в мешке",
+     "ex": "Eine Wohnung ohne Besichtigung mieten? Das ist die Katze im Sack kaufen.",
+     "note": ""
+    },
+    {
+     "de": "Ende gut, alles gut.",
+     "ru": "Всё хорошо, что хорошо кончается.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "etwas auf die lange Bank schieben",
+     "ru": "откладывать в долгий ящик",
+     "ex": "Die Bachelorarbeit schiebe ich schon seit Monaten auf die lange Bank.",
+     "note": ""
+    },
+    {
+     "de": "sich kein Blatt vor den Mund nehmen",
+     "ru": "говорить прямо, не стесняясь",
+     "ex": "Meine Oma nimmt sich nie ein Blatt vor den Mund.",
+     "note": ""
+    },
+    {
+     "de": "Hals- und Beinbruch!",
+     "ru": "Ни пуха ни пера!",
+     "ex": "",
+     "note": "отвечают просто «Danke!»"
+    },
+    {
+     "de": "einen Kater haben",
+     "ru": "мучиться похмельем",
+     "ex": "Nach der Party gestern hab ich einen ordentlichen Kater.",
+     "note": ""
+    },
+    {
+     "de": "blau sein",
+     "ru": "быть пьяным",
+     "ex": "Um Mitternacht war er schon total blau.",
+     "note": ""
+    },
+    {
+     "de": "blaumachen",
+     "ru": "прогулять (работу/учёбу)",
+     "ex": "Heute mach ich blau und geh an die Donau.",
+     "note": ""
+    },
+    {
+     "de": "jemandem einen Bären aufbinden",
+     "ru": "навешать лапшу на уши",
+     "ex": "Du willst mir einen Bären aufbinden – du hast nie im Leben Arnold Schwarzenegger getroffen!",
+     "note": ""
+    },
+    {
+     "de": "Das ist mir Wurst / wurscht.",
+     "ru": "Мне всё равно.",
+     "ex": "Pizza oder Sushi? Mir ist das wurscht.",
+     "note": "в Австрии: «Des is ma wurscht»"
+    },
+    {
+     "de": "den Nagel auf den Kopf treffen",
+     "ru": "попасть в точку",
+     "ex": "Mit deiner Analyse hast du den Nagel auf den Kopf getroffen.",
+     "note": ""
+    },
+    {
+     "de": "alles in Butter",
+     "ru": "всё в порядке",
+     "ex": "Keine Sorge, alles in Butter.",
+     "note": ""
+    },
+    {
+     "de": "auf Wolke sieben schweben",
+     "ru": "быть на седьмом небе (влюблён)",
+     "ex": "Seit sie Tom kennt, schwebt sie auf Wolke sieben.",
+     "note": ""
+    },
+    {
+     "de": "jemanden um den Finger wickeln",
+     "ru": "вить верёвки из кого-то",
+     "ex": "Die Kleine wickelt ihren Opa um den Finger.",
+     "note": ""
+    },
+    {
+     "de": "den Faden verlieren",
+     "ru": "потерять нить",
+     "ex": "Bei der Präsentation hab ich kurz den Faden verloren.",
+     "note": ""
+    },
+    {
+     "de": "unter vier Augen",
+     "ru": "с глазу на глаз",
+     "ex": "Können wir das unter vier Augen besprechen?",
+     "note": ""
+    },
+    {
+     "de": "Es ist noch kein Meister vom Himmel gefallen.",
+     "ru": "Не боги горшки обжигают / Никто не рождается мастером.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Kirche im Dorf lassen",
+     "ru": "не преувеличивать",
+     "ex": "Jetzt lass mal die Kirche im Dorf – es war nur ein kleiner Kratzer.",
+     "note": ""
+    },
+    {
+     "de": "ein Auge zudrücken",
+     "ru": "закрыть глаза (простить)",
+     "ex": "Diesmal drück ich noch ein Auge zu.",
+     "note": ""
+    },
+    {
+     "de": "etwas ist ein Katzensprung",
+     "ru": "рукой подать",
+     "ex": "Der Naschmarkt ist von hier nur ein Katzensprung.",
+     "note": ""
+    },
+    {
+     "de": "jemandem die Leviten lesen",
+     "ru": "отчитать кого-то",
+     "ex": "Der Chef hat ihm ordentlich die Leviten gelesen.",
+     "note": ""
+    },
+    {
+     "de": "Lügen haben kurze Beine.",
+     "ru": "Ложь недолговечна / Всё тайное становится явным.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Kurve kriegen",
+     "ru": "успеть исправиться, вовремя взяться за ум",
+     "ex": "Er hat im letzten Semester doch noch die Kurve gekriegt.",
+     "note": ""
+    },
+    {
+     "de": "mit einem blauen Auge davonkommen",
+     "ru": "легко отделаться",
+     "ex": "Der Unfall sah schlimm aus, aber wir sind mit einem blauen Auge davongekommen.",
+     "note": ""
+    },
+    {
+     "de": "Ich glaub, mein Schwein pfeift!",
+     "ru": "Я в шоке! / Ну ничего себе!",
+     "ex": "",
+     "note": "очень разговорное"
+    },
+    {
+     "de": "Jetzt mal Butter bei die Fische!",
+     "ru": "Давай по делу / начистоту!",
+     "ex": "",
+     "note": "северонемецкое"
+    },
+    {
+     "de": "Wer A sagt, muss auch B sagen.",
+     "ru": "Назвался груздем — полезай в кузов.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Das Leben ist kein Ponyhof.",
+     "ru": "Жизнь — не сахар.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Alles hat ein Ende, nur die Wurst hat zwei.",
+     "ru": "Всему приходит конец (шутливо).",
+     "ex": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "id": "umgang",
+   "title": "Umgangssprache & Jugendsprache",
+   "ru": "Как говорят на улице, в чатах и среди друзей",
+   "color": "#8B5CF6",
+   "cards": [
+    {
+     "de": "Na?",
+     "ru": "Ну как? / Привет!",
+     "ex": "Na, alles gut?",
+     "note": "универсальное приветствие среди своих"
+    },
+    {
+     "de": "Passt!",
+     "ru": "Окей, договорились, норм",
+     "ex": "Treffen wir uns um acht? – Passt!",
+     "note": "особенно в Австрии"
+    },
+    {
+     "de": "Geht klar.",
+     "ru": "Без проблем, сделаю.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Krass!",
+     "ru": "Жесть! / Офигеть!",
+     "ex": "Du hast die Prüfung mit Einser bestanden? Krass!",
+     "note": ""
+    },
+    {
+     "de": "Alter!",
+     "ru": "Чувак! / Да ну!",
+     "ex": "Alter, hast du das gesehen?",
+     "note": ""
+    },
+    {
+     "de": "chillen",
+     "ru": "отдыхать, расслабляться",
+     "ex": "Heute will ich einfach nur chillen.",
+     "note": ""
+    },
+    {
+     "de": "Bock haben (auf)",
+     "ru": "хотеть, быть в настроении",
+     "ex": "Hast du Bock auf Kino?",
+     "note": "«kein Bock» — неохота"
+    },
+    {
+     "de": "abhängen",
+     "ru": "тусоваться, зависать",
+     "ex": "Wir hängen am Donaukanal ab.",
+     "note": ""
+    },
+    {
+     "de": "Digga",
+     "ru": "бро, братан",
+     "ex": "Digga, was geht?",
+     "note": "германский сленг, в Австрии реже"
+    },
+    {
+     "de": "Was geht (ab)?",
+     "ru": "Как дела? / Что происходит?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich bin am Arsch.",
+     "ru": "Я в полной заднице / без сил.",
+     "ex": "",
+     "note": "грубовато"
+    },
+    {
+     "de": "Das ist mega / voll gut.",
+     "ru": "Это супер.",
+     "ex": "Das Konzert war mega!",
+     "note": ""
+    },
+    {
+     "de": "lost sein",
+     "ru": "быть потерянным, не понимать",
+     "ex": "In Mathe bin ich komplett lost.",
+     "note": ""
+    },
+    {
+     "de": "cringe",
+     "ru": "кринж, неловко",
+     "ex": "Sein Tanz war so cringe.",
+     "note": ""
+    },
+    {
+     "de": "Ehrenmann / Ehrenfrau",
+     "ru": "достойный человек, красавчик",
+     "ex": "Du hast mir die Unterlagen geschickt? Ehrenmann!",
+     "note": ""
+    },
+    {
+     "de": "sich etwas reinziehen",
+     "ru": "смотреть/съесть/«затянуть» что-то",
+     "ex": "Heute zieh ich mir die ganze Staffel rein.",
+     "note": ""
+    },
+    {
+     "de": "pennen",
+     "ru": "спать",
+     "ex": "Ich hab nur vier Stunden gepennt.",
+     "note": ""
+    },
+    {
+     "de": "die Kohle / die Knete",
+     "ru": "бабки, деньги",
+     "ex": "Ich hab grad keine Kohle.",
+     "note": ""
+    },
+    {
+     "de": "checken",
+     "ru": "понимать, просекать",
+     "ex": "Checkst du das?",
+     "note": ""
+    },
+    {
+     "de": "labern",
+     "ru": "болтать, нести чушь",
+     "ex": "Laber nicht!",
+     "note": ""
+    },
+    {
+     "de": "abgefahren",
+     "ru": "безумный, крутой",
+     "ex": "Die Party war echt abgefahren.",
+     "note": ""
+    },
+    {
+     "de": "Läuft bei dir!",
+     "ru": "У тебя всё круто идёт!",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Mach dich locker!",
+     "ru": "Расслабься! Не парься!",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Kein Ding!",
+     "ru": "Не за что! / Без проблем.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich hab's verkackt.",
+     "ru": "Я облажался.",
+     "ex": "Die Prüfung hab ich verkackt.",
+     "note": "грубовато"
+    },
+    {
+     "de": "Hä?",
+     "ru": "А? Чего?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Jein",
+     "ru": "и да, и нет",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Tschüssi / Ciao / Baba",
+     "ru": "пока",
+     "ex": "",
+     "note": "Baba — по-венски"
+    },
+    {
+     "de": "Oida!",
+     "ru": "Чувак! / Офигеть!",
+     "ex": "Oida, des gibt's ned!",
+     "note": "венское «Alter», на все случаи"
+    },
+    {
+     "de": "sich verpissen",
+     "ru": "свалить, убраться",
+     "ex": "Verpiss dich!",
+     "note": "грубо"
+    }
+   ]
+  },
+  {
+   "id": "austria",
+   "title": "Austriazismen & Wienerisch",
+   "ru": "Австрийские слова, которые в учебниках из Германии не найдёшь",
+   "color": "#E0A800",
+   "cards": [
+    {
+     "de": "Grüß Gott / Servus / Griaß di",
+     "ru": "здравствуйте / привет",
+     "ex": "",
+     "note": "Servus — и привет, и пока"
+    },
+    {
+     "de": "die Jause",
+     "ru": "перекус",
+     "ex": "Nimm dir eine Jause für die Wanderung mit.",
+     "note": ""
+    },
+    {
+     "de": "der Paradeiser",
+     "ru": "помидор (DE: die Tomate)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Erdapfel",
+     "ru": "картофель (DE: die Kartoffel)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "das Obers / der Schlag",
+     "ru": "сливки / взбитые сливки (DE: die Sahne)",
+     "ex": "Einen Kaffee mit Schlag, bitte.",
+     "note": ""
+    },
+    {
+     "de": "der Topfen",
+     "ru": "творог (DE: der Quark)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Marille",
+     "ru": "абрикос (DE: die Aprikose)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "das Sackerl",
+     "ru": "пакетик (DE: die Tüte)",
+     "ex": "Brauchen Sie ein Sackerl?",
+     "note": ""
+    },
+    {
+     "de": "der Jänner / der Feber",
+     "ru": "январь / февраль",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "heuer",
+     "ru": "в этом году",
+     "ex": "Heuer fahren wir nicht in den Urlaub.",
+     "note": ""
+    },
+    {
+     "de": "das Spital",
+     "ru": "больница (DE: das Krankenhaus)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Matura",
+     "ru": "выпускные экзамены (DE: das Abitur)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "das Beisl",
+     "ru": "пивнушка, простой ресторанчик",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Heurige",
+     "ru": "винный кабачок с молодым вином",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Öffis",
+     "ru": "общественный транспорт",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Bim",
+     "ru": "трамвай (по-венски)",
+     "ex": "Ich nehm die Bim.",
+     "note": ""
+    },
+    {
+     "de": "leiwand",
+     "ru": "классно, клёво",
+     "ex": "Des war a leiwande Party!",
+     "note": ""
+    },
+    {
+     "de": "ur",
+     "ru": "очень, супер-",
+     "ex": "Des is ur gut!",
+     "note": ""
+    },
+    {
+     "de": "eh",
+     "ru": "и так, всё равно, конечно",
+     "ex": "Das weiß ich eh.",
+     "note": "очень частое слово"
+    },
+    {
+     "de": "gell? / gö?",
+     "ru": "правда? не так ли?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Grant / grantig",
+     "ru": "ворчливость / ворчливый",
+     "ex": "Der Kellner ist heute wieder grantig.",
+     "note": ""
+    },
+    {
+     "de": "sudern",
+     "ru": "ныть, жаловаться",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Hackn",
+     "ru": "работа (разг.)",
+     "ex": "I muss in die Hackn.",
+     "note": ""
+    },
+    {
+     "de": "hackeln",
+     "ru": "работать (разг.)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "baba",
+     "ru": "пока",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Gspritzte",
+     "ru": "вино с минералкой (шорле)",
+     "ex": "Einen weißen Gspritzten, bitte.",
+     "note": ""
+    },
+    {
+     "de": "das Krügerl / das Seidl",
+     "ru": "кружка пива 0,5 / 0,3",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Schmäh führen",
+     "ru": "шутить, балагурить",
+     "ex": "",
+     "note": "der Wiener Schmäh — венский юмор"
+    },
+    {
+     "de": "a Hetz",
+     "ru": "потеха, веселье",
+     "ex": "Des war a Hetz!",
+     "note": ""
+    },
+    {
+     "de": "deppert",
+     "ru": "тупой",
+     "ex": "Bist du deppert?",
+     "note": ""
+    },
+    {
+     "de": "die Semmel",
+     "ru": "булочка (DE: das Brötchen)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Kren",
+     "ru": "хрен (DE: der Meerrettich)",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Kassa",
+     "ru": "касса",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "das Packerl",
+     "ru": "посылка, пакет",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "schiach",
+     "ru": "уродливый, некрасивый",
+     "ex": "Des Gwand is schiach.",
+     "note": ""
+    },
+    {
+     "de": "pfiat di",
+     "ru": "пока (Bayern/Österreich, от «behüte dich Gott»)",
+     "ex": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "id": "schimpf",
+   "title": "Schimpfwörter & Flüche",
+   "ru": "Ругательства и мат — чтобы понимать и знать, где граница",
+   "color": "#282E3E",
+   "warn": "18+. Знать — полезно, использовать — осторожно: многие слова реально оскорбительны.",
+   "cards": [
+    {
+     "de": "Scheiße!",
+     "ru": "Чёрт! Дерьмо!",
+     "ex": "Scheiße, ich hab den Bus verpasst!",
+     "note": "очень частое, среднее"
+    },
+    {
+     "de": "Mist!",
+     "ru": "Блин!",
+     "ex": "",
+     "note": "мягкое"
+    },
+    {
+     "de": "Verdammt (noch mal)!",
+     "ru": "Проклятье!",
+     "ex": "",
+     "note": "среднее"
+    },
+    {
+     "de": "Verfluchte Scheiße!",
+     "ru": "Чёрт побери!",
+     "ex": "",
+     "note": "сильное"
+    },
+    {
+     "de": "Fuck! / Shit!",
+     "ru": "англицизмы",
+     "ex": "",
+     "note": "молодёжь, среднее"
+    },
+    {
+     "de": "Arschloch",
+     "ru": "мудак, засранец",
+     "ex": "",
+     "note": "сильное оскорбление"
+    },
+    {
+     "de": "Idiot / Vollidiot",
+     "ru": "идиот / полный идиот",
+     "ex": "",
+     "note": "средне–сильно"
+    },
+    {
+     "de": "Depp / Trottel",
+     "ru": "дурак, придурок",
+     "ex": "",
+     "note": "в Австрии очень частые"
+    },
+    {
+     "de": "Wichser",
+     "ru": "дрочила (мудак)",
+     "ex": "",
+     "note": "очень грубо"
+    },
+    {
+     "de": "Penner",
+     "ru": "бомж; лентяй",
+     "ex": "",
+     "note": "оскорбительно"
+    },
+    {
+     "de": "Spast",
+     "ru": "дебил",
+     "ex": "",
+     "note": "очень грубо, ableistisch"
+    },
+    {
+     "de": "Halt die Klappe! / Halt's Maul!",
+     "ru": "Заткнись!",
+     "ex": "",
+     "note": "Maul — грубее"
+    },
+    {
+     "de": "Leck mich (am Arsch)!",
+     "ru": "Отвали! (поцелуй меня в зад)",
+     "ex": "",
+     "note": "грубо; иногда шутливо"
+    },
+    {
+     "de": "Verpiss dich!",
+     "ru": "Пошёл вон!",
+     "ex": "",
+     "note": "грубо"
+    },
+    {
+     "de": "Fick dich!",
+     "ru": "Пошёл на хер!",
+     "ex": "",
+     "note": "очень грубо"
+    },
+    {
+     "de": "Das ist mir scheißegal.",
+     "ru": "Мне насрать.",
+     "ex": "",
+     "note": "грубо-разговорное"
+    },
+    {
+     "de": "beschissen",
+     "ru": "дерьмовый",
+     "ex": "Das Wetter ist beschissen.",
+     "note": "среднее"
+    },
+    {
+     "de": "Sau / Schwein",
+     "ru": "свинья (о человеке)",
+     "ex": "",
+     "note": "оскорбление"
+    },
+    {
+     "de": "Zicke",
+     "ru": "стерва, капризная",
+     "ex": "",
+     "note": "оскорбительно для женщин"
+    },
+    {
+     "de": "Schlampe",
+     "ru": "шлюха, неряха",
+     "ex": "",
+     "note": "очень оскорбительно"
+    },
+    {
+     "de": "Wappler",
+     "ru": "придурок (Вена)",
+     "ex": "",
+     "note": "австр., средне"
+    },
+    {
+     "de": "Gschissener",
+     "ru": "засранец (Вена)",
+     "ex": "",
+     "note": "австр., грубо"
+    },
+    {
+     "de": "Oaschloch",
+     "ru": "= Arschloch по-венски",
+     "ex": "",
+     "note": "грубо"
+    },
+    {
+     "de": "Geh scheißen!",
+     "ru": "Иди к чёрту! (Вена)",
+     "ex": "",
+     "note": "грубо"
+    },
+    {
+     "de": "Heast!",
+     "ru": "Эй! Слышь!",
+     "ex": "Heast, pass auf!",
+     "note": "венское, раздражённо"
+    },
+    {
+     "de": "Was für ein Schwachsinn!",
+     "ru": "Что за бред!",
+     "ex": "",
+     "note": "среднее"
+    },
+    {
+     "de": "Kacke",
+     "ru": "какашка; хрень",
+     "ex": "So eine Kacke!",
+     "note": "детско-разговорное"
+    },
+    {
+     "de": "Erdäpfelhirn / Schwammerlhirn",
+     "ru": "мозги как картошка/гриб",
+     "ex": "",
+     "note": "шутливо-обидное, австр."
+    }
+   ]
+  },
+  {
+   "id": "alltag",
+   "title": "Alltag in Wien",
+   "ru": "Фразы для жизни: Amt, Arzt, Wohnung, Kaffeehaus, Supermarkt",
+   "color": "#0EA5B7",
+   "cards": [
+    {
+     "de": "Ich hätte gern eine Melange.",
+     "ru": "Мне, пожалуйста, меланж.",
+     "ex": "",
+     "note": "кофе с молочной пенкой в кафе"
+    },
+    {
+     "de": "Zahlen, bitte! / Ich möchte zahlen.",
+     "ru": "Счёт, пожалуйста!",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Stimmt so.",
+     "ru": "Сдачи не надо.",
+     "ex": "",
+     "note": "чаевые ~10 %"
+    },
+    {
+     "de": "Ist hier noch frei?",
+     "ru": "Здесь свободно?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich möchte einen Termin ausmachen.",
+     "ru": "Я хотел(а) бы записаться.",
+     "ex": "",
+     "note": "DE: vereinbaren"
+    },
+    {
+     "de": "Ich bin krankgeschrieben.",
+     "ru": "У меня больничный.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die e-card",
+     "ru": "карточка медстраховки",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich brauche eine Überweisung zum Facharzt.",
+     "ru": "Мне нужно направление к специалисту.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "der Meldezettel",
+     "ru": "регистрация по месту жительства",
+     "ex": "Den Meldezettel bekommt man am Magistratischen Bezirksamt.",
+     "note": ""
+    },
+    {
+     "de": "die Kaution",
+     "ru": "залог за квартиру",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Betriebskosten",
+     "ru": "коммунальные платежи",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "befristeter Mietvertrag",
+     "ru": "договор аренды на срок",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "die Hausverwaltung",
+     "ru": "управляющая компания",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Die Heizung ist kaputt.",
+     "ru": "Отопление сломалось.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Können Sie mir sagen, wo …?",
+     "ru": "Не подскажете, где …?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Entschuldigung, wie komme ich zum …?",
+     "ru": "Извините, как пройти к …?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich hab mich verfahren.",
+     "ru": "Я заблудился (на транспорте).",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Haben Sie das auch in einer anderen Größe?",
+     "ru": "Есть другой размер?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Kann ich das umtauschen?",
+     "ru": "Можно это обменять?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Mit Karte, bitte.",
+     "ru": "Картой, пожалуйста.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Brauchen Sie die Rechnung?",
+     "ru": "Нужен чек?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Das geht sich (nicht) aus.",
+     "ru": "Это (не) получится / (не) успеем / (не) хватит.",
+     "ex": "Bis acht geht sich das nicht aus.",
+     "note": "очень австрийское"
+    },
+    {
+     "de": "Ich melde mich.",
+     "ru": "Я дам знать / свяжусь.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Schönen Tag noch! – Danke, gleichfalls!",
+     "ru": "Хорошего дня! – Спасибо, и вам!",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Wie bitte? Können Sie das wiederholen?",
+     "ru": "Простите? Повторите, пожалуйста.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Sprechen Sie bitte etwas langsamer.",
+     "ru": "Говорите, пожалуйста, медленнее.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Ich hätte eine Frage zu …",
+     "ru": "У меня вопрос по поводу …",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Darf ich kurz stören?",
+     "ru": "Можно вас на минутку?",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Das ist mir peinlich.",
+     "ru": "Мне неловко.",
+     "ex": "",
+     "note": ""
+    },
+    {
+     "de": "Mahlzeit!",
+     "ru": "Приятного аппетита! (на работе в обед)",
+     "ex": "",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

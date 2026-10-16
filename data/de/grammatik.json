@@ -1,0 +1,1964 @@
+{
+ "topics": [
+  {
+   "id": "k2p",
+   "title": "Konjunktiv II der Vergangenheit",
+   "ru": "Нереальное прошлое: «если бы я тогда…», «надо было…», «как будто…»",
+   "level": "B2",
+   "tag": "Strukturen",
+   "theory": "\n<p>Конъюнктив II прошедшего времени говорит о том, что <b class=\"k\">могло бы произойти, но не произошло</b>. В EPD и бонус-тесте его проверяют в условных предложениях, желаниях, сравнениях с <i>als ob</i> и упрёках.</p>\n<h3>1. Форма: hätte / wäre + Partizip II</h3>\n<table><tr><th>с haben</th><th>с sein</th><th>пассив</th></tr>\n<tr><td>ich <b>hätte</b> gelernt</td><td>ich <b>wäre</b> gefahren</td><td>es <b>wäre</b> gebaut <b>worden</b></td></tr>\n<tr><td>wir <b>hätten</b> gewusst</td><td>sie <b>wäre</b> gekommen</td><td>sie <b>wären</b> informiert <b>worden</b></td></tr></table>\n<div class=\"tip\">hätte или wäre — как в Perfekt: глаголы движения и изменения состояния (fahren, kommen, passieren, sterben, werden, bleiben, sein) → <b>wäre</b>, остальные → <b>hätte</b>.</div>\n<h3>2. Модальные глаголы: двойной инфинитив</h3>\n<div class=\"ex\">Ich <b>hätte</b> früher <b>kommen können</b>. · Du <b>hättest</b> anrufen <b>sollen</b>!</div>\n<p>В придаточном <b>hätte стоит перед двойным инфинитивом</b>, а не в самом конце — это любимая ловушка экзамена:</p>\n<div class=\"ex\">Kritiker meinen, dass man früher <b>hätte reagieren müssen</b>.</div>\n<h3>3. Где употребляется</h3>\n<table>\n<tr><td>нереальное условие</td><td>Wenn ich das <b>gewusst hätte</b>, <b>wäre</b> ich <b>gekommen</b>.<br>= <b>Hätte</b> ich das gewusst, wäre ich gekommen. (без wenn — глагол на первое место)</td></tr>\n<tr><td>нереальное желание</td><td><b>Hätte</b> ich doch mehr gelernt! · Wenn ich nur früher <b>angefangen hätte</b>!</td></tr>\n<tr><td>сравнение</td><td>Er tut so, <b>als ob</b> er nichts <b>gewusst hätte</b>. = …, <b>als hätte</b> er nichts gewusst.</td></tr>\n<tr><td>упрёк, сожаление</td><td>Du <b>hättest</b> mich fragen <b>sollen</b>. · Wir <b>hätten</b> mehr Zeit gebraucht.</td></tr>\n<tr><td>«чуть не»</td><td><b>Fast / beinahe wäre</b> ich gestürzt.</td></tr>\n<tr><td>без условия</td><td><b>Ohne</b> deine Hilfe <b>hätte</b> ich es nicht geschafft. · <b>An deiner Stelle hätte</b> ich abgelehnt.</td></tr>\n<tr><td>zu … als dass</td><td>Die Zeit war <b>zu</b> knapp, <b>als dass</b> man alles <b>hätte prüfen können</b>.</td></tr>\n<tr><td>sonst</td><td>Gut, dass du gebremst hast, <b>sonst wäre</b> etwas passiert.</td></tr>\n</table>\n<h3>4. Как превратить реальность в «если бы»</h3>\n<p>Меняй смысл на противоположный: <i>Ich hatte <b>keine</b> Zeit, deshalb bin ich <b>nicht</b> gekommen</i> → <i>Wenn ich Zeit <b>gehabt hätte</b>, <b>wäre</b> ich <b>gekommen</b>.</i> Отрицание исчезает, утверждение становится отрицанием.</p>\n",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn ich mehr Zeit ___, hätte ich dir geholfen.",
+     "o": [
+      "gehabt hätte",
+      "gehabt wäre",
+      "haben würde"
+     ],
+     "a": 0,
+     "ex": "haben → hätte + gehabt."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn sie den Bus nicht verpasst hätte, ___ sie pünktlich gekommen.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 1,
+     "ex": "kommen образует Perfekt с sein → wäre gekommen."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ohne deine Hilfe ___ ich die Prüfung nicht bestanden.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "bestehen → hat bestanden → hätte bestanden.",
+     "hint": "haben или sein?"
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn wir früher losgefahren ___, wären wir nicht in den Stau geraten.",
+     "a": [
+      "wären"
+     ],
+     "ex": "losfahren → ist losgefahren → wären losgefahren."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er spricht darüber, als ob er selbst dabei ___.",
+     "o": [
+      "gewesen wäre",
+      "gewesen hätte",
+      "war gewesen"
+     ],
+     "a": 0,
+     "ex": "sein → ist gewesen → wäre gewesen."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Fast ___ ich meinen Reisepass zu Hause vergessen.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "fast/beinahe + Konjunktiv II: «чуть не»."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Du ___ mich wenigstens anrufen können!",
+     "o": [
+      "hättest",
+      "wärst",
+      "würdest"
+     ],
+     "a": 0,
+     "ex": "Упрёк: hätte + Infinitiv + Modalverb im Infinitiv."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn das Projekt rechtzeitig genehmigt ___ wäre, hätte man schon im Mai beginnen können.",
+     "a": [
+      "worden"
+     ],
+     "ex": "Пассив в Konj. II Vergangenheit: genehmigt worden wäre."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich wusste nichts von dem Treffen. Deshalb bin ich nicht gekommen.",
+     "s": "Wenn ich …",
+     "a": [
+      "Wenn ich von dem Treffen gewusst hätte, wäre ich gekommen.",
+      "Wenn ich etwas von dem Treffen gewusst hätte, wäre ich gekommen."
+     ],
+     "ex": "Отрицания исчезают: nichts gewusst → gewusst hätte; nicht gekommen → wäre gekommen.",
+     "task": "Bilden Sie einen irrealen Bedingungssatz."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Regierung hat nicht rechtzeitig reagiert. Deshalb ist die Krise eskaliert.",
+     "s": "Wenn die Regierung …",
+     "a": [
+      "Wenn die Regierung rechtzeitig reagiert hätte, wäre die Krise nicht eskaliert."
+     ],
+     "ex": "eskalieren → ist eskaliert → wäre eskaliert.",
+     "task": "Bilden Sie einen irrealen Bedingungssatz."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich habe mich nicht für das Stipendium beworben. Das bereue ich.",
+     "s": "Hätte ich mich doch …",
+     "a": [
+      "Hätte ich mich doch für das Stipendium beworben!"
+     ],
+     "ex": "Нереальное желание: глагол на первом месте + doch.",
+     "task": "Drücken Sie einen irrealen Wunsch aus."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er hat die Prüfung nicht bestanden, aber er tut so.",
+     "s": "Er tut so, als ob …",
+     "a": [
+      "Er tut so, als ob er die Prüfung bestanden hätte."
+     ],
+     "ex": "als ob + Konjunktiv II; глагол в конце.",
+     "task": "Irrealer Vergleich."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wenn man die Studie genauer gelesen hätte, hätte man den Fehler bemerkt.",
+     "s": "Hätte man …",
+     "a": [
+      "Hätte man die Studie genauer gelesen, hätte man den Fehler bemerkt."
+     ],
+     "ex": "Без wenn спрягаемый глагол встаёт на первое место.",
+     "task": "Formen Sie ohne „wenn“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Lieferung kam zu spät. Deshalb konnten wir den Termin nicht einhalten.",
+     "s": "Wenn die Lieferung rechtzeitig gekommen wäre, …",
+     "a": [
+      "Wenn die Lieferung rechtzeitig gekommen wäre, hätten wir den Termin einhalten können."
+     ],
+     "ex": "С модальным глаголом: hätten … einhalten können (двойной инфинитив).",
+     "task": "Irrealer Bedingungssatz mit Modalverb."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Warum hast du den Vertrag nicht gründlicher gelesen?",
+     "s": "Du …",
+     "a": [
+      "Du hättest den Vertrag gründlicher lesen sollen."
+     ],
+     "ex": "Упрёк: hättest … lesen sollen.",
+     "task": "Formulieren Sie einen Vorwurf mit „sollen“."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Das Gesetz wurde nicht beschlossen. Deshalb sind die Mieten weiter gestiegen.",
+     "s": "Wenn das Gesetz …",
+     "a": [
+      "Wenn das Gesetz beschlossen worden wäre, wären die Mieten nicht weiter gestiegen."
+     ],
+     "ex": "Пассив: beschlossen worden wäre.",
+     "task": "Irrealer Bedingungssatz im Passiv."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man hätte die Bevölkerung früher informieren müssen.",
+     "s": "Kritiker meinen, dass man …",
+     "a": [
+      "Kritiker meinen, dass man die Bevölkerung früher hätte informieren müssen."
+     ],
+     "ex": "В придаточном hätte стоит ПЕРЕД двойным инфинитивом: …hätte informieren müssen.",
+     "task": "Bilden Sie einen dass-Satz."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Zeit war sehr knapp. Man konnte nicht alle Daten prüfen.",
+     "s": "Die Zeit war zu knapp, als dass …",
+     "a": [
+      "Die Zeit war zu knapp, als dass man alle Daten hätte prüfen können."
+     ],
+     "ex": "zu …, als dass + Konj. II; отрицание исчезает, hätte перед двойным инфинитивом.",
+     "task": "Verbinden Sie mit „zu …, als dass“."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Reform wurde beschlossen. Die Betroffenen wurden nicht gefragt.",
+     "s": "Die Reform wurde beschlossen, ohne dass …",
+     "a": [
+      "Die Reform wurde beschlossen, ohne dass die Betroffenen gefragt worden wären.",
+      "Die Reform wurde beschlossen, ohne dass die Betroffenen gefragt wurden."
+     ],
+     "ex": "После ohne dass возможен и индикатив; Konj. II подчёркивает, что этого не было.",
+     "task": "Verbinden Sie mit „ohne dass“."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Stadt hat ein neues Parkhaus gebaut. Besser wäre es gewesen, in Radwege zu investieren.",
+     "s": "Statt ein neues Parkhaus zu bauen, …",
+     "a": [
+      "Statt ein neues Parkhaus zu bauen, hätte die Stadt besser in Radwege investiert.",
+      "Statt ein neues Parkhaus zu bauen, hätte die Stadt besser in Radwege investieren sollen.",
+      "Statt ein neues Parkhaus zu bauen, hätte die Stadt in Radwege investieren sollen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz im Konjunktiv II."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ich an deiner Stelle: das Angebot annehmen (Vergangenheit).",
+     "s": "An deiner Stelle …",
+     "a": [
+      "An deiner Stelle hätte ich das Angebot angenommen."
+     ],
+     "ex": "Совет задним числом.",
+     "task": "Bilden Sie einen Satz im Konjunktiv II der Vergangenheit."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Bei besserem Wetter wäre das Konzert nicht abgesagt worden.",
+     "s": "Wenn das Wetter …",
+     "a": [
+      "Wenn das Wetter besser gewesen wäre, wäre das Konzert nicht abgesagt worden."
+     ],
+     "ex": "bei + Nomen → wenn-Satz.",
+     "task": "Formen Sie in einen wenn-Satz um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Zum Glück hat er rechtzeitig gebremst. Es hätte einen Unfall geben können.",
+     "s": "Zum Glück hat er rechtzeitig gebremst, sonst …",
+     "a": [
+      "Zum Glück hat er rechtzeitig gebremst, sonst wäre ein Unfall passiert.",
+      "Zum Glück hat er rechtzeitig gebremst, sonst hätte es einen Unfall gegeben.",
+      "Zum Glück hat er rechtzeitig gebremst, sonst wäre ein Unfall geschehen."
+     ],
+     "ex": "sonst + инверсия + Konj. II.",
+     "task": "Ergänzen Sie mit „sonst“."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Ich weiß, dass ich mich mehr ___.",
+     "o": [
+      "hätte anstrengen müssen",
+      "anstrengen hätte müssen",
+      "hätte müssen anstrengen"
+     ],
+     "a": 0,
+     "ex": "Придаточное: hätte + двойной инфинитив (anstrengen müssen)."
+    }
+   ]
+  },
+  {
+   "id": "passiversatz",
+   "title": "Passiversatzformen",
+   "ru": "Как сказать «можно / нужно сделать» без werden: sein zu, sich lassen, -bar, man…",
+   "level": "B2+",
+   "tag": "Strukturen",
+   "theory": "\n<p>Пассив с модальным глаголом (<i>kann gelöst werden, muss eingereicht werden</i>) в газетном и научном языке часто заменяют более короткими конструкциями. На экзамене нужно уметь переводить туда и обратно.</p>\n<table>\n<tr><th>Конструкция</th><th>Значение</th><th>Пример</th></tr>\n<tr><td><b>sein + zu + Infinitiv</b></td><td>kann <i>или</i> muss + Passiv</td><td>Der Antrag <b>ist</b> bis Freitag <b>einzureichen</b>. (= muss eingereicht werden)<br>Das Problem <b>ist</b> leicht <b>zu lösen</b>. (= kann gelöst werden)</td></tr>\n<tr><td><b>sich lassen + Infinitiv</b></td><td>kann + Passiv</td><td>Das Problem <b>lässt sich</b> lösen.</td></tr>\n<tr><td><b>Adjektiv auf -bar, -lich, -fähig</b></td><td>kann + Passiv</td><td>lösbar, erklärlich, erhältlich, transportfähig, (un)vermeidbar</td></tr>\n<tr><td><b>man + Aktiv</b></td><td>нейтрально</td><td><b>Man</b> löst das Problem.</td></tr>\n<tr><td><b>bekommen / erhalten + Partizip II</b></td><td>получатель действия</td><td>Er <b>bekam</b> den Preis <b>verliehen</b>. (= Ihm wurde der Preis verliehen.)</td></tr>\n<tr><td><b>Funktionsverbgefüge</b></td><td>пассивное значение</td><td><b>zur Anwendung kommen</b> (= angewendet werden), <b>Zustimmung finden</b> (= akzeptiert werden), <b>in Kraft treten</b>, <b>Kritik erfahren</b>, <b>zur Diskussion stehen</b></td></tr>\n<tr><td><b>es gilt + zu + Infinitiv</b></td><td>man muss</td><td><b>Es gilt</b>, Ursachen <b>zu</b> erkennen.</td></tr>\n<tr><td><b>zu + Partizip I</b> (Gerundivum)</td><td>kann/muss + Passiv, как определение</td><td>die <b>zu lösenden</b> Probleme (= die gelöst werden müssen)</td></tr>\n</table>\n<div class=\"tip\">sein + zu: <b>kann</b> или <b>muss</b> — понятно по контексту. «Die Rechnung ist sofort zu bezahlen» — нужно; «Die Aufgabe ist leicht zu lösen» — можно (leicht, kaum, nicht → обычно «можно»).</div>\n<h3>Обратно в пассив</h3>\n<div class=\"ex\">Die Mängel <b>sind</b> umgehend <b>zu beheben</b>. → Die Mängel <b>müssen</b> umgehend <b>behoben werden</b>.</div>\n<div class=\"ex\">Der Text <b>lässt sich</b> gut <b>übersetzen</b>. → Der Text <b>kann</b> gut <b>übersetzt werden</b>.</div>\n<p>Отделяемая приставка: zu встаёт внутрь — <i>ein<b>zu</b>reichen, auf<b>zu</b>halten, vor<b>zu</b>bereiten</i>.</p>\n",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Formular ___ bis Ende des Monats auszufüllen.",
+     "o": [
+      "ist",
+      "wird",
+      "hat"
+     ],
+     "a": 0,
+     "ex": "sein + zu + Infinitiv = muss ausgefüllt werden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Dieses Problem lässt sich nicht so einfach ___.",
+     "o": [
+      "lösen",
+      "gelöst",
+      "zu lösen"
+     ],
+     "a": 0,
+     "ex": "sich lassen + чистый инфинитив (без zu)."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Ursache des Unfalls ist noch nicht zu ___.",
+     "a": [
+      "klären"
+     ],
+     "ex": "sein + zu + Infinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Fehler ist auf den ersten Blick ___.",
+     "o": [
+      "zu erkennen",
+      "erkannt",
+      "erkennen"
+     ],
+     "a": 0,
+     "ex": "= kann erkannt werden."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Folgen der Krise waren nicht ___. (= konnten nicht vorhergesehen werden)",
+     "a": [
+      "vorhersehbar"
+     ],
+     "ex": "-bar = kann + Passiv."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Das Medikament ist ohne Rezept nicht ___. (= kann nicht erhalten werden)",
+     "a": [
+      "erhältlich"
+     ],
+     "ex": "-lich: erhalten → erhältlich."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "„Die Wohnung ist ab sofort zu beziehen.“ bedeutet:",
+     "o": [
+      "Die Wohnung kann ab sofort bezogen werden.",
+      "Man muss sofort aus der Wohnung ausziehen.",
+      "Die Wohnung wird gerade renoviert."
+     ],
+     "a": 0,
+     "ex": "beziehen = въехать; здесь «можно»."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die verlorenen Daten ___ sich nicht mehr wiederherstellen.",
+     "o": [
+      "ließen",
+      "waren",
+      "wurden"
+     ],
+     "a": 0,
+     "ex": "sich lassen в прошедшем: ließen sich."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Gebühren müssen vor Semesterbeginn überwiesen werden.",
+     "s": "Die Gebühren sind …",
+     "a": [
+      "Die Gebühren sind vor Semesterbeginn zu überweisen."
+     ],
+     "ex": "muss + Passiv → sein + zu.",
+     "task": "Formen Sie mit „sein + zu“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Dieser Unterschied kann kaum erklärt werden.",
+     "s": "Dieser Unterschied lässt sich …",
+     "a": [
+      "Dieser Unterschied lässt sich kaum erklären."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sich lassen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Schäden können nicht repariert werden.",
+     "s": "Die Schäden sind …",
+     "a": [
+      "Die Schäden sind nicht reparierbar.",
+      "Die Schäden sind irreparabel.",
+      "Die Schäden sind nicht zu reparieren."
+     ],
+     "ex": "Прилагательное на -bar.",
+     "task": "Verwenden Sie ein Adjektiv auf -bar."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man kann die Ergebnisse nicht verallgemeinern.",
+     "s": "Die Ergebnisse lassen sich …",
+     "a": [
+      "Die Ergebnisse lassen sich nicht verallgemeinern."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sich lassen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Diese Entwicklung kann nicht aufgehalten werden.",
+     "s": "Diese Entwicklung ist …",
+     "a": [
+      "Diese Entwicklung ist nicht aufzuhalten.",
+      "Diese Entwicklung ist nicht aufhaltbar.",
+      "Diese Entwicklung ist unaufhaltbar.",
+      "Diese Entwicklung ist unaufhaltsam."
+     ],
+     "ex": "Отделяемая приставка: auf-zu-halten.",
+     "task": "Formen Sie mit „sein + zu“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die neuen Regeln werden ab Jänner angewendet.",
+     "s": "Die neuen Regeln kommen …",
+     "a": [
+      "Die neuen Regeln kommen ab Jänner zur Anwendung."
+     ],
+     "ex": "Funktionsverbgefüge: zur Anwendung kommen.",
+     "task": "Verwenden Sie ein Funktionsverbgefüge."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ihm wurde der Führerschein entzogen.",
+     "s": "Er bekam …",
+     "a": [
+      "Er bekam den Führerschein entzogen."
+     ],
+     "ex": "bekommen + Partizip II — пассив получателя.",
+     "task": "Formen Sie mit „bekommen“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Vorschlag wurde von der Mehrheit akzeptiert.",
+     "s": "Der Vorschlag fand …",
+     "a": [
+      "Der Vorschlag fand bei der Mehrheit Zustimmung.",
+      "Der Vorschlag fand die Zustimmung der Mehrheit.",
+      "Der Vorschlag fand bei der Mehrheit Akzeptanz.",
+      "Der Vorschlag fand die Akzeptanz der Mehrheit."
+     ],
+     "ex": "Zustimmung/Akzeptanz finden = akzeptiert werden.",
+     "task": "Verwenden Sie „finden“ + Nomen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Mängel sind umgehend zu beheben.",
+     "s": "Die Mängel müssen …",
+     "a": [
+      "Die Mängel müssen umgehend behoben werden."
+     ],
+     "ex": "Обратно: sein + zu → muss + Passiv.",
+     "task": "Formen Sie ins Passiv mit Modalverb um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Bericht lässt sich in drei Teile gliedern.",
+     "s": "Der Bericht kann …",
+     "a": [
+      "Der Bericht kann in drei Teile gegliedert werden."
+     ],
+     "ex": "",
+     "task": "Formen Sie ins Passiv mit Modalverb um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es muss betont werden, dass die Studie nicht repräsentativ ist.",
+     "s": "Es ist …",
+     "a": [
+      "Es ist zu betonen, dass die Studie nicht repräsentativ ist."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sein + zu“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es ist zu befürchten, dass die Preise weiter steigen.",
+     "s": "Es muss …",
+     "a": [
+      "Es muss befürchtet werden, dass die Preise weiter steigen."
+     ],
+     "ex": "Здесь sein + zu = muss.",
+     "task": "Formen Sie ins Passiv mit Modalverb um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Probleme, die gelöst werden müssen, sind zahlreich.",
+     "s": "Die zu …",
+     "a": [
+      "Die zu lösenden Probleme sind zahlreich."
+     ],
+     "ex": "Gerundivum: zu + Partizip I + окончание.",
+     "task": "Bilden Sie ein Gerundivum (zu + Partizip I)."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man muss zwischen Ursache und Wirkung unterscheiden.",
+     "s": "Es gilt, …",
+     "a": [
+      "Es gilt, zwischen Ursache und Wirkung zu unterscheiden."
+     ],
+     "ex": "es gilt + zu = man muss.",
+     "task": "Formen Sie mit „es gilt“ um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Seine Argumente konnten nicht widerlegt werden.",
+     "s": "Seine Argumente waren …",
+     "a": [
+      "Seine Argumente waren nicht zu widerlegen.",
+      "Seine Argumente waren nicht widerlegbar.",
+      "Seine Argumente waren unwiderlegbar."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sein + zu“ oder -bar um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Teilnehmerzahl kann nicht unbegrenzt erhöht werden.",
+     "s": "Die Teilnehmerzahl lässt sich …",
+     "a": [
+      "Die Teilnehmerzahl lässt sich nicht unbegrenzt erhöhen."
+     ],
+     "ex": "",
+     "task": "Formen Sie mit „sich lassen“ um."
+    }
+   ]
+  },
+  {
+   "id": "partizip",
+   "title": "Partizipialattribute und Relativsätze",
+   "ru": "die steigenden Preise ↔ die Preise, die steigen: сворачиваем и разворачиваем",
+   "level": "C1",
+   "tag": "Strukturen",
+   "theory": "\n<p>В газетном стиле длинные определения стоят <b class=\"k\">перед существительным</b>. На бонус-тесте нужно превращать придаточное определительное в причастный оборот и наоборот.</p>\n<table>\n<tr><th>Причастие</th><th>Значение</th><th>Пример</th></tr>\n<tr><td><b>Partizip I</b> (Infinitiv + d)</td><td>активное, одновременное действие</td><td>die <b>steigenden</b> Preise = die Preise, die <b>steigen</b></td></tr>\n<tr><td><b>Partizip II</b> переходных глаголов</td><td>пассивное / завершённое</td><td>das <b>veröffentlichte</b> Buch = das Buch, das <b>veröffentlicht wurde</b></td></tr>\n<tr><td><b>Partizip II</b> глаголов с sein</td><td>завершённое активное</td><td>der <b>angekommene</b> Zug = der Zug, der <b>angekommen ist</b></td></tr>\n<tr><td><b>zu + Partizip I</b> (Gerundivum)</td><td>нужно / можно + пассив</td><td>die <b>zu erledigenden</b> Aufgaben = die Aufgaben, die <b>erledigt werden müssen</b></td></tr>\n</table>\n<h3>Как свернуть придаточное в причастие</h3>\n<ol><li>Убери относительное местоимение и вспомогательный глагол (<i>wird, wurde, ist, hat</i>).</li>\n<li>Глагол → причастие с окончанием прилагательного.</li>\n<li>Всё, что было в придаточном, ставь <b>перед</b> причастием в том же порядке.</li></ol>\n<div class=\"ex\">die Maßnahmen, <b>die von der Regierung beschlossen wurden</b> → die <b>von der Regierung beschlossenen</b> Maßnahmen</div>\n<div class=\"ex\">Studierende, <b>die neben dem Studium arbeiten</b> → <b>neben dem Studium arbeitende</b> Studierende</div>\n<div class=\"tip\">Нельзя: Partizip II от непереходных глаголов с haben (<i>arbeiten, schlafen, lachen</i>): ✗ <i>die gearbeitete Frau</i>. Можно с sein: <i>die verreiste Familie, der eingeschlafene Hund</i>.</div>\n<h3>sein + прилагательное</h3>\n<p>Если в придаточном <i>sein + Adjektiv</i>, остаётся только прилагательное: <i>Jugendliche, die in sozialen Netzwerken aktiv sind</i> → <i>in sozialen Netzwerken <b>aktive</b> Jugendliche</i>.</p>\n<h3>Возвратные глаголы</h3>\n<div class=\"ex\">die Gesellschaft, die <b>sich</b> verändert → die <b>sich verändernde</b> Gesellschaft</div>\n",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "die Preise, die ständig steigen → die ständig ___ Preise",
+     "o": [
+      "steigenden",
+      "gestiegenen",
+      "zu steigenden"
+     ],
+     "a": 0,
+     "ex": "Одновременное активное действие → Partizip I."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "das Buch, das letztes Jahr veröffentlicht wurde → das letztes Jahr ___ Buch",
+     "o": [
+      "veröffentlichte",
+      "veröffentlichende",
+      "zu veröffentlichende"
+     ],
+     "a": 0,
+     "ex": "Пассив → Partizip II."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "die Aufgaben, die noch erledigt werden müssen → die noch ___ Aufgaben",
+     "o": [
+      "zu erledigenden",
+      "erledigten",
+      "erledigenden"
+     ],
+     "a": 0,
+     "ex": "muss + Passiv → zu + Partizip I."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "der Zug, der gerade angekommen ist → der gerade ___ Zug",
+     "a": [
+      "angekommene"
+     ],
+     "ex": "Глагол с sein: Partizip II, активное значение."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "die Kinder, die im Garten spielen → die im Garten ___ Kinder",
+     "a": [
+      "spielenden"
+     ],
+     "ex": "Partizip I + окончание -en (die … Kinder)."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welche Form ist NICHT möglich?",
+     "o": [
+      "die gearbeitete Frau",
+      "die verreiste Familie",
+      "der eingeschlafene Hund"
+     ],
+     "a": 0,
+     "ex": "arbeiten — непереходный с haben → Partizip II как определение невозможен."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Studierenden, die neben dem Studium arbeiten, haben weniger Zeit zum Lernen.",
+     "s": "Die …",
+     "a": [
+      "Die neben dem Studium arbeitenden Studierenden haben weniger Zeit zum Lernen."
+     ],
+     "ex": "",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Maßnahmen, die von der Regierung beschlossen wurden, stoßen auf Kritik.",
+     "s": "Die …",
+     "a": [
+      "Die von der Regierung beschlossenen Maßnahmen stoßen auf Kritik."
+     ],
+     "ex": "",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Anteil der Menschen, die in Städten leben, wächst.",
+     "s": "Der Anteil der …",
+     "a": [
+      "Der Anteil der in Städten lebenden Menschen wächst."
+     ],
+     "ex": "Genitiv Plural: der … lebenden Menschen.",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Kosten, die durch den Verkehr verursacht werden, sind enorm.",
+     "s": "Die …",
+     "a": [
+      "Die durch den Verkehr verursachten Kosten sind enorm."
+     ],
+     "ex": "",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Probleme, die gelöst werden müssen, werden immer komplexer.",
+     "s": "Die …",
+     "a": [
+      "Die zu lösenden Probleme werden immer komplexer."
+     ],
+     "ex": "",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ein Forscherteam, das aus zwölf Ländern stammt, hat die Studie durchgeführt.",
+     "s": "Ein …",
+     "a": [
+      "Ein aus zwölf Ländern stammendes Forscherteam hat die Studie durchgeführt."
+     ],
+     "ex": "ein … stammendes Team (neutrum, Nominativ).",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die seit Jahren steigenden Mieten belasten viele Familien.",
+     "s": "Die Mieten, …",
+     "a": [
+      "Die Mieten, die seit Jahren steigen, belasten viele Familien."
+     ],
+     "ex": "",
+     "task": "Formen Sie das Partizipialattribut in einen Relativsatz um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der im letzten Jahr eröffnete Radweg wird kaum genutzt.",
+     "s": "Der Radweg, …",
+     "a": [
+      "Der Radweg, der im letzten Jahr eröffnet wurde, wird kaum genutzt.",
+      "Der Radweg, der im letzten Jahr eröffnet worden ist, wird kaum genutzt."
+     ],
+     "ex": "",
+     "task": "Formen Sie das Partizipialattribut in einen Relativsatz um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die bis Freitag einzureichenden Unterlagen liegen im Sekretariat.",
+     "s": "Die Unterlagen, …",
+     "a": [
+      "Die Unterlagen, die bis Freitag eingereicht werden müssen, liegen im Sekretariat.",
+      "Die Unterlagen, die bis Freitag einzureichen sind, liegen im Sekretariat."
+     ],
+     "ex": "Gerundivum → muss + Passiv или sein + zu.",
+     "task": "Formen Sie das Partizipialattribut in einen Relativsatz um."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die sich rasch verändernde Arbeitswelt stellt neue Anforderungen.",
+     "s": "Die Arbeitswelt, …",
+     "a": [
+      "Die Arbeitswelt, die sich rasch verändert, stellt neue Anforderungen."
+     ],
+     "ex": "",
+     "task": "Formen Sie das Partizipialattribut in einen Relativsatz um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele Jugendliche, die in sozialen Netzwerken aktiv sind, unterschätzen die Risiken.",
+     "s": "Viele …",
+     "a": [
+      "Viele in sozialen Netzwerken aktive Jugendliche unterschätzen die Risiken."
+     ],
+     "ex": "sein + Adjektiv → остаётся только прилагательное.",
+     "task": "Formen Sie den Relativsatz in ein Attribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Touristen, die im Sommer massenhaft in die Altstadt strömen, verärgern die Anrainer.",
+     "s": "Die …",
+     "a": [
+      "Die im Sommer massenhaft in die Altstadt strömenden Touristen verärgern die Anrainer."
+     ],
+     "ex": "",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Das Gesetz, das vor zwei Jahren in Kraft getreten ist, zeigt bisher kaum Wirkung.",
+     "s": "Das …",
+     "a": [
+      "Das vor zwei Jahren in Kraft getretene Gesetz zeigt bisher kaum Wirkung."
+     ],
+     "ex": "in Kraft treten → ist getreten → das in Kraft getretene Gesetz.",
+     "task": "Formen Sie den Relativsatz in ein Partizipialattribut um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die nicht zu unterschätzende Gefahr eines Blackouts wird oft verdrängt.",
+     "s": "Die Gefahr eines Blackouts, …",
+     "a": [
+      "Die Gefahr eines Blackouts, die nicht zu unterschätzen ist, wird oft verdrängt.",
+      "Die Gefahr eines Blackouts, die nicht unterschätzt werden darf, wird oft verdrängt.",
+      "Die Gefahr eines Blackouts, die nicht unterschätzt werden sollte, wird oft verdrängt."
+     ],
+     "ex": "",
+     "task": "Formen Sie das Partizipialattribut in einen Relativsatz um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ärztinnen und Ärzte, die in Spitälern arbeiten und unter Zeitdruck stehen, machen häufiger Fehler.",
+     "s": "In Spitälern …",
+     "a": [
+      "In Spitälern arbeitende und unter Zeitdruck stehende Ärztinnen und Ärzte machen häufiger Fehler."
+     ],
+     "ex": "Два причастия через und.",
+     "task": "Formen Sie den Relativsatz in Partizipialattribute um."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die von vielen Expertinnen geforderte und von der Regierung lange verzögerte Reform tritt nun in Kraft.",
+     "s": "Die Reform, …",
+     "a": [
+      "Die Reform, die von vielen Expertinnen gefordert und von der Regierung lange verzögert wurde, tritt nun in Kraft.",
+      "Die Reform, die von vielen Expertinnen gefordert und von der Regierung lange verzögert worden ist, tritt nun in Kraft."
+     ],
+     "ex": "",
+     "task": "Formen Sie in einen Relativsatz um."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die Mitarbeiter, die entlassen werden sollen →",
+     "o": [
+      "die zu entlassenden Mitarbeiter",
+      "die entlassenden Mitarbeiter",
+      "die entlassenen Mitarbeiter"
+     ],
+     "a": 0,
+     "ex": "sollen/müssen + Passiv → Gerundivum."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "„der schlafende Hund“ bedeutet:",
+     "o": [
+      "der Hund, der schläft",
+      "der Hund, der eingeschlafen ist",
+      "der Hund, der geschlafen hat"
+     ],
+     "a": 0,
+     "ex": "Partizip I = действие происходит сейчас."
+    }
+   ]
+  },
+  {
+   "id": "nominal",
+   "title": "Nominalstil → Verbalstil",
+   "ru": "Wegen der hohen Mieten → Weil die Mieten hoch sind: превращаем предлог в придаточное",
+   "level": "C1",
+   "tag": "Strukturen und Wortschatz",
+   "theory": "\n<p>Официальные тексты любят существительные: <i>nach Abschluss des Studiums</i>, <i>zur Verbesserung der Luftqualität</i>. На экзамене такой оборот нужно развернуть в придаточное предложение с глаголом. Главное — подобрать <b class=\"k\">союз к предлогу</b> и превратить существительное обратно в глагол.</p>\n<table>\n<tr><th>Смысл</th><th>Предлог (Nominal)</th><th>Союз (Verbal)</th></tr>\n<tr><td>время</td><td>bei, während, nach, vor, seit, bis zu</td><td>wenn/als, während, nachdem, bevor, seit(dem), bis</td></tr>\n<tr><td>причина</td><td>wegen, aufgrund, infolge, aus</td><td>weil, da</td></tr>\n<tr><td>условие</td><td>bei, im Falle, ohne</td><td>wenn, falls, wenn … nicht</td></tr>\n<tr><td>уступка</td><td>trotz, ungeachtet</td><td>obwohl</td></tr>\n<tr><td>цель</td><td>zu, zur/zum, zwecks, für</td><td>um … zu, damit</td></tr>\n<tr><td>способ</td><td>durch, mittels</td><td>indem, dadurch, dass</td></tr>\n<tr><td>замена</td><td>statt, anstelle</td><td>(an)statt dass / zu</td></tr>\n<tr><td>пропорция</td><td>mit zunehmendem …</td><td>je …, desto …</td></tr>\n<tr><td>мнение</td><td>nach Ansicht / laut</td><td>… sind der Ansicht, dass …</td></tr>\n</table>\n<h3>Существительное → глагол, атрибуты → наречия</h3>\n<div class=\"ex\">nach <b>gründlicher Prüfung</b> der Unterlagen → nachdem man die Unterlagen <b>gründlich geprüft</b> hatte</div>\n<div class=\"ex\">die Erhöhung <b>der Preise</b> (Genitiv) → <b>die Preise</b> werden erhöht / man erhöht die Preise</div>\n<div class=\"ex\">bei <b>Nichteinhaltung</b> der Frist → wenn die Frist <b>nicht eingehalten</b> wird</div>\n<div class=\"tip\">Следи за временем: <b>nachdem</b> требует предпрошедшего (Plusquamperfekt), если главное предложение в Präteritum: <i>Nachdem sie das Studium abgeschlossen <b>hatte</b>, ging sie ins Ausland.</i></div>\n<p>Если субъекта нет, используй <b>man</b> или пассив. Если субъект совпадает с главным — можно <b>um … zu</b>.</p>\n",
+   "items": [
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Nach dem Abschluss des Studiums ging sie ins Ausland.",
+     "s": "Nachdem sie …",
+     "a": [
+      "Nachdem sie das Studium abgeschlossen hatte, ging sie ins Ausland.",
+      "Nachdem sie ihr Studium abgeschlossen hatte, ging sie ins Ausland."
+     ],
+     "ex": "nachdem + Plusquamperfekt."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wegen der hohen Mieten ziehen viele Familien an den Stadtrand.",
+     "s": "Weil …",
+     "a": [
+      "Weil die Mieten hoch sind, ziehen viele Familien an den Stadtrand.",
+      "Weil die Mieten so hoch sind, ziehen viele Familien an den Stadtrand."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Trotz intensiver Vorbereitung bestand er die Prüfung nicht.",
+     "s": "Obwohl er …",
+     "a": [
+      "Obwohl er sich intensiv vorbereitet hatte, bestand er die Prüfung nicht.",
+      "Obwohl er sich intensiv vorbereitet hat, bestand er die Prüfung nicht."
+     ],
+     "ex": "Vorbereitung → sich vorbereiten; intensive → intensiv."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Bei schlechtem Wetter findet die Veranstaltung im Saal statt.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn das Wetter schlecht ist, findet die Veranstaltung im Saal statt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Vor der Abgabe der Arbeit sollte man sie gründlich korrigieren.",
+     "s": "Bevor man …",
+     "a": [
+      "Bevor man die Arbeit abgibt, sollte man sie gründlich korrigieren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Zur Verbesserung der Luftqualität wurden Fahrverbote eingeführt.",
+     "s": "Um …",
+     "a": [
+      "Um die Luftqualität zu verbessern, wurden Fahrverbote eingeführt."
+     ],
+     "ex": "Цель: zur + Nomen → um … zu."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Während des Studiums jobben viele Studierende.",
+     "s": "Während …",
+     "a": [
+      "Während sie studieren, jobben viele Studierende."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Durch regelmäßiges Üben verbessert man seine Aussprache.",
+     "s": "Indem man …",
+     "a": [
+      "Indem man regelmäßig übt, verbessert man seine Aussprache."
+     ],
+     "ex": "durch → indem."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Seit der Einführung der Studiengebühren ist die Zahl der Studierenden gesunken.",
+     "s": "Seit(dem) …",
+     "a": [
+      "Seitdem die Studiengebühren eingeführt wurden, ist die Zahl der Studierenden gesunken.",
+      "Seit die Studiengebühren eingeführt wurden, ist die Zahl der Studierenden gesunken.",
+      "Seitdem die Studiengebühren eingeführt worden sind, ist die Zahl der Studierenden gesunken.",
+      "Seitdem man Studiengebühren eingeführt hat, ist die Zahl der Studierenden gesunken.",
+      "Seit man Studiengebühren eingeführt hat, ist die Zahl der Studierenden gesunken."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ohne ausreichende Finanzierung kann das Projekt nicht fortgesetzt werden.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn das Projekt nicht ausreichend finanziert wird, kann es nicht fortgesetzt werden.",
+      "Wenn die Finanzierung nicht ausreicht, kann das Projekt nicht fortgesetzt werden.",
+      "Wenn es keine ausreichende Finanzierung gibt, kann das Projekt nicht fortgesetzt werden."
+     ],
+     "ex": "ohne → wenn … nicht."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Infolge des starken Regens wurde die Straße gesperrt.",
+     "s": "Weil es …",
+     "a": [
+      "Weil es stark geregnet hatte, wurde die Straße gesperrt.",
+      "Weil es stark regnete, wurde die Straße gesperrt.",
+      "Weil es stark geregnet hat, wurde die Straße gesperrt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Statt einer Erhöhung der Steuern fordern Ökonomen Einsparungen.",
+     "s": "Statt dass …",
+     "a": [
+      "Statt dass die Steuern erhöht werden, fordern Ökonomen Einsparungen.",
+      "Anstatt dass die Steuern erhöht werden, fordern Ökonomen Einsparungen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Bei der Auswahl der Bewerber spielt das Alter keine Rolle.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn die Bewerber ausgewählt werden, spielt das Alter keine Rolle.",
+      "Wenn man die Bewerber auswählt, spielt das Alter keine Rolle."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Nach Ansicht vieler Experten ist das Gesetz verfassungswidrig.",
+     "s": "Viele Experten …",
+     "a": [
+      "Viele Experten sind der Ansicht, dass das Gesetz verfassungswidrig ist.",
+      "Viele Experten meinen, dass das Gesetz verfassungswidrig ist.",
+      "Viele Experten sind der Meinung, dass das Gesetz verfassungswidrig ist.",
+      "Viele Experten halten das Gesetz für verfassungswidrig."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Zur Vermeidung von Missverständnissen sollte man Vereinbarungen schriftlich festhalten.",
+     "s": "Um …",
+     "a": [
+      "Um Missverständnisse zu vermeiden, sollte man Vereinbarungen schriftlich festhalten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Mit zunehmendem Alter sinkt die Bereitschaft zum Risiko.",
+     "s": "Je …",
+     "a": [
+      "Je älter man wird, desto geringer wird die Bereitschaft zum Risiko.",
+      "Je älter man wird, desto geringer ist die Bereitschaft zum Risiko.",
+      "Je älter man wird, desto mehr sinkt die Bereitschaft zum Risiko.",
+      "Je älter man wird, desto weniger ist man bereit, ein Risiko einzugehen.",
+      "Je älter man wird, desto weniger risikobereit ist man."
+     ],
+     "ex": "mit zunehmendem … → je …, desto …"
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Nach der Veröffentlichung der Studie kam es zu heftigen Diskussionen.",
+     "s": "Nachdem …",
+     "a": [
+      "Nachdem die Studie veröffentlicht worden war, kam es zu heftigen Diskussionen.",
+      "Nachdem man die Studie veröffentlicht hatte, kam es zu heftigen Diskussionen."
+     ],
+     "ex": "Пассив в Plusquamperfekt: veröffentlicht worden war."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Trotz der Warnungen der Wissenschaft wurde kaum gehandelt.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl die Wissenschaft gewarnt hatte, wurde kaum gehandelt.",
+      "Obwohl die Wissenschaft gewarnt hat, wurde kaum gehandelt.",
+      "Obwohl die Wissenschaft warnte, wurde kaum gehandelt.",
+      "Obwohl Wissenschaftler gewarnt hatten, wurde kaum gehandelt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Bei Nichteinhaltung der Frist verfällt der Anspruch.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn die Frist nicht eingehalten wird, verfällt der Anspruch.",
+      "Wenn man die Frist nicht einhält, verfällt der Anspruch."
+     ],
+     "ex": "Nicht- → отрицание с глаголом."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Aufgrund der Zunahme psychischer Erkrankungen fordern Ärzte mehr Therapieplätze.",
+     "s": "Weil …",
+     "a": [
+      "Weil psychische Erkrankungen zunehmen, fordern Ärzte mehr Therapieplätze.",
+      "Weil die psychischen Erkrankungen zunehmen, fordern Ärzte mehr Therapieplätze."
+     ],
+     "ex": "Genitiv-Attribut → Subjekt."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Durch die Digitalisierung der Verwaltung sollen Wartezeiten verkürzt werden.",
+     "s": "Indem …",
+     "a": [
+      "Indem die Verwaltung digitalisiert wird, sollen Wartezeiten verkürzt werden.",
+      "Indem man die Verwaltung digitalisiert, sollen Wartezeiten verkürzt werden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Im Falle einer Absage des Fluges erhalten Passagiere eine Entschädigung.",
+     "s": "Falls …",
+     "a": [
+      "Falls der Flug abgesagt wird, erhalten Passagiere eine Entschädigung.",
+      "Falls der Flug abgesagt wird, erhalten die Passagiere eine Entschädigung."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Erst nach der Klärung aller Fragen wird der Vertrag unterschrieben.",
+     "s": "Erst wenn …",
+     "a": [
+      "Erst wenn alle Fragen geklärt sind, wird der Vertrag unterschrieben.",
+      "Erst wenn alle Fragen geklärt worden sind, wird der Vertrag unterschrieben."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ungeachtet der Proteste der Anrainer wird das Hochhaus gebaut.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl die Anrainer protestieren, wird das Hochhaus gebaut.",
+      "Obwohl die Anrainer protestiert haben, wird das Hochhaus gebaut."
+     ],
+     "ex": "ungeachtet = trotz."
+    }
+   ]
+  },
+  {
+   "id": "satzfort",
+   "title": "Satzfortsetzungen",
+   "ru": "Продолжи предложение: союзы, порядок слов, логика",
+   "level": "B2–C1",
+   "tag": "Strukturen und Wortschatz",
+   "theory": "\n<p>Дано начало предложения — нужно закончить его <b class=\"k\">логично и грамматически правильно</b>. Баллы снимают за порядок слов, неверную форму глагола и за ответ, который не вяжется с началом по смыслу. Пиши просто и безошибочно — длина не важна.</p>\n<h3>Куда ставить глагол</h3>\n<table>\n<tr><th>Тип</th><th>Связки</th><th>Порядок</th></tr>\n<tr><td>придаточное (глагол в конец)</td><td>weil, da, obwohl, damit, sodass, indem, wenn, falls, nachdem, bevor, seitdem, während, ob, dass, je…</td><td>…, <b>weil</b> es dort mehr Jobs <b>gibt</b>.</td></tr>\n<tr><td>наречие (инверсия)</td><td>deshalb, deswegen, trotzdem, dennoch, folglich, sonst, andernfalls, außerdem</td><td>…; <b>deshalb</b> <b>ziehen</b> viele in die Stadt.</td></tr>\n<tr><td>позиция 0</td><td>und, aber, oder, denn, sondern</td><td>…, <b>denn</b> dort <b>gibt</b> es mehr Jobs.</td></tr>\n<tr><td>инфинитив</td><td>um … zu, ohne … zu, (an)statt … zu</td><td><b>Um</b> erfolgreich <b>zu</b> sein, …</td></tr>\n</table>\n<h3>Парные союзы</h3>\n<div class=\"ex\"><b>nicht nur</b> …, <b>sondern auch</b> … · <b>sowohl</b> … <b>als auch</b> … · <b>weder</b> … <b>noch</b> … · <b>entweder</b> … <b>oder</b> … · <b>zwar</b> …, <b>aber</b> … · <b>je</b> + Komparativ …, <b>desto</b> + Komparativ …</div>\n<div class=\"tip\"><b>je … desto</b>: после je — глагол в конце, после desto — инверсия: <i>Je mehr Menschen Rad fahren, <b>desto besser wird</b> die Luft.</i></div>\n<div class=\"tip\"><b>Kaum</b> + инверсия: <i>Kaum <b>war</b> die Nachricht veröffentlicht, <b>verbreitete</b> sie sich überall.</i></div>\n<p>Если начало в Konjunktiv II (<i>Hätte die Stadt …</i>), продолжение тоже в Konjunktiv II.</p>\n",
+   "items": [
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Obwohl das Studium in Österreich kaum etwas kostet, …",
+     "s": "",
+     "a": [
+      "… müssen viele Studierende neben dem Studium arbeiten."
+     ],
+     "ex": "obwohl-придаточное стоит первым → главное начинается с глагола.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Je mehr Menschen das Fahrrad benutzen, …",
+     "s": "",
+     "a": [
+      "… desto besser wird die Luft in der Stadt."
+     ],
+     "ex": "desto + Komparativ + глагол.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Viele junge Menschen ziehen in die Stadt, weil …",
+     "s": "",
+     "a": [
+      "… es dort mehr Arbeitsplätze und Ausbildungsmöglichkeiten gibt."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Regierung hat die Steuern gesenkt, damit …",
+     "s": "",
+     "a": [
+      "… die Menschen mehr Geld zur Verfügung haben."
+     ],
+     "ex": "damit — цель, другой субъект.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Man sollte beim Einkaufen nicht nur auf den Preis achten, sondern …",
+     "s": "",
+     "a": [
+      "… auch darauf, unter welchen Bedingungen ein Produkt hergestellt wurde."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er ging zur Arbeit, obwohl …",
+     "s": "",
+     "a": [
+      "… er hohes Fieber hatte."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Falls Sie Fragen zur Anmeldung haben, …",
+     "s": "",
+     "a": [
+      "… wenden Sie sich bitte an das Studienservice."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Um im Berufsleben erfolgreich zu sein, …",
+     "s": "",
+     "a": [
+      "… braucht man heute neben Fachwissen auch soziale Kompetenzen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Mieten in Wien sind stark gestiegen, sodass …",
+     "s": "",
+     "a": [
+      "… sich viele Familien keine größere Wohnung mehr leisten können."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Anstatt mit dem Auto zur Arbeit zu fahren, …",
+     "s": "",
+     "a": [
+      "… könnten viele Menschen öffentliche Verkehrsmittel nutzen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Zwar bieten soziale Medien viele Möglichkeiten, …",
+     "s": "",
+     "a": [
+      "… aber sie bergen auch Risiken wie Desinformation und Sucht."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Es ist höchste Zeit, …",
+     "s": "",
+     "a": [
+      "… dass die Politik wirksame Maßnahmen gegen den Klimawandel ergreift.",
+      "… wirksame Maßnahmen gegen den Klimawandel zu ergreifen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Weder die Regierung noch …",
+     "s": "",
+     "a": [
+      "… die Opposition hat ein überzeugendes Konzept vorgelegt."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Indem man regelmäßig Sport treibt, …",
+     "s": "",
+     "a": [
+      "… kann man Stress abbauen und Krankheiten vorbeugen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wenn ich vor fünf Jahren gewusst hätte, wie schwierig Deutsch ist, …",
+     "s": "",
+     "a": [
+      "… hätte ich früher angefangen, es zu lernen."
+     ],
+     "ex": "Konjunktiv II в обеих частях.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele Menschen kaufen Dinge, die sie nicht brauchen, ohne …",
+     "s": "",
+     "a": [
+      "… darüber nachzudenken, welche Folgen das für die Umwelt hat."
+     ],
+     "ex": "ohne … zu.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Hätte die Stadt rechtzeitig in den öffentlichen Verkehr investiert, …",
+     "s": "",
+     "a": [
+      "… gäbe es heute weniger Staus.",
+      "… hätte es weniger Staus gegeben."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Digitalisierung erleichtert vieles; dennoch …",
+     "s": "",
+     "a": [
+      "… fühlen sich ältere Menschen oft ausgeschlossen."
+     ],
+     "ex": "dennoch → инверсия.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Kaum war die Nachricht veröffentlicht, …",
+     "s": "",
+     "a": [
+      "… verbreitete sie sich in den sozialen Netzwerken."
+     ],
+     "ex": "kaum … → инверсия во второй части.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Sowohl die Umwelt als auch …",
+     "s": "",
+     "a": [
+      "… die eigene Gesundheit profitieren davon, wenn man weniger Fleisch isst."
+     ],
+     "ex": "sowohl … als auch → глагол во множественном числе.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es wird oft behauptet, dass …",
+     "s": "",
+     "a": [
+      "… junge Menschen sich nicht für Politik interessieren."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Je länger man im Ausland lebt, …",
+     "s": "",
+     "a": [
+      "… desto leichter fällt es einem, die Kultur des Gastlandes zu verstehen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    }
+   ]
+  },
+  {
+   "id": "indirekt",
+   "title": "Indirekte Rede (Konjunktiv I)",
+   "ru": "Er sagte, er sei krank: как газеты передают чужие слова",
+   "level": "B2+",
+   "tag": "Lesen · Strukturen",
+   "theory": "\n<p>Косвенная речь — язык новостей и научных текстов. Конъюнктив I показывает: <b class=\"k\">это чужие слова, автор за них не ручается</b>.</p>\n<h3>Формы Konjunktiv I</h3>\n<table><tr><th></th><th>sein</th><th>haben</th><th>werden</th><th>können</th><th>kommen</th></tr>\n<tr><td>ich</td><td>sei</td><td>(hätte)</td><td>(würde)</td><td>könne</td><td>(käme)</td></tr>\n<tr><td>er/sie/es</td><td><b>sei</b></td><td><b>habe</b></td><td><b>werde</b></td><td><b>könne</b></td><td><b>komme</b></td></tr>\n<tr><td>wir/sie</td><td>seien</td><td>(hätten)</td><td>(würden)</td><td>(könnten)</td><td>(kämen)</td></tr></table>\n<div class=\"tip\">Если Konj. I совпадает с индикативом (<i>sie haben, wir kommen</i>), берём <b>Konjunktiv II</b> (<i>sie hätten, wir kämen</i>) или <b>würde + Infinitiv</b>.</div>\n<h3>Времена</h3>\n<div class=\"ex\">настоящее: Er sagt, er <b>sei</b> müde.<br>прошедшее: Er sagt, er <b>sei</b> gestern müde <b>gewesen</b> / er <b>habe</b> nicht geschlafen.<br>будущее: Er sagt, er <b>werde</b> morgen kommen.</div>\n<h3>Вопросы и просьбы</h3>\n<div class=\"ex\">„Wann kommt der Zug?“ → Sie fragte, <b>wann</b> der Zug <b>komme</b>.<br>„Kommst du mit?“ → Er fragte, <b>ob</b> ich mitkäme / mitkommen würde.<br>„Lest den Text!“ → Sie sagte, wir <b>sollten</b> den Text lesen.</div>\n<p>Не забывай менять местоимения: <i>„Ich habe …“</i> → <i>er habe …</i>; <i>„Wir …“</i> → <i>sie/man …</i>. Полезно: <i>laut</i>, <i>zufolge</i>, <i>nach Angaben</i>.</p>\n",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Minister sagte, die Lage ___ unter Kontrolle.",
+     "o": [
+      "sei",
+      "ist gewesen",
+      "wäre gewesen"
+     ],
+     "a": 0,
+     "ex": "Konj. I от sein: er/sie/es sei."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Forscher erklärten, sie ___ neue Daten.",
+     "o": [
+      "hätten",
+      "haben",
+      "hatten"
+     ],
+     "a": 0,
+     "ex": "sie haben = индикатив → Konj. II hätten."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie behauptet, sie ___ das Problem lösen. (können)",
+     "a": [
+      "könne"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er sagte, er ___ gestern krank gewesen.",
+     "a": [
+      "sei"
+     ],
+     "ex": "Прошедшее в Konj. I: sei gewesen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Sprecherin teilte mit, das Unternehmen ___ 200 Stellen abbauen.",
+     "o": [
+      "werde",
+      "wird",
+      "würde werden"
+     ],
+     "a": 0,
+     "ex": "Будущее: werde + Infinitiv."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Der Arzt fragte den Patienten, ob er regelmäßig Sport ___. (treiben)",
+     "a": [
+      "treibe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Ministerin: „Ich werde die Reform noch heuer vorlegen.“",
+     "s": "Die Ministerin sagte, …",
+     "a": [
+      "Die Ministerin sagte, sie werde die Reform noch heuer vorlegen."
+     ],
+     "ex": "ich → sie; werde.",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Student: „Ich habe die Prüfung bestanden.“",
+     "s": "Der Student sagte, …",
+     "a": [
+      "Der Student sagte, er habe die Prüfung bestanden."
+     ],
+     "ex": "",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Expertin: „Die Zahl der Pendler ist stark gestiegen.“",
+     "s": "Die Expertin erklärte, …",
+     "a": [
+      "Die Expertin erklärte, die Zahl der Pendler sei stark gestiegen.",
+      "Die Expertin erklärte, dass die Zahl der Pendler stark gestiegen sei."
+     ],
+     "ex": "",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Lehrerin zu den Schülern: „Lest den Text bis morgen!“",
+     "s": "Die Lehrerin sagte den Schülern, …",
+     "a": [
+      "Die Lehrerin sagte den Schülern, sie sollten den Text bis morgen lesen."
+     ],
+     "ex": "Императив → sollen.",
+     "task": "Geben Sie die Aufforderung in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Journalist fragte: „Wann wird das Gesetz in Kraft treten?“",
+     "s": "Der Journalist fragte, …",
+     "a": [
+      "Der Journalist fragte, wann das Gesetz in Kraft treten werde.",
+      "Der Journalist fragte, wann das Gesetz in Kraft treten würde."
+     ],
+     "ex": "",
+     "task": "Geben Sie die Frage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Bürgermeisterin: „Wir haben keine andere Wahl.“",
+     "s": "Die Bürgermeisterin betonte, …",
+     "a": [
+      "Die Bürgermeisterin betonte, sie hätten keine andere Wahl.",
+      "Die Bürgermeisterin betonte, man habe keine andere Wahl."
+     ],
+     "ex": "wir haben → sie hätten (Konj. II) или man habe.",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Sprecher: „Die Firma kann die Vorwürfe nicht nachvollziehen und wird rechtliche Schritte prüfen.“",
+     "s": "Der Sprecher sagte, …",
+     "a": [
+      "Der Sprecher sagte, die Firma könne die Vorwürfe nicht nachvollziehen und werde rechtliche Schritte prüfen."
+     ],
+     "ex": "",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Studienautorin: „Viele Jugendliche verbringen mehr als fünf Stunden täglich am Handy.“",
+     "s": "Laut der Studienautorin …",
+     "a": [
+      "Laut der Studienautorin verbrächten viele Jugendliche mehr als fünf Stunden täglich am Handy.",
+      "Laut der Studienautorin würden viele Jugendliche mehr als fünf Stunden täglich am Handy verbringen."
+     ],
+     "ex": "verbringen (Plural) = индикатив → verbrächten / würden verbringen.",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Kritiker: „Die Reform kommt zu spät.“",
+     "s": "Kritikern zufolge …",
+     "a": [
+      "Kritikern zufolge komme die Reform zu spät."
+     ],
+     "ex": "zufolge стоит после существительного.",
+     "task": "Geben Sie die Aussage in indirekter Rede wieder."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Kanzler sagte, er sei mit dem Ergebnis zufrieden.",
+     "s": "Der Kanzler sagte: …",
+     "a": [
+      "Der Kanzler sagte: „Ich bin mit dem Ergebnis zufrieden.“",
+      "Der Kanzler sagte: Ich bin mit dem Ergebnis zufrieden."
+     ],
+     "ex": "",
+     "task": "Formen Sie in direkte Rede um."
+    }
+   ]
+  },
+  {
+   "id": "verbal",
+   "title": "Verbalstil → Nominalstil",
+   "ru": "Weil die Preise gestiegen sind → Wegen der gestiegenen Preise: сжимаем придаточное",
+   "level": "C1",
+   "tag": "Strukturen und Wortschatz",
+   "theory": "\n<p>Обратная операция: придаточное → предложная группа. Нужно знать <b class=\"k\">существительное от глагола</b> и падеж предлога.</p>\n<table>\n<tr><th>Союз</th><th>Предлог</th><th>Пример</th></tr>\n<tr><td>weil, da</td><td>wegen / aufgrund + G</td><td>wegen <b>des starken Regens</b></td></tr>\n<tr><td>obwohl</td><td>trotz + G</td><td>trotz <b>intensiver Vorbereitung</b></td></tr>\n<tr><td>wenn (условие/время)</td><td>bei + D</td><td>bei <b>falscher Bedienung</b></td></tr>\n<tr><td>nachdem</td><td>nach + D</td><td>nach <b>dem Abschluss</b> des Studiums</td></tr>\n<tr><td>bevor</td><td>vor + D</td><td>vor <b>Beginn</b> des Semesters</td></tr>\n<tr><td>um … zu, damit</td><td>zu / zum / zur + D, für + A</td><td><b>zum Schutz</b> der Umwelt</td></tr>\n<tr><td>indem</td><td>durch + A</td><td>durch <b>eine Verkürzung</b> der Arbeitszeit</td></tr>\n<tr><td>seit(dem)</td><td>seit + D</td><td>seit <b>der Öffnung</b> der Grenzen</td></tr>\n<tr><td>falls</td><td>im Falle + G</td><td>im Falle <b>eines Brandes</b></td></tr>\n</table>\n<h3>Глагол → существительное</h3>\n<div class=\"ex\">abschließen → der Abschluss · öffnen → die Öffnung · schützen → der Schutz · beginnen → der Beginn · steigen → der Anstieg · entscheiden → die Entscheidung · sich bewerben → die Bewerbung · fehlen → der Mangel (an)</div>\n<div class=\"tip\">Субъект и объект становятся генитивом: <i>Die Preise steigen</i> → <i>der Anstieg <b>der Preise</b></i>. Наречие → прилагательное: <i>es regnet stark</i> → <i>der <b>starke</b> Regen</i>.</div>\n",
+   "items": [
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Weil die Preise gestiegen sind, kaufen die Menschen weniger.",
+     "s": "Wegen …",
+     "a": [
+      "Wegen der gestiegenen Preise kaufen die Menschen weniger.",
+      "Wegen des Anstiegs der Preise kaufen die Menschen weniger.",
+      "Wegen des Preisanstiegs kaufen die Menschen weniger."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Nachdem er die Prüfung bestanden hatte, feierte er mit Freunden.",
+     "s": "Nach …",
+     "a": [
+      "Nach dem Bestehen der Prüfung feierte er mit Freunden.",
+      "Nach der bestandenen Prüfung feierte er mit Freunden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Obwohl es stark regnete, fand das Konzert statt.",
+     "s": "Trotz …",
+     "a": [
+      "Trotz des starken Regens fand das Konzert statt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wenn man das Gerät falsch bedient, können Schäden entstehen.",
+     "s": "Bei …",
+     "a": [
+      "Bei falscher Bedienung des Geräts können Schäden entstehen.",
+      "Bei falscher Bedienung können Schäden entstehen.",
+      "Bei falscher Bedienung des Gerätes können Schäden entstehen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Um die Umwelt zu schützen, sollte man weniger fliegen.",
+     "s": "Zum …",
+     "a": [
+      "Zum Schutz der Umwelt sollte man weniger fliegen.",
+      "Zum Umweltschutz sollte man weniger fliegen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Bevor das Semester beginnt, muss man sich anmelden.",
+     "s": "Vor …",
+     "a": [
+      "Vor Beginn des Semesters muss man sich anmelden.",
+      "Vor dem Beginn des Semesters muss man sich anmelden.",
+      "Vor Semesterbeginn muss man sich anmelden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Während sie in Wien studierte, lernte sie ihren Mann kennen.",
+     "s": "Während …",
+     "a": [
+      "Während ihres Studiums in Wien lernte sie ihren Mann kennen."
+     ],
+     "ex": "während + Genitiv."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Indem man die Arbeitszeit verkürzt, könnte man Burnout vorbeugen.",
+     "s": "Durch …",
+     "a": [
+      "Durch eine Verkürzung der Arbeitszeit könnte man Burnout vorbeugen.",
+      "Durch die Verkürzung der Arbeitszeit könnte man Burnout vorbeugen.",
+      "Durch Verkürzung der Arbeitszeit könnte man Burnout vorbeugen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Seit die Grenzen geöffnet wurden, kommen mehr Touristen.",
+     "s": "Seit …",
+     "a": [
+      "Seit der Öffnung der Grenzen kommen mehr Touristen.",
+      "Seit der Grenzöffnung kommen mehr Touristen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Falls ein Feuer ausbricht, darf der Lift nicht benutzt werden.",
+     "s": "Im Falle …",
+     "a": [
+      "Im Falle eines Brandes darf der Lift nicht benutzt werden.",
+      "Im Falle eines Feuers darf der Lift nicht benutzt werden.",
+      "Im Brandfall darf der Lift nicht benutzt werden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Weil viele Fachkräfte fehlen, bleiben Stellen unbesetzt.",
+     "s": "Aufgrund …",
+     "a": [
+      "Aufgrund des Fachkräftemangels bleiben Stellen unbesetzt.",
+      "Aufgrund des Mangels an Fachkräften bleiben Stellen unbesetzt.",
+      "Aufgrund fehlender Fachkräfte bleiben Stellen unbesetzt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Regierung hat beschlossen, die Steuern zu senken. Das wurde begrüßt.",
+     "s": "Der …",
+     "a": [
+      "Der Beschluss der Regierung, die Steuern zu senken, wurde begrüßt.",
+      "Der Beschluss der Regierung zur Senkung der Steuern wurde begrüßt.",
+      "Der Beschluss der Regierung zur Steuersenkung wurde begrüßt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Dass immer mehr Menschen vereinsamen, ist ein ernstes Problem.",
+     "s": "Die …",
+     "a": [
+      "Die zunehmende Vereinsamung der Menschen ist ein ernstes Problem.",
+      "Die zunehmende Vereinsamung vieler Menschen ist ein ernstes Problem.",
+      "Die zunehmende Vereinsamung ist ein ernstes Problem."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Weil die Bevölkerung altert, steigen die Gesundheitskosten.",
+     "s": "Aufgrund …",
+     "a": [
+      "Aufgrund der Alterung der Bevölkerung steigen die Gesundheitskosten.",
+      "Aufgrund der alternden Bevölkerung steigen die Gesundheitskosten."
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "rektion",
+   "title": "Präpositionen und Rektion",
+   "ru": "klagen über, abhängen von, darauf, woran: управление глаголов и предлоги с генитивом",
+   "level": "B2",
+   "tag": "Wortschatz",
+   "theory": "\n<p>Ошибки в предлогах — самые частые в Schreiben и Sprechen. Учи глагол <b class=\"k\">сразу с предлогом и падежом</b>.</p>\n<table>\n<tr><th>Akkusativ</th><th>Dativ</th></tr>\n<tr><td>sich anpassen <b>an</b> · denken <b>an</b> · sich gewöhnen <b>an</b> · achten <b>auf</b> · sich verlassen <b>auf</b> · verzichten <b>auf</b> · stolz sein <b>auf</b> · sich bewerben <b>um</b> · es geht <b>um</b> · klagen <b>über</b> · sich ärgern <b>über</b> · sich einsetzen <b>für</b> · sich entscheiden <b>für/gegen</b></td>\n<td>abhängen <b>von</b> · überzeugt sein <b>von</b> · sich beschäftigen <b>mit</b> · rechnen <b>mit</b> · leiden <b>an/unter</b> · teilnehmen <b>an</b> · zweifeln <b>an</b> · warnen <b>vor</b> · Angst haben <b>vor</b> · sich fürchten <b>vor</b> · gehören <b>zu</b> · beitragen <b>zu</b></td></tr></table>\n<h3>da- и wo-</h3>\n<div class=\"ex\">Ich bin <b>davon</b> überzeugt, dass … · Es kommt <b>darauf</b> an, ob … · <b>Woran</b> denkst du? · <b>Worüber</b> sprecht ihr?</div>\n<p>Перед гласной вставляется r: dar<b>auf</b>, wor<b>an</b>. Для людей — предлог + местоимение: <i>An <b>wen</b> denkst du? — An <b>sie</b>.</i></p>\n<h3>Предлоги с генитивом (письменный стиль)</h3>\n<div class=\"ex\">wegen · aufgrund · trotz · während · statt · angesichts (ввиду) · infolge · hinsichtlich (относительно) · bezüglich · ungeachtet (несмотря на) · innerhalb · außerhalb · mithilfe · anhand</div>\n",
+   "items": [
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Viele Studierende klagen ___ die hohen Mieten.",
+     "a": [
+      "über"
+     ],
+     "ex": "klagen über + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ob wir fahren, hängt ___ dem Wetter ab.",
+     "a": [
+      "von"
+     ],
+     "ex": "abhängen von + D."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir müssen uns ___ den Klimawandel anpassen.",
+     "a": [
+      "an"
+     ],
+     "ex": "sich anpassen an + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie hat sich ___ die Stelle als Projektleiterin beworben.",
+     "a": [
+      "um"
+     ],
+     "ex": "sich bewerben um + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Studie beschäftigt sich ___ den Folgen der Digitalisierung.",
+     "a": [
+      "mit"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich bin fest ___ überzeugt, dass wir das schaffen.",
+     "a": [
+      "davon"
+     ],
+     "ex": "überzeugt sein von → davon, dass …"
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "___ denkst du gerade? – An die Prüfung morgen.",
+     "a": [
+      "Woran",
+      "woran"
+     ],
+     "ex": "denken an → woran."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ des schlechten Wetters fand das Spiel statt.",
+     "o": [
+      "Trotz",
+      "Wegen",
+      "Während"
+     ],
+     "a": 0,
+     "ex": "Игра состоялась НЕСМОТРЯ на погоду."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er leidet seit Jahren ___ Schlafstörungen.",
+     "a": [
+      "unter",
+      "an"
+     ],
+     "ex": "leiden unter / an + D."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Firma ist dringend ___ der Suche nach Fachkräften.",
+     "a": [
+      "auf"
+     ],
+     "ex": "auf der Suche sein nach."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Es kommt ___ an, wie man das Problem angeht.",
+     "a": [
+      "darauf"
+     ],
+     "ex": "es kommt auf etwas an → darauf, wie/ob/dass."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "___ der steigenden Energiepreise sparen viele Haushalte.",
+     "o": [
+      "Angesichts",
+      "Trotz",
+      "Statt"
+     ],
+     "a": 0,
+     "ex": "angesichts + G = ввиду, учитывая."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie ist zu Recht stolz ___ ihren Studienabschluss.",
+     "a": [
+      "auf"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir haben bewusst ___ verzichtet, mit dem Auto in den Urlaub zu fahren.",
+     "a": [
+      "darauf"
+     ],
+     "ex": "verzichten auf → darauf, … zu."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Erfolg ist ___ zurückzuführen, dass das Team gut zusammenarbeitet.",
+     "o": [
+      "darauf",
+      "daran",
+      "davon"
+     ],
+     "a": 0,
+     "ex": "zurückführen auf + A."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Arbeitslosenquote ist ___ zwei Prozentpunkte gestiegen.",
+     "a": [
+      "um"
+     ],
+     "ex": "steigen um (на сколько) / auf (до какого уровня)."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Experten warnen ___, die Risiken zu unterschätzen.",
+     "a": [
+      "davor"
+     ],
+     "ex": "warnen vor → davor, … zu."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Jeder kann ___ beitragen, Energie zu sparen.",
+     "a": [
+      "dazu"
+     ],
+     "ex": "beitragen zu → dazu, … zu."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Entscheidung wurde ___ der Kritik der Opposition getroffen.",
+     "o": [
+      "ungeachtet",
+      "infolge",
+      "anhand"
+     ],
+     "a": 0,
+     "ex": "ungeachtet + G = несмотря на."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Ministerin äußerte sich nicht ___ der Frage der Finanzierung.",
+     "a": [
+      "zu"
+     ],
+     "ex": "sich äußern zu + D."
+    }
+   ]
+  }
+ ]
+}

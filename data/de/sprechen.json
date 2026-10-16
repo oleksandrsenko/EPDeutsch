@@ -1,0 +1,520 @@
+{
+ "tasks": [
+  {
+   "id": "sp_studium",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "kind": "Grafik",
+   "title": "Warum Studierende ihr Studium abbrechen",
+   "ru": "График: причины, по которым студенты бросают учёбу.",
+   "impulse": "Die Grafik zeigt die häufigsten Gründe, die Studienabbrecherinnen und -abbrecher in einer Befragung genannt haben (Mehrfachnennungen möglich).",
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Welche Gründe halten Sie für besonders wichtig, und warum?",
+    "Wie ist die Situation in Ihrem Heimatland?",
+    "Was könnten Universitäten tun, um Studienabbrüche zu verringern?",
+    "Ist ein Studienabbruch immer ein Misserfolg? Begründen Sie Ihre Meinung."
+   ],
+   "fragen": [
+    "Sollte das Studium in Österreich Studiengebühren kosten?",
+    "Ist ein Hochschulabschluss heute noch eine Garantie für einen guten Job?",
+    "Was halten Sie von reinen Online-Studien?",
+    "Würden Sie neben dem Studium arbeiten, auch wenn Sie es nicht müssten?",
+    "Welche Rolle sollten Noten spielen?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "Der Anteil … ist von … auf … gestiegen.",
+    "an erster Stelle steht …",
+    "im Vergleich zu …",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ],
+   "chart": {
+    "title": "Gründe für einen Studienabbruch (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "Leistungsprobleme",
+      38
+     ],
+     [
+      "finanzielle Gründe",
+      31
+     ],
+     [
+      "falsche Studienwahl",
+      29
+     ],
+     [
+      "Wunsch nach praktischer Arbeit",
+      22
+     ],
+     [
+      "familiäre Gründe",
+      12
+     ],
+     [
+      "Krankheit",
+      9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sp_ki",
+   "topic": "Medien",
+   "kind": "Zitat",
+   "title": "Künstliche Intelligenz – Werkzeug oder Gefahr?",
+   "ru": "Цитата о роли искусственного интеллекта.",
+   "impulse": "„Künstliche Intelligenz wird den Menschen nicht ersetzen. Aber Menschen, die KI nutzen, werden die ersetzen, die es nicht tun.“ (häufig zitierte Aussage aus der Wirtschaft)",
+   "leitfragen": [
+    "Erklären Sie das Zitat mit eigenen Worten.",
+    "In welchen Bereichen wird KI heute schon eingesetzt?",
+    "Welche Chancen und Risiken sehen Sie?",
+    "Wie sollte die Schule oder Universität mit KI umgehen?",
+    "Stimmen Sie der Aussage zu? Begründen Sie Ihre Meinung."
+   ],
+   "fragen": [
+    "Sollten Hausarbeiten, die mit KI geschrieben wurden, verboten werden?",
+    "Vertrauen Sie Informationen, die eine KI liefert?",
+    "Welche Berufe werden Ihrer Meinung nach verschwinden?",
+    "Wer ist verantwortlich, wenn eine KI einen Fehler macht?",
+    "Nutzen Sie selbst KI beim Deutschlernen?"
+   ],
+   "redemittel": [
+    "Das Zitat stammt von … und besagt, dass …",
+    "Damit ist gemeint, dass …",
+    "Ich stimme dieser Aussage nur teilweise zu, weil …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_umwelt",
+   "topic": "Umwelt und Verkehr",
+   "kind": "Grafik",
+   "title": "Wie Wienerinnen und Wiener unterwegs sind",
+   "ru": "График: как жители Вены передвигаются по городу (modal split).",
+   "impulse": "Die Grafik zeigt, mit welchen Verkehrsmitteln die Wegstrecken in einer Großstadt zurückgelegt werden, im Vergleich zweier Jahre.",
+   "leitfragen": [
+    "Beschreiben Sie die Grafik und die wichtigsten Veränderungen.",
+    "Welche Gründe könnte es für diese Entwicklung geben?",
+    "Wie ist die Verkehrssituation in Ihrer Heimatstadt?",
+    "Welche Maßnahmen sind sinnvoll, um den Autoverkehr zu reduzieren?",
+    "Sollte die Innenstadt autofrei werden? Begründen Sie Ihre Meinung."
+   ],
+   "fragen": [
+    "Sollten öffentliche Verkehrsmittel kostenlos sein?",
+    "Ist es fair, Autofahrern das Parken teurer zu machen?",
+    "Würden Sie auf Flugreisen verzichten, um das Klima zu schützen?",
+    "Was halten Sie von E-Scootern in der Stadt?",
+    "Wer trägt mehr Verantwortung für den Klimaschutz: Politik oder jeder Einzelne?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "Der Anteil … ist von … auf … gestiegen.",
+    "an erster Stelle steht …",
+    "im Vergleich zu …",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ],
+   "chart": {
+    "title": "Verkehrsmittelwahl in einer Großstadt (Anteil der Wege in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "öffentlicher Verkehr 2014",
+      39
+     ],
+     [
+      "öffentlicher Verkehr 2024",
+      32
+     ],
+     [
+      "Auto 2014",
+      28
+     ],
+     [
+      "Auto 2024",
+      26
+     ],
+     [
+      "zu Fuß 2014",
+      26
+     ],
+     [
+      "zu Fuß 2024",
+      32
+     ],
+     [
+      "Fahrrad 2014",
+      7
+     ],
+     [
+      "Fahrrad 2024",
+      10
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sp_engagement",
+   "topic": "Gesellschaft und soziales Engagement",
+   "kind": "Text",
+   "title": "Soziales Jahr für alle?",
+   "ru": "Короткий текст: обязательный социальный год для молодёжи.",
+   "impulse": "In mehreren europäischen Ländern wird über ein verpflichtendes soziales Jahr für alle jungen Menschen nach der Schule diskutiert. Befürworter meinen, es stärke den Zusammenhalt und helfe in Pflege und Katastrophenschutz. Kritiker sehen darin einen unzulässigen Eingriff in die persönliche Freiheit und befürchten billige Arbeitskräfte statt fairer Bezahlung.",
+   "leitfragen": [
+    "Fassen Sie den Text kurz zusammen.",
+    "Welche Argumente sprechen für ein soziales Pflichtjahr?",
+    "Welche Argumente sprechen dagegen?",
+    "Gibt es in Ihrem Heimatland etwas Vergleichbares?",
+    "Wie ist Ihre persönliche Meinung?"
+   ],
+   "fragen": [
+    "Haben Sie sich selbst schon ehrenamtlich engagiert?",
+    "Sollte Ehrenamt für den Lebenslauf zählen?",
+    "Ist der Zivildienst in Österreich ein gutes Modell?",
+    "Warum engagieren sich junge Menschen heute eher spontan als in Vereinen?",
+    "Kann ein Pflichtjahr wirklich freiwilliges Engagement fördern?"
+   ],
+   "redemittel": [
+    "Das Zitat stammt von … und besagt, dass …",
+    "Damit ist gemeint, dass …",
+    "Ich stimme dieser Aussage nur teilweise zu, weil …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_tourismus",
+   "topic": "Tourismus und Reisen",
+   "kind": "Grafik",
+   "title": "Wohin die Österreicher reisen",
+   "ru": "График: куда австрийцы ездят в отпуск.",
+   "impulse": "Die Grafik zeigt die beliebtesten Urlaubsziele der österreichischen Bevölkerung im Haupturlaub.",
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Wie lassen sich die Präferenzen erklären?",
+    "Welche Urlaubsziele sind in Ihrem Heimatland beliebt?",
+    "Welche Folgen hat der Massentourismus für beliebte Reiseziele?",
+    "Wie würden Sie Ihren idealen Urlaub gestalten und warum?"
+   ],
+   "fragen": [
+    "Ist Reisen wichtig für die persönliche Entwicklung?",
+    "Sollten Städte wie Venedig Eintritt verlangen?",
+    "Ist Urlaub im eigenen Land weniger wert?",
+    "Wie umweltfreundlich reisen Sie selbst?",
+    "Was halten Sie von Kurzurlauben mit dem Flugzeug?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "Der Anteil … ist von … auf … gestiegen.",
+    "an erster Stelle steht …",
+    "im Vergleich zu …",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ],
+   "chart": {
+    "title": "Haupturlaubsziele (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "Österreich",
+      34
+     ],
+     [
+      "Italien",
+      19
+     ],
+     [
+      "Kroatien",
+      14
+     ],
+     [
+      "Griechenland",
+      7
+     ],
+     [
+      "Spanien",
+      6
+     ],
+     [
+      "Deutschland",
+      5
+     ],
+     [
+      "Fernreisen",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sp_arbeit",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "kind": "Zitat",
+   "title": "Leben, um zu arbeiten – oder arbeiten, um zu leben?",
+   "ru": "Цитата о балансе между работой и жизнью.",
+   "impulse": "„Wähle einen Beruf, den du liebst, und du brauchst keinen Tag in deinem Leben mehr zu arbeiten.“ (Konfuzius zugeschrieben)",
+   "leitfragen": [
+    "Erklären Sie das Zitat.",
+    "Ist es realistisch, einen Beruf zu finden, den man liebt?",
+    "Welche Rolle spielt die Arbeit in Ihrem Heimatland?",
+    "Was halten Sie von der Vier-Tage-Woche?",
+    "Was ist Ihnen bei Ihrem zukünftigen Beruf am wichtigsten?"
+   ],
+   "fragen": [
+    "Ist Homeoffice die Zukunft?",
+    "Sollten alle Menschen das gleiche Gehalt bekommen?",
+    "Würden Sie für mehr Geld einen langweiligen Job annehmen?",
+    "Wie wichtig ist ein Studium für die Karriere?",
+    "Was halten Sie vom bedingungslosen Grundeinkommen?"
+   ],
+   "redemittel": [
+    "Das Zitat stammt von … und besagt, dass …",
+    "Damit ist gemeint, dass …",
+    "Ich stimme dieser Aussage nur teilweise zu, weil …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_wohnen",
+   "topic": "Wohnen",
+   "kind": "Grafik",
+   "title": "Was das Wohnen kostet",
+   "ru": "График: доля дохода, которую люди тратят на жильё.",
+   "impulse": "Die Grafik zeigt, welchen Anteil ihres Einkommens verschiedene Haushaltstypen für das Wohnen ausgeben.",
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Welche Gruppen sind besonders belastet, und warum?",
+    "Wie wohnt man in Ihrem Heimatland? Mieten oder kaufen?",
+    "Was kann die Politik gegen hohe Mieten tun?",
+    "Wie möchten Sie selbst in zehn Jahren wohnen?"
+   ],
+   "fragen": [
+    "Ist Wohnen ein Grundrecht?",
+    "Was halten Sie von Wohngemeinschaften?",
+    "Sollten Ferienwohnungen wie Airbnb in Städten verboten werden?",
+    "Stadt oder Land – wo lebt es sich besser?",
+    "Ab welchem Alter sollte man bei den Eltern ausziehen?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "Der Anteil … ist von … auf … gestiegen.",
+    "an erster Stelle steht …",
+    "im Vergleich zu …",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ],
+   "chart": {
+    "title": "Wohnkosten in % des Haushaltseinkommens",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "Alleinerziehende",
+      41
+     ],
+     [
+      "Studierende",
+      38
+     ],
+     [
+      "Alleinlebende",
+      32
+     ],
+     [
+      "Paare ohne Kinder",
+      22
+     ],
+     [
+      "Familien mit Kindern",
+      24
+     ],
+     [
+      "Eigentümer",
+      14
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sp_gesundheit",
+   "topic": "Gesundheit",
+   "kind": "Text",
+   "title": "Smartphone und psychische Gesundheit",
+   "ru": "Короткий текст: смартфоны и психическое здоровье молодёжи.",
+   "impulse": "Eine Studie zeigt: Jugendliche, die mehr als vier Stunden täglich am Smartphone verbringen, berichten doppelt so häufig von Schlafproblemen und Niedergeschlagenheit wie jene, die es weniger als eine Stunde nutzen. Die Autorinnen betonen jedoch, dass ein Zusammenhang noch kein Beweis für eine Ursache ist.",
+   "leitfragen": [
+    "Fassen Sie die wichtigsten Aussagen zusammen.",
+    "Was bedeutet der letzte Satz?",
+    "Welche Erfahrungen haben Sie selbst mit der Smartphone-Nutzung?",
+    "Wie kann man einen gesunden Umgang mit digitalen Medien lernen?",
+    "Sollten soziale Medien erst ab 16 Jahren erlaubt sein? Begründen Sie."
+   ],
+   "fragen": [
+    "Wie wichtig ist Ihnen Sport?",
+    "Wird über psychische Gesundheit genug gesprochen?",
+    "Sollten Krankenkassen Psychotherapie vollständig bezahlen?",
+    "Was tun Sie gegen Stress vor Prüfungen?",
+    "Ist Gesundheit Privatsache?"
+   ],
+   "redemittel": [
+    "Das Zitat stammt von … und besagt, dass …",
+    "Damit ist gemeint, dass …",
+    "Ich stimme dieser Aussage nur teilweise zu, weil …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_gleich",
+   "topic": "Beziehungen und Geschlechtergerechtigkeit",
+   "kind": "Grafik",
+   "title": "Wer kümmert sich um Haushalt und Kinder?",
+   "ru": "График: распределение домашней работы между мужчинами и женщинами.",
+   "impulse": "Die Grafik zeigt, wie viele Stunden pro Woche Frauen und Männer durchschnittlich für bezahlte und unbezahlte Arbeit aufwenden.",
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Wie lassen sich die Unterschiede erklären?",
+    "Wie ist die Aufgabenverteilung in Ihrem Heimatland?",
+    "Was könnte zu einer gerechteren Verteilung beitragen?",
+    "Wie stellen Sie sich die Aufgabenteilung in Ihrer eigenen Zukunft vor?"
+   ],
+   "fragen": [
+    "Sollte die Väterkarenz verpflichtend sein?",
+    "Was halten Sie von Frauenquoten in Führungspositionen?",
+    "Hat sich die Rolle der Männer verändert?",
+    "Ist gendergerechte Sprache wichtig?",
+    "Sollten Mädchen stärker für technische Berufe motiviert werden?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "Der Anteil … ist von … auf … gestiegen.",
+    "an erster Stelle steht …",
+    "im Vergleich zu …",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ],
+   "chart": {
+    "title": "Arbeitsstunden pro Woche",
+    "unit": "Stunden",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "Frauen: bezahlte Arbeit",
+      22
+     ],
+     [
+      "Frauen: unbezahlte Arbeit",
+      31
+     ],
+     [
+      "Männer: bezahlte Arbeit",
+      36
+     ],
+     [
+      "Männer: unbezahlte Arbeit",
+      16
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sp_konsum",
+   "topic": "Konsumgesellschaft",
+   "kind": "Zitat",
+   "title": "Glück kann man nicht kaufen?",
+   "ru": "Цитата о потреблении и счастье.",
+   "impulse": "„Wir kaufen Dinge, die wir nicht brauchen, mit Geld, das wir nicht haben, um Leute zu beeindrucken, die wir nicht mögen.“ (oft zitierte Aussage, Herkunft unklar)",
+   "leitfragen": [
+    "Erklären Sie die Aussage mit eigenen Worten.",
+    "Warum kaufen Menschen mehr, als sie brauchen?",
+    "Welche Rolle spielen Werbung und soziale Medien?",
+    "Wie ist das Konsumverhalten in Ihrem Heimatland?",
+    "Was bedeutet für Sie nachhaltiger Konsum?"
+   ],
+   "fragen": [
+    "Sollte Werbung für Kinder verboten werden?",
+    "Kaufen Sie lieber online oder im Geschäft?",
+    "Ist Secondhand eine echte Alternative?",
+    "Sind teure Marken ihr Geld wert?",
+    "Was halten Sie von einem Black-Friday-Verbot?"
+   ],
+   "redemittel": [
+    "Das Zitat stammt von … und besagt, dass …",
+    "Damit ist gemeint, dass …",
+    "Ich stimme dieser Aussage nur teilweise zu, weil …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_dialog_frei",
+   "topic": "Dialog mit der Kommission",
+   "kind": "These",
+   "title": "Spontaner Dialog: These verteidigen",
+   "ru": "Тренировка второй части: комиссия даёт тезис, ты реагируешь спонтанно.",
+   "impulse": "These: „Die Digitalisierung macht uns einsamer, obwohl wir ständig vernetzt sind.“ Reagieren Sie spontan auf die These und auf die Fragen der Kommission.",
+   "leitfragen": [
+    "Nehmen Sie spontan Stellung zur These.",
+    "Nennen Sie ein Beispiel aus Ihrem Alltag.",
+    "Reagieren Sie auf Gegenargumente der Kommission.",
+    "Fragen Sie nach, wenn Sie etwas nicht verstehen.",
+    "Fassen Sie Ihre Position am Ende kurz zusammen."
+   ],
+   "fragen": [
+    "Ist das nicht ein bisschen übertrieben?",
+    "Haben Sie nicht gerade durch soziale Medien Kontakte in Wien gefunden?",
+    "Was würden Sie einem einsamen Studienkollegen raten?",
+    "Wer ist schuld: die Technik oder wir selbst?",
+    "Wie war das bei Ihren Großeltern?"
+   ],
+   "redemittel": [
+    "Da muss ich widersprechen: …",
+    "Das ist ein interessanter Punkt, aber …",
+    "Entschuldigung, könnten Sie die Frage wiederholen?",
+    "Wenn ich Sie richtig verstehe, meinen Sie …",
+    "Zusammenfassend würde ich sagen …",
+    "Meiner Ansicht nach …",
+    "Ich bin davon überzeugt, dass …",
+    "Das sehe ich anders: …"
+   ]
+  }
+ ]
+}

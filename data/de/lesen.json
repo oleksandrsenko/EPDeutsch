@@ -1,0 +1,1076 @@
+{
+ "texts": [
+  {
+   "id": "wg",
+   "level": "B2",
+   "topic": "Wohnen",
+   "kicker": "Wohnen",
+   "title": "Lieber zu viert als allein: Die WG erlebt ein Comeback",
+   "lead": "Hohe Mieten und knappe Heimplätze treiben Wiener Studierende in Wohngemeinschaften. Für viele ist das mehr als eine Notlösung.",
+   "paras": [
+    "Lena ist 22, studiert Biologie an der Universität Wien und teilt sich eine Altbauwohnung in Ottakring mit drei anderen jungen Leuten. Ihr Zimmer ist vierzehn Quadratmeter groß, die Küche teilt sie mit allen. „Allein könnte ich mir in dieser Gegend nicht einmal eine Garçonnière leisten“, sagt sie. Für ihr WG-Zimmer zahlt sie 480 Euro im Monat, inklusive Betriebskosten und Internet.",
+    "Lena ist kein Einzelfall. Laut einer aktuellen Erhebung unter Studierenden in Österreich lebt inzwischen fast jede bzw. jeder Vierte in einer Wohngemeinschaft – mehr als noch vor zehn Jahren. Gleichzeitig ist der Anteil derjenigen gesunken, die allein in einer eigenen Wohnung wohnen. Der Hauptgrund ist schnell gefunden: Die Mieten in den Universitätsstädten sind in den vergangenen Jahren deutlich stärker gestiegen als die Einkommen junger Menschen.",
+    "Studentenheime wären eine Alternative, doch die Wartelisten sind lang, besonders zu Semesterbeginn im Herbst. Zudem sind die Heime längst nicht mehr so günstig wie früher. Neue, privat betriebene Häuser werben mit Fitnessraum und Dachterrasse, verlangen dafür aber oft über 700 Euro für ein kleines Einzelappartement. „Für Studierende ohne Unterstützung der Eltern ist das schlicht unleistbar“, kritisiert die Österreichische Hochschülerinnen- und Hochschülerschaft (ÖH).",
+    "Doch nicht nur das Geld spielt eine Rolle. Viele junge Menschen schätzen am Zusammenleben die Gesellschaft. Wer neu in der Stadt ist, findet in der WG schnell Anschluss. „Am Anfang kannte ich in Wien niemanden. Meine Mitbewohner haben mir die besten Beisln und den Weg zur Uni gezeigt“, erzählt Lena. Psychologen bestätigen, dass gemeinsames Wohnen vor Einsamkeit schützen kann – ein Thema, das unter Studierenden seit der Pandemie stärker beachtet wird.",
+    "Natürlich gibt es auch Konflikte. Der Klassiker ist der Abwasch, der sich tagelang in der Spüle stapelt. Andere WGs streiten über Lärm, Besuch oder die Frage, wer die Rechnung für die Heizung bezahlt. Viele Gruppen haben deshalb feste Regeln eingeführt: einen Putzplan an der Kühlschranktür, eine gemeinsame Haushaltskassa oder ein wöchentliches „WG-Meeting“. „Wer die Regeln von Anfang an klärt, erspart sich später viel Ärger“, rät eine Wohnberaterin.",
+    "Expertinnen und Experten sehen in der Entwicklung allerdings auch ein Warnsignal. Wenn das Zimmer in der WG für viele die einzige leistbare Option ist, sei das ein Zeichen dafür, dass der Wohnungsmarkt für junge Menschen nicht mehr funktioniere. Die ÖH fordert daher mehr geförderte Studentenheimplätze und eine Obergrenze für Mieten bei Neuvermietungen. Lena hat einen pragmatischeren Wunsch: „Eine Spülmaschine. Dann wären wir die glücklichste WG Wiens.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Lena zahlt für ihr Zimmer mehr als 500 Euro im Monat.",
+     "a": "f",
+     "ex": "Absatz 1: 480 Euro inklusive Betriebskosten."
+    },
+    {
+     "t": "tf",
+     "q": "Heute leben mehr Studierende in einer WG als vor zehn Jahren.",
+     "a": "r",
+     "ex": "Absatz 2: mehr als noch vor zehn Jahren."
+    },
+    {
+     "t": "tf",
+     "q": "Die meisten Studierenden in Österreich wohnen noch bei ihren Eltern.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind Studentenheime laut Text keine gute Alternative?",
+     "o": [
+      "Sie liegen weit außerhalb der Stadt.",
+      "Es gibt wenig Plätze, und neue Heime sind teuer.",
+      "Sie erlauben keinen Besuch."
+     ],
+     "a": 1,
+     "ex": "Absatz 3: lange Wartelisten, private Heime über 700 Euro."
+    },
+    {
+     "t": "mc",
+     "q": "Welchen Vorteil der WG betont Lena besonders?",
+     "o": [
+      "Man spart Zeit beim Kochen.",
+      "Man lernt schnell Leute kennen.",
+      "Man kann leichter lernen."
+     ],
+     "a": 1,
+     "ex": "Absatz 4: In der WG findet man schnell Anschluss."
+    },
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu welchem Absatz? Eine Überschrift bleibt übrig.",
+     "paras": [
+      4,
+      5,
+      6
+     ],
+     "heads": [
+      "Gemeinsam gegen die Einsamkeit",
+      "Streitpunkt Spüle: Regeln helfen",
+      "Ein Zeichen für einen kaputten Markt",
+      "Neue Luxusheime für Studierende"
+     ],
+     "a": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Mittel, mit denen WGs Konflikte vermeiden.",
+     "a": "Putzplan, gemeinsame Haushaltskassa, wöchentliches WG-Meeting (zwei davon)"
+    },
+    {
+     "t": "open",
+     "q": "Was fordert die ÖH?",
+     "a": "mehr geförderte Studentenheimplätze und eine Obergrenze für Mieten bei Neuvermietungen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 409,
+   "minutes": 16
+  },
+  {
+   "id": "hallstatt",
+   "level": "B2",
+   "topic": "Tourismus und Reisen",
+   "kicker": "Reisen",
+   "title": "Ein Dorf am Limit: Wie Hallstatt mit dem Massentourismus ringt",
+   "lead": "Der kleine Ort im Salzkammergut zählt rund 750 Einwohner – und an manchen Tagen zehntausend Besucher. Die Gemeinde sucht nach Wegen, den Ansturm zu bremsen.",
+   "paras": [
+    "Kurz nach acht Uhr morgens ist es in Hallstatt noch ruhig. Ein Fischer zieht sein Boot ans Ufer, im Café am Marktplatz werden die Sessel aufgestellt. Zwei Stunden später sieht der Ort völlig anders aus: Reisebusse drängen sich auf dem Parkplatz, Gruppen schieben sich durch die engen Gassen, an der bekanntesten Fotostelle bildet sich eine Warteschlange. Viele Besucherinnen und Besucher bleiben nur eine oder zwei Stunden, machen ihr Foto und fahren weiter zum nächsten Ziel.",
+    "Dass Hallstatt international so berühmt ist, hat mehrere Gründe. Der Ort gehört seit 1997 zum UNESCO-Welterbe, und seine Lage zwischen See und Bergen gilt als besonders malerisch. Einen zusätzlichen Schub brachten soziale Medien: Bilder des Dorfes werden millionenfach geteilt. In China wurde Hallstatt vor einigen Jahren sogar originalgetreu nachgebaut, was die Neugier auf das Original weiter steigerte.",
+    "Für die Einheimischen hat der Erfolg eine Schattenseite. Viele klagen über Lärm, Müll und Drohnen, die über ihre Gärten fliegen. Manche Touristen betreten private Grundstücke, um ein besseres Foto zu bekommen. Ein Bewohner hat an seinem Haus ein Schild angebracht: „Bitte nicht in die Fenster schauen – hier wohnen Menschen.“ Gleichzeitig ziehen immer mehr junge Familien weg, weil Wohnungen in Ferienapartments umgewandelt werden und die Preise steigen.",
+    "Die Gemeinde hat bereits reagiert. Reisebusse müssen sich inzwischen für ein Zeitfenster anmelden, die Zahl der Busse pro Tag ist begrenzt. An einer beliebten Aussichtsstelle wurde zeitweise ein Bauzaun aufgestellt, um Menschenansammlungen zu verhindern – was international Schlagzeilen machte. Diskutiert wird auch eine Eintrittsgebühr nach dem Vorbild Venedigs, bisher konnte man sich darauf aber nicht einigen.",
+    "Ganz verzichten möchte allerdings niemand auf die Gäste. Hotels, Gastronomie und Geschäfte leben vom Tourismus, und auch die Gemeindekasse profitiert. „Wir wollen keine Mauer um das Dorf bauen“, sagt ein Gemeinderat. Ziel sei vielmehr ein Tourismus, der länger bleibe und mehr Rücksicht nehme. Wer im Ort übernachtet, ein Museum besucht oder eine Wanderung macht, bringe der Region mehr als jemand, der nur für ein Selfie aus dem Bus steigt.",
+    "Tourismusforscher sehen Hallstatt als Beispiel für ein Problem, das viele beliebte Ziele betrifft – von Dubrovnik bis Barcelona. Sie empfehlen, Besucherströme besser zu lenken, etwa durch Online-Reservierungen und Hinweise auf weniger bekannte Orte in der Umgebung. Auch die Reisenden selbst seien gefragt: Wer außerhalb der Hauptsaison oder am frühen Morgen kommt, erlebt Hallstatt so, wie es die Einheimischen lieben – still und ohne Gedränge."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Die meisten Besucher übernachten in Hallstatt.",
+     "a": "f",
+     "ex": "Absatz 1: Viele bleiben nur ein bis zwei Stunden."
+    },
+    {
+     "t": "tf",
+     "q": "Eine Kopie von Hallstatt wurde in China gebaut.",
+     "a": "r",
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Die Gemeinde verlangt bereits eine Eintrittsgebühr wie Venedig.",
+     "a": "f",
+     "ex": "Absatz 4: Man konnte sich bisher nicht einigen."
+    },
+    {
+     "t": "tf",
+     "q": "Die Zahl der Einwohner ist in den letzten Jahren gestiegen.",
+     "a": "f",
+     "ex": "Absatz 3: Junge Familien ziehen weg."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Maßnahme hat die Gemeinde schon eingeführt?",
+     "o": [
+      "ein Verbot von Drohnen",
+      "Zeitfenster und eine Obergrenze für Reisebusse",
+      "eine Mauer um den Ortskern"
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Art von Tourismus wünscht sich die Gemeinde?",
+     "o": [
+      "gar keinen Tourismus mehr",
+      "Gäste, die länger bleiben und mehr Rücksicht nehmen",
+      "nur Tagesgäste mit dem Bus"
+     ],
+     "a": 1,
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Gründe für die Berühmtheit des Ortes.",
+     "a": "UNESCO-Welterbe, malerische Lage zwischen See und Bergen, soziale Medien, Nachbau in China"
+    },
+    {
+     "t": "open",
+     "q": "Was können Reisende laut Tourismusforschern selbst tun?",
+     "a": "außerhalb der Hauptsaison oder am frühen Morgen kommen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 413,
+   "minutes": 16
+  },
+  {
+   "id": "handyverbot",
+   "level": "B2+",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "kicker": "Bildung",
+   "title": "Handy weg, Kopf frei? Was Smartphone-Verbote an Schulen bringen",
+   "lead": "Immer mehr Schulen sammeln die Handys morgens ein. Die Debatte darüber wird emotional geführt – die Forschung liefert ein differenziertes Bild.",
+   "paras": [
+    "An der Mittelschule in einem Wiener Außenbezirk beginnt jeder Schultag mit demselben Ritual: Die Schülerinnen und Schüler legen ihre Smartphones in eine verschließbare Box, die erst nach der letzten Stunde wieder geöffnet wird. Anfangs habe es heftige Proteste gegeben, erzählt die Direktorin. „Inzwischen reden die Kinder in der Pause wieder miteinander, statt nebeneinander auf Bildschirme zu starren.“ Auch die Zahl der Konflikte, die über Chatgruppen ausgetragen werden, sei deutlich zurückgegangen.",
+    "Die Schule ist kein Einzelfall. In mehreren europäischen Ländern gelten inzwischen landesweite Regeln, die die private Handynutzung im Unterricht oder sogar auf dem gesamten Schulgelände untersagen. Auch in Österreich können Schulen seit einiger Zeit selbst entscheiden, ob und wie streng sie die Geräte verbieten. Befürworter argumentieren, dass ständige Benachrichtigungen die Konzentration stören und Cybermobbing begünstigen.",
+    "Was sagt die Wissenschaft? Eine viel zitierte Untersuchung aus Großbritannien kam zu dem Ergebnis, dass sich die Testergebnisse nach der Einführung eines Verbots verbesserten – vor allem bei leistungsschwächeren Schülern. Andere Studien konnten diesen Effekt jedoch nicht bestätigen. Eine Übersichtsarbeit, die zahlreiche Untersuchungen zusammenfasst, kommt zu dem vorsichtigen Schluss, dass Verbote wohl positive Effekte auf das Klassenklima haben, die Wirkung auf die Noten aber gering und schwer messbar sei.",
+    "Kritikerinnen und Kritiker halten pauschale Verbote für den falschen Weg. Schließlich sei das Smartphone ein Werkzeug, mit dem junge Menschen ohnehin aufwachsen. „Die Schule sollte den verantwortungsvollen Umgang damit lehren, nicht so tun, als gäbe es das Gerät nicht“, meint ein Medienpädagoge. Er verweist auf Lern-Apps, Recherchen im Internet und Videos, die den Unterricht bereichern können. Ein generelles Verbot nehme Lehrkräften diese Möglichkeiten.",
+    "Viele Schulen versuchen daher einen Mittelweg. Das Handy bleibt grundsätzlich in der Tasche, darf aber eingesetzt werden, wenn die Lehrkraft es für den Unterricht ausdrücklich erlaubt. Zusätzlich gibt es Workshops zu Themen wie Datenschutz, Fake News und Bildschirmzeit. Eltern werden über Elternabende einbezogen, denn klar ist: Was zu Hause erlaubt ist, beeinflusst das Verhalten in der Schule stark.",
+    "Für die Direktorin der Wiener Mittelschule steht trotzdem fest, dass die Box bleibt. Eine Schülerin der vierten Klasse sieht es inzwischen ähnlich, wenn auch mit Einschränkungen: „In der Pause ist es ohne Handy eigentlich ganz lustig. Aber wenn wir für ein Referat recherchieren müssen, wäre es schon praktisch.“ Genau diese Abwägung, sagen Fachleute, werde die Diskussion auch in den kommenden Jahren bestimmen."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "An der Wiener Mittelschule dürfen die Kinder ihr Handy in der Pause benutzen.",
+     "a": "f",
+     "ex": "Absatz 1: erst nach der letzten Stunde."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich gibt es ein landesweites Handyverbot an allen Schulen.",
+     "a": "f",
+     "ex": "Absatz 2: Schulen entscheiden selbst."
+    },
+    {
+     "t": "tf",
+     "q": "Laut der britischen Studie profitierten vor allem leistungsschwächere Schüler.",
+     "a": "r",
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Die Direktorin plant, das Verbot im nächsten Jahr aufzuheben.",
+     "a": "f",
+     "ex": "Absatz 6: Die Box bleibt."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist das Ergebnis der Übersichtsarbeit?",
+     "o": [
+      "Verbote verbessern die Noten stark.",
+      "Verbote wirken eher auf das Klima als auf die Noten.",
+      "Verbote haben überhaupt keine Wirkung."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Was kritisiert der Medienpädagoge?",
+     "o": [
+      "dass Schulen zu wenige Computer haben",
+      "dass ein Verbot sinnvolle Nutzung im Unterricht verhindert",
+      "dass Eltern zu streng sind"
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu welchem Absatz? Eine Überschrift bleibt übrig.",
+     "paras": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "heads": [
+      "Verbote in ganz Europa",
+      "Ein Kompromiss mit klaren Regeln",
+      "Die Forschung ist sich nicht einig",
+      "Schüler fordern mehr Handyzeit",
+      "Werkzeug statt Feind"
+     ],
+     "a": [
+      0,
+      2,
+      4,
+      1
+     ]
+    },
+    {
+     "t": "open",
+     "q": "Wie sieht der „Mittelweg“ vieler Schulen aus? Nennen Sie zwei Elemente.",
+     "a": "Handy in der Tasche, nur mit Erlaubnis im Unterricht; Workshops (Datenschutz, Fake News, Bildschirmzeit); Einbeziehung der Eltern"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 398,
+   "minutes": 16
+  },
+  {
+   "id": "burnout",
+   "level": "B2+",
+   "topic": "Gesundheit",
+   "kicker": "Gesundheit",
+   "title": "Erschöpft vor der ersten Prüfung: Psychische Belastung unter Studierenden steigt",
+   "lead": "Leistungsdruck, Geldsorgen und Zukunftsangst setzen jungen Menschen zu. Die Beratungsstellen der Hochschulen sind am Limit.",
+   "paras": [
+    "Wer bei der Psychologischen Studierendenberatung einen Termin möchte, braucht Geduld. Mehrere Wochen Wartezeit sind keine Seltenheit, berichten die Beratungsstellen in Wien, Graz und Innsbruck. Die Nachfrage ist in den letzten Jahren stark gestiegen. Häufigste Anliegen sind Prüfungsangst, depressive Verstimmungen, Schlafprobleme und das Gefühl, dem Studium nicht gewachsen zu sein.",
+    "Eine österreichweite Befragung bestätigt diesen Eindruck. Mehr als ein Drittel der Studierenden gab an, unter stressbedingten gesundheitlichen Beschwerden zu leiden. Besonders betroffen sind Studierende, die neben dem Studium mehr als zwanzig Stunden pro Woche arbeiten, sowie jene, die als Erste in ihrer Familie eine Hochschule besuchen. Sie können weniger auf finanzielle Unterstützung und auf Erfahrungen der Eltern zurückgreifen.",
+    "Fachleute sehen mehrere Ursachen. Das Studium sei verschulter geworden, mit dichten Stundenplänen und vielen Teilprüfungen, die kaum Zeit zum Durchatmen ließen. Hinzu kämen steigende Lebenshaltungskosten, die viele zum Jobben zwingen. „Die Studierenden von heute sind nicht weniger belastbar als frühere Generationen“, betont eine Psychologin. „Aber sie stehen unter einem Druck, der sich aus vielen Richtungen gleichzeitig aufbaut.“",
+    "Dazu kommt eine Belastung, die schwerer zu fassen ist: die Unsicherheit über die eigene Zukunft. Klimakrise, Kriege und ein sich rasant verändernder Arbeitsmarkt hinterlassen Spuren. Viele junge Menschen fragen sich, ob sich die Anstrengung überhaupt lohnt. Soziale Medien verstärken das Problem, weil dort scheinbar alle anderen erfolgreich, glücklich und perfekt organisiert sind.",
+    "Die Hochschulen reagieren mit unterschiedlichen Angeboten. Einige haben Online-Kurse zur Stressbewältigung eingeführt, andere bilden Studierende zu sogenannten Peer-Beraterinnen und -Beratern aus, die Kommilitonen niederschwellig unterstützen. Auch Achtsamkeitsräume und Sportangebote sollen helfen. Kritiker bemängeln jedoch, dass solche Maßnahmen nur Symptome bekämpften. Solange die Rahmenbedingungen gleich blieben, werde sich wenig ändern.",
+    "Die Hochschülerschaft fordert deshalb mehr Personal für die psychologische Beratung, flexiblere Prüfungstermine und eine Anhebung der Studienbeihilfe. Wichtig sei außerdem, offen über psychische Probleme zu sprechen. „Niemand sollte sich schämen, Hilfe zu suchen“, heißt es in einer Stellungnahme. Wer akut belastet ist, kann sich rund um die Uhr an Krisentelefone wenden – auch das sei vielen Studierenden nicht bekannt."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Bei der Studierendenberatung bekommt man meist sofort einen Termin.",
+     "a": "f",
+     "ex": "Absatz 1: mehrere Wochen Wartezeit."
+    },
+    {
+     "t": "tf",
+     "q": "Studierende, die viel arbeiten, sind stärker belastet.",
+     "a": "r",
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Die Psychologin hält heutige Studierende für weniger belastbar.",
+     "a": "f",
+     "ex": "Absatz 3: nicht weniger belastbar."
+    },
+    {
+     "t": "tf",
+     "q": "Männliche Studierende suchen seltener Hilfe als weibliche.",
+     "a": "n",
+     "ex": "Nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind Studierende aus Nicht-Akademikerfamilien besonders betroffen?",
+     "o": [
+      "Sie studieren schwierigere Fächer.",
+      "Sie haben weniger finanzielle Unterstützung und Erfahrung der Eltern.",
+      "Sie wohnen weiter von der Universität entfernt."
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Rolle spielen soziale Medien laut Text?",
+     "o": [
+      "Sie helfen, Kontakte zu knüpfen.",
+      "Sie verstärken den Druck durch scheinbar perfekte Vorbilder.",
+      "Sie informieren über Beratungsangebote."
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei strukturelle Ursachen für den Stress laut Fachleuten.",
+     "a": "verschultes Studium mit dichten Stundenplänen und vielen Teilprüfungen; steigende Lebenshaltungskosten / Jobben"
+    },
+    {
+     "t": "open",
+     "q": "Was kritisieren Kritiker an den Angeboten der Hochschulen?",
+     "a": "Sie bekämpfen nur Symptome, die Rahmenbedingungen bleiben gleich."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Forderungen der Hochschülerschaft.",
+     "a": "mehr Personal für Beratung, flexiblere Prüfungstermine, höhere Studienbeihilfe, offen über psychische Probleme sprechen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 339,
+   "minutes": 17
+  },
+  {
+   "id": "oeffis",
+   "level": "B2+",
+   "topic": "Umwelt und Verkehr",
+   "kicker": "Mobilität",
+   "title": "Billiger fahren, besser leben? Die Debatte um günstige Öffi-Tickets",
+   "lead": "Österreichweite Jahreskarten und billige Stadttickets sollen Menschen vom Auto in Bus und Bahn locken. Doch reicht ein niedriger Preis?",
+   "paras": [
+    "Wer in Wien lebt, kennt das Argument: Mit der Jahreskarte um einen Euro pro Tag ist der öffentliche Verkehr so günstig wie in kaum einer anderen Großstadt. Seit ihrer Einführung ist die Zahl der Jahreskartenbesitzer stark gestiegen, inzwischen gibt es in der Stadt mehr Jahreskarten als zugelassene Pkw. Verkehrsplanerinnen sehen darin einen Beweis, dass ein attraktiver Preis das Verhalten tatsächlich verändern kann.",
+    "Auch auf Bundesebene setzt man auf günstige Tickets. Mit einer österreichweiten Jahreskarte können Pendlerinnen und Pendler alle öffentlichen Verkehrsmittel des Landes nutzen. Für Menschen, die täglich weite Strecken zurücklegen, kann das eine Ersparnis von mehreren Tausend Euro im Jahr bedeuten. Die Nachfrage übertraf die Erwartungen deutlich.",
+    "Doch Fachleute warnen davor, nur auf den Preis zu schauen. „Ein billiges Ticket nützt wenig, wenn der Bus nur zweimal am Tag fährt“, sagt ein Mobilitätsforscher. Gerade im ländlichen Raum sei das Angebot oft so dünn, dass das Auto die einzige realistische Möglichkeit bleibe. Untersuchungen zeigen, dass für die Wahl des Verkehrsmittels vor allem die Fahrzeit, die Häufigkeit der Verbindungen und die Entfernung zur nächsten Haltestelle entscheidend sind.",
+    "Ein weiteres Problem: Ein Teil der neuen Fahrgäste stammt nicht vom Auto, sondern vom Fahrrad oder ist früher zu Fuß gegangen. Für die Klimabilanz bringt das wenig. Zudem stoßen Züge und U-Bahnen zu Stoßzeiten bereits an ihre Kapazitätsgrenzen. Wer mehr Menschen in die Öffis bringen will, muss also auch in zusätzliche Züge, dichtere Takte und neue Strecken investieren – und das kostet Milliarden.",
+    "Befürworter halten dagegen, dass sich diese Investitionen langfristig rechnen. Weniger Autoverkehr bedeute weniger Staus, weniger Lärm und eine bessere Luftqualität. Auch die Gesundheitskosten sänken, weil Menschen, die öffentlich unterwegs sind, im Alltag mehr zu Fuß gehen. Und schließlich seien günstige Tickets eine soziale Maßnahme: Gerade Haushalte mit geringem Einkommen profitierten davon.",
+    "Einig sind sich die meisten Expertinnen und Experten in einem Punkt: Der Preis allein wird die Verkehrswende nicht schaffen. Erforderlich sei ein Bündel aus besserem Angebot, fairen Preisen und Maßnahmen, die Autofahren in Städten weniger attraktiv machen – etwa Parkraumbewirtschaftung oder verkehrsberuhigte Zonen. „Zuckerbrot und Peitsche“, nennt das der Mobilitätsforscher. „Nur mit Zuckerbrot geht es nicht.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "In Wien gibt es mehr Jahreskarten als zugelassene Autos.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "tf",
+     "q": "Die österreichweite Jahreskarte wurde weniger nachgefragt als erwartet.",
+     "a": "f",
+     "ex": "Absatz 2: Nachfrage übertraf die Erwartungen."
+    },
+    {
+     "t": "tf",
+     "q": "Laut Untersuchungen ist der Preis der wichtigste Faktor bei der Wahl des Verkehrsmittels.",
+     "a": "f",
+     "ex": "Absatz 3: Fahrzeit, Häufigkeit, Entfernung zur Haltestelle."
+    },
+    {
+     "t": "tf",
+     "q": "Die Wiener U-Bahn soll bis 2030 vollautomatisch fahren.",
+     "a": "n",
+     "ex": "Nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Warum bringen manche neue Fahrgäste dem Klima wenig?",
+     "o": [
+      "Sie fahren nur am Wochenende.",
+      "Sie sind früher Rad gefahren oder zu Fuß gegangen.",
+      "Sie nutzen alte Dieselbusse."
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "mc",
+     "q": "Was meint der Forscher mit „Zuckerbrot und Peitsche“?",
+     "o": [
+      "Belohnung durch gute Öffis plus Einschränkungen für Autos",
+      "höhere Ticketpreise für alle",
+      "kostenlose Tickets für Kinder"
+     ],
+     "a": 0,
+     "ex": "Absatz 6."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Argumente der Befürworter für Investitionen in die Öffis.",
+     "a": "weniger Staus, weniger Lärm, bessere Luft, geringere Gesundheitskosten, soziale Maßnahme für Haushalte mit geringem Einkommen"
+    },
+    {
+     "t": "open",
+     "q": "Welches Problem gibt es im ländlichen Raum?",
+     "a": "Das Angebot ist zu dünn (wenige Verbindungen), das Auto bleibt die einzige realistische Möglichkeit."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 365,
+   "minutes": 15
+  },
+  {
+   "id": "ki_redaktion",
+   "level": "C1",
+   "topic": "Medien",
+   "kicker": "Etat",
+   "title": "Wenn die Maschine mitschreibt: Künstliche Intelligenz erobert die Redaktionen",
+   "lead": "Automatisch erstellte Spielberichte, Zusammenfassungen und Übersetzungen sind längst Alltag. Doch je größer die Rolle der KI wird, desto drängender stellt sich die Frage nach Vertrauen und Verantwortung.",
+   "paras": [
+    "Die Meldung über den Ausgang eines Regionalliga-Spiels steht wenige Sekunden nach dem Abpfiff online – verfasst hat sie kein Sportreporter, sondern ein Programm, das die Spieldaten in einen lesbaren Text verwandelt. Was vor einigen Jahren noch als Experiment galt, ist in vielen Medienhäusern zur Routine geworden. Wetterberichte, Börsenmeldungen und Wahlergebnisse auf Gemeindeebene werden zunehmend automatisiert, weil sie sich auf strukturierte Daten stützen und nach festen Mustern aufgebaut sind.",
+    "Mit dem Aufkommen generativer Sprachmodelle hat sich das Spektrum jedoch erheblich erweitert. Systeme, die auf Basis riesiger Textmengen trainiert wurden, können Interviews transkribieren, lange Dokumente zusammenfassen, Überschriften vorschlagen oder Artikel in andere Sprachen übertragen. Für Redaktionen, die seit Jahren unter Spardruck stehen, klingt das verlockend: Routinearbeiten ließen sich auslagern, die gewonnene Zeit könnte in aufwendige Recherchen fließen.",
+    "Gerade an diesem Versprechen entzündet sich allerdings die Kritik. Gewerkschaften befürchten, dass die eingesparte Zeit nicht dem Qualitätsjournalismus zugutekommt, sondern zum Abbau von Stellen genutzt wird. Zudem sind die Systeme fehleranfällig. Sprachmodelle formulieren auch dann flüssig und überzeugend, wenn die Fakten nicht stimmen – ein Phänomen, das in der Fachsprache als „Halluzinieren“ bezeichnet wird. Mehrere internationale Medien mussten bereits automatisch erstellte Beiträge zurückziehen, die gravierende Fehler enthielten.",
+    "Hinzu kommt die Frage der Transparenz. Umfragen zeigen, dass ein Großteil des Publikums wissen möchte, ob ein Text von einem Menschen oder einer Maschine stammt. Viele Redaktionen haben daher Richtlinien erarbeitet, die festlegen, wofür KI eingesetzt werden darf und wie dies zu kennzeichnen ist. Der Grundsatz lautet meist: Die Verantwortung für jeden veröffentlichten Inhalt trägt ein Mensch. Kein Text soll ohne redaktionelle Prüfung erscheinen.",
+    "Medienethikerinnen weisen darüber hinaus auf eine grundsätzlichere Gefahr hin. Wenn immer mehr Inhalte von Systemen erzeugt werden, die auf bestehenden Texten beruhen, droht eine Vereinheitlichung des Angebots. Originelle Perspektiven, unbequeme Fragen und der Blick auf das, was in den Daten gerade nicht vorkommt, seien Kernaufgaben des Journalismus, die sich nicht automatisieren ließen. „Eine Maschine kann zusammenfassen, was gesagt wurde. Sie kann aber nicht vor Ort sein und nachfragen, was verschwiegen wird“, formuliert es eine Wissenschaftlerin.",
+    "Ob KI den Journalismus schwächt oder stärkt, hängt letztlich davon ab, wie sie eingesetzt wird. Optimisten verweisen auf Rechercheprojekte, in denen Algorithmen geholfen haben, in Millionen von Dokumenten Hinweise auf Steuerhinterziehung oder Korruption zu finden – eine Arbeit, die Menschen allein kaum hätten bewältigen können. In solchen Fällen ist die Technik kein Ersatz für Journalistinnen und Journalisten, sondern ein Werkzeug, das ihre Arbeit erst ermöglicht."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Automatisch erstellte Spielberichte sind in vielen Redaktionen heute üblich.",
+     "a": "r",
+     "ex": "Absatz 1: zur Routine geworden."
+    },
+    {
+     "t": "tf",
+     "q": "Generative Sprachmodelle können nur Zahlen verarbeiten.",
+     "a": "f",
+     "ex": "Absatz 2: transkribieren, zusammenfassen, übersetzen …"
+    },
+    {
+     "t": "tf",
+     "q": "Gewerkschaften begrüßen den Einsatz von KI, weil er Stellen sichert.",
+     "a": "f",
+     "ex": "Absatz 3: Sie befürchten Stellenabbau."
+    },
+    {
+     "t": "tf",
+     "q": "Die meisten Leserinnen und Leser ist es egal, wer einen Text geschrieben hat.",
+     "a": "f",
+     "ex": "Absatz 4: Ein Großteil möchte es wissen."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich ist die Kennzeichnung von KI-Texten gesetzlich vorgeschrieben.",
+     "a": "n",
+     "ex": "Der Text spricht von Richtlinien der Redaktionen, nicht von Gesetzen."
+    },
+    {
+     "t": "mc",
+     "q": "Was versteht man unter „Halluzinieren“?",
+     "o": [
+      "Die KI verweigert die Antwort.",
+      "Die KI formuliert überzeugend, obwohl die Fakten falsch sind.",
+      "Die KI kopiert Texte anderer Medien."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Welche grundsätzliche Gefahr sehen Medienethikerinnen?",
+     "o": [
+      "eine Vereinheitlichung der Inhalte",
+      "steigende Kosten für Redaktionen",
+      "die Abschaffung gedruckter Zeitungen"
+     ],
+     "a": 0,
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu welchem Absatz? Eine Überschrift bleibt übrig.",
+     "paras": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "heads": [
+      "Neue Möglichkeiten, neue Versprechen",
+      "Fehler und Jobsorgen",
+      "Wer hat das geschrieben?",
+      "Was keine Maschine kann",
+      "Algorithmen gegen Korruption",
+      "Das Ende des Sportjournalismus"
+     ],
+     "a": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "open",
+     "q": "Welchen Grundsatz enthalten die Richtlinien vieler Redaktionen?",
+     "a": "Die Verantwortung trägt immer ein Mensch; kein Text erscheint ohne redaktionelle Prüfung."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 423,
+   "minutes": 17
+  },
+  {
+   "id": "viertage",
+   "level": "C1",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "kicker": "Karriere",
+   "title": "Vier Tage arbeiten, fünf Tage bezahlt? Das Experiment mit der kürzeren Woche",
+   "lead": "Pilotprojekte im In- und Ausland liefern erstaunlich positive Ergebnisse. Ökonomen mahnen dennoch zur Vorsicht – nicht jede Branche kann sich die Viertagewoche leisten.",
+   "paras": [
+    "Seit einem halben Jahr ist der Freitag in der kleinen Grazer Softwarefirma ein freier Tag. Gearbeitet wird von Montag bis Donnerstag, bei gleichem Gehalt. „Wir hatten Sorge, dass Projekte liegen bleiben“, sagt die Geschäftsführerin. Das Gegenteil sei eingetreten: Besprechungen wurden gestrafft, unnötige Abstimmungsrunden gestrichen, und die Zahl der Krankenstandstage ist deutlich gesunken. Zudem gehen bei Stellenausschreibungen inzwischen wesentlich mehr Bewerbungen ein.",
+    "Ähnliche Erfahrungen haben zahlreiche Unternehmen gemacht, die an groß angelegten Pilotversuchen in Großbritannien, Spanien oder Island teilgenommen haben. Die begleitenden Studien berichten von geringerer Erschöpfung, besserer Vereinbarkeit von Beruf und Familie und einer weitgehend stabilen Produktivität. Die überwiegende Mehrheit der beteiligten Betriebe hat das Modell nach Ende der Testphase beibehalten.",
+    "Ökonominnen und Ökonomen geben allerdings zu bedenken, dass die Ergebnisse nur begrenzt verallgemeinerbar seien. An den Versuchen nahmen überwiegend Firmen teil, die sich freiwillig gemeldet hatten – also vermutlich solche, die von vornherein gute Voraussetzungen mitbrachten. Zudem handelte es sich häufig um Bürotätigkeiten, bei denen sich Abläufe vergleichsweise leicht verdichten lassen. In der Pflege, im Handel oder in der Produktion sieht das anders aus: Eine Pflegekraft kann ihre Patientinnen nicht in vier statt fünf Tagen versorgen.",
+    "Hinzu kommt der Arbeitskräftemangel, der viele Branchen ohnehin vor Probleme stellt. Wird die Arbeitszeit ohne Lohnverlust verkürzt, müssten in personalintensiven Bereichen zusätzliche Kräfte eingestellt werden – die es vielerorts schlicht nicht gibt. Arbeitgebervertreter warnen daher vor einer gesetzlichen Verpflichtung und plädieren für betriebliche Lösungen. Gewerkschaften wiederum argumentieren, dass gerade kürzere Arbeitszeiten Berufe attraktiver machen und so dem Mangel entgegenwirken könnten.",
+    "Zwischen den Positionen haben sich in der Praxis verschiedene Varianten herausgebildet. Manche Unternehmen bieten eine Viertagewoche mit entsprechend längeren Arbeitstagen an, sodass die Wochenarbeitszeit gleich bleibt. Andere ermöglichen eine Reduktion auf 32 Stunden bei leicht verringertem Gehalt. Wieder andere setzen auf Flexibilität: Beschäftigte können selbst entscheiden, ob sie lieber vier längere oder fünf kürzere Tage arbeiten.",
+    "Fest steht, dass sich die Erwartungen an die Arbeit verändert haben. Insbesondere jüngere Beschäftigte legen größeren Wert auf Freizeit und Selbstbestimmung als frühere Generationen – ein Trend, den Unternehmen im Wettbewerb um Fachkräfte nicht ignorieren können. Ob die Viertagewoche zum neuen Standard wird oder ein Privileg einzelner Branchen bleibt, dürfte sich in den kommenden Jahren entscheiden."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "In der Grazer Firma verdienen die Beschäftigten seit der Umstellung weniger.",
+     "a": "f",
+     "ex": "Absatz 1: bei gleichem Gehalt."
+    },
+    {
+     "t": "tf",
+     "q": "Nach dem Ende der Pilotversuche kehrten die meisten Betriebe zur Fünftagewoche zurück.",
+     "a": "f",
+     "ex": "Absatz 2: Die Mehrheit hat das Modell beibehalten."
+    },
+    {
+     "t": "tf",
+     "q": "Laut Ökonomen sind die Ergebnisse der Studien nicht ohne Weiteres auf alle Branchen übertragbar.",
+     "a": "r",
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Die österreichische Regierung plant ein Gesetz zur Viertagewoche.",
+     "a": "n",
+     "ex": "Nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind die Versuchsergebnisse laut Ökonomen nur begrenzt aussagekräftig?",
+     "o": [
+      "Die Versuche dauerten nur wenige Wochen.",
+      "Es nahmen vor allem freiwillige Firmen mit Bürotätigkeiten teil.",
+      "Die Beschäftigten wurden nicht befragt."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Wie argumentieren Gewerkschaften im Hinblick auf den Arbeitskräftemangel?",
+     "o": [
+      "Kürzere Arbeitszeiten machen Berufe attraktiver.",
+      "Man sollte mehr Überstunden erlauben.",
+      "Der Mangel ist ein reines Bildungsproblem."
+     ],
+     "a": 0,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei positive Effekte, die in der Grazer Firma beobachtet wurden.",
+     "a": "gestraffte Besprechungen, weniger Krankenstandstage, mehr Bewerbungen"
+    },
+    {
+     "t": "open",
+     "q": "Beschreiben Sie zwei Varianten der Viertagewoche aus Absatz 5.",
+     "a": "längere Tage bei gleicher Wochenarbeitszeit; 32 Stunden bei leicht verringertem Gehalt; freie Wahl zwischen vier längeren oder fünf kürzeren Tagen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 382,
+   "minutes": 15
+  },
+  {
+   "id": "paygap",
+   "level": "C1",
+   "topic": "Beziehungen und Geschlechtergerechtigkeit",
+   "kicker": "Gleichstellung",
+   "title": "Equal Pay Day: Warum Frauen in Österreich noch immer weniger verdienen",
+   "lead": "Rechnerisch arbeiten Frauen einen Teil des Jahres unbezahlt. Die Ursachen der Einkommenslücke sind vielschichtig – und reichen bis in die Kinderbetreuung.",
+   "paras": [
+    "Jedes Jahr markiert der sogenannte Equal Pay Day jenen Tag, bis zu dem Frauen rechnerisch gratis arbeiten, weil ihre Durchschnittseinkommen unter jenen der Männer liegen. Österreich gehört dabei seit Jahren zu den Ländern mit einer der größten Einkommenslücken in der Europäischen Union. Zwar hat sich der Abstand in den vergangenen Jahrzehnten verringert, doch das Tempo ist so gering, dass Expertinnen von einer Angleichung erst in ferner Zukunft ausgehen.",
+    "Ein häufiges Missverständnis besteht darin, die Lücke ausschließlich mit direkter Diskriminierung zu erklären, also mit ungleicher Bezahlung für exakt dieselbe Tätigkeit. Diese gibt es zwar nach wie vor, sie macht aber nur einen Teil des Unterschieds aus. Ein erheblicher Anteil geht auf strukturelle Faktoren zurück: Frauen arbeiten überdurchschnittlich häufig in Branchen mit niedrigeren Löhnen, etwa im Handel, in der Pflege oder in der Kinderbetreuung, und sind in Führungspositionen nach wie vor unterrepräsentiert.",
+    "Der wohl wichtigste Faktor ist jedoch die Teilzeit. In Österreich arbeitet ungefähr jede zweite erwerbstätige Frau in Teilzeit, bei Männern ist es nur ein Bruchteil davon. Der Grund liegt häufig in der ungleichen Verteilung unbezahlter Arbeit: Kinderbetreuung, Haushalt und die Pflege von Angehörigen werden überwiegend von Frauen übernommen. Besonders deutlich zeigt sich das nach der Geburt eines Kindes. Während das Einkommen der Väter weitgehend stabil bleibt, bricht jenes der Mütter ein und erholt sich oft über Jahre nicht – Fachleute sprechen von der „Motherhood Penalty“.",
+    "Die Folgen reichen weit über das Erwerbsleben hinaus. Weil sich die Pension nach den eingezahlten Beiträgen richtet, setzt sich die Einkommenslücke im Alter fort und vergrößert sich sogar. Frauen erhalten im Schnitt deutlich niedrigere Pensionen als Männer und sind entsprechend häufiger von Altersarmut betroffen. Ein Pensionssplitting, bei dem Eltern ihre Pensionsansprüche während der Kindererziehung teilen, wird zwar angeboten, aber kaum genutzt.",
+    "Welche Maßnahmen wirksam wären, ist politisch umstritten. Gefordert werden unter anderem ein flächendeckender Ausbau ganztägiger Kinderbetreuung, insbesondere in ländlichen Regionen, Anreize für Väter, länger in Karenz zu gehen, sowie mehr Transparenz bei den Gehältern. Seit einigen Jahren müssen größere Unternehmen Einkommensberichte erstellen; Kritikerinnen bemängeln jedoch, dass diese wenig aussagekräftig seien und folgenlos blieben. Eine EU-Richtlinie zur Lohntransparenz soll hier künftig strengere Vorgaben machen.",
+    "Letztlich, so der Tenor vieler Fachleute, handle es sich nicht allein um eine Frage der Gerechtigkeit gegenüber Frauen, sondern auch um eine wirtschaftliche. Angesichts des Fachkräftemangels könne es sich kein Land leisten, das Potenzial gut ausgebildeter Frauen ungenutzt zu lassen. Solange unbezahlte Sorgearbeit als selbstverständliche Aufgabe von Frauen gelte, werde sich daran jedoch wenig ändern."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Österreich hat eine der kleinsten Einkommenslücken in der EU.",
+     "a": "f",
+     "ex": "Absatz 1: eine der größten."
+    },
+    {
+     "t": "tf",
+     "q": "Die Einkommenslücke lässt sich vollständig durch ungleiche Bezahlung für gleiche Arbeit erklären.",
+     "a": "f",
+     "ex": "Absatz 2: nur ein Teil."
+    },
+    {
+     "t": "tf",
+     "q": "Nach der Geburt eines Kindes sinkt vor allem das Einkommen der Mütter.",
+     "a": "r",
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Das Pensionssplitting wird von den meisten Eltern genutzt.",
+     "a": "f",
+     "ex": "Absatz 4: kaum genutzt."
+    },
+    {
+     "t": "tf",
+     "q": "In Skandinavien ist die Lücke halb so groß wie in Österreich.",
+     "a": "n",
+     "ex": "Nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Was gilt laut Text als wichtigster Faktor für die Lücke?",
+     "o": [
+      "die Teilzeitarbeit vieler Frauen",
+      "die Ausbildung",
+      "die Steuerpolitik"
+     ],
+     "a": 0,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Was kritisieren Kritikerinnen an den Einkommensberichten?",
+     "o": [
+      "Sie sind zu teuer.",
+      "Sie sind wenig aussagekräftig und folgenlos.",
+      "Sie verletzen den Datenschutz."
+     ],
+     "a": 1,
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "open",
+     "q": "Erklären Sie mit eigenen Worten den Begriff „Motherhood Penalty“.",
+     "a": "Das Einkommen von Müttern bricht nach der Geburt ein und erholt sich lange nicht, während das der Väter stabil bleibt."
+    },
+    {
+     "t": "open",
+     "q": "Warum ist die Einkommenslücke laut Fachleuten auch eine wirtschaftliche Frage?",
+     "a": "Wegen des Fachkräftemangels kann man das Potenzial gut ausgebildeter Frauen nicht ungenutzt lassen."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 425,
+   "minutes": 17
+  },
+  {
+   "id": "fastfashion",
+   "level": "C1+",
+   "topic": "Konsumgesellschaft",
+   "kicker": "Lifestyle",
+   "title": "Billig gekauft, teuer bezahlt: Die verborgene Rechnung der Fast Fashion",
+   "lead": "Nie war Kleidung so günstig, nie wurde so viel davon gekauft – und weggeworfen. Wer die eigentlichen Kosten trägt, bleibt meist unsichtbar.",
+   "paras": [
+    "Ein T-Shirt um vier Euro, eine Jeans um fünfzehn: Die Preise mancher Online-Händler wirken, als hätte Kleidung keinen Wert mehr. Tatsächlich hat sich die weltweit produzierte Menge an Textilien innerhalb weniger Jahrzehnte vervielfacht, während die durchschnittliche Tragedauer eines Kleidungsstücks deutlich gesunken ist. Manche Teile werden nur wenige Male getragen, bevor sie im Altkleidercontainer oder gleich im Restmüll landen. Ermöglicht wird dieses Modell durch extrem kurze Produktionszyklen: Neue Kollektionen erscheinen nicht mehr zweimal im Jahr, sondern im Wochentakt.",
+    "Die ökologischen Folgen sind gravierend. Die Textilindustrie zählt zu den ressourcenintensivsten Branchen überhaupt. Für den Anbau von Baumwolle werden enorme Mengen an Wasser und Pestiziden eingesetzt, beim Färben gelangen Chemikalien in Flüsse, und synthetische Fasern wie Polyester setzen beim Waschen Mikroplastik frei, das in Kläranlagen kaum zurückgehalten werden kann. Hinzu kommen die Emissionen langer Transportwege und eines Online-Handels, bei dem ein beträchtlicher Teil der Bestellungen retourniert wird.",
+    "Mindestens ebenso schwer wiegen die sozialen Kosten. Ein Großteil der Kleidung wird in Ländern produziert, in denen Löhne kaum zum Leben reichen und Arbeitsschutz nur auf dem Papier existiert. Der Einsturz einer Textilfabrik in Bangladesch, bei dem über tausend Menschen ums Leben kamen, hat der Weltöffentlichkeit vor Augen geführt, unter welchen Bedingungen billige Mode entsteht. Seither haben viele Konzerne Selbstverpflichtungen unterzeichnet – deren Einhaltung allerdings schwer überprüfbar ist.",
+    "Bemerkenswert ist, dass das Bewusstsein für diese Probleme in Umfragen hoch ist, sich im Kaufverhalten aber nur begrenzt niederschlägt. Psychologinnen erklären diese Kluft zwischen Einstellung und Handeln unter anderem mit der Logik sozialer Medien: Wer regelmäßig Outfits präsentiert, steht unter dem Druck, ständig Neues zu zeigen. Influencerinnen und Influencer präsentieren in sogenannten Hauls ganze Einkaufstaschen voller Billigware, und Algorithmen sorgen dafür, dass passende Angebote stets nur einen Klick entfernt sind.",
+    "Gegenbewegungen gewinnen dennoch an Boden. Secondhand-Plattformen und Kleidertauschpartys erfreuen sich vor allem unter jungen Menschen wachsender Beliebtheit, Reparaturcafés und Änderungsschneidereien erleben eine kleine Renaissance. Auch die Politik reagiert: Auf europäischer Ebene wird über eine erweiterte Herstellerverantwortung diskutiert, die Produzenten verpflichten würde, sich an den Kosten für Sammlung und Recycling zu beteiligen. In einzelnen Ländern ist bereits verboten, unverkaufte Ware einfach zu vernichten.",
+    "Ob solche Maßnahmen ausreichen, um ein Geschäftsmodell zu verändern, das auf Masse und Geschwindigkeit beruht, bleibt fraglich. Fachleute betonen, dass nachhaltiger Konsum weniger mit dem Kauf vermeintlich grüner Produkte zu tun habe als mit einer schlichten Frage: Brauche ich das wirklich? Das nachhaltigste Kleidungsstück, so ein oft zitierter Satz, sei jenes, das bereits im eigenen Kleiderschrank hängt."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Kleidungsstücke werden heute im Durchschnitt länger getragen als früher.",
+     "a": "f",
+     "ex": "Absatz 1: Die Tragedauer ist gesunken."
+    },
+    {
+     "t": "tf",
+     "q": "Mikroplastik aus Kleidung wird in Kläranlagen fast vollständig herausgefiltert.",
+     "a": "f",
+     "ex": "Absatz 2: kaum zurückgehalten."
+    },
+    {
+     "t": "tf",
+     "q": "Die Selbstverpflichtungen der Konzerne lassen sich leicht kontrollieren.",
+     "a": "f",
+     "ex": "Absatz 3: schwer überprüfbar."
+    },
+    {
+     "t": "tf",
+     "q": "Viele Menschen kennen die Probleme, kaufen aber trotzdem billige Mode.",
+     "a": "r",
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich ist die Vernichtung unverkaufter Ware bereits verboten.",
+     "a": "n",
+     "ex": "Der Text nennt nur „einzelne Länder“, nicht Österreich."
+    },
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu welchem Absatz? Eine Überschrift bleibt übrig.",
+     "paras": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "heads": [
+      "Ein Preis, den die Umwelt zahlt",
+      "Arbeiten unter Lebensgefahr",
+      "Wissen ohne Wirkung",
+      "Neue Wege: tauschen, reparieren, regulieren",
+      "Teure Marken sind auch nicht besser"
+     ],
+     "a": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wie erklären Psychologinnen die Kluft zwischen Einstellung und Verhalten?",
+     "o": [
+      "mit fehlender Information über die Produktion",
+      "mit dem Druck und den Mechanismen sozialer Medien",
+      "mit den hohen Preisen nachhaltiger Mode"
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "open",
+     "q": "Was würde eine „erweiterte Herstellerverantwortung“ bedeuten?",
+     "a": "Produzenten müssten sich an den Kosten für Sammlung und Recycling beteiligen."
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Fachleuten der Kern nachhaltigen Konsums?",
+     "a": "weniger kaufen / sich fragen, ob man etwas wirklich braucht – nicht grüne Produkte kaufen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 423,
+   "minutes": 17
+  },
+  {
+   "id": "ehrenamt",
+   "level": "C1+",
+   "topic": "Gesellschaft und soziales Engagement",
+   "kicker": "Inland",
+   "title": "Ohne Freiwillige steht vieles still: Das Ehrenamt im Wandel",
+   "lead": "Feuerwehr, Rettung, Sportverein, Lernhilfe: Fast die Hälfte der Bevölkerung engagiert sich unentgeltlich. Doch die Art, wie Menschen helfen wollen, verändert sich grundlegend.",
+   "paras": [
+    "Wenn in einer niederösterreichischen Gemeinde nachts die Sirene heult, rücken binnen Minuten Menschen aus, die tagsüber als Tischler, Lehrerin oder Bankangestellter arbeiten. Österreichs Feuerwehrwesen beruht fast vollständig auf Freiwilligen, ebenso große Teile des Rettungsdienstes und des Katastrophenschutzes. Rechnet man den Wert dieser unbezahlten Arbeit hoch, ergeben sich Milliardenbeträge – Leistungen, die der Staat ohne das Engagement seiner Bürgerinnen und Bürger kaum finanzieren könnte.",
+    "Insgesamt zeigt sich das freiwillige Engagement in Österreich auf den ersten Blick bemerkenswert stabil. Erhebungen zufolge ist knapp die Hälfte der Bevölkerung ab fünfzehn Jahren in irgendeiner Form ehrenamtlich tätig, sei es in Vereinen und Organisationen oder informell in der Nachbarschaftshilfe. Hinter diesen Zahlen verbirgt sich allerdings ein tiefgreifender Wandel, der vielen traditionellen Organisationen zu schaffen macht.",
+    "Das klassische Ehrenamt – eine langfristige Bindung an einen Verein, oft über Jahrzehnte, verbunden mit Funktionen wie Kassier oder Obfrau – verliert an Attraktivität. Vor allem jüngere Menschen bevorzugen zeitlich begrenzte, projektbezogene Formen des Engagements, die sich mit Ausbildung, Beruf und Familie vereinbaren lassen. Sie wollen sich einbringen, wenn es ihre Lebensumstände erlauben, ohne sich auf Jahre festzulegen. Soziologinnen sprechen in diesem Zusammenhang vom Übergang vom „alten“ zum „neuen“ Ehrenamt.",
+    "Wie groß die Bereitschaft zu spontaner Hilfe ist, hat sich in Krisen wiederholt gezeigt. Als vor einigen Jahren zehntausende Geflüchtete über die Grenze kamen, organisierten sich binnen Stunden Hilfsnetzwerke über soziale Medien, die Verpflegung, Kleidung und Übersetzungen bereitstellten. Ähnliches war während der Pandemie zu beobachten, als Freiwillige für ältere Nachbarinnen und Nachbarn einkauften. Diese Form des Engagements ist flexibel und schnell, bleibt aber häufig nur von kurzer Dauer.",
+    "Für Vereine, die auf verlässliche Strukturen angewiesen sind, wirft das Probleme auf. Ein Fußballklub braucht jede Woche Trainerinnen und Trainer, eine Feuerwehr muss rund um die Uhr einsatzbereit sein. Zugleich steigen die Anforderungen: Ausbildungen werden umfangreicher, Dokumentationspflichten und Haftungsfragen schrecken potenzielle Funktionärinnen und Funktionäre ab. Viele Organisationen klagen über Nachwuchssorgen, vor allem in ländlichen Regionen, wo junge Menschen zum Studium oder zur Arbeit in die Städte abwandern.",
+    "Erfolgreiche Organisationen haben begonnen, sich auf die veränderten Bedürfnisse einzustellen. Sie bieten Einsätze an, die sich auch kurzfristig übernehmen lassen, teilen große Aufgaben auf mehrere Schultern auf und bescheinigen erworbene Kompetenzen, die sich im Lebenslauf sehen lassen können. Auch die Politik ist gefordert: Diskutiert werden etwa eine bessere arbeitsrechtliche Absicherung von Einsatzkräften, Versicherungsschutz für Freiwillige und Anerkennung in Form von Bildungsangeboten. Denn eines ist unbestritten: Eine Gesellschaft, in der niemand mehr unentgeltlich Verantwortung übernimmt, wäre ärmer – und zwar nicht nur in finanzieller Hinsicht."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Die österreichischen Feuerwehren bestehen überwiegend aus Berufskräften.",
+     "a": "f",
+     "ex": "Absatz 1: fast vollständig Freiwillige."
+    },
+    {
+     "t": "tf",
+     "q": "Etwa die Hälfte der Bevölkerung ab 15 engagiert sich freiwillig.",
+     "a": "r",
+     "ex": "Absatz 2: knapp die Hälfte."
+    },
+    {
+     "t": "tf",
+     "q": "Junge Menschen sind weniger hilfsbereit als frühere Generationen.",
+     "a": "f",
+     "ex": "Absatz 3: Sie bevorzugen andere Formen, nicht weniger Engagement."
+    },
+    {
+     "t": "tf",
+     "q": "Die Zahl der Freiwilligen bei der Rettung ist in Wien gestiegen.",
+     "a": "n",
+     "ex": "Nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Was kennzeichnet das „neue“ Ehrenamt?",
+     "o": [
+      "lebenslange Mitgliedschaft in einem Verein",
+      "zeitlich begrenzte, projektbezogene Einsätze",
+      "Bezahlung nach Stunden"
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist laut Absatz 4 ein Nachteil spontaner Hilfsnetzwerke?",
+     "o": [
+      "Sie sind schlecht organisiert.",
+      "Sie sind oft nur von kurzer Dauer.",
+      "Sie arbeiten nur online."
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Gründe, warum Vereine Nachwuchssorgen haben.",
+     "a": "umfangreichere Ausbildungen, Dokumentationspflichten, Haftungsfragen, Abwanderung junger Menschen in die Städte"
+    },
+    {
+     "t": "open",
+     "q": "Wie reagieren erfolgreiche Organisationen auf den Wandel? Nennen Sie zwei Beispiele.",
+     "a": "kurzfristig übernehmbare Einsätze, Aufgaben auf mehrere Schultern verteilen, Bescheinigung erworbener Kompetenzen"
+    },
+    {
+     "t": "open",
+     "q": "Wie ist der letzte Satz des Textes gemeint?",
+     "a": "Ehrenamt hat nicht nur finanziellen, sondern auch sozialen/menschlichen Wert für die Gesellschaft (Zusammenhalt)."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 431,
+   "minutes": 17
+  },
+  {
+   "id": "alt_p1",
+   "level": "B2",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "kicker": "Bildung",
+   "title": "Die Digitalisierung der Hochschullehre",
+   "lead": "",
+   "paras": [
+    "Noch vor wenigen Jahren bestand ein typischer Studientag aus Vorlesungen im überfüllten Hörsaal, Seminaren in kleinen Räumen und langen Stunden in der Bibliothek. Heute sieht der Alltag vieler Studierender anders aus. Vorlesungen werden aufgezeichnet und auf Lernplattformen zur Verfügung gestellt, Hausarbeiten werden online eingereicht, und selbst mündliche Prüfungen finden teilweise per Videokonferenz statt. Die Digitalisierung hat die Hochschullehre grundlegend verändert.",
+    "Befürworter dieser Entwicklung verweisen vor allem auf die gewonnene Flexibilität. Studierende, die neben dem Studium arbeiten oder Kinder betreuen, können Lehrveranstaltungen dann ansehen, wenn es ihnen zeitlich passt. Wer den Stoff beim ersten Mal nicht verstanden hat, kann die Aufzeichnung anhalten und schwierige Stellen wiederholen. Auch für Studierende mit Behinderungen bieten digitale Formate häufig Vorteile, etwa durch Untertitel oder eine vergrößerte Darstellung.",
+    "Darüber hinaus eröffnet die Digitalisierung neue didaktische Möglichkeiten. Beim sogenannten „Inverted Classroom“ eignen sich die Studierenden die Grundlagen zu Hause mithilfe von Videos an; die gemeinsame Zeit in der Präsenzveranstaltung wird dann für Diskussionen, Übungen und Fragen genutzt. Erste Studien deuten darauf hin, dass Studierende auf diese Weise den Lernstoff nachhaltiger im Gedächtnis behalten.",
+    "Kritiker geben jedoch zu bedenken, dass sich nicht alle Inhalte digital vermitteln lassen. Gerade in Fächern wie Medizin, Chemie oder den Ingenieurwissenschaften sei praktische Arbeit im Labor unverzichtbar. Zudem fehle beim reinen Online-Studium der persönliche Austausch mit Kommilitonen und Dozenten. Umfragen zeigen, dass sich viele Erstsemester, die ihr Studium ausschließlich online begonnen haben, isoliert fühlten und Schwierigkeiten hatten, Kontakte zu knüpfen.",
+    "Ein weiteres Problem ist die ungleiche technische Ausstattung. Nicht alle Studierenden verfügen über einen leistungsfähigen Rechner oder einen stabilen Internetzugang. Hochschulen stehen daher vor der Aufgabe, Geräte zu verleihen und Arbeitsplätze auf dem Campus bereitzustellen. Hinzu kommen Fragen des Datenschutzes, denn Lernplattformen speichern große Mengen personenbezogener Daten.",
+    "Die meisten Experten sind sich inzwischen einig, dass die Zukunft weder im reinen Präsenz- noch im reinen Online-Studium liegt. Vielmehr setzt sich ein sogenanntes „Blended Learning“ durch, das die Vorteile beider Formen verbindet. Entscheidend ist dabei, dass digitale Angebote nicht als Sparmaßnahme missverstanden werden: Gute Online-Lehre erfordert Zeit, Personal und eine didaktische Weiterbildung der Lehrenden. Wird diese Investition gescheut, droht die Qualität der Lehre zu sinken."
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Nennen Sie drei Beispiele dafür, wie sich der Studienalltag verändert hat (Absatz 1).",
+     "a": "Vorlesungen werden aufgezeichnet / auf Lernplattformen gestellt; Hausarbeiten online eingereicht; Prüfungen per Videokonferenz"
+    },
+    {
+     "t": "open",
+     "q": "Welche Gruppen profitieren laut Absatz 2 besonders von der Flexibilität?",
+     "a": "Studierende, die arbeiten oder Kinder betreuen; Studierende mit Behinderungen"
+    },
+    {
+     "t": "open",
+     "q": "Erklären Sie mit eigenen Worten das Prinzip des „Inverted Classroom“.",
+     "a": "Grundlagen lernt man vorher zu Hause mit Videos; die Präsenzzeit dient Diskussion, Übungen und Fragen"
+    },
+    {
+     "t": "tf",
+     "q": "Laut Text lassen sich alle Studieninhalte gleich gut digital vermitteln.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Welches Problem hatten viele Erstsemester im reinen Online-Studium?",
+     "o": [
+      "Sie konnten keine Prüfungen ablegen.",
+      "Sie fühlten sich isoliert und fanden schwer Kontakte.",
+      "Sie hatten zu viele Präsenzveranstaltungen."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche zwei weiteren Probleme nennt Absatz 5?",
+     "a": "ungleiche technische Ausstattung (Rechner, Internet); Datenschutz"
+    },
+    {
+     "t": "tf",
+     "q": "Die Experten empfehlen, in Zukunft vollständig auf Präsenzlehre zu verzichten.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Unter welcher Bedingung sinkt laut Autor die Qualität der Lehre?",
+     "a": "wenn nicht in Zeit, Personal und Weiterbildung der Lehrenden investiert wird / wenn digitale Lehre als Sparmaßnahme verstanden wird"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 350,
+   "minutes": 15
+  },
+  {
+   "id": "alt_p2",
+   "level": "B2+",
+   "topic": "Umwelt und Verkehr",
+   "kicker": "Wirtschaft",
+   "title": "Die Energiewende – Erfolg mit Hindernissen",
+   "lead": "",
+   "paras": [
+    "Als die Bundesregierung im Jahr 2011 beschloss, bis 2022 aus der Atomenergie auszusteigen, war das Echo im Ausland gespalten. Während Umweltverbände den Schritt als mutig lobten, hielten viele Ökonomen ihn für riskant. Deutschland, so ihre Befürchtung, werde sich damit von Energieimporten abhängig machen und die Strompreise in die Höhe treiben. Mehr als ein Jahrzehnt später lässt sich eine differenzierte Bilanz ziehen.",
+    "Unbestritten ist, dass der Anteil erneuerbarer Energien am Stromverbrauch stark gestiegen ist. Lag er im Jahr 2000 noch bei rund sechs Prozent, so stammt heute mehr als die Hälfte des Stroms aus Wind, Sonne, Biomasse und Wasserkraft. An windreichen Tagen decken die Windkraftanlagen im Norden zeitweise den gesamten Bedarf des Landes. Diese Entwicklung hat zudem zahlreiche Arbeitsplätze geschaffen, vor allem in ländlichen Regionen.",
+    "Doch die Energiewende stößt an Grenzen. Das größte Problem ist die sogenannte Dunkelflaute: Wenn im Winter weder die Sonne scheint noch der Wind weht, müssen Kohle- und Gaskraftwerke einspringen. Große Speicher, die überschüssigen Strom aufnehmen und bei Bedarf wieder abgeben könnten, existieren bisher nur in geringem Umfang. Ein zweites Problem ist der Transport: Der Windstrom wird überwiegend im Norden erzeugt, während die großen Industriebetriebe im Süden angesiedelt sind. Die dafür notwendigen Stromleitungen sind jedoch noch längst nicht fertiggestellt, weil Anwohner gegen den Bau klagen und die Genehmigungsverfahren Jahre dauern.",
+    "Hinzu kommt die Frage der Kosten. Die Förderung der erneuerbaren Energien wurde lange über eine Umlage auf den Strompreis finanziert, die private Haushalte stärker belastete als energieintensive Unternehmen. Kritiker bemängeln, dass Menschen mit geringem Einkommen dadurch überproportional zur Kasse gebeten wurden. Inzwischen wird die Förderung aus dem Staatshaushalt bezahlt, was die Stromrechnung entlastet, die Staatsfinanzen aber belastet.",
+    "Bemerkenswert ist schließlich, dass der Strom nur einen Teil des Energieverbrauchs ausmacht. Im Verkehr und bei der Heizung von Gebäuden dominieren nach wie vor fossile Brennstoffe. Soll die Klimaneutralität bis 2045 erreicht werden, müssen Millionen Öl- und Gasheizungen ersetzt und der Verkehr weitgehend elektrifiziert werden. Die eigentliche Herausforderung der Energiewende, so resümieren Fachleute, liege daher noch vor uns."
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Welche Befürchtung äußerten Ökonomen 2011?",
+     "a": "Abhängigkeit von Energieimporten und steigende Strompreise"
+    },
+    {
+     "t": "open",
+     "q": "Wie hat sich der Anteil erneuerbarer Energien am Strom entwickelt?",
+     "a": "von ca. 6 % (2000) auf über die Hälfte heute"
+    },
+    {
+     "t": "tf",
+     "q": "Die Energiewende hat vor allem in Großstädten neue Arbeitsplätze geschaffen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist eine „Dunkelflaute“, und welche Folge hat sie?",
+     "a": "Zeit ohne Sonne und Wind (im Winter); dann müssen Kohle- und Gaskraftwerke einspringen"
+    },
+    {
+     "t": "open",
+     "q": "Warum ist der Stromtransport ein Problem? Nennen Sie zwei Gründe.",
+     "a": "Windstrom im Norden, Industrie im Süden; Leitungen nicht fertig, weil Anwohner klagen und Genehmigungen lange dauern"
+    },
+    {
+     "t": "mc",
+     "q": "Wen belastete die frühere Umlage laut Kritikern besonders?",
+     "o": [
+      "energieintensive Unternehmen",
+      "Menschen mit geringem Einkommen",
+      "die Windkraftbetreiber"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Heute wird die Förderung der erneuerbaren Energien aus dem Staatshaushalt bezahlt.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Warum liegt die „eigentliche Herausforderung“ laut Fachleuten noch vor uns?",
+     "a": "Verkehr und Heizung nutzen noch fossile Brennstoffe; Heizungen müssen ersetzt und Verkehr elektrifiziert werden"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 328,
+   "minutes": 15
+  },
+  {
+   "id": "alt_p3",
+   "level": "C1",
+   "topic": "Medien",
+   "kicker": "Gesundheit",
+   "title": "Einsam unter vielen – soziale Medien und psychische Gesundheit",
+   "lead": "",
+   "paras": [
+    "Nie zuvor waren Menschen so gut miteinander vernetzt wie heute. Über soziale Netzwerke können wir in Sekunden mit Freunden auf anderen Kontinenten kommunizieren, Fotos teilen und an Diskussionen teilnehmen. Und doch berichten Psychologen von einer paradoxen Entwicklung: Gerade unter jungen Erwachsenen, die besonders viel Zeit online verbringen, nimmt das Gefühl der Einsamkeit zu.",
+    "Wie lässt sich dieser Widerspruch erklären? Ein Ansatz betrifft die Qualität der Kontakte. Zwar hat ein durchschnittlicher Nutzer mehrere hundert „Freunde“ oder „Follower“, doch die meisten dieser Beziehungen sind oberflächlich. Ein Like ersetzt kein Gespräch, in dem man sich verstanden fühlt. Wer seine Zeit vorwiegend mit solchen flüchtigen Kontakten verbringt, vernachlässigt unter Umständen die wenigen engen Beziehungen, die für das psychische Wohlbefinden entscheidend sind.",
+    "Ein zweiter Erklärungsansatz ist der soziale Vergleich. In sozialen Netzwerken präsentieren Menschen in der Regel nur die schönsten Seiten ihres Lebens: den Urlaub am Strand, die bestandene Prüfung, das perfekte Abendessen. Wer diese Bilder ständig betrachtet, gewinnt leicht den Eindruck, das eigene Leben sei langweilig und misslungen. Besonders Jugendliche, deren Selbstbild sich noch in der Entwicklung befindet, reagieren empfindlich auf solche Vergleiche. Eine Untersuchung unter 14- bis 17-Jährigen ergab, dass Mädchen, die täglich mehr als drei Stunden in sozialen Netzwerken verbringen, doppelt so häufig über depressive Symptome klagen wie Gleichaltrige mit geringerer Nutzung.",
+    "Allerdings warnen Forscher vor vorschnellen Schlüssen. Aus den vorliegenden Daten geht nicht eindeutig hervor, ob die intensive Nutzung die Ursache der psychischen Probleme ist oder ob umgekehrt Menschen, die sich ohnehin einsam fühlen, mehr Zeit online verbringen. Zudem können soziale Medien durchaus positive Wirkungen haben: Menschen mit seltenen Krankheiten finden in Internetforen Gleichgesinnte, und für Jugendliche aus Minderheiten kann eine Online-Gemeinschaft eine wichtige Stütze sein.",
+    "Entscheidend scheint daher weniger die Dauer als die Art der Nutzung zu sein. Wer aktiv kommuniziert, kommentiert und sich mit anderen austauscht, profitiert eher als jemand, der passiv durch fremde Profile scrollt. Experten empfehlen deshalb, bewusst mit Medien umzugehen: Benachrichtigungen auszuschalten, feste bildschirmfreie Zeiten einzuplanen und Online-Kontakte regelmäßig durch persönliche Treffen zu ergänzen. Schulen sollten Medienkompetenz nicht nur technisch, sondern auch im Hinblick auf das seelische Wohlbefinden vermitteln."
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Worin besteht die „paradoxe Entwicklung“ (Absatz 1)?",
+     "a": "Menschen sind so vernetzt wie nie, aber besonders junge Erwachsene, die viel online sind, fühlen sich zunehmend einsam"
+    },
+    {
+     "t": "open",
+     "q": "Warum können viele Online-Kontakte laut Absatz 2 einsam machen?",
+     "a": "sie sind oberflächlich; man vernachlässigt die engen Beziehungen, die für das Wohlbefinden wichtig sind"
+    },
+    {
+     "t": "open",
+     "q": "Erklären Sie den Mechanismus des „sozialen Vergleichs“.",
+     "a": "Menschen zeigen online nur die schönsten Seiten; Betrachter halten das eigene Leben für langweilig / misslungen"
+    },
+    {
+     "t": "mc",
+     "q": "Was ergab die Untersuchung unter 14- bis 17-Jährigen?",
+     "o": [
+      "Jungen leiden häufiger an Depressionen als Mädchen.",
+      "Mädchen mit über drei Stunden Nutzung täglich klagen doppelt so oft über depressive Symptome.",
+      "Soziale Netzwerke haben keinen Einfluss auf Jugendliche."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Forschung hat eindeutig bewiesen, dass soziale Medien Depressionen verursachen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei positive Wirkungen sozialer Medien aus dem Text.",
+     "a": "Menschen mit seltenen Krankheiten finden Gleichgesinnte; Online-Gemeinschaft als Stütze für Jugendliche aus Minderheiten"
+    },
+    {
+     "t": "open",
+     "q": "Welche Art der Nutzung ist laut Text günstiger?",
+     "a": "aktive Kommunikation und Austausch statt passives Scrollen"
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie drei Empfehlungen der Experten.",
+     "a": "Benachrichtigungen ausschalten; bildschirmfreie Zeiten; Online-Kontakte durch persönliche Treffen ergänzen; Medienkompetenz in Schulen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 343,
+   "minutes": 15
+  }
+ ]
+}

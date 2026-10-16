@@ -40,7 +40,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("UNISICHER_DB") or os.path.join(ROOT, "db", "unisicher.db")
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("PORT", 8765))
 SESSION_DAYS = 30
-MAX_BODY = 5 * 1024 * 1024
+MAX_BODY = 12 * 1024 * 1024  # запись голоса для Sprechen приходит в base64
 PBKDF2_ITER = 310_000
 EMAIL_RE = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,190}\.[^@\s]{2,}$")
 CODE_ABC = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
@@ -69,6 +69,8 @@ def ensure_owner(c):
     for e in owner_emails():
         if c.execute("UPDATE users SET role='owner' WHERE lower(email)=?", (e,)).rowcount:
             return
+    # личная версия: если почта владельца не задана или не совпала — владелец тот, кто зарегистрировался первым
+    c.execute("UPDATE users SET role='owner' WHERE id=(SELECT MIN(id) FROM users)")
 
 
 def deepl_key():
@@ -203,7 +205,9 @@ SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
 # Адреса, по которым открывается сама страница (лендинг и правовые страницы)
 # Адреса страниц → какие блоки <!--B:имя-->…<!--/B:имя--> из index.html в них остаются и язык страницы.
 # Так у лендинга, английской версии и гида по EPD свой <head> (title, description, canonical) и свой текст.
-PAGES = {"/": ("ru", "ru"), "/terms": ("ru", "ru"), "/privacy": ("ru", "ru"), "/en": ("en", "en"), "/epd": ("epd", "ru")}
+# Личная версия: лендинга, английской версии, правовых страниц и гида больше нет. Wörter живёт по адресу /woerter.
+PAGES = {"/woerter": ("ru", "ru")}
+OLD_PAGES = ("/en", "/epd", "/terms", "/privacy", "/start", "/admin")  # старые адреса ведут на стартовый экран
 BLOCK_RE = re.compile(r"<!--B:(\w+)-->(.*?)<!--/B:\1-->", re.S)
 # Подтверждение прав на сайт в поисковиках: GOOGLE_SITE_VERIFICATION=…, YANDEX_VERIFICATION=…, BING_VERIFICATION=…
 VERIFY = [("google-site-verification", "GOOGLE_SITE_VERIFICATION"), ("yandex-verification", "YANDEX_VERIFICATION"), ("msvalidate.01", "BING_VERIFICATION")]
@@ -219,6 +223,11 @@ schreiben = None
 if os.path.isfile(os.path.join(SCHREIBEN_DIR, "schreiben_api.py")):
     sys.path.insert(0, SCHREIBEN_DIR)
     import schreiben_api as schreiben  # noqa: E402
+# Стартовый экран (вход + выбор языка) и немецкая платформа: Grammatik, Lesen, Hören, Sprechen, «Свободный немецкий», план
+START_FILE = os.path.join(ROOT, "start.html")
+DE_FILE = os.path.join(ROOT, "de.html")
+sys.path.insert(0, ROOT)
+import lernen_api as lernen  # noqa: E402
 YEAR = 365 * 86400
 STATIC_FILES = {
     "/robots.txt": "text/plain; charset=utf-8",
@@ -278,7 +287,7 @@ def static_asset(key, site):
         fresh = key == "/assets/book.%s.js" % pg["hash"]
         return pg["book"], "text/javascript; charset=utf-8", ("public, max-age=%d, immutable" % YEAR) if fresh else "no-cache"
     if key == "/robots.txt":
-        body = "User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: %s/sitemap.xml\n" % site
+        body = "User-agent: *\nDisallow: /\n"  # личный сайт: поисковикам здесь делать нечего
         return body.encode(), STATIC_FILES[key], "public, max-age=86400"
     if key == "/sitemap.xml":
         day = time.strftime("%Y-%m-%d", time.gmtime(pg["mt"]))
@@ -293,8 +302,8 @@ def static_asset(key, site):
         return body.encode(), STATIC_FILES[key], "public, max-age=86400"
     if key == "/manifest.webmanifest":
         body = json.dumps({
-            "name": "EPDeutsch Wörter: подготовка к EPD", "short_name": "EPDeutsch",
-            "description": "Немецкие слова для Ergänzungsprüfung Deutsch: карточки, тесты и умные повторения.",
+            "name": "Deutsch lernen", "short_name": "Deutsch",
+            "description": "Личная платформа: подготовка к EPD и свободный немецкий.",
             "lang": "ru", "start_url": "/", "scope": "/", "display": "standalone",
             "background_color": "#F6F7FB", "theme_color": "#7E6FB8",
             "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
@@ -530,6 +539,7 @@ def init_db():
         c.execute("DELETE FROM ai_cache WHERE ts<?", (int(time.time()) - 30 * 86400,))
         if schreiben:
             schreiben.init(c)
+        lernen.init(c)
 
 
 # ---------- аналитика для админки ----------
@@ -954,7 +964,7 @@ def translate(text, sl, tl):
 # Ключ Claude: db/anthropic.key или ANTHROPIC_API_KEY. Без ключа — тестовый режим: проверяет только LanguageTool.
 AI_KEY_FILE = os.path.join(ROOT, "db", "anthropic.key")
 AI_MODEL = "claude-haiku-4-5"
-AI_PRICE = {"claude-haiku-4-5": (1, 5), "claude-sonnet-5-5": (2, 10)}  # $ за 1 млн токенов: вход, выход
+AI_PRICE = {"claude-haiku-4-5": (1, 5), "claude-haiku-5-5": (0.1, 0.5), "claude-sonnet-5-5": (2, 10), "claude-opus-5-5": (4, 20)}  # $ за 1 млн токенов: вход, выход
 LT_URL = os.environ.get("LANGUAGETOOL_URL", "https://api.languagetool.org/v2/check")
 # Предохранитель: лимиты с запасом ×3 к обычной учёбе. Срабатывание пишется в журнал как «подозрительная активность».
 AI_USER_DAY = 450      # запросов к ИИ в день на аккаунт
@@ -1027,17 +1037,21 @@ def languagetool(text):
     return out
 
 
-def claude(system, content, schema, max_tokens=900, model=AI_MODEL):
-    """Один запрос к Claude со строгим JSON-ответом. Возвращает (данные, токены входа, токены выхода)."""
+def claude(system, content, schema, max_tokens=900, model=AI_MODEL, effort=None, timeout=45):
+    """Один запрос к Claude со строгим JSON-ответом. Возвращает (данные, токены входа, токены выхода).
+    effort — глубина размышлений (low/medium/high) для моделей, которые его поддерживают (не Haiku 4.5)."""
+    oc = {"format": {"type": "json_schema", "schema": schema}}
+    if effort:
+        oc["effort"] = effort
     body = json.dumps({"model": model, "max_tokens": max_tokens, "system": system,
                        "messages": [{"role": "user", "content": content}],
-                       "output_config": {"format": {"type": "json_schema", "schema": schema}}}).encode()
+                       "output_config": oc}).encode()
     for attempt in (0, 1):
         req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, method="POST",
                                      headers={"x-api-key": ai_key(), "anthropic-version": "2023-06-01",
                                               "content-type": "application/json"})
         try:
-            with urllib.request.urlopen(req, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
                 j = json.loads(r.read().decode("utf-8"))
             break
         except urllib.error.HTTPError as e:
@@ -1436,11 +1450,21 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Location", path.rstrip("/"))
             self.end_headers()
             return
-        if path == "/index.html":
-            self.send_response(301)
+        if path in ("/index.html",) + OLD_PAGES:
+            self.send_response(301 if path == "/index.html" else 302)
             self.send_header("Location", "/")
             self.end_headers()
             return
+        if path == "/":
+            return self.send_file(START_FILE, "text/html; charset=utf-8", head)
+        if path == "/de":
+            return self.send_file(DE_FILE, "text/html; charset=utf-8", head)
+        m = re.fullmatch(r"/data/(de|frei)/([a-z_]+)\.json", path)
+        if m:
+            return self.send_file(os.path.join(ROOT, "data", m.group(1), m.group(2) + ".json"), "application/json; charset=utf-8", head)
+        m = re.fullmatch(r"/audio/(s?[0-9a-f]{32})\.mp3", path)  # озвучка из кэша (db/audio)
+        if m:
+            return self.send_media(os.path.join(lernen.AUDIO_DIR, m.group(1) + ".mp3"), "audio/mpeg", head)
         if path in STATIC_FILES or re.fullmatch(r"/assets/book\.[0-9a-f]{12}\.js", path):
             return self.send_static(path, head)
         if path == "/assets/book.js":  # словарь Wörter для модулей: всегда на актуальную версию с хэшем
@@ -1449,10 +1473,6 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Cache-Control", "no-cache")
             self.end_headers()
             return
-        if path == "/start":
-            return self.send_file(HUB_FILE, "text/html; charset=utf-8", head)
-        if path == "/admin":  # отдельная страница админки: открывается с любого устройства, данные отдаёт только владельцу/админу
-            return self.send_file(os.path.join(ROOT, "admin.html"), "text/html; charset=utf-8", head)
         if path == "/ep.js":  # общее для всех модулей: аватары, талисман, переключатель языка
             return self.send_file(os.path.join(STATIC_DIR, "ep.js"), "text/javascript; charset=utf-8", head)
         m = re.fullmatch(r"/mail/([a-z0-9-]+)\.png", path)  # картинки талисмана для писем
@@ -1464,6 +1484,37 @@ class Handler(BaseHTTPRequestHandler):
         if schreiben and m:
             return self.send_file(os.path.join(SCHREIBEN_DIR, "data", m.group(1) + ".json"), "application/json; charset=utf-8", head)
         self.send_error(404)
+
+    def send_media(self, fp, ctype, head=False):
+        """Аудио с поддержкой Range (Safari без него не проигрывает и не перематывает). Файлы неизменны — кэш навсегда."""
+        if not os.path.isfile(fp):
+            return self.send_error(404)
+        size = os.path.getsize(fp)
+        start, end = 0, size - 1
+        m = re.fullmatch(r"bytes=(\d*)-(\d*)", (self.headers.get("Range") or "").strip())
+        if m and (m.group(1) or m.group(2)):
+            if m.group(1):
+                start = int(m.group(1))
+                end = min(int(m.group(2)), size - 1) if m.group(2) else size - 1
+            else:
+                start = max(0, size - int(m.group(2)))
+            if start > end:
+                self.send_response(416)
+                self.send_header("Content-Range", "bytes */%d" % size)
+                self.end_headers()
+                return
+        self.send_response(206 if m and (m.group(1) or m.group(2)) else 200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Accept-Ranges", "bytes")
+        self.send_header("Content-Length", str(end - start + 1))
+        if m and (m.group(1) or m.group(2)):
+            self.send_header("Content-Range", "bytes %d-%d/%d" % (start, end, size))
+        self.send_header("Cache-Control", "private, max-age=31536000, immutable")
+        self.end_headers()
+        if not head:
+            with open(fp, "rb") as f:
+                f.seek(start)
+                self.wfile.write(f.read(end - start + 1))
 
     def send_file(self, fp, ctype, head=False):
         """Файл модуля с диска: gzip, ETag/304, без долгого кэша (правки видны сразу)."""
@@ -1592,13 +1643,16 @@ class Handler(BaseHTTPRequestHandler):
             bad = pw_problem(pw)
             if bad:
                 raise ApiError(400, bad)
-            if d.get("accept") is not True:
-                raise ApiError(400, "Чтобы создать аккаунт, прими условия использования")
+            invite = s_str(d.get("invite"), 20).upper()
+            if not lernen.registration_open(c) and not lernen.invite_ok(c, invite):
+                raise ApiError(403, "Регистрация только по приглашению. Попроси код у владельца")
             if c.execute("SELECT 1 FROM users WHERE email=?", (email,)).fetchone():
                 raise ApiError(409, "Аккаунт с этой почтой уже есть, просто войди")
             cur = c.execute("INSERT INTO users(email,name,avatar,pw,code,created,news) VALUES(?,?,?,?,?,?,?)",
                             (email, name, secrets.randbelow(8), hash_pw(pw), new_code(c, "users", "code", 6), now, 1))
             uid = cur.lastrowid
+            if invite:
+                lernen.invite_use(c, invite, uid)
             ensure_owner(c)
             base = self.mail_base()
             if base:
@@ -1850,6 +1904,10 @@ class Handler(BaseHTTPRequestHandler):
                       (word, "de", art))
             return self.send_json(200, {"article": art})
 
+        if p.startswith("/de/"):
+            return lernen.route(sys.modules[__name__], self, c, method, p[len("/de"):])
+        if method == "GET" and p == "/regopen":
+            return self.send_json(200, {"open": lernen.registration_open(c)})
         if schreiben and p.startswith("/schreiben/"):
             u = self.need_user(c)
             body = self.read_json() if method in ("POST", "PUT") else {}
@@ -1950,7 +2008,8 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     init_db()
-    threading.Thread(target=reminder_loop, daemon=True).start()
+    if os.environ.get("REMINDERS") == "1":  # письма-напоминания из коммерческой версии выключены
+        threading.Thread(target=reminder_loop, daemon=True).start()
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     print(f"EPDeutsch: http://localhost:{PORT}  (база: {DB})")
     try:

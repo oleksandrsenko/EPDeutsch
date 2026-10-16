@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Учёба</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>
+(function(){var d=document.documentElement;try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");if(o.theme)d.setAttribute("data-theme",o.theme)}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<script src="/ep.js"></script>
+<style>
+:root{
+  --bg:#F6F7FB;--panel:#FFFFFF;--panel2:#EDEFF4;--hover:#F0F2FA;--fg:#282E3E;--muted:#586380;--line:#D9DDE8;--line2:#EDEFF4;
+  --primary:#0E8C7F;--primary-h:#0B7569;--primary-soft:#DDF3EF;--link:#0B7569;--oli:#2BB3A3;--oli-d:#159283;--bad:#E8505B;--bad-soft:#FFECE8;
+  --de:#E0A800;--en:#3D7BF7;
+  --sh:0 .25rem 1rem 0 rgba(40,46,62,.08);--sh-card:0 .6rem 2rem 0 rgba(40,46,62,.16);
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--hover:#39436A;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
+  --primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--link:#7FDDD1;--bad-soft:#4A2630;--de:#FFC94D;--en:#7FA6FF;
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A092D;--panel:#2E3856;--panel2:#232B47;--hover:#39436A;--fg:#F6F7FB;--muted:#A8B1CF;--line:#4A5578;--line2:#39436A;
+  --primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--link:#7FDDD1;--bad-soft:#4A2630;--de:#FFC94D;--en:#7FA6FF;
+  --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:12px;padding:14px 24px;max-width:1040px;width:100%;margin:0 auto}
+.sp{flex:1}
+.me{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--muted);font-size:14px}
+.uava{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-weight:800}
+.ghost{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none}
+.ghost:hover{color:var(--fg);border-color:var(--muted)}
+main{flex:1;width:100%;max-width:1040px;margin:0 auto;padding:12px 24px 64px;display:flex;flex-direction:column;justify-content:center}
+h1{font-size:clamp(28px,4.4vw,44px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:17px;margin:0 0 30px;max-width:620px;line-height:1.5}
+.langs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lang{--c:var(--de);position:relative;display:flex;flex-direction:column;gap:12px;background:var(--panel);border-radius:28px;padding:28px;box-shadow:var(--sh);color:inherit;text-decoration:none;border:2px solid transparent;overflow:hidden;min-height:280px;
+  opacity:0;transform:translateY(18px) scale(.98);animation:in .55s cubic-bezier(.2,.8,.2,1) forwards;transition:transform .25s,box-shadow .25s,border-color .25s}
+.lang::after{content:"";position:absolute;right:-60px;top:-60px;width:210px;height:210px;border-radius:50%;background:var(--c);opacity:.12;transition:transform .5s}
+a.lang:hover{transform:translateY(-4px);box-shadow:var(--sh-card);border-color:var(--c)}
+a.lang:hover::after{transform:scale(1.35)}
+.flag{width:64px;height:44px;border-radius:12px;overflow:hidden;box-shadow:0 6px 16px -8px rgba(0,0,0,.4);flex:none}
+.flag svg{width:100%;height:100%;display:block}
+.lang h2{margin:8px 0 0;font-size:30px;letter-spacing:-.02em}
+.lang p{margin:0;color:var(--muted);line-height:1.55;font-size:15px}
+.chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;padding-top:6px}
+.chip{font-size:13px;font-weight:700;background:var(--panel2);border-radius:999px;padding:6px 12px}
+.go{position:absolute;right:24px;bottom:24px;width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;transition:transform .25s}
+a.lang:hover .go{transform:translateX(4px)}
+.soon{cursor:default;filter:saturate(.6);animation-name:inSoon}
+@keyframes inSoon{to{opacity:.75;transform:none}}
+.badge{position:absolute;top:24px;right:24px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--panel2);padding:6px 10px;border-radius:999px;z-index:1}
+@keyframes in{to{opacity:1;transform:none}}
+/* вход */
+.auth{width:min(440px,100%);margin:0 auto;background:var(--panel);border-radius:28px;box-shadow:var(--sh-card);padding:30px 28px;animation:in .5s cubic-bezier(.2,.8,.2,1) forwards;opacity:0;transform:translateY(12px)}
+.auth .oli-w{display:flex;justify-content:center;margin:-6px 0 4px}
+.auth h1{font-size:28px;text-align:center}
+.auth .lead{text-align:center;font-size:15px;margin:0 auto 20px}
+.tabs{display:flex;background:var(--panel2);border-radius:14px;padding:4px;margin-bottom:18px}
+.tabs button{flex:1;border:0;background:none;border-radius:10px;padding:9px;font:inherit;font-weight:700;color:var(--muted);cursor:pointer}
+.tabs button.on{background:var(--panel);color:var(--fg);box-shadow:var(--sh)}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:12px 0 6px}
+input{width:100%;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:14px;padding:12px 14px;font:inherit;font-size:15px;outline:none;transition:border-color .15s}
+input:focus{border-color:var(--primary)}
+.btn{width:100%;margin-top:18px;border:0;background:var(--primary);color:#fff;border-radius:14px;padding:13px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;transition:background .15s,transform .1s}
+.btn:hover{background:var(--primary-h)}.btn:active{transform:scale(.98)}.btn:disabled{opacity:.6;cursor:wait}
+.err{margin-top:12px;background:var(--bad-soft);color:var(--bad);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600}
+.hint{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.load{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-items:center;transition:opacity .35s,visibility .35s}
+.load i{width:56px;height:56px;border-radius:50%;border:3px solid var(--primary-soft);border-top-color:var(--primary);animation:spin .9s linear infinite}
+body.ready .load{opacity:0;visibility:hidden}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:720px){.langs{grid-template-columns:1fr}.lang{min-height:0}.top,main{padding-left:16px;padding-right:16px}.me span{display:none}}
+@media (prefers-reduced-motion:reduce){.lang,.auth{animation:none;opacity:1;transform:none}.soon{opacity:.75}}
+</style>
+</head>
+<body>
+<div class="load"><i></i></div>
+<header class="top"><div class="sp"></div><div class="me" id="me"></div></header>
+<main>
+  <section id="auth" class="auth" hidden>
+    <div class="oli-w" id="authOli"></div>
+    <h1 id="authH">С возвращением!</h1>
+    <p class="lead" id="authL">Личная учебная платформа. Войди, чтобы продолжить.</p>
+    <div class="tabs" role="tablist"><button type="button" class="on" data-t="login">Вход</button><button type="button" data-t="reg">Регистрация</button></div>
+    <form id="form" autocomplete="on" novalidate>
+      <div id="fName" hidden><label for="name">Имя</label><input id="name" name="name" autocomplete="given-name" maxlength="40"></div>
+      <label for="email">Почта</label><input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="pw">Пароль</label><input id="pw" name="password" type="password" autocomplete="current-password" required>
+      <div id="fInv" hidden><label for="inv">Код приглашения</label><input id="inv" name="invite" autocomplete="off" maxlength="12" style="text-transform:uppercase;letter-spacing:.12em"><div class="hint">Регистрация закрыта: код даёт владелец (Настройки → Приглашения).</div></div>
+      <button class="btn" id="go" type="submit">Войти</button>
+      <div class="err" id="err" hidden></div>
+    </form>
+  </section>
+
+  <section id="pick" hidden>
+    <h1 id="hi">Привет!</h1>
+    <p class="lead">Какой язык сегодня?</p>
+    <div class="langs">
+      <a class="lang" href="/de" style="--c:var(--de);animation-delay:.05s">
+        <div class="flag"><svg viewBox="0 0 5 3" preserveAspectRatio="none"><rect width="5" height="1" y="0" fill="#000"/><rect width="5" height="1" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg></div>
+        <h2>Deutsch</h2>
+        <p>Подготовка к EPD и бонус-тестам: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen и план по дням. Отдельно — свободный немецкий: разговорная речь, идиомы, сленг, видео.</p>
+        <div class="chips" id="deChips"><span class="chip">B2 → C1</span></div>
+        <span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <div class="lang soon" style="--c:var(--en);animation-delay:.12s" aria-disabled="true">
+        <span class="badge">Скоро</span>
+        <div class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2.4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg></div>
+        <h2>English</h2>
+        <p>Отдельная категория. Наполним позже: что именно учить, решим вместе.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const api=async(p,o={})=>{const r=await fetch("/api"+p,{credentials:"same-origin",...o,headers:{"Content-Type":"application/json","X-USD":"1",...(o.headers||{})}});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Ошибка "+r.status);return j};
+let tab="login",regOpen=false;
+function setTab(t){
+  tab=t;document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));
+  $("#fName").hidden=t!=="reg";$("#fInv").hidden=t!=="reg"||regOpen;
+  $("#go").textContent=t==="reg"?"Создать аккаунт":"Войти";$("#pw").autocomplete=t==="reg"?"new-password":"current-password";
+  $("#authH").textContent=t==="reg"?(regOpen?"Первый вход":"Регистрация"):"С возвращением!";
+  $("#authL").textContent=t==="reg"?(regOpen?"Ты первый — аккаунт станет владельцем: ключи и приглашения будут у тебя.":"Только по приглашению владельца."):"Личная учебная платформа. Войди, чтобы продолжить.";
+  $("#err").hidden=true;
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+$("#form").onsubmit=async e=>{
+  e.preventDefault();$("#err").hidden=true;$("#go").disabled=true;
+  try{
+    const body=tab==="reg"?{name:$("#name").value,email:$("#email").value,password:$("#pw").value,invite:$("#inv").value}:{email:$("#email").value,password:$("#pw").value};
+    await api(tab==="reg"?"/register":"/login",{method:"POST",body:JSON.stringify(body)});
+    try{localStorage.setItem("epd_authed","1")}catch(e){}
+    location.reload();
+  }catch(er){$("#err").textContent=er.message;$("#err").hidden=false}
+  $("#go").disabled=false;
+};
+(async()=>{
+  let me=null;try{me=await api("/me")}catch(e){}
+  if(!me||!me.user){
+    try{regOpen=(await api("/regopen")).open}catch(e){}
+    if(window.EP)$("#authOli").innerHTML=EP.mascot("happy",84);
+    $("#auth").hidden=false;setTab(regOpen?"reg":"login");
+  }else{
+    const u=me.user;
+    $("#hi").textContent="Привет, "+u.name.split(" ")[0]+"!";
+    $("#me").innerHTML='<span>'+esc(u.name)+'</span>'+(window.EP?EP.uava(u,34):"")+'<button class="ghost" id="out">Выйти</button>';
+    $("#out").onclick=async()=>{try{await api("/logout",{method:"POST"})}catch(e){}try{localStorage.removeItem("epd_authed")}catch(e){}location.reload()};
+    const pr=me.progress||{},w=Object.keys(pr.b||{}).length;
+    if(w)$("#deChips").innerHTML+='<span class="chip">'+w+' слов в работе</span><span class="chip">🔥 '+(pr.streak||0)+'</span>';
+    $("#pick").hidden=false;
+    ["/de","/data/de/grammatik.json"].forEach(u=>fetch(u,{credentials:"same-origin"}).catch(()=>{}));
+  }
+  document.body.classList.add("ready");
+})();
+</script>
+</body>
+</html>

@@ -27,7 +27,7 @@
 try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}"),a=localStorage.getItem("epd_authed");
 // кто уже вошёл и открывает сайт с главной, сначала попадает на экран модулей (/start); оттуда в Wörter уже без переброса
 if(o.theme)d.setAttribute("data-theme",o.theme);
-if(a||/^\/(terms|privacy)\/?$/.test(location.pathname))d.classList.add("bootacc");if(a&&sessionStorage.getItem("ep_navopen")!=="1")d.classList.add("bootnav")}catch(e){}})();
+d.classList.add("bootacc");if(sessionStorage.getItem("ep_navopen")!=="1")d.classList.add("bootnav")}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,8 +116,7 @@ body.guest .logo .lg-s{display:none}
 .subnav .burger{gap:6px;align-items:center;font-weight:700;font-size:13.5px;border:1px solid var(--line);padding:6px 10px}
 .subnav .burger .bl{color:var(--fg)}
 body.guest .subnav,body.focus .subnav{display:none}
-@media (min-width:981px){.nav>a[data-tab],.nav>.nav-gt{display:none}}
-@media (max-width:640px){.subnav>a{display:none}.subnav{padding:6px 12px;justify-content:flex-end}.subnav .sn-sp{display:none}}
+@media (max-width:640px){.subnav{display:none}}
 /* ---------- боковое меню ---------- */
 .shell{display:flex;min-height:calc(100vh - 66px);min-height:calc(100dvh - 66px);overflow-x:clip}
 .nav{width:264px;flex:none;transition:margin-left .28s cubic-bezier(.3,.8,.3,1),opacity .2s;position:sticky;top:66px;height:calc(100vh - 66px);overflow:auto;padding:14px 12px 20px;background:var(--bg)}
@@ -163,15 +162,6 @@ main{flex:1;min-width:0}
 
 @media (min-width:981px){body.navhide .nav{margin-left:-264px;opacity:0;pointer-events:none}html.bootnav .nav{margin-left:-264px;opacity:0;pointer-events:none}}
 html{scrollbar-gutter:stable}
-html.boot body::after{content:"";position:fixed;inset:0;z-index:9998;background:var(--bg);transition:opacity .45s ease .05s}
-html.boot body::before{content:"";position:fixed;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;z-index:10000;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4.5 -4.5 39 39'%3E%3Crect x='1' y='1' width='28' height='28' rx='8' fill='%237E6FB8'/%3E%3Cpath d='M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Ccircle cx='26.5' cy='26.5' r='6.5' fill='%23FFCD1F' stroke='%23fff' stroke-width='2.5'/%3E%3Cpath d='M23.7 26.6l2 2 3.5-4' fill='none' stroke='%23282E3E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;transition:opacity .35s}
-html.boot::after{content:"";position:fixed;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;z-index:9999;border-radius:50%;border:3px solid rgba(var(--acc-rgb),.14);border-top-color:var(--primary);animation:bootSpin .9s linear infinite;transition:opacity .35s;will-change:transform}
-/* гости грузятся на лендинг: загрузчик сразу в бирюзовом цвете лендинга */
-html.boot:not(.bootacc) body::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4.5 -4.5 39 39'%3E%3Crect x='1' y='1' width='28' height='28' rx='8' fill='%230E8C7F'/%3E%3Cpath d='M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linejoin='round'/%3E%3Ccircle cx='26.5' cy='26.5' r='6.5' fill='%23FFCD1F' stroke='%23fff' stroke-width='2.5'/%3E%3Cpath d='M23.7 26.6l2 2 3.5-4' fill='none' stroke='%23282E3E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
-html.boot:not(.bootacc){--primary:#0E8C7F;--acc-rgb:14,140,127}
-@media (prefers-color-scheme: dark){html.boot:not(.bootacc):not([data-theme="light"]){--primary:#3BC2B2;--acc-rgb:59,194,178}}
-html.boot[data-theme="dark"]:not(.bootacc){--primary:#3BC2B2;--acc-rgb:59,194,178}
-html.boot.bootout body::after,html.boot.bootout body::before,html.boot.bootout::after{opacity:0}
 @keyframes bootBob{0%,100%{transform:translateY(0) scale(1)}45%{transform:translateY(-7px) scale(1.04)}70%{transform:translateY(1px) scale(.98,1.02)}}
 html.boot .nav,html.boot .nav *,html.boot main{transition:none!important}
 
@@ -1536,12 +1526,14 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
 </style>
 </head>
 <body class="guest">
+<script>EP.boot("woerter")</script>
 <header class="top">
+  <script>document.write(EP.burger("burger","Меню: разделы, папки, уровень")+EP.logo("woerter","#",' data-tab="home"'))</script>
   <a class="home-de" href="/" title="Выбор языка"><i><svg viewBox="0 0 5 3" width="26" height="18" preserveAspectRatio="none"><rect width="5" height="1" fill="#000"/><rect width="5" height="1" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg></i><span>DE</span></a>
   <div id="epMods" style="display:contents"></div>
   <script>document.getElementById("epMods").innerHTML=EP.modbar("woerter")</script>
   <div class="tright">
-    <button class="streak" id="streakBtn" data-tab="prog" title="Серия дней с выполненной целью">🔥 <b id="stN">0</b></button>
+    <button class="streak" id="streakBtn" data-tab="prog" title="Серия дней с выполненной целью"><script>document.write(EP.icon("flame",18))</script><b id="stN">0</b></button>
     <button class="goal" data-tab="prog" title="Цель дня"><svg viewBox="0 0 36 36" width="40" height="40"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--line2)" stroke-width="4"/><circle id="goalArc" cx="18" cy="18" r="15" fill="none" stroke="var(--good)" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="94.25"/></svg><span id="goalN">0</span></button>
     <button class="acct" id="acctBtn" data-tab="acct" aria-label="Аккаунт">Войти</button>
   </div>
@@ -1555,11 +1547,10 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
   <a href="#" data-tab="plan"><span class="ni" style="--c:#F28C28"><i data-ic="calendar"></i></span>Мой план</a>
   <a href="#" data-tab="prog"><span class="ni" style="--c:#0EA5B7"><i data-ic="chart"></i></span>Прогресс</a>
   <a href="#" data-tab="friends"><span class="ni" style="--c:#E8505B"><i data-ic="users"></i></span>Друзья</a>
-  <span class="sn-sp"></span>
-  <button class="burger" id="burger" aria-label="Папки и уровень" aria-controls="nav" title="Папки, уровень, тема"><span class="bm"><i data-ic="folder"></i></span><span class="bx"><i data-ic="x"></i></span><span class="bl">Папки</span></button>
 </nav>
 <div class="shell">
   <nav class="nav" id="nav" aria-label="Разделы">
+    <div class="ep-modwrap"><div class="nav-gt">Модули</div><script>document.write(EP.modlist("woerter"))</script></div>
     <div class="nav-gt">Слова</div>
     <a href="#" data-tab="home"><span class="ni" style="--c:#6F5BD6"><i data-ic="home"></i></span>Главная</a>
     <a href="#" data-tab="learn"><span class="ni" style="--c:#2F7BEA"><i data-ic="cards"></i></span>Карточки</a>
@@ -1997,7 +1988,7 @@ function renderHome(){
     :gd?"Цель дня выполнена 🎉 Можно отдохнуть или позаниматься ещё."
     :gn?"Осталось <b>"+left+"</b> "+plural(left,"слово","слова","слов")+" до цели дня. Ты почти у цели!"
     :"Начни с пары слов, дальше пойдёт легко.";
-  const facts=[sk?'<span class="hf"><span class="hs-i">🔥</span>'+sk+" "+plural(sk,"день","дня","дней")+" подряд</span>":"",
+  const facts=[sk?'<span class="hf"><span class="hs-i">'+EP.icon("flame",16)+'</span>'+sk+" "+plural(sk,"день","дня","дней")+" подряд</span>":"",
     '<span class="hf">'+ic("spark",16)+"Уровень "+lv+"</span>",
     ta?'<span class="hf">'+ic("check",16)+"Точность "+Math.round(totalOk()/ta*100)+"%</span>":""].join("");
   let h=verifyBanner()+'<div class="hero"><div class="hero-top"><div><h1>'+hello+nm+"!</h1><p class=\"hero-sub\">"+sub+'</p></div>'+
@@ -2200,7 +2191,7 @@ function roundEnd(){
   const perfect=!stats.miss.size,ic0=perfect?"💎":acc>=80?"🏆":acc>=50?"💪":"🌱";
   const title=perfect?"Идеально, без единой ошибки!":acc>=80?"Отличный круг!":acc>=50?"Хорошая работа!":"Каждый круг делает тебя сильнее";
   st.innerHTML='<div class="done"><span class="done-ic">'+ic0+"</span><h2>"+title+'</h2><p class="muted">Круг пройден. Слова, которые ты не знал, вернутся в повторении.</p>'+
-    '<div class="done-st"><div><b>'+stats.total+"</b><small>карточек</small></div><div><b>"+acc+"%</b><small>точность</small></div><div><b>+"+stats.xp+"</b><small>XP</small></div><div><b>🔥 "+stats.best+"</b><small>лучшее комбо</small></div></div>"+
+    '<div class="done-st"><div><b>'+stats.total+"</b><small>карточек</small></div><div><b>"+acc+"%</b><small>точность</small></div><div><b>+"+stats.xp+"</b><small>XP</small></div><div><b>"+EP.icon("flame",18)+" "+stats.best+"</b><small>лучшее комбо</small></div></div>"+
     (notes.length?'<div class="done-notes">'+notes.map(x=>"<span>"+esc(x[0])+(x[1]?"<small>"+esc(x[1])+"</small>":"")+"</span>").join("")+"</div>":"")+
     '<div class="row"><button class="btn primary big" id="again">'+ic("refresh",18)+"Ещё круг</button>"+(stats.miss.size?'<button class="btn big" id="againMiss">Только ошибки ('+stats.miss.size+")</button>":"")+(mode!=="smart"&&sessionKind!=="due"?'<button class="btn big" id="goSmart">'+ic("spark",18)+"Умный режим</button>":"")+"</div></div>";
   $("#again").onclick=sessionKind==="due"?startDue:start;
@@ -2264,7 +2255,7 @@ function draw(){
   const mid=m==="cloze"&&!flipped?'<button class="gbig no" id="clozeGive">'+ic("x",22)+'Не знаю</button><button class="gbig yes" id="clozeCheck">'+ic("check",22)+"Проверить</button>":testish?(flipped?'<button class="btn primary big" id="nextBtn">'+(cur.ok?"Дальше":"Понятно, дальше")+" →</button>":'<span class="muted" style="font-weight:600">Выбери ответ</span>')
     :'<button class="gbig no" data-r="0">'+ic("x",22)+'Не знаю</button><button class="gbig yes" data-r="1">'+ic("check",22)+"Знаю</button>";
   const cb=stats.combo;
-  st.innerHTML=banner+'<div class="fc-top"><div class="fc-prog"><i style="width:'+(stats.total?stats.known.size/stats.total*100:0)+'%"></i></div><span class="combo'+(cb>=10?" on hot":cb>=3?" on":"")+'" title="Правильных подряд">🔥 '+cb+(cb>=10?" ×2":cb>=5?" ×1.5":"")+"</span></div>"+
+  st.innerHTML=banner+'<div class="fc-top"><div class="fc-prog"><i style="width:'+(stats.total?stats.known.size/stats.total*100:0)+'%"></i></div><span class="combo'+(cb>=10?" on hot":cb>=3?" on":"")+'" title="Правильных подряд">'+EP.icon("flame",15)+' '+cb+(cb>=10?" ×2":cb>=5?" ×1.5":"")+"</span></div>"+
    '<div class="fcwrap"><div class="card '+anim+'" id="card" tabindex="0" role="button" aria-label="Карточка"><span class="g" style="background:'+col+'"></span><span class="sw sw-l">Не знаю</span><span class="sw sw-r">Знаю</span>'+
    '<div class="card-top"><span class="dir">'+dirTxt+tag+"</span>"+(canSay?'<button class="ib sayw" id="sayWord" title="Произнести слово">'+ic("speaker",18)+"Слово</button>":"")+"</div>"+
    front+body+back+(flipped||testish?"":'<div class="tap">Нажми, чтобы перевернуть · свайп ← не знаю · знаю →</div>')+"</div></div>"+
@@ -2800,7 +2791,7 @@ function coachHTML(){
 function renderProg(){
   const seen=CARDS.filter(c=>rec(c.id)).length,l=learnedN(),m=CARDS.filter(c=>box(c.id)>=5).length,ta=totalAns(),lv=lvlOf(S.xp);
   // четыре главные цифры крупно, остальное — одной тихой строкой, без «коробок» и прочего жаргона
-  $("#stats").innerHTML=[["🔥 "+streak(),plural(streak(),"день","дня","дней")+" подряд"+(S.bestStreak?" · рекорд "+S.bestStreak:"")],[l,plural(l,"слово выучено","слова выучено","слов выучено")],["ур. "+lv,S.xp+" XP"],[ta?Math.round(totalOk()/ta*100)+"%":"—","точность ответов"]].map(([a,b])=>"<div><b>"+a+"</b><small>"+b+"</small></div>").join("");
+  $("#stats").innerHTML=[[EP.icon("flame",20)+" "+streak(),plural(streak(),"день","дня","дней")+" подряд"+(S.bestStreak?" · рекорд "+S.bestStreak:"")],[l,plural(l,"слово выучено","слова выучено","слов выучено")],["ур. "+lv,S.xp+" XP"],[ta?Math.round(totalOk()/ta*100)+"%":"—","точность ответов"]].map(([a,b])=>"<div><b>"+a+"</b><small>"+b+"</small></div>").join("");
   $("#statsMore").textContent="Начато "+seen+" · закреплено надолго "+m+" · ответов всего "+ta+" · лучшее комбо "+(S.bestCombo||0);
   $("#report").innerHTML=reportHTML(true);
   const t=today(),wd=["вс","пн","вт","ср","чт","пт","сб"];let mx=S.goal,bars="",sum=0;
@@ -3064,8 +3055,8 @@ function drawLB(){
   const unit=LB.find(x=>x[0]===lbSort)[2],rows=friendsCache.slice().sort((a,b)=>b[lbSort]-a[lbSort]||b.xp-a.xp);
   const ago=ts=>{if(!ts)return"ещё не занимался";const m=Math.floor((Date.now()/1000-ts)/60);return m<2?"только что":m<60?m+" мин назад":m<1440?Math.floor(m/60)+" ч назад":Math.floor(m/1440)+" дн назад"};
   el.innerHTML=(rows.length<2?'<p class="muted">Пока здесь только ты. Отправь другу ссылку-приглашение или код и соревнуйтесь.</p>':"")+'<div class="lb">'+rows.map((f,i)=>{const op=openFriend===f.id;
-    return'<div class="lbr'+(f.me?" me":"")+(op?" open":"")+'"><button class="lb-h" data-fr="'+f.id+'"><span class="lb-n'+(i<3?" top t"+i:"")+'">'+(i+1)+"</span>"+uava(f,38)+'<span class="lb-t"><b>'+esc(f.name)+(f.me?" (ты)":"")+ownerTag(f)+"</b><small>ур. "+f.level+" · 🔥 "+f.streak+(f.s_total?" · ✍️ "+f.s_total+" "+plural(f.s_total,"текст","текста","текстов"):"")+" · "+ago(f.updated)+'</small></span><span class="lb-v">'+f[lbSort]+" <small>"+unit+"</small></span></button>"+
-      (op?'<div class="lb-d"><div class="rep-g"><div><small>Серия</small><b>🔥 '+f.streak+'</b></div><div><small>XP за неделю</small><b>'+f.week_xp+'</b></div><div><small>Всего XP</small><b>'+f.xp+'</b></div><div><small>Выучено слов</small><b>'+f.learned+'</b></div><div><small>Точность</small><b>'+f.acc+'%</b></div><div><small>Ответов сегодня</small><b>'+f.today+"</b></div></div>"+(f.me?"":'<button class="btn sm danger" data-unfriend="'+f.id+'" style="margin-top:12px">'+ic("trash",16)+"Удалить из друзей</button>")+"</div>":"")+"</div>"}).join("")+"</div>";
+    return'<div class="lbr'+(f.me?" me":"")+(op?" open":"")+'"><button class="lb-h" data-fr="'+f.id+'"><span class="lb-n'+(i<3?" top t"+i:"")+'">'+(i+1)+"</span>"+uava(f,38)+'<span class="lb-t"><b>'+esc(f.name)+(f.me?" (ты)":"")+ownerTag(f)+"</b><small>ур. "+f.level+" · "+EP.icon("flame",12)+" "+f.streak+(f.s_total?" · ✍️ "+f.s_total+" "+plural(f.s_total,"текст","текста","текстов"):"")+" · "+ago(f.updated)+'</small></span><span class="lb-v">'+f[lbSort]+" <small>"+unit+"</small></span></button>"+
+      (op?'<div class="lb-d"><div class="rep-g"><div><small>Серия</small><b>'+EP.icon("flame",16)+' '+f.streak+'</b></div><div><small>XP за неделю</small><b>'+f.week_xp+'</b></div><div><small>Всего XP</small><b>'+f.xp+'</b></div><div><small>Выучено слов</small><b>'+f.learned+'</b></div><div><small>Точность</small><b>'+f.acc+'%</b></div><div><small>Ответов сегодня</small><b>'+f.today+"</b></div></div>"+(f.me?"":'<button class="btn sm danger" data-unfriend="'+f.id+'" style="margin-top:12px">'+ic("trash",16)+"Удалить из друзей</button>")+"</div>":"")+"</div>"}).join("")+"</div>";
   el.querySelectorAll("[data-fr]").forEach(b=>b.onclick=()=>{openFriend=openFriend===+b.dataset.fr?null:+b.dataset.fr;drawLB()});
   el.querySelectorAll("[data-unfriend]").forEach(b=>b.onclick=async()=>{const f=friendsCache.find(x=>x.id===+b.dataset.unfriend);if(!confirm("Удалить "+f.name+" из друзей?"))return;try{await api("DELETE","/friends/"+f.id);friendsCache=friendsCache.filter(x=>x!==f);drawLB()}catch(e){toast("⚠️ "+e.message)}});
 }

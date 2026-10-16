@@ -158,7 +158,7 @@ $("#form").onsubmit=async e=>{
     $("#me").innerHTML='<span>'+esc(u.name)+'</span>'+(window.EP?EP.uava(u,34):"")+'<button class="ghost" id="out">Выйти</button>';
     $("#out").onclick=async()=>{try{await api("/logout",{method:"POST"})}catch(e){}try{localStorage.removeItem("epd_authed")}catch(e){}location.reload()};
     const pr=me.progress||{},w=Object.keys(pr.b||{}).length;
-    if(w)$("#deChips").innerHTML+='<span class="chip">'+w+' слов в работе</span><span class="chip">🔥 '+(pr.streak||0)+'</span>';
+    if(w)$("#deChips").innerHTML+='<span class="chip">'+w+' слов в работе</span><span class="chip">'+EP.icon("flame",13)+' '+(pr.streak||0)+'</span>';
     $("#pick").hidden=false;
     ["/de","/data/de/grammatik.json"].forEach(u=>fetch(u,{credentials:"same-origin"}).catch(()=>{}));
   }

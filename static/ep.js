@@ -129,6 +129,14 @@ const I={
  star:'<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
  cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>',
  search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+ flame:'<path d="M12 22c4 0 7-2.7 7-6.6 0-3.1-1.8-5.3-3.4-7-.4 1.9-1.5 3-2.6 3.4.3-3.3-1.3-6.6-4.3-8.8.3 3-1.2 5-2.7 6.8C4.8 11.3 5 12.6 5 15.4 5 19.3 8 22 12 22z"/><path d="M12 22c-1.7 0-3-1.2-3-3 0-1.6 1.3-2.6 2-3.6.4 1 1.2 1.5 2 1.6.6-.6 1-1.4 1.1-2.3 1 .9 1.9 2.4 1.9 4.3 0 1.8-1.3 3-4 3z"/>',
+ video:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>',
+ chev:'<path d="M9 6l6 6-6 6"/>',
+ menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+ speaker:'<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/>',
+ gear:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+ moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+ globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
  x:'<path d="M6 6l12 12M18 6L6 18"/>'
 };
 const ic=(n,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
@@ -231,4 +239,111 @@ document.addEventListener("keydown",e=>{
 });
 document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e.preventDefault();search()}});
 Object.assign(window.EP,{modbar,search,icon:ic,MODS});
+})();
+
+/* Общая «рамка» всех страниц: бургер, логотип EPDeutsch с названием модуля, экран загрузки,
+   меню модулей (для /de и телефона). Одинаково в Wörter, Schreiben, /de и на входе.
+   EP.logo(модуль, адрес) · EP.burger(id) · EP.boot(модуль) · EP.ready() · EP.modlist(текущий) · EP.drawer(текущий, доп.HTML) */
+(function(){
+"use strict";
+const ic=window.EP.icon,MODS=window.EP.MODS,esc=window.EP.esc;
+const NAME={home:"Deutsch",woerter:"Wörter",schreiben:"Schreiben",grammatik:"Grammatik",lesen:"Lesen",hoeren:"Hören",sprechen:"Sprechen",frei:"Свободный",plan:"План",settings:"Настройки",start:"Учёба"};
+const DESC={home:"план дня и отсчёт до экзамена",woerter:"карточки слов EPD",schreiben:"тексты с проверкой ИИ",grammatik:"8 тем EPD с теорией",lesen:"статьи и задания",hoeren:"аудио и вопросы",sprechen:"устная часть с разбором",frei:"живой немецкий без экзамена",plan:"даты, норма, формат тестов"};
+const modOf=k=>MODS.find(m=>m[0]===k);
+const color=k=>(modOf(k)||[])[4]||"#0E8C7F";
+// знак EPDeutsch: буква D и жёлтая галочка, цвет квадрата — цвет модуля
+const mark=s=>`<svg class="ep-mark" viewBox="0 0 34 34" width="${s||32}" height="${s||32}" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" fill="var(--c)"/><path class="ep-md" d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><g class="ep-mb"><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel,#fff)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>`;
+function logo(k,href,attrs){const n=NAME[k]||k;
+  return `<a class="ep-logo" href="${href||"/de#/"}" style="--c:${color(k)}" aria-label="EPDeutsch ${esc(n)}, на главную"${attrs||""}>${mark(32)}<span class="ep-lt"><span class="ep-ln">EP<b>Deutsch</b></span>${k==="home"||k==="start"?"":`<small class="ep-ls" lang="de">${esc(n)}</small>`}</span></a>`}
+function burger(id,label){return `<button type="button" class="ep-burger" id="${id||"burger"}" aria-label="${label||"Меню"}" aria-controls="nav"><span class="bm">${ic("menu",22)}</span><span class="bx">${ic("x",22)}</span></button>`}
+function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span></a>`).join("")}</div>`}
+
+// ---------- экран загрузки ----------
+let bootT0=0;
+function boot(k){
+  if(document.getElementById("ep-boot"))return;bootT0=performance.now();
+  const n=NAME[k]||"";
+  document.body.insertAdjacentHTML("afterbegin",`<div id="ep-boot" aria-hidden="true" style="--c:${color(k)}"><div class="ep-bin">${mark(64)}<div class="ep-bname"><span>EP<b>Deutsch</b></span>${n&&k!=="home"&&k!=="start"?` <small lang="de">${esc(n)}</small>`:""}</div><i class="ep-bbar"><b></b></i></div></div>`);
+  setTimeout(ready,8000); // страховка: что бы ни случилось, через 8 с страница открывается
+}
+// снять экран, когда страница отрисована и шрифты на месте; не короче 450 мс, чтобы не мигало
+function ready(){const d=document.documentElement;if(!d.classList.contains("boot")||d.classList.contains("bootout"))return;
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const fonts=document.fonts&&document.fonts.ready?Promise.race([document.fonts.ready,wait(1500)]):Promise.resolve();
+  const left=Math.max(0,450-(performance.now()-bootT0));
+  Promise.all([fonts,wait(left)]).then(()=>{const out=()=>{d.classList.add("bootout");setTimeout(()=>{d.classList.remove("boot","bootout")},520)};document.hidden?out():requestAnimationFrame(()=>requestAnimationFrame(out))});
+}
+
+// ---------- выезжающее меню (для /de, где нет своей боковой панели) ----------
+function drawer(cur,extra){
+  let dr=document.getElementById("ep-drawer");
+  if(!dr){dr=document.createElement("div");dr.id="ep-drawer";dr.innerHTML='<div class="ep-dveil"></div><nav class="ep-dpanel" aria-label="Меню"></nav>';document.body.appendChild(dr);
+    dr.addEventListener("click",e=>{if(e.target.closest(".ep-dveil")||e.target.closest("a"))toggle(false);if(e.target.closest("[data-ep-theme]"))theme()});
+    addEventListener("keydown",e=>{if(e.key==="Escape")toggle(false)})}
+  dr.querySelector(".ep-dpanel").innerHTML=`<div class="ep-dgt">Модули</div>${modlist(cur)}${extra||""}<button type="button" class="ep-dtheme" data-ep-theme>${ic("moon",18)}<span>Сменить тему</span></button>`;
+  return dr;
+}
+function toggle(on){const b=document.body;on=on===undefined?!b.classList.contains("ep-dopen"):on;b.classList.toggle("ep-dopen",on);document.querySelectorAll(".ep-burger").forEach(x=>x.setAttribute("aria-expanded",on))}
+function theme(){const d=document.documentElement,dark=d.getAttribute("data-theme")==="dark"||(!d.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches),t=dark?"light":"dark";d.setAttribute("data-theme",t);try{const o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");o.theme=t;localStorage.setItem("usd3-v1",JSON.stringify(o))}catch(e){}}
+
+const css=`
+/* ---- шапка: одна для всех модулей ---- */
+.ep-burger{display:inline-flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border:0;background:none;border-radius:12px;cursor:pointer;color:var(--muted);padding:0}
+.ep-burger:hover{background:var(--hover);color:var(--fg)}
+.ep-burger .bx,body.navopen .ep-burger .bm,body.ep-dopen .ep-burger .bm{display:none}
+body.navopen .ep-burger .bx,body.ep-dopen .ep-burger .bx{display:inline-flex}
+.ep-logo{--c:var(--primary);display:flex;align-items:center;gap:9px;flex:none;font-weight:800;font-size:21px;letter-spacing:-.03em;white-space:nowrap;color:var(--fg);text-decoration:none;line-height:1}
+.ep-logo .ep-lt{display:flex;align-items:center;gap:8px}
+.ep-logo .ep-ln b{color:var(--c);font-weight:800}
+.ep-logo .ep-ls{font-size:12.5px;font-weight:800;letter-spacing:.01em;color:#fff;background:var(--c);border-radius:8px;padding:5px 8px;line-height:1}
+.ep-mark{overflow:visible;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.ep-mark .ep-md,.ep-mark .ep-mb{transform-box:fill-box;transform-origin:center;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.ep-logo:hover .ep-mark{transform:translateY(-2px)}.ep-logo:hover .ep-md{transform:scale(.88) rotate(-6deg)}.ep-logo:hover .ep-mb{transform:scale(1.15)}
+.top .ep-mods{margin-left:6px}
+@media (max-width:1180px){.ep-logo .ep-ln{display:none}}
+@media (max-width:760px){.top .ep-mods,.top .ep-msep{display:none!important}.ep-burger{width:38px;height:38px}}
+@media (max-width:380px){.ep-logo .ep-ls{display:none}}
+/* ---- список модулей (в меню и на телефоне) ---- */
+.ep-modlist{display:flex;flex-direction:column;gap:2px}
+.ep-modlist a{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:14px;color:var(--fg);text-decoration:none}
+.ep-modlist a:hover{background:var(--hover)}
+.ep-modlist a>span:last-child{display:flex;flex-direction:column;min-width:0}
+.ep-modlist b{font-weight:700;font-size:14.5px;line-height:1.25}
+.ep-modlist small{color:var(--muted);font-size:12px;font-weight:600;line-height:1.3}
+.ep-modlist a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
+.ep-modlist a[aria-current="page"] .ep-mi{background:var(--c);color:#fff}
+.nav .ep-modlist{margin:0 0 6px}
+.nav .ep-modwrap{display:none}
+@media (max-width:760px){.nav .ep-modwrap{display:block}}
+/* ---- выезжающее меню ---- */
+#ep-drawer .ep-dveil{position:fixed;inset:0;z-index:60;background:rgba(10,9,45,.38);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+#ep-drawer .ep-dpanel{position:fixed;left:0;top:0;bottom:0;z-index:61;width:min(300px,86vw);background:var(--panel);box-shadow:var(--sh-card);border-radius:0 26px 26px 0;padding:max(14px,env(safe-area-inset-top)) 12px calc(14px + env(safe-area-inset-bottom));overflow:auto;transform:translateX(-102%);transition:transform .3s cubic-bezier(.3,1.1,.5,1)}
+body.ep-dopen #ep-drawer .ep-dveil{opacity:1;visibility:visible}
+body.ep-dopen #ep-drawer .ep-dpanel{transform:none}
+body.ep-dopen{overflow:hidden}
+.ep-dgt{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:12px 10px 6px}
+.ep-dtheme{display:flex;align-items:center;gap:12px;width:100%;border:0;background:none;color:var(--fg);font:inherit;font-weight:600;font-size:14px;padding:10px;border-radius:14px;cursor:pointer;margin-top:8px}
+.ep-dtheme:hover{background:var(--hover)}.ep-dtheme svg{color:var(--muted)}
+.ep-dlinks a{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:14px;color:var(--fg);text-decoration:none;font-weight:600;font-size:14px}
+.ep-dlinks a:hover{background:var(--hover)}.ep-dlinks a svg{color:var(--muted)}
+.ep-dlinks a[aria-current="page"]{background:var(--primary-soft);color:var(--link)}
+/* ---- экран загрузки ---- */
+#ep-boot{position:fixed;inset:0;z-index:10000;background:var(--bg,#F6F7FB);display:none;place-items:center;transition:opacity .45s ease,visibility .45s}
+html.boot #ep-boot{display:grid}
+html.bootout #ep-boot{opacity:0;visibility:hidden}
+.ep-bin{display:flex;flex-direction:column;align-items:center;gap:16px;transform:translateY(-4vh)}
+#ep-boot .ep-mark{animation:epBob 1.6s ease-in-out infinite}
+.ep-bname{font-family:var(--font,Manrope,system-ui,sans-serif);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--fg,#282E3E);display:flex;align-items:center;gap:9px}
+.ep-bname b{color:var(--c)}
+.ep-bname small{font-size:14px;color:#fff;background:var(--c);border-radius:9px;padding:6px 9px;letter-spacing:.01em;line-height:1}
+.ep-bbar{display:block;width:180px;height:5px;border-radius:9px;background:color-mix(in srgb,var(--c) 16%,transparent);overflow:hidden}
+.ep-bbar b{display:block;height:100%;width:0;border-radius:9px;background:var(--c);animation:epLoad 2.4s cubic-bezier(.1,.7,.2,1) forwards}
+html.bootout .ep-bbar b{width:100%!important;animation:none;transition:width .25s}
+@keyframes epBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes epLoad{0%{width:4%}100%{width:88%}}
+@media (prefers-reduced-motion:reduce){#ep-boot *{animation:none!important}}
+`;
+const st=document.createElement("style");st.id="ep-frame";st.textContent=css;(document.head||document.documentElement).appendChild(st);
+document.addEventListener("click",e=>{const b=e.target.closest("[data-ep-drawer]");if(b){e.preventDefault();toggle()}});
+Object.assign(window.EP,{logo,burger,mark,boot,ready,modlist,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
 })();

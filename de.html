@@ -170,6 +170,15 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .theory .ex b,.theory b.k{color:var(--c,var(--primary))}
 .theory .tip{border-left:4px solid var(--c,var(--primary));background:color-mix(in srgb,var(--c,var(--primary)) 8%,transparent);padding:10px 14px;border-radius:0 12px 12px 0;margin:12px 0}
 .ex-run{max-width:760px}
+.gsplit.on{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:24px;align-items:start}
+.gsplit.on .ex-run{max-width:none}
+.gside{position:sticky;top:132px;max-height:calc(100vh - 148px);overflow:auto;border-radius:22px;background:var(--panel);box-shadow:var(--sh);scrollbar-width:thin}
+.gth summary{display:flex;align-items:center;gap:8px;padding:14px 18px;font-weight:800;cursor:pointer;list-style:none;position:sticky;top:0;background:var(--panel);z-index:1;border-bottom:1px solid var(--line2)}
+.gth summary::-webkit-details-marker{display:none}
+.gth summary svg{color:var(--c)}.gth summary .muted{font-weight:600;font-size:12.5px;margin-left:auto}
+.gth .theory{padding:4px 18px 16px;font-size:14.5px}
+.gth .theory h3{font-size:15.5px}
+@media (max-width:1020px){.gsplit.on{grid-template-columns:1fr}.gside{position:static;max-height:none;order:-1}.gth:not([open]) summary{border-bottom:0}}
 .qcard{background:var(--panel);border-radius:24px;box-shadow:var(--sh);padding:24px}
 .qcard .task{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
 .qcard .q{font-family:var(--serif);font-size:20px;line-height:1.5;margin-bottom:16px}
@@ -239,6 +248,17 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .score b{font-size:26px;color:var(--c)}
 .pop{position:absolute;z-index:120;background:var(--panel);border-radius:16px;box-shadow:0 18px 40px -12px rgba(10,9,45,.45);padding:12px 14px;max-width:300px;font-size:14px;border:1px solid var(--line2);animation:pageIn .15s}
 .pop .tr{font-weight:800;color:var(--c);font-size:16px}
+.lgap{display:inline-flex;align-items:center;justify-content:center;min-width:64px;height:26px;margin:0 3px;padding:0 10px;border-radius:9px;border:2px dashed color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 8%,transparent);font-family:var(--font);font-size:13px;font-weight:800;color:var(--c);vertical-align:2px}
+.sents{display:flex;flex-direction:column;gap:6px;margin:4px 0 10px;font-size:14px}
+.sents div{display:flex;gap:8px;background:var(--panel2);border-radius:10px;padding:7px 10px;line-height:1.45}
+.sents b{color:var(--c);flex:none}
+.mrow{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:14px}
+.mrow .ml{min-width:62px;font-weight:700;font-size:13px}
+.mrow.wide{flex-direction:column;align-items:stretch;gap:4px;padding:8px 0;border-bottom:1px dashed var(--line2)}
+.mrow.wide .ml{font-weight:600;font-size:14px;line-height:1.45}
+.mrow .mr{display:flex;align-items:center;gap:6px;min-width:0;flex:1}
+.mrow select{flex:1;min-width:0;max-width:100%}
+.mrow .ok{color:var(--good);font-weight:800}.mrow .no{color:var(--bad);font-weight:800;white-space:nowrap}
 .wpop{width:min(330px,calc(100vw - 20px));max-width:none;padding:12px 14px 12px;border-radius:18px;animation:wpIn .16s ease-out}
 .wpop::before{content:"";position:absolute;left:calc(var(--ax,50%) - 7px);top:-7px;width:14px;height:14px;background:var(--panel);border-left:1px solid var(--line2);border-top:1px solid var(--line2);transform:rotate(45deg)}
 .wpop.up::before{top:auto;bottom:-7px;transform:rotate(225deg)}
@@ -600,7 +620,7 @@ function renderGram(){
   const back=G.area==="frei"?crumb("#/frei/grammatik","Грамматика (свободный)"):crumb("#/grammatik","Grammatik");
   page(`${back}<h1>${esc(t.title)}</h1><p class="lead">${esc(t.ru||"")}</p>
    <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button></div></div>
-   <div id="gbody"></div>`);
+   <div class="gsplit${G.tab==="ex"?" on":""}"><div id="gbody"></div>${G.tab==="ex"&&t.theory?`<aside class="gside"><details class="gth" ${matchMedia("(min-width:1021px)").matches?"open":""}><summary>${ic("book",16)}Теория рядом<span class="muted">${G.area==="frei"?"":"шпаргалка к заданиям"}</span></summary><div class="theory">${t.theory}</div></details></aside>`:""}</div>`);
   $$("[data-gt]").forEach(b=>b.onclick=()=>{G.tab=b.dataset.gt;if(G.tab==="ex"){G.st.seenTheory=1;save(gramKey(),G.st)}renderGram()});
   const body=$("#gbody");
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
@@ -741,22 +761,28 @@ function tasksHTML(tasks,ans,checked){
       body=`<div class="seg">${L.map(([v,t])=>`<button data-q="${i}" data-v="${v}" class="${a===v?"sel":""} ${checked?(v===q.a?"right":a===v?"wrong":""):""}">${t}</button>`).join("")}</div>`}
     else if(q.t==="mc")body=`<div class="mco">${q.o.map((o,k)=>`<button data-q="${i}" data-v="${k}" class="${a===k?"sel":""} ${checked?(k===q.a?"right":a===k?"wrong":""):""}">${String.fromCharCode(97+k)}) ${esc(o)}</button>`).join("")}</div>`;
     else if(q.t==="open")body=`<textarea data-q="${i}" placeholder="Кратко, по-немецки" ${checked?"readonly":""}>${esc(a||"")}</textarea>`;
-    else if(q.t==="head")body=q.paras.map((pn,k)=>`<div class="row" style="margin:4px 0;flex-wrap:nowrap"><b style="min-width:62px;font-size:13px">Absatz ${pn}</b><select data-q="${i}" data-k="${k}" ${checked?"disabled":""}><option value="">—</option>${q.heads.map((h,hi)=>`<option value="${hi}" ${a&&a[k]===hi?"selected":""}>${String.fromCharCode(65+hi)}) ${esc(h)}</option>`).join("")}</select>${checked?(a&&a[k]===q.a[k]?' ✓':` <span style="color:var(--bad);font-weight:800;white-space:nowrap">→ ${String.fromCharCode(65+q.a[k])}</span>`):""}</div>`).join("");
+    else if(q.t==="head"||q.t==="sent"||q.t==="match"){
+      // много выпадающих списков: заголовок к абзацу, предложение в пропуск, высказывание к человеку
+      const rows=q.t==="head"?q.paras.map(pn=>"Absatz "+pn):q.t==="sent"?q.a.map((x,k)=>"Lücke "+(k+1)):q.items,opts=q.t==="head"?q.heads:q.t==="sent"?q.sents:q.opts;
+      const lab=hi=>q.t==="match"?esc(opts[hi]):String.fromCharCode(65+hi);
+      body=(q.t==="sent"?`<div class="sents">${q.sents.map((x,hi)=>`<div><b>${String.fromCharCode(65+hi)}</b>${esc(x)}</div>`).join("")}</div>`:"")+
+        rows.map((rw,k)=>`<div class="mrow${q.t==="match"?" wide":""}"><span class="ml">${q.t==="match"?`${k+1}. `:""}${esc(rw)}</span><span class="mr"><select data-q="${i}" data-k="${k}" ${checked?"disabled":""}><option value="">—</option>${opts.map((h,hi)=>`<option value="${hi}" ${a&&a[k]===hi?"selected":""}>${q.t==="head"?String.fromCharCode(65+hi)+") "+esc(h):q.t==="sent"?String.fromCharCode(65+hi)+") "+esc(h.length>60?h.slice(0,58)+"…":h):esc(h)}</option>`).join("")}</select>${checked?(a&&a[k]===q.a[k]?' <span class="ok">✓</span>':` <span class="no">→ ${lab(q.a[k])}</span>`):""}</span></div>`).join("");}
     else if(q.t==="gap")body=`<input data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} style="width:100%">`;
     let why="";
     if(checked){const right=taskRight(q,a);
       why=`<div class="why">${q.t==="open"||q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}${q.t==="open"?' <span class="muted">Сверь сам — засчитай, если смысл совпадает.</span>':""}</div>`;
-      if(q.t!=="open"&&q.t!=="head")why=(right?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+why}
+      if(q.t!=="open"&&q.t!=="head"&&q.t!=="sent"&&q.t!=="match")why=(right?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+why}
     return `<div class="tq"><div class="qt"><span class="qn">${i+1}.</span>${esc(q.q)}</div>${body}${why}</div>`;
   }).join("");
 }
+const gapsHTML=h=>h.replace(/\[\[(\d+)\]\]/g,(m,n)=>`<span class="lgap" data-gap="${n}">${n}</span>`);
 function taskRight(q,a){
   if(q.t==="tf"||q.t==="mc")return a===q.a;
   if(q.t==="gap")return (Array.isArray(q.a)?q.a:[q.a]).map(loose).includes(loose(a||""));
-  if(q.t==="head")return 0;
+  if(q.t==="head"||q.t==="sent"||q.t==="match")return 0;
   return null;
 }
-function taskScore(tasks,ans){let s=0,m=0;tasks.forEach((q,i)=>{if(q.t==="open")return;if(q.t==="head"){q.a.forEach((x,k)=>{m++;if(ans[i]&&ans[i][k]===x)s++});return}m++;if(taskRight(q,ans[i]))s++});return [s,m]}
+function taskScore(tasks,ans){let s=0,m=0;tasks.forEach((q,i)=>{if(q.t==="open")return;if(q.t==="head"||q.t==="sent"||q.t==="match"){q.a.forEach((x,k)=>{m++;if(ans[i]&&ans[i][k]===x)s++});return}m++;if(taskRight(q,ans[i]))s++});return [s,m]}
 function bindTasks(root,tasks,ans,onChange){
   root.querySelectorAll("button[data-q]").forEach(b=>b.onclick=()=>{const i=+b.dataset.q,q=tasks[i];ans[i]=q.t==="mc"?+b.dataset.v:b.dataset.v;onChange()});
   root.querySelectorAll("textarea[data-q],input[data-q]").forEach(t=>t.oninput=()=>{ans[+t.dataset.q]=t.value});
@@ -782,7 +808,7 @@ async function vLesen(area,id){
   page(`${crumb(base(area)+"lesen","Lesen")}
   <div class="reader" style="margin-top:10px">
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
-      ${(t.paras||[]).map((p,i)=>`<p class="pa"><span class="pn">${i+1}</span>${esc(p)}</p>`).join("")}</article>
+      ${(t.paras||[]).map((p,i)=>`<p class="pa"><span class="pn">${i+1}</span>${gapsHTML(esc(p))}</p>`).join("")}</article>
     <aside class="side" id="side">
       <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик) — перевод DeepL появится прямо у слова.</div></div>
       <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">${t.tasks.length} шт.</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div></div>

@@ -1959,6 +1959,427 @@
      "ex": "sich äußern zu + D."
     }
    ]
+  },
+  {
+   "id": "konnektoren",
+   "title": "Konnektoren und zweiteilige Konnektoren",
+   "ru": "deshalb, trotzdem, sowohl … als auch, je … desto: связываем предложения, как на EPD",
+   "level": "B2+",
+   "tag": "Strukturen und Wortschatz",
+   "theory": "<p>В части <i>Strukturen und Wortschatz</i> часто просят соединить два предложения связкой или заменить одну связку другой с тем же смыслом. Главное — помнить, <b class=\"k\">куда встаёт глагол</b>.</p><table><tr><th>Тип</th><th>Примеры</th><th>Порядок слов</th></tr><tr><td>союзы 0-позиции</td><td>und, aber, oder, denn, sondern</td><td>глагол на 2-м месте, как обычно: <i>…, denn sie <b>hat</b> keine Zeit.</i></td></tr><tr><td>подчинительные</td><td>weil, obwohl, damit, sodass, während, nachdem</td><td>глагол в конце: <i>…, obwohl sie keine Zeit <b>hat</b>.</i></td></tr><tr><td>наречия-связки</td><td>deshalb, trotzdem, dennoch, außerdem, folglich, stattdessen</td><td>занимают 1-е место, глагол сразу после: <i>Deshalb <b>bleibt</b> sie zu Hause.</i></td></tr></table><h3>Смысловые пары: союз ↔ наречие</h3><table><tr><th>Смысл</th><th>Придаточное</th><th>Главное (наречие)</th></tr><tr><td>причина → следствие</td><td>weil, da</td><td>deshalb, daher, deswegen, folglich</td></tr><tr><td>уступка</td><td>obwohl</td><td>trotzdem, dennoch, allerdings</td></tr><tr><td>цель</td><td>damit, um … zu</td><td>dazu, zu diesem Zweck</td></tr><tr><td>противопоставление</td><td>während, wohingegen</td><td>dagegen, hingegen, jedoch</td></tr><tr><td>замена</td><td>(an)statt dass/zu</td><td>stattdessen</td></tr></table><h3>Двухчастные связки</h3><div class=\"ex\"><b>sowohl</b> … <b>als auch</b> — и … и: Sowohl Studierende als auch Lehrende profitieren.</div><div class=\"ex\"><b>weder</b> … <b>noch</b> — ни … ни: Er hat weder Zeit noch Geld.</div><div class=\"ex\"><b>entweder</b> … <b>oder</b> — либо … либо</div><div class=\"ex\"><b>nicht nur</b> … <b>sondern auch</b> — не только … но и</div><div class=\"ex\"><b>zwar</b> … <b>aber</b> — хотя … но: Das Zimmer ist zwar klein, aber günstig.</div><div class=\"ex\"><b>je</b> + сравн., <b>desto/umso</b> + сравн.: Je mehr man liest, desto größer wird der Wortschatz.</div><div class=\"tip\">После <b>je</b> — придаточное (глагол в конце), после <b>desto</b> — главное с инверсией: <i>desto <b>wird</b> … </i> → <i>desto größer <b>wird</b> der Wortschatz</i>.</div>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Mieten sind stark gestiegen. ___ ziehen viele an den Stadtrand.",
+     "o": [
+      "Deshalb",
+      "Weil",
+      "Obwohl"
+     ],
+     "a": 0,
+     "ex": "Следствие, наречие на 1-м месте → Deshalb ziehen …"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie hat kaum geschlafen. ___ hat sie die Prüfung bestanden.",
+     "o": [
+      "Deshalb",
+      "Trotzdem",
+      "Damit"
+     ],
+     "a": 1,
+     "ex": "Уступка в главном предложении → trotzdem."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er lernt jeden Tag, ___ er die Prüfung besteht.",
+     "o": [
+      "damit",
+      "deshalb",
+      "sodass nicht"
+     ],
+     "a": 0,
+     "ex": "Цель с разными подлежащими/глаголом в конце → damit."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ Studierende ___ Lehrende nutzen die neue Bibliothek.",
+     "o": [
+      "Sowohl … als auch",
+      "Weder … oder",
+      "Entweder … noch"
+     ],
+     "a": 0,
+     "ex": "и … и → sowohl … als auch."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Wohnung ist ___ klein, ___ sehr günstig.",
+     "o": [
+      "zwar … aber",
+      "weder … noch",
+      "je … desto"
+     ],
+     "a": 0,
+     "ex": "Хотя … но → zwar … aber."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Je früher man anfängt, ___ leichter fällt die Prüfung.",
+     "a": [
+      "desto",
+      "umso"
+     ],
+     "ex": "je … desto/umso."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er hat ___ Zeit noch Lust, ins Kino zu gehen.",
+     "a": [
+      "weder"
+     ],
+     "ex": "weder … noch."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Viele fahren mit dem Auto, ___ die Öffis billiger wären.",
+     "o": [
+      "obwohl",
+      "trotzdem",
+      "dennoch"
+     ],
+     "a": 0,
+     "ex": "Глагол в конце → подчинительный союз obwohl."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "In Wien gibt es viele Grünflächen, ___ in anderen Großstädten Parks fehlen.",
+     "o": [
+      "während",
+      "stattdessen",
+      "deshalb"
+     ],
+     "a": 0,
+     "ex": "Противопоставление с глаголом в конце → während."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie hat nicht angerufen. ___ hat sie eine Nachricht geschrieben.",
+     "o": [
+      "Stattdessen",
+      "Anstatt",
+      "Statt dass"
+     ],
+     "a": 0,
+     "ex": "Наречие на 1-м месте + глагол → Stattdessen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Kosten sind gestiegen; ___ müssen die Gebühren erhöht werden.",
+     "a": [
+      "folglich",
+      "deshalb",
+      "daher",
+      "deswegen",
+      "somit"
+     ],
+     "ex": "Следствие: folglich/deshalb/daher."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Obwohl das Wetter schlecht war, fand das Fest statt.",
+     "s": "Das Wetter war schlecht. Trotzdem …",
+     "a": [
+      "Das Wetter war schlecht. Trotzdem fand das Fest statt.",
+      "Das Wetter war schlecht, trotzdem fand das Fest statt."
+     ],
+     "ex": "obwohl → trotzdem, инверсия."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Weil der Zug Verspätung hatte, kam sie zu spät.",
+     "s": "Der Zug hatte Verspätung. Deshalb …",
+     "a": [
+      "Der Zug hatte Verspätung. Deshalb kam sie zu spät.",
+      "Der Zug hatte Verspätung, deshalb kam sie zu spät."
+     ],
+     "ex": "weil → deshalb."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er spricht Deutsch und er spricht auch Englisch.",
+     "s": "Er spricht nicht nur …",
+     "a": [
+      "Er spricht nicht nur Deutsch, sondern auch Englisch."
+     ],
+     "ex": "nicht nur … sondern auch."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Wenn man mehr liest, wird der Wortschatz größer.",
+     "s": "Je …",
+     "a": [
+      "Je mehr man liest, desto größer wird der Wortschatz.",
+      "Je mehr man liest, umso größer wird der Wortschatz."
+     ],
+     "ex": "je + Komparativ (Verb am Ende), desto + Komparativ + Verb."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Regierung hat die Steuern gesenkt. Die Wirtschaft sollte dadurch wachsen.",
+     "s": "Die Regierung hat die Steuern gesenkt, damit …",
+     "a": [
+      "Die Regierung hat die Steuern gesenkt, damit die Wirtschaft wächst.",
+      "Die Regierung hat die Steuern gesenkt, damit die Wirtschaft wachsen würde."
+     ],
+     "ex": "Цель → damit + Verb am Ende."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Sie hat das Angebot nicht angenommen, sondern weiter gesucht.",
+     "s": "Anstatt …",
+     "a": [
+      "Anstatt das Angebot anzunehmen, hat sie weiter gesucht.",
+      "Statt das Angebot anzunehmen, hat sie weiter gesucht."
+     ],
+     "ex": "(an)statt … zu + Infinitiv при одном подлежащем."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Studie ist methodisch umstritten, ___ liefert sie interessante Hinweise.",
+     "o": [
+      "dennoch",
+      "obwohl",
+      "sodass"
+     ],
+     "a": 0,
+     "ex": "Инверсия «liefert sie» → наречие dennoch."
+    }
+   ]
+  },
+  {
+   "id": "fvg",
+   "title": "Funktionsverbgefüge",
+   "ru": "in Frage stellen, zur Verfügung stehen, Kritik üben: устойчивые обороты официального стиля",
+   "level": "C1",
+   "tag": "Strukturen und Wortschatz",
+   "theory": "<p><b class=\"k\">Funktionsverbgefüge</b> — это сочетание существительного и «служебного» глагола, которое по смыслу равно простому глаголу: <i>eine Entscheidung treffen = entscheiden</i>. Ими полны статьи и официальные тексты, и на EPD их просят либо заменить простым глаголом, либо, наоборот, вставить нужный глагол.</p><table><tr><th>Funktionsverbgefüge</th><th>= простой глагол</th></tr><tr><td>eine Entscheidung treffen</td><td>entscheiden</td></tr><tr><td>in Frage stellen</td><td>bezweifeln</td></tr><tr><td>zur Verfügung stehen / stellen</td><td>verfügbar sein / bereitstellen</td></tr><tr><td>Kritik üben an + D</td><td>kritisieren</td></tr><tr><td>in Anspruch nehmen</td><td>nutzen, beanspruchen</td></tr><tr><td>zum Ausdruck bringen</td><td>ausdrücken</td></tr><tr><td>Einfluss nehmen auf + A</td><td>beeinflussen</td></tr><tr><td>in Kraft treten</td><td>gültig werden</td></tr><tr><td>zur Sprache bringen / kommen</td><td>ansprechen / angesprochen werden</td></tr><tr><td>Rücksicht nehmen auf + A</td><td>berücksichtigen</td></tr><tr><td>einen Beitrag leisten zu + D</td><td>beitragen</td></tr><tr><td>in Betracht ziehen</td><td>erwägen</td></tr><tr><td>Maßnahmen ergreifen</td><td>handeln, vorgehen</td></tr><tr><td>zur Diskussion stehen</td><td>diskutiert werden</td></tr></table><h3>Актив и пассив</h3><div class=\"ex\">Das Thema <b>kommt</b> zur Sprache (= wird angesprochen) — <b>kommen/stehen</b> часто дают пассивный смысл.</div><div class=\"ex\">Er <b>bringt</b> das Thema zur Sprache (= spricht an) — <b>bringen/stellen/setzen</b> — активный.</div><div class=\"tip\">Учите оборот целиком: предлог + существительное + глагол. Артикль часто слит с предлогом: <i>zur, zum, ins</i>.</div>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Regierung muss bald eine Entscheidung ___.",
+     "o": [
+      "treffen",
+      "machen",
+      "stellen"
+     ],
+     "a": 0,
+     "ex": "eine Entscheidung treffen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Bibliothek stellt den Studierenden Laptops zur ___.",
+     "o": [
+      "Verfügung",
+      "Diskussion",
+      "Sprache"
+     ],
+     "a": 0,
+     "ex": "zur Verfügung stellen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Viele Bürger üben ___ an den neuen Regeln.",
+     "o": [
+      "Kritik",
+      "Einfluss",
+      "Rücksicht"
+     ],
+     "a": 0,
+     "ex": "Kritik üben an + D."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das neue Gesetz tritt im Jänner in ___.",
+     "o": [
+      "Kraft",
+      "Frage",
+      "Betracht"
+     ],
+     "a": 0,
+     "ex": "in Kraft treten."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Bitte nehmen Sie ___ auf die anderen Fahrgäste.",
+     "a": [
+      "Rücksicht"
+     ],
+     "ex": "Rücksicht nehmen auf + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Studie stellt die bisherigen Ergebnisse in ___.",
+     "a": [
+      "Frage"
+     ],
+     "ex": "in Frage stellen = bezweifeln."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Auf der Sitzung ___ das Problem endlich zur Sprache.",
+     "o": [
+      "kam",
+      "brachte",
+      "stellte"
+     ],
+     "a": 0,
+     "ex": "Пассивный смысл (wurde angesprochen) → kommen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Firma will auf die Politik Einfluss ___.",
+     "o": [
+      "nehmen",
+      "geben",
+      "treffen"
+     ],
+     "a": 0,
+     "ex": "Einfluss nehmen auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ehrenamtliche ___ einen wichtigen Beitrag zur Integration.",
+     "o": [
+      "leisten",
+      "machen",
+      "halten"
+     ],
+     "a": 0,
+     "ex": "einen Beitrag leisten."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ein Umzug ins Ausland kommt für sie nicht in ___.",
+     "a": [
+      "Frage",
+      "Betracht"
+     ],
+     "ex": "nicht in Frage/Betracht kommen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Stadt muss dringend Maßnahmen gegen die Hitze ___.",
+     "a": [
+      "ergreifen",
+      "treffen",
+      "setzen"
+     ],
+     "ex": "Maßnahmen ergreifen/treffen (в Австрии часто setzen)."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Studierenden kritisieren die hohen Gebühren.",
+     "s": "Die Studierenden üben …",
+     "a": [
+      "Die Studierenden üben Kritik an den hohen Gebühren."
+     ],
+     "ex": "kritisieren → Kritik üben an + D."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Universität stellt neue Räume bereit.",
+     "s": "Die Universität stellt neue Räume …",
+     "a": [
+      "Die Universität stellt neue Räume zur Verfügung."
+     ],
+     "ex": "bereitstellen → zur Verfügung stellen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele Eltern nutzen die Ganztagsbetreuung.",
+     "s": "Viele Eltern nehmen …",
+     "a": [
+      "Viele Eltern nehmen die Ganztagsbetreuung in Anspruch."
+     ],
+     "ex": "nutzen → in Anspruch nehmen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "In seiner Rede drückte er seine Sorge aus.",
+     "s": "In seiner Rede brachte er …",
+     "a": [
+      "In seiner Rede brachte er seine Sorge zum Ausdruck."
+     ],
+     "ex": "ausdrücken → zum Ausdruck bringen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Politik muss die Interessen der Jugend berücksichtigen.",
+     "s": "Die Politik muss auf …",
+     "a": [
+      "Die Politik muss auf die Interessen der Jugend Rücksicht nehmen."
+     ],
+     "ex": "berücksichtigen → Rücksicht nehmen auf + A."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man erwägt, die Studiengebühren abzuschaffen.",
+     "s": "Man zieht …",
+     "a": [
+      "Man zieht in Betracht, die Studiengebühren abzuschaffen.",
+      "Man zieht die Abschaffung der Studiengebühren in Betracht."
+     ],
+     "ex": "erwägen → in Betracht ziehen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Vorschlag ___ derzeit im Parlament zur Diskussion.",
+     "o": [
+      "steht",
+      "stellt",
+      "bringt"
+     ],
+     "a": 0,
+     "ex": "zur Diskussion stehen = wird diskutiert."
+    }
+   ]
   }
  ]
 }

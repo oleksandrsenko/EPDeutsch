@@ -1071,6 +1071,499 @@
    "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
    "words": 343,
    "minutes": 15
+  },
+  {
+   "id": "leerstand",
+   "level": "B2+",
+   "topic": "Wohnen",
+   "kicker": "Wohnen",
+   "title": "Leere Wohnungen, volle Wartelisten",
+   "lead": "In Wien stehen tausende Wohnungen leer, während Studierende monatelang suchen. Eine Abgabe soll das ändern – doch Fachleute sind uneins.",
+   "paras": [
+    "Wer in Wien eine leistbare Wohnung sucht, braucht Geduld. Auf eine freie Garçonnière in einem beliebten Bezirk melden sich oft mehr als hundert Interessierte. [[1]] Nach Schätzungen der Stadt stehen nämlich mehrere zehntausend Wohnungen dauerhaft leer – manche seit Jahren.",
+    "Die Gründe dafür sind vielfältig. Ein Teil der Wohnungen wird gerade saniert oder soll verkauft werden. [[2]] Andere Eigentümerinnen und Eigentümer scheuen den Aufwand einer Vermietung oder fürchten Mieter, die nicht pünktlich zahlen.",
+    "Besonders umstritten sind Wohnungen, die bewusst nicht vermietet werden, weil ihr Wert ohnehin steigt. Für Anleger ist eine leere Wohnung oft weniger riskant als ein langfristiger Mietvertrag. [[3]]",
+    "Mehrere Bundesländer haben deshalb eine Leerstandsabgabe eingeführt: Wer eine Wohnung länger als ein halbes Jahr nicht nutzt, muss zahlen. Die Beträge sind allerdings so niedrig, dass Kritiker von einer symbolischen Maßnahme sprechen. [[4]]",
+    "Befürworter halten dagegen, dass schon die Diskussion Wirkung zeige. Erstmals werde Leerstand systematisch erfasst, und Gemeinden wüssten endlich, wo Potenzial liege. Außerdem könnten die Einnahmen in den sozialen Wohnbau fließen.",
+    "Für Studierende bleibt die Lage vorerst angespannt. [[5]] Wer schneller fündig werden will, weicht in Wohngemeinschaften oder an den Stadtrand aus – und nimmt längere Wege zur Universität in Kauf."
+   ],
+   "tasks": [
+    {
+     "t": "sent",
+     "q": "Welcher Satz passt in welche Lücke (1–5)? Zwei Sätze bleiben übrig.",
+     "sents": [
+      "Gleichzeitig fragen sich viele, warum das Angebot so knapp ist.",
+      "Bei einer Abgabe von wenigen Euro pro Quadratmeter lohne sich das Leerstehenlassen weiterhin.",
+      "Dieser Leerstand gilt als kurzfristig und damit als unproblematisch.",
+      "Eine schnelle Entspannung des Marktes erwartet niemand.",
+      "Deshalb werden in Wien seit Jahren keine neuen Wohnungen mehr gebaut.",
+      "Die Mieten sinken dadurch automatisch in allen Bezirken.",
+      "Diese Praxis wird in der Fachsprache als „Betongold“ bezeichnet."
+     ],
+     "a": [
+      0,
+      2,
+      6,
+      1,
+      3
+     ],
+     "ex": "1: Frage nach dem knappen Angebot → Leerstand; 2: Sanierung/Verkauf = kurzfristig; 3: Wohnung als Wertanlage = Betongold; 4: niedrige Beträge → lohnt sich weiterhin; 5: Lage angespannt → keine schnelle Entspannung."
+    },
+    {
+     "t": "tf",
+     "q": "Laut Text werden leere Wohnungen in einigen Bundesländern besteuert.",
+     "a": "r",
+     "ex": "Absatz 4: Leerstandsabgabe in mehreren Bundesländern."
+    },
+    {
+     "t": "tf",
+     "q": "Die Einnahmen aus der Abgabe fließen bereits vollständig in den sozialen Wohnbau.",
+     "a": "f",
+     "ex": "Absatz 5: „könnten … fließen“ – nur eine Möglichkeit."
+    },
+    {
+     "t": "tf",
+     "q": "Studierende in Wien zahlen im Durchschnitt mehr als die Hälfte ihres Einkommens für Miete.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 194,
+   "minutes": 10
+  },
+  {
+   "id": "bahnreise",
+   "level": "C1",
+   "topic": "Tourismus und Reisen",
+   "kicker": "Reisen",
+   "title": "Nachtzug statt Billigflug? Drei Reisende, drei Meinungen",
+   "lead": "Immer mehr Menschen fahren mit dem Zug in den Urlaub. Wir haben drei Reisende gefragt, was sie antreibt – und was sie stört.",
+   "paras": [
+    "Mira, 24, Studentin der Umweltwissenschaften: „Für mich ist der Nachtzug keine Notlösung, sondern Teil der Reise. Ich steige abends in Wien ein und wache in Venedig auf – ohne Sicherheitskontrolle und ohne Stress am Flughafen. Natürlich spielt auch das Klima eine Rolle. Ich könnte es mir nicht mehr erklären, für ein Wochenende nach Barcelona zu fliegen, wenn es Alternativen gibt.“",
+    "Thomas, 41, Vertriebsleiter: „Ich würde gerne öfter Zug fahren, aber die Realität sieht anders aus. Die Tickets sind oft teurer als ein Flug, und wenn ein Anschluss ausfällt, ist der halbe Urlaubstag weg. Beruflich fliege ich weiterhin, weil ich mir Verspätungen schlicht nicht leisten kann. Privat versuche ich zumindest innerhalb Europas auf die Bahn umzusteigen.“",
+    "Ilse, 67, Pensionistin: „Wir sind früher viel geflogen, heute nehmen wir lieber den Zug. Das hat weniger mit Ideologie zu tun als mit Bequemlichkeit: Man hat Platz, kann lesen, sieht die Landschaft. Was mich ärgert, ist das Buchungssystem. Wer nicht mit dem Internet aufgewachsen ist, verliert bei grenzüberschreitenden Verbindungen schnell den Überblick.“",
+    "Verkehrsexperten bestätigen den Trend, warnen aber vor zu hohen Erwartungen. Die Nachfrage nach Nachtzügen übersteige das Angebot deutlich, neue Garnituren seien jedoch teuer und würden erst in einigen Jahren ausgeliefert. Solange Kerosin steuerlich begünstigt werde, bleibe der Wettbewerb ungleich."
+   ],
+   "tasks": [
+    {
+     "t": "match",
+     "q": "Wer sagt das? Ordne die Aussagen den Personen zu (Mira, Thomas, Ilse). Eine Person kann mehrmals vorkommen.",
+     "opts": [
+      "Mira",
+      "Thomas",
+      "Ilse"
+     ],
+     "items": [
+      "Für diese Person ist Fahren mit dem Zug vor allem angenehmer.",
+      "Diese Person nennt den Preis als Hindernis.",
+      "Diese Person beschreibt die Fahrt selbst als Erlebnis.",
+      "Diese Person findet das Buchen von Verbindungen ins Ausland kompliziert.",
+      "Diese Person unterscheidet zwischen beruflichen und privaten Reisen.",
+      "Diese Person hält Kurzstreckenflüge in der Freizeit für schwer vertretbar.",
+      "Diese Person fürchtet, durch Verspätungen Zeit zu verlieren."
+     ],
+     "a": [
+      2,
+      1,
+      0,
+      2,
+      1,
+      0,
+      1
+     ],
+     "ex": "Ilse: Bequemlichkeit, Buchungssystem; Thomas: Preis, beruflich/privat, Anschluss fällt aus; Mira: Teil der Reise, Wochenendflug nicht erklärbar."
+    },
+    {
+     "t": "mc",
+     "q": "Was sagen Verkehrsexperten über Nachtzüge?",
+     "o": [
+      "Das Angebot ist größer als die Nachfrage.",
+      "Neue Züge werden kurzfristig mehr Plätze schaffen.",
+      "Die Nachfrage ist größer, als das Angebot derzeit erlaubt.",
+      "Nachtzüge sind steuerlich gegenüber Flügen bevorzugt."
+     ],
+     "a": 2,
+     "ex": "Absatz 4: Nachfrage übersteigt das Angebot deutlich."
+    },
+    {
+     "t": "mc",
+     "q": "Warum ist der Wettbewerb laut Experten „ungleich“?",
+     "o": [
+      "Weil Flugbenzin steuerlich begünstigt ist.",
+      "Weil Züge langsamer sind.",
+      "Weil Bahntickets nur online verkauft werden.",
+      "Weil Flughäfen staatlich gefördert werden."
+     ],
+     "a": 0,
+     "ex": "Absatz 4: Kerosin steuerlich begünstigt."
+    }
+   ],
+   "src": "Übungstext im Stil einer Umfrage aus der Tageszeitung der Standard",
+   "words": 206,
+   "minutes": 10
+  },
+  {
+   "id": "schlaf",
+   "level": "B2+",
+   "topic": "Gesundheit",
+   "kicker": "Gesundheit",
+   "title": "Zu wenig Schlaf, zu viel Bildschirm",
+   "lead": "Studierende schlafen im Schnitt kürzer als andere Altersgruppen. Forscherinnen sehen darin ein unterschätztes Gesundheitsrisiko.",
+   "paras": [
+    "Kurz vor Mitternacht noch eine Serie, danach ein letzter Blick aufs Handy – und schon ist es zwei Uhr. Was nach einem harmlosen Abend klingt, ist für viele junge Erwachsene Alltag. Befragungen an Hochschulen zeigen, dass ein großer Teil der Studierenden unter der Woche weniger als sieben Stunden schläft.",
+    "Die Folgen reichen weit über Müdigkeit hinaus. Wer dauerhaft zu wenig schläft, kann sich schlechter konzentrieren, vergisst Gelerntes schneller und reagiert gereizter. Langfristig steigt das Risiko für Übergewicht, Bluthochdruck und depressive Verstimmungen.",
+    "Eine wichtige Rolle spielt das Licht von Bildschirmen. Es signalisiert dem Gehirn, dass noch Tag ist, und verzögert die Ausschüttung des Schlafhormons Melatonin. Noch stärker wirkt allerdings der Inhalt: Nachrichten, Chats und Videos halten das Gehirn in Alarmbereitschaft.",
+    "Hinzu kommt der unregelmäßige Rhythmus. Vorlesungen um acht Uhr, Nebenjob am Abend, lange Wochenenden – der innere Takt gerät durcheinander. Fachleute sprechen von „sozialem Jetlag“, wenn sich die Schlafzeiten an freien Tagen um mehrere Stunden verschieben.",
+    "Die gute Nachricht: Schon kleine Veränderungen helfen. Eine feste Aufstehzeit, das Handy außerhalb des Schlafzimmers und eine Stunde ohne Bildschirm vor dem Zubettgehen verbessern die Schlafqualität nachweislich.",
+    "Einige Universitäten reagieren inzwischen. Sie verlegen Pflichtveranstaltungen nach hinten oder bieten Kurse zu Stressbewältigung an. Ob das reicht, ist offen – entscheidend bleibe, so die Forscherinnen, das eigene Verhalten."
+   ],
+   "tasks": [
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu welchem Absatz? Zwei Überschriften bleiben übrig.",
+     "paras": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "heads": [
+      "Mehr als nur müde",
+      "Hochschulen beginnen umzudenken",
+      "Warum der Bildschirm wach hält",
+      "Schlaf als Luxus der Reichen",
+      "Wenn der Rhythmus aus dem Takt gerät",
+      "Einfache Regeln mit Wirkung",
+      "Medikamente als einzige Lösung"
+     ],
+     "a": [
+      0,
+      2,
+      4,
+      5,
+      1
+     ],
+     "ex": "2: Folgen; 3: Licht und Inhalte; 4: sozialer Jetlag; 5: kleine Veränderungen; 6: Universitäten reagieren."
+    },
+    {
+     "t": "tf",
+     "q": "Laut Text wirkt der Inhalt auf dem Bildschirm stärker als das Licht.",
+     "a": "r",
+     "ex": "Absatz 3: „Noch stärker wirkt allerdings der Inhalt“."
+    },
+    {
+     "t": "tf",
+     "q": "Sozialer Jetlag entsteht durch Fernreisen in andere Zeitzonen.",
+     "a": "f",
+     "ex": "Absatz 4: durch verschobene Schlafzeiten an freien Tagen."
+    },
+    {
+     "t": "tf",
+     "q": "Alle Universitäten in Österreich haben ihre Vorlesungen später angesetzt.",
+     "a": "f",
+     "ex": "Absatz 6: nur einige Universitäten."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Maßnahmen, die laut Text die Schlafqualität verbessern.",
+     "a": "feste Aufstehzeit; Handy außerhalb des Schlafzimmers; eine Stunde ohne Bildschirm vor dem Schlafen (zwei davon)"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 211,
+   "minutes": 12
+  },
+  {
+   "id": "pflegekraefte",
+   "level": "C1+",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "kicker": "Arbeit",
+   "title": "Wer pflegt, wenn keiner mehr pflegt?",
+   "lead": "Österreich fehlen in den kommenden Jahren zehntausende Pflegekräfte. Anwerbung im Ausland soll die Lücke schließen – doch das allein wird kaum genügen.",
+   "paras": [
+    "Die Rechnung ist schnell gemacht: Die Bevölkerung altert, die Zahl der Pflegebedürftigen wächst, während gleichzeitig viele Pflegekräfte in Pension gehen. Prognosen zufolge müssten bis zum Ende des Jahrzehnts zehntausende zusätzliche Stellen besetzt werden. Schon heute können manche Heime Betten nicht belegen, weil schlicht das Personal fehlt.",
+    "Die Politik setzt deshalb verstärkt auf Fachkräfte aus dem Ausland. Pflegerinnen aus Südostasien oder Lateinamerika sollen über erleichterte Verfahren schneller arbeiten dürfen. Doch die Anerkennung ausländischer Ausbildungen dauert oft Monate, und ohne ausreichende Deutschkenntnisse ist der Berufsalltag kaum zu bewältigen.",
+    "Gewerkschaften kritisieren, dass Anwerbung von den eigentlichen Problemen ablenke. Viele, die den Beruf gewählt haben, verlassen ihn nach wenigen Jahren wieder – wegen Schichtdiensten, körperlicher Belastung und eines Gefühls, den Menschen nicht gerecht werden zu können. Wer diese Abwanderung nicht stoppe, schöpfe Wasser mit einem Sieb.",
+    "Einige Einrichtungen experimentieren daher mit neuen Modellen: kleinere Teams mit mehr Verantwortung, verlässliche Dienstpläne, die nicht kurzfristig umgeworfen werden, oder eine Vier-Tage-Woche bei vollem Lohnausgleich. Erste Auswertungen deuten darauf hin, dass Krankenstände sinken und weniger Personal kündigt.",
+    "Ökonominnen geben zu bedenken, dass solche Modelle Geld kosten, das Länder und Gemeinden erst aufbringen müssen. Gleichzeitig verursache Personalmangel selbst enorme Kosten – etwa durch Leiharbeit oder durch Angehörige, die ihre Erwerbsarbeit reduzieren, um zu pflegen. Langfristig, so ihr Fazit, sei es teurer, nichts zu tun."
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Warum können manche Pflegeheime schon heute nicht alle Betten belegen?",
+     "a": "Weil Personal fehlt."
+    },
+    {
+     "t": "open",
+     "q": "Welche zwei Hindernisse nennt der Text bei der Anwerbung ausländischer Pflegekräfte?",
+     "a": "lange Anerkennung der Ausbildung; fehlende Deutschkenntnisse"
+    },
+    {
+     "t": "open",
+     "q": "Was meinen die Gewerkschaften mit dem Bild vom „Sieb“?",
+     "a": "Neue Kräfte zu holen nützt wenig, solange viele den Beruf wieder verlassen."
+    },
+    {
+     "t": "open",
+     "q": "Welche positiven Effekte zeigen erste Auswertungen der neuen Arbeitsmodelle?",
+     "a": "weniger Krankenstände, weniger Kündigungen"
+    },
+    {
+     "t": "open",
+     "q": "Welche Kosten entstehen laut Ökonominnen durch den Personalmangel selbst? Nennen Sie ein Beispiel.",
+     "a": "Leiharbeit; Angehörige reduzieren ihre Erwerbsarbeit"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Haltung vertreten die Ökonominnen?",
+     "o": [
+      "Neue Arbeitsmodelle sind zu teuer und daher abzulehnen.",
+      "Nichtstun ist auf Dauer kostspieliger als Investitionen.",
+      "Leiharbeit ist die günstigste Lösung.",
+      "Angehörige sollten die Pflege übernehmen."
+     ],
+     "a": 1,
+     "ex": "Absatz 5: langfristig teurer, nichts zu tun."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Funktion hat Absatz 4 im Text?",
+     "o": [
+      "Er widerlegt die Kritik der Gewerkschaften.",
+      "Er stellt Lösungsansätze aus der Praxis vor.",
+      "Er beschreibt die Lage in anderen Ländern.",
+      "Er fasst die Prognosen zusammen."
+     ],
+     "a": 1,
+     "ex": "Neue Modelle in Einrichtungen = Lösungsansätze."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 215,
+   "minutes": 14
+  },
+  {
+   "id": "vaeterkarenz",
+   "level": "C1",
+   "topic": "Beziehungen und Geschlechtergerechtigkeit",
+   "kicker": "Familie",
+   "title": "Papa geht in Karenz – aber nur kurz",
+   "lead": "Immer mehr Väter nehmen Elternzeit. Doch die meisten bleiben nur wenige Wochen zu Hause. Woran liegt das?",
+   "paras": [
+    "Noch vor zwanzig Jahren war ein Vater im Kinderwagen-Café eine Ausnahme. Heute gehört er in vielen Wiener Bezirken zum Straßenbild. Der Anteil der Männer, die Kinderbetreuungsgeld beziehen, ist deutlich gestiegen – und doch erzählt die Statistik nur die halbe Geschichte.",
+    "Denn ein Großteil der Väter bleibt nur zwei bis drei Monate zu Hause, oft genau so lange, wie es für den vollen Bezug nötig ist. Die Mütter übernehmen weiterhin den weitaus größeren Teil der Betreuung, und viele kehren danach nur in Teilzeit in den Beruf zurück.",
+    "Als wichtigsten Grund nennen Paare das Geld. Da Männer im Durchschnitt mehr verdienen, verliert die Familie mehr Einkommen, wenn der Vater länger pausiert. So verstärkt sich die Ungleichheit selbst: Wer weniger verdient, bleibt länger zu Hause – und verdient danach noch weniger.",
+    "Doch nicht nur finanzielle Überlegungen spielen eine Rolle. Väter berichten von skeptischen Vorgesetzten und der Sorge, bei Beförderungen übergangen zu werden. In manchen Branchen gilt eine längere Karenz noch immer als Zeichen mangelnder Ernsthaftigkeit.",
+    "Länder wie Island oder Schweden haben darauf mit nicht übertragbaren Monaten reagiert: Nimmt der Vater sie nicht, verfallen sie. Seitdem ist die Beteiligung der Väter dort deutlich gestiegen. In Österreich wird ein ähnliches Modell diskutiert, eine Mehrheit dafür gibt es bislang nicht.",
+    "Forscherinnen betonen, dass sich frühe Weichenstellungen auswirken. Väter, die längere Zeit allein für ihr Kind verantwortlich waren, beteiligen sich auch Jahre später stärker an Haushalt und Erziehung."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Heute beziehen mehr Väter Kinderbetreuungsgeld als vor zwanzig Jahren.",
+     "a": "r",
+     "ex": "Absatz 1: Anteil deutlich gestiegen."
+    },
+    {
+     "t": "tf",
+     "q": "Die meisten Väter bleiben länger zu Hause als die Mütter.",
+     "a": "f",
+     "ex": "Absatz 2: Mütter übernehmen den weitaus größeren Teil."
+    },
+    {
+     "t": "tf",
+     "q": "Väter, die in Karenz gehen, werden gesetzlich vor Kündigung geschützt.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "tf",
+     "q": "Einige Väter fürchten berufliche Nachteile durch eine längere Karenz.",
+     "a": "r",
+     "ex": "Absatz 4: Sorge, bei Beförderungen übergangen zu werden."
+    },
+    {
+     "t": "tf",
+     "q": "Österreich hat nicht übertragbare Vätermonate bereits eingeführt.",
+     "a": "f",
+     "ex": "Absatz 5: nur diskutiert, keine Mehrheit."
+    },
+    {
+     "t": "tf",
+     "q": "In Island verdienen Väter mehr als Mütter.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "mc",
+     "q": "Was meint der Text mit „verstärkt sich die Ungleichheit selbst“?",
+     "o": [
+      "Väter verdienen nach der Karenz mehr.",
+      "Wer weniger verdient, pausiert länger und verdient danach noch weniger.",
+      "Paare entscheiden sich gegen Kinder.",
+      "Unternehmen zahlen Frauen bewusst weniger."
+     ],
+     "a": 1,
+     "ex": "Absatz 3, letzter Satz."
+    },
+    {
+     "t": "mc",
+     "q": "Welche langfristige Wirkung längerer Väterkarenz nennen Forscherinnen?",
+     "o": [
+      "Höhere Gehälter für Väter.",
+      "Mehr Beteiligung der Väter an Haushalt und Erziehung.",
+      "Kürzere Karenz der Mütter beim zweiten Kind.",
+      "Weniger Konflikte am Arbeitsplatz."
+     ],
+     "a": 1,
+     "ex": "Absatz 6."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 231,
+   "minutes": 16
+  },
+  {
+   "id": "reparatur",
+   "level": "B2+",
+   "topic": "Konsumgesellschaft",
+   "kicker": "Konsum",
+   "title": "Reparieren statt wegwerfen",
+   "lead": "Seit es den Reparaturbonus gibt, haben Werkstätten wieder Kundschaft. Doch reicht ein Zuschuss, um die Wegwerfkultur zu ändern?",
+   "paras": [
+    "Der Toaster funktioniert nicht mehr, das Handydisplay ist gesprungen, die Waschmaschine pumpt kein Wasser ab. Lange Zeit hätten die meisten Menschen in solchen Fällen ein neues Gerät gekauft. [[1]] Mit dem Reparaturbonus übernimmt der Staat einen Teil der Kosten, wenn ein Elektrogerät repariert statt ersetzt wird.",
+    "In vielen Werkstätten hat sich die Auftragslage seither spürbar verbessert. Kleine Betriebe, die jahrelang ums Überleben kämpften, stellen wieder Lehrlinge ein. [[2]] Denn nicht jede Reparatur ist überhaupt möglich.",
+    "Viele Geräte sind so gebaut, dass sie sich kaum öffnen lassen. Akkus sind verklebt, Ersatzteile werden nur wenige Jahre angeboten oder sind teurer als das halbe Gerät. [[3]] Die EU hat deshalb ein „Recht auf Reparatur“ beschlossen, das Herstellerinnen verpflichtet, Ersatzteile länger bereitzuhalten.",
+    "Umweltorganisationen begrüßen den Bonus, sehen aber vor allem einen kulturellen Wandel als nötig an. Solange neue Produkte billig und ständig verfügbar seien, bleibe Reparieren für viele die zweite Wahl. [[4]]",
+    "In Repair-Cafés zeigen Freiwillige, wie man einfache Defekte selbst behebt. Die Treffen sind gut besucht, auch von jungen Leuten, die dort weniger Geld sparen als vielmehr etwas lernen wollen."
+   ],
+   "tasks": [
+    {
+     "t": "sent",
+     "q": "Welcher Satz passt in welche Lücke (1–4)? Zwei Sätze bleiben übrig.",
+     "sents": [
+      "Dennoch zeigt die Erfahrung der Betriebe auch die Grenzen des Modells.",
+      "Seit einiger Zeit gibt es dafür jedoch einen finanziellen Anreiz.",
+      "Der Bonus wird deshalb ab dem nächsten Jahr abgeschafft.",
+      "Dann lohnt sich die Reparatur wirtschaftlich nicht mehr.",
+      "Entscheidend sei, ob Menschen ihre Dinge wieder mehr wertschätzen.",
+      "Repair-Cafés verlangen für ihre Hilfe hohe Gebühren."
+     ],
+     "a": [
+      1,
+      0,
+      3,
+      4
+     ],
+     "ex": "1: finanzieller Anreiz → Reparaturbonus; 2: „Dennoch … Grenzen“ → „Denn nicht jede Reparatur …“; 3: Ersatzteile teuer → lohnt sich nicht; 4: kultureller Wandel → Wertschätzung."
+    },
+    {
+     "t": "mc",
+     "q": "Was verpflichtet das „Recht auf Reparatur“?",
+     "o": [
+      "Werkstätten, günstiger zu arbeiten.",
+      "Herstellerinnen, Ersatzteile länger anzubieten.",
+      "Kundinnen, Geräte reparieren zu lassen.",
+      "Den Staat, alle Reparaturen zu bezahlen."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Warum besuchen junge Leute Repair-Cafés laut Text vor allem?",
+     "o": [
+      "Um Geld zu sparen.",
+      "Um etwas zu lernen.",
+      "Um neue Geräte zu kaufen.",
+      "Um Freiwillige zu werden."
+     ],
+     "a": 1,
+     "ex": "Absatz 5: weniger Geld sparen als etwas lernen."
+    },
+    {
+     "t": "open",
+     "q": "Welche positive Folge hat der Reparaturbonus für kleine Betriebe?",
+     "a": "mehr Aufträge; sie stellen wieder Lehrlinge ein"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 177,
+   "minutes": 10
+  },
+  {
+   "id": "nachbarschaft",
+   "level": "C1",
+   "topic": "Gesellschaft und soziales Engagement",
+   "kicker": "Gesellschaft",
+   "title": "Die Nachbarin per App",
+   "lead": "Plattformen für Nachbarschaftshilfe boomen. Sie bringen Menschen zusammen, die sich sonst nie begegnet wären – und werfen neue Fragen auf.",
+   "paras": [
+    "Im dritten Stock wohnt seit vierzig Jahren Frau K., im ersten ein junges Paar, das vor zwei Monaten eingezogen ist. Kennengelernt haben sie sich nicht im Stiegenhaus, sondern über eine App: Frau K. suchte jemanden, der ihr einen Wasserkasten nach oben trägt.",
+    "Solche Geschichten sind typisch für eine wachsende Zahl digitaler Nachbarschaftsnetzwerke. Man verleiht Bohrmaschinen, tauscht Kinderkleidung, organisiert Hoffeste oder gießt im Urlaub die Pflanzen der anderen. Besonders während der Pandemie haben sich viele Menschen erstmals angemeldet – und sind geblieben.",
+    "Soziologinnen sehen darin eine Antwort auf die Anonymität der Großstadt. Klassische Formen des Engagements, etwa in Vereinen, verlieren an Mitgliedern, weil sie regelmäßige Verpflichtungen verlangen. Die Apps erlauben dagegen Hilfe nach Bedarf: spontan, kurz und ohne langfristige Bindung.",
+    "Kritiker geben jedoch zu bedenken, dass gerade jene, die am meisten Unterstützung bräuchten, oft nicht erreicht werden. Ältere Menschen ohne Smartphone oder Personen, die wenig Deutsch sprechen, bleiben außen vor. Manche Plattformen reagieren mit Aushängen im Haus oder Telefonnummern für Anfragen.",
+    "Hinzu kommen Fragen des Datenschutzes. Wer angibt, wann er verreist ist, verrät womöglich mehr, als ihm lieb ist. Die Betreiber versichern, Adressen nur Nachbarn im Umkreis anzuzeigen; überprüfen lässt sich das für Nutzer kaum.",
+    "Frau K. sieht das gelassen. Für sie zählt, dass sie wieder Menschen im Haus kennt. Das junge Paar kommt inzwischen auch ohne App vorbei – meistens sonntags, auf einen Kaffee."
+   ],
+   "tasks": [
+    {
+     "t": "match",
+     "q": "In welchem Absatz (1–6) steht das? Nicht jeder Absatz wird gebraucht.",
+     "opts": [
+      "Absatz 1",
+      "Absatz 2",
+      "Absatz 3",
+      "Absatz 4",
+      "Absatz 5",
+      "Absatz 6"
+     ],
+     "items": [
+      "Es wird erklärt, warum traditionelle Vereine Mitglieder verlieren.",
+      "Es wird ein mögliches Risiko für die Privatsphäre genannt.",
+      "Es wird beschrieben, wie aus einer digitalen Bekanntschaft eine persönliche wurde.",
+      "Es werden Gruppen genannt, die von den Apps schwer erreicht werden.",
+      "Es werden Beispiele für typische Formen gegenseitiger Hilfe aufgezählt."
+     ],
+     "a": [
+      2,
+      4,
+      5,
+      3,
+      1
+     ],
+     "ex": "Vereine: 3; Datenschutz: 5; ohne App vorbei: 6; Ältere/wenig Deutsch: 4; Bohrmaschinen, Kleidung, Hoffeste: 2."
+    },
+    {
+     "t": "tf",
+     "q": "Viele Menschen haben sich während der Pandemie erstmals angemeldet.",
+     "a": "r",
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Die Betreiber lassen ihre Datenschutzregeln von einer unabhängigen Stelle prüfen.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts; nur: für Nutzer kaum überprüfbar."
+    },
+    {
+     "t": "mc",
+     "q": "Was unterscheidet die Apps laut Soziologinnen von klassischem Engagement?",
+     "o": [
+      "Sie verlangen regelmäßige Termine.",
+      "Sie ermöglichen spontane Hilfe ohne feste Bindung.",
+      "Sie sind nur für junge Menschen gedacht.",
+      "Sie ersetzen den Kontakt im Stiegenhaus vollständig."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 224,
+   "minutes": 11
   }
  ]
 }

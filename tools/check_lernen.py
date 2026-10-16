@@ -16,7 +16,7 @@ def err(where, msg):
     print("  ОШИБКА %s: %s" % (where, msg))
 
 
-def check_task(where, t, paras=0):
+def check_task(where, t, paras=0, ptexts=None):
     k = t.get("t")
     if not t.get("q"):
         err(where, "пустой вопрос")
@@ -41,6 +41,18 @@ def check_task(where, t, paras=0):
     elif k == "gap":
         if not t.get("a"):
             err(where, "gap: нет ответа")
+    elif k == "sent":
+        sents, a = t.get("sents") or [], t.get("a") or []
+        if len(sents) <= len(a) or any(not isinstance(x, int) or not 0 <= x < len(sents) for x in a) or len(set(a)) != len(a):
+            err(where, "sent: предложений должно быть больше, чем пропусков, ответы — разные индексы")
+        if ptexts is not None:
+            marks = sum(p.count("[[%d]]" % (n + 1)) for p in ptexts for n in range(len(a)))
+            if marks != len(a):
+                err(where, "sent: в тексте %d меток [[n]] на %d пропусков" % (marks, len(a)))
+    elif k == "match":
+        opts, items, a = t.get("opts") or [], t.get("items") or [], t.get("a") or []
+        if len(items) != len(a) or len(opts) < 2 or any(not isinstance(x, int) or not 0 <= x < len(opts) for x in a):
+            err(where, "match: ответы не совпадают с высказываниями/вариантами")
     else:
         err(where, "неизвестный тип задания %r" % k)
 
@@ -90,7 +102,7 @@ def main():
                     ids.add(t["id"])
                     if t.get("level") not in LEVELS: err(w, "уровень %r" % t.get("level"))
                     if not t.get("paras"): err(w, "нет текста")
-                    for i, q in enumerate(t.get("tasks", [])): check_task("%s #%d" % (w, i + 1), q, len(t.get("paras", [])))
+                    for i, q in enumerate(t.get("tasks", [])): check_task("%s #%d" % (w, i + 1), q, len(t.get("paras", [])), t.get("paras", []))
             elif kind == "hoeren":
                 ids = set()
                 for it in d.get("items", []):

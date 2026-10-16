@@ -279,7 +279,7 @@ Object.assign(window.EP,{modbar,search,searchField,icon:ic,MODS});
 "use strict";
 const ic=window.EP.icon,MODS=window.EP.MODS,esc=window.EP.esc;
 const NAME={home:"Deutsch",woerter:"Wörter",schreiben:"Schreiben",grammatik:"Grammatik",lesen:"Lesen",hoeren:"Hören",sprechen:"Sprechen",frei:"Свободный",plan:"План",settings:"Настройки",start:"Учёба"};
-const DESC={home:"план дня и отсчёт до экзамена",woerter:"карточки слов EPD",schreiben:"тексты с проверкой ИИ",grammatik:"8 тем EPD с теорией",lesen:"статьи и задания",hoeren:"аудио и вопросы",sprechen:"устная часть с разбором",frei:"живой немецкий без экзамена",plan:"даты, норма, формат тестов"};
+const DESC={home:"план дня и отсчёт до экзамена",woerter:"карточки слов EPD",schreiben:"тексты с проверкой ИИ",grammatik:"темы EPD с теорией",lesen:"статьи и задания",hoeren:"аудио и вопросы",sprechen:"устная часть с разбором",frei:"живой немецкий без экзамена",plan:"даты, норма, формат тестов"};
 const modOf=k=>MODS.find(m=>m[0]===k);
 const color=k=>(modOf(k)||[])[4]||"#0E8C7F";
 // знак EPDeutsch: буква D и жёлтая галочка, цвет квадрата — цвет модуля

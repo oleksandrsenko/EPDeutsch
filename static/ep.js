@@ -189,7 +189,7 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-sdrop .ep-sru{color:var(--muted);font-weight:500;margin-left:6px}
 .ep-sdrop mark{background:var(--mark,#FFF1B8);color:inherit;border-radius:3px}
 .ep-sfbtn{display:none;flex:none;width:40px;height:40px;border:0;border-radius:12px;background:var(--panel2);color:var(--fg);cursor:pointer;place-items:center;margin-left:auto}
-@media (max-width:640px){.ep-sf{display:none}.ep-sfbtn{display:grid}}
+@media (max-width:640px){.ep-sf{display:none}.ep-sfbtn{display:grid}.ep-sfbtn+*{margin-left:6px!important}}
 .ep-sov{position:fixed;inset:0;z-index:200;background:rgba(10,9,45,.42);display:flex;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;animation:epIn .15s ease-out}
 .ep-sbox{width:min(640px,100%);max-height:78vh;display:flex;flex-direction:column;background:var(--panel);color:var(--fg);border-radius:22px;box-shadow:0 30px 70px -20px rgba(10,9,45,.5);overflow:hidden;font-family:var(--font)}
 .ep-shead{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line2)}

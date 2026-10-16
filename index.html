@@ -3912,7 +3912,7 @@ function unmask(){const d=document.documentElement;if(unmasking||!d.classList.co
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
   const fonts=document.fonts&&document.fonts.ready?Promise.race([document.fonts.ready,wait(1200)]):Promise.resolve();
   const out=()=>{d.classList.add("bootout");setTimeout(()=>d.classList.remove("boot","bootacc","bootnav","bootout"),520)};
-  Promise.all([fonts,wait(450)]).then(()=>document.hidden?out():requestAnimationFrame(()=>requestAnimationFrame(out)))} // в фоновой вкладке кадров нет — не ждём их
+  Promise.all([fonts,wait(450)]).then(()=>{let done=false;const o=()=>{if(!done){done=true;out()}};requestAnimationFrame(()=>requestAnimationFrame(o));setTimeout(o,150)})} // в фоновой вкладке кадров нет — не ждём их
 setTimeout(unmask,6000); // страховка, если сервер не ответил
 function go(t){
   const fromTab=curTab;

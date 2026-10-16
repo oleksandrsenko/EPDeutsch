@@ -8,7 +8,7 @@
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
 <script>
-(function(){var d=document.documentElement;try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");if(o.theme)d.setAttribute("data-theme",o.theme)}catch(e){}})();
+(function(){var d=document.documentElement;d.classList.add("boot");try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");if(o.theme)d.setAttribute("data-theme",o.theme)}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,8 @@
 *{box-sizing:border-box}[hidden]{display:none!important}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--font);min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
-.top{display:flex;align-items:center;gap:12px;padding:14px 24px;max-width:1040px;width:100%;margin:0 auto}
+.top{position:sticky;top:0;z-index:30;height:66px;background:var(--panel);border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:12px;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));width:100%}
+@media (max-width:640px){.top{height:58px;padding:0 12px}.me>span:first-child{display:none}}
 .sp{flex:1}
 .me{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--muted);font-size:14px}
 .uava{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-weight:800}
@@ -75,17 +76,14 @@ input:focus{border-color:var(--primary)}
 .btn:hover{background:var(--primary-h)}.btn:active{transform:scale(.98)}.btn:disabled{opacity:.6;cursor:wait}
 .err{margin-top:12px;background:var(--bad-soft);color:var(--bad);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600}
 .hint{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.45}
-.load{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-items:center;transition:opacity .35s,visibility .35s}
-.load i{width:56px;height:56px;border-radius:50%;border:3px solid var(--primary-soft);border-top-color:var(--primary);animation:spin .9s linear infinite}
-body.ready .load{opacity:0;visibility:hidden}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media (max-width:720px){.langs{grid-template-columns:1fr}.lang{min-height:0}.top,main{padding-left:16px;padding-right:16px}.me span{display:none}}
 @media (prefers-reduced-motion:reduce){.lang,.auth{animation:none;opacity:1;transform:none}.soon{opacity:.75}}
 </style>
 </head>
 <body>
-<div class="load"><i></i></div>
-<header class="top"><div class="sp"></div><div class="me" id="me"></div></header>
+<script>EP.boot("start")</script>
+<header class="top"><script>document.write(EP.logo("start","/"))</script><div class="sp"></div><div class="me" id="me"></div></header>
 <main>
   <section id="auth" class="auth" hidden>
     <div class="oli-w" id="authOli"></div>
@@ -162,7 +160,7 @@ $("#form").onsubmit=async e=>{
     $("#pick").hidden=false;
     ["/de","/data/de/grammatik.json"].forEach(u=>fetch(u,{credentials:"same-origin"}).catch(()=>{}));
   }
-  document.body.classList.add("ready");
+  document.body.classList.add("ready");EP.ready();
 })();
 </script>
 </body>

@@ -271,7 +271,8 @@ function ready(){const d=document.documentElement;if(!d.classList.contains("boot
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
   const fonts=document.fonts&&document.fonts.ready?Promise.race([document.fonts.ready,wait(1500)]):Promise.resolve();
   const left=Math.max(0,450-(performance.now()-bootT0));
-  Promise.all([fonts,wait(left)]).then(()=>{const out=()=>{d.classList.add("bootout");setTimeout(()=>{d.classList.remove("boot","bootout")},520)};document.hidden?out():requestAnimationFrame(()=>requestAnimationFrame(out))});
+  Promise.all([fonts,wait(left)]).then(()=>{let done=false;const out=()=>{if(done)return;done=true;d.classList.add("bootout");setTimeout(()=>{d.classList.remove("boot","bootout")},520)};
+    requestAnimationFrame(()=>requestAnimationFrame(out));setTimeout(out,150)}); // кадр отрисован — или, в фоновой вкладке, просто через 150 мс
 }
 
 // ---------- выезжающее меню (для /de, где нет своей боковой панели) ----------
@@ -302,7 +303,8 @@ body.navopen .ep-burger .bx,body.ep-dopen .ep-burger .bx{display:inline-flex}
 .top .ep-mods{margin-left:6px}
 @media (max-width:1180px){.ep-logo .ep-ln{display:none}}
 @media (max-width:760px){.top .ep-mods,.top .ep-msep{display:none!important}.ep-burger{width:38px;height:38px}}
-@media (max-width:380px){.ep-logo .ep-ls{display:none}}
+@media (max-width:640px){.top .home-de,.top a.home{display:none!important}.top{gap:8px!important}}
+@media (max-width:340px){.ep-logo .ep-ls{display:none}}
 /* ---- список модулей (в меню и на телефоне) ---- */
 .ep-modlist{display:flex;flex-direction:column;gap:2px}
 .ep-modlist a{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:14px;color:var(--fg);text-decoration:none}

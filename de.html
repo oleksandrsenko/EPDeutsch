@@ -110,7 +110,7 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .btn.cta:hover{background:var(--primary-h);border-color:var(--primary-h)}
 .hgoal{position:relative;z-index:1;margin-top:22px;padding-top:18px;border-top:1px solid var(--line2)}
 .hg-t{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14.5px;font-weight:700;color:var(--muted);margin-bottom:10px}
-.hg-t b{color:var(--fg);font-weight:800;font-variant-numeric:tabular-nums}
+.hg-t b{color:var(--fg);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
 .hgoal.done .hg-t b{color:var(--good)}
 .hgoal>.bar{height:10px;margin-bottom:12px}.hgoal>.bar i{background:var(--good)}
 .hfacts{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line2);font-size:14px;font-weight:600;color:var(--muted)}
@@ -426,7 +426,7 @@ function header(cur){
   $("#subnav").innerHTML=(frei?`<a href="#/frei" style="--c:var(--c-f)"${h.length===1?' aria-current="page"':""}><span class="ni">${EP.icon("star",16)}</span>Свободный</a>`:"")+sub.map(link).join("");
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD.slice(0,4);
   $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-ep-drawer>${EP.icon("menu",22)}Меню</button>`;
-  EP.drawer(k,`<div class="ep-dgt">Ещё</div><div class="ep-dlinks"><a href="#/plan"${k==="plan"?' aria-current="page"':""}>${EP.icon("cal",18)}План и даты</a><a href="#/settings"${k==="settings"?' aria-current="page"':""}>${EP.icon("gear",18)}Настройки</a><a href="/">${EP.icon("globe",18)}Выбор языка</a></div>`);
+  EP.drawer(k,`<div class="ep-dgt">Ещё</div><div class="ep-dlinks"><a href="#/settings"${k==="settings"?' aria-current="page"':""}>${EP.icon("gear",18)}Настройки</a><a href="/">${EP.icon("globe",18)}Выбор языка</a></div>`);
   if(ST.user)$("#ubtn").innerHTML=EP.uava(ST.user,34);
   const p=get("plan",{}),d=dateToDay(p.epd),cd=$("#cdChip");
   if(d&&d>=today()){cd.hidden=false;cd.innerHTML=`${EP.icon("cal",17)}<b>${d-today()}</b><small>дн. до EPD</small>`;cd.title="Дней до EPD"}else cd.hidden=true;

@@ -711,7 +711,9 @@ function renderGram(){
 function summaryHTML(){const n=G.queue.length;return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены — повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
 function startGram(lv){
   const t=G.t;let idx=t.items.map((x,i)=>i);
-  if(lv>0)idx=idx.filter(i=>(t.items[i].lv||1)===lv);
+  if(lv>0){idx=idx.filter(i=>(t.items[i].lv||1)===lv);
+    // в ступени до 100 заданий: круг — 15 штук, сначала нерешённые, потом ошибки, потом остальные
+    if(idx.length>15){const r=G.st.r||{},rank=i=>r[i]===undefined?0:r[i]===0?1:2;idx=idx.map(i=>[rank(i),Math.random(),i]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).slice(0,15).map(x=>x[2])}}
   if(lv===-1)idx=idx.filter(i=>G.st.r[i]===0);
   if(!idx.length){toast(lv===-1?"Ошибок нет":"Пусто");return}
   G.queue=idx;G.pos=0;G.ok=0;G.done=false;G.answered=false;G.retry=[];renderGram();

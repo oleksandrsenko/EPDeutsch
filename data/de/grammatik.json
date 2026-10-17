@@ -275,6 +275,852 @@
      ],
      "a": 0,
      "ex": "Придаточное: hätte + двойной инфинитив (anstrengen müssen)."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn ich früher aufgestanden ___, hätte ich den Zug erreicht.",
+     "o": [
+      "wäre",
+      "hätte",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "aufstehen → ist aufgestanden → wäre aufgestanden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn du mich gefragt ___, hätte ich dir geholfen.",
+     "o": [
+      "hättest",
+      "würdest",
+      "wärst"
+     ],
+     "a": 0,
+     "ex": "fragen → hat gefragt → hättest gefragt."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich ___ gern mitgekommen, aber ich war krank.",
+     "o": [
+      "würde",
+      "wäre",
+      "hätte"
+     ],
+     "a": 1,
+     "ex": "mitkommen → ist mitgekommen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie ___ das Buch gelesen, wenn sie Zeit gehabt hätte.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "lesen → hat gelesen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir ___ früher losgefahren, wenn wir das gewusst hätten.",
+     "o": [
+      "hätten",
+      "würden",
+      "wären"
+     ],
+     "a": 2,
+     "ex": "losfahren → ist losgefahren."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn es nicht geregnet ___, wären wir spazieren gegangen.",
+     "o": [
+      "würde",
+      "wäre",
+      "hätte"
+     ],
+     "a": 2,
+     "ex": "regnen → hat geregnet."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er ___ fast den Bus verpasst.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "verpassen → hat verpasst: «чуть не» = hätte fast."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ohne Navi ___ wir uns verlaufen.",
+     "o": [
+      "hätten",
+      "würden",
+      "wären"
+     ],
+     "a": 0,
+     "ex": "sich verlaufen → hat sich verlaufen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Beinahe ___ ich hingefallen.",
+     "o": [
+      "wäre",
+      "hätte",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "hinfallen → ist hingefallen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn ihr pünktlich gekommen ___, hättet ihr den Anfang gesehen.",
+     "o": [
+      "hättet",
+      "würdet",
+      "wärt"
+     ],
+     "a": 2,
+     "ex": "kommen → ist gekommen."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn ich das gewusst ___, hätte ich anders entschieden.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "wissen → hat gewusst.",
+     "hint": "haben или sein?"
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn sie zu Hause geblieben ___, hätte sie den Unfall nicht gehabt.",
+     "a": [
+      "wäre"
+     ],
+     "ex": "bleiben → ist geblieben.",
+     "hint": "haben или sein?"
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich hätte dir eine Karte ___ (schicken), wenn ich deine Adresse gehabt hätte.",
+     "a": [
+      "geschickt"
+     ],
+     "ex": "Partizip II: geschickt."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir wären gern länger ___ (bleiben).",
+     "a": [
+      "geblieben"
+     ],
+     "ex": "Partizip II von bleiben."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Du ___ mich anrufen können!",
+     "a": [
+      "hättest"
+     ],
+     "ex": "Modalverb in der Vergangenheit: hättest … können."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Fast ___ ich meinen Pass vergessen.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "vergessen → hat vergessen."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Ich hatte keine Zeit. Deshalb bin ich nicht gekommen.",
+     "s": "Wenn ich Zeit gehabt hätte, …",
+     "a": [
+      "Wenn ich Zeit gehabt hätte, wäre ich gekommen."
+     ],
+     "ex": "Irreale Bedingung: Plusquamperfekt-Konjunktiv in beiden Teilen."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Es hat geschneit. Deshalb sind wir nicht gefahren.",
+     "s": "Wenn es nicht geschneit hätte, …",
+     "a": [
+      "Wenn es nicht geschneit hätte, wären wir gefahren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er hat nicht gelernt. Er hat die Prüfung nicht bestanden.",
+     "s": "Wenn er gelernt hätte, …",
+     "a": [
+      "Wenn er gelernt hätte, hätte er die Prüfung bestanden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Sie ist zu spät aufgestanden. Sie hat den Zug verpasst.",
+     "s": "Wenn sie nicht zu spät aufgestanden wäre, …",
+     "a": [
+      "Wenn sie nicht zu spät aufgestanden wäre, hätte sie den Zug nicht verpasst."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Hätte ich das gewusst, ___ ich nicht gekommen.",
+     "o": [
+      "hätte",
+      "würde",
+      "wäre"
+     ],
+     "a": 2,
+     "ex": "Без wenn: глагол на 1-м месте в условии."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Du hättest mir das früher sagen ___.",
+     "o": [
+      "gesollt",
+      "sollst",
+      "sollen"
+     ],
+     "a": 2,
+     "ex": "Модальный глагол: hätte + Infinitiv + Infinitiv Modalverb (Ersatzinfinitiv)."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Wir hätten das Projekt nicht ohne eure Hilfe abschließen ___.",
+     "o": [
+      "konnten",
+      "können",
+      "gekonnt"
+     ],
+     "a": 1,
+     "ex": "Ersatzinfinitiv: hätten … abschließen können."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er tut so, als ___ er nichts davon gewusst.",
+     "o": [
+      "wäre",
+      "hätte",
+      "habe"
+     ],
+     "a": 1,
+     "ex": "als ob/als + Konjunktiv II Vergangenheit."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie sieht aus, als ob sie die ganze Nacht nicht geschlafen ___.",
+     "o": [
+      "hätte",
+      "würde",
+      "wäre"
+     ],
+     "a": 0,
+     "ex": "schlafen → hat geschlafen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich wünschte, ich ___ damals mehr Deutsch gelernt.",
+     "o": [
+      "habe",
+      "wäre",
+      "hätte"
+     ],
+     "a": 2,
+     "ex": "Irrealer Wunsch in der Vergangenheit."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Wenn wir doch nur früher ___!",
+     "o": [
+      "losgefahren hätten",
+      "losgefahren wären",
+      "losfahren würden"
+     ],
+     "a": 1,
+     "ex": "Wunschsatz mit doch nur."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "An deiner Stelle ___ ich das Angebot angenommen.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "annehmen → hat angenommen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das Projekt wäre beinahe ___.",
+     "o": [
+      "gescheitert",
+      "scheitern",
+      "scheiterte"
+     ],
+     "a": 0,
+     "ex": "scheitern → ist gescheitert."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ohne den Kredit ___ die Firma pleitegegangen.",
+     "o": [
+      "würde",
+      "hätte",
+      "wäre"
+     ],
+     "a": 2,
+     "ex": "pleitegehen → ist pleitegegangen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich hätte das Formular früher ___ ___ (abgeben müssen).",
+     "a": [
+      "abgeben müssen"
+     ],
+     "ex": "hätte + Infinitiv + müssen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "___ du mich gefragt, hätte ich dir die Antwort gesagt.",
+     "a": [
+      "Hättest"
+     ],
+     "ex": "Условие без wenn: Hättest du …"
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie redet, als ___ sie selbst dabei gewesen.",
+     "a": [
+      "wäre"
+     ],
+     "ex": "sein → ist gewesen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wäre der Zug pünktlich gewesen, ___ wir den Anschluss erreicht.",
+     "a": [
+      "hätten"
+     ],
+     "ex": "erreichen → hat erreicht."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich wünschte, du ___ mitgekommen.",
+     "a": [
+      "wärst"
+     ],
+     "ex": "mitkommen → ist mitgekommen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Das ___ nicht passieren dürfen!",
+     "a": [
+      "hätte"
+     ],
+     "ex": "hätte … passieren dürfen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich habe nicht auf dich gehört. Das bereue ich.",
+     "s": "Ich wünschte, …",
+     "a": [
+      "Ich wünschte, ich hätte auf dich gehört."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wenn ich das gewusst hätte, wäre ich nicht gekommen.",
+     "s": "Hätte ich …",
+     "a": [
+      "Hätte ich das gewusst, wäre ich nicht gekommen."
+     ],
+     "ex": "Без wenn — глагол вперёд."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Es war richtig, dass du zum Arzt gegangen bist. Aber du hast zu lange gewartet.",
+     "s": "Du hättest früher …",
+     "a": [
+      "Du hättest früher zum Arzt gehen sollen."
+     ],
+     "ex": "Упрёк: hätte … sollen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er hat sich nicht entschuldigt. Das wäre nötig gewesen.",
+     "s": "Er hätte sich …",
+     "a": [
+      "Er hätte sich entschuldigen müssen.",
+      "Er hätte sich entschuldigen sollen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie war nicht dabei, aber sie erzählt die Geschichte sehr genau.",
+     "s": "Sie erzählt die Geschichte, als ob …",
+     "a": [
+      "Sie erzählt die Geschichte, als ob sie dabei gewesen wäre."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir haben das Spiel fast verloren.",
+     "s": "Wir hätten …",
+     "a": [
+      "Wir hätten das Spiel fast verloren."
+     ],
+     "ex": "«чуть не» → hätte fast."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Hätte die Regierung rechtzeitig gehandelt, ___ die Krise vermieden werden können.",
+     "o": [
+      "würde",
+      "hätte",
+      "wäre"
+     ],
+     "a": 1,
+     "ex": "Passiv + Modalverb: hätte … vermieden werden können."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Brücke ___ längst saniert werden müssen.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 0,
+     "ex": "hätte … saniert werden müssen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Wäre der Antrag rechtzeitig eingereicht worden, ___ er bearbeitet worden.",
+     "o": [
+      "würde",
+      "hätte",
+      "wäre"
+     ],
+     "a": 2,
+     "ex": "Passiv Perfekt: ist bearbeitet worden → wäre bearbeitet worden."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Es ___ besser gewesen, die Studie früher zu veröffentlichen.",
+     "o": [
+      "würde",
+      "wäre",
+      "hätte"
+     ],
+     "a": 1,
+     "ex": "sein → ist gewesen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Ohne diese Förderung ___ viele Studierende ihr Studium abbrechen müssen.",
+     "o": [
+      "würden",
+      "hätten",
+      "wären"
+     ],
+     "a": 1,
+     "ex": "hätten … abbrechen müssen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Man hätte erwarten ___, dass die Mieten sinken.",
+     "o": [
+      "gekonnt",
+      "kann",
+      "können"
+     ],
+     "a": 2,
+     "ex": "Ersatzinfinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Selbst wenn er sich beeilt ___, hätte er den Flug nicht mehr erreicht.",
+     "o": [
+      "habe",
+      "wäre",
+      "hätte"
+     ],
+     "a": 2,
+     "ex": "sich beeilen → hat sich beeilt."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Nicht auszudenken, was passiert ___, wenn niemand eingegriffen hätte.",
+     "o": [
+      "würde",
+      "hätte",
+      "wäre"
+     ],
+     "a": 2,
+     "ex": "passieren → ist passiert."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Fehler wäre leicht zu ___ gewesen.",
+     "o": [
+      "vermeidend",
+      "vermieden",
+      "vermeiden"
+     ],
+     "a": 2,
+     "ex": "wäre zu + Infinitiv gewesen = hätte vermieden werden können."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Ich hätte nie gedacht, dass er so schnell aufgeben ___.",
+     "o": [
+      "hätte",
+      "wäre",
+      "würde"
+     ],
+     "a": 2,
+     "ex": "Будущее в прошлом после «hätte gedacht» → würde."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Das Unglück hätte verhindert ___ ___ (werden können).",
+     "a": [
+      "werden können"
+     ],
+     "ex": "Passiv + Modalverb im Konjunktiv II der Vergangenheit."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Hätten wir die Warnungen ernst genommen, ___ uns viel Ärger erspart geblieben.",
+     "a": [
+      "wäre"
+     ],
+     "ex": "erspart bleiben → ist erspart geblieben."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Wohnung hätte schon im Mai ___ werden sollen (übergeben).",
+     "a": [
+      "übergeben"
+     ],
+     "ex": "hätte … übergeben werden sollen."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Er tat so, als ___ er die Mail nie bekommen.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "bekommen → hat bekommen."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Es wäre klüger ___, vorher zu fragen.",
+     "a": [
+      "gewesen"
+     ],
+     "ex": "wäre … gewesen."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Ohne die Impfung ___ die Pandemie viel mehr Opfer gefordert.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "fordern → hat gefordert."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man hat die Straße nicht rechtzeitig repariert. Das war ein Fehler.",
+     "s": "Die Straße hätte …",
+     "a": [
+      "Die Straße hätte rechtzeitig repariert werden müssen.",
+      "Die Straße hätte rechtzeitig repariert werden sollen."
+     ],
+     "ex": "Passiv + Modalverb."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Firma hat nicht in die Digitalisierung investiert. Deshalb hat sie Kunden verloren.",
+     "s": "Hätte die Firma …",
+     "a": [
+      "Hätte die Firma in die Digitalisierung investiert, hätte sie keine Kunden verloren.",
+      "Hätte die Firma in die Digitalisierung investiert, hätte sie nicht Kunden verloren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es war möglich, das Problem zu lösen, aber niemand hat es versucht.",
+     "s": "Das Problem hätte …",
+     "a": [
+      "Das Problem hätte gelöst werden können."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Prüfung wurde nicht verschoben, obwohl viele krank waren.",
+     "s": "Die Prüfung hätte …",
+     "a": [
+      "Die Prüfung hätte verschoben werden sollen.",
+      "Die Prüfung hätte verschoben werden müssen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er hat so getan, als habe er nichts gehört.",
+     "s": "Er hat so getan, als ob …",
+     "a": [
+      "Er hat so getan, als ob er nichts gehört hätte."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ich habe die Gelegenheit nicht genutzt. Jetzt tut es mir leid.",
+     "s": "Hätte ich doch …",
+     "a": [
+      "Hätte ich doch die Gelegenheit genutzt!",
+      "Hätte ich die Gelegenheit doch genutzt!"
+     ],
+     "ex": "Wunschsatz ohne wenn."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Daten wurden nicht gesichert. Deshalb sind sie verloren gegangen.",
+     "s": "Wären die Daten …",
+     "a": [
+      "Wären die Daten gesichert worden, wären sie nicht verloren gegangen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Sie hätte den Job bekommen können, aber sie hat sich nicht beworben.",
+     "s": "Wenn sie sich beworben hätte, …",
+     "a": [
+      "Wenn sie sich beworben hätte, hätte sie den Job bekommen können.",
+      "Wenn sie sich beworben hätte, hätte sie den Job bekommen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn du nicht gekommen ___, wäre die Party langweilig gewesen.",
+     "o": [
+      "wärst",
+      "würdest",
+      "hättest"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich ___ dich fast nicht erkannt.",
+     "o": [
+      "hätte",
+      "würde",
+      "wäre"
+     ],
+     "a": 0,
+     "ex": "erkennen → hat erkannt."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn wir mehr Geld gehabt ___, hätten wir eine größere Wohnung gemietet.",
+     "a": [
+      "hätten"
+     ],
+     "ex": "haben → hat gehabt."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ohne Wecker ___ ich verschlafen.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "verschlafen → hat verschlafen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie hätte die Stelle bekommen, ___ sie sich rechtzeitig beworben hätte.",
+     "o": [
+      "ob",
+      "als",
+      "wenn"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich hätte nicht gedacht, dass das so teuer ___.",
+     "o": [
+      "gewesen",
+      "hätte",
+      "wäre"
+     ],
+     "a": 2,
+     "ex": "Здесь простое Konjunktiv II от sein (= ist): wäre."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wenn der Arzt früher gekommen ___, hätte man ihm helfen können.",
+     "a": [
+      "wäre"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir hätten gern ein Zimmer mit Balkon ___ (haben).",
+     "a": [
+      "gehabt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Leider bin ich nicht nach Graz gefahren.",
+     "s": "Ich wäre gern …",
+     "a": [
+      "Ich wäre gern nach Graz gefahren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Schade, dass ihr nicht länger geblieben seid.",
+     "s": "Ich wünschte, ihr …",
+     "a": [
+      "Ich wünschte, ihr wärt länger geblieben."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Das Ergebnis ___ anders ausgefallen, hätte man mehr Personen befragt.",
+     "o": [
+      "würde",
+      "wäre",
+      "hätte"
+     ],
+     "a": 1,
+     "ex": "ausfallen → ist ausgefallen."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Gefahr ___ früher erkannt werden müssen.",
+     "a": [
+      "hätte"
+     ],
+     "ex": "Passiv + Modalverb: hätte … erkannt werden müssen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man hat die Bevölkerung nicht informiert. Viele haben sich deshalb geärgert.",
+     "s": "Wäre die Bevölkerung …",
+     "a": [
+      "Wäre die Bevölkerung informiert worden, hätten sich nicht so viele geärgert.",
+      "Wäre die Bevölkerung informiert worden, hätten sich viele nicht geärgert."
+     ],
+     "ex": ""
     }
    ],
    "write": [
@@ -564,6 +1410,810 @@
      ],
      "ex": "",
      "task": "Formen Sie mit „sich lassen“ um."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Wasser ist nicht ___. (= kann nicht getrunken werden)",
+     "o": [
+      "zu trinken lassen",
+      "getrunken",
+      "trinkbar"
+     ],
+     "a": 2,
+     "ex": "-bar = kann … werden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Aufgabe ist leicht ___. (= kann leicht gelöst werden)",
+     "o": [
+      "lösen",
+      "gelöst",
+      "lösbar"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Koffer lässt sich nicht ___.",
+     "o": [
+      "schließen",
+      "geschlossen",
+      "schließbar"
+     ],
+     "a": 0,
+     "ex": "sich lassen + Infinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Tür ___ sich nur mit einem Schlüssel öffnen.",
+     "o": [
+      "wird",
+      "lässt",
+      "ist"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Antrag ist bis Freitag ___.",
+     "o": [
+      "eingereicht",
+      "einzureichen",
+      "einreichbar"
+     ],
+     "a": 1,
+     "ex": "sein + zu + Infinitiv = muss … werden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Rechnung ist sofort zu ___.",
+     "o": [
+      "bezahlen",
+      "bezahlbar",
+      "bezahlt"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Diese Wohnung ist für Studierende nicht ___. (= kann nicht bezahlt werden)",
+     "o": [
+      "bezahlt",
+      "zu bezahlen lassen",
+      "bezahlbar"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Problem lässt sich ___.",
+     "o": [
+      "gelöst",
+      "lösbar",
+      "lösen"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Seine Handschrift ist kaum ___. (= kann kaum gelesen werden)",
+     "o": [
+      "lesbar",
+      "zu lesen lässt",
+      "gelesen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Ergebnis war ___. (= konnte vorausgesehen werden)",
+     "o": [
+      "vorhersehbar",
+      "vorhergesehen",
+      "vorherzusehen lassen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Der Fehler ___ sich leicht korrigieren.",
+     "a": [
+      "lässt"
+     ],
+     "ex": "sich lassen + Infinitiv."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Unterlagen sind bis Montag ___ (abgeben).",
+     "a": [
+      "abzugeben"
+     ],
+     "ex": "Trennbares Verb: ab-zu-geben."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Das Gerät ist nicht ___ (reparieren, -bar).",
+     "a": [
+      "reparierbar"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Diese Pilze sind nicht ___ (essen, -bar).",
+     "a": [
+      "essbar"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Medikamente sind kühl ___ (lagern).",
+     "a": [
+      "zu lagern"
+     ],
+     "ex": "sein + zu + Infinitiv."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Das lässt sich nicht ___ (ändern).",
+     "a": [
+      "ändern"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Das Formular muss vollständig ausgefüllt werden.",
+     "s": "Das Formular ist …",
+     "a": [
+      "Das Formular ist vollständig auszufüllen."
+     ],
+     "ex": "muss … werden → ist … zu + Infinitiv."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Der Text kann leicht verstanden werden.",
+     "s": "Der Text ist …",
+     "a": [
+      "Der Text ist leicht verständlich.",
+      "Der Text ist leicht zu verstehen."
+     ],
+     "ex": "-lich / sein + zu."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Tür kann nicht geöffnet werden.",
+     "s": "Die Tür lässt …",
+     "a": [
+      "Die Tür lässt sich nicht öffnen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Das Wasser kann nicht getrunken werden.",
+     "s": "Das Wasser ist …",
+     "a": [
+      "Das Wasser ist nicht trinkbar.",
+      "Das Wasser ist nicht zu trinken."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Gebühr muss sofort bezahlt werden.",
+     "s": "Die Gebühr ist …",
+     "a": [
+      "Die Gebühr ist sofort zu bezahlen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Diese Frage kann nicht beantwortet werden.",
+     "s": "Diese Frage ist …",
+     "a": [
+      "Diese Frage ist nicht zu beantworten.",
+      "Diese Frage ist nicht beantwortbar."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Regeln sind unbedingt ___. (= müssen eingehalten werden)",
+     "o": [
+      "eingehalten",
+      "einhaltbar",
+      "einzuhalten"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Folgen ___ sich noch nicht abschätzen.",
+     "o": [
+      "werden",
+      "lassen",
+      "sind"
+     ],
+     "a": 1,
+     "ex": "Plural: lassen sich."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Situation ist nicht mehr ___. (= kann nicht mehr kontrolliert werden)",
+     "o": [
+      "zu kontrollieren lassen",
+      "kontrollierbar",
+      "kontrolliert"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Der Termin lässt sich leider nicht ___.",
+     "o": [
+      "verschoben",
+      "verschiebbar",
+      "verschieben"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "„Das Ziel ist erreichbar“ bedeutet:",
+     "o": [
+      "Das Ziel kann erreicht werden.",
+      "Das Ziel muss erreicht werden.",
+      "Das Ziel wurde erreicht."
+     ],
+     "a": 0,
+     "ex": "-bar = kann."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "„Der Müll ist zu trennen“ bedeutet:",
+     "o": [
+      "Der Müll muss getrennt werden.",
+      "Der Müll wurde getrennt.",
+      "Der Müll kann nicht getrennt werden."
+     ],
+     "a": 0,
+     "ex": "Hier: Pflicht."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "„Die Schäden sind kaum zu übersehen“ bedeutet:",
+     "o": [
+      "Man muss die Schäden übersehen.",
+      "Die Schäden wurden übersehen.",
+      "Man kann die Schäden kaum übersehen."
+     ],
+     "a": 2,
+     "ex": "sein + zu kann auch «можно» bedeuten."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Ergebnisse ___ sich gut mit früheren Studien vergleichen.",
+     "o": [
+      "werden",
+      "lassen",
+      "sind"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Diese Entwicklung war nicht ___.",
+     "o": [
+      "aufzuhalten",
+      "aufgehalten",
+      "aufhaltbar zu"
+     ],
+     "a": 0,
+     "ex": "aufhalten → aufzuhalten."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Frist ist nicht ___.",
+     "o": [
+      "verlängerbar",
+      "zu verlängern lassen",
+      "verlängerlich"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Anmeldung ___ sich auch online erledigen.",
+     "a": [
+      "lässt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Der Lärm war kaum ___ (ertragen, sein + zu).",
+     "a": [
+      "zu ertragen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Diese Theorie ist nicht ___ (beweisen, -bar).",
+     "a": [
+      "beweisbar"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Kosten ___ sich nur schwer kalkulieren.",
+     "a": [
+      "lassen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Gefährliche Stoffe sind gesondert ___ (entsorgen).",
+     "a": [
+      "zu entsorgen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Der Schaden ist nicht ___ (wiedergutmachen, sein + zu).",
+     "a": [
+      "wiedergutzumachen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man kann diese Behauptung nicht beweisen.",
+     "s": "Diese Behauptung lässt …",
+     "a": [
+      "Diese Behauptung lässt sich nicht beweisen."
+     ],
+     "ex": "man kann → lässt sich."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man muss die Hausordnung beachten.",
+     "s": "Die Hausordnung ist …",
+     "a": [
+      "Die Hausordnung ist zu beachten."
+     ],
+     "ex": "man muss → ist zu."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man kann den Unterschied kaum erkennen.",
+     "s": "Der Unterschied ist …",
+     "a": [
+      "Der Unterschied ist kaum erkennbar.",
+      "Der Unterschied ist kaum zu erkennen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Kosten können nicht vorhergesagt werden.",
+     "s": "Die Kosten sind …",
+     "a": [
+      "Die Kosten sind nicht vorhersagbar.",
+      "Die Kosten sind nicht vorherzusagen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Man kann das Fenster nicht öffnen.",
+     "s": "Das Fenster lässt …",
+     "a": [
+      "Das Fenster lässt sich nicht öffnen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Vertrag kann jederzeit gekündigt werden.",
+     "s": "Der Vertrag ist …",
+     "a": [
+      "Der Vertrag ist jederzeit kündbar.",
+      "Der Vertrag ist jederzeit zu kündigen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Aufgabe muss bis morgen erledigt werden.",
+     "s": "Die Aufgabe ist …",
+     "a": [
+      "Die Aufgabe ist bis morgen zu erledigen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die ___ Unterlagen (= die Unterlagen, die eingereicht werden müssen)",
+     "o": [
+      "einreichenden",
+      "einzureichenden",
+      "eingereichten"
+     ],
+     "a": 1,
+     "ex": "Gerundivum: zu + Partizip I."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "ein nicht zu ___ Risiko (= ein Risiko, das nicht unterschätzt werden darf)",
+     "o": [
+      "unterschätztes",
+      "unterschätzendes",
+      "unterschätzen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die ___ Kosten (= die Kosten, die erwartet werden können)",
+     "o": [
+      "erwarteten",
+      "zu erwartenden",
+      "erwartbaren zu"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Dass die Mieten weiter steigen, ist ___.",
+     "o": [
+      "abzusehen lassen",
+      "abgesehen",
+      "absehbar"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Ein Ende des Konflikts ist nicht in Sicht; er scheint kaum ___.",
+     "o": [
+      "gelöst",
+      "lösbar",
+      "lösen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welcher Satz bedeutet: «Die Daten müssen geschützt werden»?",
+     "o": [
+      "Die Daten sind schützbar.",
+      "Die Daten sind zu schützen.",
+      "Die Daten lassen sich schützen."
+     ],
+     "a": 1,
+     "ex": "Pflicht → sein + zu."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welcher Satz bedeutet: «Die Daten können geschützt werden»?",
+     "o": [
+      "Die Daten lassen sich schützen.",
+      "Die Daten sind zu schützen gewesen.",
+      "Die Daten haben geschützt."
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Das Ausmaß der Schäden ließ sich zunächst nicht ___.",
+     "o": [
+      "abschätzen",
+      "abgeschätzt",
+      "abzuschätzen"
+     ],
+     "a": 0,
+     "ex": "Präteritum: ließ sich."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Ergebnisse waren nicht ___. (= konnten nicht wiederholt werden)",
+     "o": [
+      "zu reproduzieren lassen",
+      "reproduzierbar",
+      "reproduziert"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die zu ___ Fragen werden in der nächsten Sitzung behandelt.",
+     "o": [
+      "klärenden",
+      "klärende",
+      "geklärten"
+     ],
+     "a": 0,
+     "ex": "zu + Partizip I + Endung."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "die bis Freitag zu ___ Hausarbeit (abgeben)",
+     "a": [
+      "abgebende"
+     ],
+     "ex": "Gerundivum: zu + Partizip I, Endung -e (die … Hausarbeit)."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Maßnahme ließ sich politisch nicht ___ (durchsetzen).",
+     "a": [
+      "durchsetzen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Das Ergebnis war nicht ___ (vorhersehen, -bar).",
+     "a": [
+      "vorhersehbar"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "ein kaum zu ___ Aufwand (bewältigen)",
+     "a": [
+      "bewältigender"
+     ],
+     "ex": "ein … Aufwand → -er."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Diese Daten sind vertraulich ___ (behandeln).",
+     "a": [
+      "zu behandeln"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Gefahr war nicht zu ___ (unterschätzen).",
+     "a": [
+      "unterschätzen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Probleme, die gelöst werden müssen, sind komplex.",
+     "s": "Die zu …",
+     "a": [
+      "Die zu lösenden Probleme sind komplex."
+     ],
+     "ex": "Gerundivum statt Relativsatz."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Folgen, die erwartet werden können, sind gravierend.",
+     "s": "Die zu …",
+     "a": [
+      "Die zu erwartenden Folgen sind gravierend."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man konnte den Brand nicht löschen.",
+     "s": "Der Brand ließ …",
+     "a": [
+      "Der Brand ließ sich nicht löschen."
+     ],
+     "ex": "Präteritum."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Gefahr konnte nicht übersehen werden.",
+     "s": "Die Gefahr war …",
+     "a": [
+      "Die Gefahr war nicht zu übersehen.",
+      "Die Gefahr war nicht übersehbar."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Unterlagen, die beigelegt werden müssen, finden Sie auf der Website.",
+     "s": "Die beizulegenden …",
+     "a": [
+      "Die beizulegenden Unterlagen finden Sie auf der Website."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es ist nicht zu bestreiten, dass der Plan Schwächen hat.",
+     "s": "Man kann …",
+     "a": [
+      "Man kann nicht bestreiten, dass der Plan Schwächen hat."
+     ],
+     "ex": "Обратная трансформация."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Das Medikament ist nur auf Rezept erhältlich.",
+     "s": "Das Medikament kann …",
+     "a": [
+      "Das Medikament kann nur auf Rezept erhalten werden.",
+      "Das Medikament kann man nur auf Rezept erhalten."
+     ],
+     "ex": "-lich → kann … werden."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Diese Entscheidung lässt sich nicht rückgängig machen.",
+     "s": "Diese Entscheidung kann …",
+     "a": [
+      "Diese Entscheidung kann nicht rückgängig gemacht werden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Schloss ist nicht ___. (= kann nicht geknackt werden)",
+     "o": [
+      "knackbar",
+      "geknackt",
+      "knacklich"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Bücher sind bis Ende Juni ___ (zurückgeben).",
+     "a": [
+      "zurückzugeben"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "„Das lässt sich machen“ bedeutet:",
+     "o": [
+      "Das wurde gemacht.",
+      "Das ist verboten.",
+      "Das ist möglich."
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Viele Fragen sind noch ___ (klären, sein + zu).",
+     "a": [
+      "zu klären"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Mieterhöhung ist rechtlich nicht ___.",
+     "o": [
+      "gehalten",
+      "zu halten lassen",
+      "haltbar"
+     ],
+     "a": 2,
+     "ex": "haltbar = kann aufrechterhalten werden."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man muss die Hinweise unbedingt befolgen.",
+     "s": "Die Hinweise sind …",
+     "a": [
+      "Die Hinweise sind unbedingt zu befolgen."
+     ],
+     "ex": ""
     }
    ],
    "write": [
@@ -851,6 +2501,738 @@
      ],
      "a": 0,
      "ex": "Partizip I = действие происходит сейчас."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "das Kind, das schläft → das ___ Kind",
+     "o": [
+      "schlafende",
+      "schlafte",
+      "geschlafene"
+     ],
+     "a": 0,
+     "ex": "Активно и сейчас → Partizip I."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "die Tür, die geschlossen wurde → die ___ Tür",
+     "o": [
+      "geschlossenen",
+      "schließende",
+      "geschlossene"
+     ],
+     "a": 2,
+     "ex": "Пассив/завершено → Partizip II."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "der Mann, der lacht → der ___ Mann",
+     "o": [
+      "gelachte",
+      "lachende",
+      "lachte"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "das Auto, das repariert wurde → das ___ Auto",
+     "o": [
+      "reparierte",
+      "reparierende",
+      "reparierten"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "die Zahl, die wächst → die ___ Zahl",
+     "o": [
+      "wachsenden",
+      "gewachsene",
+      "wachsende"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "der Brief, der gestern geschrieben wurde → der gestern ___ Brief",
+     "o": [
+      "schreibende",
+      "geschriebene",
+      "geschriebenen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "mit dem Zug, der abfährt → mit dem ___ Zug",
+     "o": [
+      "abfahrende",
+      "abfahrenden",
+      "abgefahrenen"
+     ],
+     "a": 1,
+     "ex": "Dativ: dem …-en."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "die Studentin, die angekommen ist → die ___ Studentin",
+     "o": [
+      "angekommene",
+      "ankommende",
+      "angekommen"
+     ],
+     "a": 0,
+     "ex": "Perfekt mit sein → Partizip II, aktiv."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "ein Problem, das gelöst wurde → ein ___ Problem",
+     "o": [
+      "gelöste",
+      "gelöstes",
+      "lösendes"
+     ],
+     "a": 1,
+     "ex": "ein … Problem → -es."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Kosten, die steigen → ___ Kosten",
+     "o": [
+      "steigend",
+      "gestiegene",
+      "steigende"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "das Wasser, das kocht → das ___ Wasser",
+     "a": [
+      "kochende"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "die Fenster, die geputzt wurden → die ___ Fenster",
+     "a": [
+      "geputzten"
+     ],
+     "ex": "Plural mit die → -en."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "ein Hund, der bellt → ein ___ Hund",
+     "a": [
+      "bellender"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "das Haus, das renoviert wurde → das ___ Haus",
+     "a": [
+      "renovierte"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "die Sonne, die aufgeht → die ___ Sonne",
+     "a": [
+      "aufgehende"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "der Termin, der vereinbart wurde → der ___ Termin",
+     "a": [
+      "vereinbarte"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Kinder, die spielen, sind laut.",
+     "s": "Die …",
+     "a": [
+      "Die spielenden Kinder sind laut."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Das Buch, das verloren wurde, ist wieder da.",
+     "s": "Das …",
+     "a": [
+      "Das verlorene Buch ist wieder da."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Der Bus, der gerade abfährt, ist voll.",
+     "s": "Der …",
+     "a": [
+      "Der gerade abfahrende Bus ist voll."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Stadt, die zerstört wurde, wurde wieder aufgebaut.",
+     "s": "Die …",
+     "a": [
+      "Die zerstörte Stadt wurde wieder aufgebaut."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Die Gäste, die angekommen sind, warten im Foyer.",
+     "s": "Die …",
+     "a": [
+      "Die angekommenen Gäste warten im Foyer."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "die Studie, die im Jahr 2023 veröffentlicht wurde → die im Jahr 2023 ___ Studie",
+     "o": [
+      "veröffentlichte",
+      "veröffentlichten",
+      "veröffentlichende"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "die Menschen, die in Armut leben → die in Armut ___ Menschen",
+     "o": [
+      "gelebten",
+      "lebenden",
+      "lebende"
+     ],
+     "a": 1,
+     "ex": "die (Pl.) … -en."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "von der Regierung, die neu gewählt wurde → von der neu ___ Regierung",
+     "o": [
+      "gewählte",
+      "gewählten",
+      "wählenden"
+     ],
+     "a": 1,
+     "ex": "Dativ fem. → -en."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "die Preise, die seit Monaten steigen → die seit Monaten ___ Preise",
+     "o": [
+      "gestiegenen",
+      "steigenden",
+      "steigende"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "ein Gesetz, das gerade diskutiert wird → ein gerade ___ Gesetz",
+     "o": [
+      "diskutierendes",
+      "diskutierte",
+      "diskutiertes"
+     ],
+     "a": 2,
+     "ex": "Пассив в процессе → Partizip II."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Welche Bedeutung hat «die zu erwartenden Probleme»?",
+     "o": [
+      "die Probleme, die erwartet werden müssen/können",
+      "die Probleme, die schon gelöst sind",
+      "die Probleme, die erwartet haben"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "der Student, der eingeschlafen ist → der ___ Student",
+     "o": [
+      "eingeschlafen",
+      "eingeschlafene",
+      "einschlafende"
+     ],
+     "a": 1,
+     "ex": "einschlafen (sein) → Partizip II aktiv."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "die Arbeitslosigkeit, die zunimmt → die ___ Arbeitslosigkeit",
+     "o": [
+      "zunehmende",
+      "zugenommene",
+      "zunehmenden"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "die Häuser, die im 19. Jahrhundert gebaut wurden → die im 19. Jahrhundert ___ Häuser",
+     "a": [
+      "gebauten"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "mit den Kollegen, die ständig klagen → mit den ständig ___ Kollegen",
+     "a": [
+      "klagenden"
+     ],
+     "ex": "Dativ Pl. → -en."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "ein Thema, das oft unterschätzt wird → ein oft ___ Thema",
+     "a": [
+      "unterschätztes"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "die Frau, die am Fenster steht → die am Fenster ___ Frau",
+     "a": [
+      "stehende"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "für die Studierenden, die neu angekommen sind → für die neu ___ Studierenden",
+     "a": [
+      "angekommenen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "der Vertrag, der bis Ende Mai gilt → der bis Ende Mai ___ Vertrag",
+     "a": [
+      "geltende"
+     ],
+     "ex": "gelten → geltend."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Ergebnisse, die von der Forschungsgruppe präsentiert wurden, überraschten viele.",
+     "s": "Die …",
+     "a": [
+      "Die von der Forschungsgruppe präsentierten Ergebnisse überraschten viele."
+     ],
+     "ex": "Erweitertes Attribut: Zusatz vor das Partizip."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Zahl der Menschen, die im Homeoffice arbeiten, ist gestiegen.",
+     "s": "Die Zahl der …",
+     "a": [
+      "Die Zahl der im Homeoffice arbeitenden Menschen ist gestiegen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Wohnungen, die leer stehen, sollen vermietet werden.",
+     "s": "Die …",
+     "a": [
+      "Die leer stehenden Wohnungen sollen vermietet werden.",
+      "Die leerstehenden Wohnungen sollen vermietet werden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Lehrer lobte die Schülerin, die gut vorbereitet war.",
+     "s": "Der Lehrer lobte die …",
+     "a": [
+      "Der Lehrer lobte die gut vorbereitete Schülerin."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Maßnahmen, die gestern beschlossen wurden, treten im Mai in Kraft.",
+     "s": "Die …",
+     "a": [
+      "Die gestern beschlossenen Maßnahmen treten im Mai in Kraft."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die steigenden Mieten belasten viele Familien.",
+     "s": "Die Mieten, die …",
+     "a": [
+      "Die Mieten, die steigen, belasten viele Familien."
+     ],
+     "ex": "Обратно: Partizip → Relativsatz."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die von vielen kritisierte Reform wurde verschoben.",
+     "s": "Die Reform, die …",
+     "a": [
+      "Die Reform, die von vielen kritisiert wurde, wurde verschoben.",
+      "Die Reform, die von vielen kritisiert wird, wurde verschoben."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die seit Jahren in Wien ___ und arbeitenden Migrantinnen",
+     "o": [
+      "lebende",
+      "lebenden",
+      "gelebten"
+     ],
+     "a": 1,
+     "ex": "Два Partizip I через und."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "der von den Behörden lange ___ Missstand",
+     "o": [
+      "ignorierte",
+      "ignorierten",
+      "ignorierende"
+     ],
+     "a": 0,
+     "ex": "der … -e."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welche Umformung ist korrekt? «die immer weiter sinkende Geburtenrate»",
+     "o": [
+      "die Geburtenrate, die immer weiter gesunken wurde",
+      "die Geburtenrate, die man immer weiter senkt",
+      "die Geburtenrate, die immer weiter sinkt"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welche Umformung ist korrekt? «das von der EU geförderte Projekt»",
+     "o": [
+      "das Projekt, das von der EU gefördert wird/wurde",
+      "das Projekt, das von der EU fördert",
+      "das Projekt, das die EU fördernd ist"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "ein schwer zu ___ Text (= ein Text, der schwer verstanden werden kann)",
+     "o": [
+      "verstehend",
+      "verstehender",
+      "verstandener"
+     ],
+     "a": 1,
+     "ex": "Gerundivum."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die in der Studie ___ Personen gaben an, wenig zu schlafen.",
+     "o": [
+      "befragte",
+      "befragenden",
+      "befragten"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die durch den Klimawandel immer häufiger ___ Hitzewellen",
+     "o": [
+      "aufgetretenen",
+      "auftretende",
+      "auftretenden"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welche Form passt? «Der vor kurzem ___ Minister kündigte Reformen an.»",
+     "o": [
+      "ernennende",
+      "ernannten",
+      "ernannte"
+     ],
+     "a": 2,
+     "ex": "Der … -e (Nominativ, bestimmter Artikel)."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "die in den letzten Jahren stark ___ Zahl der Studierenden (steigen)",
+     "a": [
+      "gestiegene"
+     ],
+     "ex": "steigen bildet Perfekt mit sein → Partizip II aktiv: die gestiegene Zahl."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "die von der Uni ___ Kurse (anbieten)",
+     "a": [
+      "angebotenen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "eine bis heute nicht ___ Frage (klären)",
+     "a": [
+      "geklärte"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "die den Klimawandel ___ Wissenschaftlerinnen (leugnen)",
+     "a": [
+      "leugnenden"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "der im Herbst zu ___ Bericht (veröffentlichen)",
+     "a": [
+      "veröffentlichende"
+     ],
+     "ex": "Gerundivum."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "die von Jahr zu Jahr ___ Zahl der Touristen (wachsen)",
+     "a": [
+      "wachsende"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele Studierende, die neben dem Studium arbeiten und kaum Zeit zum Lernen haben, brechen ab.",
+     "s": "Viele …",
+     "a": [
+      "Viele neben dem Studium arbeitende Studierende, die kaum Zeit zum Lernen haben, brechen ab."
+     ],
+     "ex": "«haben» не образует хорошего Partizip I — эту часть оставляем придаточным."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Wohnungen, die in den 70er Jahren gebaut wurden und dringend saniert werden müssen, gehören der Stadt.",
+     "s": "Die in den 70er Jahren …",
+     "a": [
+      "Die in den 70er Jahren gebauten und dringend zu sanierenden Wohnungen gehören der Stadt."
+     ],
+     "ex": "Partizip II + Gerundivum."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Bericht, der morgen vorgelegt werden soll, enthält brisante Zahlen.",
+     "s": "Der morgen …",
+     "a": [
+      "Der morgen vorzulegende Bericht enthält brisante Zahlen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Firma entließ Mitarbeiter, die seit Jahrzehnten dort tätig waren.",
+     "s": "Die Firma entließ seit …",
+     "a": [
+      "Die Firma entließ seit Jahrzehnten dort tätige Mitarbeiter."
+     ],
+     "ex": "Adjektiv statt Partizip: tätig."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die im Vertrag festgelegten Fristen sind einzuhalten.",
+     "s": "Die Fristen, die …",
+     "a": [
+      "Die Fristen, die im Vertrag festgelegt sind, sind einzuhalten.",
+      "Die Fristen, die im Vertrag festgelegt wurden, sind einzuhalten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die nach dem Krieg nach Wien geflüchteten Familien fanden Arbeit in Fabriken.",
+     "s": "Die Familien, die …",
+     "a": [
+      "Die Familien, die nach dem Krieg nach Wien geflüchtet waren, fanden Arbeit in Fabriken.",
+      "Die Familien, die nach dem Krieg nach Wien geflüchtet sind, fanden Arbeit in Fabriken."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man sollte die Risiken, die nicht unterschätzt werden dürfen, ernst nehmen.",
+     "s": "Man sollte die nicht …",
+     "a": [
+      "Man sollte die nicht zu unterschätzenden Risiken ernst nehmen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Teilnehmenden, die sich angemeldet haben, bekommen eine Bestätigung.",
+     "s": "Die …",
+     "a": [
+      "Die angemeldeten Teilnehmenden bekommen eine Bestätigung."
+     ],
+     "ex": "sich anmelden → angemeldet (Zustandspassiv)."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "der Schnee, der fällt → der ___ Schnee",
+     "a": [
+      "fallende"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "die Arbeit, die erledigt wurde → die ___ Arbeit",
+     "a": [
+      "erledigte"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "ein Zimmer, das möbliert ist → ein ___ Zimmer",
+     "o": [
+      "möbliertes",
+      "möblierte",
+      "möblierendes"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "die Kosten, die entstanden sind → die ___ Kosten",
+     "o": [
+      "entstehenden",
+      "entstandenen",
+      "entstandene"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "die ___ Hausaufgaben (= die gemacht werden müssen)",
+     "o": [
+      "gemachten",
+      "machenden",
+      "zu machenden"
+     ],
+     "a": 2,
+     "ex": ""
     }
    ],
    "write": [
@@ -1137,6 +3519,780 @@
       "Obwohl die Anrainer protestiert haben, wird das Hochhaus gebaut."
      ],
      "ex": "ungeachtet = trotz."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "wegen des Regens → ___ es regnet",
+     "o": [
+      "damit",
+      "weil",
+      "obwohl"
+     ],
+     "a": 1,
+     "ex": "wegen → weil."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "trotz der Kälte → ___ es kalt ist",
+     "o": [
+      "weil",
+      "obwohl",
+      "wenn"
+     ],
+     "a": 1,
+     "ex": "trotz → obwohl."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "nach dem Essen → ___ wir gegessen hatten",
+     "o": [
+      "während",
+      "nachdem",
+      "bevor"
+     ],
+     "a": 1,
+     "ex": "nach → nachdem."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "vor der Abfahrt → ___ wir abfahren",
+     "o": [
+      "seit",
+      "bevor",
+      "nachdem"
+     ],
+     "a": 1,
+     "ex": "vor → bevor."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "während des Studiums → ___ sie studierte",
+     "o": [
+      "bevor",
+      "während",
+      "obwohl"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "bei Regen → ___ es regnet",
+     "o": [
+      "damit",
+      "weil",
+      "wenn"
+     ],
+     "a": 2,
+     "ex": "bei (Bedingung) → wenn."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "zur Erholung → ___ sich zu erholen",
+     "o": [
+      "um",
+      "indem",
+      "damit"
+     ],
+     "a": 0,
+     "ex": "zu/zur (Ziel) → um … zu."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "durch Üben → ___ man übt",
+     "o": [
+      "indem",
+      "nachdem",
+      "damit"
+     ],
+     "a": 0,
+     "ex": "durch (Mittel) → indem."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "seit seiner Ankunft → ___ er angekommen ist",
+     "o": [
+      "als",
+      "seit",
+      "bevor"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "ohne Hilfe → ___ man ihm hilft",
+     "o": [
+      "ohne dass",
+      "damit",
+      "obwohl"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wegen der Krankheit fehlte er. → ___ er krank war, fehlte er.",
+     "a": [
+      "Weil"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Trotz des Lärms schlief sie. → ___ es laut war, schlief sie.",
+     "a": [
+      "Obwohl"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Nach dem Unterricht gehen wir ins Café. → ___ der Unterricht vorbei ist, gehen wir ins Café.",
+     "a": [
+      "Wenn",
+      "Nachdem",
+      "Sobald"
+     ],
+     "ex": "wenn/nachdem/sobald."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Bei schönem Wetter grillen wir. → ___ das Wetter schön ist, grillen wir.",
+     "a": [
+      "Wenn"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Vor dem Schlafengehen liest er. → ___ er schlafen geht, liest er.",
+     "a": [
+      "Bevor"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wegen des Streiks fallen viele Züge aus.",
+     "s": "Weil …",
+     "a": [
+      "Weil gestreikt wird, fallen viele Züge aus.",
+      "Weil die Bahn streikt, fallen viele Züge aus.",
+      "Weil es einen Streik gibt, fallen viele Züge aus."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Trotz seiner Erkältung ging er zur Arbeit.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl er erkältet war, ging er zur Arbeit.",
+      "Obwohl er eine Erkältung hatte, ging er zur Arbeit."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Vor dem Essen wäscht man sich die Hände.",
+     "s": "Bevor …",
+     "a": [
+      "Bevor man isst, wäscht man sich die Hände."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Während der Prüfung ist das Handy verboten.",
+     "s": "Während …",
+     "a": [
+      "Während man die Prüfung schreibt, ist das Handy verboten.",
+      "Während die Prüfung läuft, ist das Handy verboten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Bei Fragen wenden Sie sich an das Büro.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn Sie Fragen haben, wenden Sie sich an das Büro."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Zum Lernen braucht man Ruhe.",
+     "s": "Um …",
+     "a": [
+      "Um zu lernen, braucht man Ruhe."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "aufgrund der steigenden Preise → weil ___",
+     "o": [
+      "die Preise gestiegen",
+      "steigen die Preise",
+      "die Preise steigen"
+     ],
+     "a": 2,
+     "ex": "Глагол в конце."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "im Falle einer Absage → ___ abgesagt wird",
+     "o": [
+      "falls",
+      "obwohl",
+      "sodass"
+     ],
+     "a": 0,
+     "ex": "im Falle → falls."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "zwecks Verbesserung der Qualität → ___ die Qualität verbessert wird",
+     "o": [
+      "damit",
+      "bevor",
+      "weil"
+     ],
+     "a": 0,
+     "ex": "Цель, другое подлежащее → damit."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "bis zur Fertigstellung des Baus → ___ der Bau fertiggestellt ist",
+     "o": [
+      "bevor",
+      "seit",
+      "bis"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "infolge des Unfalls → ___ es einen Unfall gegeben hatte",
+     "o": [
+      "obwohl",
+      "damit",
+      "weil"
+     ],
+     "a": 2,
+     "ex": "infolge → weil/da."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "ungeachtet der Kritik → ___ es Kritik gab",
+     "o": [
+      "obwohl",
+      "sodass",
+      "weil"
+     ],
+     "a": 0,
+     "ex": "ungeachtet → obwohl."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "mit zunehmendem Alter → ___ älter man wird, desto …",
+     "o": [
+      "als",
+      "je",
+      "wenn"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "statt einer Antwort → ___ zu antworten",
+     "o": [
+      "um",
+      "statt",
+      "ohne"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "bei Nichtbeachtung der Regeln → wenn man die Regeln nicht ___",
+     "o": [
+      "beachtete",
+      "beachten",
+      "beachtet"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Nach der Unterzeichnung des Vertrags begann die Arbeit. → Nachdem der Vertrag ___ worden war, begann die Arbeit.",
+     "a": [
+      "unterzeichnet"
+     ],
+     "ex": "Passiv Plusquamperfekt."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Zur Senkung der Kosten wurden Stellen gestrichen. → Um die Kosten zu ___, wurden Stellen gestrichen.",
+     "a": [
+      "senken"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Durch regelmäßiges Training verbessert man die Ausdauer. → Indem man regelmäßig ___, verbessert man die Ausdauer.",
+     "a": [
+      "trainiert"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Bei Verlust der Karte informieren Sie die Bank. → Wenn Sie die Karte ___, informieren Sie die Bank.",
+     "a": [
+      "verlieren"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Seit der Einführung des Tickets fahren mehr Menschen Bahn. → Seit das Ticket ___ wurde, fahren mehr Menschen Bahn.",
+     "a": [
+      "eingeführt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Infolge der Dürre stiegen die Preise. → Weil es eine Dürre ___, stiegen die Preise.",
+     "a": [
+      "gab"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Aufgrund der hohen Nachfrage sind die Tickets ausverkauft.",
+     "s": "Weil …",
+     "a": [
+      "Weil die Nachfrage hoch ist, sind die Tickets ausverkauft.",
+      "Weil die Nachfrage so hoch ist, sind die Tickets ausverkauft.",
+      "Weil die Nachfrage hoch war, sind die Tickets ausverkauft."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Bei Überschreitung der Frist wird eine Gebühr fällig.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn die Frist überschritten wird, wird eine Gebühr fällig.",
+      "Wenn man die Frist überschreitet, wird eine Gebühr fällig."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Nach Abschluss der Renovierung ziehen wir ein.",
+     "s": "Nachdem …",
+     "a": [
+      "Nachdem die Renovierung abgeschlossen ist, ziehen wir ein.",
+      "Nachdem die Renovierung abgeschlossen worden ist, ziehen wir ein."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Zur Vermeidung von Missverständnissen schicke ich eine Mail.",
+     "s": "Um …",
+     "a": [
+      "Um Missverständnisse zu vermeiden, schicke ich eine Mail."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Durch den Ausbau der Radwege sollen mehr Menschen Rad fahren.",
+     "s": "Indem …",
+     "a": [
+      "Indem die Radwege ausgebaut werden, sollen mehr Menschen Rad fahren.",
+      "Indem man die Radwege ausbaut, sollen mehr Menschen Rad fahren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Trotz intensiver Suche fand man den Schlüssel nicht.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl man intensiv suchte, fand man den Schlüssel nicht.",
+      "Obwohl man intensiv gesucht hatte, fand man den Schlüssel nicht."
+     ],
+     "ex": "Adjektiv → Adverb."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ohne Zustimmung des Vermieters darf man nicht untervermieten.",
+     "s": "Ohne dass …",
+     "a": [
+      "Ohne dass der Vermieter zustimmt, darf man nicht untervermieten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Nach eingehender Prüfung der Unterlagen → nachdem man die Unterlagen ___ hatte",
+     "o": [
+      "eingehend prüfte",
+      "eingehend geprüft",
+      "eingehende geprüft"
+     ],
+     "a": 1,
+     "ex": "Adjektiv → Adverb, Plusquamperfekt."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Mit der Einführung der Maut sank der Verkehr. → ___ die Maut eingeführt wurde, sank der Verkehr.",
+     "o": [
+      "Als",
+      "Bevor",
+      "Wenn"
+     ],
+     "a": 0,
+     "ex": "Einmalig in der Vergangenheit → als."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Nach Angaben der Polizei → ___",
+     "o": [
+      "Weil die Polizei angab, …",
+      "Damit die Polizei angibt, …",
+      "Wie die Polizei angab, …"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Im Zuge der Digitalisierung → ___",
+     "o": [
+      "Obwohl digitalisiert, …",
+      "Während/Indem die Verwaltung digitalisiert wird, …",
+      "Bis die Digitalisierung ist, …"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Bei gleichzeitiger Senkung der Steuern → ___",
+     "o": [
+      "obwohl die Steuern gleich sind",
+      "wenn gleichzeitig die Steuern gesenkt werden",
+      "wenn die gleichzeitige Steuern sinken"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Unter Berücksichtigung aller Faktoren → ___",
+     "o": [
+      "wenn man alle Faktoren berücksichtigt",
+      "obwohl man alle Faktoren berücksichtigt",
+      "weil alle Faktoren berücksichtigen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Zur Vermeidung weiterer Verluste → ___",
+     "o": [
+      "um weitere Verluste zu vermeiden",
+      "damit weitere Verluste zu vermeiden",
+      "indem weitere Verluste vermieden"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Je höher der Verdienst, desto höher die Steuer. → Je mehr man ___, desto mehr Steuern zahlt man.",
+     "o": [
+      "verdienen",
+      "verdient",
+      "verdiente"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Nach erfolgreicher Verteidigung der Dissertation erhielt sie eine Stelle. → Nachdem sie ihre Dissertation erfolgreich ___ hatte, erhielt sie eine Stelle.",
+     "a": [
+      "verteidigt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Bei Nichterscheinen zur Prüfung gilt diese als nicht bestanden. → Wenn man zur Prüfung nicht ___, gilt diese als nicht bestanden.",
+     "a": [
+      "erscheint"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Aus Angst vor Arbeitslosigkeit sparen viele. → Weil viele ___ haben, arbeitslos zu werden, sparen sie.",
+     "a": [
+      "Angst"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Ungeachtet aller Warnungen fuhr er weiter. → ___ er gewarnt worden war, fuhr er weiter.",
+     "a": [
+      "Obwohl"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Mangels Beweisen wurde er freigesprochen. → Weil es keine Beweise ___, wurde er freigesprochen.",
+     "a": [
+      "gab"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Nach Meinung vieler Fachleute ist die Reform unzureichend. → Viele Fachleute sind der ___, dass die Reform unzureichend ist.",
+     "a": [
+      "Meinung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Bei rechtzeitiger Anmeldung erhalten Sie einen Rabatt.",
+     "s": "Wenn …",
+     "a": [
+      "Wenn Sie sich rechtzeitig anmelden, erhalten Sie einen Rabatt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Trotz wiederholter Aufforderungen zahlte der Mieter nicht.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl der Mieter wiederholt aufgefordert worden war, zahlte er nicht.",
+      "Obwohl der Mieter wiederholt aufgefordert wurde, zahlte er nicht.",
+      "Obwohl man den Mieter wiederholt aufgefordert hatte, zahlte er nicht."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Zur Sicherung der Qualität werden regelmäßige Kontrollen durchgeführt.",
+     "s": "Damit …",
+     "a": [
+      "Damit die Qualität gesichert wird, werden regelmäßige Kontrollen durchgeführt.",
+      "Damit die Qualität gesichert ist, werden regelmäßige Kontrollen durchgeführt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Mit steigendem Einkommen wächst die Bereitschaft zu reisen.",
+     "s": "Je …",
+     "a": [
+      "Je mehr das Einkommen steigt, desto größer wird die Bereitschaft zu reisen.",
+      "Je höher das Einkommen ist, desto größer ist die Bereitschaft zu reisen.",
+      "Je mehr man verdient, desto größer ist die Bereitschaft zu reisen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Laut Angaben des Ministeriums sind die Kosten gestiegen.",
+     "s": "Wie …",
+     "a": [
+      "Wie das Ministerium angibt, sind die Kosten gestiegen.",
+      "Wie das Ministerium angab, sind die Kosten gestiegen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Infolge der Verlängerung der Öffnungszeiten kamen mehr Besucher.",
+     "s": "Weil …",
+     "a": [
+      "Weil die Öffnungszeiten verlängert wurden, kamen mehr Besucher.",
+      "Weil die Öffnungszeiten verlängert worden waren, kamen mehr Besucher."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Durch die Einführung strengerer Grenzwerte soll die Luftqualität verbessert werden.",
+     "s": "Indem …",
+     "a": [
+      "Indem strengere Grenzwerte eingeführt werden, soll die Luftqualität verbessert werden.",
+      "Indem man strengere Grenzwerte einführt, soll die Luftqualität verbessert werden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Statt einer Erhöhung der Gebühren wurden Kurse gestrichen.",
+     "s": "Statt …",
+     "a": [
+      "Statt die Gebühren zu erhöhen, wurden Kurse gestrichen.",
+      "Statt dass die Gebühren erhöht wurden, wurden Kurse gestrichen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "aus Angst → ___ er Angst hatte",
+     "o": [
+      "obwohl",
+      "weil",
+      "damit"
+     ],
+     "a": 1,
+     "ex": "aus (Grund) → weil."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Zur Anmeldung braucht man einen Ausweis. → ___ sich anzumelden, braucht man einen Ausweis.",
+     "a": [
+      "Um"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "bis zum Ende des Semesters → ___ das Semester endet",
+     "o": [
+      "nachdem",
+      "seit",
+      "bis"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Seit der Geburt ihres Sohnes arbeitet sie Teilzeit.",
+     "s": "Seit …",
+     "a": [
+      "Seit ihr Sohn geboren wurde, arbeitet sie Teilzeit.",
+      "Seit ihr Sohn geboren ist, arbeitet sie Teilzeit.",
+      "Seitdem ihr Sohn geboren wurde, arbeitet sie Teilzeit."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Angesichts der Lage → ___",
+     "o": [
+      "Da die Lage so ist, …",
+      "Damit die Lage …",
+      "Obwohl die Lage, …"
+     ],
+     "a": 0,
+     "ex": "angesichts → da/weil."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Im Anschluss an die Sitzung gab es ein Buffet. → ___ die Sitzung beendet war, gab es ein Buffet.",
+     "a": [
+      "Nachdem"
+     ],
+     "ex": ""
     }
    ],
    "write": [
@@ -1419,6 +4575,885 @@
      "ex": "",
      "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
      "free": true
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Weil es geregnet hat, …",
+     "o": [
+      "… zu Hause wir sind geblieben.",
+      "… sind wir zu Hause geblieben.",
+      "… wir sind zu Hause geblieben."
+     ],
+     "a": 1,
+     "ex": "После придаточного главное начинается с глагола.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich lerne Deutsch, weil …",
+     "o": [
+      "… ich möchte in Wien studieren.",
+      "… ich in Wien studieren möchte.",
+      "… möchte ich in Wien studieren."
+     ],
+     "a": 1,
+     "ex": "weil → глагол в конце.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Obwohl er müde war, …",
+     "o": [
+      "… er ging zur Party.",
+      "… zur Party er ging.",
+      "… ging er zur Party."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir bleiben zu Hause, denn …",
+     "o": [
+      "… es kalt ist.",
+      "… ist es kalt.",
+      "… es ist kalt."
+     ],
+     "a": 2,
+     "ex": "denn — обычный порядок.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie ist krank. Deshalb …",
+     "o": [
+      "… kann sie nicht kommen.",
+      "… sie kann nicht kommen.",
+      "… sie nicht kommen kann."
+     ],
+     "a": 0,
+     "ex": "deshalb → инверсия.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wenn du Zeit hast, …",
+     "o": [
+      "… ruf mich an.",
+      "… du rufst mich an.",
+      "… mich anrufen du."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er spart Geld, um …",
+     "o": [
+      "… er ein Auto kauft.",
+      "… ein Auto zu kaufen.",
+      "… kauft ein Auto."
+     ],
+     "a": 1,
+     "ex": "um … zu + Infinitiv.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich weiß nicht, ob …",
+     "o": [
+      "… er kommt heute.",
+      "… er heute kommt.",
+      "… kommt er heute."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Nachdem sie gegessen hatte, …",
+     "o": [
+      "… machte sie einen Spaziergang.",
+      "… einen Spaziergang sie machte.",
+      "… sie machte einen Spaziergang."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Es ist wichtig, dass …",
+     "o": [
+      "… man schläft genug.",
+      "… man genug schläft.",
+      "… schläft man genug."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Wetter war schlecht, trotzdem …",
+     "o": [
+      "… wir wandern gingen.",
+      "… gingen wir wandern.",
+      "… wir gingen wandern."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich rufe dich an, sobald …",
+     "o": [
+      "… bin ich zu Hause.",
+      "… ich zu Hause bin.",
+      "… ich bin zu Hause."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Weil die Mieten in Wien steigen, …",
+     "s": "",
+     "a": [
+      "… suchen viele Studierende eine WG."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Ich gehe heute früh schlafen, denn …",
+     "s": "",
+     "a": [
+      "… morgen habe ich eine Prüfung."
+     ],
+     "ex": "denn + обычный порядок.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wenn ich mehr Zeit hätte, …",
+     "s": "",
+     "a": [
+      "… würde ich öfter Sport machen."
+     ],
+     "ex": "Konjunktiv II.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Bevor man eine Wohnung mietet, …",
+     "s": "",
+     "a": [
+      "… sollte man den Vertrag genau lesen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Viele Menschen fahren mit dem Rad, weil …",
+     "s": "",
+     "a": [
+      "… es gesund und billig ist."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Es regnet stark, deshalb …",
+     "s": "",
+     "a": [
+      "… nehme ich den Bus."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Ich freue mich darauf, …",
+     "s": "",
+     "a": [
+      "… dich bald wiederzusehen."
+     ],
+     "ex": "darauf, … zu + Infinitiv.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Nachdem ich die Prüfung bestanden hatte, …",
+     "s": "",
+     "a": [
+      "… feierte ich mit meinen Freunden."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Je mehr man übt, …",
+     "o": [
+      "… desto besser spricht man.",
+      "… man spricht desto besser.",
+      "… desto besser man spricht."
+     ],
+     "a": 0,
+     "ex": "desto + Komparativ + Verb.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie arbeitet nicht nur in einem Café, …",
+     "o": [
+      "… sondern auch sie Medizin studiert.",
+      "… aber auch studiert Medizin.",
+      "… sondern studiert auch Medizin."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er hat so viel gearbeitet, dass …",
+     "o": [
+      "… er ist krank geworden.",
+      "… ist er krank geworden.",
+      "… er krank geworden ist."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Anstatt zu lernen, …",
+     "o": [
+      "… er hat den ganzen Tag gespielt.",
+      "… den ganzen Tag gespielt hat er.",
+      "… hat er den ganzen Tag gespielt."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Falls Sie Fragen haben, …",
+     "o": [
+      "… an unser Team Sie sich wenden.",
+      "… Sie wenden sich an unser Team.",
+      "… wenden Sie sich an unser Team."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Damit alle Platz haben, …",
+     "o": [
+      "… um zusätzliche Stühle aufzustellen.",
+      "… zusätzliche Stühle wurden aufgestellt.",
+      "… wurden zusätzliche Stühle aufgestellt."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Während die einen protestieren, …",
+     "o": [
+      "… schweigen die anderen.",
+      "… die anderen zu schweigen.",
+      "… die anderen schweigen."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Stadt hat die Ticketpreise gesenkt, sodass …",
+     "o": [
+      "… mehr Menschen nutzen die Öffis.",
+      "… mehr Menschen die Öffis nutzen.",
+      "… nutzen mehr Menschen die Öffis."
+     ],
+     "a": 1,
+     "ex": "sodass → глагол в конце.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Einerseits ist das Leben in Wien teuer, …",
+     "o": [
+      "… andererseits viel Kultur die Stadt bietet.",
+      "… andererseits die Stadt bietet viel Kultur.",
+      "… andererseits bietet die Stadt viel Kultur."
+     ],
+     "a": 2,
+     "ex": "andererseits → инверсия.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Es ist nicht sicher, ob …",
+     "o": [
+      "… die Reform das Problem löst.",
+      "… die Reform löst das Problem.",
+      "… löst die Reform das Problem."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Kaum war er zu Hause, …",
+     "o": [
+      "… als das Telefon klingelte.",
+      "… klingelte das Telefon.",
+      "… das Telefon klingelte."
+     ],
+     "a": 1,
+     "ex": "kaum … (инверсия) → главное с глаголом.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Indem man regelmäßig Vokabeln wiederholt, …",
+     "o": [
+      "… man sie weniger schnell vergisst.",
+      "… vergisst man sie weniger schnell.",
+      "… man vergisst sie weniger schnell."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Obwohl das Studium in Österreich fast nichts kostet, …",
+     "s": "",
+     "a": [
+      "… können sich viele das Leben in Wien kaum leisten."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Je früher man mit der Vorbereitung beginnt, …",
+     "s": "",
+     "a": [
+      "… desto entspannter ist man vor der Prüfung."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Um eine Wohnung in Wien zu finden, …",
+     "s": "",
+     "a": [
+      "… braucht man viel Geduld und Glück."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Statt mit dem Auto zu fahren, …",
+     "s": "",
+     "a": [
+      "… könnte man öfter das Fahrrad nehmen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Es wäre besser gewesen, wenn …",
+     "s": "",
+     "a": [
+      "… wir früher losgefahren wären."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Regierung hat neue Regeln eingeführt, damit …",
+     "s": "",
+     "a": [
+      "… weniger Plastikmüll entsteht."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Nicht nur junge Menschen nutzen soziale Medien, sondern …",
+     "s": "",
+     "a": [
+      "… auch immer mehr Ältere."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Seitdem es das Klimaticket gibt, …",
+     "s": "",
+     "a": [
+      "… fahren mehr Menschen mit der Bahn."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Viele Studierende arbeiten neben dem Studium, sodass …",
+     "s": "",
+     "a": [
+      "… ihnen wenig Zeit zum Lernen bleibt."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Hätte ich das früher gewusst, …",
+     "s": "",
+     "a": [
+      "… hätte ich mich anders entschieden."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Angesichts der steigenden Energiepreise …",
+     "o": [
+      "… sparen viele Haushalte beim Heizen.",
+      "… viele Haushalte sparen beim Heizen.",
+      "… viele Haushalte beim Heizen sparen."
+     ],
+     "a": 0,
+     "ex": "Präpositionalgruppe auf Position 1 → Verb folgt.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Es ist fraglich, inwiefern …",
+     "o": [
+      "… wirkt die Maßnahme tatsächlich.",
+      "… die Maßnahme wirkt tatsächlich.",
+      "… die Maßnahme tatsächlich wirkt."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Zwar wurden mehr Wohnungen gebaut, …",
+     "o": [
+      "… doch weiter gestiegen die Mieten sind.",
+      "… doch die Mieten weiter gestiegen sind.",
+      "… doch die Mieten sind weiter gestiegen."
+     ],
+     "a": 2,
+     "ex": "zwar … doch/aber: главное предложение, глагол не в конце.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Je länger die Krise dauert, …",
+     "o": [
+      "… umso größer werden die sozialen Folgen.",
+      "… umso die sozialen Folgen größer werden.",
+      "… größer werden umso die sozialen Folgen."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Wer sich für ein Studium in Wien entscheidet, …",
+     "o": [
+      "… sollte sich früh um eine Unterkunft kümmern.",
+      "… sich früh um eine Unterkunft kümmern sollte.",
+      "… er sollte sich früh um eine Unterkunft kümmern."
+     ],
+     "a": 0,
+     "ex": "Wer-Satz ist Subjekt → Verb sofort.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Es lässt sich nicht leugnen, dass …",
+     "o": [
+      "… die Digitalisierung verändert den Arbeitsmarkt.",
+      "… verändert die Digitalisierung den Arbeitsmarkt.",
+      "… die Digitalisierung den Arbeitsmarkt verändert."
+     ],
+     "a": 2,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Ungeachtet der Proteste …",
+     "o": [
+      "… die Regierung an ihren Plänen festhielt.",
+      "… hielt die Regierung an ihren Plänen fest.",
+      "… die Regierung hielt an ihren Plänen fest."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Sowohl die Studierenden als auch die Lehrenden …",
+     "o": [
+      "… die neuen Prüfungsregeln kritisieren.",
+      "… kritisieren die neuen Prüfungsregeln.",
+      "… kritisiert die neuen Prüfungsregeln."
+     ],
+     "a": 1,
+     "ex": "sowohl … als auch → Plural.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Weder die Politik noch die Wirtschaft …",
+     "o": [
+      "… eine überzeugende Lösung vorgelegt hat.",
+      "… vorgelegt eine überzeugende Lösung hat.",
+      "… hat eine überzeugende Lösung vorgelegt."
+     ],
+     "a": 2,
+     "ex": "Главное предложение: глагол сразу; по правилу он согласуется с ближайшим подлежащим (die Wirtschaft → hat).",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Nachdem die Ergebnisse veröffentlicht worden waren, …",
+     "o": [
+      "… kam es zu heftigen Diskussionen.",
+      "… zu heftigen Diskussionen es kam.",
+      "… es kam zu heftigen Diskussionen."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Es ist kaum vorstellbar, wie …",
+     "o": [
+      "… das Leben ohne Smartphone aussähe.",
+      "… das Leben aussähe ohne Smartphone zu.",
+      "… sähe das Leben ohne Smartphone aus."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Dass immer mehr Menschen im Homeoffice arbeiten, …",
+     "o": [
+      "… hat Folgen für die Innenstädte.",
+      "… es hat Folgen für die Innenstädte.",
+      "… Folgen für die Innenstädte hat."
+     ],
+     "a": 0,
+     "ex": "dass-Satz als Subjekt → Verb folgt.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ungeachtet aller Bemühungen der Regierung …",
+     "s": "",
+     "a": [
+      "… ist die Arbeitslosigkeit kaum gesunken."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es ist nach wie vor umstritten, ob …",
+     "s": "",
+     "a": [
+      "… ein Tempolimit die Zahl der Unfälle senkt."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Wer im Ausland studiert, …",
+     "s": "",
+     "a": [
+      "… lernt nicht nur eine neue Sprache, sondern auch eine andere Kultur kennen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Angesichts des Fachkräftemangels …",
+     "s": "",
+     "a": [
+      "… sollten Unternehmen mehr in Ausbildung investieren."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Zwar bietet das Homeoffice viele Vorteile, …",
+     "s": "",
+     "a": [
+      "… doch fehlt vielen der Kontakt zu Kolleginnen und Kollegen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Hätte die Stadt früher in den sozialen Wohnbau investiert, …",
+     "s": "",
+     "a": [
+      "… wären die Mieten heute nicht so hoch."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Sofern sich nichts Grundlegendes ändert, …",
+     "s": "",
+     "a": [
+      "… wird sich die Lage weiter verschärfen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Dass Bildung der Schlüssel zur Integration ist, …",
+     "s": "",
+     "a": [
+      "… wird kaum bestritten."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Weder höhere Strafen noch mehr Kontrollen …",
+     "s": "",
+     "a": [
+      "… haben das Problem bisher gelöst."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "So sehr ich das Leben in der Stadt schätze, …",
+     "s": "",
+     "a": [
+      "… vermisse ich manchmal die Ruhe auf dem Land."
+     ],
+     "ex": "so sehr … → инверсия в главном.",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Insofern man die Kosten berücksichtigt, …",
+     "s": "",
+     "a": [
+      "… ist das Projekt kaum zu rechtfertigen."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Ohne dass die Öffentlichkeit davon erfuhr, …",
+     "s": "",
+     "a": [
+      "… wurden die Verträge unterzeichnet."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er kommt nicht, weil …",
+     "o": [
+      "… er krank ist.",
+      "… ist er krank.",
+      "… er ist krank."
+     ],
+     "a": 0,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Bevor du gehst, …",
+     "o": [
+      "… bitte das Fenster du schließt.",
+      "… schließ bitte das Fenster.",
+      "… du schließt bitte das Fenster."
+     ],
+     "a": 1,
+     "ex": "",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Während manche Menschen gern in der Stadt wohnen, …",
+     "s": "",
+     "a": [
+      "… ziehen andere das Leben auf dem Land vor."
+     ],
+     "ex": "",
+     "task": "Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.",
+     "free": true
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "So wichtig die Freiheit des Internets ist, …",
+     "o": [
+      "… so klare Regeln notwendig sind.",
+      "… so notwendig sind klare Regeln.",
+      "… klare Regeln sind so notwendig."
+     ],
+     "a": 1,
+     "ex": "so … so → инверсия.",
+     "task": "Welche Fortsetzung ist grammatisch korrekt und sinnvoll?"
     }
    ],
    "write": [
@@ -1613,6 +5648,808 @@
      ],
      "ex": "",
      "task": "Formen Sie in direkte Rede um."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er sagt, er ___ müde.",
+     "o": [
+      "ist gewesen",
+      "wäre gewesen",
+      "sei"
+     ],
+     "a": 2,
+     "ex": "sein → sei."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie sagt, sie ___ keine Zeit.",
+     "o": [
+      "hätte gehabt",
+      "habe",
+      "hat gehabt"
+     ],
+     "a": 1,
+     "ex": "haben → habe."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Chef sagt, das Projekt ___ gut.",
+     "o": [
+      "laufen",
+      "läuft gelaufen",
+      "laufe"
+     ],
+     "a": 2,
+     "ex": "laufen → er laufe."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Arzt meint, ich ___ mehr schlafen.",
+     "o": [
+      "sollen",
+      "sollte gesollt",
+      "solle"
+     ],
+     "a": 2,
+     "ex": "sollen → er solle."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Studentin erzählt, sie ___ in Wien.",
+     "o": [
+      "wohnt gewohnt",
+      "wohne",
+      "wohnen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er behauptet, er ___ den Schlüssel nicht genommen.",
+     "o": [
+      "werde",
+      "habe",
+      "sei"
+     ],
+     "a": 1,
+     "ex": "Vergangenheit: habe + Partizip II."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie sagt, sie ___ gestern nach Graz gefahren.",
+     "o": [
+      "sei",
+      "habe",
+      "wäre gewesen"
+     ],
+     "a": 0,
+     "ex": "fahren → ist gefahren → sei gefahren."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Polizei teilt mit, der Täter ___ gefasst worden.",
+     "o": [
+      "sei",
+      "habe",
+      "werde"
+     ],
+     "a": 0,
+     "ex": "Passiv Perfekt: sei … worden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er sagt, er ___ morgen kommen.",
+     "o": [
+      "würde gewesen",
+      "werde",
+      "wird geworden"
+     ],
+     "a": 1,
+     "ex": "Futur: werde + Infinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Kinder sagen, sie ___ Hunger.",
+     "o": [
+      "haben",
+      "habe",
+      "hätten"
+     ],
+     "a": 2,
+     "ex": "3. Pl.: haben = Indikativ → Ersatzform hätten."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie sagt, sie ___ krank. (sein)",
+     "a": [
+      "sei"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er meint, er ___ das nicht. (wissen)",
+     "a": [
+      "wisse"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Zeitung berichtet, der Minister ___ zurückgetreten. (sein)",
+     "a": [
+      "sei"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er sagt, er ___ heute keine Lust. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie behauptet, sie ___ alles allein gemacht. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Der Lehrer sagt, wir ___ mehr lesen. (sollen)",
+     "a": [
+      "sollten"
+     ],
+     "ex": "1. Pl. sollen = Indikativ → Konjunktiv II sollten."
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er sagt: „Ich bin müde.“",
+     "s": "Er sagt, …",
+     "a": [
+      "Er sagt, er sei müde."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Sie sagt: „Ich habe keine Zeit.“",
+     "s": "Sie sagt, …",
+     "a": [
+      "Sie sagt, sie habe keine Zeit."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Der Arzt sagt: „Der Patient muss im Bett bleiben.“",
+     "s": "Der Arzt sagt, …",
+     "a": [
+      "Der Arzt sagt, der Patient müsse im Bett bleiben."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Anna sagt: „Ich komme später.“",
+     "s": "Anna sagt, …",
+     "a": [
+      "Anna sagt, sie komme später."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er erklärt: „Ich habe das nicht gewusst.“",
+     "s": "Er erklärt, …",
+     "a": [
+      "Er erklärt, er habe das nicht gewusst."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Forscher berichten, sie ___ neue Ergebnisse.",
+     "o": [
+      "hätten",
+      "habe",
+      "haben"
+     ],
+     "a": 0,
+     "ex": "sie haben = Indikativ → hätten."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Eltern sagen, sie ___ sich Sorgen.",
+     "o": [
+      "mache",
+      "machen",
+      "machten"
+     ],
+     "a": 2,
+     "ex": "sie machen = Indikativ → Konjunktiv II machten (или würden … machen)."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie fragte, ob ich morgen Zeit ___.",
+     "o": [
+      "habe",
+      "haben",
+      "hätte gehabt"
+     ],
+     "a": 0,
+     "ex": "Indirekte Frage mit ob."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er wollte wissen, wann der Zug ___.",
+     "o": [
+      "abgefahren",
+      "abfahre",
+      "abfährt gefahren"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Lehrerin forderte uns auf, wir ___ leiser sein.",
+     "o": [
+      "sollten",
+      "sollt",
+      "sollen"
+     ],
+     "a": 0,
+     "ex": "Bitte/Befehl → sollen; 1. Pl. → sollten."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Ministerin betonte, man ___ keine Zeit verlieren.",
+     "o": [
+      "darf",
+      "durfte",
+      "dürfe"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Laut Bericht ___ die Firma Verluste gemacht.",
+     "o": [
+      "werde",
+      "habe",
+      "sei"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Der Sprecher sagte, man ___ die Lage prüfen.",
+     "o": [
+      "würde gewesen",
+      "werde",
+      "wird"
+     ],
+     "a": 1,
+     "ex": "Futur I: werde prüfen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Welche Form ist Konjunktiv I von «sie können» (3. Pl.)?",
+     "o": [
+      "sie können → Ersatz: sie könnten",
+      "sie kann",
+      "sie könne"
+     ],
+     "a": 0,
+     "ex": "3. Pl. = Indikativ → Ersatz durch Konjunktiv II."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er sagte, er ___ seit drei Jahren in Wien.",
+     "o": [
+      "lebte gelebt",
+      "gelebt habe",
+      "lebe"
+     ],
+     "a": 2,
+     "ex": "Gleichzeitigkeit → Konjunktiv I Präsens."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie fragte, ___ ich mitkommen wolle.",
+     "a": [
+      "ob"
+     ],
+     "ex": "Ja/Nein-Frage → ob."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er fragte, wo ich ___. (wohnen)",
+     "a": [
+      "wohne"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Studierenden kritisieren, die Gebühren ___ zu hoch. (sein)",
+     "a": [
+      "seien"
+     ],
+     "ex": "3. Pl. sein → seien."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Der Mieter beschwert sich, die Heizung ___ seit Tagen nicht. (funktionieren)",
+     "a": [
+      "funktioniere"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie sagte, sie ___ das Buch schon gelesen. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er bat mich, ich ___ ihn anrufen. (sollen/möge)",
+     "a": [
+      "solle",
+      "möge",
+      "möchte"
+     ],
+     "ex": "Bitte → solle/möge."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Ministerin: „Wir werden die Steuern senken.“",
+     "s": "Die Ministerin kündigte an, …",
+     "a": [
+      "Die Ministerin kündigte an, man werde die Steuern senken.",
+      "Die Ministerin kündigte an, sie würden die Steuern senken.",
+      "Die Ministerin kündigte an, die Regierung werde die Steuern senken."
+     ],
+     "ex": "wir werden = Indikativ → würden; лучше перефразировать."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er fragt: „Wann beginnt der Kurs?“",
+     "s": "Er fragt, …",
+     "a": [
+      "Er fragt, wann der Kurs beginne.",
+      "Er fragt, wann der Kurs beginnt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie fragt: „Hast du Zeit?“",
+     "s": "Sie fragt, …",
+     "a": [
+      "Sie fragt, ob ich Zeit habe.",
+      "Sie fragt, ob ich Zeit hätte."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Lehrer: „Macht die Hausaufgaben!“",
+     "s": "Der Lehrer sagt, …",
+     "a": [
+      "Der Lehrer sagt, wir sollten die Hausaufgaben machen.",
+      "Der Lehrer sagt, wir sollen die Hausaufgaben machen."
+     ],
+     "ex": "Императив → sollen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Bürgermeister: „Die Brücke wurde schon 2020 renoviert.“",
+     "s": "Der Bürgermeister sagte, …",
+     "a": [
+      "Der Bürgermeister sagte, die Brücke sei schon 2020 renoviert worden."
+     ],
+     "ex": "Passiv Vergangenheit → sei … worden."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Forscherin: „Unsere Daten zeigen einen klaren Trend.“",
+     "s": "Die Forscherin erklärte, …",
+     "a": [
+      "Die Forscherin erklärte, ihre Daten zeigten einen klaren Trend.",
+      "Die Forscherin erklärte, ihre Daten würden einen klaren Trend zeigen."
+     ],
+     "ex": "zeigen (3. Pl.) → zeigten / würden zeigen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Opposition wirft der Regierung vor, sie ___ das Problem jahrelang ignoriert.",
+     "o": [
+      "sei",
+      "habe",
+      "hätte gehabt"
+     ],
+     "a": 1,
+     "ex": "Vorwurf, Vergangenheit."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Konzern dementierte, dass er Daten weitergegeben ___.",
+     "o": [
+      "habe",
+      "sei",
+      "hätte gehabt"
+     ],
+     "a": 0,
+     "ex": "Nach «dass» ist Konjunktiv I ebenfalls üblich."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Es heißt, die Verhandlungen ___ kurz vor dem Abschluss.",
+     "o": [
+      "stehen gestanden",
+      "stehe",
+      "stünden"
+     ],
+     "a": 2,
+     "ex": "3. Pl. stehen = Indikativ → stünden/ständen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welche Form ist korrekt? Die Experten sagen, die Inflation ___ bald sinken.",
+     "o": [
+      "würde gewesen",
+      "wird",
+      "werde"
+     ],
+     "a": 2,
+     "ex": "3. Sg. werde."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Laut Zeugen ___ der Fahrer viel zu schnell gefahren.",
+     "o": [
+      "habe",
+      "werde",
+      "sei"
+     ],
+     "a": 2,
+     "ex": "fahren → ist gefahren."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Er gab an, er ___ zur Tatzeit zu Hause gewesen.",
+     "o": [
+      "wäre gewesen sein",
+      "habe",
+      "sei"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Firma ließ verlauten, man ___ keine Stellen abbauen.",
+     "o": [
+      "wollte gewollt",
+      "wolle",
+      "will"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Sprecherin betonte, man ___ die Kritik ernst.",
+     "o": [
+      "nähme genommen",
+      "nimmt",
+      "nehme"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Studie kommt zu dem Schluss, soziale Medien ___ das Wohlbefinden. (beeinträchtigen, 3. Pl.)",
+     "a": [
+      "beeinträchtigten",
+      "würden beeinträchtigen"
+     ],
+     "ex": "3. Pl. = Indikativ → Konjunktiv II oder würde."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Der Angeklagte beteuerte, er ___ nichts Unrechtes getan. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Kritiker meinen, die Reform ___ zu spät. (kommen)",
+     "a": [
+      "komme"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Der Minister versicherte, es ___ keine weiteren Kürzungen geben. (werden)",
+     "a": [
+      "werde"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Gewerkschaft fordert, die Löhne ___ erhöht werden. (müssen)",
+     "a": [
+      "müssten"
+     ],
+     "ex": "3. Pl. müssen = Indikativ → müssten."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Man sagt, er ___ ein Vermögen geerbt. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Ministerin sagte: „Wir haben die Lage unterschätzt und müssen jetzt handeln.“",
+     "s": "Die Ministerin räumte ein, …",
+     "a": [
+      "Die Ministerin räumte ein, man habe die Lage unterschätzt und müsse jetzt handeln.",
+      "Die Ministerin räumte ein, sie hätten die Lage unterschätzt und müssten jetzt handeln.",
+      "Die Ministerin räumte ein, die Regierung habe die Lage unterschätzt und müsse jetzt handeln."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Zeuge: „Ich habe gesehen, wie der Mann das Auto aufbrach.“",
+     "s": "Der Zeuge gab an, …",
+     "a": [
+      "Der Zeuge gab an, er habe gesehen, wie der Mann das Auto aufbrach.",
+      "Der Zeuge gab an, er habe gesehen, wie der Mann das Auto aufgebrochen habe."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Firma: „Die Produkte werden ab Mai teurer.“",
+     "s": "Die Firma teilte mit, …",
+     "a": [
+      "Die Firma teilte mit, die Produkte würden ab Mai teurer.",
+      "Die Firma teilte mit, die Produkte würden ab Mai teurer werden."
+     ],
+     "ex": "werden (3. Pl.) → würden."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Professor: „Lesen Sie bis nächste Woche Kapitel 3!“",
+     "s": "Der Professor forderte uns auf, …",
+     "a": [
+      "Der Professor forderte uns auf, wir sollten bis nächste Woche Kapitel 3 lesen.",
+      "Der Professor forderte uns auf, bis nächste Woche Kapitel 3 zu lesen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Ärztin fragte: „Rauchen Sie?“",
+     "s": "Die Ärztin fragte, …",
+     "a": [
+      "Die Ärztin fragte, ob ich rauche.",
+      "Die Ärztin fragte, ob er rauche.",
+      "Die Ärztin fragte, ob sie rauche."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er sagte: „Ich war gestern beim Arzt, weil ich Fieber hatte.“",
+     "s": "Er sagte, …",
+     "a": [
+      "Er sagte, er sei gestern beim Arzt gewesen, weil er Fieber gehabt habe.",
+      "Er sagte, er sei gestern beim Arzt gewesen, weil er Fieber hatte."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Gewerkschaft: „Die Arbeitgeber ignorieren unsere Forderungen.“",
+     "s": "Die Gewerkschaft kritisierte, …",
+     "a": [
+      "Die Gewerkschaft kritisierte, die Arbeitgeber ignorierten ihre Forderungen.",
+      "Die Gewerkschaft kritisierte, die Arbeitgeber würden ihre Forderungen ignorieren."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Laut Polizei: „Der Täter ist geflohen und wird noch gesucht.“",
+     "s": "Laut Polizei …",
+     "a": [
+      "Laut Polizei sei der Täter geflohen und werde noch gesucht."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie sagt, ihr Bruder ___ Arzt.",
+     "o": [
+      "sei",
+      "ist gewesen",
+      "seien"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er sagt, er ___ gern Musik. (hören)",
+     "a": [
+      "höre"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Behörde teilte mit, die Straße ___ bis Freitag gesperrt.",
+     "o": [
+      "bleibe",
+      "bleibt geblieben",
+      "blieben"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Paul: „Ich kann heute nicht kommen.“",
+     "s": "Paul sagt, …",
+     "a": [
+      "Paul sagt, er könne heute nicht kommen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Autor vertritt die These, Bildung ___ der Schlüssel zur Integration.",
+     "o": [
+      "sei",
+      "ist gewesen",
+      "wäre gewesen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Regierung erklärte, die Maßnahmen ___ Wirkung gezeigt. (haben, 3. Pl.)",
+     "a": [
+      "hätten"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Mieter: „Wir zahlen seit Jahren zu viel.“",
+     "s": "Die Mieter beklagen, …",
+     "a": [
+      "Die Mieter beklagen, sie zahlten seit Jahren zu viel.",
+      "Die Mieter beklagen, sie würden seit Jahren zu viel zahlen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er sagt, das Wetter ___ morgen schön sein.",
+     "o": [
+      "werde",
+      "wird geworden",
+      "würde gewesen"
+     ],
+     "a": 0,
+     "ex": "Futur: werde … sein."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Nachbarin erzählt, ihr Sohn ___ nach Berlin gezogen. (sein)",
+     "a": [
+      "sei"
+     ],
+     "ex": ""
     }
    ],
    "write": [
@@ -1787,6 +6624,830 @@
      "a": [
       "Aufgrund der Alterung der Bevölkerung steigen die Gesundheitskosten.",
       "Aufgrund der alternden Bevölkerung steigen die Gesundheitskosten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "weil es regnet → ___ des Regens",
+     "o": [
+      "trotz",
+      "wegen",
+      "während"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "obwohl es kalt ist → ___ der Kälte",
+     "o": [
+      "wegen",
+      "trotz",
+      "bei"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "nachdem wir gegessen hatten → ___ dem Essen",
+     "o": [
+      "nach",
+      "vor",
+      "seit"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "bevor die Prüfung beginnt → ___ Beginn der Prüfung",
+     "o": [
+      "nach",
+      "vor",
+      "bis"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "wenn es regnet → ___ Regen",
+     "o": [
+      "wegen",
+      "bei",
+      "trotz"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "um sich zu erholen → ___ Erholung",
+     "o": [
+      "zur",
+      "für die",
+      "zum"
+     ],
+     "a": 0,
+     "ex": "die Erholung → zur."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "indem man übt → ___ Üben",
+     "o": [
+      "durch",
+      "mit dem",
+      "bei"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "während er studierte → ___ seines Studiums",
+     "o": [
+      "seit",
+      "während",
+      "bei"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "seit sie angekommen ist → seit ihrer ___",
+     "o": [
+      "Ankommen",
+      "Ankunft",
+      "Angekommenheit"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "als er geboren wurde → bei seiner ___",
+     "o": [
+      "Geborenheit",
+      "Gebären",
+      "Geburt"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Weil er krank war, fehlte er. → ___ seiner Krankheit fehlte er.",
+     "a": [
+      "Wegen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Obwohl es laut war, schlief sie. → Trotz des ___ schlief sie.",
+     "a": [
+      "Lärms"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Bevor wir abfahren, tanken wir. → Vor der ___ tanken wir.",
+     "a": [
+      "Abfahrt"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Nachdem sie das Studium abgeschlossen hatte, zog sie nach Graz. → Nach dem ___ des Studiums zog sie nach Graz.",
+     "a": [
+      "Abschluss"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn es dunkel ist, ist der Park geschlossen. → Bei ___ ist der Park geschlossen.",
+     "a": [
+      "Dunkelheit"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Weil es stark schneite, fiel der Unterricht aus.",
+     "s": "Wegen …",
+     "a": [
+      "Wegen des starken Schneefalls fiel der Unterricht aus.",
+      "Wegen des starken Schnees fiel der Unterricht aus."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Obwohl er sich bemüht hatte, scheiterte er.",
+     "s": "Trotz …",
+     "a": [
+      "Trotz seiner Bemühungen scheiterte er.",
+      "Trotz seines Bemühens scheiterte er."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Bevor man das Gerät benutzt, liest man die Anleitung.",
+     "s": "Vor …",
+     "a": [
+      "Vor der Benutzung des Geräts liest man die Anleitung.",
+      "Vor der Benutzung des Gerätes liest man die Anleitung."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wenn Sie Fragen haben, rufen Sie uns an.",
+     "s": "Bei …",
+     "a": [
+      "Bei Fragen rufen Sie uns an."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Um Energie zu sparen, schalten wir das Licht aus.",
+     "s": "Zum …",
+     "a": [
+      "Zum Energiesparen schalten wir das Licht aus.",
+      "Zum Sparen von Energie schalten wir das Licht aus."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Nachdem der Film zu Ende war, gingen wir essen.",
+     "s": "Nach …",
+     "a": [
+      "Nach dem Ende des Films gingen wir essen.",
+      "Nach dem Film gingen wir essen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "weil die Mieten gestiegen sind → wegen des ___ der Mieten",
+     "o": [
+      "Anstiegs",
+      "Steigerung",
+      "Ansteigens"
+     ],
+     "a": 0,
+     "ex": "steigen → der Anstieg."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "damit die Qualität verbessert wird → zur ___ der Qualität",
+     "o": [
+      "Verbesserung",
+      "Besserung",
+      "Verbessern"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "falls der Termin abgesagt wird → im Falle einer ___ des Termins",
+     "o": [
+      "Absage",
+      "Absagung",
+      "Absagen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "obwohl viele protestierten → trotz ___ Proteste",
+     "o": [
+      "zahlreichen",
+      "zahlreiche",
+      "zahlreicher"
+     ],
+     "a": 2,
+     "ex": "Genitiv Plural ohne Artikel → -er."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "indem man die Steuern senkt → durch ___ der Steuern",
+     "o": [
+      "Senken",
+      "Senkung",
+      "Senke"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "bis der Bau fertig ist → bis zur ___ des Baus",
+     "o": [
+      "Fertigung",
+      "Fertigstellung",
+      "Fertigkeit"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "als die Mauer fiel → beim ___ der Mauer",
+     "o": [
+      "Gefälle",
+      "Fall",
+      "Fallen"
+     ],
+     "a": 1,
+     "ex": "Auch: mit dem Fall der Mauer."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "wie die Zeitung berichtet → ___ der Zeitung",
+     "o": [
+      "wegen",
+      "laut",
+      "trotz"
+     ],
+     "a": 1,
+     "ex": "laut + Dativ/Genitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "je älter man wird → mit ___ Alter",
+     "o": [
+      "zunehmender",
+      "zunehmenden",
+      "zunehmendem"
+     ],
+     "a": 2,
+     "ex": "mit + Dativ neutr. → -em."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Weil die Nachfrage sinkt, werden Stellen abgebaut. → Wegen der ___ Nachfrage werden Stellen abgebaut.",
+     "a": [
+      "sinkenden"
+     ],
+     "ex": "Partizip als Adjektiv."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wenn man die Regeln nicht beachtet, droht eine Strafe. → Bei ___ der Regeln droht eine Strafe.",
+     "a": [
+      "Nichtbeachtung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Damit Unfälle vermieden werden, gilt Tempo 30. → Zur ___ von Unfällen gilt Tempo 30.",
+     "a": [
+      "Vermeidung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Seitdem das Gesetz in Kraft getreten ist, … → Seit dem ___ des Gesetzes …",
+     "a": [
+      "Inkrafttreten"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Indem man die Arbeitszeit verkürzt, … → Durch die ___ der Arbeitszeit …",
+     "a": [
+      "Verkürzung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Obwohl sie gewarnt worden waren, … → Trotz der ___ …",
+     "a": [
+      "Warnungen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Weil die Kosten gestiegen sind, wird das Ticket teurer.",
+     "s": "Wegen …",
+     "a": [
+      "Wegen des Anstiegs der Kosten wird das Ticket teurer.",
+      "Wegen der gestiegenen Kosten wird das Ticket teurer.",
+      "Wegen der Kostensteigerung wird das Ticket teurer."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wenn der Strom ausfällt, springt der Generator an.",
+     "s": "Bei …",
+     "a": [
+      "Bei Stromausfall springt der Generator an.",
+      "Bei einem Stromausfall springt der Generator an."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Damit die Umwelt geschützt wird, gibt es neue Regeln.",
+     "s": "Zum …",
+     "a": [
+      "Zum Schutz der Umwelt gibt es neue Regeln.",
+      "Zum Umweltschutz gibt es neue Regeln."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Als der Vertrag unterzeichnet wurde, waren alle anwesend.",
+     "s": "Bei …",
+     "a": [
+      "Bei der Unterzeichnung des Vertrags waren alle anwesend.",
+      "Bei der Unterzeichnung des Vertrages waren alle anwesend."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Obwohl die Wirtschaft wächst, steigt die Arbeitslosigkeit.",
+     "s": "Trotz …",
+     "a": [
+      "Trotz des Wirtschaftswachstums steigt die Arbeitslosigkeit.",
+      "Trotz des Wachstums der Wirtschaft steigt die Arbeitslosigkeit.",
+      "Trotz wachsender Wirtschaft steigt die Arbeitslosigkeit."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Indem man mehr Wohnungen baut, könnte man die Mieten senken.",
+     "s": "Durch …",
+     "a": [
+      "Durch den Bau von mehr Wohnungen könnte man die Mieten senken.",
+      "Durch den Bau weiterer Wohnungen könnte man die Mieten senken.",
+      "Durch mehr Wohnungsbau könnte man die Mieten senken."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Bis die Ergebnisse veröffentlicht werden, dauert es noch.",
+     "s": "Bis zur …",
+     "a": [
+      "Bis zur Veröffentlichung der Ergebnisse dauert es noch."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "nachdem man alle Unterlagen eingehend geprüft hatte → nach ___ Prüfung aller Unterlagen",
+     "o": [
+      "eingehenden",
+      "eingehend",
+      "eingehender"
+     ],
+     "a": 2,
+     "ex": "Adverb → Adjektiv; Dativ fem. ohne Artikel → -er."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "wenn man regelmäßig Sport treibt → bei ___ Sport",
+     "o": [
+      "regelmäßigen",
+      "regelmäßiger",
+      "regelmäßigem"
+     ],
+     "a": 2,
+     "ex": "Dativ mask. ohne Artikel → -em."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "weil es an Fachkräften mangelt → ___ Fachkräften",
+     "o": [
+      "mangels",
+      "wegen Mangel",
+      "durch"
+     ],
+     "a": 0,
+     "ex": "mangels + Genitiv/Dativ Pl."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "obwohl man ihn mehrfach gewarnt hatte → ___ mehrfacher Warnungen",
+     "o": [
+      "bei",
+      "wegen",
+      "trotz"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "wie Experten meinen → ___ Experten",
+     "o": [
+      "wegen",
+      "trotz",
+      "nach Ansicht von"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "damit die Versorgung gesichert ist → ___ Sicherung der Versorgung",
+     "o": [
+      "zum",
+      "bei der",
+      "zur"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "falls man nicht erscheint → bei ___",
+     "o": [
+      "Nichterschein",
+      "Nichterscheinen",
+      "Nichterscheinung"
+     ],
+     "a": 1,
+     "ex": "Substantivierter Infinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "als die Preise plötzlich stiegen → bei dem ___ Anstieg der Preise",
+     "o": [
+      "plötzlichen",
+      "plötzlicher",
+      "plötzlich"
+     ],
+     "a": 0,
+     "ex": "dem … -en."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Nachdem man die Lage gründlich analysiert hatte, … → Nach gründlicher ___ der Lage …",
+     "a": [
+      "Analyse"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Weil es keine Beweise gab, … → ___ Beweisen …",
+     "a": [
+      "Mangels"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Wenn man die Daten falsch interpretiert, … → Bei falscher ___ der Daten …",
+     "a": [
+      "Interpretation"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Indem man erneuerbare Energien ausbaut, … → Durch den ___ erneuerbarer Energien …",
+     "a": [
+      "Ausbau"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Obwohl die Umfragen positiv waren, verlor die Partei. → Trotz ___ Umfragen verlor die Partei.",
+     "a": [
+      "positiver"
+     ],
+     "ex": "Genitiv Pl. ohne Artikel → -er."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Während die Verhandlungen liefen, … → ___ der Verhandlungen …",
+     "a": [
+      "Während"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Nachdem die Studie veröffentlicht worden war, kam es zu Protesten.",
+     "s": "Nach …",
+     "a": [
+      "Nach der Veröffentlichung der Studie kam es zu Protesten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Weil die Bevölkerung immer älter wird, steigen die Gesundheitskosten.",
+     "s": "Wegen …",
+     "a": [
+      "Wegen der zunehmenden Alterung der Bevölkerung steigen die Gesundheitskosten.",
+      "Wegen der Alterung der Bevölkerung steigen die Gesundheitskosten.",
+      "Aufgrund der Alterung der Bevölkerung steigen die Gesundheitskosten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Wenn man die Vorschriften nicht einhält, wird man bestraft.",
+     "s": "Bei …",
+     "a": [
+      "Bei Nichteinhaltung der Vorschriften wird man bestraft."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Damit die Ausbreitung des Virus verhindert wird, gelten strenge Regeln.",
+     "s": "Zur …",
+     "a": [
+      "Zur Verhinderung der Ausbreitung des Virus gelten strenge Regeln."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Obwohl man sich intensiv bemüht hatte, wurde keine Lösung gefunden.",
+     "s": "Trotz …",
+     "a": [
+      "Trotz intensiver Bemühungen wurde keine Lösung gefunden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Indem die Kommunikation verbessert wurde, sanken die Konflikte im Team.",
+     "s": "Durch …",
+     "a": [
+      "Durch die Verbesserung der Kommunikation sanken die Konflikte im Team.",
+      "Durch eine verbesserte Kommunikation sanken die Konflikte im Team."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Wie das Statistische Amt mitteilt, ist die Inflation gesunken.",
+     "s": "Laut …",
+     "a": [
+      "Laut Statistischem Amt ist die Inflation gesunken.",
+      "Laut dem Statistischen Amt ist die Inflation gesunken.",
+      "Laut Mitteilung des Statistischen Amts ist die Inflation gesunken."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Je mehr Menschen das Angebot nutzen, desto günstiger wird es.",
+     "s": "Mit …",
+     "a": [
+      "Mit zunehmender Nutzung des Angebots wird es günstiger.",
+      "Mit steigender Nutzung des Angebots wird es günstiger.",
+      "Mit zunehmender Nutzung wird das Angebot günstiger."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Weil er sich nicht rechtzeitig angemeldet hatte, durfte er nicht teilnehmen.",
+     "s": "Wegen …",
+     "a": [
+      "Wegen der verspäteten Anmeldung durfte er nicht teilnehmen.",
+      "Wegen seiner verspäteten Anmeldung durfte er nicht teilnehmen.",
+      "Wegen der nicht rechtzeitigen Anmeldung durfte er nicht teilnehmen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Während die Wahlen stattfanden, gab es Unruhen.",
+     "s": "Während …",
+     "a": [
+      "Während der Wahlen gab es Unruhen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "weil er Angst hatte → ___ Angst",
+     "o": [
+      "aus",
+      "bei",
+      "mit"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn Gefahr besteht, ruft man 112. → Bei ___ ruft man 112.",
+     "a": [
+      "Gefahr"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Nachdem der Unterricht zu Ende war, … → Nach dem ___ …",
+     "a": [
+      "Unterricht"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Während wir im Urlaub waren, regnete es ständig.",
+     "s": "Während …",
+     "a": [
+      "Während unseres Urlaubs regnete es ständig."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "weil sie sich verspätet hatte → wegen ihrer ___",
+     "o": [
+      "Verspäten",
+      "Verspätung",
+      "Spätheit"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Falls das Konzert ausfällt, … → Bei ___ des Konzerts …",
+     "a": [
+      "Ausfall"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Seitdem die Fabrik geschlossen wurde, sind viele arbeitslos.",
+     "s": "Seit …",
+     "a": [
+      "Seit der Schließung der Fabrik sind viele arbeitslos."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "ohne dass jemand zustimmte → ohne ___",
+     "o": [
+      "Zustimmerung",
+      "Zustimmung",
+      "Zustimmen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Als die neue Regierung gebildet wurde, hofften viele auf Reformen.",
+     "s": "Bei …",
+     "a": [
+      "Bei der Bildung der neuen Regierung hofften viele auf Reformen.",
+      "Mit der Bildung der neuen Regierung hofften viele auf Reformen."
      ],
      "ex": ""
     }
@@ -1999,6 +7660,814 @@
       "zu"
      ],
      "ex": "sich äußern zu + D."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich warte ___ den Bus.",
+     "a": [
+      "auf"
+     ],
+     "ex": "warten auf + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie denkt oft ___ ihre Familie.",
+     "a": [
+      "an"
+     ],
+     "ex": "denken an + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir freuen uns ___ die Ferien.",
+     "a": [
+      "auf"
+     ],
+     "ex": "sich freuen auf + A (будущее)."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er freut sich ___ das Geschenk.",
+     "a": [
+      "über"
+     ],
+     "ex": "sich freuen über + A (уже есть)."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich interessiere mich ___ Politik.",
+     "a": [
+      "für"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie hat Angst ___ Hunden.",
+     "a": [
+      "vor"
+     ],
+     "ex": "Angst haben vor + D."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er bittet mich ___ Hilfe.",
+     "a": [
+      "um"
+     ],
+     "ex": "bitten um + A."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir sprechen ___ das neue Projekt.",
+     "a": [
+      "über"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich gratuliere dir ___ Geburtstag.",
+     "a": [
+      "zum"
+     ],
+     "ex": "gratulieren zu + D."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er nimmt ___ einem Kurs teil.",
+     "a": [
+      "an"
+     ],
+     "ex": "teilnehmen an + D."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie ärgert sich ___ den Lärm.",
+     "a": [
+      "über"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich erinnere mich gern ___ meine Kindheit.",
+     "o": [
+      "über",
+      "an",
+      "auf"
+     ],
+     "a": 1,
+     "ex": "sich erinnern an + A."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir müssen uns ___ die Prüfung vorbereiten.",
+     "o": [
+      "auf",
+      "für",
+      "an"
+     ],
+     "a": 0,
+     "ex": "sich vorbereiten auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er kümmert sich ___ seine kranke Mutter.",
+     "o": [
+      "auf",
+      "für",
+      "um"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das hängt ___ dir ab.",
+     "o": [
+      "von",
+      "an",
+      "auf"
+     ],
+     "a": 0,
+     "ex": "abhängen von + D."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie träumt ___ einer Reise nach Japan.",
+     "o": [
+      "von",
+      "über",
+      "auf"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich bin ___ meine Freundin stolz.",
+     "o": [
+      "für",
+      "über",
+      "auf"
+     ],
+     "a": 2,
+     "ex": "stolz auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir sind ___ dem Ergebnis zufrieden.",
+     "o": [
+      "von",
+      "über",
+      "mit"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ wartest du? — Auf den Bus.",
+     "o": [
+      "Wofür",
+      "Worauf",
+      "Auf was"
+     ],
+     "a": 1,
+     "ex": "Вопрос о вещи: wo(r) + Präposition."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ wartest du? — Auf meine Schwester.",
+     "o": [
+      "Worauf",
+      "Auf wen",
+      "Wofür"
+     ],
+     "a": 1,
+     "ex": "О человеке: Präposition + wen/wem."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich freue mich ___, dich zu sehen.",
+     "a": [
+      "darauf"
+     ],
+     "ex": "Präpositionaladverb + zu-Infinitiv."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Studie beschäftigt sich ___ den Folgen des Klimawandels.",
+     "o": [
+      "an",
+      "über",
+      "mit"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Viele Anwohner leiden ___ dem Verkehrslärm.",
+     "o": [
+      "an",
+      "unter",
+      "von"
+     ],
+     "a": 1,
+     "ex": "leiden unter + D (страдать от чего-то внешнего)."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie hat sich ___ ein Stipendium beworben.",
+     "o": [
+      "für",
+      "auf",
+      "um"
+     ],
+     "a": 2,
+     "ex": "sich bewerben um + A."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er verfügt ___ langjährige Erfahrung.",
+     "o": [
+      "über",
+      "von",
+      "mit"
+     ],
+     "a": 0,
+     "ex": "verfügen über + A."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Wir müssen uns ___ die neuen Regeln gewöhnen.",
+     "o": [
+      "auf",
+      "mit",
+      "an"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Firma ist ___ ausländische Fachkräfte angewiesen.",
+     "o": [
+      "von",
+      "auf",
+      "an"
+     ],
+     "a": 1,
+     "ex": "angewiesen sein auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er zweifelt ___ der Richtigkeit der Daten.",
+     "o": [
+      "an",
+      "von",
+      "über"
+     ],
+     "a": 0,
+     "ex": "zweifeln an + D."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Mieter protestieren ___ die Mieterhöhung.",
+     "o": [
+      "gegen",
+      "an",
+      "über"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich bin nicht ___ diese Lösung einverstanden.",
+     "o": [
+      "über",
+      "mit",
+      "für"
+     ],
+     "a": 1,
+     "ex": "einverstanden mit + D."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das Projekt besteht ___ drei Teilen.",
+     "o": [
+      "aus",
+      "von",
+      "mit"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie neigt ___ Übertreibungen.",
+     "o": [
+      "an",
+      "zu",
+      "für"
+     ],
+     "a": 1,
+     "ex": "neigen zu + D."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Regierung reagierte ___ die Kritik mit einem neuen Plan.",
+     "o": [
+      "an",
+      "auf",
+      "über"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Viele Menschen sind ___ öffentliche Verkehrsmittel angewiesen.",
+     "a": [
+      "auf"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er hat sich ___ seinen Fehler entschuldigt.",
+     "a": [
+      "für"
+     ],
+     "ex": "sich entschuldigen für + A (bei + D)."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie hat sich ___ ihrer Kollegin entschuldigt.",
+     "a": [
+      "bei"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Das Gesetz zielt ___ eine Senkung der Emissionen ab.",
+     "a": [
+      "auf"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich habe mich ___ entschieden, im Ausland zu studieren.",
+     "a": [
+      "dafür"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er beschwerte sich ___ dem Vermieter über die Heizung.",
+     "a": [
+      "bei"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir haben lange ___ nachgedacht, ob wir umziehen.",
+     "a": [
+      "darüber"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "___ hast du dich so geärgert? — Über die Verspätung.",
+     "a": [
+      "Worüber"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Es kommt ___ an, wie man es formuliert.",
+     "a": [
+      "darauf"
+     ],
+     "ex": "ankommen auf + A."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Lösung des Problems liegt ___ der Zusammenarbeit.",
+     "a": [
+      "in"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er freut sich, dass er bald Urlaub hat.",
+     "s": "Er freut sich auf …",
+     "a": [
+      "Er freut sich auf seinen baldigen Urlaub.",
+      "Er freut sich auf den baldigen Urlaub."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie hat Angst, dass sie die Prüfung nicht besteht.",
+     "s": "Sie hat Angst davor, …",
+     "a": [
+      "Sie hat Angst davor, die Prüfung nicht zu bestehen.",
+      "Sie hat Angst davor, dass sie die Prüfung nicht besteht."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir denken an den Ausflug morgen.",
+     "s": "Woran …?",
+     "a": [
+      "Woran denkt ihr?",
+      "Woran denken wir?"
+     ],
+     "ex": "Вопрос к предложной группе."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich habe mich daran gewöhnt, früh aufzustehen.",
+     "s": "Ich habe mich an …",
+     "a": [
+      "Ich habe mich an das frühe Aufstehen gewöhnt.",
+      "Ich habe mich ans frühe Aufstehen gewöhnt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Regierung hält ___ ihren Plänen fest.",
+     "o": [
+      "bei",
+      "an",
+      "auf"
+     ],
+     "a": 1,
+     "ex": "festhalten an + D."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Entscheidung beruht ___ einer umfassenden Analyse.",
+     "o": [
+      "auf",
+      "an",
+      "von"
+     ],
+     "a": 0,
+     "ex": "beruhen auf + D."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Er wurde ___ Betrugs angeklagt.",
+     "o": [
+      "wegen",
+      "über",
+      "für"
+     ],
+     "a": 0,
+     "ex": "anklagen wegen + G."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Sie setzt sich ___ die Rechte von Geflüchteten ein.",
+     "o": [
+      "um",
+      "an",
+      "für"
+     ],
+     "a": 2,
+     "ex": "sich einsetzen für + A."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Ausstellung erinnert ___ die Opfer des Krieges.",
+     "o": [
+      "von",
+      "über",
+      "an"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Man muss ___ Folgendes hinweisen: …",
+     "o": [
+      "über",
+      "an",
+      "auf"
+     ],
+     "a": 2,
+     "ex": "hinweisen auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Debatte dreht sich ___ die Frage der Finanzierung.",
+     "o": [
+      "um",
+      "an",
+      "über"
+     ],
+     "a": 0,
+     "ex": "sich drehen um + A."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Das Unternehmen haftet nicht ___ Schäden durch falsche Bedienung.",
+     "o": [
+      "an",
+      "für",
+      "über"
+     ],
+     "a": 1,
+     "ex": "haften für + A."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Partei grenzt sich deutlich ___ extremen Positionen ab.",
+     "o": [
+      "gegen",
+      "aus",
+      "von"
+     ],
+     "a": 2,
+     "ex": "sich abgrenzen von + D."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Erfolg ist ___ mehrere Faktoren zurückzuführen.",
+     "o": [
+      "an",
+      "von",
+      "auf"
+     ],
+     "a": 2,
+     "ex": "zurückführen auf + A."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Ergebnisse stehen ___ Widerspruch zu früheren Studien.",
+     "o": [
+      "zum",
+      "im",
+      "in"
+     ],
+     "a": 1,
+     "ex": "im Widerspruch zu + D."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Welcher Satz ist korrekt?",
+     "o": [
+      "Ich bin mir dessen bewusst.",
+      "Ich bin mir darüber bewusst von.",
+      "Ich bin mir davon bewusst."
+     ],
+     "a": 0,
+     "ex": "sich einer Sache bewusst sein (Genitiv)."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Opposition übt scharfe Kritik ___ dem Budget.",
+     "a": [
+      "an"
+     ],
+     "ex": "Kritik üben an + D."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Das Ministerium ist ___ die Umsetzung zuständig.",
+     "a": [
+      "für"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Studie gibt Aufschluss ___ das Konsumverhalten Jugendlicher.",
+     "a": [
+      "über"
+     ],
+     "ex": "Aufschluss geben über + A."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Viele haben sich ___ abgefunden, dass die Mieten steigen.",
+     "a": [
+      "damit"
+     ],
+     "ex": "sich abfinden mit + D."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Es mangelt ___ qualifiziertem Personal.",
+     "a": [
+      "an"
+     ],
+     "ex": "Es mangelt an + D."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Universität legt großen Wert ___ Internationalität.",
+     "a": [
+      "auf"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Kommission hat ___ geeinigt, die Frist zu verlängern.",
+     "a": [
+      "sich darauf"
+     ],
+     "ex": "sich einigen auf + A."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Man kann ___ ausgehen, dass die Preise steigen.",
+     "a": [
+      "davon"
+     ],
+     "ex": "ausgehen von + D."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Regierung hat beschlossen, die Steuern zu senken. Viele hatten darauf gehofft.",
+     "s": "Viele hatten auf …",
+     "a": [
+      "Viele hatten auf die Senkung der Steuern gehofft.",
+      "Viele hatten auf eine Senkung der Steuern gehofft.",
+      "Viele hatten auf eine Steuersenkung gehofft."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es kommt darauf an, dass man die Fristen einhält.",
+     "s": "Es kommt auf …",
+     "a": [
+      "Es kommt auf die Einhaltung der Fristen an."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er ist davon überzeugt, dass das Projekt erfolgreich sein wird.",
+     "s": "Er ist vom …",
+     "a": [
+      "Er ist vom Erfolg des Projekts überzeugt.",
+      "Er ist vom Erfolg des Projektes überzeugt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Sie hat sich darüber beschwert, dass das Zimmer zu laut war.",
+     "s": "Sie hat sich über …",
+     "a": [
+      "Sie hat sich über den Lärm im Zimmer beschwert.",
+      "Sie hat sich über das laute Zimmer beschwert."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Experten warnen davor, dass das Grundwasser verschmutzt wird.",
+     "s": "Die Experten warnen vor …",
+     "a": [
+      "Die Experten warnen vor der Verschmutzung des Grundwassers."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele zweifeln daran, dass die Reform wirkt.",
+     "s": "Viele zweifeln an …",
+     "a": [
+      "Viele zweifeln an der Wirksamkeit der Reform.",
+      "Viele zweifeln an der Wirkung der Reform."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie wohnt ___ ihren Eltern.",
+     "o": [
+      "bei",
+      "zu",
+      "mit"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er hat ___ teilgenommen, obwohl er krank war.",
+     "a": [
+      "daran"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Bericht wirft ein schlechtes Licht ___ die Behörde.",
+     "o": [
+      "an",
+      "auf",
+      "über"
+     ],
+     "a": 1,
+     "ex": ""
     }
    ],
    "write": [
@@ -2220,6 +8689,872 @@
      ],
      "a": 0,
      "ex": "Инверсия «liefert sie» → наречие dennoch."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich habe Hunger, ___ esse ich ein Brot.",
+     "o": [
+      "weil",
+      "deshalb",
+      "obwohl"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er ist krank, ___ geht er arbeiten.",
+     "o": [
+      "weil",
+      "deshalb",
+      "trotzdem"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie lernt viel, ___ sie die Prüfung bestehen will.",
+     "o": [
+      "weil",
+      "deshalb",
+      "trotzdem"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir bleiben drinnen, ___ es regnet.",
+     "o": [
+      "deshalb",
+      "da",
+      "dennoch"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Es ist spät. ___ gehen wir nach Hause.",
+     "o": [
+      "Daher",
+      "Obwohl",
+      "Weil"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Möchtest du Tee ___ Kaffee?",
+     "o": [
+      "sondern",
+      "oder",
+      "aber"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er ist nicht dumm, ___ faul.",
+     "o": [
+      "sondern",
+      "oder",
+      "aber"
+     ],
+     "a": 0,
+     "ex": "nicht …, sondern."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Essen war teuer, ___ sehr gut.",
+     "o": [
+      "denn",
+      "aber",
+      "sondern"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich komme nicht mit, ___ ich habe keine Zeit.",
+     "o": [
+      "weil",
+      "deshalb",
+      "denn"
+     ],
+     "a": 2,
+     "ex": "denn + обычный порядок."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ du kommst, ___ ich gehe.",
+     "o": [
+      "Sowohl … als auch",
+      "Weder … noch",
+      "Entweder … oder"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie spricht ___ Englisch ___ Französisch. (и … и)",
+     "o": [
+      "weder … noch",
+      "sowohl … als auch",
+      "entweder … oder"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich habe ___ Hunger ___ Durst. (ни … ни)",
+     "o": [
+      "weder … noch",
+      "sowohl … als auch",
+      "zwar … aber"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er war müde, ___ ging er früh schlafen.",
+     "a": [
+      "deshalb",
+      "daher",
+      "deswegen",
+      "darum"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Es regnete, ___ gingen wir spazieren.",
+     "a": [
+      "trotzdem",
+      "dennoch"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Je wärmer es ist, ___ mehr Eis wird verkauft.",
+     "a": [
+      "desto",
+      "umso"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Das Hotel war ___ klein, aber gemütlich.",
+     "a": [
+      "zwar"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er hat nicht nur ein Auto, ___ auch ein Motorrad.",
+     "a": [
+      "sondern"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Weil es kalt war, blieben wir zu Hause.",
+     "s": "Es war kalt. Deshalb …",
+     "a": [
+      "Es war kalt. Deshalb blieben wir zu Hause.",
+      "Es war kalt, deshalb blieben wir zu Hause."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Obwohl sie müde war, arbeitete sie weiter.",
+     "s": "Sie war müde. Trotzdem …",
+     "a": [
+      "Sie war müde. Trotzdem arbeitete sie weiter.",
+      "Sie war müde, trotzdem arbeitete sie weiter."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er hat kein Geld und er hat keine Zeit.",
+     "s": "Er hat weder …",
+     "a": [
+      "Er hat weder Geld noch Zeit."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Sie singt und sie tanzt auch.",
+     "s": "Sie singt nicht nur, …",
+     "a": [
+      "Sie singt nicht nur, sondern tanzt auch.",
+      "Sie singt nicht nur, sondern sie tanzt auch."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Preise steigen, ___ die Löhne stagnieren.",
+     "o": [
+      "deshalb",
+      "während",
+      "sodass"
+     ],
+     "a": 1,
+     "ex": "Противопоставление."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "In Wien gibt es viele Parks; in anderen Städten ___ fehlen Grünflächen.",
+     "o": [
+      "deshalb",
+      "weil",
+      "hingegen"
+     ],
+     "a": 2,
+     "ex": "hingegen = dagegen, может стоять внутри."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er arbeitete so lange, ___ er völlig erschöpft war.",
+     "o": [
+      "bis",
+      "damit",
+      "seit"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das Wetter war schlecht, ___ fand das Fest im Freien statt.",
+     "o": [
+      "dennoch",
+      "daher",
+      "folglich"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Kosten sind gestiegen; ___ müssen die Preise erhöht werden.",
+     "o": [
+      "hingegen",
+      "dennoch",
+      "folglich"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie hat das Angebot abgelehnt. ___ hat sie ein eigenes Unternehmen gegründet.",
+     "o": [
+      "Anstatt",
+      "Ohne",
+      "Stattdessen"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich gehe zur Party, ___ ich eigentlich lernen müsste.",
+     "o": [
+      "trotzdem",
+      "dennoch",
+      "obwohl"
+     ],
+     "a": 2,
+     "ex": "Глагол в конце → obwohl."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er sprach so leise, ___ niemand ihn verstand.",
+     "o": [
+      "dass",
+      "damit",
+      "um"
+     ],
+     "a": 0,
+     "ex": "so …, dass."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Wir fahren früh los, ___ wir nicht im Stau stehen.",
+     "o": [
+      "weil",
+      "damit",
+      "sodass"
+     ],
+     "a": 1,
+     "ex": "Цель → damit."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "___ ich das Buch gelesen habe, verstehe ich den Film besser.",
+     "o": [
+      "Bevor",
+      "Seitdem",
+      "Bis"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Wohnung ist schön, ___ liegt sie weit vom Zentrum entfernt.",
+     "o": [
+      "allerdings",
+      "folglich",
+      "deshalb"
+     ],
+     "a": 0,
+     "ex": "allerdings = однако."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er tut so, ___ er alles wüsste.",
+     "o": [
+      "als ob",
+      "dass",
+      "wie wenn"
+     ],
+     "a": 0,
+     "ex": "als ob + Konjunktiv II."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Mieten sind hoch; ___ ziehen viele an den Stadtrand.",
+     "a": [
+      "deshalb",
+      "daher",
+      "deswegen",
+      "folglich",
+      "darum"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie arbeitet viel, ___ ihr Mann zu Hause bleibt.",
+     "a": [
+      "während"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir müssen sparen, ___ wir uns eine Wohnung kaufen können.",
+     "a": [
+      "damit"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "___ du jetzt nicht gehst, verpasst du den Zug.",
+     "a": [
+      "Wenn"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Er ist ___ reich noch glücklich.",
+     "a": [
+      "weder"
+     ],
+     "ex": "weder … noch."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie hat lange gesucht, ___ fand sie keine Wohnung.",
+     "a": [
+      "dennoch",
+      "trotzdem",
+      "doch"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Mieten steigen. Die Einkommen stagnieren.",
+     "s": "Während …",
+     "a": [
+      "Während die Mieten steigen, stagnieren die Einkommen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er hat nicht angerufen. Er hat eine Mail geschrieben.",
+     "s": "Statt anzurufen, …",
+     "a": [
+      "Statt anzurufen, hat er eine Mail geschrieben.",
+      "Statt anzurufen, schrieb er eine Mail."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Das Zimmer ist klein, aber hell.",
+     "s": "Das Zimmer ist zwar …",
+     "a": [
+      "Das Zimmer ist zwar klein, aber hell."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wenn man mehr verdient, zahlt man mehr Steuern.",
+     "s": "Je …",
+     "a": [
+      "Je mehr man verdient, desto mehr Steuern zahlt man.",
+      "Je mehr man verdient, umso mehr Steuern zahlt man."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er ist gekommen, obwohl er krank war.",
+     "s": "Er war krank. Dennoch …",
+     "a": [
+      "Er war krank. Dennoch ist er gekommen.",
+      "Er war krank, dennoch ist er gekommen.",
+      "Er war krank. Dennoch kam er."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie trainiert hart, damit sie das Rennen gewinnt.",
+     "s": "Sie trainiert hart, um …",
+     "a": [
+      "Sie trainiert hart, um das Rennen zu gewinnen."
+     ],
+     "ex": "Одно подлежащее → um … zu."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Wirtschaft wächst, ___ die Arbeitslosigkeit kaum sinkt.",
+     "o": [
+      "indem",
+      "wohingegen",
+      "sodass"
+     ],
+     "a": 1,
+     "ex": "wohingegen = während (Gegensatz)."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "___ die Maßnahmen beschlossen waren, begann die Umsetzung.",
+     "o": [
+      "Solange",
+      "Sofern",
+      "Sobald"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Reform wird nur wirken, ___ sie konsequent umgesetzt wird.",
+     "o": [
+      "sobald",
+      "sodass",
+      "sofern"
+     ],
+     "a": 2,
+     "ex": "sofern = при условии, что."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "___ keine Daten vorliegen, kann man keine Prognose wagen.",
+     "o": [
+      "Sooft",
+      "Sobald",
+      "Solange"
+     ],
+     "a": 2,
+     "ex": "solange = пока."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Firma hat Gewinne gemacht, ___ sie Stellen abbaut.",
+     "o": [
+      "damit",
+      "sodass",
+      "obgleich"
+     ],
+     "a": 2,
+     "ex": "obgleich = obwohl (gehoben)."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Er hat die Stelle bekommen, ___ er keine Erfahrung hatte.",
+     "o": [
+      "obwohl",
+      "weil",
+      "sofern"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "___ hoch die Kosten auch sein mögen, das Projekt ist notwendig.",
+     "o": [
+      "Wie",
+      "Je",
+      "So"
+     ],
+     "a": 0,
+     "ex": "Wie … auch (immer) — какой бы ни."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Insofern die Angaben stimmen, ___ man von einem Erfolg sprechen.",
+     "o": [
+      "kann",
+      "könne man",
+      "man kann"
+     ],
+     "a": 0,
+     "ex": "Nach Nebensatz → Verb zuerst."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Umfrage ist nicht repräsentativ, ___ nur Studierende befragt wurden.",
+     "o": [
+      "damit",
+      "sodass",
+      "zumal"
+     ],
+     "a": 2,
+     "ex": "zumal = тем более что."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Er hat den Vertrag unterschrieben, ___ ihn vorher zu lesen.",
+     "o": [
+      "damit",
+      "ohne",
+      "statt dass"
+     ],
+     "a": 1,
+     "ex": "ohne … zu."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Das Problem ist ernst, ___ es nicht sofort sichtbar ist.",
+     "o": [
+      "sodass",
+      "auch wenn",
+      "damit"
+     ],
+     "a": 1,
+     "ex": "auch wenn = даже если."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Bevölkerung wächst; ___ steigt der Bedarf an Wohnungen.",
+     "o": [
+      "hingegen",
+      "dennoch",
+      "somit"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Das Medikament wirkt gut, ___ hat es Nebenwirkungen.",
+     "a": [
+      "allerdings",
+      "jedoch",
+      "dennoch"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Ich unterstütze den Plan, ___ die Finanzierung gesichert ist.",
+     "a": [
+      "sofern",
+      "vorausgesetzt",
+      "falls",
+      "wenn"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Teilnahme ist freiwillig, ___ wird sie dringend empfohlen.",
+     "a": [
+      "jedoch",
+      "allerdings",
+      "dennoch",
+      "trotzdem"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Je mehr man über das Thema weiß, ___ komplizierter erscheint es.",
+     "a": [
+      "desto",
+      "umso"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Er schwieg, ___ er die Antwort kannte.",
+     "a": [
+      "obwohl",
+      "obgleich",
+      "obschon"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Kritik ist berechtigt, ___ sie überzogen formuliert ist.",
+     "a": [
+      "wenngleich",
+      "obwohl",
+      "auch wenn",
+      "obgleich"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Regierung senkte die Steuern. Dadurch sollte der Konsum steigen.",
+     "s": "Die Regierung senkte die Steuern, damit …",
+     "a": [
+      "Die Regierung senkte die Steuern, damit der Konsum steigt.",
+      "Die Regierung senkte die Steuern, damit der Konsum stieg.",
+      "Die Regierung senkte die Steuern, damit der Konsum steigen sollte."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Nur wenn die Finanzierung gesichert ist, kann das Projekt starten.",
+     "s": "Das Projekt kann nur starten, sofern …",
+     "a": [
+      "Das Projekt kann nur starten, sofern die Finanzierung gesichert ist."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Es ist egal, wie teuer es ist – wir brauchen das Gerät.",
+     "s": "Wie teuer es auch …",
+     "a": [
+      "Wie teuer es auch ist, wir brauchen das Gerät.",
+      "Wie teuer es auch sein mag, wir brauchen das Gerät."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Umfrage ist wenig aussagekräftig. Außerdem wurden nur wenige befragt.",
+     "s": "Die Umfrage ist wenig aussagekräftig, zumal …",
+     "a": [
+      "Die Umfrage ist wenig aussagekräftig, zumal nur wenige befragt wurden."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele Menschen kaufen Bio-Produkte. Andere achten nur auf den Preis.",
+     "s": "Während …",
+     "a": [
+      "Während viele Menschen Bio-Produkte kaufen, achten andere nur auf den Preis."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er hat sich nicht entschuldigt. Er hat die Schuld anderen gegeben.",
+     "s": "Anstatt sich zu entschuldigen, …",
+     "a": [
+      "Anstatt sich zu entschuldigen, hat er die Schuld anderen gegeben.",
+      "Anstatt sich zu entschuldigen, gab er die Schuld anderen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Firma hat Gewinne gemacht. Trotzdem hat sie Stellen abgebaut.",
+     "s": "Obwohl …",
+     "a": [
+      "Obwohl die Firma Gewinne gemacht hat, hat sie Stellen abgebaut.",
+      "Obwohl die Firma Gewinne machte, baute sie Stellen ab."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Er verließ den Raum und sagte kein Wort.",
+     "s": "Er verließ den Raum, ohne …",
+     "a": [
+      "Er verließ den Raum, ohne ein Wort zu sagen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich trinke Kaffee, ___ ich müde bin.",
+     "o": [
+      "trotzdem",
+      "deshalb",
+      "weil"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Möchtest du ins Kino ___ lieber ins Theater?",
+     "a": [
+      "oder"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Sie ist nicht nur klug, ___ auch sehr fleißig.",
+     "o": [
+      "aber",
+      "oder",
+      "sondern"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "___ ich mehr Zeit hätte, würde ich reisen.",
+     "a": [
+      "Wenn",
+      "Falls"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Daten sind unvollständig; ___ lassen sich keine sicheren Schlüsse ziehen.",
+     "o": [
+      "obwohl",
+      "hingegen",
+      "insofern"
+     ],
+     "a": 2,
+     "ex": "insofern = поэтому/в этом смысле."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Kaum hatte der Film begonnen, ___ fiel der Strom aus.",
+     "a": [
+      "da"
+     ],
+     "ex": "kaum …, da …"
     }
    ],
    "write": [
@@ -2432,6 +9767,794 @@
      ],
      "a": 0,
      "ex": "zur Diskussion stehen = wird diskutiert."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir müssen eine Lösung ___.",
+     "o": [
+      "stellen",
+      "finden",
+      "treffen"
+     ],
+     "a": 1,
+     "ex": "eine Lösung finden."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Kannst du mir einen Gefallen ___?",
+     "o": [
+      "machen",
+      "geben",
+      "tun"
+     ],
+     "a": 2,
+     "ex": "einen Gefallen tun."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Darf ich Ihnen eine Frage ___?",
+     "o": [
+      "machen",
+      "geben",
+      "stellen"
+     ],
+     "a": 2,
+     "ex": "eine Frage stellen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er hat einen Fehler ___.",
+     "o": [
+      "gestellt",
+      "gemacht",
+      "getan"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir müssen auf die Umwelt Rücksicht ___.",
+     "o": [
+      "nehmen",
+      "geben",
+      "machen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie hat mir einen guten Rat ___.",
+     "o": [
+      "gegeben",
+      "gestellt",
+      "gemacht"
+     ],
+     "a": 0,
+     "ex": "einen Rat geben."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Zug hat Verspätung. Er ___ zehn Minuten Verspätung.",
+     "o": [
+      "hat",
+      "bringt",
+      "macht"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich muss noch einen Anruf ___.",
+     "o": [
+      "stellen",
+      "tätigen",
+      "geben"
+     ],
+     "a": 1,
+     "ex": "einen Anruf tätigen (offiziell)."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die Polizei hat den Täter in ___ genommen.",
+     "o": [
+      "Kraft",
+      "Frage",
+      "Haft"
+     ],
+     "a": 2,
+     "ex": "in Haft nehmen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der Plan wurde in die ___ umgesetzt.",
+     "o": [
+      "Kraft",
+      "Frage",
+      "Tat"
+     ],
+     "a": 2,
+     "ex": "in die Tat umsetzen."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das Gesetz ist seit Jänner in ___.",
+     "o": [
+      "Kraft",
+      "Betrieb",
+      "Frage"
+     ],
+     "a": 0,
+     "ex": "in Kraft sein."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Die neue Linie ist seit Montag in ___.",
+     "o": [
+      "Kraft",
+      "Betrieb",
+      "Frage"
+     ],
+     "a": 1,
+     "ex": "in Betrieb sein."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir müssen noch eine Entscheidung ___.",
+     "a": [
+      "treffen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich bin heute Abend allein. Kannst du mir ___ leisten?",
+     "a": [
+      "Gesellschaft"
+     ],
+     "ex": "jemandem Gesellschaft leisten."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie stellte einen ___ auf ein Stipendium.",
+     "a": [
+      "Antrag"
+     ],
+     "ex": "einen Antrag stellen."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er hat das Thema zur ___ gebracht.",
+     "a": [
+      "Sprache"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Die Stadt stellt kostenlose Räume zur ___.",
+     "a": [
+      "Verfügung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Wir haben entschieden, umzuziehen.",
+     "s": "Wir haben die Entscheidung …",
+     "a": [
+      "Wir haben die Entscheidung getroffen, umzuziehen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Er fragt den Lehrer etwas.",
+     "s": "Er stellt …",
+     "a": [
+      "Er stellt dem Lehrer eine Frage."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Ich rate dir, mehr zu schlafen.",
+     "s": "Ich gebe dir …",
+     "a": [
+      "Ich gebe dir den Rat, mehr zu schlafen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 1,
+     "q": "Das Gesetz gilt ab Mai.",
+     "s": "Das Gesetz tritt …",
+     "a": [
+      "Das Gesetz tritt im Mai in Kraft.",
+      "Das Gesetz tritt ab Mai in Kraft."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Polizei hat die Ermittlungen ___.",
+     "o": [
+      "getroffen",
+      "genommen",
+      "aufgenommen"
+     ],
+     "a": 2,
+     "ex": "Ermittlungen aufnehmen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Der Minister hat seinen Rücktritt ___.",
+     "o": [
+      "gestellt",
+      "gemacht",
+      "erklärt"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Firma muss die Verantwortung für den Schaden ___.",
+     "o": [
+      "nehmen",
+      "übernehmen",
+      "treffen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Regierung hat ein Verbot ___.",
+     "o": [
+      "erlassen",
+      "getroffen",
+      "gemacht"
+     ],
+     "a": 0,
+     "ex": "ein Verbot erlassen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Bürger haben Anzeige gegen die Firma ___.",
+     "o": [
+      "erstattet",
+      "gegeben",
+      "gemacht"
+     ],
+     "a": 0,
+     "ex": "Anzeige erstatten."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Umfrage hat interessante Ergebnisse zutage ___.",
+     "o": [
+      "gestellt",
+      "gebracht",
+      "gefördert"
+     ],
+     "a": 2,
+     "ex": "zutage fördern."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das Problem ___ zur Sprache.",
+     "o": [
+      "kam",
+      "stellte",
+      "brachte"
+     ],
+     "a": 0,
+     "ex": "Passivbedeutung → kommen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Frage ___ nicht zur Debatte.",
+     "o": [
+      "stellt",
+      "kommt",
+      "steht"
+     ],
+     "a": 2,
+     "ex": "etwas steht (nicht) zur Debatte."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Studie hat die bisherigen Annahmen in Frage ___.",
+     "o": [
+      "gestellt",
+      "gekommen",
+      "genommen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Ausstellung findet großen ___.",
+     "o": [
+      "Anklang",
+      "Einfluss",
+      "Ausdruck"
+     ],
+     "a": 0,
+     "ex": "Anklang finden = gut ankommen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Kosten fallen kaum ins ___.",
+     "o": [
+      "Gewicht",
+      "Auge",
+      "Kraft"
+     ],
+     "a": 0,
+     "ex": "ins Gewicht fallen = важно, существенно."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Er brachte seine Dankbarkeit zum ___.",
+     "o": [
+      "Ausdrucken",
+      "Ausdruck",
+      "Abschluss"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Verhandlungen wurden zum ___ gebracht.",
+     "a": [
+      "Abschluss"
+     ],
+     "ex": "zum Abschluss bringen = abschließen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Studierenden üben ___ an den Prüfungsregeln.",
+     "a": [
+      "Kritik"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Der Vorschlag stieß auf großen ___.",
+     "a": [
+      "Widerstand"
+     ],
+     "ex": "auf Widerstand stoßen."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die Firma nimmt den Kredit in ___.",
+     "a": [
+      "Anspruch"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir müssen alle Möglichkeiten in ___ ziehen.",
+     "a": [
+      "Betracht"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Universität hat beschlossen, die Gebühren zu senken.",
+     "s": "Die Universität hat den Beschluss …",
+     "a": [
+      "Die Universität hat den Beschluss gefasst, die Gebühren zu senken."
+     ],
+     "ex": "einen Beschluss fassen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Das Thema wurde in der Sitzung angesprochen.",
+     "s": "Das Thema kam …",
+     "a": [
+      "Das Thema kam in der Sitzung zur Sprache."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er hat die Firma verklagt.",
+     "s": "Er hat Klage …",
+     "a": [
+      "Er hat Klage gegen die Firma erhoben.",
+      "Er hat gegen die Firma Klage erhoben."
+     ],
+     "ex": "Klage erheben."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Die Politik beeinflusst die Preise.",
+     "s": "Die Politik nimmt …",
+     "a": [
+      "Die Politik nimmt Einfluss auf die Preise."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Vorschlag wird gerade diskutiert.",
+     "s": "Der Vorschlag steht …",
+     "a": [
+      "Der Vorschlag steht gerade zur Diskussion."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie hat ihre Meinung deutlich ausgedrückt.",
+     "s": "Sie hat ihre Meinung deutlich zum …",
+     "a": [
+      "Sie hat ihre Meinung deutlich zum Ausdruck gebracht."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Ergebnisse müssen noch einer Prüfung ___ werden.",
+     "o": [
+      "unterzogen",
+      "gezogen",
+      "gestellt"
+     ],
+     "a": 0,
+     "ex": "einer Prüfung unterziehen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Das Projekt wurde in ___ gestellt, nachdem die Finanzierung fehlte.",
+     "o": [
+      "Betracht",
+      "Kraft",
+      "Frage"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die neuen Regeln ___ bei vielen auf Unverständnis.",
+     "o": [
+      "kommen",
+      "treffen",
+      "stoßen"
+     ],
+     "a": 2,
+     "ex": "auf Unverständnis stoßen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Regierung hat das Gesetz außer Kraft ___.",
+     "o": [
+      "gesetzt",
+      "gestellt",
+      "gebracht"
+     ],
+     "a": 0,
+     "ex": "außer Kraft setzen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Opposition hat einen Misstrauensantrag ___.",
+     "o": [
+      "gebracht",
+      "getroffen",
+      "eingebracht"
+     ],
+     "a": 2,
+     "ex": "einen Antrag einbringen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Firma ist in Konkurs ___.",
+     "o": [
+      "gestellt",
+      "gegangen",
+      "gekommen"
+     ],
+     "a": 1,
+     "ex": "in Konkurs gehen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Der Bericht wirft die Frage ___, ob die Kontrollen ausreichen.",
+     "o": [
+      "an",
+      "auf",
+      "vor"
+     ],
+     "a": 1,
+     "ex": "eine Frage aufwerfen."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Initiative leistet einen wichtigen ___ zum Klimaschutz.",
+     "o": [
+      "Einsatz",
+      "Anteil",
+      "Beitrag"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Mehrere Firmen haben Insolvenz ___.",
+     "o": [
+      "gegeben",
+      "gestellt",
+      "angemeldet"
+     ],
+     "a": 2,
+     "ex": "Insolvenz anmelden."
+    },
+    {
+     "t": "mc",
+     "lv": 3,
+     "q": "Die Gesundheit der Bevölkerung steht auf dem ___.",
+     "o": [
+      "Spiel",
+      "Plan",
+      "Programm"
+     ],
+     "a": 0,
+     "ex": "auf dem Spiel stehen = быть под угрозой."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Regierung ergriff ___, um die Inflation zu bekämpfen.",
+     "a": [
+      "Maßnahmen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Vorwürfe wurden einer Überprüfung ___.",
+     "a": [
+      "unterzogen"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Reform ist auf heftige ___ gestoßen.",
+     "a": [
+      "Kritik"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Ergebnisse geben ___ zur Sorge.",
+     "a": [
+      "Anlass"
+     ],
+     "ex": "Anlass geben zu + D."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Universität zieht in ___, die Gebühren abzuschaffen.",
+     "a": [
+      "Erwägung"
+     ],
+     "ex": "in Erwägung ziehen = erwägen."
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Die Experten kamen zu dem ___, dass die Maßnahme wirkt.",
+     "a": [
+      "Schluss"
+     ],
+     "ex": "zu dem Schluss kommen."
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Man erwägt, die Arbeitszeit zu verkürzen.",
+     "s": "Man zieht in Erwägung, …",
+     "a": [
+      "Man zieht in Erwägung, die Arbeitszeit zu verkürzen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Ergebnisse wurden gründlich überprüft.",
+     "s": "Die Ergebnisse wurden einer …",
+     "a": [
+      "Die Ergebnisse wurden einer gründlichen Überprüfung unterzogen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Das Gesetz gilt nicht mehr.",
+     "s": "Das Gesetz ist außer …",
+     "a": [
+      "Das Gesetz ist außer Kraft.",
+      "Das Gesetz ist außer Kraft getreten."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Viele haben die neue Regel nicht verstanden.",
+     "s": "Die neue Regel stieß …",
+     "a": [
+      "Die neue Regel stieß bei vielen auf Unverständnis."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Studie bezweifelt die bisherigen Ergebnisse.",
+     "s": "Die Studie stellt …",
+     "a": [
+      "Die Studie stellt die bisherigen Ergebnisse in Frage.",
+      "Die Studie stellt die bisherigen Ergebnisse infrage."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Firma wurde zahlungsunfähig.",
+     "s": "Die Firma ging …",
+     "a": [
+      "Die Firma ging in Konkurs.",
+      "Die Firma ging in Insolvenz."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Der Plan wurde verwirklicht.",
+     "s": "Der Plan wurde in die …",
+     "a": [
+      "Der Plan wurde in die Tat umgesetzt."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 3,
+     "q": "Die Politiker haben sich nicht geeinigt.",
+     "s": "Die Politiker konnten keine Einigung …",
+     "a": [
+      "Die Politiker konnten keine Einigung erzielen."
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie hat eine gute ___ gemacht. (= hat gute Erfahrungen)",
+     "o": [
+      "Kraft",
+      "Erfahrung",
+      "Frage"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er hat großen ___ auf seine Kinder.",
+     "a": [
+      "Einfluss"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Die Maschine wurde außer ___ genommen.",
+     "o": [
+      "Betrieb",
+      "Frage",
+      "Kraft"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Wir müssen endlich zu einer ___ kommen.",
+     "a": [
+      "Einigung"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 3,
+     "q": "Der Fall erregte großes ___ in den Medien.",
+     "a": [
+      "Aufsehen"
+     ],
+     "ex": "Aufsehen erregen."
     }
    ],
    "write": [

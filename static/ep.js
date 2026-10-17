@@ -311,12 +311,18 @@ document.addEventListener("click",e=>{
   if(b){b.closest(".ep-swon").classList.remove("ep-swon")}
 });
 
-// ---------- экран загрузки ----------
+// ---------- экран загрузки: кружок крутится вокруг знака в цвете модуля ----------
+const ring=k=>`<div class="ep-ring" style="--c:${color(k)}"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" class="ep-rt"/><circle cx="50" cy="50" r="45" class="ep-ra"/></svg>${mark(44)}</div>`;
+// загрузка при переходе между экранами внутри страницы (/de): шапка остаётся, ниже — кружок с логотипом
+let plT=0,plShown=0;
+function pageLoad(k){let el=document.getElementById("ep-pl");if(!el){el=document.createElement("div");el.id="ep-pl";el.setAttribute("aria-hidden","true");document.body.appendChild(el)}
+  el.innerHTML=ring(k);clearTimeout(plT);plShown=performance.now();el.classList.add("on")}
+function pageDone(){const el=document.getElementById("ep-pl");if(!el)return;const left=Math.max(0,350-(performance.now()-plShown));clearTimeout(plT);plT=setTimeout(()=>el.classList.remove("on"),left)}
 let bootT0=0;
 function boot(k){
   if(document.getElementById("ep-boot"))return;bootT0=performance.now();
   const n=NAME[k]||"";
-  document.body.insertAdjacentHTML("afterbegin",`<div id="ep-boot" aria-hidden="true" style="--c:${color(k)}"><div class="ep-bin">${mark(64)}<div class="ep-bname"><span>EP<b>Deutsch</b></span>${n&&k!=="home"&&k!=="start"?` <small lang="de">${esc(n)}</small>`:""}</div><i class="ep-bbar"><b></b></i></div></div>`);
+  document.body.insertAdjacentHTML("afterbegin",`<div id="ep-boot" aria-hidden="true" style="--c:${color(k)}"><div class="ep-bin">${ring(k)}<div class="ep-bname"><span>EP<b>Deutsch</b></span>${n&&k!=="home"&&k!=="start"?` <small lang="de">${esc(n)}</small>`:""}</div></div></div>`);
   setTimeout(ready,8000); // страховка: что бы ни случилось, через 8 с страница открывается
 }
 // снять экран, когда страница отрисована и шрифты на месте; не короче 450 мс, чтобы не мигало
@@ -407,18 +413,24 @@ body.ep-dopen{overflow:hidden}
 html.boot #ep-boot{display:grid}
 html.bootout #ep-boot{opacity:0;visibility:hidden}
 .ep-bin{display:flex;flex-direction:column;align-items:center;gap:16px;transform:translateY(-4vh)}
-#ep-boot .ep-mark{animation:epBob 1.6s ease-in-out infinite}
+.ep-ring{position:relative;width:104px;height:104px;display:grid;place-items:center}
+.ep-ring svg{position:absolute;inset:0;width:100%;height:100%;animation:epSpin 1s linear infinite}
+.ep-ring .ep-rt{fill:none;stroke:color-mix(in srgb,var(--c) 15%,transparent);stroke-width:5}
+.ep-ring .ep-ra{fill:none;stroke:var(--c);stroke-width:5;stroke-linecap:round;stroke-dasharray:70 213}
+.ep-ring .ep-mark{animation:epPulse 1.6s ease-in-out infinite}
+#ep-pl{position:fixed;left:0;right:0;top:66px;bottom:0;z-index:28;background:color-mix(in srgb,var(--bg) 92%,transparent);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .18s,visibility .18s;pointer-events:none}
+#ep-pl.on{opacity:1;visibility:visible}
+#ep-pl .ep-ring{transform:translateY(-6vh) scale(.85)}
+@media (max-width:640px){#ep-pl{top:58px}}
+@keyframes epSpin{to{transform:rotate(360deg)}}
+@keyframes epPulse{0%,100%{transform:scale(1)}50%{transform:scale(.92)}}
 .ep-bname{font-family:var(--font,Manrope,system-ui,sans-serif);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--fg,#282E3E);display:flex;align-items:center;gap:9px}
 .ep-bname b{color:var(--c)}
 .ep-bname small{font-size:14px;color:#fff;background:var(--c);border-radius:9px;padding:6px 9px;letter-spacing:.01em;line-height:1}
-.ep-bbar{display:block;width:180px;height:5px;border-radius:9px;background:color-mix(in srgb,var(--c) 16%,transparent);overflow:hidden}
-.ep-bbar b{display:block;height:100%;width:0;border-radius:9px;background:var(--c);animation:epLoad 2.4s cubic-bezier(.1,.7,.2,1) forwards}
-html.bootout .ep-bbar b{width:100%!important;animation:none;transition:width .25s}
 @keyframes epBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes epLoad{0%{width:4%}100%{width:88%}}
 @media (prefers-reduced-motion:reduce){#ep-boot *{animation:none!important}}
 `;
 const st=document.createElement("style");st.id="ep-frame";st.textContent=css;(document.head||document.documentElement).appendChild(st);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-ep-drawer]");if(b){e.preventDefault();toggle()}});
-Object.assign(window.EP,{logo,burger,mark,boot,ready,modlist,switcher,tip,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
+Object.assign(window.EP,{logo,burger,mark,boot,ready,ring,pageLoad,pageDone,modlist,switcher,tip,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
 })();

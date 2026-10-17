@@ -51,18 +51,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .ubtn{border:0;background:none;padding:2px;border-radius:50%;cursor:pointer;display:inline-flex}
 .cdchip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:8px 13px;background:color-mix(in srgb,var(--c-p) 16%,transparent);color:var(--fg);font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap}
 .cdchip svg{color:var(--c-p)}.cdchip small{font-weight:700;color:var(--muted);font-size:12.5px}
-.subnav{display:flex;align-items:center;gap:4px;padding:8px 18px;background:var(--panel);border-bottom:1px solid var(--line2);overflow-x:auto;scrollbar-width:none}
-.subnav::-webkit-scrollbar{display:none}
-.subnav a{display:inline-flex;align-items:center;gap:8px;flex:none;padding:5px 12px 5px 5px;border-radius:12px;color:var(--fg);font-weight:700;font-size:13.5px;text-decoration:none;white-space:nowrap}
-.subnav a:hover{background:var(--hover)}
-.subnav .ni{--c:var(--muted);width:28px;height:28px;border-radius:9px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent)}
-.subnav a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
-.subnav a[aria-current="page"] .ni{background:var(--c);color:#fff}
-.subnav .sn-sp{flex:1;min-width:8px}
 .tabbar{display:none}
 @media (max-width:640px){
-  .subnav{display:none}.cdchip small{display:none}.top{gap:8px;padding:0 10px;height:58px}.home span{display:none}
-  .tabbar{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:45;grid-template-columns:repeat(5,1fr);background:var(--panel);border-top:1px solid var(--line2);padding:4px max(4px,env(safe-area-inset-right)) calc(4px + env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left))}
+    .tabbar{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:45;grid-template-columns:repeat(5,1fr);background:var(--panel);border-top:1px solid var(--line2);padding:4px max(4px,env(safe-area-inset-right)) calc(4px + env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left))}
   .tabbar a,.tabbar button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;border:0;background:none;border-radius:14px;color:var(--muted);font:inherit;font-size:11px;font-weight:700;cursor:pointer;text-decoration:none}
   .tabbar svg{width:22px;height:22px}
   .tabbar [aria-current="page"]{color:var(--c,var(--link))}
@@ -99,6 +90,30 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .toast.on{opacity:1;transform:translateX(-50%)}
 .empty{padding:30px;text-align:center;color:var(--muted)}
 /* ---------- обзор ---------- */
+/* боковая панель: как в Wörter */
+.shell{display:flex;min-height:calc(100vh - 66px);min-height:calc(100dvh - 66px);overflow-x:clip}
+.shell>main{flex:1;min-width:0}
+.nav{width:264px;flex:none;position:sticky;top:66px;height:calc(100vh - 66px);overflow:auto;padding:14px 12px 20px;background:var(--bg);transition:margin-left .28s cubic-bezier(.3,.8,.3,1),opacity .2s;scrollbar-width:thin}
+.nav a,.nav .fold{display:flex;align-items:center;gap:12px;padding:7px 10px;border-radius:14px;color:var(--fg);font-weight:600;text-decoration:none;cursor:pointer;border:0;background:none;width:100%;text-align:left;font-size:14.5px;font-family:inherit}
+.nav a:hover,.nav .fold:hover{background:var(--hover)}
+.nav a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav .ni{--c:var(--muted);width:34px;height:34px;border-radius:11px;flex:none;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);transition:transform .2s cubic-bezier(.34,1.56,.64,1)}
+.nav a:hover .ni{transform:scale(1.08) rotate(-4deg)}
+.nav a[aria-current="page"] .ni{background:var(--c);color:#fff;box-shadow:0 4px 12px -4px var(--c)}
+.nav a.nav-ai{margin:2px 0;padding:10px;border-radius:16px;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 16%,transparent),rgba(139,92,246,.10) 55%,rgba(255,205,31,.16))}
+.nav a.nav-ai .ni{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:#fff}
+.nav-gt{font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;padding:14px 12px 5px;opacity:.85}
+.nav-l{display:flex;flex-direction:column;min-width:0;line-height:1.2}.nav-l b{font-weight:800}.nav-l small{color:var(--muted);font-size:12px;font-weight:600}
+.nav hr{border:0;border-top:1px solid var(--line);margin:12px 6px}
+.nav .fold{font-weight:500;font-size:14px;padding:8px 14px}.nav .fold svg{color:var(--muted)}
+.veil{display:none}
+@media (min-width:981px){body.navhide .nav{margin-left:-264px;opacity:0;pointer-events:none}}
+@media (max-width:980px){
+  .nav{position:fixed;left:0;top:66px;z-index:40;background:var(--panel);transform:translateX(-100%);transition:transform .25s;box-shadow:var(--sh-card);border-radius:0 var(--r-lg) var(--r-lg) 0;height:calc(100dvh - 66px)}
+  body.navopen .nav{transform:none}
+  body.navopen .veil{display:block;position:fixed;inset:66px 0 0;background:rgba(10,9,45,.35);z-index:35}
+}
+@media (max-width:640px){.nav{top:58px;height:calc(100dvh - 58px - 64px - env(safe-area-inset-bottom))}body.navopen .veil{inset:58px 0 0}}
 /* главная: как в Schreiben */
 .hero{background:var(--panel);border-radius:var(--r-lg);padding:24px 26px 20px;box-shadow:var(--sh);position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,205,31,.35),transparent 70%);pointer-events:none}
@@ -387,13 +402,12 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 <body>
 <script>EP.boot({grammatik:"grammatik",lesen:"lesen",hoeren:"hoeren",sprechen:"sprechen",frei:"frei",plan:"plan"}[(location.hash.split("/")[1]||"")]||"home")</script>
 <header class="top">
-  <script>document.write(EP.burger("deBurger","Меню").replace("<button",'<button data-ep-drawer'))</script>
+  <script>document.write(EP.burger("burger","Меню: модуль, разделы, тема"))</script>
   <span id="logo" style="display:contents"></span>
   <script>document.write(EP.searchField())</script>
   <div class="uwrap"><a class="cdchip" href="#/plan" id="cdChip" hidden></a><a class="ubtn" href="#/settings" id="ubtn" title="Настройки"></a></div>
 </header>
-<nav class="subnav" id="subnav" aria-label="Разделы"></nav>
-<main id="app"></main>
+<div class="shell"><nav class="nav" id="nav" aria-label="Меню"></nav><div class="veil" id="veil"></div><main id="app"></main></div>
 <nav class="tabbar" id="tabbar" aria-label="Быстрая навигация"></nav>
 <div class="toast" id="toast"></div>
 <script>
@@ -452,19 +466,43 @@ async function say(text,opt={}){
 // [ключ, подпись, адрес, иконка, цвет] — вторая строка шапки: разделы EPD или «Свободного»
 const SUB_EPD=[["home","Обзор","#/","home","var(--primary)"],["grammatik","Grammatik","#/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/lesen","book","var(--c-l)"],["hoeren","Hören","#/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/sprechen","mic","var(--c-sp)"],["plan","План","#/plan","cal","var(--c-p)"],["settings","Настройки","#/settings","gear","var(--muted)"]];
 const SUB_FREI=[["karten","Карточки","#/frei/karten","cards","var(--c-f)"],["grammatik","Грамматика","#/frei/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/frei/lesen","book","var(--c-l)"],["hoeren","Hören","#/frei/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/frei/sprechen","mic","var(--c-sp)"],["videos","Видео","#/frei/videos","video","var(--c-f)"]];
+const navItem=(href,t,i,c,cur,sub)=>`<a href="${href}" style="--c:${c}"${cur?' aria-current="page"':""}><span class="ni">${EP.icon(i,18)}</span>${sub?`<span class="nav-l"><b>${t}</b><small>${sub}</small></span>`:t}</a>`;
 function header(cur){
   const k=cur||"home",h=(location.hash||"#/").slice(1).split("/").filter(Boolean),frei=k==="frei";
-  const on=frei?(h[1]||"karten"):(h[0]||"home"),sub=frei?SUB_FREI:SUB_EPD;
+  const on=frei?(h[1]||"karten"):(h[0]||"home"),H=location.hash||"#/";
   $("#logo").innerHTML=EP.logo(k==="settings"?"home":k,frei?"#/frei":"#/");
-  const link=([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}><span class="ni">${EP.icon(i,16)}</span>${t}</a>`;
-  $("#subnav").innerHTML=(frei?`<a href="#/frei" style="--c:var(--c-f)"${h.length===1?' aria-current="page"':""}><span class="ni">${EP.icon("star",16)}</span>Свободный</a>`:"")+sub.map(link).join("");
+  // мобильная нижняя панель: разделы текущего места + «Меню»
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD.slice(0,4);
-  $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-ep-drawer>${EP.icon("menu",22)}Меню</button>`;
-  EP.drawer(k,`<div class="ep-dgt">${frei?"Свободный немецкий":"Подготовка к EPD"}</div><div class="ep-dsec">${(frei?[["frei-home","Обзор","#/frei","star","var(--c-f)"],...SUB_FREI]:SUB_EPD).map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on||(key==="frei-home"&&h.length===1)?' aria-current="page"':""}><span class="ep-mi">${EP.icon(i,16)}</span>${t}</a>`).join("")}${frei?"":`<a href="/woerter#tab=practice" style="--c:#8B5CF6"><span class="ep-mi">${EP.icon("spark",16)}</span>Практика с ИИ</a><a href="/schreiben#theory" style="--c:#0EA5B7"><span class="ep-mi">${EP.icon("book",16)}</span>Теория письма</a>`}</div>`);
+  $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-nav-toggle>${EP.icon("menu",22)}Меню</button>`;
+  // боковая панель: модуль сверху, ниже — только то, что внутри модуля (не список модулей ещё раз)
+  let mod="";
+  if(frei)mod=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","star","var(--c-f)",h.length===1)+SUB_FREI.map(([key,t,href,i,c])=>navItem(href,t,i,c,h.length>1&&key===on)).join("");
+  else if(k==="grammatik")mod=`<div class="nav-gt">Темы</div><div id="navTopics">${navItem("#/grammatik","Все темы","gram","var(--c-g)",H==="#/grammatik")}</div>`;
+  else if(k==="lesen")mod=`<div class="nav-gt">Lesen</div>`+navItem("#/lesen","Все тексты","book","var(--c-l)",H==="#/lesen");
+  else if(k==="hoeren")mod=`<div class="nav-gt">Hören</div>`+navItem("#/hoeren","Все аудио","ear","var(--c-h)",H==="#/hoeren");
+  else if(k==="sprechen")mod=`<div class="nav-gt">Sprechen</div>`+navItem("#/sprechen","Все задания","mic","var(--c-sp)",H==="#/sprechen");
+  else if(k==="home")mod=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home","var(--primary)",H==="#/"||H==="#");
+  $("#nav").innerHTML=EP.switcher(k==="settings"?"home":k)+mod+
+    `<div class="nav-gt">С ИИ</div>`+navItem("#/grammatik/ai","Письмо с ИИ","spark","#8B5CF6",H==="#/grammatik/ai","грамматика в своём тексте")+navItem("/woerter#tab=practice","Практика слов с ИИ","spark","#8B5CF6",false,"пиши — ИИ проверит")+
+    `<div class="nav-gt">Теория</div>`+navItem("#/grammatik","Теория грамматики","book","var(--c-g)",false)+navItem("/schreiben#theory","Теория письма","book","#0EA5B7",false)+
+    `<div class="nav-gt">Мой путь</div>`+navItem("#/plan","План и даты","cal","var(--c-p)",k==="plan")+navItem("#/settings","Настройки","gear","var(--muted)",k==="settings")+
+    `<hr>${EP.tip(k==="settings"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
+  $$("#nav a.nav-ai,#nav a").forEach(a=>{if(/Письмо с ИИ|Практика слов/.test(a.textContent))a.classList.add("nav-ai")});
+  if(k==="grammatik")data("de","grammatik").then(gr=>{const el=$("#navTopics");if(el)el.insertAdjacentHTML("beforeend",(gr.topics||[]).map(t=>navItem("#/grammatik/"+t.id,t.title,"gram","var(--c-g)",H.startsWith("#/grammatik/"+t.id))).join(""))});
   if(ST.user)$("#ubtn").innerHTML=EP.uava(ST.user,34);
   const p=get("plan",{}),d=dateToDay(p.epd),cd=$("#cdChip");
   if(d&&d>=today()){cd.hidden=false;cd.innerHTML=`${EP.icon("cal",17)}<b>${d-today()}</b><small>дн. до EPD</small>`;cd.title="Дней до EPD"}else cd.hidden=true;
 }
+// бургер: на компьютере панель сдвигает страницу (как в Wörter и Schreiben, состояние общее), на телефоне выезжает поверх
+const navHidden=()=>{try{return sessionStorage.getItem("ep_navopen")!=="1"}catch(e){return true}};
+function applyNav(){document.body.classList.toggle("navhide",navHidden())}
+function toggleNav(){if(innerWidth>980){try{if(navHidden())sessionStorage.setItem("ep_navopen","1");else sessionStorage.removeItem("ep_navopen")}catch(e){}applyNav()}else document.body.classList.toggle("navopen")}
+document.addEventListener("click",e=>{
+  if(e.target.closest("#burger,[data-nav-toggle]")){e.preventDefault();toggleNav();return}
+  if(e.target.closest("#veil")||(e.target.closest("#nav a")&&innerWidth<=980))document.body.classList.remove("navopen");
+  if(e.target.closest("#nav [data-ep-theme]"))EP.toggleTheme();
+});
+applyNav();
 const LV_ORDER={"B1":0,"B1+":1,"B2":2,"B2+":3,"C1":4,"C1+":5};
 const lvSort=(a,b)=>(LV_ORDER[a.level]??9)-(LV_ORDER[b.level]??9);
 const TOPICS=["Lernen, Bildung, Studium und Wissenschaft","Medien","Umwelt und Verkehr","Gesellschaft und soziales Engagement","Tourismus und Reisen","Arbeitswelt und Wirtschaft","Wohnen","Gesundheit","Beziehungen und Geschlechtergerechtigkeit","Konsumgesellschaft"];
@@ -480,7 +518,11 @@ async function route(){
   const h0=location.hash,h=(location.hash||"#/").slice(1).split("/").filter(Boolean);
   const [a,b,c]=h;
   window.scrollTo(0,0);
+  // при каждом переходе — короткая загрузка: кружок с логотипом в цвете модуля (первый раз экран уже закрыт общей загрузкой)
+  const booting=document.documentElement.classList.contains("boot");
+  if(!booting)EP.pageLoad(a==="frei"?"frei":["grammatik","lesen","hoeren","sprechen","plan"].includes(a)?a:"home");
   await dispatch(a,b,c);
+  EP.pageDone();
   // пока экран грузился, адрес успел смениться: старый экран мог перерисовать новый — показываем актуальный
   if(location.hash!==h0)return route();
 }

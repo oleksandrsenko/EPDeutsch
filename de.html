@@ -185,6 +185,13 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .theory .ex b,.theory b.k{color:var(--c,var(--primary))}
 .theory .tip{border-left:4px solid var(--c,var(--primary));background:color-mix(in srgb,var(--c,var(--primary)) 8%,transparent);padding:10px 14px;border-radius:0 12px 12px 0;margin:12px 0}
 .ex-run{max-width:760px}
+.gw textarea{margin-top:12px;font-family:var(--serif);font-size:17px;line-height:1.6;min-height:190px}
+.gwres h4{margin:16px 0 6px}
+.gwres .corr{font-family:var(--serif);font-size:16.5px;line-height:1.6;background:var(--panel2);border-radius:12px;padding:10px 14px}
+.gwres ins{color:var(--good);text-decoration:none;font-weight:700}
+.gwsc{width:62px;height:62px;border-radius:50%;flex:none;display:grid;place-content:center;text-align:center;background:conic-gradient(var(--c) calc(var(--p)*1%),var(--panel2) 0);position:relative}
+.gwsc::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--panel)}
+.gwsc b,.gwsc small{position:relative;line-height:1}.gwsc b{font-size:20px}.gwsc small{font-size:11px;color:var(--muted)}
 .gsplit.on{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:24px;align-items:start}
 .gsplit.on .ex-run{max-width:none}
 .gside{position:sticky;top:132px;max-height:calc(100vh - 148px);overflow:auto;border-radius:22px;background:var(--panel);box-shadow:var(--sh);scrollbar-width:thin}
@@ -529,7 +536,7 @@ async function route(){
 async function dispatch(a,b,c){
   try{
     if(!a)return await vHome();
-    if(a==="grammatik")return b?await vGram("de",b):await vGramList("de");
+    if(a==="grammatik")return b==="ai"?await vGramAI():b?await vGram("de",b,c):await vGramList("de");
     if(a==="lesen")return b?await vLesen("de",b):await vLesenList("de");
     if(a==="hoeren")return b?await vHoeren("de",b):await vHoerenList("de");
     if(a==="sprechen")return b?await vSprechen("de",b):await vSprechenList("de");
@@ -645,14 +652,41 @@ function gramListHTML(area,gr){
 const norm=s=>String(s||"").toLowerCase().replace(/[„“”"«»‚‘’']/g,"").replace(/[.!?;:,]+(?=\s|$)/g,"").replace(/\s+/g," ").replace(/\s*[,]\s*/g,", ").trim().replace(/[.!?]+$/,"");
 const loose=s=>norm(s).replace(/,/g,"").replace(/\s+/g," ");
 let G=null;
-async function vGram(area,id){
+async function vGram(area,id,sub){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
   const gr=await data(area,"grammatik"),t=(gr.topics||[]).find(x=>x.id===id);
   if(!t){page('<div class="empty">Тема не найдена</div>');return}
   const st=get("g-"+area+"-"+id,{r:{}});
   const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
-  G={area,t,st,tab:st.seenTheory?"ex":"th",lv:null,queue:[],pos:0,ok:0,answered:false};
+  G={area,t,st,tab:sub==="ai"&&t.write?"ai":st.seenTheory?"ex":"th",lv:null,queue:[],pos:0,ok:0,answered:false};
   renderGram();
+}
+// ---------- письмо с ИИ: свой текст с конструкцией темы, Claude проверяет ----------
+function gramWrite(body){
+  const t=G.t,K="gw-"+G.area+"-"+t.id,st=get(K,{i:0,drafts:{},last:null});
+  const i=st.i%t.write.length,task=t.write[i],draft=(st.drafts||{})[i]||"";
+  body.innerHTML=`<div class="ex-run"><div class="qcard gw"><div class="task">${ic("spark",15)} Задание ${i+1} из ${t.write.length}</div><div class="q" lang="de">${esc(task)}</div>
+    <textarea id="gwT" lang="de" spellcheck="false" rows="8" placeholder="Schreib hier deinen Text …">${esc(draft)}</textarea>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="gwGo">${ic("spark",16)} Проверить с ИИ</button><button class="btn" id="gwNext">Другое задание</button><span class="muted" id="gwN" style="font-size:12.5px;margin-left:auto"></span></div></div>
+    <div id="gwRes"></div></div>`;
+  const ta=$("#gwT"),cnt=()=>{const n=ta.value.trim()?ta.value.trim().split(/\s+/).length:0;$("#gwN").textContent=n+" "+plural(n,"слово","слова","слов")};cnt();
+  ta.oninput=()=>{cnt();st.drafts=st.drafts||{};st.drafts[i]=ta.value;save(K,st)};
+  $("#gwNext").onclick=()=>{st.i=(i+1)%t.write.length;save(K,st);gramWrite(body)};
+  const show=r=>{$("#gwRes").innerHTML=`<div class="card gwres"><div class="row" style="gap:14px"><div class="gwsc" style="--p:${r.score*10}"><b>${r.score}</b><small>/10</small></div><div><b>Конструкция темы: ${r.used}×</b><div class="muted" style="font-size:14px">${esc(r.comment)}</div></div></div>
+    ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">— ${esc(e.why)}</span></div>`).join("")}</div>`:`<p style="color:var(--good);font-weight:800">Ошибок нет — так держать!</p>`}
+    <h4>Исправленный текст</h4><div class="corr" lang="de">${esc(r.corrected)}</div>${r.better?`<h4>Как сказать на C1</h4><div class="corr" lang="de">${esc(r.better)}</div>`:""}</div>`};
+  if(st.last&&st.last.i===i&&st.last.text===ta.value)show(st.last.r);
+  $("#gwGo").onclick=async()=>{const text=ta.value.trim();if(text.split(/\s+/).length<5){toast("Напиши хотя бы пару предложений");return}
+    if(!ST.keys.anthropic){$("#gwRes").innerHTML=`<div class="card" style="border-left:5px solid var(--bad)">Для проверки нужен ключ Claude. <a href="#/settings">Добавить в настройках →</a></div>`;return}
+    const b=$("#gwGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
+    try{const r=await api("/de/gwrite",{method:"POST",body:JSON.stringify({topic:t.title,task,text})});st.last={i,text:ta.value,r};save(K,st);show(r);logDone("g",1);$("#gwRes").scrollIntoView({behavior:"smooth",block:"nearest"})}
+    catch(e){toast(e.message)}finally{b.disabled=false;b.innerHTML=ic("spark",16)+" Проверить с ИИ"}};
+}
+async function vGramAI(){
+  header("grammatik");setC("var(--c-g)");
+  const gr=await data("de","grammatik");
+  page(`${crumb("#/grammatik","Grammatik")}<h1>Письмо с ИИ</h1><p class="lead">Выбери тему и напиши 4–6 предложений с этой конструкцией. ИИ найдёт ошибки, исправит текст и покажет, как сказать на уровне C1. Теория темы — рядом.</p>
+  <div class="list">${(gr.topics||[]).filter(t=>t.write).map(t=>{const st=get("gw-de-"+t.id);return `<a class="item" href="#/grammatik/${t.id}/ai"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${st&&st.last?`<span class="tag ok">последний: ${st.last.r.score}/10</span>`:""}</div><h3>${esc(t.title)}</h3><p>${t.write.length} ${plural(t.write.length,"задание","задания","заданий")} · ${esc(t.ru||"")}</p></a>`}).join("")}</div>`);
 }
 function gramKey(){return "g-"+G.area+"-"+G.t.id}
 function renderGram(){
@@ -661,10 +695,11 @@ function renderGram(){
   const lvName={1:"Stufe 1 · база",2:"Stufe 2 · уверенно",3:"Stufe 3 · как на экзамене"};
   const back=G.area==="frei"?crumb("#/frei/grammatik","Грамматика (свободный)"):crumb("#/grammatik","Grammatik");
   page(`${back}<h1>${esc(t.title)}</h1><p class="lead">${esc(t.ru||"")}</p>
-   <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button></div></div>
-   <div class="gsplit${G.tab==="ex"?" on":""}"><div id="gbody"></div>${G.tab==="ex"&&t.theory?`<aside class="gside"><details class="gth" ${matchMedia("(min-width:1021px)").matches?"open":""}><summary>${ic("book",16)}Теория рядом<span class="muted">${G.area==="frei"?"":"шпаргалка к заданиям"}</span></summary><div class="theory">${t.theory}</div></details></aside>`:""}</div>`);
+   <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button>${t.write?`<button data-gt="ai" class="${G.tab==="ai"?"on":""}">${ic("spark",15)} Письмо с ИИ</button>`:""}</div></div>
+   <div class="gsplit${G.tab!=="th"?" on":""}"><div id="gbody"></div>${G.tab!=="th"&&t.theory?`<aside class="gside"><details class="gth" ${matchMedia("(min-width:1021px)").matches?"open":""}><summary>${ic("book",16)}Теория рядом<span class="muted">${G.area==="frei"?"":"шпаргалка к заданиям"}</span></summary><div class="theory">${t.theory}</div></details></aside>`:""}</div>`);
   $$("[data-gt]").forEach(b=>b.onclick=()=>{G.tab=b.dataset.gt;if(G.tab==="ex"){G.st.seenTheory=1;save(gramKey(),G.st)}renderGram()});
   const body=$("#gbody");
+  if(G.tab==="ai"){gramWrite(body);return}
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
   if(!G.queue.length||G.done){
     body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень. Задания идут от простых к сложным; ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;

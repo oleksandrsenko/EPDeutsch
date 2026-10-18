@@ -1,6 +1,6 @@
 /* EPDeutsch: общее для всех модулей (Wörter, Schreiben, хаб, админка).
    Рисованные аватары и талисман Öli. Только ванильный JS, без зависимостей.
-   Аватар в базе — число: 0–7 цвет с первой буквой имени, 8 и дальше — картинки из AVATARS. */
+   Аватар в базе, число: 0–7 цвет с первой буквой имени, 8 и дальше, картинки из AVATARS. */
 (function(){
 "use strict";
 const COLORS=["#7E6FB8","#8B5CF6","#E8505B","#F28C28","#18AE79","#0EA5B7","#E0A800","#282E3E"];
@@ -48,8 +48,8 @@ function picker(cur,lang){
     COLORS.map((c,i)=>`<button type="button" class="ep-av ep-avc${+cur===i?" on":""}" data-av="${i}" role="radio" aria-checked="${+cur===i}" title="${en?"Letter":"Буква"}" style="background:${c}"><b>Aa</b></button>`).join("")+"</div>";
 }
 
-/* Талисман Öli: круглый, а точки умлаута над ним — его глаза. Ö → Öli.
-   Цвет — цвет платформы: страница задаёт --oli (тело) и --oli-d (тень, ручки); без них Öli жёлтый.
+/* Талисман Öli: круглый, а точки умлаута над ним, его глаза. Ö → Öli.
+   Цвет, цвет платформы: страница задаёт --oli (тело) и --oli-d (тень, ручки); без них Öli жёлтый.
    Настроения: happy, cheer, wow, think, sad, sleep, write. */
 function mascot(mood,size,cls){
   mood=mood||"happy";const s=size||96;
@@ -114,7 +114,7 @@ window.EP={COLORS,AVATARS,avatarSVG,uava,picker,mascot,esc};
 })();
 
 /* Верхняя панель модулей (вместо бургера) и поиск по всем словам. Общие для Wörter, Schreiben и /de.
-   EP.modbar(текущий) → HTML полосы вкладок; EP.search() — открыть поиск (⌘K / Ctrl+K / «/»). */
+   EP.modbar(текущий) → HTML полосы вкладок; EP.search(), открыть поиск (⌘K / Ctrl+K / «/»). */
 (function(){
 "use strict";
 const esc=window.EP.esc;
@@ -283,27 +283,30 @@ const ic=window.EP.icon,MODS=window.EP.MODS,esc=window.EP.esc;
 const NAME={home:"Deutsch",woerter:"Wörter",schreiben:"Schreiben",grammatik:"Grammatik",lesen:"Lesen",hoeren:"Hören",sprechen:"Sprechen",frei:"Свободный",plan:"План",settings:"Настройки",start:"Учёба"};
 const DESC={home:"план дня и отсчёт до экзамена",woerter:"карточки слов EPD",schreiben:"тексты с проверкой ИИ",grammatik:"темы EPD с теорией",lesen:"статьи и задания",hoeren:"аудио и вопросы",sprechen:"устная часть с разбором",frei:"живой немецкий без экзамена",plan:"даты, норма, формат тестов"};
 const modOf=k=>MODS.find(m=>m[0]===k);
-const color=k=>(modOf(k)||[])[4]||"#0E8C7F";
+const CV={woerter:"--c-w",schreiben:"--c-s",grammatik:"--c-g",lesen:"--c-l",hoeren:"--c-h",sprechen:"--c-sp",frei:"--c-f",plan:"--c-p"};
+try{const o=JSON.parse(localStorage.getItem("ep-colors")||"{}");Object.keys(o).forEach(k=>{if(CV[k]&&/^#[0-9a-f]{6}$/i.test(o[k]))document.documentElement.style.setProperty(CV[k],o[k])})}catch(e){}
+// цвет раздела: пользователь может выбрать свой (--c-…), иначе стандартный
+const color=k=>{const h=(modOf(k)||[])[4]||"#0E8C7F";return CV[k]?`var(${CV[k]},${h})`:h};
 // знак EPDeutsch: буква D и жёлтая галочка, цвет квадрата — цвет модуля
 const mark=s=>`<svg class="ep-mark" viewBox="0 0 34 34" width="${s||32}" height="${s||32}" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" fill="var(--c)"/><path class="ep-md" d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><g class="ep-mb"><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel,#fff)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>`;
 function logo(k,href,attrs){const n=NAME[k]||k;
   return `<a class="ep-logo" href="${href||"/de#/"}" style="--c:${color(k)}" aria-label="EPDeutsch ${esc(n)}, на главную"${attrs||""}>${mark(32)}<span class="ep-lt"><span class="ep-ln">EP<b>Deutsch</b></span>${k==="home"||k==="start"?"":`<small class="ep-ls" lang="de">${esc(n)}</small>`}</span></a>`}
 function burger(id,label){return `<button type="button" class="ep-burger" id="${id||"burger"}" aria-label="${label||"Меню"}" aria-controls="nav"><span class="bm">${ic("menu",22)}</span><span class="bx">${ic("x",22)}</span></button>`}
-function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span></a>`).join("")}</div>`}
+function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${color(k)}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span></a>`).join("")}</div>`}
 
 // ---------- бургер: «Выбрать модуль» → вторая панель со списком модулей ----------
 function switcher(cur){const m=modOf(cur)||modOf("home"),n=cur==="home"?"Обзор":(NAME[cur]||m[1]);
-  return `<button type="button" class="ep-swbtn" data-ep-sw style="--c:${m[4]}"><span class="ep-mi">${ic(m[3],18)}</span><span class="ep-swt"><small>Модуль</small><b>${esc(n)}</b></span><span class="ep-swgo">Выбрать${ic("chev",16)}</span></button>`+
+  return `<button type="button" class="ep-swbtn" data-ep-sw style="--c:${color(cur)}"><span class="ep-mi">${ic(m[3],18)}</span><span class="ep-swt"><small>Модуль</small><b>${esc(n)}</b></span><span class="ep-swgo">Выбрать${ic("chev",16)}</span></button>`+
     `<div class="ep-swpanel"><button type="button" class="ep-swback" data-ep-swback>${ic("chev",16)}Назад</button><div class="ep-dgt">Выбери модуль</div>${modlist(cur)}<div class="ep-dlinks"><a href="/">${ic("globe",18)}Выбор языка</a></div></div>`}
 const TIPS={
- woerter:["Повторяй слова каждый день понемногу: 20 карточек ежедневно лучше, чем 150 раз в неделю.","Учи слово в связке: глагол с предлогом и падежом (sich beschäftigen mit + D).","Существительное — всегда с артиклем и формой мн. числа: der Antrag, die Anträge.","Не уверен — жми «Не знаю»: честный ответ ставит повторение вовремя."],
+ woerter:["Повторяй слова каждый день понемногу: 20 карточек ежедневно лучше, чем 150 раз в неделю.","Учи слово в связке: глагол с предлогом и падежом (sich beschäftigen mit + D).","Существительное, всегда с артиклем и формой мн. числа: der Antrag, die Anträge.","Не уверен, жми «Не знаю»: честный ответ ставит повторение вовремя."],
  schreiben:["На EPD считают слова: недобор режет баллы за выполнение задания.","План за 5 минут экономит 15: тезис, 2–3 аргумента, пример, вывод.","Связки дают баллы за связность: einerseits … andererseits, folglich, zudem.","Оставь 5 минут на проверку: артикли, окончания, порядок слов в придаточных."],
- grammatik:["Passiversatz: «lässt sich + Infinitiv», «ist zu + Infinitiv», «-bar».","Nominalstil: «weil die Preise steigen» → «wegen des Anstiegs der Preise».","Konjunktiv II Vergangenheit: hätte/wäre + Partizip II.","Partizip I — действие одновременно и активно: die steigenden Preise."],
- lesen:["Сначала прочитай задания, потом текст: так ищешь нужное, а не читаешь всё подряд.","«Nicht im Text» — если в тексте об этом нет ни подтверждения, ни опровержения.","Заголовки к абзацам: ищи главную мысль абзаца, а не совпадающее слово.","Не знаешь слово — смотри на контекст и корень: Abwanderung ← wandern."],
- hoeren:["На EPD текст звучит дважды: первый раз — общий смысл, второй — детали.","Записывай ключевые слова, а не предложения целиком.","Числа и даты — частая ловушка: проверяй их при втором прослушивании.","Оценивают понимание: в открытых ответах хватает кратких формулировок."],
- sprechen:["Говори 5 минут по Leitfragen: каждая — 40–60 секунд.","Не понял вопрос — так и скажи: «Könnten Sie die Frage bitte wiederholen?»","Начни презентацию с плана: «Zuerst … dann … abschließend …».","Своё мнение обосновывай примером из Австрии или своей страны."],
- frei:["Живой немецкий учится ушами: сериалы с немецкими субтитрами.","Австрийские словечки: Paradeiser, Erdäpfel, Jänner — пригодятся в Вене.","Разговорная речь сокращает: «hast du» → «haste», «ich habe» → «ich hab’»."],
- plan:["Укажи дату EPD — норма карточек подстроится под неё.","Одна тема в неделю: слова, текст, аудио и Sprechen по ней складываются."],
+ grammatik:["Passiversatz: «lässt sich + Infinitiv», «ist zu + Infinitiv», «-bar».","Nominalstil: «weil die Preise steigen» → «wegen des Anstiegs der Preise».","Konjunktiv II Vergangenheit: hätte/wäre + Partizip II.","Partizip I, действие одновременно и активно: die steigenden Preise."],
+ lesen:["Сначала прочитай задания, потом текст: так ищешь нужное, а не читаешь всё подряд.","«Nicht im Text», если в тексте об этом нет ни подтверждения, ни опровержения.","Заголовки к абзацам: ищи главную мысль абзаца, а не совпадающее слово.","Не знаешь слово, смотри на контекст и корень: Abwanderung ← wandern."],
+ hoeren:["На EPD текст звучит дважды: первый раз, общий смысл, второй, детали.","Записывай ключевые слова, а не предложения целиком.","Числа и даты, частая ловушка: проверяй их при втором прослушивании.","Оценивают понимание: в открытых ответах хватает кратких формулировок."],
+ sprechen:["Говори 5 минут по Leitfragen: каждая, 40–60 секунд.","Не понял вопрос, так и скажи: «Könnten Sie die Frage bitte wiederholen?»","Начни презентацию с плана: «Zuerst … dann … abschließend …».","Своё мнение обосновывай примером из Австрии или своей страны."],
+ frei:["Живой немецкий учится ушами: сериалы с немецкими субтитрами.","Австрийские словечки: Paradeiser, Erdäpfel, Jänner, пригодятся в Вене.","Разговорная речь сокращает: «hast du» → «haste», «ich habe» → «ich hab’»."],
+ plan:["Укажи дату EPD, норма карточек подстроится под неё.","Одна тема в неделю: слова, текст, аудио и Sprechen по ней складываются."],
  home:["Начни с плана дня: шаги подобраны по теме недели.","Короткие занятия каждый день работают лучше длинных раз в неделю."]};
 function tip(cur){const a=TIPS[cur]||TIPS.home,t=a[Math.floor(Date.now()/864e5)%a.length];
   return `<div class="ep-tip"><span class="ep-tipi">${ic("bulb",16)}</span><div><b>Совет</b><p>${esc(t)}</p></div></div>`}
@@ -333,7 +336,7 @@ function ready(){const d=document.documentElement;if(!d.classList.contains("boot
   const fonts=document.fonts&&document.fonts.ready?Promise.race([document.fonts.ready,wait(1500)]):Promise.resolve();
   const left=Math.max(0,450-(performance.now()-bootT0));
   Promise.all([fonts,wait(left)]).then(()=>{let done=false;const out=()=>{if(done)return;done=true;d.classList.add("bootout");setTimeout(()=>{d.classList.remove("boot","bootout")},520)};
-    requestAnimationFrame(()=>requestAnimationFrame(out));setTimeout(out,150)}); // кадр отрисован — или, в фоновой вкладке, просто через 150 мс
+    requestAnimationFrame(()=>requestAnimationFrame(out));setTimeout(out,150)}); // кадр отрисован, или, в фоновой вкладке, просто через 150 мс
 }
 
 // ---------- выезжающее меню (для /de, где нет своей боковой панели) ----------
@@ -416,7 +419,8 @@ html.boot #ep-boot{display:grid}
 html.bootout #ep-boot{opacity:0;visibility:hidden}
 .ep-bin{display:flex;flex-direction:column;align-items:center;gap:16px;transform:translateY(-4vh)}
 .ep-ring{position:relative;width:104px;height:104px;display:grid;place-items:center}
-.ep-ring svg{position:absolute;inset:0;width:100%;height:100%;animation:epSpin 1s linear infinite}
+.ep-ring>svg:not(.ep-mark){position:absolute;inset:0;width:100%;height:100%;animation:epSpin 1s linear infinite}
+.ep-ring .ep-mark{position:static;width:44px;height:44px}
 .ep-ring .ep-rt{fill:none;stroke:color-mix(in srgb,var(--c) 15%,transparent);stroke-width:5}
 .ep-ring .ep-ra{fill:none;stroke:var(--c);stroke-width:5;stroke-linecap:round;stroke-dasharray:70 213}
 .ep-ring .ep-mark{animation:epPulse 1.6s ease-in-out infinite}

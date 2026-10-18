@@ -109,7 +109,7 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .veil{display:none}
 @media (min-width:981px){body.navhide .nav{margin-left:-264px;opacity:0;pointer-events:none}}
 @media (max-width:980px){
-  .nav{position:fixed;left:0;top:66px;z-index:40;background:var(--panel);transform:translateX(-100%);transition:transform .25s;box-shadow:var(--sh-card);border-radius:0 var(--r-lg) var(--r-lg) 0;height:calc(100dvh - 66px)}
+  .nav{position:fixed;left:0;top:66px;z-index:40;background:var(--panel);transform:translateX(-100%);transition:transform .25s;box-shadow:var(--sh-card);border-radius:0;height:calc(100dvh - 66px)}
   body.navopen .nav{transform:none}
   body.navopen .veil{display:block;position:fixed;inset:66px 0 0;background:rgba(10,9,45,.35);z-index:35}
 }
@@ -121,8 +121,8 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .hero-l{display:flex;align-items:center;gap:16px;min-width:0}
 .hero h1{font-size:clamp(22px,3vw,30px);margin:0}
 .hero-sub{margin:4px 0 0;color:var(--muted)}.hero-sub b{color:var(--fg)}
-.btn.cta{background:var(--primary);border-color:var(--primary);color:#fff;padding:15px 26px;font-size:16.5px;border-radius:999px;box-shadow:0 10px 22px -10px color-mix(in srgb,var(--primary) 80%,transparent)}
-.btn.cta:hover{background:var(--primary-h);border-color:var(--primary-h)}
+.btn.cta{background:var(--c,var(--primary));border-color:var(--c,var(--primary));color:#fff;padding:15px 26px;font-size:16.5px;border-radius:999px;box-shadow:0 10px 22px -10px color-mix(in srgb,var(--c,var(--primary)) 80%,transparent)}
+.btn.cta:hover{filter:brightness(.92)}
 .hgoal{position:relative;z-index:1;margin-top:22px;padding-top:18px;border-top:1px solid var(--line2)}
 .hg-t{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14.5px;font-weight:700;color:var(--muted);margin-bottom:10px}
 .hg-t b{color:var(--fg);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -156,7 +156,7 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .mod h3{margin:4px 0 0;font-size:19px}
 .mod p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
 .mod .meta{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap;padding-top:4px}
-.frei-banner{--c:var(--c-f);margin-top:18px;display:flex;align-items:center;gap:20px;background:linear-gradient(120deg,color-mix(in srgb,var(--c) 16%,var(--panel)),var(--panel) 70%);border-radius:24px;padding:22px 24px;box-shadow:var(--sh);text-decoration:none;color:inherit;border:2px solid transparent;transition:transform .25s,box-shadow .25s,border-color .25s}
+.frei-banner{--c:var(--c-f);margin-top:18px;display:flex;align-items:center;gap:20px;background:var(--panel);border-radius:24px;padding:22px 24px;box-shadow:var(--sh);text-decoration:none;color:inherit;border:2px solid transparent;transition:transform .25s,box-shadow .25s,border-color .25s}
 .frei-banner:hover{transform:translateY(-3px);box-shadow:var(--sh-card);border-color:var(--c)}
 .frei-banner .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--c);color:#fff;flex:none}
 .frei-banner h3{margin:0;font-size:21px}
@@ -403,12 +403,37 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 /* ---------- адаптив ---------- */
 @media (max-width:1020px){.reader,.talk{grid-template-columns:1fr}.side,.taskcard{position:static;max-height:none}.grid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}}
 @media (max-width:700px){main{padding:18px 16px 90px}.grid,.list,.pgrid{grid-template-columns:1fr}.article{padding:22px 20px}.article p.pa .pn{position:static;margin-right:6px}.keyrow{grid-template-columns:1fr}.home span{display:none}.top{gap:6px}.frei-banner{flex-direction:column;align-items:flex-start}}
+html{--sc:var(--primary)}
+html::-webkit-scrollbar,.nav::-webkit-scrollbar,.gside::-webkit-scrollbar{width:10px}
+html::-webkit-scrollbar-track,.nav::-webkit-scrollbar-track{background:var(--bg)}
+html::-webkit-scrollbar-thumb,.nav::-webkit-scrollbar-thumb,.gside::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--sc) 60%,transparent);border-radius:999px;border:2px solid var(--bg);min-height:40px}
+html::-webkit-scrollbar-thumb:hover,.nav::-webkit-scrollbar-thumb:hover{background:var(--sc)}
+html::-webkit-scrollbar-button,.nav::-webkit-scrollbar-button{display:none;height:0}
+@supports not selector(::-webkit-scrollbar){html,.nav{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--sc) 60%,transparent) transparent}}
+.stk{display:inline-flex;align-items:center;gap:5px;height:38px;padding:0 12px;border-radius:999px;background:var(--panel);box-shadow:var(--sh);font-weight:800;font-size:14.5px;text-decoration:none;color:var(--muted)}
+.stk svg{color:var(--muted)}.stk.on{color:#E8730C}.stk.on svg{color:#F28C28}
+.ubw{position:relative;display:inline-flex}.obadge{position:absolute;right:-4px;bottom:-4px;width:17px;height:17px;border-radius:50%;background:#FFCD1F;color:#7A5A00;display:grid;place-items:center;border:2px solid var(--bg)}
+.pic{width:100%;height:112px;border-radius:16px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 11%,var(--panel));margin-bottom:6px}
+.pic svg{width:104px;height:88px}
+.lvcard{--c:var(--primary);display:flex;flex-direction:column;gap:6px;background:var(--panel);border-radius:22px;padding:14px 14px 18px;box-shadow:var(--sh);color:inherit;text-decoration:none;border:2px solid transparent;transition:transform .25s,box-shadow .25s,border-color .25s}
+.lvcard:hover{transform:translateY(-3px);box-shadow:var(--sh-card);border-color:var(--c)}
+.lvcard h3{margin:4px 6px 0;font-size:20px}.lvcard p{margin:0 6px;color:var(--muted);font-size:14px;line-height:1.5}.lvcard .bar{margin:6px 6px 0}.lvcard .meta{display:flex;gap:6px;flex-wrap:wrap;margin:4px 6px 0}
+.lvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.ai-card{--c:#8B5CF6;display:flex;align-items:center;gap:16px;margin-top:18px;padding:18px 20px;border-radius:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 14%,var(--panel)),color-mix(in srgb,#8B5CF6 12%,var(--panel)) 55%,color-mix(in srgb,#FFCD1F 16%,var(--panel)));box-shadow:var(--sh);text-decoration:none;color:inherit;border:2px solid transparent}
+.ai-card:hover{border-color:#8B5CF6}.ai-card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),#8B5CF6);color:#fff;flex:none}.ai-card h3{margin:0}.ai-card p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.aitask{margin-bottom:14px}.aitask .tk{font-size:17px;font-weight:700;line-height:1.5;margin:6px 0}.aitask ul{margin:8px 0;padding-left:20px;color:var(--muted);font-size:14px;line-height:1.55}
+.aitask textarea{width:100%;min-height:120px;border-radius:14px;border:2px solid var(--line);padding:12px;font:inherit;background:var(--bg);color:var(--fg);resize:vertical}
+.mod.wide{grid-column:1/-1;min-height:0;flex-direction:row;align-items:center;gap:18px}.mod.wide .meta{margin:0 0 0 auto;padding:0}
+.trrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.trans textarea{width:100%;border-radius:14px;border:2px solid var(--line);padding:12px;font:inherit;background:var(--bg);color:var(--fg);resize:vertical}
+@media (max-width:700px){.trrow{grid-template-columns:1fr}.mod.wide{flex-direction:column;align-items:flex-start}}
 .hints{display:grid;gap:12px;max-width:760px}
 .card.hint{display:flex;gap:14px;align-items:flex-start;padding:16px 18px}
 .card.hint .hn{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
 .card.hint b{font-size:15.5px}.card.hint p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
 .todo .ck{cursor:pointer}.todo a.auto .ck{cursor:default}
-.colrow{display:flex;align-items:center;gap:12px;padding:8px 0}.colrow input[type=color]{width:42px;height:34px;border:none;border-radius:10px;background:none;padding:0;cursor:pointer}.colrow span{flex:1;font-weight:600}
+.colrow{display:flex;align-items:center;gap:12px;padding:8px 0}.colrow input[type=color]{width:42px;height:34px;border:none;border-radius:10px;background:none;padding:0;cursor:pointer}.colrow span{flex:1;font-weight:700}.sws{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.sw{width:24px;height:24px;border-radius:50%;border:0;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55);transition:transform .15s}.sw:hover{transform:scale(1.15)}.sw.on{outline:3px solid var(--fg);outline-offset:2px}
+.colrow input[type=color]{width:28px;height:28px;border-radius:50%;overflow:hidden}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -418,7 +443,7 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
   <script>document.write(EP.burger("burger","Меню: модуль, разделы, тема"))</script>
   <span id="logo" style="display:contents"></span>
   <script>document.write(EP.searchField())</script>
-  <div class="uwrap"><a class="cdchip" href="#/plan" id="cdChip" hidden></a><a class="ubtn" href="#/settings" id="ubtn" title="Настройки"></a></div>
+  <div class="uwrap"><a class="stk" href="#/plan" id="stk" title="Дней подряд"></a><a class="cdchip" href="#/plan" id="cdChip" hidden></a><a class="ubtn" href="#/settings" id="ubtn" title="Настройки"></a></div>
 </header>
 <div class="shell"><nav class="nav" id="nav" aria-label="Меню"></nav><div class="veil" id="veil"></div><main id="app"></main></div>
 <nav class="tabbar" id="tabbar" aria-label="Быстрая навигация"></nav>
@@ -461,6 +486,7 @@ function logDone(kind,val){
   save("log",L);
 }
 const todayLog=()=>get("log",{})[today()]||{};
+function streak(){const L=get("log",{});let d=today(),n=0;if(!Object.keys(L[d]||{}).length)d--;while(Object.keys(L[d]||{}).length){n++;d--}return n}
 // ---------- озвучка ----------
 let curAudio=null;
 function stopAudio(){if(curAudio){curAudio.pause();curAudio=null}try{speechSynthesis.cancel()}catch(e){}}
@@ -480,29 +506,33 @@ async function say(text,opt={}){
 const SUB_EPD=[["home","Обзор","#/","home","var(--primary)"],["grammatik","Grammatik","#/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/lesen","book","var(--c-l)"],["hoeren","Hören","#/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/sprechen","mic","var(--c-sp)"],["plan","План","#/plan","cal","var(--c-p)"],["settings","Настройки","#/settings","gear","var(--muted)"]];
 const SUB_FREI=[["karten","Карточки","#/frei/karten","cards","var(--c-f)"],["grammatik","Грамматика","#/frei/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/frei/lesen","book","var(--c-l)"],["hoeren","Hören","#/frei/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/frei/sprechen","mic","var(--c-sp)"],["videos","Видео","#/frei/videos","video","var(--c-f)"]];
 const navItem=(href,t,i,c,cur,sub)=>`<a href="${href}" style="--c:${c}"${cur?' aria-current="page"':""}><span class="ni">${EP.icon(i,18)}</span>${sub?`<span class="nav-l"><b>${t}</b><small>${sub}</small></span>`:t}</a>`;
+let LASTMOD=null;
+const MODNAV={grammatik:["Grammatik","gram","Конструкции, теория и упражнения"],lesen:["Lesen","book","Тексты и задания как на EPD"],hoeren:["Hören","ear","Аудио и задания"],sprechen:["Sprechen","mic","Монолог и диалог с ИИ"]};
 function header(cur){
-  const k=cur||"home",h=(location.hash||"#/").slice(1).split("/").filter(Boolean),frei=k==="frei";
-  const on=frei?(h[1]||"karten"):(h[0]||"home"),H=location.hash||"#/";
-  $("#logo").innerHTML=EP.logo(k==="settings"?"home":k,frei?"#/frei":"#/");
-  // мобильная нижняя панель: разделы текущего места + «Меню»
+  let k=cur||"home";const route=k;
+  if(MODNAV[k])LASTMOD=k;else if(k==="home"||k==="frei")LASTMOD=null;
+  if((k==="settings"||k==="plan")&&LASTMOD)k=LASTMOD;   // профиль и план не выкидывают из модуля
+  const h=(location.hash||"#/").slice(1).split("/").filter(Boolean),frei=k==="frei",H=location.hash||"#/";
+  const on=frei?(h[1]||"karten"):(h[0]||"home");
+  $("#logo").innerHTML=EP.logo(k==="settings"||k==="plan"?"home":k,frei?"#/frei":"#/");
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD.slice(0,4);
   $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-nav-toggle>${EP.icon("menu",22)}Меню</button>`;
-  // боковая панель: модуль сверху, ниже — только то, что внутри модуля (не список модулей ещё раз)
-  let mod="";const inMod=["grammatik","lesen","hoeren","sprechen"].includes(k);
-  if(frei)mod=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","star","var(--c-f)",h.length===1)+SUB_FREI.map(([key,t,href,i,c])=>navItem(href,t,i,c,h.length>1&&key===on)).join("");
-  else if(k==="grammatik")mod=`<div class="nav-gt">Темы</div><div id="navTopics">${navItem("#/grammatik","Все темы","gram","var(--c-g)",H==="#/grammatik")}</div>`;
-  else if(k==="lesen")mod=`<div class="nav-gt">Lesen</div>`+navItem("#/lesen","Тексты и задания","book","var(--c-l)",H==="#/lesen");
-  else if(k==="hoeren")mod=`<div class="nav-gt">Hören</div>`+navItem("#/hoeren","Аудио и задания","ear","var(--c-h)",H==="#/hoeren");
-  else if(k==="sprechen")mod=`<div class="nav-gt">Sprechen</div>`+navItem("#/sprechen","Задания","mic","var(--c-sp)",H==="#/sprechen");
-  else if(k==="home")mod=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home","var(--primary)",H==="#/"||H==="#");
-  $("#nav").innerHTML=EP.switcher(k==="settings"?"home":k)+mod+
-    `<div class="nav-gt">С ИИ</div>`+navItem("#/grammatik/ai","Письмо с ИИ","spark","#8B5CF6",H==="#/grammatik/ai","грамматика в своём тексте")+navItem("/woerter#tab=practice","Практика слов с ИИ","spark","#8B5CF6",false,"пиши — ИИ проверит")+
-    `<div class="nav-gt">Теория</div>`+(inMod&&k!=="grammatik"?navItem(`#/${k}/hints`,"Подсказки","bulb",MOD[k].c,H===`#/${k}/hints`):"")+navItem("#/grammatik","Теория грамматики","book","var(--c-g)",false)+navItem("/schreiben#theory","Теория письма","book","#0EA5B7",false)+
-    `<div class="nav-gt">Мой путь</div>`+(inMod?navItem(`#/${k}/errors`,"Ошибки","target",MOD[k].c,H===`#/${k}/errors`)+navItem(`#/${k}/progress`,"Мой прогресс","chart",MOD[k].c,H===`#/${k}/progress`):"")+navItem("#/plan","План и даты","cal","var(--c-p)",k==="plan")+navItem("#/settings","Настройки","gear","var(--muted)",k==="settings")+
-    `<hr>${EP.tip(k==="settings"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
-  $$("#nav a.nav-ai,#nav a").forEach(a=>{if(/Письмо с ИИ|Практика слов/.test(a.textContent))a.classList.add("nav-ai")});
-  if(k==="grammatik")data("de","grammatik").then(gr=>{const el=$("#navTopics");if(el)el.insertAdjacentHTML("beforeend",(gr.topics||[]).map(t=>navItem("#/grammatik/"+t.id,t.title,"gram","var(--c-g)",H.startsWith("#/grammatik/"+t.id))).join(""))});
-  if(ST.user)$("#ubtn").innerHTML=EP.uava(ST.user,34);
+  const inMod=!!MODNAV[k],at=x=>H===x||H.startsWith(x+"/");
+  const sw=EP.switcher(k==="settings"||k==="plan"?"home":k);
+  const my=(c)=>`<div class="nav-gt">Мой путь</div>`+(inMod?navItem(`#/${k}/errors`,"Ошибки","target","#F28C28",at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс","chart","#18AE79",at(`#/${k}/progress`)):"")+navItem("#/plan","Мой план","cal","#0EA5B7",route==="plan")+navItem("#/settings","Профиль и настройки","gear","#6F5BD6",route==="settings");
+  const foot=`<hr>${EP.tip(inMod?k:k==="settings"||k==="plan"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
+  let body="";
+  if(frei)body=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","star","var(--c-f)",h.length===1)+SUB_FREI.map(([key,t,href,i,c])=>navItem(href,t,i,c,h.length>1&&key===on)).join("")+my();
+  else if(inMod){
+    const [nm,ico,sub]=MODNAV[k];
+    body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,"Главная","home","var(--primary)",H==="#/"+k)+navItem(`#/${k}/all`,"Задания",ico,MOD[k].c,at(`#/${k}/all`)||(k==="grammatik"&&/^#\/grammatik\/(?!ai|errors|progress|all|hints)/.test(H))||(k!=="grammatik"&&/^#\/(lesen|hoeren|sprechen)\/(?!ai|errors|progress|all|hints)/.test(H)))+
+      `<div class="nav-gt">С ИИ</div>`+navItem(`#/${k}/ai`,"Практика с ИИ","spark","#8B5CF6",at(`#/${k}/ai`),"дай тему, ИИ придумает задания")+my();
+  }else body=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home","var(--primary)",route==="home"&&(H==="#/"||H==="#"))+
+      `<div class="nav-gt">С ИИ</div>`+navItem("/woerter#tab=practice","Практика слов с ИИ","spark","#8B5CF6",false,"пиши, ИИ проверит")+my();
+  $("#nav").innerHTML=sw+body+foot;
+  $$("#nav a").forEach(a=>{if(a.querySelector(".nav-l")&&/ИИ/.test(a.textContent))a.classList.add("nav-ai")});
+  if(ST.user){const ub=ST.user;$("#ubtn").innerHTML=`<span class="ubw">${EP.uava(ub,34)}${ST.me&&ST.me.owner?`<i class="obadge" title="Владелец"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg></i>`:""}</span>`}
+  const sk=streak();$("#stk").classList.toggle("on",sk>0);$("#stk").innerHTML=EP.icon("flame",17)+sk;
   const p=get("plan",{}),d=dateToDay(p.epd),cd=$("#cdChip");
   if(d&&d>=today()){cd.hidden=false;cd.innerHTML=`${EP.icon("cal",17)}<b>${d-today()}</b><small>дн. до EPD</small>`;cd.title="Дней до EPD"}else cd.hidden=true;
 }
@@ -527,7 +557,7 @@ const MOD={grammatik:{c:"var(--c-g)",i:"gram",t:"Grammatik"},lesen:{c:"var(--c-l
 
 // ---------- маршрутизатор ----------
 const app=$("#app");
-function setC(c){document.body.style.setProperty("--c",c||"var(--primary)")}
+function setC(c){document.body.style.setProperty("--c",c||"var(--primary)");document.documentElement.style.setProperty("--sc",c||"var(--primary)")}
 async function route(){
   stopAudio();closePop();if(REC.active)REC.cancel();
   const h0=location.hash,h=(location.hash||"#/").slice(1).split("/").filter(Boolean);
@@ -543,10 +573,15 @@ async function route(){
 }
 async function dispatch(a,b,c){
   try{
+    LVF=null;
     if(!a)return await vHome();
-    if(a==="grammatik"&&MODX[a]&&["errors","progress"].includes(b))return await vModExtra(a,b);
-    if(a==="grammatik")return b==="ai"?await vGramAI():b?await vGram("de",b,c):await vGramList("de");
-    if(MODX[a]&&["hints","errors","progress"].includes(b))return await vModExtra(a,b);
+    if(MODNAV[a]){
+      if(!b)return await vModHome(a);
+      if(b==="ai")return await vAIPractice(a);
+      if(["hints","errors","progress"].includes(b))return await vModExtra(a,b);
+      if(b==="all"){LVF=c||null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
+    }
+    if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
     if(a==="lesen")return b?await vLesen("de",b):await vLesenList("de");
     if(a==="hoeren")return b?await vHoeren("de",b):await vHoerenList("de");
     if(a==="sprechen")return b?await vSprechen("de",b):await vSprechenList("de");
@@ -626,7 +661,7 @@ async function vHome(){
   const next=items.find(x=>!x.done),hour=new Date().getHours(),hi=hour<5?"Gute Nacht":hour<11?"Guten Morgen":hour<18?"Hallo":"Guten Abend";
   page(`
   <section class="hero">
-    <div class="hero-top"><div class="hero-l"><span>${EP.mascot(done===items.length?"cheer":done?"happy":"think",76)}</span><div><h1>${hi}, ${esc(nm)}!</h1><p class="hero-sub">${done===items.length?"План на сегодня выполнен. Ausgezeichnet!":`Тема недели — <b lang="de">${esc(rec.tw)}</b>`}</p></div></div>
+    <div class="hero-top"><div class="hero-l"><span>${EP.mascot(done===items.length?"cheer":done?"happy":"think",76)}</span><div><h1>${hi}, ${esc(nm)}!</h1><p class="hero-sub">${done===items.length?"План на сегодня выполнен. Ausgezeichnet!":`Тема недели: <b lang="de">${esc(rec.tw)}</b>`}</p></div></div>
       <div class="hero-cta">${next?`<a class="btn cta" href="${next.href}" style="--c:${MOD[next.k].c}">${ic(MOD[next.k].i,18)}Дальше: ${esc(MOD[next.k].t)}</a>`:`<a class="btn cta" href="#/frei">${ic("star",18)}Свободный немецкий</a>`}</div></div>
     <div class="hgoal${done===items.length?" done":""}"><div class="hg-t"><span>План на сегодня · ${new Date().toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long"})}</span><b>${done} из ${items.length}</b></div><div class="bar"><i style="width:${Math.round(done/items.length*100)}%"></i></div>${todoHTML(items)}</div>
     <div class="hfacts">
@@ -641,12 +676,18 @@ async function vHome(){
     ${modCard("/woerter","woerter","Wörter","Карточки по 10 темам экзамена, тесты и умные повторения.",[`${w.learned} выучено`])}
     ${modCard("/schreiben","schreiben","Schreiben","Stellungnahme и Erörterung: ИИ проверяет по критериям VWU.",[sch.n?`${sch.n} ${plural(sch.n,"текст","текста","текстов")}`:"первый текст ждёт",sch.n?`лучший ${Math.round(sch.best*100)} %`:""])}
     ${modCard("#/grammatik","grammatik","Grammatik","Konjunktiv II, Passiversatz, Partizipien, Nominal → Verbal, Satzfortsetzungen.",[`${(gr.topics||[]).length} тем`,`${(gr.topics||[]).reduce((s,t)=>s+(t.items||[]).length,0)} заданий`])}
-    ${modCard("#/lesen","lesen","Lesen","Статьи в стиле der Standard от B2 до C1. Выдели слово — перевод появится сбоку.",[`${cnt(le.texts,"l-de-")}/${(le.texts||[]).length} прочитано`])}
-    ${modCard("#/hoeren","hoeren","Hören","Радио, интервью, подкасты, доклады — живыми голосами, задания как на экзамене.",[`${cnt(ho.items,"h-de-")}/${(ho.items||[]).length} прослушано`])}
-    ${modCard("#/sprechen","sprechen","Sprechen","Монолог по графику или цитате и диалог с экзаменатором. Говоришь — ИИ разбирает и отвечает голосом.",[`${(sp.tasks||[]).length} заданий`])}
-    ${modCard("#/frei","frei","Свободный немецкий","Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг, свои тексты, аудио и видео.",["не для экзамена"])}
+    ${modCard("#/lesen","lesen","Lesen","Статьи в стиле der Standard от B2 до C1. Выдели слово, перевод появится сбоку.",[`${cnt(le.texts,"l-de-")}/${(le.texts||[]).length} прочитано`])}
+    ${modCard("#/hoeren","hoeren","Hören","Радио, интервью, подкасты, доклады живыми голосами, задания как на экзамене.",[`${cnt(ho.items,"h-de-")}/${(ho.items||[]).length} прослушано`])}
   </div>
+  <h2 class="h-sec">Устная часть</h2>
+  <div class="grid"><a class="mod wide" href="#/sprechen" style="--c:var(--c-sp)"><span class="ic">${ic("mic",24)}</span><div><h3>Sprechen</h3><p>Монолог по графику или цитате и диалог с экзаменатором. Говоришь, ИИ разбирает и отвечает голосом.</p></div><div class="meta"><span class="tag">${(sp.tasks||[]).length} заданий</span></div></a></div>
+  <h2 class="h-sec">Переводчик</h2>
+  <div class="card trans"><div class="trrow"><textarea id="trIn" rows="3" maxlength="300" placeholder="Текст для перевода"></textarea><textarea id="trOut" rows="3" readonly placeholder="Перевод"></textarea></div>
+   <div class="row" style="margin-top:10px"><select id="trDir"><option value="de-ru">Немецкий → русский</option><option value="ru-de">Русский → немецкий</option><option value="en-de">English → Deutsch</option></select><button class="btn primary" id="trGo">${ic("globe",16)} Перевести</button><span class="muted" id="trProv" style="font-size:12.5px"></span></div></div>
+  <a class="frei-banner" href="#/frei"><span class="ic">${ic("star",28)}</span><div><h3>Свободный немецкий</h3><p>Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг, свои тексты, аудио и видео.</p></div></a>
   `);
+  $("#trGo").onclick=async()=>{const t=$("#trIn").value.trim();if(!t)return;const [f,to]=$("#trDir").value.split("-"),b=$("#trGo");b.disabled=true;
+    try{const r=await api("/translate",{method:"POST",body:JSON.stringify({text:t,from:f,to})});$("#trOut").value=r.text;$("#trProv").textContent=r.provider||""}catch(e){toast(e.message)}finally{b.disabled=false}};
 }
 function modCard(href,k,t,p,meta){const m=MOD[k];return `<a class="mod" href="${href}" style="--c:${m.c}"><span class="ic">${ic(m.i,24)}</span><h3>${t}</h3><p>${p}</p><div class="meta">${meta.filter(Boolean).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div></a>`}
 
@@ -655,15 +696,18 @@ const AREA_NAME={de:"EPD",frei:"Свободный"};
 const base=area=>area==="frei"?"#/frei/":"#/";
 async function vGramList(area){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
-  const gr=await data(area,"grammatik");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):""}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Темы письменной части: Strukturen und Wortschatz. Внутри каждой темы — короткая теория и задания от простых к сложным."}</p>${gramListHTML(area,gr)}`);
+  const gr0=await data(area,"grammatik"),gr={...gr0,topics:lf(gr0.topics,area)};
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"grammatik")}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Темы письменной части: Strukturen und Wortschatz. Внутри каждой темы, короткая теория и задания от простых к сложным."}</p>${gramListHTML(area,gr)}`);
 }
 function gramListHTML(area,gr){
   return `<div class="list">${(gr.topics||[]).map(t=>{const p=gramPct(area,t);return `<a class="item" href="${base(area)}grammatik/${t.id}"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${t.tag?`<span class="tag">${esc(t.tag)}</span>`:""}${p>=90?'<span class="tag ok">✓ освоено</span>':""}</div><h3>${esc(t.title)}</h3><p>${esc(t.ru||"")}</p><div class="row" style="margin-top:4px"><div class="bar" style="flex:1"><i style="width:${p}%"></i></div><small class="muted">${p}% · ${(t.items||[]).length}</small></div></a>`}).join("")}</div>`;
 }
 const norm=s=>String(s||"").toLowerCase().replace(/[„“”"«»‚‘’']/g,"").replace(/[.!?;:,]+(?=\s|$)/g,"").replace(/\s+/g," ").replace(/\s*[,]\s*/g,", ").trim().replace(/[.!?]+$/,"");
 const loose=s=>norm(s).replace(/,/g,"").replace(/\s+/g," ");
-let G=null;
+let G=null,LVF=null;
+const gk=x=>x.level?String(x.level).replace(/[+–].*$/,""):(x.kind||"Gespräch");
+const lf=(arr,area)=>area==="de"&&LVF?(arr||[]).filter(x=>gk(x)===LVF):(arr||[]);
+const lfHead=(area,k)=>area==="de"?crumb("#/"+k,MODNAV[k][0])+(LVF?`<span class="tag lv" style="margin-left:8px">${esc(LVF)}</span>`:""):"";
 async function vGram(area,id,sub){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
   const gr=await data(area,"grammatik"),t=(gr.topics||[]).find(x=>x.id===id);
@@ -685,7 +729,7 @@ function gramWrite(body){
   ta.oninput=()=>{cnt();st.drafts=st.drafts||{};st.drafts[i]=ta.value;save(K,st)};
   $("#gwNext").onclick=()=>{st.i=(i+1)%t.write.length;save(K,st);gramWrite(body)};
   const show=r=>{$("#gwRes").innerHTML=`<div class="card gwres"><div class="row" style="gap:14px"><div class="gwsc" style="--p:${r.score*10}"><b>${r.score}</b><small>/10</small></div><div><b>Конструкция темы: ${r.used}×</b><div class="muted" style="font-size:14px">${esc(r.comment)}</div></div></div>
-    ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">— ${esc(e.why)}</span></div>`).join("")}</div>`:`<p style="color:var(--good);font-weight:800">Ошибок нет — так держать!</p>`}
+    ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">${esc(e.why)}</span></div>`).join("")}</div>`:`<p style="color:var(--good);font-weight:800">Ошибок нет, так держать!</p>`}
     <h4>Исправленный текст</h4><div class="corr" lang="de">${esc(r.corrected)}</div>${r.better?`<h4>Как сказать на C1</h4><div class="corr" lang="de">${esc(r.better)}</div>`:""}</div>`};
   if(st.last&&st.last.i===i&&st.last.text===ta.value)show(st.last.r);
   $("#gwGo").onclick=async()=>{const text=ta.value.trim();if(text.split(/\s+/).length<5){toast("Напиши хотя бы пару предложений");return}
@@ -697,7 +741,7 @@ function gramWrite(body){
 async function vGramAI(){
   header("grammatik");setC("var(--c-g)");
   const gr=await data("de","grammatik");
-  page(`${crumb("#/grammatik","Grammatik")}<h1>Письмо с ИИ</h1><p class="lead">Выбери тему и напиши 4–6 предложений с этой конструкцией. ИИ найдёт ошибки, исправит текст и покажет, как сказать на уровне C1. Теория темы — рядом.</p>
+  page(`${crumb("#/grammatik","Grammatik")}<h1>Письмо с ИИ</h1><p class="lead">Выбери тему и напиши 4–6 предложений с этой конструкцией. ИИ найдёт ошибки, исправит текст и покажет, как сказать на уровне C1. Теория темы, рядом.</p>
   <div class="list">${(gr.topics||[]).filter(t=>t.write).map(t=>{const st=get("gw-de-"+t.id);return `<a class="item" href="#/grammatik/${t.id}/ai"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${st&&st.last?`<span class="tag ok">последний: ${st.last.r.score}/10</span>`:""}</div><h3>${esc(t.title)}</h3><p>${t.write.length} ${plural(t.write.length,"задание","задания","заданий")} · ${esc(t.ru||"")}</p></a>`}).join("")}</div>`);
 }
 function gramKey(){return "g-"+G.area+"-"+G.t.id}
@@ -720,7 +764,7 @@ function renderGram(){
   }
   renderQ();
 }
-function summaryHTML(){const n=G.queue.length;return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены — повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
+function summaryHTML(){const n=G.queue.length;return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены, повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
 function startGram(lv){
   const t=G.t;let idx=t.items.map((x,i)=>i);
   if(lv>0){idx=idx.filter(i=>(t.items[i].lv||1)===lv);
@@ -738,7 +782,7 @@ function renderQ(){
   <div class="qcard"><div class="task">${esc(q.task||{mc:"Выбери правильный вариант",gap:"Вставь пропущенное",tr:"Перефразируй"}[q.t])}</div><div class="q">${qText}</div>
    ${q.t==="mc"?`<div class="opts">${q.o.map((o,k)=>`<button class="opt" data-o="${k}"><kbd>${k+1}</kbd>${esc(o)}</button>`).join("")}</div>`:
      `${q.s?`<div class="start-hint">Начни так: ${esc(q.s)}</div>`:""}${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<input class="ansin" id="ans" autocomplete="off" spellcheck="false" placeholder="${q.t==="gap"?"Пропущенное слово / форма":"Твой вариант…"}">`}
-   <div class="row" style="margin-top:14px"><button class="btn primary" id="chk">${q.t==="mc"?"Дальше":"Проверить"}</button><button class="btn" id="skip">Не знаю</button><span class="muted" style="font-size:12.5px;margin-left:auto">Enter — проверить</span></div>
+   <div class="row" style="margin-top:14px"><button class="btn primary" id="chk">${q.t==="mc"?"Дальше":"Проверить"}</button><button class="btn" id="skip">Не знаю</button><span class="muted" style="font-size:12.5px;margin-left:auto">Enter: проверить</span></div>
    <div id="fb"></div></div></div>`;
   G.answered=false;G.sel=null;
   const inp=$("#ans");if(inp){inp.focus();inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#chk").click()}}}
@@ -759,7 +803,7 @@ function checkQ(skip){
   if(q.t==="mc"){ok=!skip&&G.sel===q.a;$$(".opt").forEach((b,k)=>{if(k===q.a)b.classList.add("right");else if(k===G.sel)b.classList.add("wrong")})}
   else{ans=($("#ans").value||"").trim();const A=(q.a||[]).map(loose);ok=!skip&&ans&&A.includes(loose(ans));$("#ans").readOnly=true}
   const model=q.t==="mc"?q.o[q.a]:(q.a||[])[0];
-  if(q.free&&!skip&&ans&&!ok){ // свободный ответ: много верных вариантов — сверка с образцом, «засчитать себе» или проверка ИИ
+  if(q.free&&!skip&&ans&&!ok){ // свободный ответ: много верных вариантов, сверка с образцом, «засчитать себе» или проверка ИИ
     logDone("g",1);
     $("#fb").innerHTML=`<div class="fb ai"><b class="h">Сравни с образцом</b><div class="model">${esc(q.q.replace(/…\s*$/,""))} ${esc(model.replace(/^…\s*/,""))}</div>${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}<div class="row" style="margin-top:10px"><button class="btn sm" id="selfOk">✓ У меня тоже верно</button><button class="btn sm" id="selfNo">✗ Есть ошибка</button>${ST.keys.anthropic?`<button class="btn sm" id="aiChk">${ic("star",14)} Проверить с ИИ</button>`:""}</div></div>`;
     const mark=v=>{G.st.r[i]=v;G.st.last=today();save(gramKey(),G.st);if(v)G.ok++;["selfOk","selfNo","aiChk"].forEach(x=>{const e=$("#"+x);if(e)e.remove()})};
@@ -775,7 +819,7 @@ function checkQ(skip){
   logDone("g",1);
   const fb=$("#fb");
   fb.innerHTML=`<div class="fb ${ok?"ok":"no"}"><b class="h">${ok?"Верно!":skip?"Правильный ответ:":"Не совсем. Правильно:"}</b>${ok&&q.t==="mc"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(esc).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
-   ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным — проверить с ИИ</button></div>`:""}</div>`;
+   ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
   const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
     try{const r=await api("/de/check",{method:"POST",body:JSON.stringify({task:q.task||"",q:q.q,a:q.a,answer:ans})});
       if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.retry=G.retry.filter(x=>x!==i)}
@@ -861,7 +905,7 @@ function tasksHTML(tasks,ans,checked){
     else if(q.t==="gap")body=`<input data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} style="width:100%">`;
     let why="";
     if(checked){const right=taskRight(q,a);
-      why=`<div class="why">${q.t==="open"||q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}${q.t==="open"?' <span class="muted">Сверь сам — засчитай, если смысл совпадает.</span>':""}</div>`;
+      why=`<div class="why">${q.t==="open"||q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}${q.t==="open"?' <span class="muted">Сверь сам, засчитай, если смысл совпадает.</span>':""}</div>`;
       if(q.t!=="open"&&q.t!=="head"&&q.t!=="sent"&&q.t!=="match")why=(right?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+why}
     return `<div class="tq"><div class="qt"><span class="qn">${i+1}.</span>${esc(q.q)}</div>${body}${why}</div>`;
   }).join("");
@@ -884,7 +928,7 @@ function bindTasks(root,tasks,ans,onChange){
 async function vLesenList(area){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):""}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете — для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам экзамена, от B2 к C1. Задания как на EPD: richtig/falsch/nicht im Text, выбор ответа, заголовки к абзацам, короткие ответы."} Выдели любое слово — перевод появится сбоку.</p>${itemsByLevel(d.texts||[],area,"lesen","l-")}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"lesen")}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете, для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам экзамена, от B2 к C1. Задания как на EPD: richtig/falsch/nicht im Text, выбор ответа, заголовки к абзацам, короткие ответы."} Выдели любое слово, перевод появится сбоку.</p>${itemsByLevel(lf(d.texts,area),area,"lesen","l-")}`);
 }
 function itemsByLevel(arr,area,kind,pref){
   const groups={};[...arr].sort(lvSort).forEach(x=>(groups[x.level||"—"]=groups[x.level||"—"]||[]).push(x));
@@ -901,14 +945,14 @@ async function vLesen(area,id){
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
       ${(t.paras||[]).map((p,i)=>`<p class="pa"><span class="pn">${i+1}</span>${gapsHTML(esc(p))}</p>`).join("")}</article>
     <aside class="side" id="side">
-      <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик) — перевод DeepL появится прямо у слова.</div></div>
+      <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик), перевод DeepL появится прямо у слова.</div></div>
       <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">${t.tasks.length} шт.</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div></div>
       <div class="wordbox"><b style="font-size:14px">Слова из этого текста</b><div class="vlist"><div><span>пока пусто</span></div></div></div>
     </aside>
   </div>`);
   bindLookup($("#art"),$("#side"));
   const draw=()=>{$("#tq").innerHTML=tasksHTML(t.tasks,ans,checked);if(!checked)bindTasks($("#tq"),t.tasks,ans,draw);
-    if(checked){const [s,m]=taskScore(t.tasks,ans);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${s/m>=.8?"Отлично!":s/m>=.5?"Порог пройден (на экзамене минимум — половина).":"Ниже порога. Перечитай абзацы с ошибками."}</span></div>`}else $("#score").innerHTML="";
+    if(checked){const [s,m]=taskScore(t.tasks,ans);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${s/m>=.8?"Отлично!":s/m>=.5?"Порог пройден (на экзамене минимум, половина).":"Ниже порога. Перечитай абзацы с ошибками."}</span></div>`}else $("#score").innerHTML="";
     $("#lcheck").hidden=checked;$("#lreset").hidden=!checked};
   draw();
   $("#lcheck").onclick=()=>{checked=true;const [s,m]=taskScore(t.tasks,ans);save(key,{s,m,ans,d:today()});logDone("l",area+":"+id);draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
@@ -919,7 +963,7 @@ async function vLesen(area,id){
 async function vHoerenList(area){
   header(area==="frei"?"frei":"hoeren");setC(area==="frei"?"var(--c-f)":"var(--c-h)");
   const d=await data(area,"hoeren");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):""}<h1>Hören</h1><p class="lead">${area==="frei"?"Живые разговоры: кафе, вечеринка, подкаст, жалобы соседа.":"Радиорепортажи, интервью, доклады и дискуссии. На экзамене текст звучит дважды: сначала только заметки, потом ответы."} ${ST.keys.openai?"Голоса — нейросетевые (OpenAI), каждое аудио генерируется один раз и сохраняется.":"Сейчас звучит голос браузера. Добавь ключ OpenAI в настройках — будут живые голоса."}</p>${itemsByLevel(d.items||[],area,"hoeren","h-")}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"hoeren")}<h1>Hören</h1><p class="lead">${area==="frei"?"Живые разговоры: кафе, вечеринка, подкаст, жалобы соседа.":"Радиорепортажи, интервью, доклады и дискуссии. На экзамене текст звучит дважды: сначала только заметки, потом ответы."} ${ST.keys.openai?"Голоса, нейросетевые (OpenAI), каждое аудио генерируется один раз и сохраняется.":"Сейчас звучит голос браузера. Добавь ключ OpenAI в настройках, будут живые голоса."}</p>${itemsByLevel(lf(d.items,area),area,"hoeren","h-")}`);
 }
 async function vHoeren(area,id){
   header(area==="frei"?"frei":"hoeren");setC(area==="frei"?"var(--c-f)":"var(--c-h)");
@@ -929,10 +973,10 @@ async function vHoeren(area,id){
   let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],checked=!!prev,plays=0,showScript=!!prev;
   const names=it.voices||{};
   page(`${crumb(base(area)+"hoeren","Hören")}<h1>${esc(it.title)}</h1><p class="lead">${esc(it.intro||"")}</p>
-   <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене — два прослушивания"><i></i><i></i></div></div></div>
+   <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене, два прослушивания"><i></i><i></i></div></div></div>
    <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button></div></div>
      <div class="script" id="script" style="margin-top:16px" ${showScript?"":"hidden"}>${(it.lines||[]).map(([s,tx])=>`<p><b>${esc((names[s]||{}).name||s)}</b>${esc(tx)}</p>`).join("")}</div></div>
-   <aside class="side" id="side"><div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте — перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
+   <aside class="side" id="side"><div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте, перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
   bindLookup($("#script"),$("#side"));
   let playing=false,stopFlag=false;
   const setPlays=()=>$$(".plays i").forEach((x,i)=>x.classList.toggle("used",i<plays));
@@ -941,9 +985,9 @@ async function vHoeren(area,id){
     playing=true;stopFlag=false;$("#pl").classList.add("playing");$("#play").innerHTML=pauseIcon();plays++;setPlays();
     let url=null;
     if(ST.keys.openai){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{url=(await api("/de/audio/"+area+"/"+id,{method:"POST"})).url}catch(e){toast(e.message)}}
-    if(url&&!stopFlag){const a=new Audio(url);curAudio=a;$("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание — только заметки)":"(второе — отвечай)");await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
+    if(url&&!stopFlag){const a=new Audio(url);curAudio=a;$("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
     else if(!stopFlag){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s],.96)}}
-    playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды — проверь ответы":"Можно прослушать ещё раз";
+    playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";
   };
   const draw=()=>{$("#tq").innerHTML=tasksHTML(it.tasks||[],ans,checked);if(!checked)bindTasks($("#tq"),it.tasks||[],ans,draw);
     if(checked){const [s,m]=taskScore(it.tasks||[],ans);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
@@ -991,9 +1035,9 @@ const REC={active:false,rec:null,chunks:[],stream:null,sr:null,live:"",
 async function vSprechenList(area){
   header(area==="frei"?"frei":"sprechen");setC(area==="frei"?"var(--c-f)":"var(--c-sp)");
   const d=await data(area,"sprechen");
-  const tasks=d.tasks||[];
+  const tasks=lf(d.tasks,area);
   const byTopic={};tasks.forEach(t=>(byTopic[t.topic||"Gespräch"]=byTopic[t.topic||"Gespräch"]||[]).push(t));
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):""}<h1>Sprechen</h1><p class="lead">${area==="frei"?"Разговоры на любые темы с живым собеседником-венцем. Можно сленг, можно ругаться — это не экзамен.":"Устная часть EPD: выбери задание, подготовься (на экзамене 15 минут), запиши презентацию по Leitfragen — ИИ разберёт ошибки, подскажет обороты C1 и задаст вопрос как комиссия. Ответ звучит голосом."}</p>
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"sprechen")}<h1>Sprechen</h1><p class="lead">${area==="frei"?"Разговоры на любые темы с живым собеседником-венцем. Можно сленг, можно ругаться, это не экзамен.":"Устная часть EPD: выбери задание, подготовься (на экзамене 15 минут), запиши презентацию по Leitfragen, ИИ разберёт ошибки, подскажет обороты C1 и задаст вопрос как комиссия. Ответ звучит голосом."}</p>
   ${!ST.keys.anthropic?`<div class="card" style="margin-bottom:16px;border-left:5px solid var(--bad)">Для разбора нужен ключ Claude. <a href="#/settings">Добавить в настройках →</a></div>`:""}
   ${Object.entries(byTopic).map(([tp,a])=>`<div class="lvl-h">${esc(tp)}</div><div class="list">${a.map(t=>{const r=get("s-"+area+"-"+t.id);return `<a class="item" href="${base(area)}sprechen/${t.id}"><div class="row"><span class="tag lv">${esc(t.kind||"Gespräch")}</span>${r?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:""}</div><h3>${esc(t.title)}</h3><p>${esc(t.ru||(t.impulse||"").slice(0,110))}</p></a>`}).join("")}</div>`).join("")}`);
 }
@@ -1026,7 +1070,7 @@ async function vSprechen(area,id){
   function addEx(de,ru){SP.turns.push({role:"ex",text:de});th.insertAdjacentHTML("beforeend",`<div class="bub ex"><div class="who">${area==="frei"?"Собеседник":"Prüfer:in"}<button class="btn sm" data-say="${esc(de)}" style="padding:4px 8px" aria-label="Озвучить">${ic("speaker",15)}</button></div><div class="de">${esc(de)}</div>${ru?`<div class="ru">${esc(ru)}</div>`:""}</div>`);bindSay()}
   function bindSay(){th.querySelectorAll("[data-say]").forEach(b=>b.onclick=()=>say(b.dataset.say,{voice:area==="frei"?(t.voice||"ash"):"sage",style:t.style}))}
   async function send(text){
-    if(!text||text.length<3){toast("Ничего не распознано — попробуй ещё раз");return}
+    if(!text||text.length<3){toast("Ничего не распознано, попробуй ещё раз");return}
     SP.busy=true;setRec("busy");
     th.insertAdjacentHTML("beforeend",`<div class="bub me"><div class="who">Ты</div><div class="de">${esc(text)}</div></div><div class="fbk" id="pending"><span class="spin"></span> Разбираю ответ…</div>`);
     $("#pending").scrollIntoView({behavior:"smooth",block:"center"});
@@ -1045,9 +1089,9 @@ async function vSprechen(area,id){
   }
   function fbHTML(r){return `<div class="fbk"><div class="row" style="justify-content:space-between"><h4 style="margin:0">Разбор</h4><span class="row" style="gap:6px"><span class="muted" style="font-size:12.5px">оценка</span><span class="grade">${r.score}</span></span></div>
     ${r.content?`<p style="margin:8px 0">${esc(r.content)}</p>`:""}
-    ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">— ${esc(e.why)}</span></div>`).join("")}</div>`:`<h4>Ошибки</h4><div class="muted">Грамматических ошибок не нашлось 👏</div>`}
+    ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">${esc(e.why)}</span></div>`).join("")}</div>`:`<h4>Ошибки</h4><div class="muted">Грамматических ошибок не нашлось 👏</div>`}
     <h4>Как сказать правильно</h4><div class="corr">${esc(r.corrected)}</div><div class="row" style="margin-top:6px"><button class="btn sm" data-say="${esc(r.corrected)}">${ic("speaker",16)}Послушать правильный вариант</button></div>
-    ${r.better&&r.better.length?`<h4>Звучать на C1</h4><div class="err-l">${r.better.map(b=>`<div><b>${esc(b.de)}</b> <span class="muted">— ${esc(b.ru)}</span></div>`).join("")}</div>`:""}
+    ${r.better&&r.better.length?`<h4>Звучать на C1</h4><div class="err-l">${r.better.map(b=>`<div><b>${esc(b.de)}</b> <span class="muted">${esc(b.ru)}</span></div>`).join("")}</div>`:""}
     ${r.redemittel&&r.redemittel.length?`<h4>Обороты для следующего ответа</h4><div class="rm">${r.redemittel.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}</div>`}
   let clock=null,t0=0;
   function setRec(s){const m=$("#mic");m.classList.toggle("on",s==="rec");m.disabled=s==="busy";
@@ -1063,7 +1107,7 @@ async function vSprechen(area,id){
   $("#typeBtn").onclick=()=>{$("#typeBox").hidden=!$("#typeBox").hidden;if(!$("#typeBox").hidden)$("#typeTx").focus()};
   $("#typeSend").onclick=()=>{const v=$("#typeTx").value.trim();$("#typeTx").value="";send(v)};
   const td=$("#toDialog");if(td)td.onclick=()=>{SP.phase="dialog";const q=(t.fragen||[])[0]||"Was denken Sie persönlich über dieses Thema?";addEx(q,"");say(q,{voice:"sage"});td.remove()};
-  const pb=$("#prep");if(pb)pb.onclick=()=>{if(SP.prep){clearInterval(SP.prep);SP.prep=null;$("#prepT").textContent="";pb.textContent="⏱ Подготовка 15:00";return}let s=900;pb.textContent="Стоп";SP.prep=setInterval(()=>{s--;$("#prepT").textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0");if(s<=0){clearInterval(SP.prep);SP.prep=null;toast("Время подготовки вышло — начинай!");pb.textContent="⏱ Подготовка 15:00"}},1000)};
+  const pb=$("#prep");if(pb)pb.onclick=()=>{if(SP.prep){clearInterval(SP.prep);SP.prep=null;$("#prepT").textContent="";pb.textContent="⏱ Подготовка 15:00";return}let s=900;pb.textContent="Стоп";SP.prep=setInterval(()=>{s--;$("#prepT").textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0");if(s<=0){clearInterval(SP.prep);SP.prep=null;toast("Время подготовки вышло, начинай!");pb.textContent="⏱ Подготовка 15:00"}},1000)};
   addEventListener("hashchange",()=>{if(SP&&SP.prep){clearInterval(SP.prep);SP.prep=null}},{once:true});
 }
 
@@ -1100,7 +1144,7 @@ async function vDeck(id){
     if(pos>=queue.length){page(`${crumb("#/frei","Свободный немецкий")}<div class="card summary"><div class="big">✓</div><p>На сегодня всё! Следующие повторения придут по расписанию.</p><button class="btn primary" id="back">К колоде</button></div>`);$("#back").onclick=()=>{queue=dueCards(dk,st);mode="list";draw()};return}
     const i=queue[pos],c=dk.cards[i];
     page(`${crumb("#/frei/karten/"+id,dk.title)}<div class="flash" style="margin-top:14px"><div class="progline"><div class="bar"><i style="width:${pos/queue.length*100}%"></i></div><small class="muted">${pos+1}/${queue.length}</small></div>
-      <div class="fcard" id="fc"><div class="fin"><div class="face"><div class="big">${esc(c.de)}</div>${c.ex?`<div class="exs">${esc(c.ex)}</div>`:""}<span class="hint">нажми или пробел — перевернуть</span></div><div class="face back"><div class="big">${esc(c.ru)}</div>${c.note?`<div class="nt">${esc(c.note)}</div>`:""}${c.ex_ru?`<div class="exs">${esc(c.ex_ru)}</div>`:""}</div></div></div>
+      <div class="fcard" id="fc"><div class="fin"><div class="face"><div class="big">${esc(c.de)}</div>${c.ex?`<div class="exs">${esc(c.ex)}</div>`:""}<span class="hint">нажми или пробел, перевернуть</span></div><div class="face back"><div class="big">${esc(c.ru)}</div>${c.note?`<div class="nt">${esc(c.note)}</div>`:""}${c.ex_ru?`<div class="exs">${esc(c.ex_ru)}</div>`:""}</div></div></div>
       <div class="fbtns"><button class="btn again" id="again">Ещё раз <small>(1)</small></button><button class="btn know" id="know">Знаю <small>(2)</small></button></div><div class="row" style="justify-content:center;margin-top:10px"><button class="btn sm" id="sayc">${ic("speaker",16)}Произнести</button></div></div>`);
     $("#fc").onclick=()=>$("#fc").classList.toggle("flip");
     $("#sayc").onclick=()=>say(c.de,{voice:"ash",style:"Sprich locker und umgangssprachlich wie ein junger Wiener."});
@@ -1122,7 +1166,7 @@ async function vPlan(){
   const wk=Math.floor((t-p.start)/7);
   const weeks=Array.from({length:6},(_,k)=>{const n=wk+k;return {n,topic:TOPICS[((n%TOPICS.length)+TOPICS.length)%TOPICS.length],from:p.start+n*7}});
   const exam=dateToDay(p.epd);
-  page(`<h1>План</h1><p class="lead">Укажи даты — план на каждый день соберётся сам: сколько карточек, какая грамматика, какой текст и аудио. Сложность растёт от B2 к C1 по мере прохождения.</p>
+  page(`<h1>План</h1><p class="lead">Укажи даты, план на каждый день соберётся сам: сколько карточек, какая грамматика, какой текст и аудио. Сложность растёт от B2 к C1 по мере прохождения.</p>
   <div class="pgrid">
    <div class="card"><h2 style="margin-top:0">Даты</h2>
      <div class="field"><label>Письменный EPD</label><input type="date" id="pEpd" value="${esc(p.epd||"")}"></div>
@@ -1134,22 +1178,79 @@ async function vPlan(){
    <div class="card"><h2 style="margin-top:0">Сегодня</h2>${todoHTML(items)}</div>
   </div>
   <div class="pgrid" style="margin-top:18px">
-   <div class="card"><h2 style="margin-top:0">Темы по неделям</h2><p class="muted" style="margin-top:0;font-size:14px">Каждую неделю — одна из 10 тем экзамена: Lesen, Hören и Sprechen подбираются по ней.${exam&&exam>t?` До экзамена ${exam-t} ${plural(exam-t,"день","дня","дней")} — успеешь пройти все темы ${Math.max(1,Math.floor((exam-t)/70))} ${plural(Math.max(1,Math.floor((exam-t)/70)),"раз","раза","раз")}.`:""}</p>
+   <div class="card"><h2 style="margin-top:0">Темы по неделям</h2><p class="muted" style="margin-top:0;font-size:14px">Каждую неделю, одна из 10 тем экзамена: Lesen, Hören и Sprechen подбираются по ней.${exam&&exam>t?` До экзамена ${exam-t} ${plural(exam-t,"день","дня","дней")}, успеешь пройти все темы ${Math.max(1,Math.floor((exam-t)/70))} ${plural(Math.max(1,Math.floor((exam-t)/70)),"раз","раза","раз")}.`:""}</p>
     <div class="week">${weeks.map((x,k)=>`<div class="${k===0?"cur":""}"><b>${k===0?"Эта неделя":new Date(x.from*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"short"})}</b>${esc(x.topic)}<small>${esc(TOPIC_RU[x.topic]||"")}</small></div>`).join("")}</div></div>
    <div class="card"><h2 style="margin-top:0">Последние 4 недели</h2><div class="days" style="grid-template-columns:repeat(14,1fr)">${daysHTML}</div><p class="muted" style="font-size:13px">Чем темнее, тем больше модулей в этот день.</p>
     <h2>Формат</h2>
     <table class="pts"><tr><td><b>Bonustest 1</b> · 135 мин</td><td>55</td></tr><tr><td>Grammatik: Konjunktiv II Perfekt (5), Passiversatzformen (4), Partizipialkonstruktionen / Relativsätze (6)</td><td>15</td></tr><tr><td>Zwei Lesetexte</td><td>20</td></tr><tr><td>Erörterung, 200–220 Wörter</td><td>20</td></tr><tr><td><b>Bonustest 2</b> · 135 мин</td><td>55</td></tr><tr><td>Nominal → Verbal (6), Satzfortsetzungen (9)</td><td>15</td></tr><tr><td>Hörverstehen</td><td>15</td></tr><tr><td>Stellungnahme, 230–250 Wörter (2 темы на выбор)</td><td>25</td></tr></table>
-    <p class="muted" style="font-size:13px;line-height:1.5">Оценка: 51–55 → 1, 45–50 → 2, 39–44 → 3, 33–38 → 4, ≤32 → 5. Минимум по частям: BT1 — GR 7/15, LV 10/20, TP 10/20; BT2 — GR 7/15, HV 5/15, TP 12/25. Средняя двух тестов не хуже 4,0, второй тест не отрицательный, посещаемость от 70 %. Тогда письменный EPD не нужен — только устный (но регистрироваться на EPD всё равно надо).</p></div>
+    <p class="muted" style="font-size:13px;line-height:1.5">Оценка: 51–55 → 1, 45–50 → 2, 39–44 → 3, 33–38 → 4, ≤32 → 5. Минимум по частям: BT1, GR 7/15, LV 10/20, TP 10/20; BT2, GR 7/15, HV 5/15, TP 12/25. Средняя двух тестов не хуже 4,0, второй тест не отрицательный, посещаемость от 70 %. Тогда письменный EPD не нужен, только устный (но регистрироваться на EPD всё равно надо).</p></div>
   </div>`);
   $("#pSave").onclick=()=>{const q=get("plan",{});q.epd=$("#pEpd").value;q.bt1=$("#pBt1").value;q.bt2=$("#pBt2").value;q.words=+$("#pWords").value||0;save("plan",q);toast("План сохранён");vPlan()};
 }
 
+// ---------- главная модуля: приветствие, уровни с картинками ----------
+const PICS=[
+ c=>`<svg viewBox="0 0 120 90" fill="none"><ellipse cx="60" cy="80" rx="40" ry="6" fill="${c}" opacity=".18"/><path d="M60 80V44" stroke="${c}" stroke-width="5" stroke-linecap="round"/><path d="M60 52C60 36 48 28 32 30c0 16 10 24 28 22z" fill="${c}"/><path d="M60 44C60 30 70 22 86 24c0 14-10 22-26 20z" fill="${c}" opacity=".65"/></svg>`,
+ c=>`<svg viewBox="0 0 120 90" fill="none"><ellipse cx="60" cy="82" rx="42" ry="6" fill="${c}" opacity=".18"/><rect x="55" y="52" width="10" height="30" rx="4" fill="${c}" opacity=".7"/><circle cx="60" cy="38" r="26" fill="${c}"/><circle cx="42" cy="48" r="16" fill="${c}" opacity=".7"/><circle cx="80" cy="48" r="16" fill="${c}" opacity=".7"/></svg>`,
+ c=>`<svg viewBox="0 0 120 90" fill="none"><path d="M6 82l34-52 20 28 14-18 40 42z" fill="${c}" opacity=".7"/><path d="M26 82l32-48 36 48z" fill="${c}"/><path d="M58 34l-9 13 7-3 4 5 4-5 7 3z" fill="#fff" opacity=".9"/><circle cx="96" cy="20" r="8" fill="${c}" opacity=".3"/></svg>`,
+ c=>`<svg viewBox="0 0 120 90" fill="none"><circle cx="60" cy="44" r="22" fill="${c}"/><g stroke="${c}" stroke-width="5" stroke-linecap="round"><path d="M60 8v10M60 70v10M24 44H14M106 44H96M34 18l7 7M86 63l7 7M86 25l7-7M34 70l7-7"/></g></svg>`
+];
+const GDESC={B1:"Основа: базовые конструкции",B2:"Уровень экзамена EPD",C1:"Сложные тексты и конструкции"};
+function groupsOf(k,items){const g={};items.forEach(x=>(g[gk(x)]=g[gk(x)]||[]).push(x));return Object.entries(g).sort((a,b)=>(LV_ORDER[a[0]]??9)-(LV_ORDER[b[0]]??9)||a[0].localeCompare(b[0]))}
+function itemDone(k,x){const pref=MODX[k][2];if(k==="grammatik")return gramPct("de",x)>=90;const r=get(pref+"de-"+x.id);return k==="sprechen"?!!(r&&r.n):!!r}
+async function vModHome(k){
+  header(k);setC(MOD[k].c);
+  const [dn,an]=MODX[k],d=await data("de",dn),items=d[an]||[];
+  const done=items.filter(x=>itemDone(k,x)).length,next=items.find(x=>!itemDone(k,x))||items[0];
+  const nm=(ST.user.name||"").split(" ")[0],hour=new Date().getHours(),hi=hour<5?"Gute Nacht":hour<11?"Guten Morgen":hour<18?"Hallo":"Guten Abend";
+  const gs=groupsOf(k,items),sk=streak();
+  const nextHref=!next?"":k==="grammatik"?"#/grammatik/"+next.id:`#/${k}/${next.id}`;
+  page(`<section class="hero">
+    <div class="hero-top"><div class="hero-l"><span>${EP.mascot(done===items.length&&items.length?"cheer":done?"happy":"think",76)}</span><div><h1>${hi}, ${esc(nm)}!</h1><p class="hero-sub">${MODNAV[k][2]}. Пройдено ${done} из ${items.length}.</p></div></div>
+      <div class="hero-cta">${next?`<a class="btn cta" href="${nextHref}" style="--c:${MOD[k].c}">${ic(MOD[k].i,18)}${done?"Продолжить":"Начать"}</a>`:""}</div></div>
+    <div class="hfacts"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><span class="hf">${ic("cal",17)}<a href="#/plan">План и даты</a></span><a class="hf-more" href="#/${k}/all">Все задания ${ic("chev",16)}</a></div>
+  </section>
+  <h2 class="h-sec">${k==="sprechen"?"Типы заданий":"Уровни"}</h2>
+  <div class="lvgrid">${gs.map(([g,a],i)=>{const n=a.filter(x=>itemDone(k,x)).length,pct=Math.round(n/a.length*100);return `<a class="lvcard" href="#/${k}/all/${encodeURIComponent(g)}" style="--c:${MOD[k].c}"><span class="pic">${PICS[i%PICS.length](MOD[k].c)}</span><h3>${esc(g)}</h3><p>${esc(GDESC[g]||"")}</p><div class="meta"><span class="tag">${a.length} ${k==="grammatik"?"тем":plural(a.length,"задание","задания","заданий")}</span></div><div class="bar"><i style="width:${pct}%"></i></div></a>`}).join("")}</div>
+  <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему, ИИ придумает сложные задания с подсказками и проверит твой ответ.</p></div></a>
+  ${(HINTS[k]||[]).length?`<h2 class="h-sec">Как решать</h2><div class="hints">${HINTS[k].slice(0,3).map(([t,x],i)=>`<div class="card hint" style="--c:${MOD[k].c}"><span class="hn">${i+1}</span><div><b>${esc(t)}</b><p>${esc(x)}</p></div></div>`).join("")}</div>`:""}`);
+}
+// ---------- практика с ИИ: тема от тебя, задания от ИИ ----------
+async function vAIPractice(k){
+  header(k);setC(MOD[k].c);
+  const K="ai-"+k,st=get(K,{topic:"",level:"B2",tasks:[],ans:{},res:{}});
+  st.ans=st.ans||{};st.res=st.res||{};
+  const draw=()=>{
+    page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">Назови тему, и ИИ придумает три задания от B2 к C1 с подсказками. Ответ проверяет Claude.</p>
+    <div class="card"><div class="field"><label>Тема</label><input id="aiT" value="${esc(st.topic)}" placeholder="${k==="grammatik"?"например: Konjunktiv II в прошедшем":"например: цифровизация в университете"}"></div>
+     <div class="row"><select id="aiL">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} Придумать задания</button></div></div>
+    ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}
+    <div style="margin-top:16px">${(st.tasks||[]).map((t,i)=>`<div class="card aitask"><span class="tag lv">Задание ${i+1}</span><div class="tk" lang="de">${esc(t.task)}</div><details><summary class="muted" style="cursor:pointer">Перевод</summary><p>${esc(t.ru)}</p></details>
+      <b style="font-size:13.5px">Подсказки</b><ul>${(t.hints||[]).map(h=>`<li>${esc(h)}</li>`).join("")}</ul>
+      <textarea data-i="${i}" lang="de" spellcheck="false" placeholder="Schreib hier deine Antwort …">${esc(st.ans[i]||"")}</textarea>
+      <div class="row" style="margin-top:10px"><button class="btn primary" data-chk="${i}">${ic("spark",16)} Проверить</button></div><div id="aiR${i}">${st.res[i]?resHTML(st.res[i]):""}</div></div>`).join("")}</div>`);
+    $("#aiGo").onclick=async()=>{const topic=$("#aiT").value.trim(),level=$("#aiL").value;if(topic.length<3){toast("Напиши тему хотя бы в пару слов");return}
+      const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ думает…';
+      try{const r=await api("/de/aitasks",{method:"POST",body:JSON.stringify({module:k,topic,level,n:String(Date.now()%1e6)})});st.topic=topic;st.level=level;st.tasks=r.tasks||[];st.ans={};st.res={};save(K,st);draw()}
+      catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" Придумать задания"}};
+    $$(".aitask textarea").forEach(t=>t.oninput=()=>{st.ans[t.dataset.i]=t.value;save(K,st)});
+    $$("[data-chk]").forEach(b=>b.onclick=async()=>{const i=b.dataset.chk,text=($(`textarea[data-i="${i}"]`).value||"").trim();if(text.split(/\s+/).length<5){toast("Напиши хотя бы пару предложений");return}
+      b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
+      try{const r=await api("/de/gwrite",{method:"POST",body:JSON.stringify({topic:st.topic,task:st.tasks[i].task,text})});st.res[i]=r;save(K,st);logDone(k==="grammatik"?"g":"f",1);$("#aiR"+i).innerHTML=resHTML(r)}
+      catch(e){toast(e.message)}finally{b.disabled=false;b.innerHTML=ic("spark",16)+" Проверить"}});
+  };
+  draw();
+}
+function resHTML(r){return `<div class="card gwres" style="margin-top:12px"><div class="row" style="gap:14px"><div class="gwsc" style="--p:${r.score*10}"><b>${r.score}</b><small>/10</small></div><div class="muted">${esc(r.comment||"")}</div></div>
+  ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">${esc(e.why)}</span></div>`).join("")}</div>`:`<p style="color:var(--good);font-weight:700">Ошибок нет!</p>`}
+  <h4>Исправленный текст</h4><div class="corr" lang="de">${esc(r.corrected)}</div>${r.better?`<h4>Как сказать на C1</h4><div class="corr" lang="de">${esc(r.better)}</div>`:""}</div>`}
+
 // ---------- Подсказки, Ошибки, Мой прогресс внутри модуля ----------
 const MODX={grammatik:["grammatik","topics","g-"],lesen:["lesen","texts","l-"],hoeren:["hoeren","items","h-"],sprechen:["sprechen","tasks","s-"]};
 const HINTS={
-  lesen:[["Сначала задания, потом текст","Прочитай вопросы и только потом статью: так ищешь нужное, а не читаешь всё подряд. Подчёркивай в тексте слово, по которому нашёл ответ."],["richtig / falsch / nicht im Text","«Nicht im Text» — если в тексте об этом ничего нет. Не додумывай и не подставляй свои знания: отвечает только то, что написано."],["Заголовки к абзацам","Ищи в абзаце главную мысль, а не знакомые слова. Лишний заголовок всегда есть — отбрось его в конце."],["Незнакомые слова","Двойной клик по слову — перевод появится рядом. Не останавливайся на каждом слове: смысл абзаца важнее."],["Время","На экзамене Lesen — примерно 40 минут на два текста. Тренируйся с таймером, когда освоишься."]],
-  hoeren:[["Дважды","На EPD текст звучит дважды: первый раз — общий смысл, второй — детали. Не пытайся записать всё с первого раза."],["Ключевые слова","Записывай ключевые слова и цифры, а не предложения. Сразу после аудио превращай их в ответы."],["Сначала задания","Пока идёт пауза перед аудио, прочитай все задания и предскажи, о чём будет речь."],["Отвлекающие варианты","Часто в записи звучат сразу несколько вариантов, а правильный — тот, который говорящий в итоге подтвердил."],["Скрипт — после","Послушай, ответь, проверь и только потом открой текст: так тренируется ухо, а не глаза."]],
-  sprechen:[["Структура монолога","Вступление (тема и твой тезис) → 2–3 аргумента с примерами → вывод. Говори по Leitfragen: каждая — 40–60 секунд."],["Не понял вопрос","Так и скажи: «Könnten Sie die Frage bitte wiederholen?» Это нормально и экономит нервы."],["Связки","Zum einen … zum anderen, einerseits … andererseits, daher, dennoch, folglich — несколько связок дают ощущение уровня C1."],["График","Опиши, что видно (Überblick), выдели главное, затем сравни и объясни возможные причины."],["Пауза","Если нужное слово забыл, перефразируй: «das heißt …», «anders gesagt …». Молчание хуже ошибки."]],
+  lesen:[["Сначала задания, потом текст","Прочитай вопросы и только потом статью: так ищешь нужное, а не читаешь всё подряд. Подчёркивай в тексте слово, по которому нашёл ответ."],["richtig / falsch / nicht im Text","«Nicht im Text», если в тексте об этом ничего нет. Не додумывай и не подставляй свои знания: отвечает только то, что написано."],["Заголовки к абзацам","Ищи в абзаце главную мысль, а не знакомые слова. Лишний заголовок всегда есть, отбрось его в конце."],["Незнакомые слова","Двойной клик по слову, перевод появится рядом. Не останавливайся на каждом слове: смысл абзаца важнее."],["Время","На экзамене Lesen, примерно 40 минут на два текста. Тренируйся с таймером, когда освоишься."]],
+  hoeren:[["Дважды","На EPD текст звучит дважды: первый раз, общий смысл, второй, детали. Не пытайся записать всё с первого раза."],["Ключевые слова","Записывай ключевые слова и цифры, а не предложения. Сразу после аудио превращай их в ответы."],["Сначала задания","Пока идёт пауза перед аудио, прочитай все задания и предскажи, о чём будет речь."],["Отвлекающие варианты","Часто в записи звучат сразу несколько вариантов, а правильный, тот, который говорящий в итоге подтвердил."],["Скрипт, после","Послушай, ответь, проверь и только потом открой текст: так тренируется ухо, а не глаза."]],
+  sprechen:[["Структура монолога","Вступление (тема и твой тезис) → 2–3 аргумента с примерами → вывод. Говори по Leitfragen: каждая, 40–60 секунд."],["Не понял вопрос","Так и скажи: «Könnten Sie die Frage bitte wiederholen?» Это нормально и экономит нервы."],["Связки","Zum einen … zum anderen, einerseits … andererseits, daher, dennoch, folglich, несколько связок дают ощущение уровня C1."],["График","Опиши, что видно (Überblick), выдели главное, затем сравни и объясни возможные причины."],["Пауза","Если нужное слово забыл, перефразируй: «das heißt …», «anders gesagt …». Молчание хуже ошибки."]],
   grammatik:[]
 };
 function modRows(k,arr,f){return arr.length?`<div class="list">${arr.join("")}</div>`:f}
@@ -1160,7 +1261,7 @@ async function vModExtra(k,sec){
   const lv=x=>x.level?`<span class="tag lv">${esc(x.level)}</span>`:"";
   let h="",title={hints:"Подсказки",errors:"Ошибки",progress:"Мой прогресс"}[sec],lead="";
   if(sec==="hints"){
-    lead="Короткие правила решения заданий — как на экзамене.";
+    lead="Короткие правила решения заданий, как на экзамене.";
     h=`<div class="hints">${(HINTS[k]||[]).map(([t,x],i)=>`<div class="card hint"><span class="hn">${i+1}</span><div><b>${esc(t)}</b><p>${esc(x)}</p></div></div>`).join("")}</div>`;
   }else if(sec==="progress"){
     const rows=items.map(x=>{
@@ -1181,14 +1282,15 @@ async function vModExtra(k,sec){
       if(k==="sprechen"){if(r&&r.n&&r.hist&&r.hist[0])rows.push(row("#/sprechen/"+x.id,`<span class="tag">последний разбор</span>`,x.title,x.topic||""));return}
       if(r&&r.m&&r.s<r.m)rows.push(row(`#/${k}/${x.id}`,lv(x)+`<span class="tag">ошибок: ${r.m-r.s}</span>`,x.title,x.topic||""));
     });
-    h=modRows(k,rows,`<div class="empty">Пока ошибок нет. Пройди несколько заданий — неверные ответы появятся здесь.</div>`);
+    h=modRows(k,rows,`<div class="empty">Пока ошибок нет. Пройди несколько заданий, неверные ответы появятся здесь.</div>`);
   }
   page(`<h1>${title}</h1><p class="lead">${lead}</p>${h}`);
 }
 
 // ---------- Настройки ----------
+const PRESET=["#F28C28","#E8505B","#C4687A","#8B5CF6","#3D7BF7","#0EA5B7","#18AE79","#E0A800"];
 const COLS=[["grammatik","Grammatik","--c-g"],["lesen","Lesen","--c-l"],["hoeren","Hören","--c-h"],["sprechen","Sprechen","--c-sp"],["frei","Свободный немецкий","--c-f"],["plan","План","--c-p"]];
-function applyColors(){const C=get("colors",{}),r=document.documentElement.style;COLS.forEach(([k,,v])=>{if(C[k])r.setProperty(v,C[k]);else r.removeProperty(v)})}
+function applyColors(){const C=get("colors",{}),r=document.documentElement.style;try{localStorage.setItem("ep-colors",JSON.stringify(C))}catch(e){}COLS.forEach(([k,,v])=>{if(C[k])r.setProperty(v,C[k]);else r.removeProperty(v)})}
 const hex=c=>{c=String(c).trim();if(c[0]==="#"&&c.length===7)return c;const m=c.match(/\d+/g);return m&&m.length>=3?"#"+m.slice(0,3).map(n=>(+n).toString(16).padStart(2,"0")).join(""):String(c).trim()};
 async function vSettings(){
   header("settings");setC();
@@ -1197,13 +1299,21 @@ async function vSettings(){
   const cur=v=>{const r=document.documentElement.style,o=r.getPropertyValue(v);r.removeProperty(v);const x=hex(getComputedStyle(document.documentElement).getPropertyValue(v).trim()||"#888888");if(o)r.setProperty(v,o);return x};
   page(`<h1>Настройки</h1>
   <div class="pgrid">
-   <div class="card"><h2 style="margin-top:0">Профиль</h2><p class="muted" style="margin-top:0;font-size:14px">Свой цвет для каждого раздела — меняется на всех страницах Deutsch.</p>
-    ${COLS.map(([k,n,v])=>`<div class="colrow"><span>${n}</span><input type="color" data-col="${k}" value="${C[k]||cur(v)}"></div>`).join("")}
+   <div class="card"><h2 style="margin-top:0">Профиль</h2>
+    <div class="field"><label>Имя</label><input id="pName" maxlength="40" value="${esc(ST.user.name)}"></div>
+    <p class="muted" style="margin:10px 0 6px;font-size:13.5px">Аватар</p>${EP.picker(ST.user.avatar)}
+    <button class="btn primary sm" id="pSave" style="margin-top:12px">Сохранить</button>
+    <h2>Цвета разделов</h2><p class="muted" style="margin-top:0;font-size:14px">Меняются во всём Deutsch: логотип, название, кнопки и полоса прокрутки.</p>
+    ${COLS.map(([k,n,v])=>{const now=C[k]||cur(v);return `<div class="colrow"><span style="color:${now}">${n}</span><div class="sws">${PRESET.map(x=>`<button type="button" class="sw${x.toLowerCase()===now.toLowerCase()?" on":""}" data-sw="${k}" data-v="${x}" style="background:${x}" aria-label="${x}"></button>`).join("")}<input type="color" data-col="${k}" value="${now}" title="Свой цвет"></div></div>`}).join("")}
     <div class="row" style="margin-top:8px"><button class="btn sm" id="colReset">Сбросить цвета</button><button class="btn sm" id="logout">Выйти</button></div></div>
-   <div class="card"><h2 style="margin-top:0">Ключи</h2>${K.map(([k,n,ph])=>`<div class="keyrow"><div><span class="dot ${s.keys[k]?"on":""}"></span><b>${n}</b></div>${s.owner?`<input type="password" id="k_${k}" placeholder="${s.keys[k]?"сохранён — вставь новый, чтобы заменить":ph}" autocomplete="off">`:`<span class="muted">${s.keys[k]?"подключён":"нет"}</span>`}${s.owner?`<button class="btn sm" data-key="${k}">Сохранить</button>`:"<span></span>"}</div>`).join("")}</div>
+   <div class="card"><h2 style="margin-top:0">Ключи</h2>${K.map(([k,n,ph])=>`<div class="keyrow"><div><span class="dot ${s.keys[k]?"on":""}"></span><b>${n}</b></div>${s.owner?`<input type="password" id="k_${k}" placeholder="${s.keys[k]?"сохранён, вставь новый, чтобы заменить":ph}" autocomplete="off">`:`<span class="muted">${s.keys[k]?"подключён":"нет"}</span>`}${s.owner?`<button class="btn sm" data-key="${k}">Сохранить</button>`:"<span></span>"}</div>`).join("")}</div>
   </div>`);
   $$("[data-key]").forEach(b=>b.onclick=async()=>{const k=b.dataset.key,v=$("#k_"+k).value.trim();if(!v){toast("Вставь ключ");return}try{await api("/de/settings/key",{method:"POST",body:JSON.stringify({name:k,value:v})});toast("Ключ сохранён");await loadState();vSettings()}catch(e){toast(e.message)}});
+  let av=+ST.user.avatar||0;
+  $$("[data-av]").forEach(x=>x.onclick=()=>{av=+x.dataset.av;$$("[data-av]").forEach(y=>{y.classList.toggle("on",y===x);y.setAttribute("aria-checked",y===x)})});
+  $("#pSave").onclick=async()=>{try{const j=await api("/profile",{method:"PATCH",body:JSON.stringify({name:$("#pName").value.trim(),avatar:av})});ST.user=Object.assign({},ST.user,{name:j.user.name,avatar:j.user.avatar});if(ST.me)Object.assign(ST.me,{name:j.user.name,avatar:j.user.avatar});header("settings");toast("Профиль сохранён")}catch(e){toast(e.message)}};
   $$("[data-col]").forEach(i=>i.oninput=()=>{const c=get("colors",{});c[i.dataset.col]=i.value;save("colors",c);applyColors()});
+  $$("[data-sw]").forEach(x=>x.onclick=()=>{const c=get("colors",{});c[x.dataset.sw]=x.dataset.v;save("colors",c);applyColors();header("settings");vSettings()});
   $("#colReset").onclick=()=>{save("colors",{});applyColors();vSettings()};
   $("#logout").onclick=async()=>{try{await api("/logout",{method:"POST"})}catch(e){}location.href="/"};
 }

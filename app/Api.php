@@ -365,6 +365,23 @@ class Api
     /** Для проверки после выгрузки на хостинг: версия PHP, расширения, лимиты, видимый IP. Секретов не содержит. */
     private static function diag(): array
     {
+        $out = self::diagBase();
+        if (!empty($_GET['net'])) {      // /api/admin/diag?net=1: достаёт ли хостинг до внешних сервисов (любой HTTP-ответ = достаёт)
+            $net = [];
+            foreach (['anthropic' => 'https://api.anthropic.com/', 'openai' => 'https://api.openai.com/', 'deepl' => 'https://api-free.deepl.com/',
+                      'mymemory' => 'https://api.mymemory.translated.net/', 'languagetool' => 'https://api.languagetool.org/v2/languages',
+                      'wiktionary' => 'https://de.wiktionary.org/'] as $k => $url) {
+                $t0 = microtime(true);
+                try { [$code] = Ai::http($url, null, ['User-Agent: EPDeutsch/1'], 6); $net[$k] = ['ok' => true, 'http' => $code, 'ms' => (int)((microtime(true) - $t0) * 1000)]; }
+                catch (Throwable $e) { $net[$k] = ['ok' => false, 'error' => mb_substr($e->getMessage(), 0, 120)]; }
+            }
+            $out['net'] = $net;
+        }
+        return $out;
+    }
+
+    private static function diagBase(): array
+    {
         return ['php' => PHP_VERSION, 'ext' => ['curl' => extension_loaded('curl'), 'sodium' => extension_loaded('sodium'), 'mbstring' => extension_loaded('mbstring'), 'pdo_mysql' => extension_loaded('pdo_mysql')],
             'argon2id' => defined('PASSWORD_ARGON2ID'), 'max_execution_time' => ini_get('max_execution_time'), 'post_max_size' => ini_get('post_max_size'),
             'upload_max_filesize' => ini_get('upload_max_filesize'), 'remote_addr' => $_SERVER['REMOTE_ADDR'] ?? '',

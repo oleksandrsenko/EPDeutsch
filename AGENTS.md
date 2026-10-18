@@ -29,3 +29,9 @@
 - Продумывай пограничные случаи и проверяй в браузере.
 - Запуск: `python3 server.py 8765` → http://localhost:8765. Для проверки без живой базы: `UNISICHER_DB=/tmp/test.db python3 server.py 8792`.
 - Параллельные агенты: каждый в своём git worktree и ветке `agent/<задача>` (см. глобальный CLAUDE.md владельца).
+
+## PHP-версия (ветка `agent/php-infinityfree`, для бесплатного хостинга InfinityFree)
+
+Сайт переписан на PHP + MySQL: `public/` (страницы, статика, `index.php`, `.htaccess`), `app/` (классы), `config/config.example.php`, `schema/mysql.sql`,
+`scripts/` (миграция SQLite → MySQL, тест `smoke_test.py`), `docs/php-migration/` (инвентаризация и инструкция по развёртыванию).
+Регистрация без почты, пароль восстанавливает админ (временный пароль). Python-файлы в корне остались как справочные. В `main` эта ветка не слита.

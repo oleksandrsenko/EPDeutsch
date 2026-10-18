@@ -943,7 +943,7 @@ def translate(text, sl, tl):
     key = deepl_key()
     if key:
         host = "api-free.deepl.com" if key.endswith(":fx") else "api.deepl.com"
-        body = json.dumps({"text": [text], "source_lang": sl.upper(), "target_lang": tl.upper()}).encode()
+        body = json.dumps({"text": [text], "source_lang": sl.upper(), "target_lang": "EN-GB" if tl == "en" else tl.upper()}).encode()
         req = urllib.request.Request(f"https://{host}/v2/translate", data=body, method="POST",
                                      headers={"Authorization": "DeepL-Auth-Key " + key, "Content-Type": "application/json"})
         j = http_json(req)
@@ -1868,7 +1868,7 @@ class Handler(BaseHTTPRequestHandler):
 
         if method == "POST" and p == "/translate":
             d = self.read_json()
-            text, sl, tl = s_str(d.get("text"), 300), s_str(d.get("from"), 2), s_str(d.get("to"), 2)
+            text, sl, tl = s_str(d.get("text"), 1500), s_str(d.get("from"), 2), s_str(d.get("to"), 2)
             if sl not in ("de", "ru", "en") or tl not in ("de", "ru", "en") or sl == tl:
                 raise ApiError(400, "Неверная пара языков")
             if not text:

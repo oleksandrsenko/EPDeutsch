@@ -141,7 +141,16 @@ const I={
  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
  x:'<path d="M6 6l12 12M18 6L6 18"/>',
  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
- chart:'<path d="M4 20V4M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/>'
+ chart:'<path d="M4 20V4M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/>',
+ swap:'<path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 20l4-4-4-4"/><path d="M21 16H7"/>',
+ plus:'<path d="M12 5v14M5 12h14"/>',
+ check:'<path d="M5 12l5 5 9-10"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ quote:'<path d="M7 7h4v4c0 3-1.5 5-4 6"/><path d="M14 7h4v4c0 3-1.5 5-4 6"/>',
+ doc:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
+ bars:'<path d="M6 20V10M12 20V4M18 20v-7"/>',
+ chat:'<path d="M4 5h16v11H9l-5 4z"/>',
+ edit:'<path d="M4 20h4L19 9l-4-4L4 16z"/>'
 };
 const ic=(n,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
 // [ключ, подпись, адрес, иконка, цвет]
@@ -153,8 +162,7 @@ const MODS=[
  ["lesen","Lesen","/de#/lesen","book","#3D7BF7"],
  ["hoeren","Hören","/de#/hoeren","ear","#0EA5B7"],
  ["sprechen","Sprechen","/de#/sprechen","mic","#18AE79"],
- ["frei","Свободный","/de#/frei","star","#E8505B"],
- ["plan","План","/de#/plan","cal","#E0A800"]
+ ["frei","Свободный","/de#/frei","star","#E8505B"]
 ];
 function modbar(cur){
   return `<nav class="ep-mods" aria-label="Модули">${MODS.map(([k,t,h,i,c],n)=>
@@ -292,12 +300,12 @@ const mark=s=>`<svg class="ep-mark" viewBox="0 0 34 34" width="${s||32}" height=
 function logo(k,href,attrs){const n=NAME[k]||k;
   return `<a class="ep-logo" href="${href||"/de#/"}" style="--c:${color(k)}" aria-label="EPDeutsch ${esc(n)}, на главную"${attrs||""}>${mark(32)}<span class="ep-lt"><span class="ep-ln">EP<b>Deutsch</b></span>${k==="home"||k==="start"?"":`<small class="ep-ls" lang="de">${esc(n)}</small>`}</span></a>`}
 function burger(id,label){return `<button type="button" class="ep-burger" id="${id||"burger"}" aria-label="${label||"Меню"}" aria-controls="nav"><span class="bm">${ic("menu",22)}</span><span class="bx">${ic("x",22)}</span></button>`}
-function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${color(k)}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span></a>`).join("")}</div>`}
+function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${color(k)}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,22)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span>${k===cur?`<span class="ep-mnow">сейчас</span>`:ic("chev",16)}</a>`).join("")}</div>`}
 
 // ---------- бургер: «Выбрать модуль» → вторая панель со списком модулей ----------
 function switcher(cur){const m=modOf(cur)||modOf("home"),n=cur==="home"?"Обзор":(NAME[cur]||m[1]);
   return `<button type="button" class="ep-swbtn" data-ep-sw style="--c:${color(cur)}"><span class="ep-mi">${ic(m[3],18)}</span><span class="ep-swt"><small>Модуль</small><b>${esc(n)}</b></span><span class="ep-swgo">Выбрать${ic("chev",16)}</span></button>`+
-    `<div class="ep-swpanel"><button type="button" class="ep-swback" data-ep-swback>${ic("chev",16)}Назад</button><div class="ep-dgt">Выбери модуль</div>${modlist(cur)}<div class="ep-dlinks"><a href="/">${ic("globe",18)}Выбор языка</a></div></div>`}
+    `<div class="ep-swpanel"><button type="button" class="ep-swback" data-ep-swback>${ic("chev",16)}Назад</button><div class="ep-dgt">Выбери модуль</div>${modlist(cur)}</div>`}
 const TIPS={
  woerter:["Повторяй слова каждый день понемногу: 20 карточек ежедневно лучше, чем 150 раз в неделю.","Учи слово в связке: глагол с предлогом и падежом (sich beschäftigen mit + D).","Существительное, всегда с артиклем и формой мн. числа: der Antrag, die Anträge.","Не уверен, жми «Не знаю»: честный ответ ставит повторение вовремя."],
  schreiben:["На EPD считают слова: недобор режет баллы за выполнение задания.","План за 5 минут экономит 15: тезис, 2–3 аргумента, пример, вывод.","Связки дают баллы за связность: einerseits … andererseits, folglich, zudem.","Оставь 5 минут на проверку: артикли, окончания, порядок слов в придаточных."],
@@ -371,14 +379,18 @@ body.navopen .ep-burger .bx,body.ep-dopen .ep-burger .bx{display:inline-flex}
 @media (max-width:640px){.top .home-de,.top a.home{display:none!important}.top{gap:8px!important}}
 @media (max-width:340px){.ep-logo .ep-ls{display:none}}
 /* ---- список модулей (в меню и на телефоне) ---- */
-.ep-modlist{display:flex;flex-direction:column;gap:2px}
-.ep-modlist a{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:14px;color:var(--fg);text-decoration:none}
-.ep-modlist a:hover{background:var(--hover)}
-.ep-modlist a>span:last-child{display:flex;flex-direction:column;min-width:0}
-.ep-modlist b{font-weight:700;font-size:14.5px;line-height:1.25}
-.ep-modlist small{color:var(--muted);font-size:12px;font-weight:600;line-height:1.3}
-.ep-modlist a[aria-current="page"]{background:color-mix(in srgb,var(--c) 12%,transparent)}
-.ep-modlist a[aria-current="page"] .ep-mi{background:var(--c);color:#fff}
+.ep-modlist{display:flex;flex-direction:column;gap:8px}
+.ep-modlist a{position:relative;display:flex;align-items:center;gap:14px;min-height:64px;padding:11px 12px;border-radius:18px;color:var(--fg);text-decoration:none;background:var(--panel);border:1.5px solid var(--line2);box-shadow:0 1px 0 rgba(40,46,62,.03);transition:transform .2s cubic-bezier(.34,1.56,.64,1),border-color .15s,background .15s,box-shadow .2s}
+.ep-modlist a:hover{border-color:color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 6%,var(--panel));transform:translateX(3px);box-shadow:0 10px 22px -16px var(--c)}
+.ep-modlist .ep-mi{width:42px;height:42px;border-radius:14px;flex:none}
+.ep-modlist a:hover .ep-mi{background:var(--c);color:#fff;transform:rotate(-5deg) scale(1.05)}
+.ep-modlist a>span:nth-child(2){display:flex;flex-direction:column;min-width:0;flex:1}
+.ep-modlist b{font-weight:800;font-size:15.5px;line-height:1.25;letter-spacing:-.01em}
+.ep-modlist small{color:var(--muted);font-size:12.5px;font-weight:500;line-height:1.35}
+.ep-modlist a>svg{color:var(--muted);opacity:.6;transition:transform .2s,opacity .2s}.ep-modlist a:hover>svg{opacity:1;color:var(--c);transform:translateX(2px)}
+.ep-modlist a[aria-current="page"]{background:color-mix(in srgb,var(--c) 11%,var(--panel));border-color:var(--c)}
+.ep-modlist a[aria-current="page"] .ep-mi{background:var(--c);color:#fff;box-shadow:0 6px 14px -6px var(--c)}
+.ep-mnow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border-radius:999px;padding:3px 8px;flex:none}
 /* ---- выбор модуля и совет в меню ---- */
 .ep-swbtn{--c:var(--primary);display:flex;align-items:center;gap:12px;width:100%;border:1.5px solid color-mix(in srgb,var(--c) 30%,transparent);background:color-mix(in srgb,var(--c) 8%,var(--panel));border-radius:16px;padding:10px 12px;margin:0 0 10px;cursor:pointer;font:inherit;color:var(--fg);text-align:left;transition:border-color .15s,transform .15s}
 .ep-swbtn:hover{border-color:var(--c)}.ep-swbtn:active{transform:scale(.98)}

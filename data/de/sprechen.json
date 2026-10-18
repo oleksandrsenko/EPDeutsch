@@ -3,6 +3,7 @@
   {
    "id": "sp_studium",
    "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.2",
    "kind": "Grafik",
    "title": "Warum Studierende ihr Studium abbrechen",
    "ru": "График: причины, по которым студенты бросают учёбу.",
@@ -67,6 +68,7 @@
   {
    "id": "sp_ki",
    "topic": "Medien",
+   "wt": "4.7",
    "kind": "Zitat",
    "title": "Künstliche Intelligenz – Werkzeug oder Gefahr?",
    "ru": "Цитата о роли искусственного интеллекта.",
@@ -99,6 +101,7 @@
   {
    "id": "sp_umwelt",
    "topic": "Umwelt und Verkehr",
+   "wt": "4.4",
    "kind": "Grafik",
    "title": "Wie Wienerinnen und Wiener unterwegs sind",
    "ru": "График: как жители Вены передвигаются по городу (modal split).",
@@ -171,6 +174,7 @@
   {
    "id": "sp_engagement",
    "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.1",
    "kind": "Text",
    "title": "Soziales Jahr für alle?",
    "ru": "Короткий текст: обязательный социальный год для молодёжи.",
@@ -203,6 +207,7 @@
   {
    "id": "sp_tourismus",
    "topic": "Tourismus und Reisen",
+   "wt": "4.5",
    "kind": "Grafik",
    "title": "Wohin die Österreicher reisen",
    "ru": "График: куда австрийцы ездят в отпуск.",
@@ -271,6 +276,7 @@
   {
    "id": "sp_arbeit",
    "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.2",
    "kind": "Zitat",
    "title": "Leben, um zu arbeiten – oder arbeiten, um zu leben?",
    "ru": "Цитата о балансе между работой и жизнью.",
@@ -303,6 +309,7 @@
   {
    "id": "sp_wohnen",
    "topic": "Wohnen",
+   "wt": "3.3",
    "kind": "Grafik",
    "title": "Was das Wohnen kostet",
    "ru": "График: доля дохода, которую люди тратят на жильё.",
@@ -367,6 +374,7 @@
   {
    "id": "sp_gesundheit",
    "topic": "Gesundheit",
+   "wt": "2.5",
    "kind": "Text",
    "title": "Smartphone und psychische Gesundheit",
    "ru": "Короткий текст: смартфоны и психическое здоровье молодёжи.",
@@ -399,6 +407,7 @@
   {
    "id": "sp_gleich",
    "topic": "Beziehungen und Geschlechtergerechtigkeit",
+   "wt": "3.1",
    "kind": "Grafik",
    "title": "Wer kümmert sich um Haushalt und Kinder?",
    "ru": "График: распределение домашней работы между мужчинами и женщинами.",
@@ -455,6 +464,7 @@
   {
    "id": "sp_konsum",
    "topic": "Konsumgesellschaft",
+   "wt": "4.6",
    "kind": "Zitat",
    "title": "Glück kann man nicht kaufen?",
    "ru": "Цитата о потреблении и счастье.",

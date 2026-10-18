@@ -5,6 +5,7 @@
    "level": "B2",
    "kind": "Radionachrichten",
    "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.1",
    "title": "Ö-Journal kompakt: Nachrichten am Morgen",
    "intro": "Sie hören Kurznachrichten aus dem Radio. Zu jeder Meldung gibt es eine Aufgabe.",
    "voices": {
@@ -109,6 +110,7 @@
    "level": "B2",
    "kind": "Straßenumfrage",
    "topic": "Umwelt und Verkehr",
+   "wt": "4.4",
    "title": "Umfrage auf der Mariahilfer Straße: Wie kommen Sie zur Arbeit?",
    "intro": "Ein Radioreporter fragt Passantinnen und Passanten in Wien, wie sie täglich unterwegs sind. Sie hören fünf Personen.",
    "voices": {
@@ -232,6 +234,7 @@
    "level": "B2+",
    "kind": "Radiointerview",
    "topic": "Tourismus und Reisen",
+   "wt": "1.2",
    "title": "Interview: Ein Semester in Lissabon – was Erasmus wirklich bringt",
    "intro": "Sie hören ein Interview mit einer Studentin, die ein Auslandssemester in Portugal verbracht hat.",
    "voices": {
@@ -349,6 +352,7 @@
    "level": "B2+",
    "kind": "Podcast",
    "topic": "Konsumgesellschaft",
+   "wt": "4.6",
    "title": "Podcast „Zweite Runde“: Lohnt sich Secondhand wirklich?",
    "intro": "Sie hören einen Ausschnitt aus einem Podcast. Zwei Moderatoren sprechen über gebrauchte Kleidung und Online-Plattformen.",
    "voices": {
@@ -464,6 +468,7 @@
    "level": "C1",
    "kind": "Radiodiskussion",
    "topic": "Wohnen",
+   "wt": "3.3",
    "title": "Diskussion: Braucht Österreich eine strengere Mietpreisbremse?",
    "intro": "Sie hören eine Diskussion im Radio. Es sprechen eine Vertreterin einer Mieterorganisation und ein Vertreter der Immobilienwirtschaft.",
    "voices": {
@@ -586,6 +591,7 @@
    "level": "C1",
    "kind": "Vortrag",
    "topic": "Medien",
+   "wt": "4.8",
    "title": "Vortrag: Wie Algorithmen unsere Meinung formen",
    "intro": "Sie hören einen Ausschnitt aus einem öffentlichen Vortrag an der Universität Wien.",
    "voices": {
@@ -680,6 +686,7 @@
    "level": "C1+",
    "kind": "Expertengespräch",
    "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.2",
    "title": "Im Gespräch: Wer pflegt uns morgen?",
    "intro": "Sie hören ein Gespräch mit einem Gesundheitsökonomen über den Personalmangel in der Pflege.",
    "voices": {
@@ -791,6 +798,7 @@
    "level": "B2",
    "kind": "Vortrag",
    "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.2",
    "title": "Jobben neben dem Studium",
    "intro": "Sie hören einen Vortrag über die Erwerbstätigkeit von Studierenden. Sie hören den Text zweimal. Beim ersten Hören dürfen Sie nur Notizen machen. Beantworten Sie die Fragen nach dem zweiten Hören.",
    "voices": {
@@ -890,6 +898,7 @@
    "level": "B2+",
    "kind": "Interview",
    "topic": "Umwelt und Verkehr",
+   "wt": "5.1",
    "title": "Wasser – ein knappes Gut",
    "intro": "Sie hören ein Interview mit einer Hydrologin über Wasserknappheit. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
    "voices": {
@@ -1000,6 +1009,7 @@
    "level": "B2+",
    "kind": "Vortrag",
    "topic": "Gesundheit",
+   "wt": "2.3",
    "title": "Warum wir mehr schlafen sollten",
    "intro": "Sie hören einen populärwissenschaftlichen Vortrag über Schlaf. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
    "voices": {

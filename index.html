@@ -27,7 +27,7 @@
 try{var o=JSON.parse(localStorage.getItem("usd3-v1")||"{}"),a=localStorage.getItem("epd_authed");
 // кто уже вошёл и открывает сайт с главной, сначала попадает на экран модулей (/start); оттуда в Wörter уже без переброса
 if(o.theme)d.setAttribute("data-theme",o.theme);
-d.classList.add("bootacc");if(sessionStorage.getItem("ep_navopen")!=="1")d.classList.add("bootnav")}catch(e){}})();
+d.classList.add("bootacc");d.classList.add("bootnav")}catch(e){}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +198,8 @@ textarea:focus,select:focus,input[type=text]:focus{border-color:var(--primary);o
 .hero:not(.welcome){flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:0;padding-bottom:20px}
 .hero-top{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;position:relative;z-index:1}
 .hero-sub b{color:var(--fg)}
+.hero-l{display:flex;align-items:center;gap:16px;min-width:0}.hero-oli{flex:none;display:inline-flex}
+@media (max-width:520px){.hero-oli svg{width:60px;height:60px}}
 .hero h1{font-size:clamp(20px,3vw,27px);font-weight:800;margin:0;letter-spacing:-.02em}
 .hero p{margin:4px 0 0;color:var(--muted)}
 .hs-i{font-size:17px;line-height:1}
@@ -1541,15 +1543,15 @@ body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--ol
   <nav class="nav" id="nav" aria-label="Разделы">
     <script>document.write(EP.switcher("woerter"))</script>
     <div class="nav-gt">Слова</div>
-    <a href="#" data-tab="home"><span class="ni" style="--c:#6F5BD6"><i data-ic="home"></i></span>Главная</a>
-    <a href="#" data-tab="learn"><span class="ni" style="--c:#2F7BEA"><i data-ic="cards"></i></span>Карточки</a>
-    <a href="#" data-tab="list"><span class="ni" style="--c:#18AE79"><i data-ic="list"></i></span>Слова по темам EPD</a>
+    <a href="#" data-tab="home"><span class="ni" style="--c:var(--primary)"><i data-ic="home"></i></span>Главная</a>
+    <a href="#" data-tab="learn"><span class="ni" style="--c:var(--primary)"><i data-ic="cards"></i></span>Карточки</a>
+    <a href="#" data-tab="list"><span class="ni" style="--c:var(--primary)"><i data-ic="list"></i></span>Слова по темам EPD</a>
     <div class="nav-gt">С ИИ</div>
     <a href="#" data-tab="practice" class="nav-ai"><span class="ni"><i data-ic="spark"></i></span><span class="nav-l"><b>Практика с ИИ</b><small>Пиши — ИИ проверит, как на EPD</small></span></a>
     <div class="nav-gt">Мой путь</div>
-    <a href="#" data-tab="plan"><span class="ni" style="--c:#F28C28"><i data-ic="calendar"></i></span>Мой план</a>
-    <a href="#" data-tab="prog"><span class="ni" style="--c:#0EA5B7"><i data-ic="chart"></i></span>Прогресс и настройки</a>
-    <a href="#" data-tab="friends"><span class="ni" style="--c:#E8505B"><i data-ic="users"></i></span>Друзья</a>
+    <a href="#" data-tab="plan"><span class="ni" style="--c:var(--primary)"><i data-ic="calendar"></i></span>Мой план</a>
+    <a href="#" data-tab="prog"><span class="ni" style="--c:var(--primary)"><i data-ic="chart"></i></span>Прогресс и настройки</a>
+    <a href="#" data-tab="friends"><span class="ni" style="--c:var(--primary)"><i data-ic="users"></i></span>Друзья</a>
     <script>document.write(EP.tip("woerter"))</script>
     <hr>
     <button class="nt" id="foldTog" aria-expanded="true"><span>Папки</span><i data-ic="chev"></i></button>
@@ -1981,7 +1983,7 @@ function renderHome(){
   const facts=[sk?'<span class="hf"><span class="hs-i">'+EP.icon("flame",16)+'</span>'+sk+" "+plural(sk,"день","дня","дней")+" подряд</span>":"",
     '<span class="hf">'+ic("spark",16)+"Уровень "+lv+"</span>",
     ta?'<span class="hf">'+ic("check",16)+"Точность "+Math.round(totalOk()/ta*100)+"%</span>":""].join("");
-  let h=verifyBanner()+'<div class="hero"><div class="hero-top"><div><h1>'+hello+nm+"!</h1><p class=\"hero-sub\">"+sub+'</p></div>'+
+  let h=verifyBanner()+'<div class="hero"><div class="hero-top"><div class="hero-l"><span class="hero-oli">'+EP.mascot(gd?"cheer":gn?"happy":"think",76)+'</span><div><h1>'+hello+nm+"!</h1><p class=\"hero-sub\">"+sub+'</p></div></div>'+
     '<button class="btn primary big" '+(due?"data-due":'data-open="'+esc(ls)+'"')+">"+(due?"Повторить "+due+" "+plural(due,"слово","слова","слов"):gn?"Продолжить":"Начать")+"</button></div>"+
     '<div class="hgoal'+(gd?" done":"")+'"><div class="hg-t"><span>Цель дня</span><b>'+gn+" из "+S.goal+'</b></div><div class="bar"><i style="width:'+Math.round(gn/S.goal*100)+'%"></i></div></div>'+
     '<div class="hfacts">'+facts+'<a href="#" class="hf-more" data-tab="prog">Подробный отчёт'+ic("chev",16)+"</a></div></div>";
@@ -3971,13 +3973,15 @@ document.addEventListener("click",e=>{
 const mqNarrow=matchMedia("(max-width:980px)");
 // меню на компьютере при входе всегда закрыто (про кнопку ☰ рассказывает обучение). Открытое меню помним только
 // в этой вкладке (sessionStorage, общий с Schreiben): в аккаунт не синхронизируем, иначе однажды открытое открывается всегда
-const navHidden=()=>{try{return sessionStorage.getItem("ep_navopen")!=="1"}catch(e){return true}};
+// Меню при каждом входе закрыто, после перехода в раздел снова закрывается (так во всех модулях)
+let navOpenNow=false;
+const navHidden=()=>!navOpenNow;
 function applyNav(){document.body.classList.toggle("navhide",navHidden())}
 $("#burger").onclick=()=>{
   if(mqNarrow.matches){document.body.classList.toggle("navopen");return}
-  try{if(navHidden())sessionStorage.setItem("ep_navopen","1");else sessionStorage.removeItem("ep_navopen")}catch(e){}
-  applyNav();
+  navOpenNow=!navOpenNow;applyNav();
 };
+document.addEventListener("click",e=>{if(e.target.closest(".nav a[data-tab],.nav [data-open],.nav .ep-modlist a")&&!document.body.classList.contains("touring")){navOpenNow=false;setTimeout(applyNav,0)}});
 // фокус-режим: только карточка
 function setFocus(on){
   if(on&&!document.body.classList.contains("focus")){S.fUsed=(S.fUsed||0)+1;save();const h=$(".fhint");if(h)h.remove()}

@@ -91,7 +91,7 @@ def main():
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-MOCK = {"claude": 0, "tts": 0, "stt": 0}
+MOCK = {"claude": 0, "tts": 0, "stt": 0, "claude_keys": [], "openai_keys": []}
 
 
 def fill(schema):
@@ -120,6 +120,7 @@ class Mock(BaseHTTPRequestHandler):
         body = self.rfile.read(n)
         if self.path.startswith("/v1/messages"):
             MOCK["claude"] += 1
+            MOCK["claude_keys"].append(self.headers.get("x-api-key"))
             req = json.loads(body)
             if "SLOWTEST" in json.dumps(req, ensure_ascii=False):
                 time.sleep(8)
@@ -127,6 +128,7 @@ class Mock(BaseHTTPRequestHandler):
             res = {"stop_reason": "end_turn", "content": [{"type": "text", "text": json.dumps(out)}], "usage": {"input_tokens": 1000, "output_tokens": 500}}
             return self.reply(res)
         if self.path.startswith("/v1/audio/speech"):
+            MOCK["openai_keys"].append(self.headers.get("Authorization"))
             MOCK["tts"] += 1
             time.sleep(1.2)
             return self.reply(b"ID3" + os.urandom(3000), "audio/mpeg")
@@ -165,6 +167,13 @@ def run_ai(tmp):
         check("ИИ: вход тестового пользователя", s == 200, j)
         sql(DB, "DELETE FROM rate_limit")
         uid = sql(DB, "SELECT id FROM users WHERE email='u1@test.dev'")[0][0]
+        # ключи: у не-владельца без личного ключа ключи сайта не используются (site_keys_for_users=false)
+        before = MOCK["claude"]
+        s, j = c.call("POST", "/api/de/check", {"task": "t", "q": "Ich gehe", "answer": "Ich gehe heim", "a": ["Ich gehe heim"]})
+        check("Ключи: без личного ключа и без site_keys_for_users → 400 «Нужен ключ Claude», запрос к ИИ не ушёл", s == 400 and "Нужен ключ Claude" in j["error"] and MOCK["claude"] == before, (s, j))
+        MY = "sk-ant-api03-" + "Mine" * 8 + "wxyz"
+        MYO = "sk-proj-" + "Open" * 8 + "wxyz"
+        check("Ключи: сохранение личных ключей", c.call("POST", "/api/keys", {"provider": "anthropic", "value": MY})[0] == 200 and c.call("POST", "/api/keys", {"provider": "openai", "value": MYO})[0] == 200)
         # кэш ai_cache
         body = {"task": "t", "q": "Ich gehe", "answer": "Ich gehe heim", "a": ["Ich gehe heim"]}
         before = MOCK["claude"]
@@ -174,8 +183,9 @@ def run_ai(tmp):
         check("ИИ: повторный запрос берётся из кэша (один вызов Claude вместо двух)", s2 == 200 and j2 == j1 and MOCK["claude"] - before == 1, MOCK["claude"] - before)
         row = sql(DB, "SELECT inp,outp,cost FROM ai_log WHERE uid=%s AND kind='gcheck' AND err=''" % uid)
         check("ИИ: расход записан в ai_log (токены и стоимость)", len(row) == 1 and row[0][0] == "1000" and row[0][1] == "500" and int(row[0][2]) > 0, row)
+        check("Ключи: Claude получил именно личный ключ пользователя, не ключ сайта", MOCK["claude_keys"] and set(MOCK["claude_keys"]) == {MY}, MOCK["claude_keys"])
         # Schreiben: полная проверка текста
-        tasks = json.load(open(os.path.join(ROOT, "public/schreiben/data/aufgaben.json")))["items"]
+        tasks = json.load(open(os.path.join(ROOT, "public/data/schreiben/aufgaben.json")))["items"]
         words = " ".join(["Die Digitalisierung verändert unseren Alltag stark."] * 8)
         s, j = c.call("POST", "/api/schreiben/grade", {"task_id": tasks[0]["id"], "text": words, "minutes": 30})
         check("Schreiben: проверка текста (ИИ-имитация) возвращает баллы и сохраняет эссе", s == 200 and "gesamt" in j and j["max"] in (25, 20) and j["id"] > 0, str(j)[:200])
@@ -477,9 +487,29 @@ def run(owner, tmp):
     s, j = pc.call("POST", "/api/de/invites")
     check("Lernen: обычный пользователь не создаёт приглашения (403)", s == 403)
     s, j = pc.call("POST", "/api/de/settings/key", {"name": "openai", "value": "sk-x"})
-    check("Lernen: ключи через API не принимаются (403 для не-владельца)", s == 403)
-    s, j = owner.call("POST", "/api/de/settings/key", {"name": "openai", "value": "sk-x"})
-    check("Lernen: владельцу тоже 409 «ключи в config.local.php», значение не сохраняется", s == 409)
+    check("Ключи: короткий/неверный ключ отклоняется по формату (400)", s == 400, (s, j))
+    s, j = pc.call("POST", "/api/keys", {"provider": "anthropic", "value": "sk-oai-" + "a" * 30})
+    check("Ключи: у Anthropic нужен префикс sk-ant- (400)", s == 400, (s, j))
+    FAKE = "sk-ant-api03-" + "Zq9" * 10 + "a1b2"
+    s, j = pc.call("POST", "/api/keys", {"provider": "anthropic", "value": FAKE})
+    check("Ключи: личный ключ сохраняется, в ответе только hint a1b2", s == 200 and j["keys"]["anthropic"] == {"set": True, "hint": "a1b2", "broken": False} and FAKE not in json.dumps(j), (s, j))
+    s, j = pc.call("GET", "/api/keys")
+    check("Ключи: GET отдаёт статус без значения", s == 200 and j["keys"]["anthropic"]["hint"] == "a1b2" and FAKE not in json.dumps(j) and j["keys"]["openai"]["set"] is False)
+    row = sql(DB, "SELECT key_enc,key_hint FROM user_keys WHERE user_id=(SELECT id FROM users WHERE email='u1@test.dev') AND provider='anthropic'")[0]
+    check("Ключи: в БД только шифротекст и hint, открытого ключа нет", FAKE not in row[0] and "Zq9" not in row[0] and row[1] == "a1b2", row)
+    s, j = other_c.call("GET", "/api/keys")
+    check("Ключи: у другого аккаунта ключа нет", s == 200 and j["keys"]["anthropic"]["set"] is False, j)
+    s, j = pc.call("GET", "/api/de/settings")
+    check("Ключи: Lernen видит личный ключ как подключённый", j["keys"]["anthropic"] is True and "Zq9" not in json.dumps(j), j)
+    s, j = admin.call("GET", "/api/admin/users")
+    u1 = [u for u in j["users"] if u["email"] == "u1@test.dev"][0]
+    check("Ключи: админка видит только да/нет", u1["has_keys"]["anthropic"] is True and FAKE not in json.dumps(j))
+    s, j = pc.call("DELETE", "/api/keys/anthropic")
+    check("Ключи: удаление ключа", s == 200 and j["keys"]["anthropic"]["set"] is False)
+    s, j = pc.call("DELETE", "/api/keys/nope")
+    check("Ключи: неизвестный сервис (400)", s == 400)
+    s, j = pc.call("POST", "/api/keys", {"provider": "anthropic", "value": FAKE}, csrf=False)
+    check("Ключи: без CSRF-заголовка 403", s == 403)
     s, j = owner.call("GET", "/api/de/settings")
     check("Lernen: настройки владельца со списком приглашений и без значений ключей", s == 200 and j["owner"] is True and "sk-" not in json.dumps(j))
 
@@ -493,11 +523,11 @@ def run(owner, tmp):
     words = " ".join(["Wort"] * 60)
     s, j = pc.call("POST", "/api/schreiben/grade", {"task_id": "nope", "text": words})
     check("Schreiben: неизвестное задание → 400", s == 400)
-    tasks = json.load(open(os.path.join(ROOT, "public/schreiben/data/aufgaben.json")))["items"]
+    tasks = json.load(open(os.path.join(ROOT, "public/data/schreiben/aufgaben.json")))["items"]
     s, j = pc.call("POST", "/api/schreiben/grade", {"task_id": tasks[0]["id"], "text": "kurz"})
     check("Schreiben: слишком короткий текст → 400", s == 400)
     s, j = pc.call("POST", "/api/schreiben/grade", {"task_id": tasks[0]["id"], "text": words})
-    check("Schreiben: проверка без ключа Anthropic → 503 с понятным текстом (ИИ не проверялся)", s == 503, (s, j))
+    check("Schreiben: проверка без ключа Anthropic → 400 «Нужен ключ Claude (Настройки → Ключи)», не 500", s == 400 and "Настройки → Ключи" in j["error"], (s, j))
     # вставим готовое эссе напрямую и проверим чтение/удаление/друзей/админку
     uid1 = sql(DB, "SELECT id FROM users WHERE email='u1@test.dev'")[0][0]
     sql(DB, "INSERT INTO schreiben_essays(user_id,ts,task_id,typ,title,text,words,minutes,points,max_points,task,result) VALUES(%s,%d,'t1','stell','Thema','Text',50,10,15.5,25,'{}','{\"kriterien\":{\"inhalt\":{\"punkte\":4,\"max\":5}}}')" % (uid1, int(time.time())))

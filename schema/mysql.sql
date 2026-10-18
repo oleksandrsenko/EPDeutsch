@@ -272,6 +272,16 @@ CREATE TABLE IF NOT EXISTS rate_limit(
   KEY rate_bucket (bucket, ts)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
+-- ---------- личные ключи ИИ (шифрованные sodium secretbox, ключ шифрования выводится из config secret) ----------
+CREATE TABLE IF NOT EXISTS user_keys(
+  user_id BIGINT NOT NULL,
+  provider VARCHAR(16) NOT NULL,
+  key_enc TEXT NOT NULL,
+  key_hint VARCHAR(8) NOT NULL DEFAULT '',
+  updated BIGINT NOT NULL,
+  PRIMARY KEY (user_id, provider)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
 -- ---------- защита владельца (в SQLite были триггеры owner_no_delete и owner_keep_role) ----------
 -- Если на хостинге нет права TRIGGER, этот блок вернёт ошибку: остальная схема уже создана, а те же проверки есть в PHP-коде.
 DROP TRIGGER IF EXISTS owner_no_delete;

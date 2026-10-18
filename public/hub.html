@@ -146,7 +146,7 @@ async function get(p){const r=await fetch("/api"+p,{credentials:"same-origin"});
 try{sessionStorage.setItem("ep_hub","1")}catch(e){} // с этого экрана в Wörter переходим без обратного переброса
 // прогрев модулей: страницы и данные ложатся в кэш браузера, переход открывается сразу
 function warm(){
-  ["/","/assets/book.js","/schreiben","/schreiben/data/wendungen.json","/schreiben/data/aufgaben.json"]
+  ["/","/assets/book.js","/schreiben","/data/schreiben/wendungen.json","/data/schreiben/aufgaben.json"]
     .forEach(u=>fetch(u,{credentials:"same-origin"}).catch(()=>{}));
 }
 const wait=ms=>new Promise(r=>setTimeout(r,ms));

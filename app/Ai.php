@@ -7,15 +7,19 @@ class Ai
     public const USER_DAY = 450;        // запросов к ИИ в день на аккаунт
     public const USER_MIN = 30;         // запросов в минуту на аккаунт
     public const SITE_DAY_USD = 3.0;    // общий дневной бюджет сайта
+    public const NEED_CLAUDE = 'Нужен ключ Claude (Настройки → Ключи)';
     public const BLOCK_MSG = [
         'rate' => 'Слишком много запросов подряд. Подожди минуту.',
         'user_day' => 'ИИ отдыхает до завтра. Карточки и всё остальное работают как обычно.',
         'site_budget' => 'ИИ отдыхает до завтра. Карточки и всё остальное работают как обычно.',
     ];
 
-    public static function key(): string { return trim((string)(cfg('anthropic_key') ?: getenv('ANTHROPIC_API_KEY') ?: '')); }
-    public static function openaiKey(): string { return trim((string)(cfg('openai_key') ?: getenv('OPENAI_API_KEY') ?: '')); }
-    public static function deeplKey(): string { return trim((string)(cfg('deepl_key') ?: getenv('DEEPL_API_KEY') ?: '')); }
+    /** Ключи выбираются так: личный ключ пользователя запроса → ключ сайта (если разрешено) → ''. Пользователь берётся из Keys::$user. */
+    public static function key(?array $u = null): string { return Keys::get('anthropic', $u); }
+    public static function openaiKey(?array $u = null): string { return Keys::get('openai', $u); }
+    public static function deeplKey(?array $u = null): string { return Keys::get('deepl', $u); }
+    /** Статус «ключ есть» без исключений (для настроек и диагностики). */
+    public static function keyStatus(?array $u = null): array { return Keys::available($u); }
 
     /** Максимум секунд на один внешний запрос: на бесплатном хостинге PHP обрывается раньше, чем ждал бы Python. */
     public static function timeout(int $wanted): int { return max(5, min($wanted, (int)cfg('ai_timeout', 28))); }
@@ -48,7 +52,13 @@ class Ai
         [$pin, $pout] = self::PRICE[$model] ?? [0, 0];
         $now = time();
         Db::run('INSERT INTO ai_log(ts,day,uid,kind,model,inp,outp,cost,ms,err) VALUES(?,?,?,?,?,?,?,?,?,?)',
-            [$now, Util::localDay($now), $uid, $kind, $model, $inp, $outp, $cost ?? (int)round($inp * $pin + $outp * $pout), $ms, mb_substr($err, 0, 300)]);
+            [$now, Util::localDay($now), $uid, $kind, $model, $inp, $outp, $cost ?? (int)round($inp * $pin + $outp * $pout), $ms, mb_substr(self::redact($err), 0, 300)]);
+    }
+
+    /** Вырезает из текста всё, похожее на API-ключ: в журнал и логи ключи попадать не должны. */
+    public static function redact(string $s): string
+    {
+        return preg_replace('/\b(sk-[A-Za-z0-9_-]{6,}|[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}(?::fx)?)/', '[ключ скрыт]', $s);
     }
 
     public static function guard(array $u): void
@@ -76,6 +86,7 @@ class Ai
     /** Превращает исключение внешнего вызова в ApiError: таймаут хостинга получает понятное сообщение. */
     public static function failure(Throwable $e, string $msg): ApiError
     {
+        if ($e instanceof ApiError) { return $e; }
         if ($e->getCode() === 28) {
             return new ApiError(504, 'ИИ не успел ответить: на бесплатном хостинге время запроса ограничено. Попробуй ещё раз, а если повторяется — сделай текст короче.');
         }
@@ -86,6 +97,8 @@ class Ai
     /** Один запрос со строгим JSON-ответом. Возвращает [данные, токены входа, токены выхода]. */
     public static function claude(string $system, string $content, array $schema, int $maxTokens = 900, string $model = self::MODEL, ?string $effort = null, int $timeout = 45): array
     {
+        $apiKey = self::key();
+        if ($apiKey === '') { throw new ApiError(400, self::NEED_CLAUDE); }
         $timeout = self::timeout($timeout);
         @set_time_limit($timeout + 15);
         $oc = ['format' => ['type' => 'json_schema', 'schema' => $schema]];
@@ -96,10 +109,10 @@ class Ai
         for ($attempt = 0; $attempt < 2; $attempt++) {
             $left = $timeout - (int)(microtime(true) - $t0);
             [$code, $raw] = self::http((string)cfg('anthropic_url', 'https://api.anthropic.com/v1/messages'), $body,
-                ['x-api-key: ' . self::key(), 'anthropic-version: 2023-06-01', 'content-type: application/json'], max(5, $left), 'POST');
+                ['x-api-key: ' . $apiKey, 'anthropic-version: 2023-06-01', 'content-type: application/json'], max(5, $left), 'POST');
             if ($code === 200) { break; }
             if ($attempt === 0 && in_array($code, [429, 500, 502, 503, 529], true) && (microtime(true) - $t0) < $timeout / 2) { usleep(1500000); continue; }
-            throw new RuntimeException('Claude HTTP ' . $code . ': ' . mb_substr($raw, 0, 300));
+            throw new RuntimeException('Claude HTTP ' . $code . ': ' . mb_substr(self::redact($raw), 0, 300));
         }
         $j = json_decode($raw, true);
         if (!is_array($j) || ($j['stop_reason'] ?? '') !== 'end_turn') { throw new RuntimeException('Claude stop_reason=' . ($j['stop_reason'] ?? '?')); }
@@ -114,14 +127,14 @@ class Ai
     /** Вызов Claude через предохранитель с записью расходов. $kind — метка в ai_log. */
     public static function ask(array $u, string $kind, string $model, string $system, string $content, array $schema, int $maxTokens, ?string $effort, int $timeout, string $errMsg): array
     {
-        if (!self::key()) { throw new ApiError(503, 'ИИ не подключён: нет ключа Anthropic на сервере'); }
+        if (!self::key()) { throw new ApiError(400, self::NEED_CLAUDE); }
         self::guard($u);
         Db::commit();     // не держим блокировки базы на время долгого запроса
         $t0 = microtime(true);
         try {
             [$res, $inp, $outp] = self::claude($system, $content, $schema, $maxTokens, $model, $effort, $timeout);
         } catch (Throwable $e) {
-            error_log('Claude: ' . $e->getMessage());
+            error_log('Claude: ' . self::redact($e->getMessage()));
             self::log((int)$u['id'], $kind, $model, 0, 0, (int)((microtime(true) - $t0) * 1000), $e->getCode() === 28 ? 'timeout' : $e->getMessage());
             Db::commit();
             throw self::failure($e, $errMsg);
@@ -288,7 +301,7 @@ TXT;
             $system = $lang === 'ru' ? self::CHECK_SYSTEM : str_replace('по-русски', 'по-английски (in English)', self::CHECK_SYSTEM);
             try { [$res, $inp, $outp] = self::claude($system, $content, self::checkSchema()); }
             catch (Throwable $e) {
-                error_log('Claude: ' . $e->getMessage());
+                error_log('Claude: ' . self::redact($e->getMessage()));
                 self::log((int)$u['id'], 'check', self::MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), $e->getMessage());
                 Db::commit();
                 throw self::failure($e, 'ИИ сейчас не отвечает, попробуй ещё раз через минуту');
@@ -324,7 +337,7 @@ TXT;
         usort($blocks, fn($a, $b) => [$b['ts'], $b['id']] <=> [$a['ts'], $a['id']]);
         $ru = self::blockRu();
         return [
-            'key' => (bool)self::key(), 'model' => self::MODEL,
+            'key' => self::keyStatus()['anthropic'], 'model' => self::MODEL,
             'limits' => ['userDay' => self::USER_DAY, 'userMin' => self::USER_MIN, 'siteDayUsd' => self::SITE_DAY_USD],
             'today' => ['req' => count($tw), 'usd' => $usd($tw), 'errors' => count(array_filter($tw, fn($r) => $r['err'] !== ''))],
             'period' => ['req' => count($work), 'usd' => $usd($work), 'errors' => count(array_filter($work, fn($r) => $r['err'] !== ''))],

@@ -1953,7 +1953,7 @@ function unmask(){const d=document.documentElement;if(!d.classList.contains("boo
 setTimeout(unmask,7000);
 (async()=>{
   try{const me=await fetch("/api/me",{credentials:"same-origin"}).then(r=>r.json());if(!me.user){location.replace("/");return}ME=me.user;LANG=ME.lang||"ru";MYB=(me.progress||{}).b||{};drawMe()}catch(e){}
-  try{const [w,a]=await Promise.all(["wendungen","aufgaben"].map(n=>fetch("/schreiben/data/"+n+".json").then(r=>r.json())));W=w;A=a}catch(e){toast("⚠️ Не удалось загрузить задания","Проверь интернет и обнови страницу")}
+  try{const [w,a]=await Promise.all(["wendungen","aufgaben"].map(n=>fetch("/data/schreiben/"+n+".json").then(r=>r.json())));W=w;A=a}catch(e){toast("⚠️ Не удалось загрузить задания","Проверь интернет и обнови страницу")}
   try{const st=await api("GET","state");AI=st.ai;
     if(st.data&&(!S.t||(st.data.t||0)>S.t))S=Object.assign(S,st.data);
     else if(S.t&&(!st.data||(st.data.t||0)<S.t)){clearTimeout(syncT);syncT=setTimeout(pushState,800)} // на устройстве новее: досылаем

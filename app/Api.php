@@ -29,6 +29,7 @@ class Api
         if ($u['must_change_password'] && !$allowMustChange) {
             throw new ApiError(403, 'Нужно сменить временный пароль', ['must_change_password' => true]);
         }
+        Keys::$user = $u;
         return $u;
     }
     private static function needAdmin(): array
@@ -217,6 +218,7 @@ class Api
             if ($text === '') { throw new ApiError(400, 'Пустой текст'); }
             if ($row = Ai::trGet($text, $sl, $tl)) { return ['text' => $row['out'], 'provider' => $row['prov']]; }
             if (Ai::trLimited()) { throw new ApiError(429, 'Слишком много переводов подряд, подожди минуту'); }
+            Keys::$user = Auth::currentUser();
             try { [$out, $prov] = Ai::translate($text, $sl, $tl); }
             catch (Throwable $e) { error_log('translate error: ' . $e->getMessage()); throw new ApiError(502, 'Переводчик сейчас недоступен'); }
             Ai::trPut($text, $sl, $tl, $out, $prov);
@@ -234,6 +236,13 @@ class Api
             return ['article' => $art];
         }
 
+        if ($p === '/keys' && $method === 'GET') { return ['keys' => Keys::status((int)self::needUser()['id'])]; }
+        if ($p === '/keys' && $method === 'POST') { return Keys::handleSave(self::needUser(), Http::json()); }
+        if ($method === 'DELETE' && preg_match('#^/keys/([a-z]+)$#', $p, $m)) {
+            $u = self::needUser();
+            Keys::delete((int)$u['id'], $m[1]);
+            return ['ok' => true, 'keys' => Keys::status((int)$u['id'])];
+        }
         if (str_starts_with($p, '/de/')) { return Lernen::route(self::needUser(), $method, substr($p, 3)); }
         if ($method === 'GET' && $p === '/regopen') { return ['open' => Lernen::registrationOpen()]; }
         if (str_starts_with($p, '/schreiben/')) { return Schreiben::route(self::needUser(), $method, substr($p, strlen('/schreiben/'))); }
@@ -388,6 +397,7 @@ class Api
             'x_forwarded_for' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '', 'cf_connecting_ip' => $_SERVER['HTTP_CF_CONNECTING_IP'] ?? '', 'ip_used' => Http::ip(),
             'https' => Http::secure(), 'audio_writable' => is_writable(EPD_AUDIO) || (!is_dir(EPD_AUDIO) && is_writable(dirname(EPD_AUDIO))),
             'storage_writable' => is_writable(EPD_STORAGE),
-            'keys' => ['anthropic' => (bool)Ai::key(), 'openai' => (bool)Ai::openaiKey(), 'deepl' => (bool)Ai::deeplKey()]];
+            'keys' => ['anthropic' => Keys::site('anthropic') !== '', 'openai' => Keys::site('openai') !== '', 'deepl' => Keys::site('deepl') !== ''],
+            'site_keys_for_users' => (bool)cfg('site_keys_for_users', false), 'sodium_keys' => function_exists('sodium_crypto_secretbox')];
     }
 }

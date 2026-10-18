@@ -1,0 +1,1138 @@
+{
+ "_note": "Задания для письма. typ: stell — Stellungnahme (EPD, Bonustest 2: 230–250 слов, 25 б.), eroert — Erörterung (Bonustest 1: 200–220 слов, 20 б.). Тексты и графики написаны для тренировки, цифры в графиках учебные.",
+ "themen": {
+  "arbeit": "Arbeitswelt und Wirtschaft",
+  "bez": "Beziehungen und Geschlechtergerechtigkeit",
+  "ges": "Gesellschaft und soziales Engagement",
+  "konsum": "Konsumgesellschaft",
+  "gesund": "Körperliche und mentale Gesundheit",
+  "bildung": "Lernen, Bildung, Studium und Wissenschaft",
+  "medien": "Medien",
+  "reisen": "Tourismus und Reisen",
+  "wohnen": "Wohnen",
+  "umwelt": "Umwelt und Verkehr"
+ },
+ "items": [
+  {
+   "id": "s-arbeitgeber",
+   "typ": "stell",
+   "thema": "arbeit",
+   "titel": "Was Beschäftigte von Arbeitgebern erwarten",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Welche Leistungen erwarten Sie von Ihrem Arbeitgeber?",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Weiterbildung",
+      "betriebliche Altersvorsorge",
+      "überdurchschnittliches Gehalt",
+      "Jobticket",
+      "Vertrauensarbeitszeit",
+      "Homeoffice",
+      "Kinderbetreuung",
+      "Dienstwagen"
+     ],
+     "values": [
+      73,
+      73,
+      61,
+      59,
+      54,
+      49,
+      48,
+      19
+     ]
+    },
+    "quelle": "Übungsgrafik nach einer Umfrage unter Beschäftigten; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, mit denen Unternehmen gute Fachkräfte gewinnen und halten können. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-berufswahl",
+   "typ": "stell",
+   "thema": "arbeit",
+   "titel": "Was bei der Berufswahl zählt",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Was jungen Menschen (18–29) bei der Berufswahl am wichtigsten ist",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "sicherer Arbeitsplatz",
+      "gutes Gehalt",
+      "sinnvolle Tätigkeit",
+      "flexible Arbeitszeiten",
+      "gutes Arbeitsklima",
+      "Karrierechancen",
+      "Homeoffice",
+      "Ansehen des Berufs"
+     ],
+     "values": [
+      78,
+      74,
+      63,
+      58,
+      55,
+      41,
+      37,
+      18
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie junge Menschen bei der Berufswahl besser unterstützt werden könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-workaholic",
+   "typ": "stell",
+   "thema": "arbeit",
+   "titel": "Arbeitssucht",
+   "impuls": {
+    "art": "text",
+    "titel": "Wenn die Arbeit zur Sucht wird",
+    "text": "Studien zufolge zeigt etwa jeder zehnte Erwerbstätige in Deutschland und Österreich ein arbeitssüchtiges Verhalten. Betroffene können kaum abschalten, beantworten auch am Abend und am Wochenende E-Mails und fühlen sich schuldig, wenn sie nicht arbeiten. Fachleute sehen einen Grund in der veränderten Arbeitswelt: Flexible Arbeitszeiten, Homeoffice und ständige Erreichbarkeit über das Smartphone lassen die Grenze zwischen Beruf und Freizeit verschwimmen. Was zunächst wie Engagement wirkt, kann langfristig zu Erschöpfung, Schlafstörungen und Burnout führen.",
+    "quelle": "Übungstext"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Arbeitnehmer und Unternehmen Arbeitssucht vorbeugen können. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-viertagewoche",
+   "typ": "stell",
+   "thema": "arbeit",
+   "titel": "Die Vier-Tage-Woche",
+   "impuls": {
+    "art": "text",
+    "titel": "Die Vier-Tage-Woche",
+    "text": "In Österreich testen immer mehr Unternehmen die Vier-Tage-Woche. Die Idee: Beschäftigte arbeiten bei gleichem Gehalt nur noch vier Tage, sollen in dieser Zeit aber genauso viel leisten wie bisher. Erste Pilotprojekte zeigen, dass Krankenstände zurückgehen und Firmen leichter neues Personal finden. Kritikerinnen und Kritiker warnen jedoch, dass sich nicht jede Branche dafür eignet: In der Pflege, im Handel oder in der Gastronomie lasse sich die Arbeit nicht einfach verdichten. Außerdem befürchten manche, dass der Druck am Arbeitsplatz steigt, wenn dieselbe Menge an Aufgaben in kürzerer Zeit erledigt werden muss.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Arbeitszeitmodelle vor, die sowohl den Beschäftigten als auch den Unternehmen nützen. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-gender-pay",
+   "typ": "stell",
+   "thema": "bez",
+   "titel": "Teilzeit und Gleichberechtigung",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Teilzeitquote von Frauen und Männern in Österreich",
+    "chart": {
+     "type": "line",
+     "unit": "%",
+     "labels": [
+      "2005",
+      "2010",
+      "2015",
+      "2020",
+      "2025"
+     ],
+     "series": [
+      {
+       "name": "Frauen",
+       "values": [
+        39,
+        44,
+        47,
+        49,
+        51
+       ]
+      },
+      {
+       "name": "Männer",
+       "values": [
+        6,
+        8,
+        11,
+        11,
+        13
+       ]
+      }
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte gerundet und vereinfacht"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die eine gerechtere Aufteilung von Erwerbs- und Familienarbeit fördern könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-heiratsalter",
+   "typ": "stell",
+   "thema": "bez",
+   "titel": "Später heiraten",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Durchschnittliches Alter bei der ersten Heirat in Österreich (in Jahren)",
+    "chart": {
+     "type": "line",
+     "unit": "",
+     "labels": [
+      "1990",
+      "2000",
+      "2010",
+      "2020",
+      "2025"
+     ],
+     "series": [
+      {
+       "name": "Frauen",
+       "values": [
+        25.9,
+        28.1,
+        30.0,
+        31.2,
+        31.8
+       ]
+      },
+      {
+       "name": "Männer",
+       "values": [
+        28.3,
+        30.7,
+        32.4,
+        33.5,
+        34.0
+       ]
+      }
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte gerundet und vereinfacht"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die es jungen Paaren erleichtern, Familie und Beruf miteinander zu vereinbaren. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-einsamkeit",
+   "typ": "stell",
+   "thema": "bez",
+   "titel": "Einsam trotz Netzwerk",
+   "impuls": {
+    "art": "text",
+    "titel": "Einsam trotz Netzwerk",
+    "text": "Einsamkeit gilt oft als Problem älterer Menschen. Neue Studien zeigen jedoch, dass sich auch viele junge Erwachsene regelmäßig allein fühlen – obwohl sie über soziale Netzwerke ständig mit anderen verbunden sind. Besonders betroffen sind Studierende, die für ihr Studium in eine fremde Stadt ziehen und ihr gewohntes Umfeld zurücklassen. Fachleute betonen, dass virtuelle Kontakte echte Begegnungen nicht ersetzen können. Freundschaften brauchen Zeit, gemeinsame Erlebnisse und Verlässlichkeit. Wer sich über längere Zeit isoliert fühlt, hat zudem ein höheres Risiko für Depressionen und andere psychische Erkrankungen.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie junge Menschen in einer neuen Stadt leichter Kontakte knüpfen können. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-diskriminierung",
+   "typ": "stell",
+   "thema": "ges",
+   "titel": "Diskriminierung im Alltag",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Aus welchen Gründen junge Menschen (16–29) schon einmal benachteiligt wurden",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Herkunft",
+      "Sprache oder Akzent",
+      "Aussehen",
+      "Geschlecht",
+      "Alter",
+      "Religion"
+     ],
+     "values": [
+      34,
+      29,
+      24,
+      22,
+      19,
+      12
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Diskriminierung im Alltag verringert werden könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-ehrenamt",
+   "typ": "stell",
+   "thema": "ges",
+   "titel": "Ehrenamt",
+   "impuls": {
+    "art": "text",
+    "titel": "Freiwillig für andere",
+    "text": "Fast die Hälfte der Menschen in Österreich engagiert sich ehrenamtlich – bei der Feuerwehr, im Sportverein, in der Flüchtlingshilfe oder in der Pflege. Ohne diese unbezahlte Arbeit würden viele soziale Angebote nicht existieren. Organisationen berichten jedoch, dass es immer schwieriger wird, Freiwillige langfristig zu binden. Vor allem junge Menschen engagieren sich lieber spontan und projektbezogen statt jahrelang in einem Verein. Fachleute fordern daher flexiblere Formen des Engagements und mehr Anerkennung, etwa durch Bestätigungen für Lebenslauf und Studium.",
+    "quelle": "Übungstext"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die mehr junge Menschen für ehrenamtliches Engagement gewinnen könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-working-poor",
+   "typ": "stell",
+   "thema": "ges",
+   "titel": "Arm trotz Arbeit",
+   "impuls": {
+    "art": "text",
+    "titel": "Arm trotz Arbeit",
+    "text": "Wer arbeitet, ist vor Armut geschützt – diese Annahme stimmt immer seltener. In Österreich gelten viele Menschen als „Working Poor“: Sie haben eine bezahlte Arbeit, verdienen aber so wenig, dass das Einkommen kaum für Miete, Energie und Lebensmittel reicht. Betroffen sind vor allem Alleinerziehende, Teilzeitbeschäftigte und Menschen in Branchen mit niedrigen Löhnen. Die stark gestiegenen Wohnkosten verschärfen die Situation zusätzlich. Sozialorganisationen berichten, dass immer mehr Erwerbstätige ihre Beratungsstellen aufsuchen, weil sie mit ihrem Geld nicht mehr bis zum Monatsende auskommen.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die Armut trotz Erwerbstätigkeit verringern könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-fastfashion",
+   "typ": "stell",
+   "thema": "konsum",
+   "titel": "Fast Fashion",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Wie oft trägt man ein gekauftes Kleidungsstück?",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "nie",
+      "1–2 Mal",
+      "3–10 Mal",
+      "11–30 Mal",
+      "öfter als 30 Mal"
+     ],
+     "values": [
+      12,
+      19,
+      31,
+      24,
+      14
+     ]
+    },
+    "quelle": "Übungsgrafik, Umfrage unter 18- bis 35-Jährigen, Werte erfunden"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen für einen nachhaltigeren Umgang mit Kleidung vor. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-werbung",
+   "typ": "stell",
+   "thema": "konsum",
+   "titel": "Werbung im Netz",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Wo junge Menschen (14–24) am häufigsten auf Werbung aufmerksam werden",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Instagram",
+      "TikTok",
+      "YouTube",
+      "Empfehlungen von Influencern",
+      "Plakate",
+      "Fernsehen",
+      "Zeitungen"
+     ],
+     "values": [
+      61,
+      57,
+      49,
+      44,
+      21,
+      18,
+      9
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie junge Menschen vor problematischer Werbung im Internet geschützt werden könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-retouren",
+   "typ": "stell",
+   "thema": "konsum",
+   "titel": "Online-Shopping und Retouren",
+   "impuls": {
+    "art": "text",
+    "titel": "Online-Shopping und Retouren",
+    "text": "Ein Klick genügt, und schon ist das neue Paar Schuhe bestellt. Online-Shopping ist bequem, schnell und oft günstiger als der Einkauf im Geschäft. Doch der Boom hat Schattenseiten: Ein großer Teil der bestellten Kleidung wird wieder zurückgeschickt, weil viele Kundinnen und Kunden mehrere Größen auf einmal bestellen. Jede Retoure verursacht zusätzliche Transporte und Verpackungsmüll, manche zurückgesandte Ware wird sogar vernichtet. Gleichzeitig leiden kleine Geschäfte in den Innenstädten unter der Konkurrenz der großen Plattformen. Händlerinnen und Händler fordern daher faire Regeln für alle Anbieter.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie der Online-Handel nachhaltiger gestaltet werden könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-bildschirmzeit",
+   "typ": "stell",
+   "thema": "gesund",
+   "titel": "Bildschirm statt Bewegung",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Bildschirmzeit und Bewegung Jugendlicher pro Tag (in Stunden)",
+    "chart": {
+     "type": "line",
+     "unit": " h",
+     "labels": [
+      "2015",
+      "2018",
+      "2020",
+      "2022",
+      "2024",
+      "2026"
+     ],
+     "series": [
+      {
+       "name": "Bildschirmzeit",
+       "values": [
+        3.1,
+        3.9,
+        5.2,
+        4.8,
+        5.1,
+        5.4
+       ]
+      },
+      {
+       "name": "Bewegung",
+       "values": [
+        1.4,
+        1.3,
+        0.9,
+        1.1,
+        1.0,
+        0.9
+       ]
+      }
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte gerundet und vereinfacht"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Jugendliche zu einem gesünderen Lebensstil motiviert werden könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-ernaehrung",
+   "typ": "stell",
+   "thema": "gesund",
+   "titel": "Neue Ernährungstrends",
+   "impuls": {
+    "art": "text",
+    "titel": "Neue Ernährungstrends",
+    "text": "Auch wenn Fleisch noch immer ein ganz zentrales Nahrungsmittel für viele Österreicher und Österreicherinnen ist, ist deutlich zu beobachten, dass Getreide und Gemüse in der Ernährung einen neuen Stellenwert gewinnen. Fleisch hat deutlich an Attraktivität verloren. Die ethischen und ökologischen Debatten haben – vor allem bei jüngeren Konsumenten und Konsumentinnen – ihre Spuren auch im Geschmack hinterlassen. Es kommt eine Generation nach, für die Fleisch nichts Besonderes mehr ist und die neugierig auf Alternativen ist. Insbesondere pflanzliche Proteine, wie Hülsenfrüchte, Tofu und neue Fleischersatzprodukte, erfreuen sich wachsender Beliebtheit.",
+    "quelle": "Musteraufgabe VWU (EPD-Modell 2026)"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie eine Ernährungsweise vor, die sowohl ökologische als auch gesundheitliche Aspekte berücksichtigt. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-stress-studium",
+   "typ": "stell",
+   "thema": "gesund",
+   "titel": "Psychische Belastung im Studium",
+   "impuls": {
+    "art": "text",
+    "titel": "Erschöpft schon im ersten Semester",
+    "text": "Laut einer Befragung fühlt sich mehr als die Hälfte der Studierenden regelmäßig gestresst. Als Gründe nennen sie Prüfungsdruck, finanzielle Sorgen und die Doppelbelastung durch Nebenjobs. Viele trauen sich nicht, darüber zu sprechen, weil psychische Probleme noch immer als Schwäche gelten. Die psychologischen Beratungsstellen der Universitäten sind überlastet, auf einen Termin wartet man oft mehrere Wochen.",
+    "quelle": "Übungstext"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, mit denen Universitäten die psychische Gesundheit von Studierenden stärken könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-bewegung",
+   "typ": "stell",
+   "thema": "gesund",
+   "titel": "Zu viel Sitzen",
+   "impuls": {
+    "art": "text",
+    "titel": "Zu viel Sitzen",
+    "text": "Die Weltgesundheitsorganisation empfiehlt Erwachsenen mindestens 150 Minuten Bewegung pro Woche. Trotzdem erreicht ein großer Teil der Bevölkerung diesen Wert nicht. Viele Menschen verbringen den Großteil des Tages im Sitzen – im Büro, im Hörsaal, im Auto und am Abend auf dem Sofa. Die Folgen sind bekannt: Rückenschmerzen, Übergewicht und ein erhöhtes Risiko für Herz-Kreislauf-Erkrankungen. Dabei müsse es nicht immer das Fitnessstudio sein, betonen Sportmedizinerinnen und Sportmediziner. Schon kleine Veränderungen im Alltag, etwa Treppensteigen oder der Weg zur Arbeit mit dem Fahrrad, könnten viel bewirken.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die Menschen zu mehr Bewegung im Alltag motivieren könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-ki-studium",
+   "typ": "stell",
+   "thema": "bildung",
+   "titel": "KI im Studium",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Wofür Studierende in Österreich KI-Tools nutzen",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Texte zusammenfassen",
+      "Recherche",
+      "Übersetzen",
+      "Prüfungsvorbereitung",
+      "Texte schreiben lassen",
+      "gar nicht"
+     ],
+     "values": [
+      62,
+      55,
+      48,
+      37,
+      21,
+      14
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Regeln für einen sinnvollen Umgang mit KI an Universitäten vor. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-studienfinanzierung",
+   "typ": "stell",
+   "thema": "bildung",
+   "titel": "Wie Studierende ihr Studium finanzieren",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Wie Studierende in Österreich ihr Studium finanzieren",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Unterstützung durch die Eltern",
+      "eigene Erwerbstätigkeit",
+      "Familienbeihilfe",
+      "Studienbeihilfe oder Stipendium",
+      "Ersparnisse",
+      "Kredit"
+     ],
+     "values": [
+      69,
+      61,
+      47,
+      22,
+      19,
+      3
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Studierende finanziell besser unterstützt werden könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-ausland",
+   "typ": "stell",
+   "thema": "bildung",
+   "titel": "Studieren im Ausland",
+   "impuls": {
+    "art": "text",
+    "titel": "Studieren im Ausland",
+    "text": "Ein Semester in Spanien, ein Praktikum in Kanada: Für viele Studierende gehört ein Auslandsaufenthalt heute selbstverständlich zum Studium. Austauschprogramme wie Erasmus+ machen es leichter denn je, Erfahrungen an einer ausländischen Hochschule zu sammeln. Wer im Ausland studiert, verbessert nicht nur seine Sprachkenntnisse, sondern lernt auch, selbstständig zu leben und sich in einer fremden Umgebung zurechtzufinden. Arbeitgeberinnen und Arbeitgeber schätzen diese Erfahrungen. Allerdings kann sich nicht jeder einen Auslandsaufenthalt leisten. Hohe Mieten und Lebenshaltungskosten schrecken vor allem Studierende aus Familien mit geringem Einkommen ab.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie mehr Studierenden ein Auslandsaufenthalt ermöglicht werden könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-nachrichtenquellen",
+   "typ": "stell",
+   "thema": "medien",
+   "titel": "Woher junge Menschen ihre Nachrichten haben",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Wo sich junge Menschen (16–29) über das aktuelle Geschehen informieren",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "soziale Netzwerke",
+      "Nachrichtenseiten und Apps",
+      "Gespräche mit Familie und Freunden",
+      "Fernsehen",
+      "Podcasts",
+      "Radio",
+      "gedruckte Zeitung"
+     ],
+     "values": [
+      64,
+      51,
+      38,
+      33,
+      21,
+      19,
+      8
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie junge Menschen lernen können, verlässliche Informationsquellen zu erkennen. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-socialmedia",
+   "typ": "stell",
+   "thema": "medien",
+   "titel": "Social Media und Jugendliche",
+   "impuls": {
+    "art": "text",
+    "titel": "Ein Verbot für unter 16-Jährige?",
+    "text": "Immer mehr Länder diskutieren, ob soziale Netzwerke für Jugendliche unter 16 Jahren verboten werden sollen. Befürworter verweisen auf Studien, nach denen intensive Nutzung mit Schlafmangel, Konzentrationsproblemen und einem negativen Körperbild zusammenhängt. Die Plattformen setzten bewusst Algorithmen ein, die junge Menschen möglichst lange am Bildschirm halten. Kritiker halten ein Verbot hingegen für kaum kontrollierbar. Sie fordern stattdessen mehr Medienkompetenz an Schulen und strengere Regeln für die Konzerne selbst.",
+    "quelle": "Übungstext"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die Jugendliche vor den Risiken sozialer Medien schützen könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-deepfakes",
+   "typ": "stell",
+   "thema": "medien",
+   "titel": "Echt oder gefälscht?",
+   "impuls": {
+    "art": "text",
+    "titel": "Echt oder gefälscht?",
+    "text": "Bilder, Stimmen und sogar Videos lassen sich mithilfe künstlicher Intelligenz heute in wenigen Minuten täuschend echt herstellen. Was als technische Spielerei begann, wird zunehmend zum gesellschaftlichen Problem: Gefälschte Inhalte verbreiten sich in sozialen Netzwerken oft schneller als ihre Richtigstellung. Besonders vor Wahlen warnen Expertinnen und Experten vor gezielter Manipulation. Gleichzeitig fällt es vielen Nutzerinnen und Nutzern schwer, zwischen echten und erfundenen Nachrichten zu unterscheiden. Medienpädagoginnen und Medienpädagogen fordern deshalb, dass Medienkompetenz schon in der Schule ein fester Bestandteil des Unterrichts wird.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie man sich vor Falschinformationen im Internet schützen kann. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-urlaubswuensche",
+   "typ": "stell",
+   "thema": "reisen",
+   "titel": "Was im Urlaub zählt",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Was Reisenden aus Österreich im Urlaub am wichtigsten ist",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "Erholung",
+      "Natur erleben",
+      "Kultur und Sehenswürdigkeiten",
+      "gutes Essen",
+      "günstiger Preis",
+      "Nachhaltigkeit",
+      "Party und Nachtleben"
+     ],
+     "values": [
+      72,
+      54,
+      47,
+      45,
+      43,
+      17,
+      12
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Urlaubsregionen einen sanften und nachhaltigen Tourismus fördern könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-overtourism",
+   "typ": "stell",
+   "thema": "reisen",
+   "titel": "Overtourism",
+   "impuls": {
+    "art": "text",
+    "titel": "Zu viele Gäste?",
+    "text": "Hallstatt hat knapp 800 Einwohner, aber an manchen Tagen kommen bis zu 10.000 Besucherinnen und Besucher in den kleinen Ort am See. Busse stauen sich, Anrainer klagen über Lärm und Müll, und viele Wohnungen werden nur noch an Touristen vermietet. Gleichzeitig lebt die Region vom Tourismus: Hotels, Restaurants und Geschäfte sichern zahlreiche Arbeitsplätze. Immer mehr beliebte Reiseziele in Europa führen deshalb Eintrittsgebühren, Besucherobergrenzen oder Zeitfenster für Reisebusse ein.",
+    "quelle": "Übungstext"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen für einen Tourismus vor, der sowohl Gästen als auch Einheimischen nützt. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-billigflug",
+   "typ": "stell",
+   "thema": "reisen",
+   "titel": "Wochenendtrip mit dem Billigflieger",
+   "impuls": {
+    "art": "text",
+    "titel": "Wochenendtrip mit dem Billigflieger",
+    "text": "Für den Preis eines Abendessens nach Barcelona oder London fliegen: Billigfluglinien haben das Reisen in Europa radikal verändert. Kurztrips übers Wochenende sind besonders bei jungen Menschen beliebt. Was für Reisende günstig ist, hat jedoch einen hohen Preis für das Klima. Ein einziger Flug verursacht oft mehr Treibhausgase als monatelanges Autofahren. Gleichzeitig ist die Bahn auf vielen Strecken teurer und langsamer. Umweltorganisationen fordern deshalb höhere Steuern auf Flugtickets und den Ausbau von Nachtzügen. Die Tourismusbranche befürchtet hingegen, dass dadurch weniger Gäste kommen und Arbeitsplätze verloren gehen.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Reisen umweltfreundlicher werden könnte, ohne dass es nur noch für wenige Menschen leistbar ist. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-wohnen-wien",
+   "typ": "stell",
+   "thema": "wohnen",
+   "titel": "Wohnen für junge Menschen in Wien",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Was jungen Menschen (18–29) in Wien beim Wohnen am wichtigsten ist",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "leistbare Miete",
+      "gute Öffi-Anbindung",
+      "Nähe zu Uni / Arbeit",
+      "eigenes Zimmer",
+      "Grünflächen in der Nähe",
+      "Balkon / Terrasse",
+      "Neubau"
+     ],
+     "values": [
+      81,
+      67,
+      58,
+      52,
+      39,
+      27,
+      11
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die das Wohnen in Wien für junge Menschen attraktiver machen könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-mieten",
+   "typ": "stell",
+   "thema": "wohnen",
+   "titel": "Mieten in Wien",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Durchschnittliche Miete in Wien (Euro pro m², ohne Betriebskosten)",
+    "chart": {
+     "type": "line",
+     "unit": " €",
+     "labels": [
+      "2014",
+      "2016",
+      "2018",
+      "2020",
+      "2022",
+      "2024",
+      "2026"
+     ],
+     "series": [
+      {
+       "name": "privater Wohnungsmarkt",
+       "values": [
+        9.8,
+        10.6,
+        11.4,
+        12.3,
+        13.6,
+        15.1,
+        16.2
+       ]
+      },
+      {
+       "name": "Gemeindewohnungen",
+       "values": [
+        6.2,
+        6.4,
+        6.6,
+        6.9,
+        7.3,
+        7.6,
+        7.9
+       ]
+      }
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte gerundet und vereinfacht"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Wohnen in großen Städten leistbar bleiben könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-gentrifizierung",
+   "typ": "stell",
+   "thema": "wohnen",
+   "titel": "Wenn das Grätzel teurer wird",
+   "impuls": {
+    "art": "text",
+    "titel": "Wenn das Grätzel teurer wird",
+    "text": "Wo früher günstige Werkstätten und kleine Lokale waren, eröffnen heute Cafés und Concept Stores. Viele Grätzel in Wien verändern sich rasant. Was für die einen eine Aufwertung des Viertels ist, bedeutet für andere den Verlust ihres Zuhauses: Wenn Häuser saniert und Mieten erhöht werden, können sich langjährige Bewohnerinnen und Bewohner ihre Wohnung oft nicht mehr leisten und müssen an den Stadtrand ziehen. Fachleute sprechen von Gentrifizierung. Wien gilt zwar dank des großen Anteils an Gemeindewohnungen als Vorbild, doch auch hier steigen die Mieten auf dem privaten Wohnungsmarkt seit Jahren deutlich.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie Wohnviertel lebenswert bleiben können, ohne dass die bisherigen Bewohnerinnen und Bewohner verdrängt werden. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-verkehr",
+   "typ": "stell",
+   "thema": "umwelt",
+   "titel": "Wie Wienerinnen und Wiener unterwegs sind",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Anteil der Wege nach Verkehrsmittel in Wien",
+    "chart": {
+     "type": "line",
+     "unit": "%",
+     "labels": [
+      "1993",
+      "2003",
+      "2013",
+      "2023"
+     ],
+     "series": [
+      {
+       "name": "Öffis",
+       "values": [
+        29,
+        34,
+        39,
+        32
+       ]
+      },
+      {
+       "name": "Auto",
+       "values": [
+        40,
+        35,
+        28,
+        26
+       ]
+      },
+      {
+       "name": "zu Fuß",
+       "values": [
+        28,
+        27,
+        26,
+        35
+       ]
+      },
+      {
+       "name": "Fahrrad",
+       "values": [
+        3,
+        4,
+        7,
+        7
+       ]
+      }
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte gerundet und vereinfacht"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, die umweltfreundliche Mobilität in Städten fördern könnten. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-klimaalltag",
+   "typ": "stell",
+   "thema": "umwelt",
+   "titel": "Klimaschutz im Alltag",
+   "impuls": {
+    "art": "grafik",
+    "titel": "Was junge Menschen (16–29) für den Klimaschutz zu tun bereit sind",
+    "chart": {
+     "type": "bar",
+     "unit": "%",
+     "labels": [
+      "öfter Öffis oder Fahrrad nutzen",
+      "weniger Fleisch essen",
+      "Kleidung secondhand kaufen",
+      "weniger fliegen",
+      "auf ein eigenes Auto verzichten",
+      "mehr für klimafreundliche Produkte zahlen"
+     ],
+     "values": [
+      71,
+      48,
+      46,
+      39,
+      33,
+      27
+     ]
+    },
+    "quelle": "Übungsgrafik, Werte erfunden; Mehrfachnennungen möglich"
+   },
+   "punkte": [
+    "Beschreiben Sie einleitend kurz in eigenen Worten, worum es in der Grafik geht. (Achtung: Eine detaillierte Beschreibung der Grafik ist nicht gefragt!)",
+    "Nehmen Sie zu ausgewählten Informationen der Grafik Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie klimafreundliches Verhalten im Alltag leichter werden könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "s-bodenversiegelung",
+   "typ": "stell",
+   "thema": "umwelt",
+   "titel": "Beton statt Wiese",
+   "impuls": {
+    "art": "text",
+    "titel": "Beton statt Wiese",
+    "text": "Österreich verbaut jeden Tag eine Fläche, die so groß ist wie mehrere Fußballfelder. Für neue Straßen, Einkaufszentren, Parkplätze und Einfamilienhäuser verschwinden Wiesen und Äcker unter Beton und Asphalt. Diese sogenannte Bodenversiegelung hat ernste Folgen: Versiegelte Flächen können kein Regenwasser aufnehmen, was die Gefahr von Überschwemmungen erhöht. Im Sommer heizen sie sich stark auf, und wertvoller Boden für die Landwirtschaft geht verloren. Die Politik hat sich zwar das Ziel gesetzt, den Flächenverbrauch deutlich zu senken, doch viele Gemeinden konkurrieren weiterhin um neue Betriebe und Einwohner.",
+    "quelle": "Übungstext, für die Prüfungsvorbereitung verfasst"
+   },
+   "punkte": [
+    "Geben Sie einleitend kurz die zentrale Aussage des Textausschnitts in eigenen Worten wieder.",
+    "Nehmen Sie zu ausgewählten Aspekten des Textausschnitts Stellung. Begründen Sie Ihre Meinung mit sachlichen Argumenten.",
+    "Schlagen Sie Maßnahmen vor, wie der Flächenverbrauch reduziert werden könnte. Begründen Sie Ihre Vorschläge."
+   ]
+  },
+  {
+   "id": "e-homeoffice",
+   "typ": "eroert",
+   "thema": "arbeit",
+   "titel": "Recht auf Homeoffice",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte es ein gesetzliches Recht auf Homeoffice geben?",
+    "text": "Seit der Pandemie arbeiten viele Menschen zumindest teilweise von zu Hause aus. Gewerkschaften fordern nun ein gesetzliches Recht auf Homeoffice, viele Unternehmen möchten ihre Beschäftigten dagegen wieder öfter im Büro sehen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen ein Recht auf Homeoffice sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-quote",
+   "typ": "eroert",
+   "thema": "bez",
+   "titel": "Frauenquote",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist eine Frauenquote in Führungspositionen sinnvoll?",
+    "text": "In den Vorständen großer österreichischer Unternehmen sind Frauen noch immer deutlich unterrepräsentiert. Eine verpflichtende Quote soll das ändern, Kritiker befürchten jedoch, dass dann nicht mehr die Qualifikation entscheidet.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen eine Frauenquote sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-sozialjahr",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Soziales Pflichtjahr",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte es ein verpflichtendes soziales Jahr für alle jungen Menschen geben?",
+    "text": "Immer wieder wird diskutiert, ob alle jungen Menschen nach der Schule ein Jahr lang in Pflegeheimen, bei Rettungsorganisationen oder im Umweltschutz arbeiten sollten. Befürworterinnen und Befürworter sehen darin einen Beitrag zum Zusammenhalt der Gesellschaft, Gegnerinnen und Gegner einen Eingriff in die persönliche Freiheit.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen ein soziales Pflichtjahr sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-werbeverbot",
+   "typ": "eroert",
+   "thema": "konsum",
+   "titel": "Werbeverbot für Süßes",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Werbung für ungesunde Lebensmittel, die sich an Kinder richtet, verboten werden?",
+    "text": "Süßigkeiten, Limonaden und Fast Food werden oft mit bunten Figuren und Spielen beworben. Gesundheitsorganisationen fordern ein Verbot solcher Werbung, die Lebensmittelindustrie verweist dagegen auf die Verantwortung der Eltern.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen ein solches Werbeverbot sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-zuckersteuer",
+   "typ": "eroert",
+   "thema": "gesund",
+   "titel": "Zuckersteuer",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Österreich eine Steuer auf stark zuckerhaltige Getränke einführen?",
+    "text": "In mehreren Ländern gibt es bereits eine Steuer auf zuckerhaltige Getränke. Befürworter erwarten weniger Übergewicht und Diabetes, Kritiker halten eine solche Steuer für Bevormundung, die vor allem Menschen mit geringem Einkommen trifft.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen eine Zuckersteuer sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-studiengebuehren",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "Studiengebühren für alle?",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten alle Studierenden in Österreich Studiengebühren zahlen?",
+    "text": "In Österreich zahlen die meisten Studierenden aus der EU keine Studiengebühren, solange sie die Mindeststudienzeit nicht deutlich überschreiten. Einige Politikerinnen und Politiker fordern, dass künftig alle einen Beitrag leisten sollen, um die Qualität der Universitäten zu verbessern.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen allgemeine Studiengebühren sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-handyverbot",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Handyverbot an Schulen",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Smartphones an Schulen verboten werden?",
+    "text": "Seit dem Schuljahr 2025/26 gilt an vielen österreichischen Schulen ein Handyverbot bis zur 8. Schulstufe. Einige fordern, das Verbot auf alle Schulstufen auszuweiten, andere halten Smartphones für ein wichtiges Lernwerkzeug.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen ein Handyverbot an Schulen sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-flugreisen",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Kurzstreckenflüge",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Kurzstreckenflüge verboten werden, wenn es eine Bahnverbindung gibt?",
+    "text": "Frankreich hat Inlandsflüge verboten, wenn dieselbe Strecke mit dem Zug in weniger als zweieinhalb Stunden zurückgelegt werden kann. Auch in Österreich wird darüber diskutiert, etwa für die Strecke Wien–Salzburg.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen ein Verbot von Kurzstreckenflügen sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-wg",
+   "typ": "eroert",
+   "thema": "wohnen",
+   "titel": "Wohngemeinschaft oder eigene Wohnung?",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist eine Wohngemeinschaft für Studierende die bessere Wohnform?",
+    "text": "Die Mieten in österreichischen Universitätsstädten steigen seit Jahren. Viele Studierende entscheiden sich deshalb für eine WG, andere wohnen lieber allein oder bleiben länger bei den Eltern.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Vor- und Nachteile des Lebens in einer Wohngemeinschaft.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-autofrei",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Autofreie Innenstadt",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Innenstädte für private Autos gesperrt werden?",
+    "text": "Einige europäische Städte haben ihre Zentren bereits weitgehend autofrei gemacht. Anrainerinnen und Anrainer freuen sich über weniger Lärm und mehr Platz, Geschäftsleute befürchten jedoch, dass Kundinnen und Kunden ausbleiben.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen autofreie Innenstädte sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  }
+ ]
+}

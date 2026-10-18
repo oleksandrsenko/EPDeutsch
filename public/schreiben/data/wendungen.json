@@ -1,0 +1,782 @@
+{
+ "_note": "Wendungen для EP Schreiben. [квадратные скобки] — ключевое слово для пропуска. ___ — место для темы. src: doc — из Google Doc владельца, add — добавлено (Erörterung, связки).",
+ "blocks": [
+  {
+   "id": "einl",
+   "de": "Einleitung",
+   "ru": "Вступление",
+   "hint": "2–3 предложения: тема и почему она актуальна"
+  },
+  {
+   "id": "grafik",
+   "de": "Grafik",
+   "ru": "График",
+   "hint": "Frage 1: коротко, о чём график, 1–2 главных факта. Подробно описывать не нужно"
+  },
+  {
+   "id": "zahlen",
+   "de": "Zahlen",
+   "ru": "Цифры и тенденции",
+   "hint": "Как назвать цифру, рост, падение, место"
+  },
+  {
+   "id": "komm",
+   "de": "Textausschnitt",
+   "ru": "Текст / комментарий",
+   "hint": "Frage 1: главная мысль текста своими словами"
+  },
+  {
+   "id": "meinung",
+   "de": "Stellungnahme",
+   "ru": "Своя позиция",
+   "hint": "Frage 2: 6–8 предложений, позиция + аргументы + пример"
+  },
+  {
+   "id": "pro",
+   "de": "Pro & Contra",
+   "ru": "За и против",
+   "hint": "Erörterung: аргументы обеих сторон, потом взвешивание"
+  },
+  {
+   "id": "massn",
+   "de": "Maßnahmen",
+   "ru": "Меры и решения",
+   "hint": "Frage 3: 2 меры, каждая с обоснованием"
+  },
+  {
+   "id": "schluss",
+   "de": "Schluss",
+   "ru": "Заключение",
+   "hint": "2–3 предложения: итог и главная мысль"
+  },
+  {
+   "id": "verkn",
+   "de": "Konnektoren",
+   "ru": "Связки",
+   "hint": "Связывают предложения и дают баллы за Aufbau"
+  }
+ ],
+ "items": [
+  {
+   "id": "e1",
+   "b": "einl",
+   "src": "doc",
+   "de": "Heutzutage ist das Thema ___ [aktuell], weil …",
+   "ru": "Сегодня тема ___ актуальна, потому что …"
+  },
+  {
+   "id": "e2",
+   "b": "einl",
+   "src": "doc",
+   "de": "Heutzutage wird oft über das Thema ___ [diskutiert], da …",
+   "ru": "Сегодня часто обсуждают тему ___, так как …"
+  },
+  {
+   "id": "e3",
+   "b": "einl",
+   "src": "doc",
+   "de": "In der heutigen Zeit wird das Thema ___ zunehmend [relevant], weil …",
+   "ru": "В наше время тема ___ становится всё актуальнее, потому что …"
+  },
+  {
+   "id": "e4",
+   "b": "einl",
+   "src": "doc",
+   "de": "Aktuell [beschäftigt] sich die Gesellschaft viel mit dem Thema ___, da …",
+   "ru": "Сейчас общество много занимается темой ___, так как …"
+  },
+  {
+   "id": "e5",
+   "b": "einl",
+   "src": "doc",
+   "de": "In Zeiten der [Globalisierung] und Digitalisierung wird das Thema ___ immer wichtiger.",
+   "ru": "Во времена глобализации и цифровизации тема ___ становится всё важнее."
+  },
+  {
+   "id": "e6",
+   "b": "einl",
+   "src": "doc",
+   "de": "___ ist ein sehr wichtiges und [vielfältiges] Thema, das vor allem in der heutigen Zeit fast jeden Menschen betrifft.",
+   "ru": "___ — очень важная и многогранная тема, которая сегодня касается почти каждого."
+  },
+  {
+   "id": "e7",
+   "b": "einl",
+   "src": "doc",
+   "de": "Eines der aktuellsten und auch [umstrittensten] Themen ist ohne Zweifel ___.",
+   "ru": "Одна из самых актуальных и спорных тем — без сомнения, ___."
+  },
+  {
+   "id": "e8",
+   "b": "einl",
+   "src": "doc",
+   "de": "___ ist im 21. Jahrhundert zu einem wesentlichen [Bestandteil] unseres Alltags geworden, weil …",
+   "ru": "___ в XXI веке стало важной частью нашей повседневной жизни, потому что …"
+  },
+  {
+   "id": "e9",
+   "b": "einl",
+   "src": "doc",
+   "de": "Im 21. Jahrhundert stellt sich die Frage der/des ___ besonders [akut], weil …",
+   "ru": "В XXI веке вопрос ___ стоит особенно остро, потому что …"
+  },
+  {
+   "id": "e10",
+   "b": "einl",
+   "src": "doc",
+   "de": "Das Thema ___ [erfreut] sich heute großer Beliebtheit.",
+   "ru": "Тема ___ сегодня пользуется большой популярностью."
+  },
+  {
+   "id": "e11",
+   "b": "einl",
+   "src": "doc",
+   "de": "In der modernen Gesellschaft [herrscht] die Meinung, dass …",
+   "ru": "В современном обществе бытует мнение, что …"
+  },
+  {
+   "id": "e12",
+   "b": "einl",
+   "src": "doc",
+   "de": "Die Entwicklung der letzten [Jahrzehnte] zeigt, dass …",
+   "ru": "Развитие последних десятилетий показывает, что …"
+  },
+  {
+   "id": "e13",
+   "b": "einl",
+   "src": "doc",
+   "de": "Seit einigen Jahren lässt sich [beobachten], dass …",
+   "ru": "Уже несколько лет можно наблюдать, что …"
+  },
+  {
+   "id": "e14",
+   "b": "einl",
+   "src": "doc",
+   "de": "Betrachtet man die Entwicklung der letzten Jahre, so kann man [feststellen], dass …",
+   "ru": "Если посмотреть на развитие последних лет, можно констатировать, что …"
+  },
+  {
+   "id": "g1",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Die vorliegende Grafik [zeigt], …",
+   "ru": "Данный график показывает …"
+  },
+  {
+   "id": "g2",
+   "b": "grafik",
+   "src": "doc",
+   "de": "In der Grafik ist zu [erkennen], dass …",
+   "ru": "На графике видно, что …"
+  },
+  {
+   "id": "g3",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Das Diagramm [veranschaulicht], …",
+   "ru": "Диаграмма наглядно показывает …"
+  },
+  {
+   "id": "g4",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Die Daten in der Grafik [verdeutlichen], …",
+   "ru": "Данные графика показывают …"
+  },
+  {
+   "id": "g5",
+   "b": "grafik",
+   "src": "doc",
+   "de": "[Laut] der Grafik …",
+   "ru": "Согласно графику …"
+  },
+  {
+   "id": "g6",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Die vorliegende Grafik [stellt] dar, dass …",
+   "ru": "Данный график представляет, что …"
+  },
+  {
+   "id": "g7",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Aus der Grafik geht [hervor], dass …",
+   "ru": "Из графика следует, что …"
+  },
+  {
+   "id": "g8",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Die Grafik [illustriert], …",
+   "ru": "График иллюстрирует …"
+  },
+  {
+   "id": "g9",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Man kann aus der Grafik [entnehmen], dass …",
+   "ru": "Из графика можно понять, что …"
+  },
+  {
+   "id": "g10",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Die Grafik [weist] darauf hin, dass …",
+   "ru": "График указывает на то, что …"
+  },
+  {
+   "id": "g11",
+   "b": "grafik",
+   "src": "doc",
+   "de": "Der Grafik ist zu [entnehmen], dass …",
+   "ru": "Из графика следует, что …"
+  },
+  {
+   "id": "z1",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Der Anteil der ___ [liegt] bei 40 Prozent.",
+   "ru": "Доля ___ составляет 40 процентов."
+  },
+  {
+   "id": "z2",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl der ___ [beträgt] rund 2 Millionen.",
+   "ru": "Число ___ составляет около 2 миллионов."
+  },
+  {
+   "id": "z3",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl der ___ [erreicht] eine Höhe von …",
+   "ru": "Число ___ достигает уровня …"
+  },
+  {
+   "id": "z4",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl der ___ steigt / [erhöht] sich / nimmt zu.",
+   "ru": "Число ___ растёт / увеличивается."
+  },
+  {
+   "id": "z5",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl der ___ sinkt / [verringert] sich / nimmt ab.",
+   "ru": "Число ___ падает / уменьшается."
+  },
+  {
+   "id": "z6",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl ist [von] 44 % auf 34 % gesunken.",
+   "ru": "Число упало с 44 % до 34 %."
+  },
+  {
+   "id": "z7",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Die Zahl ist [um] 10 % gesunken.",
+   "ru": "Число снизилось на 10 % (разница)."
+  },
+  {
+   "id": "z8",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "An erster [Stelle] steht / stehen …",
+   "ru": "На первом месте стоит / стоят …"
+  },
+  {
+   "id": "z9",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Den zweiten Platz [belegt] / belegen …",
+   "ru": "Второе место занимает / занимают …"
+  },
+  {
+   "id": "z10",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Der [Spitzenreiter] ist …",
+   "ru": "Лидер (1-е место) — …"
+  },
+  {
+   "id": "z11",
+   "b": "zahlen",
+   "src": "doc",
+   "de": "Das [Schlusslicht] bildet …",
+   "ru": "Последнее место занимает …"
+  },
+  {
+   "id": "k1",
+   "b": "komm",
+   "src": "doc",
+   "de": "Die Aussage „…“ [bedeutet], dass …",
+   "ru": "Высказывание «…» означает, что …"
+  },
+  {
+   "id": "k2",
+   "b": "komm",
+   "src": "doc",
+   "de": "In dem Kommentar [geht] es darum, dass …",
+   "ru": "В комментарии речь идёт о том, что …"
+  },
+  {
+   "id": "k3",
+   "b": "komm",
+   "src": "doc",
+   "de": "Mit dieser Aussage wird [angedeutet], dass …",
+   "ru": "Этим высказыванием намекается на то, что …"
+  },
+  {
+   "id": "k4",
+   "b": "komm",
+   "src": "doc",
+   "de": "Man könnte diese Aussage so [interpretieren], dass …",
+   "ru": "Это высказывание можно понять так, что …"
+  },
+  {
+   "id": "k5",
+   "b": "komm",
+   "src": "doc",
+   "de": "Der Autor / die Autorin meint [vermutlich], dass …",
+   "ru": "Автор, вероятно, считает, что …"
+  },
+  {
+   "id": "k6",
+   "b": "komm",
+   "src": "doc",
+   "de": "Diese Aussage macht [deutlich], dass …",
+   "ru": "Это высказывание ясно показывает, что …"
+  },
+  {
+   "id": "k7",
+   "b": "komm",
+   "src": "doc",
+   "de": "Der Autor bringt damit zum [Ausdruck], dass …",
+   "ru": "Автор тем самым выражает, что …"
+  },
+  {
+   "id": "k8",
+   "b": "komm",
+   "src": "doc",
+   "de": "Diese Aussage regt zum [Nachdenken] darüber an, ob …",
+   "ru": "Это высказывание заставляет задуматься о том, …"
+  },
+  {
+   "id": "k9",
+   "b": "komm",
+   "src": "doc",
+   "de": "Mit diesen Worten soll vermutlich [ausgedrückt] werden, dass …",
+   "ru": "Этими словами, вероятно, хотят выразить, что …"
+  },
+  {
+   "id": "m1",
+   "b": "meinung",
+   "src": "doc",
+   "de": "Meiner [Meinung] nach …",
+   "ru": "По моему мнению …"
+  },
+  {
+   "id": "m2",
+   "b": "meinung",
+   "src": "doc",
+   "de": "Ich bin der [Überzeugung], dass …",
+   "ru": "Я убеждён, что …"
+  },
+  {
+   "id": "m3",
+   "b": "meinung",
+   "src": "doc",
+   "de": "Aus eigener [Erfahrung] kann ich sagen, dass …",
+   "ru": "По собственному опыту могу сказать, что …"
+  },
+  {
+   "id": "m4",
+   "b": "meinung",
+   "src": "doc",
+   "de": "Ich möchte von der Erfahrung meiner Freundin [berichten]: Sie …",
+   "ru": "Хочу рассказать об опыте моей подруги: она …"
+  },
+  {
+   "id": "m5",
+   "b": "meinung",
+   "src": "add",
+   "de": "Ich teile die Ansicht des Autors nur [teilweise], denn …",
+   "ru": "Я лишь частично разделяю мнение автора, потому что …"
+  },
+  {
+   "id": "m6",
+   "b": "meinung",
+   "src": "add",
+   "de": "Ein wichtiges [Argument] dafür ist, dass …",
+   "ru": "Важный аргумент в пользу этого — то, что …"
+  },
+  {
+   "id": "m7",
+   "b": "meinung",
+   "src": "add",
+   "de": "Dies lässt sich am [Beispiel] … gut zeigen.",
+   "ru": "Это хорошо видно на примере …"
+  },
+  {
+   "id": "p1",
+   "b": "pro",
+   "src": "add",
+   "de": "[Befürworter] argumentieren, dass …",
+   "ru": "Сторонники утверждают, что …"
+  },
+  {
+   "id": "p2",
+   "b": "pro",
+   "src": "add",
+   "de": "[Gegner] wenden ein, dass …",
+   "ru": "Противники возражают, что …"
+  },
+  {
+   "id": "p3",
+   "b": "pro",
+   "src": "add",
+   "de": "[Dafür] spricht, dass …",
+   "ru": "В пользу этого говорит то, что …"
+  },
+  {
+   "id": "p4",
+   "b": "pro",
+   "src": "add",
+   "de": "[Dagegen] spricht, dass …",
+   "ru": "Против этого говорит то, что …"
+  },
+  {
+   "id": "p5",
+   "b": "pro",
+   "src": "add",
+   "de": "Ein weiteres Argument [gegen] … ist, dass …",
+   "ru": "Ещё один аргумент против … — то, что …"
+  },
+  {
+   "id": "p6",
+   "b": "pro",
+   "src": "add",
+   "de": "Auf der einen Seite …, auf der anderen [Seite] …",
+   "ru": "С одной стороны …, с другой стороны …"
+  },
+  {
+   "id": "p7",
+   "b": "pro",
+   "src": "add",
+   "de": "Wägt man die Argumente [ab], so …",
+   "ru": "Если взвесить аргументы, то …"
+  },
+  {
+   "id": "p8",
+   "b": "pro",
+   "src": "add",
+   "de": "Nach [Abwägung] der Argumente bin ich der Meinung, dass …",
+   "ru": "Взвесив аргументы, я считаю, что …"
+  },
+  {
+   "id": "s1",
+   "b": "massn",
+   "src": "doc",
+   "de": "Um die Situation zu [verbessern], könnte man …",
+   "ru": "Чтобы улучшить ситуацию, можно было бы …"
+  },
+  {
+   "id": "s2",
+   "b": "massn",
+   "src": "doc",
+   "de": "Es wäre [sinnvoll], wenn …",
+   "ru": "Было бы разумно, если бы …"
+  },
+  {
+   "id": "s3",
+   "b": "massn",
+   "src": "doc",
+   "de": "Eine mögliche [Lösung] wäre …",
+   "ru": "Возможным решением было бы …"
+  },
+  {
+   "id": "s4",
+   "b": "massn",
+   "src": "doc",
+   "de": "Man sollte die folgenden Maßnahmen [ergreifen], um …",
+   "ru": "Следует принять следующие меры, чтобы …"
+  },
+  {
+   "id": "s5",
+   "b": "massn",
+   "src": "doc",
+   "de": "Meiner Meinung nach wären die folgenden Maßnahmen sinnvoll und [zielführend]:",
+   "ru": "По-моему, следующие меры были бы разумны и эффективны:"
+  },
+  {
+   "id": "s6",
+   "b": "massn",
+   "src": "doc",
+   "de": "Der Staat hätte folgende [Möglichkeiten], um …",
+   "ru": "У государства были бы следующие возможности, чтобы …"
+  },
+  {
+   "id": "s7",
+   "b": "massn",
+   "src": "doc",
+   "de": "Eine hilfreiche Maßnahme wäre es in meinen [Augen], wenn …",
+   "ru": "Полезной мерой, на мой взгляд, было бы, если бы …"
+  },
+  {
+   "id": "s8",
+   "b": "massn",
+   "src": "doc",
+   "de": "X würde dazu [führen], dass …",
+   "ru": "X привело бы к тому, что …"
+  },
+  {
+   "id": "s9",
+   "b": "massn",
+   "src": "doc",
+   "de": "Außerdem könnte man …, was ebenfalls den [Effekt] hätte, dass …",
+   "ru": "Кроме того, можно было бы …, что также дало бы эффект …"
+  },
+  {
+   "id": "s10",
+   "b": "massn",
+   "src": "doc",
+   "de": "Ein möglicher [Lösungsansatz] wäre, dass …",
+   "ru": "Возможным подходом к решению было бы …"
+  },
+  {
+   "id": "s11",
+   "b": "massn",
+   "src": "doc",
+   "de": "Eine effektive Maßnahme könnte darin [bestehen], dass …",
+   "ru": "Эффективная мера могла бы состоять в том, что …"
+  },
+  {
+   "id": "s12",
+   "b": "massn",
+   "src": "doc",
+   "de": "Langfristig könnte man erreichen, dass …, [indem] man …",
+   "ru": "В долгосрочной перспективе можно добиться …, если …"
+  },
+  {
+   "id": "s13",
+   "b": "massn",
+   "src": "doc",
+   "de": "Dies könnte dazu [beitragen], dass …",
+   "ru": "Это могло бы способствовать тому, что …"
+  },
+  {
+   "id": "s14",
+   "b": "massn",
+   "src": "doc",
+   "de": "Dadurch könnte [verhindert] werden, dass …",
+   "ru": "Благодаря этому можно было бы предотвратить …"
+  },
+  {
+   "id": "s15",
+   "b": "massn",
+   "src": "doc",
+   "de": "Auf diese Weise [ließe] sich erreichen, dass …",
+   "ru": "Таким образом можно было бы добиться, что …"
+  },
+  {
+   "id": "c1",
+   "b": "schluss",
+   "src": "doc",
+   "de": "Zusammenfassend [lässt] sich sagen, dass …",
+   "ru": "Подводя итог, можно сказать, что …"
+  },
+  {
+   "id": "c2",
+   "b": "schluss",
+   "src": "doc",
+   "de": "Abschließend möchte ich [betonen], dass …",
+   "ru": "В заключение хочу подчеркнуть, что …"
+  },
+  {
+   "id": "c3",
+   "b": "schluss",
+   "src": "doc",
+   "de": "Insgesamt [zeigt] sich, dass …",
+   "ru": "В целом видно, что …"
+  },
+  {
+   "id": "v1",
+   "b": "verkn",
+   "src": "add",
+   "de": "[Darüber] hinaus …",
+   "ru": "Помимо этого …"
+  },
+  {
+   "id": "v2",
+   "b": "verkn",
+   "src": "add",
+   "de": "[Allerdings] darf man nicht vergessen, dass …",
+   "ru": "Однако нельзя забывать, что …"
+  },
+  {
+   "id": "v3",
+   "b": "verkn",
+   "src": "add",
+   "de": "[Hinzu] kommt, dass …",
+   "ru": "К тому же …"
+  },
+  {
+   "id": "v4",
+   "b": "verkn",
+   "src": "add",
+   "de": "[Infolgedessen] …",
+   "ru": "Вследствие этого …"
+  },
+  {
+   "id": "v5",
+   "b": "verkn",
+   "src": "add",
+   "de": "[Während] früher …, …",
+   "ru": "В то время как раньше …, …"
+  },
+  {
+   "id": "v6",
+   "b": "verkn",
+   "src": "add",
+   "de": "Je mehr …, [desto] …",
+   "ru": "Чем больше …, тем …"
+  },
+  {
+   "id": "v7",
+   "b": "verkn",
+   "src": "add",
+   "de": "…, [sodass] …",
+   "ru": "…, так что …"
+  },
+  {
+   "id": "v8",
+   "b": "verkn",
+   "src": "add",
+   "de": "…, was dazu [führt], dass …",
+   "ru": "…, что приводит к тому, что …"
+  },
+  {
+   "id": "xme1",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Ich bin der [Überzeugung], dass …",
+   "ru": "Я убеждён, что …"
+  },
+  {
+   "id": "xme2",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Aus meiner [Sicht] spricht vor allem dafür, dass …",
+   "ru": "С моей точки зрения, прежде всего за это говорит то, что …"
+  },
+  {
+   "id": "xme3",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Ein wichtiges [Argument] für diese Position ist, dass …",
+   "ru": "Важный аргумент в пользу этой позиции: …"
+  },
+  {
+   "id": "xme4",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Dies lässt sich am [Beispiel] … gut veranschaulichen.",
+   "ru": "Это хорошо видно на примере …"
+  },
+  {
+   "id": "xme5",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Zwar …, [dennoch] bin ich der Meinung, dass …",
+   "ru": "Хотя …, тем не менее я считаю, что …"
+  },
+  {
+   "id": "xme6",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Kritiker könnten [einwenden], dass … Allerdings …",
+   "ru": "Критики могли бы возразить, что … Однако …"
+  },
+  {
+   "id": "xme7",
+   "b": "meinung",
+   "src": "ep",
+   "de": "Besonders [bedenklich] finde ich, dass …",
+   "ru": "Особенно настораживает меня то, что …"
+  },
+  {
+   "id": "xsc8",
+   "b": "schluss",
+   "src": "ep",
+   "de": "Alles in [allem] bin ich davon überzeugt, dass …",
+   "ru": "В целом я убеждён, что …"
+  },
+  {
+   "id": "xsc9",
+   "b": "schluss",
+   "src": "ep",
+   "de": "Abschließend lässt sich [festhalten], dass …",
+   "ru": "В заключение можно констатировать, что …"
+  },
+  {
+   "id": "xsc10",
+   "b": "schluss",
+   "src": "ep",
+   "de": "Es bleibt zu [hoffen], dass …",
+   "ru": "Остаётся надеяться, что …"
+  },
+  {
+   "id": "xsc11",
+   "b": "schluss",
+   "src": "ep",
+   "de": "Nur wenn …, kann es [gelingen], …",
+   "ru": "Только если …, удастся …"
+  },
+  {
+   "id": "xve12",
+   "b": "verkn",
+   "src": "ep",
+   "de": "[Einerseits] …, andererseits …",
+   "ru": "С одной стороны …, с другой стороны …"
+  },
+  {
+   "id": "xve13",
+   "b": "verkn",
+   "src": "ep",
+   "de": "Nicht [zuletzt] …",
+   "ru": "Не в последнюю очередь …"
+  },
+  {
+   "id": "xve14",
+   "b": "verkn",
+   "src": "ep",
+   "de": "[Folglich] …",
+   "ru": "Следовательно …"
+  },
+  {
+   "id": "xve15",
+   "b": "verkn",
+   "src": "ep",
+   "de": "[Dennoch] …",
+   "ru": "Тем не менее …"
+  },
+  {
+   "id": "xve16",
+   "b": "verkn",
+   "src": "ep",
+   "de": "Im [Gegensatz] dazu …",
+   "ru": "В отличие от этого …"
+  },
+  {
+   "id": "xve17",
+   "b": "verkn",
+   "src": "ep",
+   "de": "[Darüber] hinaus spielt auch … eine wichtige Rolle.",
+   "ru": "Кроме того, важную роль играет и …"
+  }
+ ]
+}

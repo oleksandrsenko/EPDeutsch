@@ -1,0 +1,30 @@
+{
+  "_note": "Satzfortsetzungen как в Bonustest 2 / EPD (Strukturen und Wortschatz): 2 б. за простое продолжение, 3 б. за сложное. Начала предложений придуманы по темам EPD.",
+  "items": [
+    {"id": "f1", "thema": "gesund", "de": "Eine Folge der Drogensucht besteht darin, …"},
+    {"id": "f2", "thema": "gesund", "de": "Alkohol und Nikotin zählen zwar auch zu den Drogen, …"},
+    {"id": "f3", "thema": "gesund", "de": "Je selbstbewusster Jugendliche sind, …"},
+    {"id": "f4", "thema": "medien", "de": "Obwohl soziale Medien viele Vorteile bieten, …"},
+    {"id": "f5", "thema": "medien", "de": "Wer täglich mehrere Stunden am Smartphone verbringt, …"},
+    {"id": "f6", "thema": "medien", "de": "Künstliche Intelligenz verändert nicht nur die Arbeitswelt, sondern …"},
+    {"id": "f7", "thema": "arbeit", "de": "Immer mehr Unternehmen bieten Homeoffice an, damit …"},
+    {"id": "f8", "thema": "arbeit", "de": "Statt ständig Überstunden zu machen, …"},
+    {"id": "f9", "thema": "arbeit", "de": "Je flexibler die Arbeitszeiten sind, …"},
+    {"id": "f10", "thema": "umwelt", "de": "Um den CO₂-Ausstoß im Verkehr zu senken, …"},
+    {"id": "f11", "thema": "umwelt", "de": "Einerseits ist das Auto für viele Menschen am Land unverzichtbar, …"},
+    {"id": "f12", "thema": "umwelt", "de": "Wenn die Öffis billiger wären, …"},
+    {"id": "f13", "thema": "bildung", "de": "Ein Studium im Ausland ist nicht nur eine fachliche Bereicherung, …"},
+    {"id": "f14", "thema": "bildung", "de": "Viele Studierende müssen neben dem Studium arbeiten, was …"},
+    {"id": "f15", "thema": "bildung", "de": "Lebenslanges Lernen gewinnt an Bedeutung, weil …"},
+    {"id": "f16", "thema": "wohnen", "de": "Da die Mieten in den Städten stark gestiegen sind, …"},
+    {"id": "f17", "thema": "wohnen", "de": "Anstatt neue Wohnungen am Stadtrand zu bauen, …"},
+    {"id": "f18", "thema": "konsum", "de": "Wer billige Kleidung kauft, sollte bedenken, dass …"},
+    {"id": "f19", "thema": "konsum", "de": "Trotz zahlreicher Warnungen vor Verschwendung …"},
+    {"id": "f20", "thema": "reisen", "de": "Der Massentourismus bringt zwar Geld in die Region, …"},
+    {"id": "f21", "thema": "reisen", "de": "Nicht nur die Umwelt, sondern auch die Einheimischen …"},
+    {"id": "f22", "thema": "ges", "de": "Ehrenamtliches Engagement ist für die Gesellschaft unverzichtbar, denn …"},
+    {"id": "f23", "thema": "ges", "de": "Sowohl der Staat als auch jeder Einzelne …"},
+    {"id": "f24", "thema": "bez", "de": "Obwohl Frauen heute besser ausgebildet sind als je zuvor, …"},
+    {"id": "f25", "thema": "bez", "de": "Damit Familie und Beruf besser vereinbar sind, …"}
+  ]
+}

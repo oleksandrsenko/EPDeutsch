@@ -1193,7 +1193,7 @@ async function vHoeren(area,id){
     if(playing){stopFlag=true;stopAudio();playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();return}
     playing=true;stopFlag=false;$("#pl").classList.add("playing");$("#play").innerHTML=pauseIcon();plays++;setPlays();
     let url=null;
-    if(ST.keys.openai){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{url=(await api("/de/audio/"+area+"/"+id,{method:"POST"})).url}catch(e){toast(e.message)}}
+    if(ST.keys.openai){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{let r;for(let n=0;n<60&&!stopFlag;n++){r=await api("/de/audio/"+area+"/"+id,{method:"POST"});if(!r.pending)break;$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… '+r.done+" из "+r.total}url=r&&r.url}catch(e){toast(e.message)}}
     if(url&&!stopFlag){const a=new Audio(url);curAudio=a;$("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
     else if(!stopFlag){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
     playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";

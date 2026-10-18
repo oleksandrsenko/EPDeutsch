@@ -72,7 +72,7 @@ class Lernen
         if (!$key) { throw new LogicException('no key'); }
         if (!is_dir(EPD_AUDIO)) { @mkdir(EPD_AUDIO, 0775, true); }
         $body = json_encode(['model' => self::TTS_MODEL, 'voice' => $voice, 'input' => $text, 'instructions' => $style, 'response_format' => 'mp3'], JSON_UNESCAPED_UNICODE);
-        [$code, $audio] = Ai::http('https://api.openai.com/v1/audio/speech', $body, ['Authorization: Bearer ' . $key, 'Content-Type: application/json'], Ai::timeout(60), 'POST');
+        [$code, $audio] = Ai::http(cfg('openai_base', 'https://api.openai.com') . '/v1/audio/speech', $body, ['Authorization: Bearer ' . $key, 'Content-Type: application/json'], Ai::timeout(60), 'POST');
         if ($code !== 200) { throw new RuntimeException('OpenAI HTTP ' . $code . ': ' . mb_substr($audio, 0, 300)); }
         $tmp = $fp . '.part';
         file_put_contents($tmp, $audio);
@@ -88,7 +88,7 @@ class Lernen
         $ext = ['audio/webm' => 'webm', 'audio/ogg' => 'ogg', 'audio/mp4' => 'm4a', 'audio/mpeg' => 'mp3', 'audio/wav' => 'wav'][$m] ?? 'webm';
         $tmp = tempnam(sys_get_temp_dir(), 'stt');
         file_put_contents($tmp, $audio);
-        $ch = curl_init('https://api.openai.com/v1/audio/transcriptions');
+        $ch = curl_init(cfg('openai_base', 'https://api.openai.com') . '/v1/audio/transcriptions');
         curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => Ai::timeout(60),
             CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . $key],
             CURLOPT_POSTFIELDS => ['model' => self::STT_MODEL, 'language' => 'de', 'response_format' => 'json',

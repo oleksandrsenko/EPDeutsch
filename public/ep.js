@@ -452,3 +452,37 @@ const st=document.createElement("style");st.id="ep-frame";st.textContent=css;(do
 document.addEventListener("click",e=>{const b=e.target.closest("[data-ep-drawer]");if(b){e.preventDefault();toggle()}});
 Object.assign(window.EP,{logo,burger,mark,boot,ready,ring,pageLoad,pageDone,modlist,switcher,tip,drawer,toggleDrawer:toggle,toggleTheme:theme,NAME});
 })();
+
+// ---------- принудительная смена временного пароля (после сброса админом) ----------
+// Любой /api/* ответ с must_change_password (403 или user.must_change_password) открывает окно; пока пароль не сменён, остальной API закрыт.
+(function(){
+  const of=window.fetch;if(!of||window.__epPw)return;window.__epPw=1;
+  let shown=false;
+  function askNew(){
+    if(shown||!document.body)return;shown=true;
+    const w=document.createElement("div");
+    w.style.cssText="position:fixed;inset:0;z-index:99999;background:rgba(40,46,62,.55);display:grid;place-items:center;padding:16px;font-family:Manrope,-apple-system,Segoe UI,Arial,sans-serif";
+    w.innerHTML='<form style="background:#fff;color:#282E3E;border-radius:22px;padding:26px 24px;max-width:380px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3)">'+
+      '<h2 style="margin:0 0 6px;font-size:21px">Смени временный пароль</h2>'+
+      '<p style="margin:0 0 14px;color:#586380;font-size:14px;line-height:1.5">Администратор выдал тебе временный пароль. Придумай свой: от 8 символов, хотя бы одна заглавная буква.</p>'+
+      '<label style="display:block;font-size:13px;font-weight:700;margin:8px 0 4px">Временный пароль</label><input name="cur" type="password" autocomplete="current-password" required style="width:100%;box-sizing:border-box;padding:11px 12px;border:1.5px solid #D9DCEA;border-radius:12px;font:inherit">'+
+      '<label style="display:block;font-size:13px;font-weight:700;margin:10px 0 4px">Новый пароль</label><input name="new" type="password" autocomplete="new-password" required style="width:100%;box-sizing:border-box;padding:11px 12px;border:1.5px solid #D9DCEA;border-radius:12px;font:inherit">'+
+      '<p data-perr role="alert" style="color:#C23B45;font-size:13px;min-height:18px;margin:8px 0 0;background:none;padding:0"></p>'+
+      '<button type="submit" style="width:100%;margin-top:6px;padding:13px;border:0;border-radius:999px;background:#7E6FB8;color:#fff;font:inherit;font-weight:800;cursor:pointer">Сохранить пароль</button>'+
+      '<button type="button" data-out style="width:100%;margin-top:8px;padding:10px;border:0;background:none;color:#6C5CAC;font:inherit;font-weight:700;cursor:pointer">Выйти</button></form>';
+    document.body.appendChild(w);
+    const f=w.querySelector("form"),err=w.querySelector("[data-perr]");
+    f.querySelector("[data-out]").onclick=async()=>{try{await of("/api/logout",{method:"POST",credentials:"same-origin",headers:{"X-USD":"1"}})}catch(e){}try{localStorage.removeItem("epd_authed")}catch(e){}location.href="/"};
+    f.onsubmit=async e=>{e.preventDefault();err.textContent="";
+      try{const r=await of("/api/password",{method:"POST",credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:JSON.stringify({current:f.cur.value,password:f.new.value})});
+        const j=await r.json().catch(()=>({}));if(!r.ok){err.textContent=j.error||"Не получилось";return}
+        location.reload()}catch(x){err.textContent="Нет связи с сервером"}};
+    f.cur.focus();
+  }
+  window.fetch=function(input,init){
+    return of.apply(this,arguments).then(r=>{
+      try{const u=typeof input==="string"?input:(input&&input.url)||"";
+        if(u.indexOf("/api/")!==-1&&u.indexOf("/api/password")===-1&&u.indexOf("/api/logout")===-1){
+          r.clone().json().then(j=>{if(j&&(j.must_change_password===true||(j.user&&j.user.must_change_password===true)))(document.body?askNew():document.addEventListener("DOMContentLoaded",askNew))}).catch(()=>{})}}catch(e){}
+      return r})};
+})();

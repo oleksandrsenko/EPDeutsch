@@ -79,10 +79,173 @@ def main():
         run(Client("http://127.0.0.1:8794"), tmp)
     finally:
         srv.terminate()
+    run_ai(tmp)
     run_migrated(tmp)
     ok = sum(1 for _, c in results if c)
     print("\nИтого: %d из %d сценариев прошли" % (ok, len(results)))
     sys.exit(0 if ok == len(results) else 1)
+
+
+
+# ---------- имитация внешних сервисов (Anthropic, OpenAI, LanguageTool): реальные ключи и сеть не нужны ----------
+import threading
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+MOCK = {"claude": 0, "tts": 0, "stt": 0}
+
+
+def fill(schema):
+    t = schema.get("type")
+    if t == "object":
+        return {k: fill(v) for k, v in (schema.get("properties") or {}).items()}
+    if t == "array":
+        return [fill(schema["items"])] if schema.get("items") else []
+    if t == "string":
+        return (schema.get("enum") or ["Beispiel"])[0]
+    if t == "integer":
+        return (schema.get("enum") or [2])[-1] if schema.get("enum") else 2
+    if t == "number":
+        return 3
+    if t == "boolean":
+        return True
+    return None
+
+
+class Mock(BaseHTTPRequestHandler):
+    def log_message(self, *a):
+        pass
+
+    def do_POST(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        body = self.rfile.read(n)
+        if self.path.startswith("/v1/messages"):
+            MOCK["claude"] += 1
+            req = json.loads(body)
+            if "SLOWTEST" in json.dumps(req, ensure_ascii=False):
+                time.sleep(8)
+            out = fill(req["output_config"]["format"]["schema"])
+            res = {"stop_reason": "end_turn", "content": [{"type": "text", "text": json.dumps(out)}], "usage": {"input_tokens": 1000, "output_tokens": 500}}
+            return self.reply(res)
+        if self.path.startswith("/v1/audio/speech"):
+            MOCK["tts"] += 1
+            time.sleep(1.2)
+            return self.reply(b"ID3" + os.urandom(3000), "audio/mpeg")
+        if self.path.startswith("/v1/audio/transcriptions"):
+            MOCK["stt"] += 1
+            return self.reply({"text": "Hallo ich heisse Test"})
+        if self.path.startswith("/v2/check"):
+            return self.reply({"matches": []})
+        self.send_response(404)
+        self.end_headers()
+
+    def reply(self, obj, ctype="application/json"):
+        data = obj if isinstance(obj, bytes) else json.dumps(obj).encode()
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+
+def run_ai(tmp):
+    """ИИ-пути на имитации: кэш, журнал расходов, предохранитель, таймаут, озвучка по частям, распознавание речи."""
+    DB = "epd_fresh"
+    mock = ThreadingHTTPServer(("127.0.0.1", 9777), Mock)
+    threading.Thread(target=mock.serve_forever, daemon=True).start()
+    open(tmp + "/ai.php", "w").write(
+        "<?php return ['db'=>['host'=>'127.0.0.1','port'=>33306,'name'=>'%s','user'=>'root','pass'=>'rootpw'],'secret'=>'test-secret-0123456789abcdef0123456789abcdef',"
+        "'anthropic_key'=>'test','anthropic_url'=>'http://127.0.0.1:9777/v1/messages','openai_key'=>'test','openai_base'=>'http://127.0.0.1:9777',"
+        "'languagetool_url'=>'http://127.0.0.1:9777/v2/check','ai_timeout'=>5,'audio_budget'=>2,'debug'=>true];" % DB)
+    srv = start_server(8796, tmp + "/ai.php")
+    audio_made = []
+    try:
+        base = "http://127.0.0.1:8796"
+        c = Client(base)
+        s, j = c.call("POST", "/api/login", {"email": "u1@test.dev", "password": "Userpass-1"})
+        check("ИИ: вход тестового пользователя", s == 200, j)
+        sql(DB, "DELETE FROM rate_limit")
+        uid = sql(DB, "SELECT id FROM users WHERE email='u1@test.dev'")[0][0]
+        # кэш ai_cache
+        body = {"task": "t", "q": "Ich gehe", "answer": "Ich gehe heim", "a": ["Ich gehe heim"]}
+        before = MOCK["claude"]
+        s1, j1 = c.call("POST", "/api/de/check", body)
+        s2, j2 = c.call("POST", "/api/de/check", body)
+        check("ИИ: /de/check отвечает по схеме", s1 == 200 and set(j1) >= {"ok", "fixed", "why"}, j1)
+        check("ИИ: повторный запрос берётся из кэша (один вызов Claude вместо двух)", s2 == 200 and j2 == j1 and MOCK["claude"] - before == 1, MOCK["claude"] - before)
+        row = sql(DB, "SELECT inp,outp,cost FROM ai_log WHERE uid=%s AND kind='gcheck' AND err=''" % uid)
+        check("ИИ: расход записан в ai_log (токены и стоимость)", len(row) == 1 and row[0][0] == "1000" and row[0][1] == "500" and int(row[0][2]) > 0, row)
+        # Schreiben: полная проверка текста
+        tasks = json.load(open(os.path.join(ROOT, "public/schreiben/data/aufgaben.json")))["items"]
+        words = " ".join(["Die Digitalisierung verändert unseren Alltag stark."] * 8)
+        s, j = c.call("POST", "/api/schreiben/grade", {"task_id": tasks[0]["id"], "text": words, "minutes": 30})
+        check("Schreiben: проверка текста (ИИ-имитация) возвращает баллы и сохраняет эссе", s == 200 and "gesamt" in j and j["max"] in (25, 20) and j["id"] > 0, str(j)[:200])
+        check("Schreiben: баллы по критериям не выходят за шкалу", all(0 <= v["punkte"] <= v["max"] for v in j["kriterien"].values()))
+        s, st = c.call("GET", "/api/schreiben/state")
+        check("Schreiben: эссе появилось в списке с критериями", any(e["id"] == j["id"] and e.get("crit") for e in st["essays"]))
+        s, j = c.call("POST", "/api/schreiben/satz", {"start": "Je mehr man übt,", "text": "desto besser wird man darin"})
+        check("Schreiben: Satzfortsetzung", s == 200 and "punkte" in j, j)
+        s, j = c.call("POST", "/api/schreiben/generate", {"typ": "stell"})
+        check("Schreiben: генерация задания", s == 200 and j.get("gen") is True and "punkte" in j, str(j)[:120])
+        s, j = c.call("POST", "/api/practice/check", {"text": "Ich habe gestern einen Apfel gegessen.", "de": "essen", "ru": "есть"})
+        check("Практика: проверка предложения (LanguageTool + Claude-имитация)", s == 200 and "verdict" in j and j.get("demo") is False, j)
+        s, j = c.call("POST", "/api/de/aitasks", {"module": "sprechen", "topic": "Umweltschutz in der Stadt"})
+        check("Lernen: задания от ИИ", s == 200 and "tasks" in j)
+        s, j = c.call("POST", "/api/de/gwrite", {"topic": "Konjunktiv II", "task": "x", "text": "Wenn ich Zeit hätte, würde ich reisen und viel lesen."})
+        check("Lernen: письмо по грамматике", s == 200 and "score" in j)
+        sp = json.load(open(os.path.join(ROOT, "public/data/de/sprechen.json")))
+        task_id = next(it["id"] for g in sp.values() if isinstance(g, list) for it in g if isinstance(it, dict) and it.get("id"))
+        s, j = c.call("POST", "/api/de/talk", {"task": task_id, "text": "Ich finde, dass die Stadt mehr Parks braucht.", "phase": "monolog"})
+        check("Lernen: разбор устного ответа", s == 200 and "reply_de" in j, str(j)[:120])
+        s, j = c.call("POST", "/api/de/ctx", {"word": "Nachhaltigkeit", "sentence": "Nachhaltigkeit ist wichtig."})
+        check("Lernen: слово в контексте (без DeepL: перевод от Claude-имитации)", s in (200, 502), (s, j))
+        # таймаут
+        s, j = c.call("POST", "/api/de/check", dict(body, answer="SLOWTEST"))
+        check("таймаут ИИ: понятная ошибка 504 вместо падения", s == 504 and "не успел" in j["error"], (s, j))
+        e = sql(DB, "SELECT err FROM ai_log WHERE uid=%s AND err='timeout'" % uid)
+        check("таймаут ИИ записан в ai_log", len(e) == 1, e)
+        # предохранитель
+        sql(DB, "DELETE FROM rate_limit")
+        codes = [c.call("POST", "/api/de/aitasks", {"module": "lesen", "topic": "Thema Nummer %d" % i})[0] for i in range(32)]
+        check("предохранитель: после 30 запросов в минуту — 429", codes[:30] == [200] * 30 and codes[30] == 429, codes)
+        block = sql(DB, "SELECT COUNT(*) FROM ai_log WHERE kind='block' AND uid=%s" % uid)[0][0]
+        check("предохранитель: срабатывание записано в журнал", int(block) >= 1)
+        # озвучка
+        sql(DB, "DELETE FROM rate_limit")
+        s, j = c.call("POST", "/api/de/tts", {"text": "Guten Tag, wie geht es Ihnen?"})
+        fp = os.path.join(ROOT, "public", j["url"].lstrip("/")) if j.get("url") else ""
+        audio_made.append(fp)
+        check("озвучка: mp3 создан и лежит в public/audio", s == 200 and os.path.isfile(fp) and os.path.getsize(fp) > 1000, j)
+        t = MOCK["tts"]
+        s, j2 = c.call("POST", "/api/de/tts", {"text": "Guten Tag, wie geht es Ihnen?"})
+        check("озвучка: повторный запрос из кэша без платного вызова", j2["url"] == j["url"] and MOCK["tts"] == t)
+        hoer = json.load(open(os.path.join(ROOT, "public/data/de/hoeren.json")))
+        item = next(it for g in hoer.values() if isinstance(g, list) for it in g if isinstance(it, dict) and len(it.get("lines") or []) >= 4)
+        steps, last = 0, {}
+        while steps < 30:
+            s, last = c.call("POST", "/api/de/audio/de/" + item["id"])
+            steps += 1
+            if not last.get("pending"):
+                break
+        if last.get("url"):
+            audio_made.append(os.path.join(ROOT, "public", last["url"].lstrip("/")))
+        check("озвучка сценария: делается по частям (pending), затем отдаётся один файл", s == 200 and last.get("url") and steps > 1, (steps, last))
+        check("озвучка сценария: склеенный файл существует", bool(last.get("url")) and os.path.getsize(audio_made[-1]) > 3000)
+        before = MOCK["tts"]
+        s, last2 = c.call("POST", "/api/de/audio/de/" + item["id"])
+        check("озвучка сценария: повторный запрос мгновенный, без новых вызовов", last2.get("url") == last.get("url") and MOCK["tts"] == before)
+        import base64
+        s, j = c.call("POST", "/api/de/stt", {"audio": base64.b64encode(os.urandom(2000)).decode(), "mime": "audio/webm"})
+        check("распознавание речи (имитация OpenAI, multipart через curl)", s == 200 and j.get("text") == "Hallo ich heisse Test", j)
+        s, j = c.call("POST", "/api/de/stt", {"audio": "AAAA", "mime": "audio/webm"})
+        check("распознавание речи: слишком короткая запись → 400", s == 400)
+    finally:
+        srv.terminate()
+        mock.shutdown()
+        for f in audio_made:
+            if f and os.path.isfile(f):
+                os.remove(f)
+        for f in __import__("glob").glob(os.path.join(ROOT, "public/audio/*.mp3")):
+            os.remove(f)
 
 
 def run_migrated(tmp):

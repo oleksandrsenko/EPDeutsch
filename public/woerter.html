@@ -2937,9 +2937,7 @@ function renderAcct(){
     const perks='<ul class="au-perks"><li>'+ic("cloud",16)+LT("Прогресс на всех устройствах","Progress on every device")+"</li><li>"+ic("users",16)+LT("Друзья и рейтинг недели","Friends and weekly ranking")+"</li><li>"+ic("share",16)+LT("Свои наборы по ссылке","Share your own sets")+"</li></ul>"+(EN?'<p class="au-note">Note: the learning interface and translations are currently in Russian.</p>':"");
     let form;
     if(forgot){
-      form=head(LT("Восстановить пароль","Reset password"),LT("Пришлём ссылку на почту, по ней можно задать новый пароль.","We will email you a link to set a new password."),"key")+
-        '<form id="authForm" class="aform" novalidate><label>'+LT("Почта","Email")+'<input type="email" id="aEmail" autocomplete="email" required placeholder="name@mail.com"></label>'+
-        '<p class="aerr" id="aErr" role="alert"></p><p class="aok" id="aOk" role="status" hidden></p><button class="btn primary big" type="submit" id="aSubmit">'+LT("Прислать ссылку","Send link")+'</button></form>'+
+      form=head(LT("Забыл пароль","Forgot your password"),LT("Писем с ссылками на сайте нет. Напиши администратору сайта: он выдаст временный пароль, а при первом входе сайт попросит придумать свой.","The site sends no emails. Ask the site administrator for a temporary password; the site will ask you to choose your own at the first login."),"key")+
         sw(LT("Вспомнил(а) пароль?","Remembered it?"),LT("Войти","Log in"),"login")+"</div></div>";
     }else if(reset){
       form=head(LT("Новый пароль","New password"),LT("Придумай новый пароль — и сразу войдёшь в аккаунт.","Choose a new password and you will be logged in right away."),"lock")+
@@ -2961,6 +2959,7 @@ function renderAcct(){
     const pw=$("#aPw"),rl=$("#pwRules");
     if(pw&&rl)pw.oninput=()=>PW_RULES.forEach((r,i)=>rl.children[i].classList.toggle("ok",r[0](pw.value)));
     const acc=$("#aAccept");if(acc)acc.onchange=()=>{$("#aSubmit").disabled=!acc.checked;$("#aErr").textContent=""};
+    if(!$("#authForm"))return;
     $("#authForm").onsubmit=async ev=>{ev.preventDefault();const err=$("#aErr"),btn=$("#aSubmit");err.textContent="";
       if((reg||reset)&&pw){const bad=PW_RULES.find(r=>!r[0](pw.value));if(bad){rl.classList.add("shake");setTimeout(()=>rl.classList.remove("shake"),400);err.textContent=LT("Пароль пока не подходит: ","Password is not strong enough: ")+LT(bad[1],bad[2]).toLowerCase();pw.focus();return}}
       if(reg&&!acc.checked){err.textContent=LT("Отметь галочку, что принимаешь условия","Please accept the terms first");return}

@@ -258,7 +258,7 @@ function drawAdmin(){
   const online='<div class="aonl">'+(inAcc.length?inAcc.slice(0,12).map(x=>'<button class="aon" data-admuser="'+x.uid+'"><i class="dot"></i><span><b>'+esc(x.name||"Без имени")+"</b><small>"+admDoing(x)+" · "+esc(x.device||"")+"</small></span></button>").join(""):'<p class="muted" style="margin:0">Из пользователей сейчас никого</p>')+
     (guests?'<p class="muted" style="margin:4px 0 0;font-size:13px">и ещё '+guests+" "+plural(guests,"гость","гостя","гостей")+" на лендинге</p>":"")+"</div>";
   const users=admFilterUsers();
-  el.innerHTML='<div class="adm-h"><div><h1>Админ-панель</h1><p class="muted">Обновлено '+new Date(ADM.at).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})+' · обновляется само каждые 30 с</p></div><div class="row"><div class="seg" id="admDays">'+[7,30,90].map(d=>'<button data-admdays="'+d+'" aria-pressed="'+(ADM.days===d)+'">'+d+" дней</button>").join("")+'</div><button class="btn sm" data-admrefresh>'+ic("refresh",16)+"Обновить</button></div></div>"+
+  el.innerHTML='<div class="adm-h"><div><h1>Админ-панель</h1><p class="muted">Обновлено '+new Date(ADM.at).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})+' · обновляется само каждые 30 с</p></div><div class="row"><div class="seg" id="admDays">'+[7,30,90].map(d=>'<button data-admdays="'+d+'" aria-pressed="'+(ADM.days===d)+'">'+d+" дней</button>").join("")+'</div><button class="btn sm" data-admrefresh>'+ic("refresh",16)+"Обновить</button>"+(isAdmin()?'<button class="btn sm" data-admaudit>'+ic("shield",16)+"Журнал действий</button>":"")+"</div></div>"+
     '<div class="akpis">'+
       kpi("Онлайн сейчас",k.online,k.onlineUsers+" в аккаунте · "+(k.online-k.onlineUsers)+" гостей","live")+
       kpi("Пользователей",admNum(k.users),"+"+k.newToday+" сегодня · +"+k.new7+" за 7 дней")+
@@ -309,15 +309,44 @@ async function admUser(id){
       "<h4>Трудные слова</h4>"+(j.hard.length?'<div class="ahard">'+j.hard.map(w=>"<div><b>"+esc(w.de)+"</b><span>"+esc(w.ru)+"</span><em>"+w.miss+"</em></div>").join("")+"</div>":"<p>ошибок пока нет</p>")+
       '<p class="muted">Цель дня: '+j.goal+" · папок: "+j.folders+" · своих наборов: "+u.usets+" · друзей: "+j.friends+" · общих ссылок: "+j.shares+" · экзамен: "+esc(u.exam||"не указан")+" · обучение: "+(u.tour?"пройдено":"нет")+"</p>"+
       "<h4>Аккаунт</h4>"+
-      '<div class="aacc"><div><small>Роль</small><b>'+(ROLE_RU[u.role]||"Пользователь")+'</b></div><div><small>Почта</small><b>'+(u.verified?"подтверждена":"не подтверждена")+'</b></div><div><small>Тариф</small><b><span class="aplan '+esc(u.plan)+'">'+(PLAN_RU[u.plan]||esc(u.plan))+"</span></b></div><div><small>Рассылка</small><b>"+(u.news?"получает":"отписан(а)")+"</b></div></div>"+
-      (isOwner()?'<div class="row aact"><button type="button" class="btn sm" disabled title="Появится вместе с платной подпиской">'+ic("crown",16)+'Выдать Premium · скоро</button><button type="button" class="btn sm" data-admreset="'+u.id+'">'+ic("key",16)+'Ссылка для нового пароля</button><a class="btn sm" href="mailto:'+esc(u.email)+'" style="text-decoration:none">'+ic("mail",16)+"Написать письмо</a></div>"+
-        (u.owner?'<p class="muted" style="margin:12px 0 0">Это владелец сайта. Удалить его или снять роль нельзя, права можно только передать.</p>':
-        '<h4>Роль и права</h4><div class="row aact"><button type="button" class="btn sm" data-admrole="'+u.id+'" data-r="'+(u.role==="admin"?"user":"admin")+'">'+ic("shield",16)+(u.role==="admin"?"Убрать из админов":"Сделать админом")+'</button><button type="button" class="btn sm" data-admowner="'+u.id+'">'+ic("crown",16)+'Передать права владельца</button><button type="button" class="btn sm danger" data-admdel="'+u.id+'">'+ic("trash",16)+"Удалить аккаунт</button></div>"+
-        '<p class="muted" style="margin:8px 0 0;font-size:13px">Админ видит всю админ-панель, но не может удалять аккаунты, менять роли и отправлять письма.</p>'):
-       '<p class="muted" style="margin:12px 0 0">У тебя доступ администратора: можно смотреть, но менять и удалять может только владелец.</p>')+"</div>",()=>{},"Закрыть");
+      '<div class="aacc"><div><small>Роль</small><b>'+(ROLE_RU[u.role]||"Пользователь")+'</b></div><div><small>Вход</small><b>'+(u.blocked?"заблокирован":"разрешён")+(u.must_change_password?" · пароль временный":"")+'</b></div><div><small>Тариф</small><b><span class="aplan '+esc(u.plan)+'">'+(PLAN_RU[u.plan]||esc(u.plan))+"</span></b></div><div><small>Рассылка</small><b>"+(u.news?"получает":"отписан(а)")+"</b></div></div>"+
+      admActions(u)+"</div>",()=>{},"Закрыть");
     $("#dlgNo").hidden=true;$("#dlg").classList.add("wide");
     $("#dlg").addEventListener("close",()=>{$("#dlgNo").hidden=false;$("#dlg").classList.remove("wide")},{once:true});
     ADM.cur=u;
+  }catch(e){toast("⚠️ "+e.message)}
+}
+
+// действия админа над пользователем. Пароль никогда не показывается; сброс выдаёт временный пароль один раз.
+function admActions(u){
+  const mine=ME&&ME.id===u.id;
+  const can=isAdmin()&&!u.owner&&!mine&&(u.role!=="admin"||isOwner());
+  let h="";
+  if(can)h+='<h4>Доступ</h4><div class="row aact"><button type="button" class="btn sm" data-admreset="'+u.id+'">'+ic("key",16)+'Сбросить пароль</button>'+
+    '<button type="button" class="btn sm'+(u.blocked?"":" danger")+'" data-admblock="'+u.id+'" data-b="'+(u.blocked?0:1)+'">'+ic("shield",16)+(u.blocked?"Разблокировать вход":"Заблокировать вход")+'</button>'+
+    (u.plan==="premium"?'<button type="button" class="btn sm" data-admplan="'+u.id+'" data-p="free">'+ic("crown",16)+'Вернуть тариф «Бесплатный»</button>':
+      '<button type="button" class="btn sm" data-admplan="'+u.id+'" data-p="premium">'+ic("crown",16)+'Выдать Premium на 30 дней</button>')+
+    '</div><p class="muted" style="margin:8px 0 0;font-size:13px">Сброс создаёт временный пароль и показывает его один раз. Пользователь обязан сменить его при следующем входе. Все действия записываются в журнал.</p>';
+  if(isOwner()&&!u.owner)h+='<h4>Роль и права</h4><div class="row aact"><button type="button" class="btn sm" data-admrole="'+u.id+'" data-r="'+(u.role==="admin"?"user":"admin")+'">'+ic("shield",16)+(u.role==="admin"?"Убрать из админов":"Сделать админом")+'</button><button type="button" class="btn sm" data-admowner="'+u.id+'">'+ic("crown",16)+'Передать права владельца</button><button type="button" class="btn sm danger" data-admdel="'+u.id+'">'+ic("trash",16)+"Удалить аккаунт</button></div>"+
+    '<p class="muted" style="margin:8px 0 0;font-size:13px">Админ видит всю админ-панель, может сбрасывать пароли, блокировать вход и менять тариф обычных пользователей, но не может менять роли и удалять аккаунты.</p>';
+  if(u.owner)h+='<p class="muted" style="margin:12px 0 0">Это владелец сайта. Удалить его, сбросить пароль или снять роль нельзя, права можно только передать.</p>';
+  else if(!can&&!isOwner())h+='<p class="muted" style="margin:12px 0 0">'+(mine?"Это твой аккаунт: пароль меняется в профиле.":"Этого пользователя может менять только владелец.")+'</p>';
+  return h;
+}
+// временный пароль показывается один раз
+function admShowTemp(u,pw){
+  ask("Временный пароль для «"+u.name+"»",'<p style="margin-top:0">Передай его пользователю. <b>Больше он нигде не показывается</b>. При входе сайт заставит придумать свой пароль.</p><div class="atemp" style="font:700 22px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.04em;background:var(--bg2,#F6F7FB);border-radius:14px;padding:14px;text-align:center;word-break:break-all;user-select:all">'+esc(pw)+'</div><div class="row aact" style="margin-top:10px"><button type="button" class="btn sm" data-admcopy="'+esc(pw)+'">'+ic("copy",16)+"Скопировать</button></div>",()=>{},"Готово");
+  $("#dlgNo").hidden=true;
+  $("#dlg").addEventListener("close",()=>{$("#dlgNo").hidden=false},{once:true});
+}
+const AUDIT_RU={reset_password:"сбросил(а) пароль",set_role:"сменил(а) роль",set_plan:"сменил(а) тариф",block:"заблокировал(а) вход",unblock:"разблокировал(а) вход",transfer_owner:"передал(а) права владельца",delete_user:"удалил(а) аккаунт"};
+async function admAudit(){
+  try{
+    const j=await api("GET","/admin/audit?limit=200");
+    const rows=j.log.map(r=>"<tr><td>"+new Date(r.created*1000).toLocaleString("ru-RU")+"</td><td>"+esc(r.admin_name||("#"+r.admin_id))+"</td><td>"+esc(AUDIT_RU[r.action]||r.action)+"</td><td>"+esc(r.target_name||r.target_email||(r.target_user_id?("#"+r.target_user_id):"—"))+"</td><td><small>"+esc(Object.entries(r.details||{}).map(([k,v])=>k+": "+v).join(" · "))+"</small></td></tr>").join("");
+    ask("Журнал действий администраторов",'<div class="atable-w"><table class="atable"><thead><tr><th>Когда</th><th>Кто</th><th>Что сделал(а)</th><th>С кем</th><th>Детали</th></tr></thead><tbody>'+(rows||'<tr><td colspan="5" class="muted">Пока пусто</td></tr>')+"</tbody></table></div><p class=\"muted\" style=\"font-size:13px\">Пароли в журнал не пишутся.</p>",()=>{},"Закрыть");
+    $("#dlgNo").hidden=true;$("#dlg").classList.add("wide");
+    $("#dlg").addEventListener("close",()=>{$("#dlgNo").hidden=false;$("#dlg").classList.remove("wide")},{once:true});
   }catch(e){toast("⚠️ "+e.message)}
 }
 // передача прав владельца: только с паролем текущего владельца; после этого ты становишься админом
@@ -338,7 +367,12 @@ document.addEventListener("click",e=>{
   if(e.target.closest("[data-admrefresh]")){renderAdmin();return}
   if(e.target.closest("[data-admmails]")){const m=[...new Set(admFilterUsers().filter(u=>u.news).map(u=>(u.email||"").trim().toLowerCase()).filter(Boolean))];if(!m.length)return toast("Все отписались от писем");copyText(m.join(", "),"📋 Скопировано адресов: "+m.length);return}
   if(e.target.closest("[data-admhard]")){ADM.hardOpen=!ADM.hardOpen;lsSet("epd_admhard",ADM.hardOpen?"1":null);drawAdmin();return}
-  const rs=e.target.closest("[data-admreset]");if(rs){e.preventDefault();api("POST","/admin/user/"+rs.dataset.admreset+"/reset").then(j=>toast(j.mail?"✉️ Письмо отправлено":"✉️ Почта не настроена",j.mail?"Ссылка действует час":"Ссылка напечатана в консоли сервера"),er=>toast("⚠️ "+er.message));return}
+  if(e.target.closest("[data-admaudit]")){admAudit();return}
+  const cp=e.target.closest("[data-admcopy]");if(cp){copyText(cp.dataset.admcopy,"📋 Пароль скопирован");return}
+  const rs=e.target.closest("[data-admreset]");if(rs){e.preventDefault();const u=ADM.cur;$("#dlg").close();if(u)setTimeout(()=>ask("Сбросить пароль «"+u.name+"»?",'<p style="margin-top:0">Старый пароль перестанет работать, а все входы пользователя закроются. Ты увидишь временный пароль один раз, а пользователь сменит его при входе.</p>',async()=>{
+      try{const j=await api("POST","/admin/user/"+u.id+"/reset");setTimeout(()=>admShowTemp(u,j.temp_password),80)}catch(er){toast("⚠️ "+er.message)}},"Сбросить пароль","Отмена"),60);return}
+  const bl=e.target.closest("[data-admblock]");if(bl){e.preventDefault();api("POST","/admin/user/"+bl.dataset.admblock+"/block",{blocked:bl.dataset.b==="1"}).then(()=>{$("#dlg").close();toast(bl.dataset.b==="1"?"⛔ Вход заблокирован":"✅ Вход разрешён");renderAdmin()},er=>toast("⚠️ "+er.message));return}
+  const pl=e.target.closest("[data-admplan]");if(pl){e.preventDefault();api("POST","/admin/user/"+pl.dataset.admplan+"/plan",{plan:pl.dataset.p,days:pl.dataset.p==="premium"?30:0}).then(()=>{$("#dlg").close();toast(pl.dataset.p==="premium"?"👑 Premium выдан на 30 дней":"Тариф «Бесплатный»");renderAdmin()},er=>toast("⚠️ "+er.message));return}
   const ro=e.target.closest("[data-admrole]");if(ro){e.preventDefault();api("POST","/admin/user/"+ro.dataset.admrole+"/role",{role:ro.dataset.r}).then(()=>{$("#dlg").close();toast(ro.dataset.r==="admin"?"🛡️ Теперь админ":"Больше не админ");renderAdmin()},er=>toast("⚠️ "+er.message));return}
   const ow=e.target.closest("[data-admowner]");if(ow){e.preventDefault();const u=ADM.cur;$("#dlg").close();if(u)setTimeout(()=>admOwner(u),60);return}
   const dl=e.target.closest("[data-admdel]");if(dl){e.preventDefault();const u=ADM.cur;$("#dlg").close();if(u)setTimeout(()=>admDelete(u),60);return}

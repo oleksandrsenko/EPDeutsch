@@ -95,7 +95,7 @@ class Ai
         $t0 = microtime(true);
         for ($attempt = 0; $attempt < 2; $attempt++) {
             $left = $timeout - (int)(microtime(true) - $t0);
-            [$code, $raw] = self::http('https://api.anthropic.com/v1/messages', $body,
+            [$code, $raw] = self::http((string)cfg('anthropic_url', 'https://api.anthropic.com/v1/messages'), $body,
                 ['x-api-key: ' . self::key(), 'anthropic-version: 2023-06-01', 'content-type: application/json'], max(5, $left), 'POST');
             if ($code === 200) { break; }
             if ($attempt === 0 && in_array($code, [429, 500, 502, 503, 529], true) && (microtime(true) - $t0) < $timeout / 2) { usleep(1500000); continue; }

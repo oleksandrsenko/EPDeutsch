@@ -36,6 +36,9 @@ return [
     // проверить: войти владельцем и открыть /api/admin/diag
     'ip_header' => 'REMOTE_ADDR',
 
+    // 'bcrypt', если на хостинге Argon2id не хватает памяти (по умолчанию Argon2id, а без него bcrypt)
+    'password_algo' => 'argon2id',
+
     'languagetool_url' => 'https://api.languagetool.org/v2/check',
     'debug' => false,
 ];

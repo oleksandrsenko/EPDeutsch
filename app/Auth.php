@@ -14,10 +14,15 @@ class Auth
     }
 
     // ---------- пароли ----------
+    /** Argon2id, если PHP его умеет (и не отключён в конфиге: password_algo = 'bcrypt'), иначе bcrypt. */
+    public static function algo()
+    {
+        return (defined('PASSWORD_ARGON2ID') && cfg('password_algo', 'argon2id') !== 'bcrypt') ? PASSWORD_ARGON2ID : PASSWORD_BCRYPT;
+    }
+
     public static function hashPw(string $pw): string
     {
-        $algo = defined('PASSWORD_ARGON2ID') ? PASSWORD_ARGON2ID : PASSWORD_BCRYPT;
-        $h = password_hash($pw, $algo);
+        $h = password_hash($pw, self::algo());
         return $h !== false ? $h : password_hash($pw, PASSWORD_BCRYPT);
     }
 
@@ -36,8 +41,7 @@ class Auth
     public static function needsRehash(string $stored): bool
     {
         if (self::isLegacy($stored)) { return true; }
-        $algo = defined('PASSWORD_ARGON2ID') ? PASSWORD_ARGON2ID : PASSWORD_BCRYPT;
-        return password_needs_rehash($stored, $algo);
+        return password_needs_rehash($stored, self::algo());
     }
 
     /** Те же правила, что проверяет форма на сайте. Возвращает текст ошибки или null. */

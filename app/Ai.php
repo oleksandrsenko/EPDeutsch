@@ -114,6 +114,7 @@ class Ai
     /** Вызов Claude через предохранитель с записью расходов. $kind — метка в ai_log. */
     public static function ask(array $u, string $kind, string $model, string $system, string $content, array $schema, int $maxTokens, ?string $effort, int $timeout, string $errMsg): array
     {
+        if (!self::key()) { throw new ApiError(503, 'ИИ не подключён: нет ключа Anthropic на сервере'); }
         self::guard($u);
         Db::commit();     // не держим блокировки базы на время долгого запроса
         $t0 = microtime(true);

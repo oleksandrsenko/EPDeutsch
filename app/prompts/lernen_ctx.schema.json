@@ -1,0 +1,20 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "lemma",
+  "tr",
+  "note"
+ ],
+ "properties": {
+  "lemma": {
+   "type": "string"
+  },
+  "tr": {
+   "type": "string"
+  },
+  "note": {
+   "type": "string"
+  }
+ }
+}

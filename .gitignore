@@ -13,3 +13,10 @@ __pycache__/
 *.pyc
 .claude/settings.local.json
 .claude/worktrees/
+config/config.local.php
+storage/cache/*
+!storage/cache/.gitkeep
+storage/maintenance.stamp
+public/audio/*.mp3
+public/audio/*.part
+*.sql.gz

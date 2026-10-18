@@ -1,0 +1,90 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "transcript",
+  "corrected",
+  "errors",
+  "better",
+  "redemittel",
+  "content",
+  "score",
+  "reply_de",
+  "reply_ru"
+ ],
+ "properties": {
+  "transcript": {
+   "type": "string"
+  },
+  "corrected": {
+   "type": "string"
+  },
+  "errors": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "wrong",
+     "right",
+     "why"
+    ],
+    "properties": {
+     "wrong": {
+      "type": "string"
+     },
+     "right": {
+      "type": "string"
+     },
+     "why": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "better": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "de",
+     "ru"
+    ],
+    "properties": {
+     "de": {
+      "type": "string"
+     },
+     "ru": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "redemittel": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "content": {
+   "type": "string"
+  },
+  "score": {
+   "type": "integer",
+   "enum": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "reply_de": {
+   "type": "string"
+  },
+  "reply_ru": {
+   "type": "string"
+  }
+ }
+}

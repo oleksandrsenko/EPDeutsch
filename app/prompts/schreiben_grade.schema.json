@@ -1,0 +1,203 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "kriterien",
+  "leitpunkte",
+  "fehler",
+  "korrigiert",
+  "besser",
+  "staerken",
+  "tipps",
+  "schablone",
+  "pruefer_kommentar",
+  "fazit"
+ ],
+ "properties": {
+  "kriterien": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "inhalt",
+    "aufbau",
+    "wortschatz",
+    "sprachrichtigkeit"
+   ],
+   "properties": {
+    "inhalt": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "punkte",
+      "begruendung"
+     ],
+     "properties": {
+      "punkte": {
+       "type": "number"
+      },
+      "begruendung": {
+       "type": "string"
+      }
+     }
+    },
+    "aufbau": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "punkte",
+      "begruendung"
+     ],
+     "properties": {
+      "punkte": {
+       "type": "number"
+      },
+      "begruendung": {
+       "type": "string"
+      }
+     }
+    },
+    "wortschatz": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "punkte",
+      "begruendung"
+     ],
+     "properties": {
+      "punkte": {
+       "type": "number"
+      },
+      "begruendung": {
+       "type": "string"
+      }
+     }
+    },
+    "sprachrichtigkeit": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "punkte",
+      "begruendung"
+     ],
+     "properties": {
+      "punkte": {
+       "type": "number"
+      },
+      "begruendung": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "leitpunkte": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "erfuellt",
+     "kommentar"
+    ],
+    "properties": {
+     "erfuellt": {
+      "type": "string",
+      "enum": [
+       "ja",
+       "teilweise",
+       "nein"
+      ]
+     },
+     "kommentar": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "fehler": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "falsch",
+     "richtig",
+     "typ",
+     "regel",
+     "kommentar"
+    ],
+    "properties": {
+     "falsch": {
+      "type": "string"
+     },
+     "richtig": {
+      "type": "string"
+     },
+     "regel": {
+      "type": "string"
+     },
+     "kommentar": {
+      "type": "string"
+     },
+     "typ": {
+      "type": "string",
+      "enum": [
+       "Grammatik",
+       "Wortschatz",
+       "Rechtschreibung",
+       "Zeichensetzung",
+       "Satzbau"
+      ]
+     }
+    }
+   }
+  },
+  "korrigiert": {
+   "type": "string"
+  },
+  "besser": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "original",
+     "besser",
+     "warum"
+    ],
+    "properties": {
+     "original": {
+      "type": "string"
+     },
+     "besser": {
+      "type": "string"
+     },
+     "warum": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "staerken": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "tipps": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "schablone": {
+   "type": "boolean"
+  },
+  "pruefer_kommentar": {
+   "type": "string"
+  },
+  "fazit": {
+   "type": "string"
+  }
+ }
+}

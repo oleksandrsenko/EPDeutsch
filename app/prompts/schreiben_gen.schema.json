@@ -1,0 +1,108 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "titel",
+  "impuls",
+  "punkte"
+ ],
+ "properties": {
+  "titel": {
+   "type": "string"
+  },
+  "impuls": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "art",
+    "titel",
+    "text",
+    "quelle",
+    "chart"
+   ],
+   "properties": {
+    "art": {
+     "type": "string",
+     "enum": [
+      "text",
+      "grafik",
+      "frage"
+     ]
+    },
+    "titel": {
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    },
+    "quelle": {
+     "type": "string"
+    },
+    "chart": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "type",
+      "unit",
+      "labels",
+      "values",
+      "series"
+     ],
+     "properties": {
+      "type": {
+       "type": "string",
+       "enum": [
+        "bar",
+        "line",
+        "none"
+       ]
+      },
+      "unit": {
+       "type": "string"
+      },
+      "labels": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "values": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       }
+      },
+      "series": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "name",
+         "values"
+        ],
+        "properties": {
+         "name": {
+          "type": "string"
+         },
+         "values": {
+          "type": "array",
+          "items": {
+           "type": "number"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "punkte": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

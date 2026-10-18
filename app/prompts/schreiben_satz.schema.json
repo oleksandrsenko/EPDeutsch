@@ -1,0 +1,53 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "punkte",
+  "korrigiert",
+  "fehler",
+  "kommentar",
+  "muster"
+ ],
+ "properties": {
+  "punkte": {
+   "type": "integer",
+   "enum": [
+    0,
+    2,
+    3
+   ]
+  },
+  "korrigiert": {
+   "type": "string"
+  },
+  "fehler": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "falsch",
+     "richtig",
+     "regel"
+    ],
+    "properties": {
+     "falsch": {
+      "type": "string"
+     },
+     "richtig": {
+      "type": "string"
+     },
+     "regel": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "kommentar": {
+   "type": "string"
+  },
+  "muster": {
+   "type": "string"
+  }
+ }
+}

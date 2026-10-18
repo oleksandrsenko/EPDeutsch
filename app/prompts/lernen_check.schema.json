@@ -1,0 +1,20 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "ok",
+  "fixed",
+  "why"
+ ],
+ "properties": {
+  "ok": {
+   "type": "boolean"
+  },
+  "fixed": {
+   "type": "string"
+  },
+  "why": {
+   "type": "string"
+  }
+ }
+}

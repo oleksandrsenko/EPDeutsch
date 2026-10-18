@@ -1,0 +1,35 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "tasks"
+ ],
+ "properties": {
+  "tasks": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "task",
+     "ru",
+     "hints"
+    ],
+    "properties": {
+     "task": {
+      "type": "string"
+     },
+     "ru": {
+      "type": "string"
+     },
+     "hints": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ }
+}

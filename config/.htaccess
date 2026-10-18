@@ -1,0 +1,8 @@
+# Закрыто от браузера. Если папка лежит внутри htdocs, этот файл — защита; лучше положить её рядом с htdocs.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

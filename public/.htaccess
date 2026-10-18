@@ -1,0 +1,35 @@
+# EPDeutsch: маршрутизация. Всё, чего нет на диске, идёт в index.php. Файлы (статика, аудио, data/*.json) отдаёт Apache сам.
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# исходники страниц открываются только по чистым адресам (/, /de, /woerter, /schreiben, /admin)
+RewriteRule ^(start|de|woerter|admin|schreiben|hub|epmathe-demo)\.html$ - [R=404,L]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+RewriteRule ^ index.php [L]
+</IfModule>
+
+# закрытые типы файлов
+<FilesMatch "\.(key|sql|log|bak|ini|lock|stamp)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType audio/mpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 7 days"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.mp3$">
+    Header set Cache-Control "private, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

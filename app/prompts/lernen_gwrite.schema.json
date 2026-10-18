@@ -1,0 +1,52 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "score",
+  "used",
+  "errors",
+  "corrected",
+  "better",
+  "comment"
+ ],
+ "properties": {
+  "score": {
+   "type": "integer"
+  },
+  "used": {
+   "type": "integer"
+  },
+  "errors": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "wrong",
+     "right",
+     "why"
+    ],
+    "properties": {
+     "wrong": {
+      "type": "string"
+     },
+     "right": {
+      "type": "string"
+     },
+     "why": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "corrected": {
+   "type": "string"
+  },
+  "better": {
+   "type": "string"
+  },
+  "comment": {
+   "type": "string"
+  }
+ }
+}

@@ -1099,6 +1099,1688 @@
    ],
    "words": 304,
    "minutes": 3
+  },
+  {
+   "id": "h_nachhilfe",
+   "level": "B2",
+   "kind": "Radiointerview",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.1",
+   "title": "Interview: Teure Nachhilfe – ein Schulsystem mit Lücken?",
+   "intro": "Sie hören ein Interview mit einer Bildungsforscherin über Nachhilfe in Österreich. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "F": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Sabine Lechner, Bildungsforscherin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Jedes Jahr geben Eltern in Österreich viel Geld für Nachhilfe aus. Bei mir im Studio ist die Bildungsforscherin Sabine Lechner. Frau Lechner, wie verbreitet ist Nachhilfe?"
+    ],
+    [
+     "F",
+     "Sehr verbreitet. Laut einer aktuellen Studie bekommt etwa jedes vierte Schulkind bezahlte Nachhilfe, vor allem in Mathematik, Englisch und Deutsch. Die Eltern geben dafür im Schnitt mehrere Hundert Euro pro Schuljahr aus."
+    ],
+    [
+     "M",
+     "Warum ist der Bedarf so groß?"
+    ],
+    [
+     "F",
+     "Ein Grund ist, dass unser Schulsystem stark auf die Mitarbeit der Eltern setzt. Viele Hausübungen kann ein Kind nur mit Hilfe zu Hause machen. Wer Eltern hat, die selbst nicht gut Deutsch sprechen oder wenig Zeit haben, ist im Nachteil. Und dann wird eben Nachhilfe bezahlt – wenn man es sich leisten kann."
+    ],
+    [
+     "M",
+     "Das heißt, Nachhilfe verstärkt soziale Unterschiede?"
+    ],
+    [
+     "F",
+     "Genau das ist das Problem. Familien mit höherem Einkommen können ihre Kinder unterstützen, andere nicht. Dadurch hängt der Schulerfolg noch stärker vom Elternhaus ab, als es ohnehin schon der Fall ist."
+    ],
+    [
+     "M",
+     "Was müsste sich ändern?"
+    ],
+    [
+     "F",
+     "Ich halte ganztägige Schulformen für einen wichtigen Schritt. Wenn Kinder bis zum Nachmittag in der Schule lernen und dort Unterstützung bekommen, braucht es weniger private Nachhilfe. Außerdem gibt es inzwischen kostenlose Lernhilfe-Angebote, etwa von Gemeinden oder Studierenden. Die sind aber noch zu wenig bekannt."
+    ],
+    [
+     "M",
+     "Frau Lechner, vielen Dank für das Gespräch."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Schulkinder bekommen laut Studie bezahlte Nachhilfe?",
+     "o": [
+      "etwa jedes zehnte",
+      "etwa jedes vierte",
+      "etwa die Hälfte"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Nachhilfe wird vor allem in Mathematik, Englisch und Deutsch genommen.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Warum ist der Bedarf laut Frau Lechner so groß?",
+     "o": [
+      "Weil die Lehrkräfte schlecht ausgebildet sind.",
+      "Weil das System stark auf die Hilfe der Eltern setzt.",
+      "Weil die Schulferien zu lang sind."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Frau Lechner meint, dass Nachhilfe soziale Unterschiede verringert.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche zwei Lösungen schlägt Frau Lechner vor?",
+     "a": "ganztägige Schulformen; kostenlose Lernhilfe (Gemeinden, Studierende) bekannter machen"
+    }
+   ]
+  },
+  {
+   "id": "h_tierversuche",
+   "level": "C1",
+   "kind": "Expertengespräch",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.3",
+   "title": "Im Gespräch: Forschen ohne Tierversuche?",
+   "intro": "Sie hören ein Gespräch zwischen einem Moderator und einer Biomedizinerin über Alternativen zu Tierversuchen. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "F": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Prof. Julia Berger, Biomedizin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Tierversuche sind in der Forschung nach wie vor umstritten. Frau Professor Berger, wie viele Tiere werden in Österreich jedes Jahr für Versuche eingesetzt?"
+    ],
+    [
+     "F",
+     "Es sind rund zweihunderttausend, der weitaus größte Teil davon Mäuse und Ratten. Die Zahl ist in den letzten Jahren leicht gesunken, aber von einem Ausstieg sind wir noch weit entfernt."
+    ],
+    [
+     "M",
+     "Warum ist das so schwierig?"
+    ],
+    [
+     "F",
+     "Weil ein lebender Organismus extrem komplex ist. Wenn wir ein neues Medikament testen, wollen wir wissen, wie es im ganzen Körper wirkt – in der Leber, im Herz, im Gehirn. Das kann eine Zellkultur in der Petrischale bisher nur teilweise abbilden."
+    ],
+    [
+     "M",
+     "Es gibt aber neue Methoden, Stichwort Organoide."
+    ],
+    [
+     "F",
+     "Ja, und die sind sehr vielversprechend. Organoide sind winzige, im Labor gezüchtete Mini-Organe aus menschlichen Zellen. Man kann daran zum Beispiel testen, ob ein Wirkstoff die Leber schädigt. Dazu kommen Computermodelle und sogenannte Organ-on-a-Chip-Systeme, bei denen mehrere Gewebe miteinander verbunden werden. Der große Vorteil: Wir arbeiten direkt mit menschlichem Gewebe, und die Ergebnisse lassen sich oft besser übertragen als bei Tierversuchen."
+    ],
+    [
+     "M",
+     "Warum werden diese Methoden dann nicht überall eingesetzt?"
+    ],
+    [
+     "F",
+     "Zum einen sind sie teilweise noch nicht ausreichend geprüft, und die Behörden verlangen für die Zulassung von Medikamenten bestimmte Tests. Zum anderen fehlt es an Geld. Die Forschung an Alternativmethoden wird im Vergleich zu klassischen Projekten nur mit einem Bruchteil finanziert. Ich wünsche mir, dass sich das ändert – aus ethischen, aber auch aus wissenschaftlichen Gründen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Welche Tiere werden am häufigsten für Versuche eingesetzt?",
+     "o": [
+      "Hunde und Katzen",
+      "Mäuse und Ratten",
+      "Affen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Zahl der Tierversuche in Österreich ist zuletzt stark gestiegen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was sind Organoide?",
+     "a": "winzige, im Labor gezüchtete Mini-Organe aus menschlichen Zellen"
+    },
+    {
+     "t": "mc",
+     "q": "Welchen Vorteil der neuen Methoden nennt Frau Berger?",
+     "o": [
+      "Sie sind billiger als jeder Tierversuch.",
+      "Man arbeitet mit menschlichem Gewebe, die Ergebnisse sind oft besser übertragbar.",
+      "Sie brauchen keine Zulassung."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Gründe, warum Alternativmethoden noch nicht überall eingesetzt werden.",
+     "a": "noch nicht ausreichend geprüft / Behörden verlangen bestimmte Tests; zu wenig Geld für die Forschung"
+    }
+   ]
+  },
+  {
+   "id": "h_mensa",
+   "level": "B2",
+   "kind": "Straßenumfrage",
+   "topic": "Gesundheit",
+   "wt": "2.1",
+   "title": "Umfrage in der Mensa: Was kommt auf den Teller?",
+   "intro": "Sie hören eine Umfrage unter Studierenden in einer Wiener Mensa zum Thema Essen. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "A": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, lebendig und spontan, wie eine Studentin im Gespräch.",
+     "name": "Anna, 21"
+    },
+    "B": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "David, 24"
+    },
+    "C": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Entspannt und freundlich, wie eine junge Frau im Gespräch.",
+     "name": "Selin, 23"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Wir sind heute in der Mensa der Universität Wien und fragen: Was essen Sie zu Mittag und worauf achten Sie dabei?"
+    ],
+    [
+     "A",
+     "Ich nehme meistens das vegetarische Menü. Nicht, weil ich ganz auf Fleisch verzichte, sondern weil es billiger ist – heute 4,90 statt 6,20. Als Studentin schaut man da schon aufs Geld."
+    ],
+    [
+     "B",
+     "Also ich esse fast jeden Tag Fleisch, ehrlich gesagt. Ich mache viel Sport und brauche Eiweiß. Aber ich versuche, wenigstens Bio-Fleisch zu kaufen, wenn ich selbst koche. In der Mensa geht das natürlich nicht."
+    ],
+    [
+     "C",
+     "Ich koche meistens zu Hause vor und nehme mir das Essen in einer Box mit. Das ist gesünder und spart Geld. In die Mensa komme ich eigentlich nur, wenn ich mal keine Zeit hatte – so wie heute."
+    ],
+    [
+     "M",
+     "Und was würden Sie sich von der Mensa wünschen?"
+    ],
+    [
+     "A",
+     "Mehr frisches Gemüse und weniger Frittiertes. Manchmal ist die Auswahl schon sehr einseitig."
+    ],
+    [
+     "B",
+     "Größere Portionen!"
+    ],
+    [
+     "C",
+     "Mehr vegane Gerichte und dass man sieht, woher die Zutaten kommen. Das ist mir wichtig."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Warum nimmt Anna meistens das vegetarische Menü?",
+     "o": [
+      "Weil sie Vegetarierin ist.",
+      "Weil es günstiger ist.",
+      "Weil es besser schmeckt."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "David isst nur selten Fleisch.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Selin bringt ihr Essen meistens von zu Hause mit.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "match",
+     "q": "Wer wünscht sich was? Ordnen Sie zu.",
+     "items": [
+      "mehr frisches Gemüse",
+      "größere Portionen",
+      "Informationen über die Herkunft der Zutaten"
+     ],
+     "opts": [
+      "Anna",
+      "David",
+      "Selin"
+     ],
+     "a": [
+      0,
+      1,
+      2
+     ],
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Warum kauft David Bio-Fleisch nur, wenn er selbst kocht?",
+     "a": "weil es in der Mensa kein Bio-Fleisch gibt / man dort nicht wählen kann"
+    }
+   ]
+  },
+  {
+   "id": "h_ruecken",
+   "level": "B2+",
+   "kind": "Vortrag",
+   "topic": "Gesundheit",
+   "wt": "2.2",
+   "title": "Vortrag: Volkskrankheit Rückenschmerz",
+   "intro": "Sie hören einen Vortrag eines Physiotherapeuten bei einem Gesundheitsabend. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "D": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Wie ein erfahrener Physiotherapeut bei einem Vortrag: freundlich, anschaulich, ruhig.",
+     "name": "Vortrag"
+    }
+   },
+   "lines": [
+    [
+     "D",
+     "Guten Abend, meine Damen und Herren. Hand aufs Herz: Wer von Ihnen hatte im letzten Jahr Rückenschmerzen? – Ich sehe, fast alle. Damit sind Sie in guter Gesellschaft. Rückenschmerzen gehören zu den häufigsten Gründen für Krankenstände in Österreich."
+    ],
+    [
+     "D",
+     "Die gute Nachricht zuerst: In etwa neun von zehn Fällen steckt keine ernsthafte Erkrankung dahinter, etwa ein Bandscheibenvorfall, sondern sogenannte unspezifische Rückenschmerzen. Das heißt, Muskeln sind verspannt oder zu schwach, oft durch langes Sitzen und zu wenig Bewegung."
+    ],
+    [
+     "D",
+     "Früher hat man Patienten mit Rückenschmerzen Bettruhe verordnet. Heute wissen wir: Das ist meist der falsche Weg. Wer sich schont, verliert Muskelkraft, und die Schmerzen werden eher schlimmer. Besser ist es, in Bewegung zu bleiben – natürlich angepasst und ohne Überlastung."
+    ],
+    [
+     "D",
+     "Was hilft konkret? Erstens regelmäßige Bewegung, die Spaß macht: Schwimmen, Radfahren, Spazierengehen. Zweitens gezielte Übungen für Bauch- und Rückenmuskeln, zwei- bis dreimal pro Woche, je zwanzig Minuten. Drittens Pausen im Sitzen: Stehen Sie mindestens jede halbe Stunde auf."
+    ],
+    [
+     "D",
+     "Und noch etwas, das oft unterschätzt wird: Stress. Wer psychisch unter Druck steht, spannt unbewusst die Muskeln an. Entspannungstechniken können deshalb genauso wichtig sein wie Gymnastik."
+    ],
+    [
+     "D",
+     "Wann sollten Sie zum Arzt gehen? Wenn die Schmerzen in die Beine ausstrahlen, wenn Taubheitsgefühle auftreten oder wenn sie nach einigen Wochen nicht besser werden. Dann ist eine genauere Untersuchung sinnvoll."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Rückenschmerzen haben laut Vortrag keine ernsthafte Ursache?",
+     "o": [
+      "etwa die Hälfte",
+      "etwa neun von zehn",
+      "fast keine"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Bettruhe wird heute bei Rückenschmerzen meistens empfohlen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wie oft und wie lange sollte man gezielte Übungen machen?",
+     "a": "zwei- bis dreimal pro Woche, je zwanzig Minuten"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Rolle spielt Stress?",
+     "o": [
+      "Keine, es geht nur um Muskeln.",
+      "Er führt dazu, dass man die Muskeln unbewusst anspannt.",
+      "Er macht die Bandscheiben weicher."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Warnzeichen, bei denen man zum Arzt gehen sollte.",
+     "a": "Schmerzen strahlen in die Beine aus; Taubheitsgefühle; keine Besserung nach einigen Wochen"
+    }
+   ]
+  },
+  {
+   "id": "h_esport",
+   "level": "B2+",
+   "kind": "Radiodiskussion",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "2.4",
+   "title": "Diskussion: Ist E-Sport echter Sport?",
+   "intro": "Sie hören eine Radiodiskussion zwischen einem E-Sport-Trainer und einer Sportwissenschaftlerin. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "E": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "Marco Steiner, E-Sport-Trainer"
+    },
+    "S": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Petra Huber, Sportwissenschaft"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Millionen schauen zu, wenn Profis Videospiele gegeneinander spielen. Ist das Sport? Darüber diskutieren Marco Steiner, Trainer eines E-Sport-Teams, und die Sportwissenschaftlerin Petra Huber. Herr Steiner?"
+    ],
+    [
+     "E",
+     "Für mich ganz klar ja. Unsere Spieler trainieren sechs bis acht Stunden am Tag. Sie brauchen extreme Reaktionsschnelligkeit, Konzentration und Teamgeist. Und wir haben auch Fitnesstraining im Plan, weil ein Spieler, der körperlich fit ist, länger konzentriert bleibt."
+    ],
+    [
+     "M",
+     "Frau Huber, überzeugt Sie das?"
+    ],
+    [
+     "S",
+     "Teilweise. Die kognitiven Leistungen sind beeindruckend, das bestreite ich nicht. Aber für mich gehört zum Sport eine körperliche Bewegung, die über das Bedienen von Maus und Tastatur hinausgeht. Sonst müssten wir auch Schach als Sport bezeichnen."
+    ],
+    [
+     "E",
+     "Schach ist in vielen Ländern als Sport anerkannt!"
+    ],
+    [
+     "S",
+     "Das stimmt, aber die Frage ist doch, was wir damit erreichen wollen. Wenn E-Sport als Sport gilt, bekommen Vereine Fördergelder, die eigentlich für Bewegung gedacht sind. Und gerade Jugendliche bewegen sich ohnehin schon zu wenig."
+    ],
+    [
+     "E",
+     "Ich sehe das anders. Viele Jugendliche, die zu uns kommen, machen dadurch zum ersten Mal überhaupt in einem Verein mit. Sie lernen, pünktlich zu sein, im Team zu arbeiten, mit Niederlagen umzugehen. Das sind doch genau die Werte, die Sport vermitteln soll."
+    ],
+    [
+     "S",
+     "Da gebe ich Ihnen recht. Vielleicht brauchen wir einfach eine eigene Kategorie: nicht Sport im klassischen Sinn, aber eine anerkannte Freizeitaktivität mit Vereinsstruktur."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie lange trainieren Steiners Spieler täglich?",
+     "o": [
+      "zwei bis drei Stunden",
+      "sechs bis acht Stunden",
+      "zehn Stunden"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Frau Huber bestreitet, dass E-Sportler kognitive Leistungen erbringen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was gehört laut Frau Huber zum Sport?",
+     "a": "körperliche Bewegung, die über Maus und Tastatur hinausgeht"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Folge der Anerkennung befürchtet Frau Huber?",
+     "o": [
+      "dass Fördergelder für Bewegung an E-Sport gehen",
+      "dass Schach verboten wird",
+      "dass Spieler zu viel verdienen"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Worauf einigen sich die beiden am Ende teilweise?",
+     "o": [
+      "E-Sport ist olympischer Sport.",
+      "E-Sport könnte eine eigene anerkannte Kategorie sein.",
+      "E-Sport sollte für Jugendliche verboten werden."
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_resilienz",
+   "level": "C1",
+   "kind": "Podcast",
+   "topic": "Gesundheit",
+   "wt": "2.5",
+   "title": "Podcast „Kopfsache“: Was uns widerstandsfähig macht",
+   "intro": "Sie hören einen Ausschnitt aus einem Psychologie-Podcast über Resilienz. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "A": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, lebendig und spontan, wie eine Studentin im Gespräch.",
+     "name": "Lea, Moderatorin"
+    },
+    "B": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Dr. Martin Kogler, Psychologe"
+    }
+   },
+   "lines": [
+    [
+     "A",
+     "Willkommen zu „Kopfsache“. Heute geht es um ein Wort, das man überall hört: Resilienz. Martin, was ist das eigentlich?"
+    ],
+    [
+     "B",
+     "Resilienz bezeichnet die Fähigkeit, Krisen zu bewältigen und danach wieder auf die Beine zu kommen. Wichtig ist: Resiliente Menschen leiden genauso unter schweren Ereignissen wie andere. Der Unterschied ist, dass sie sich schneller erholen und nicht dauerhaft daran zerbrechen."
+    ],
+    [
+     "A",
+     "Ist das angeboren oder kann man das lernen?"
+    ],
+    [
+     "B",
+     "Beides. Ein Teil hängt von unserer Persönlichkeit und von frühen Erfahrungen ab. Kinder, die mindestens eine verlässliche Bezugsperson hatten, sind später oft widerstandsfähiger. Aber die gute Nachricht ist: Resilienz ist kein festes Merkmal, man kann sie im Laufe des Lebens stärken."
+    ],
+    [
+     "A",
+     "Wie denn konkret?"
+    ],
+    [
+     "B",
+     "Der wichtigste Faktor sind soziale Beziehungen. Menschen, die sich in einer Krise Hilfe holen und darüber reden, kommen besser durch. Zweitens hilft es, sich auf das zu konzentrieren, was man selbst beeinflussen kann, statt über Dinge zu grübeln, die man nicht ändern kann. Und drittens: gut für den Körper sorgen – Schlaf, Bewegung, regelmäßige Mahlzeiten. Das klingt banal, wird aber in stressigen Phasen oft als Erstes vernachlässigt."
+    ],
+    [
+     "A",
+     "Kritiker sagen, das Konzept schiebe die Verantwortung auf den Einzelnen ab."
+    ],
+    [
+     "B",
+     "Da ist etwas dran. Wenn jemand wegen schlechter Arbeitsbedingungen ausbrennt, hilft kein Resilienztraining. Dann müssen sich die Bedingungen ändern. Resilienz darf keine Ausrede dafür sein, Probleme in Firmen oder in der Gesellschaft nicht anzugehen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Was unterscheidet resiliente Menschen laut Dr. Kogler?",
+     "o": [
+      "Sie leiden weniger unter Krisen.",
+      "Sie erholen sich schneller von Krisen.",
+      "Sie erleben nie schwere Ereignisse."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Resilienz ist laut Kogler vollständig angeboren.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche frühe Erfahrung macht Kinder später widerstandsfähiger?",
+     "a": "mindestens eine verlässliche Bezugsperson"
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Kogler der wichtigste Faktor für Resilienz?",
+     "a": "soziale Beziehungen / sich Hilfe holen und darüber reden"
+    },
+    {
+     "t": "mc",
+     "q": "Wie reagiert Kogler auf die Kritik am Konzept?",
+     "o": [
+      "Er weist sie völlig zurück.",
+      "Er stimmt teilweise zu: Bei schlechten Arbeitsbedingungen müssen sich die Bedingungen ändern.",
+      "Er sagt, Firmen seien nie verantwortlich."
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_fernbeziehung",
+   "level": "B2",
+   "kind": "Podcast",
+   "topic": "Beziehungen und Geschlechtergerechtigkeit",
+   "wt": "3.1",
+   "title": "Podcast: Liebe auf Distanz",
+   "intro": "Sie hören einen Podcast, in dem zwei Studierende über ihre Erfahrungen mit Fernbeziehungen sprechen. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "A": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, lebendig und spontan, wie eine Studentin im Gespräch.",
+     "name": "Mira, Moderatorin"
+    },
+    "B": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "Jonas, 25"
+    },
+    "C": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Offen und nachdenklich, wie eine junge Frau im Gespräch.",
+     "name": "Laura, 23"
+    }
+   },
+   "lines": [
+    [
+     "A",
+     "Heute bei uns: Jonas und Laura. Beide haben Erfahrung mit Fernbeziehungen. Jonas, wie war das bei dir?"
+    ],
+    [
+     "B",
+     "Meine Freundin hat ein Erasmus-Jahr in Spanien gemacht, ich war in Graz. Wir haben jeden Abend telefoniert, meistens per Video. Am Anfang war das schön, aber nach ein paar Monaten wurde es anstrengend. Man erzählt sich Dinge, aber man erlebt nichts mehr gemeinsam."
+    ],
+    [
+     "A",
+     "Und habt ihr es geschafft?"
+    ],
+    [
+     "B",
+     "Ja, wir sind noch zusammen. Was geholfen hat: Wir haben uns alle sechs Wochen besucht und immer schon das nächste Treffen geplant. Ein Datum im Kalender gibt einem Halt."
+    ],
+    [
+     "A",
+     "Laura, bei dir ist es anders ausgegangen."
+    ],
+    [
+     "C",
+     "Genau. Mein Freund ist für einen Job nach Hamburg gezogen. Wir dachten, das geht schon, es ist ja nur für ein Jahr. Aber wir haben uns auseinandergelebt. Er hatte neue Freunde, ich hatte mein Studium, und die Telefonate wurden immer kürzer. Irgendwann haben wir gemerkt, dass wir uns nicht mehr viel zu sagen haben."
+    ],
+    [
+     "A",
+     "Was würdest du anderen raten?"
+    ],
+    [
+     "C",
+     "Ehrlich miteinander reden, auch über Eifersucht und Zweifel. Und nicht krampfhaft jeden Tag telefonieren, nur weil man glaubt, man muss. Lieber seltener, aber dann richtig. Und wichtig: Man sollte ein gemeinsames Ziel haben – wann wohnt man wieder in derselben Stadt?"
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wo war Jonas’ Freundin während der Fernbeziehung?",
+     "o": [
+      "in Hamburg",
+      "in Spanien",
+      "in Graz"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was hat Jonas und seiner Freundin geholfen?",
+     "a": "sich alle sechs Wochen besuchen und das nächste Treffen schon planen"
+    },
+    {
+     "t": "tf",
+     "q": "Laura und ihr Freund sind noch zusammen.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Warum ist Lauras Beziehung zerbrochen?",
+     "o": [
+      "Wegen eines Streits über Geld.",
+      "Sie haben sich auseinandergelebt.",
+      "Ihr Freund wollte nicht nach Hamburg."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Ratschläge von Laura.",
+     "a": "ehrlich reden, auch über Eifersucht; nicht krampfhaft täglich telefonieren; ein gemeinsames Ziel haben"
+    }
+   ]
+  },
+  {
+   "id": "h_zeitumstellung",
+   "level": "B2",
+   "kind": "Radionachrichten",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "3.4",
+   "title": "Nachrichten: Streit um die Zeitumstellung",
+   "intro": "Sie hören eine Nachrichtensendung über die Zeitumstellung. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "R": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Wie ein Radiokorrespondent in Brüssel: sachlich, zügig.",
+     "name": "Korrespondent"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "In der Nacht auf Sonntag werden die Uhren wieder um eine Stunde zurückgestellt. Dabei hatte die EU eigentlich schon vor Jahren beschlossen, die Zeitumstellung abzuschaffen. Warum ist das noch nicht geschehen? Unser Korrespondent in Brüssel berichtet."
+    ],
+    [
+     "R",
+     "Im Jahr 2018 hat die EU-Kommission eine Online-Umfrage durchgeführt. Mehr als vier Millionen Menschen haben teilgenommen, und rund achtzig Prozent waren für die Abschaffung. Auch das Europäische Parlament hat zugestimmt. Doch dann ist das Vorhaben im Rat der Mitgliedstaaten stecken geblieben."
+    ],
+    [
+     "R",
+     "Das Problem: Die Länder können sich nicht einigen, ob dauerhaft die Sommerzeit oder die Winterzeit gelten soll. Manche wollen helle Abende, andere helle Morgen. Und niemand will einen Flickenteppich mit unterschiedlichen Zeitzonen mitten in Europa."
+    ],
+    [
+     "M",
+     "Was sagen Fachleute?"
+    ],
+    [
+     "R",
+     "Schlafforscher plädieren mehrheitlich für die dauerhafte Winterzeit, also die sogenannte Normalzeit. Sie entspreche besser unserer inneren Uhr. Bei dauerhafter Sommerzeit wäre es im Westen Europas im Winter bis fast neun Uhr morgens dunkel. Die Wirtschaft wiederum ist gespalten. Eine Entscheidung ist derzeit nicht in Sicht."
+    ],
+    [
+     "M",
+     "Danke. Und für alle, die es sich nicht merken können: Im Herbst bekommen wir eine Stunde geschenkt – Sie können also länger schlafen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Teilnehmende waren in der EU-Umfrage für die Abschaffung?",
+     "o": [
+      "etwa die Hälfte",
+      "etwa achtzig Prozent",
+      "fast alle"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Das Europäische Parlament hat gegen die Abschaffung gestimmt.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Woran scheitert die Abschaffung bisher?",
+     "a": "die Mitgliedstaaten können sich nicht einigen, ob Sommer- oder Winterzeit gelten soll"
+    },
+    {
+     "t": "mc",
+     "q": "Wofür sind die meisten Schlafforscher?",
+     "o": [
+      "dauerhafte Sommerzeit",
+      "dauerhafte Winterzeit",
+      "Beibehaltung der Umstellung"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Im Herbst werden die Uhren eine Stunde zurückgestellt.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_musikfestival",
+   "level": "B2",
+   "kind": "Radiobeitrag",
+   "topic": "Tourismus und Reisen",
+   "wt": "3.5",
+   "title": "Reportage: Festivalsommer – zwischen Euphorie und Preisschock",
+   "intro": "Sie hören eine Radioreportage von einem Musikfestival in Niederösterreich. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "A": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, lebendig und spontan, wie eine Studentin im Gespräch.",
+     "name": "Besucherin"
+    },
+    "B": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "Besucher"
+    },
+    "O": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Veranstalter"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Ich stehe am Gelände eines der größten Musikfestivals Österreichs. Zehntausende Menschen, drei Bühnen, vier Tage Musik. Die Stimmung ist großartig – aber viele reden auch übers Geld. Fragen wir nach."
+    ],
+    [
+     "A",
+     "Das Ticket hat 230 Euro gekostet, dazu Anreise und Essen. Ein Bier kostet hier sieben Euro! Ich habe das ganze Jahr dafür gespart. Aber es ist es wert: Hier treffe ich jedes Jahr meine Freunde aus ganz Österreich."
+    ],
+    [
+     "B",
+     "Ich bin zum ersten Mal da. Ehrlich gesagt hätte ich es mir allein nicht leisten können. Ich arbeite hier als freiwilliger Helfer: drei Schichten am Eingang, dafür ist das Ticket gratis. Das ist ein guter Deal."
+    ],
+    [
+     "M",
+     "Herr Gruber, Sie sind einer der Veranstalter. Warum sind die Preise so stark gestiegen?"
+    ],
+    [
+     "O",
+     "Unsere Kosten sind in den letzten Jahren enorm gewachsen: Gagen der Bands, Technik, Sicherheit, Energie. Wir haben die Ticketpreise trotzdem weniger stark erhöht als die Kosten. Außerdem gibt es Kontingente mit ermäßigten Tickets für Studierende, und man kann in Raten zahlen."
+    ],
+    [
+     "M",
+     "Und das Thema Nachhaltigkeit?"
+    ],
+    [
+     "O",
+     "Wir haben einen Shuttlebus vom Bahnhof eingerichtet, Mehrwegbecher eingeführt und bezahlen ein Pfand zurück, wenn man seinen Müll abgibt. Der Müllberg ist deutlich kleiner geworden. Aber die Anreise mit dem Auto bleibt unser größtes Problem."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viel hat das Ticket der Besucherin gekostet?",
+     "o": [
+      "130 Euro",
+      "230 Euro",
+      "330 Euro"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wie bekommt der junge Mann sein Ticket gratis?",
+     "a": "er arbeitet als freiwilliger Helfer (drei Schichten am Eingang)"
+    },
+    {
+     "t": "mc",
+     "q": "Was nennt der Veranstalter NICHT als Grund für höhere Kosten?",
+     "o": [
+      "Gagen der Bands",
+      "Sicherheit",
+      "Mieten für Wohnungen"
+     ],
+     "a": 2,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Studierende können ermäßigte Tickets bekommen.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Veranstalter beim Thema Nachhaltigkeit das größte Problem?",
+     "a": "die Anreise mit dem Auto"
+    }
+   ]
+  },
+  {
+   "id": "h_dialekt",
+   "level": "B2+",
+   "kind": "Radiointerview",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "4.2",
+   "title": "Interview: Servus, Grüß Gott, Moin – Dialekte im Wandel",
+   "intro": "Sie hören ein Interview mit einem Sprachwissenschaftler über Dialekte in Österreich. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "S": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Prof. Stefan Wimmer, Sprachwissenschaft"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Sterben die Dialekte aus? Diese Frage stelle ich heute dem Sprachwissenschaftler Stefan Wimmer. Herr Professor, sprechen junge Menschen noch Dialekt?"
+    ],
+    [
+     "S",
+     "Ja, aber anders als ihre Großeltern. Die ganz kleinräumigen Ortsdialekte, bei denen man früher am Klang hören konnte, aus welchem Dorf jemand stammt, verschwinden tatsächlich. Stattdessen entstehen großräumigere regionale Umgangssprachen. Ein junger Mensch aus Tirol klingt heute weniger tirolerisch als sein Großvater, aber immer noch deutlich anders als jemand aus Wien."
+    ],
+    [
+     "M",
+     "Woran liegt das?"
+    ],
+    [
+     "S",
+     "An der Mobilität vor allem. Menschen ziehen zum Studieren oder Arbeiten in die Städte, sie heiraten über Regionsgrenzen hinweg. Dazu kommen die Medien. Kinder schauen viele Videos aus Deutschland und übernehmen Wörter wie „lecker“ oder „Tschüss“, die in Österreich früher kaum verwendet wurden."
+    ],
+    [
+     "M",
+     "Ist das ein Verlust?"
+    ],
+    [
+     "S",
+     "Sprachwandel hat es immer gegeben, das ist nichts Schlechtes. Problematisch finde ich eher, wenn Dialekt abgewertet wird, etwa in der Schule oder bei Bewerbungen. Viele Menschen schämen sich für ihren Dialekt, obwohl er ein wertvoller Teil ihrer Identität ist. Am besten ist es, wenn man zwischen Standardsprache und Dialekt wechseln kann – je nach Situation. Das ist im Grunde eine Form von Mehrsprachigkeit."
+    ],
+    [
+     "M",
+     "Und Menschen, die Deutsch als Fremdsprache lernen?"
+    ],
+    [
+     "S",
+     "Für sie ist es zunächst schwierig, das stimmt. Mein Rat: Hören Sie viel zu, und haben Sie keine Angst nachzufragen. Die meisten Österreicherinnen und Österreicher wechseln gern ins Hochdeutsche, wenn man sie darum bittet."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Was verschwindet laut Prof. Wimmer?",
+     "o": [
+      "alle Dialekte",
+      "kleinräumige Ortsdialekte",
+      "die Standardsprache"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Gründe für den Wandel der Dialekte.",
+     "a": "Mobilität (Umzug in Städte, Heirat über Grenzen); Medien/Videos aus Deutschland"
+    },
+    {
+     "t": "tf",
+     "q": "Wimmer hält Sprachwandel grundsätzlich für etwas Negatives.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Was ist für Wimmer problematisch?",
+     "o": [
+      "dass Kinder Hochdeutsch lernen",
+      "dass Dialekt abgewertet wird",
+      "dass Menschen umziehen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was rät Wimmer Deutschlernenden?",
+     "a": "viel zuhören und keine Angst haben nachzufragen"
+    }
+   ]
+  },
+  {
+   "id": "h_photovoltaik",
+   "level": "B2+",
+   "kind": "Radiobeitrag",
+   "topic": "Umwelt und Verkehr",
+   "wt": "4.3",
+   "title": "Beitrag: Sonnenstrom vom eigenen Dach",
+   "intro": "Sie hören einen Radiobeitrag über Photovoltaikanlagen auf Einfamilienhäusern und in Gemeinden. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "B": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Herr Pichler, Hausbesitzer"
+    },
+    "E": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "DI Maria Brunner, Energieberaterin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "In Österreich werden so viele Photovoltaikanlagen gebaut wie nie zuvor. Wir haben einen Hausbesitzer im Burgenland besucht."
+    ],
+    [
+     "B",
+     "Wir haben die Anlage vor zwei Jahren installieren lassen, zwölf Kilowatt Peak. Im Sommer produzieren wir viel mehr Strom, als wir brauchen. Den Überschuss speisen wir ins Netz ein oder laden unser E-Auto. Unsere Stromrechnung ist um mehr als die Hälfte gesunken."
+    ],
+    [
+     "M",
+     "Doch es gibt auch Herausforderungen. Dazu die Energieberaterin Maria Brunner."
+    ],
+    [
+     "E",
+     "Das größte Problem ist, dass alle Anlagen gleichzeitig zu Mittag den meisten Strom produzieren, wenn der Verbrauch eher gering ist. Die Netze sind dafür in manchen Regionen nicht ausgelegt. Deshalb dürfen manche Haushalte nur einen Teil ihres Stroms einspeisen."
+    ],
+    [
+     "M",
+     "Was ist die Lösung?"
+    ],
+    [
+     "E",
+     "Speicher werden immer wichtiger, also Batterien im Keller, die den Strom vom Mittag für den Abend aufheben. Noch spannender finde ich Energiegemeinschaften. Dabei teilen sich Nachbarn, eine Gemeinde oder ein Betrieb den Strom. Der Bäcker nutzt in der Früh den Strom, den die Schule am Wochenende nicht braucht. Das entlastet das Netz und ist für alle günstiger."
+    ],
+    [
+     "M",
+     "Lohnt sich eine Anlage noch, wenn die Förderungen sinken?"
+    ],
+    [
+     "E",
+     "In den meisten Fällen ja. Die Module sind in den letzten Jahren deutlich billiger geworden. Wichtig ist nur, dass man möglichst viel Strom selbst verbraucht, statt ihn billig ins Netz zu verkaufen."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Um wie viel ist die Stromrechnung von Herrn Pichler gesunken?",
+     "o": [
+      "um ein Viertel",
+      "um mehr als die Hälfte",
+      "auf null"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Frau Brunner das größte Problem?",
+     "a": "alle Anlagen produzieren mittags gleichzeitig viel Strom, wenn wenig verbraucht wird; die Netze sind dafür nicht ausgelegt"
+    },
+    {
+     "t": "open",
+     "q": "Was ist eine Energiegemeinschaft?",
+     "a": "Nachbarn, Gemeinden oder Betriebe teilen sich den selbst erzeugten Strom"
+    },
+    {
+     "t": "tf",
+     "q": "Photovoltaikmodule sind in den letzten Jahren teurer geworden.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Wann lohnt sich eine Anlage laut Frau Brunner am meisten?",
+     "o": [
+      "wenn man möglichst viel Strom ins Netz verkauft",
+      "wenn man möglichst viel Strom selbst verbraucht",
+      "nur mit hoher Förderung"
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_overtourism",
+   "level": "C1",
+   "kind": "Radiodiskussion",
+   "topic": "Tourismus und Reisen",
+   "wt": "4.5",
+   "title": "Diskussion: Wie viel Tourismus verträgt Wien?",
+   "intro": "Sie hören eine Diskussion über Tourismus in Wien zwischen einer Tourismusvertreterin und einem Anrainer. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "T": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Mag. Claudia Rainer, Tourismusverband"
+    },
+    "A": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig und überlegt, wie ein Experte im Radiointerview.",
+     "name": "Herr Novak, Anrainer im 1. Bezirk"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Wien zählt jedes Jahr fast zwanzig Millionen Übernachtungen. Für die Wirtschaft ist das ein Segen, für manche Anrainer eine Belastung. Frau Rainer, droht Wien Overtourism wie Venedig?"
+    ],
+    [
+     "T",
+     "Nein, davon sind wir weit entfernt. Wien ist eine große Stadt, die Gäste verteilen sich. Der Tourismus sichert zehntausende Arbeitsplätze, von der Hotellerie bis zum Kaffeehaus. Und viele Kulturangebote, die auch die Wiener nutzen, gäbe es ohne Touristen in dieser Form nicht."
+    ],
+    [
+     "A",
+     "Das mag für die Stadt insgesamt stimmen. Aber gehen Sie einmal im Sommer durch die Innenstadt. Vor dem Stephansdom kommt man kaum durch, Reisebusse blockieren die Straßen, und in meinem Haus sind inzwischen vier Wohnungen Kurzzeitvermietungen. Da wohnen ständig neue Leute, die nachts mit Rollkoffern über das Kopfsteinpflaster ziehen."
+    ],
+    [
+     "M",
+     "Wien hat die Kurzzeitvermietung ja zuletzt eingeschränkt."
+    ],
+    [
+     "T",
+     "Richtig, und das unterstützen wir. Es ist uns wichtig, dass der Tourismus von der Bevölkerung akzeptiert wird. Wir versuchen außerdem, Gäste in andere Bezirke zu lenken – zu Märkten, Heurigen, in die Außenbezirke."
+    ],
+    [
+     "A",
+     "Das ist ein Anfang. Aber ich vermisse eine Obergrenze für Reisebusse und klarere Kontrollen bei den Kurzzeitvermietungen. Die Regeln gibt es, aber kaum jemand prüft, ob sie eingehalten werden."
+    ],
+    [
+     "T",
+     "Über eine bessere Steuerung der Busse kann man sicher reden. Eine Obergrenze für Besucher halte ich dagegen für den falschen Weg. Wien soll eine offene Stadt bleiben."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Übernachtungen zählt Wien laut Moderator pro Jahr?",
+     "o": [
+      "fast zwei Millionen",
+      "fast zwanzig Millionen",
+      "fast zweihundert Millionen"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Frau Rainer meint, Wien habe bereits ähnliche Probleme wie Venedig.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was stört Herrn Novak in seinem Haus?",
+     "a": "mehrere Wohnungen sind Kurzzeitvermietungen, ständig neue Leute, Lärm nachts (Rollkoffer)"
+    },
+    {
+     "t": "mc",
+     "q": "Was fordert Herr Novak?",
+     "o": [
+      "eine Obergrenze für Reisebusse und mehr Kontrollen",
+      "ein Verbot aller Hotels",
+      "weniger Kaffeehäuser"
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Wie steht Frau Rainer zu einer Obergrenze für Besucher?",
+     "o": [
+      "Sie ist dafür.",
+      "Sie hält sie für den falschen Weg.",
+      "Sie hat keine Meinung."
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_smart_home",
+   "level": "B2+",
+   "kind": "Podcast",
+   "topic": "Medien",
+   "wt": "4.7",
+   "title": "Podcast „Technik im Alltag“: Wie smart muss ein Zuhause sein?",
+   "intro": "Sie hören einen Technik-Podcast über vernetzte Geräte im Haushalt. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "A": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "Tim, Moderator"
+    },
+    "B": {
+     "voice": "shimmer",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, lebendig und spontan, wie eine Studentin im Gespräch.",
+     "name": "Nina, IT-Sicherheitsexpertin"
+    }
+   },
+   "lines": [
+    [
+     "A",
+     "Licht, das per Sprachbefehl angeht, ein Kühlschrank, der Milch nachbestellt – Nina, wie verbreitet ist das Smart Home in Österreich?"
+    ],
+    [
+     "B",
+     "Mehr, als man denkt. Etwa jeder dritte Haushalt hat mindestens ein vernetztes Gerät, am häufigsten smarte Lautsprecher, Thermostate oder Kameras. Ein komplett vernetztes Haus ist aber noch selten."
+    ],
+    [
+     "A",
+     "Was bringt das eigentlich?"
+    ],
+    [
+     "B",
+     "Bequemlichkeit, klar. Aber auch Energieersparnis: Ein smartes Thermostat heizt nur, wenn jemand zu Hause ist, und das kann die Heizkosten spürbar senken. Für ältere Menschen können Sensoren, die einen Sturz melden, sogar lebenswichtig sein."
+    ],
+    [
+     "A",
+     "Und wo ist der Haken?"
+    ],
+    [
+     "B",
+     "Bei der Sicherheit. Viele billige Geräte werden mit Standardpasswörtern ausgeliefert, und die Hersteller liefern keine Updates. Solche Geräte sind ein Einfallstor für Hacker. Es gab schon Fälle, in denen Fremde auf Babyfone oder Überwachungskameras zugreifen konnten."
+    ],
+    [
+     "A",
+     "Was rätst du unseren Hörerinnen und Hörern?"
+    ],
+    [
+     "B",
+     "Drei Dinge. Erstens: Passwörter sofort ändern. Zweitens: beim Kauf darauf achten, dass der Hersteller regelmäßig Updates anbietet. Und drittens: sich fragen, ob man das Gerät wirklich braucht. Nicht alles, was vernetzt werden kann, muss auch vernetzt werden."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Haushalte haben mindestens ein vernetztes Gerät?",
+     "o": [
+      "etwa jeder zehnte",
+      "etwa jeder dritte",
+      "fast alle"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wie kann ein smartes Thermostat Energie sparen?",
+     "a": "es heizt nur, wenn jemand zu Hause ist"
+    },
+    {
+     "t": "tf",
+     "q": "Laut Nina liefern alle Hersteller regelmäßig Updates.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Was ist laut Nina das Hauptproblem billiger Geräte?",
+     "o": [
+      "hoher Stromverbrauch",
+      "Standardpasswörter und fehlende Updates",
+      "schlechter Klang"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei der drei Ratschläge.",
+     "a": "Passwörter sofort ändern; auf regelmäßige Updates achten; fragen, ob man das Gerät wirklich braucht"
+    }
+   ]
+  },
+  {
+   "id": "h_jugendgericht",
+   "level": "C1",
+   "kind": "Radiointerview",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.9",
+   "title": "Interview: Was passiert, wenn Jugendliche straffällig werden?",
+   "intro": "Sie hören ein Interview mit einer Jugendrichterin. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "R": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Eva Steindl, Jugendrichterin"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Wenn Jugendliche eine Straftat begehen, folgt nicht automatisch ein Prozess. Darüber spreche ich mit der Jugendrichterin Eva Steindl. Frau Steindl, was ist im Jugendstrafrecht anders?"
+    ],
+    [
+     "R",
+     "Der wichtigste Unterschied ist das Ziel. Bei Jugendlichen zwischen vierzehn und achtzehn steht nicht die Strafe im Vordergrund, sondern die Frage, wie wir verhindern können, dass sie wieder straffällig werden. Junge Menschen sind noch in Entwicklung, und eine Haftstrafe kann diese Entwicklung oft mehr schaden als nützen."
+    ],
+    [
+     "M",
+     "Welche Alternativen gibt es?"
+    ],
+    [
+     "R",
+     "Sehr häufig ist die sogenannte Diversion. Das heißt, das Verfahren wird eingestellt, wenn der Jugendliche bestimmte Auflagen erfüllt: gemeinnützige Arbeit, etwa in einem Altenheim, eine Geldbuße oder ein Tatausgleich, bei dem Täter und Opfer mit einer Mediatorin zusammenkommen. Gerade der Tatausgleich ist sehr wirksam, weil die Jugendlichen sehen, was sie angerichtet haben."
+    ],
+    [
+     "M",
+     "Kritiker sagen, das sei zu nachsichtig."
+    ],
+    [
+     "R",
+     "Das höre ich oft. Aber die Zahlen sprechen eine andere Sprache: Jugendliche, die eine Diversion durchlaufen, werden seltener rückfällig als jene, die eine Haftstrafe verbüßen. Natürlich gibt es schwere Delikte, bei denen eine Haft unvermeidlich ist. Aber das ist die Ausnahme."
+    ],
+    [
+     "M",
+     "Was wünschen Sie sich?"
+    ],
+    [
+     "R",
+     "Mehr Sozialarbeiterinnen und mehr Prävention. Viele Jugendliche, die vor mir sitzen, haben schwierige Familienverhältnisse, haben die Schule abgebrochen oder haben Suchtprobleme. Wenn wir früher helfen, landen sie gar nicht erst bei Gericht."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "open",
+     "q": "Was ist laut Frau Steindl das wichtigste Ziel des Jugendstrafrechts?",
+     "a": "verhindern, dass Jugendliche wieder straffällig werden (nicht die Strafe)"
+    },
+    {
+     "t": "mc",
+     "q": "Was bedeutet „Diversion“?",
+     "o": [
+      "Der Jugendliche kommt sofort ins Gefängnis.",
+      "Das Verfahren wird eingestellt, wenn Auflagen erfüllt werden.",
+      "Der Fall wird an ein Erwachsenengericht übergeben."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "mc",
+     "q": "Warum ist der Tatausgleich laut Steindl wirksam?",
+     "o": [
+      "weil er billig ist",
+      "weil die Jugendlichen sehen, was sie angerichtet haben",
+      "weil er schnell geht"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Jugendliche nach einer Diversion werden häufiger rückfällig als nach einer Haft.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was wünscht sich die Richterin?",
+     "a": "mehr Sozialarbeiterinnen und mehr Prävention"
+    }
+   ]
+  },
+  {
+   "id": "h_feiertage",
+   "level": "B2",
+   "kind": "Straßenumfrage",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.10",
+   "title": "Umfrage: Was bedeuten Ihnen religiöse Feiertage?",
+   "intro": "Sie hören eine Straßenumfrage in Wien kurz vor Weihnachten. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "A": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Frau, ca. 60"
+    },
+    "B": {
+     "voice": "echo",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Jung, locker und natürlich, wie ein Student im Gespräch.",
+     "name": "junger Mann, ca. 20"
+    },
+    "C": {
+     "voice": "nova",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich, ruhig, mit leichtem Akzent, wie eine Frau mittleren Alters.",
+     "name": "Frau, ca. 40"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Wir sind am Christkindlmarkt vor dem Rathaus und fragen: Was bedeutet Ihnen Weihnachten – ein religiöses Fest oder einfach freie Tage?"
+    ],
+    [
+     "A",
+     "Für mich ist es vor allem ein religiöses Fest. Ich gehe am Heiligen Abend in die Christmette, so wie schon als Kind. Aber ich merke, dass meine Enkelkinder damit nicht mehr viel anfangen können. Für sie geht es um Geschenke."
+    ],
+    [
+     "B",
+     "Ehrlich gesagt bin ich nicht religiös, ich bin auch aus der Kirche ausgetreten. Aber Weihnachten feiere ich trotzdem gern, wegen der Familie. Das ist die einzige Zeit im Jahr, wo wirklich alle zusammenkommen."
+    ],
+    [
+     "C",
+     "Ich bin Muslimin und feiere Weihnachten eigentlich nicht. Aber meine Kinder bekommen im Kindergarten so viel davon mit, dass wir trotzdem einen kleinen Baum haben. Für uns ist das wichtigste Fest das Zuckerfest am Ende des Ramadan. Ich fände es schön, wenn darüber in Österreich auch mehr gesprochen würde."
+    ],
+    [
+     "M",
+     "Sollten Feiertage anderer Religionen auch arbeitsfrei sein?"
+    ],
+    [
+     "A",
+     "Das wird schwierig, wir haben ja schon viele Feiertage."
+    ],
+    [
+     "C",
+     "Nicht unbedingt arbeitsfrei. Aber Schulen könnten Kindern erlauben, an diesem Tag zu Hause zu bleiben. Das wäre ein Zeichen von Respekt."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "match",
+     "q": "Wer sagt was? Ordnen Sie zu.",
+     "items": [
+      "geht am Heiligen Abend in die Kirche",
+      "feiert wegen der Familie, obwohl nicht religiös",
+      "hat trotzdem einen kleinen Weihnachtsbaum"
+     ],
+     "opts": [
+      "ältere Frau",
+      "junger Mann",
+      "Frau, ca. 40"
+     ],
+     "a": [
+      0,
+      1,
+      2
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Für die Enkelkinder der älteren Frau stehen die Geschenke im Vordergrund.",
+     "a": "r",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Der junge Mann ist Mitglied der katholischen Kirche.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welches Fest ist für die Muslimin am wichtigsten?",
+     "a": "das Zuckerfest am Ende des Ramadan"
+    },
+    {
+     "t": "open",
+     "q": "Was schlägt sie für Schulen vor?",
+     "a": "Kinder dürfen an ihren religiösen Feiertagen zu Hause bleiben"
+    }
+   ]
+  },
+  {
+   "id": "h_wolf",
+   "level": "C1",
+   "kind": "Radiodiskussion",
+   "topic": "Umwelt und Verkehr",
+   "wt": "5.2",
+   "title": "Diskussion: Der Wolf ist zurück – Gefahr oder Gewinn?",
+   "intro": "Sie hören eine Diskussion zwischen einer Wildbiologin und einem Schafbauern aus Tirol. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "sage",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Ruhig, professionell und klar wie eine Moderatorin im österreichischen Radio (Ö1).",
+     "name": "Moderatorin"
+    },
+    "W": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Dr. Lisa Moser, Wildbiologin"
+    },
+    "B": {
+     "voice": "onyx",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Bodenständig und bestimmt, mit deutlicher Tiroler Färbung, wie ein Bergbauer.",
+     "name": "Josef Haller, Schafbauer"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Nach mehr als hundert Jahren ist der Wolf nach Österreich zurückgekehrt. Bei mir sind die Wildbiologin Lisa Moser und der Schafbauer Josef Haller. Herr Haller, was hat sich für Sie verändert?"
+    ],
+    [
+     "B",
+     "Letzten Sommer hat ein Wolf auf unserer Alm in einer Nacht elf Schafe gerissen. Das ist nicht nur ein finanzieller Schaden. Wir haben die Tiere selbst aufgezogen. Viele Bauern überlegen jetzt, ihre Schafe gar nicht mehr auf die Alm zu bringen. Dann verbuschen die Almen, und eine jahrhundertealte Kulturlandschaft geht verloren."
+    ],
+    [
+     "M",
+     "Frau Moser, verstehen Sie die Sorgen?"
+    ],
+    [
+     "W",
+     "Absolut. Die Bauern tragen die Hauptlast, und das darf man nicht kleinreden. Gleichzeitig ist der Wolf eine streng geschützte Art und spielt eine wichtige Rolle im Ökosystem. Er reguliert zum Beispiel die Bestände von Rehen und Hirschen, die in vielen Wäldern zu stark wachsen und junge Bäume abfressen."
+    ],
+    [
+     "B",
+     "Mit Zäunen und Herdenschutzhunden kann man im flachen Land arbeiten. Aber auf einer steilen Alm in zweitausend Metern Höhe? Das ist unbezahlbar und oft technisch gar nicht möglich."
+    ],
+    [
+     "W",
+     "Das stimmt nicht überall, aber es ist ein Punkt. In der Schweiz gibt es gute Erfahrungen mit Hirten, die die Herden ständig begleiten. Das kostet Geld, und hier muss die öffentliche Hand helfen. Und ja: Einzelne Wölfe, die gelernt haben, Schutzmaßnahmen zu überwinden, muss man auch entnehmen dürfen."
+    ],
+    [
+     "B",
+     "Da sind wir uns ausnahmsweise einig."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Schafe hat der Wolf auf Hallers Alm gerissen?",
+     "o": [
+      "sieben",
+      "elf",
+      "zwanzig"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welche Folge befürchtet Herr Haller, wenn Bauern ihre Schafe nicht mehr auf die Alm bringen?",
+     "a": "die Almen verbuschen, eine alte Kulturlandschaft geht verloren"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Rolle spielt der Wolf laut Frau Moser im Ökosystem?",
+     "o": [
+      "Er bestäubt Pflanzen.",
+      "Er reguliert die Bestände von Rehen und Hirschen.",
+      "Er vertreibt Touristen."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Welches Beispiel aus der Schweiz nennt Frau Moser?",
+     "a": "Hirten, die die Herden ständig begleiten"
+    },
+    {
+     "t": "mc",
+     "q": "Worin sind sich beide am Ende einig?",
+     "o": [
+      "Der Wolf soll ausgerottet werden.",
+      "Einzelne problematische Wölfe darf man entnehmen.",
+      "Zäune sind überall die beste Lösung."
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "id": "h_reinigungsmittel",
+   "level": "B2",
+   "kind": "Radiobeitrag",
+   "topic": "Konsumgesellschaft",
+   "wt": "5.3",
+   "title": "Konsumententipp: Putzen ohne Chemiekeule",
+   "intro": "Sie hören einen Konsumententipp im Radio über Reinigungsmittel im Haushalt. Sie hören den Text zweimal. Beim ersten Hören machen Sie nur Notizen, nach dem zweiten Hören beantworten Sie die Fragen.",
+   "voices": {
+    "M": {
+     "voice": "ash",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Freundlich und klar wie ein Radiomoderator.",
+     "name": "Moderator"
+    },
+    "E": {
+     "voice": "coral",
+     "style": "Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung. Sachlich, kompetent, in normalem Sprechtempo, wie eine Expertin im Interview.",
+     "name": "Mag. Ursula Wolf, Umweltberatung"
+    }
+   },
+   "lines": [
+    [
+     "M",
+     "Im durchschnittlichen österreichischen Haushalt stehen über zehn verschiedene Putzmittel. Braucht man die alle? Ursula Wolf von der Umweltberatung, was sagen Sie?"
+    ],
+    [
+     "E",
+     "Ganz klar: nein. Für fast alle Aufgaben reichen vier Mittel: ein Allzweckreiniger, ein Spülmittel, ein Scheuermittel und ein Mittel gegen Kalk, zum Beispiel Essig- oder Zitronensäure. Spezialreiniger für jede Oberfläche sind meistens Geldverschwendung."
+    ],
+    [
+     "M",
+     "Sind starke Reiniger nicht gründlicher?"
+    ],
+    [
+     "E",
+     "Nicht unbedingt. Viele aggressive Mittel, etwa Desinfektionsmittel oder chlorhaltige Reiniger, sind im normalen Haushalt überflüssig. Sie belasten das Abwasser und können die Atemwege reizen. Gefährlich wird es vor allem, wenn man verschiedene Mittel mischt. Wenn Chlorreiniger und säurehaltige Mittel zusammenkommen, kann giftiges Chlorgas entstehen."
+    ],
+    [
+     "M",
+     "Und wie erkennt man umweltfreundliche Produkte?"
+    ],
+    [
+     "E",
+     "Am besten an einem Umweltzeichen, etwa dem Österreichischen Umweltzeichen oder dem EU-Ecolabel. Und ein Tipp: Viele Menschen nehmen viel zu viel Putzmittel. Halten Sie sich an die Dosierung auf der Packung, dann sparen Sie Geld und schonen die Umwelt."
+    ]
+   ],
+   "tasks": [
+    {
+     "t": "mc",
+     "q": "Wie viele Putzmittel braucht man laut Frau Wolf für fast alle Aufgaben?",
+     "o": [
+      "zwei",
+      "vier",
+      "zehn"
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Desinfektionsmittel sind laut Frau Wolf im normalen Haushalt notwendig.",
+     "a": "f",
+     "two": true,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was kann entstehen, wenn man Chlorreiniger und säurehaltige Mittel mischt?",
+     "a": "giftiges Chlorgas"
+    },
+    {
+     "t": "open",
+     "q": "Woran erkennt man umweltfreundliche Produkte?",
+     "a": "an einem Umweltzeichen (Österreichisches Umweltzeichen, EU-Ecolabel)"
+    },
+    {
+     "t": "mc",
+     "q": "Welchen Fehler machen laut Frau Wolf viele Menschen?",
+     "o": [
+      "Sie putzen zu selten.",
+      "Sie nehmen zu viel Putzmittel.",
+      "Sie kaufen zu billige Mittel."
+     ],
+     "a": 1,
+     "ex": ""
+    }
+   ]
   }
  ]
 }

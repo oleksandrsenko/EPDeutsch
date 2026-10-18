@@ -1584,6 +1584,1127 @@
    "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
    "words": 224,
    "minutes": 11
+  },
+  {
+   "id": "citizen_science",
+   "level": "B2+",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.3",
+   "kicker": "Wissenschaft",
+   "title": "Forschen ohne Doktortitel: Wie Laien der Wissenschaft helfen",
+   "lead": "Ob Vögel zählen, Sterne klassifizieren oder Flusswasser testen: Immer mehr Menschen beteiligen sich in ihrer Freizeit an echten Forschungsprojekten. Die Wissenschaft profitiert – aber nicht nur sie.",
+   "paras": [
+    "Jeden Samstagmorgen steht Martina Holzer mit einem Fernglas am Ufer der Alten Donau. Die pensionierte Volksschullehrerin zählt Wasservögel und trägt ihre Beobachtungen in eine App ein. „Früher bin ich hier einfach spazieren gegangen, heute weiß ich, welche Arten im Winter aus dem Norden zu uns kommen“, erzählt sie. Ihre Daten landen bei einem Forschungsteam der Universität Wien, das die Auswirkungen des Klimawandels auf Zugvögel untersucht.",
+    "Holzer ist eine von Tausenden sogenannten Citizen Scientists in Österreich. Der Begriff bezeichnet Bürgerinnen und Bürger, die ohne wissenschaftliche Ausbildung an Forschungsprojekten mitwirken. Die Plattform „Österreich forscht“ listet inzwischen weit über hundert solcher Projekte – von der Erfassung von Straßenkatzen über die Analyse alter Tagebücher bis zur Messung von Mikroplastik in Bächen.",
+    "Für die Forschung ist diese Hilfe oft unverzichtbar. „Kein Institut könnte es sich leisten, an Hunderten Orten gleichzeitig Messungen durchzuführen“, sagt die Ökologin Sabine Reiter. Gerade bei Fragen, die große Räume oder lange Zeiträume betreffen, liefern Freiwillige Datenmengen, die anders nicht zu bekommen wären. Manche Projekte haben dadurch Ergebnisse erzielt, die in renommierten Fachzeitschriften veröffentlicht wurden.",
+    "Kritikerinnen und Kritiker weisen allerdings auf Schwächen hin. Laien machen häufiger Fehler beim Bestimmen von Arten oder beim Ablesen von Messgeräten. Seriöse Projekte setzen deshalb auf Schulungen, klare Anleitungen und eine Kontrolle der Daten durch Fachleute. Zudem wird diskutiert, ob Freiwillige nicht als billige Arbeitskräfte missbraucht werden, wenn Forschungsbudgets knapp sind.",
+    "Befürworter sehen in der Bürgerwissenschaft dagegen vor allem eine Chance, das Vertrauen in die Forschung zu stärken. Wer selbst Daten sammelt, versteht besser, wie wissenschaftliche Erkenntnisse entstehen – und warum sie manchmal vorläufig sind. In Zeiten, in denen Fakten in sozialen Medien schnell infrage gestellt werden, sei das ein unterschätzter Wert, meint Reiter.",
+    "Martina Holzer denkt über solche Debatten wenig nach. Sie freut sich, wenn im Frühjahr der Bericht des Projekts erscheint und sie darin „ihre“ Zählstelle wiederfindet. „Ich habe das Gefühl, etwas Sinnvolles beizutragen“, sagt sie. „Und ich bin jede Woche an der frischen Luft.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Martina Holzer hat Biologie studiert.",
+     "a": "f",
+     "ex": "Absatz 1: Sie ist pensionierte Volksschullehrerin."
+    },
+    {
+     "t": "tf",
+     "q": "Auf der Plattform „Österreich forscht“ gibt es mehr als hundert Projekte.",
+     "a": "r",
+     "ex": "Absatz 2: „weit über hundert solcher Projekte“."
+    },
+    {
+     "t": "mc",
+     "q": "Warum ist die Hilfe von Freiwilligen laut Sabine Reiter wichtig?",
+     "o": [
+      "Weil Freiwillige genauer messen als Fachleute.",
+      "Weil Institute nicht überall gleichzeitig messen können.",
+      "Weil Forschung dadurch keine Kosten mehr verursacht."
+     ],
+     "a": 1,
+     "ex": "Absatz 3: „Kein Institut könnte es sich leisten …“"
+    },
+    {
+     "t": "mc",
+     "q": "Wie sichern seriöse Projekte die Qualität der Daten?",
+     "o": [
+      "Sie bezahlen die Freiwilligen besser.",
+      "Sie arbeiten nur mit Studierenden.",
+      "Sie schulen die Teilnehmenden und lassen Fachleute die Daten prüfen."
+     ],
+     "a": 2,
+     "ex": "Absatz 4: Schulungen, Anleitungen, Kontrolle durch Fachleute."
+    },
+    {
+     "t": "tf",
+     "q": "Einige Ergebnisse von Bürgerprojekten wurden in Fachzeitschriften veröffentlicht.",
+     "a": "r",
+     "ex": "Absatz 3, letzter Satz."
+    },
+    {
+     "t": "tf",
+     "q": "Die meisten Citizen Scientists in Österreich sind Pensionistinnen und Pensionisten.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 3–5 die passende Überschrift zu. Eine Überschrift bleibt übrig.",
+     "paras": [
+      3,
+      4,
+      5
+     ],
+     "heads": [
+      "Mehr Vertrauen durch Mitmachen",
+      "Daten, die sonst fehlen würden",
+      "Wenn Forschung Geld verdient",
+      "Fehlerquellen und Bedenken"
+     ],
+     "a": [
+      1,
+      3,
+      0
+     ],
+     "ex": "3: Datenmengen; 4: Schwächen; 5: Vertrauen."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Vorteile der Bürgerwissenschaft, die im Text genannt werden.",
+     "a": "große Datenmengen an vielen Orten; mehr Vertrauen in die Forschung / besseres Verständnis, wie Wissenschaft funktioniert"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 320,
+   "minutes": 13
+  },
+  {
+   "id": "fleischlos",
+   "level": "B2",
+   "topic": "Gesundheit",
+   "wt": "2.1",
+   "kicker": "Ernährung",
+   "title": "Weniger Schnitzel, mehr Linsen: Österreich isst anders",
+   "lead": "Der Fleischkonsum in Österreich sinkt langsam, pflanzliche Alternativen boomen. Doch zwischen guten Vorsätzen und dem Teller im Wirtshaus liegt oft ein weiter Weg.",
+   "paras": [
+    "Wer in Wien mittags durch die Innenstadt geht, sieht ein neues Bild: Neben dem klassischen Wiener Schnitzel bieten immer mehr Lokale vegetarische Menüs an, und vor manchen veganen Imbissen bilden sich lange Schlangen. Auch in den Supermärkten sind die Regale mit pflanzlichen Burgern, Haferdrinks und Tofu in den letzten Jahren deutlich länger geworden.",
+    "Die Zahlen bestätigen den Trend, wenn auch weniger deutlich, als man vermuten könnte. Statistiken zufolge essen Österreicherinnen und Österreicher pro Kopf und Jahr immer noch rund 58 Kilogramm Fleisch – etwas weniger als vor zehn Jahren, aber mehr als doppelt so viel, wie Ernährungsfachleute empfehlen. Besonders Männer und ältere Menschen greifen gern zu Wurst und Braten.",
+    "Die Gründe für den Verzicht sind vielfältig. Junge Menschen nennen in Umfragen am häufigsten den Klimaschutz: Die Produktion von Rindfleisch verursacht ein Vielfaches an Treibhausgasen im Vergleich zu Hülsenfrüchten. Andere achten auf ihre Gesundheit oder lehnen die Massentierhaltung ab. Viele bezeichnen sich als „Flexitarier“ – sie essen bewusst weniger, aber nicht gar kein Fleisch.",
+    "Bei den Ersatzprodukten scheiden sich allerdings die Geister. Ernährungsberaterin Katharina Pichler warnt davor, sie automatisch für gesund zu halten. „Viele Fleischalternativen sind stark verarbeitet und enthalten viel Salz und Zusatzstoffe“, erklärt sie. Wer sich pflanzlich ernähren wolle, solle lieber zu Bohnen, Linsen, Nüssen und Vollkorn greifen und selbst kochen.",
+    "Auch für die Landwirtschaft bedeutet der Wandel eine Herausforderung. Viele Betriebe in Österreich leben von der Tierhaltung, und Bauernvertreter fordern Unterstützung bei der Umstellung. Gleichzeitig entdecken einzelne Höfe neue Nischen: Sie bauen Soja, Kichererbsen oder Hafer an, die in heimischen Fabriken zu Lebensmitteln verarbeitet werden.",
+    "Ob das Schnitzel seinen Platz als Nationalgericht verlieren wird, darf bezweifelt werden. Doch die Ernährung wird vielfältiger. „Es geht nicht um Verbote“, sagt Pichler, „sondern darum, dass Fleisch wieder etwas Besonderes wird – und nicht jeden Tag auf dem Teller liegt.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "In vielen Wiener Lokalen gibt es inzwischen vegetarische Gerichte.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "tf",
+     "q": "Der Fleischkonsum in Österreich hat sich in zehn Jahren halbiert.",
+     "a": "f",
+     "ex": "Absatz 2: nur „etwas weniger“."
+    },
+    {
+     "t": "mc",
+     "q": "Welchen Grund nennen junge Menschen am häufigsten?",
+     "o": [
+      "den Preis von Fleisch",
+      "den Klimaschutz",
+      "Allergien"
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist ein „Flexitarier“?",
+     "o": [
+      "Jemand, der nie Fleisch isst.",
+      "Jemand, der bewusst weniger Fleisch isst.",
+      "Jemand, der nur Bio-Fleisch kauft."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Katharina Pichler empfiehlt vor allem Fleischersatzprodukte aus dem Supermarkt.",
+     "a": "f",
+     "ex": "Absatz 4: lieber Bohnen, Linsen, selbst kochen."
+    },
+    {
+     "t": "tf",
+     "q": "Manche Bauernhöfe bauen jetzt Hülsenfrüchte und Hafer an.",
+     "a": "r",
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "tf",
+     "q": "Vegane Restaurants sind in Wien teurer als traditionelle Wirtshäuser.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Pichler das eigentliche Ziel – Verbot oder etwas anderes?",
+     "a": "kein Verbot: Fleisch soll wieder etwas Besonderes sein und nicht täglich gegessen werden"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 298,
+   "minutes": 13
+  },
+  {
+   "id": "sitzen",
+   "level": "B2",
+   "topic": "Gesundheit",
+   "wt": "2.2",
+   "kicker": "Körper",
+   "title": "Sitzen ist das neue Rauchen? Was langes Sitzen mit dem Körper macht",
+   "lead": "Im Büro, im Hörsaal, im Auto und am Abend auf der Couch: Viele Menschen verbringen den Großteil des Tages im Sitzen. Mediziner warnen – und haben überraschend einfache Ratschläge.",
+   "paras": [
+    "Acht Stunden am Schreibtisch, eine Stunde im Auto oder in der U-Bahn, danach drei Stunden vor dem Bildschirm: So oder ähnlich sieht der Alltag vieler Erwachsener aus. Studien zufolge sitzen Österreicherinnen und Österreicher im Schnitt mehr als neun Stunden pro Tag. Bei Studierenden und Menschen in Büroberufen ist der Wert oft noch höher.",
+    "Für den Körper hat das Folgen. Wenn wir lange sitzen, arbeiten die großen Muskeln in Beinen und Rücken kaum. Der Stoffwechsel verlangsamt sich, und der Blutzucker bleibt nach dem Essen länger erhöht. Langfristig steigt das Risiko für Übergewicht, Diabetes und Herz-Kreislauf-Erkrankungen. Hinzu kommen Rückenschmerzen und Verspannungen im Nacken, die viele Büroangestellte nur zu gut kennen.",
+    "Besonders beunruhigend finden Forscherinnen und Forscher, dass Sport allein das Problem nicht vollständig löst. Wer abends eine Stunde joggt, aber den restlichen Tag fast nur sitzt, hat trotzdem ein erhöhtes Risiko. Entscheidend sei, die Sitzzeit regelmäßig zu unterbrechen, erklärt der Sportmediziner Thomas Gruber. „Der Körper ist für Bewegung gemacht, nicht für acht Stunden Stillstand.“",
+    "Die gute Nachricht: Schon kleine Veränderungen helfen. Gruber empfiehlt, mindestens jede halbe Stunde kurz aufzustehen, Telefonate im Gehen zu führen und Treppen statt Lift zu nehmen. Höhenverstellbare Schreibtische, an denen man abwechselnd sitzen und stehen kann, sind in vielen Firmen inzwischen Standard. Wichtig sei aber nicht das Stehen an sich, sondern der Wechsel der Position.",
+    "Auch Arbeitgeber haben das Thema entdeckt. Manche bieten bewegte Pausen an, in denen Mitarbeitende gemeinsam ein paar Minuten Übungen machen, oder halten Besprechungen im Gehen ab. Solche Maßnahmen kosten wenig, senken aber nachweislich die Zahl der Krankenstände.",
+    "Der Vergleich mit dem Rauchen, der in Medien gern gezogen wird, ist allerdings übertrieben, betont Gruber. Rauchen sei deutlich gefährlicher. „Aber die Botschaft stimmt: Unser Lebensstil hat Nebenwirkungen. Und gegen diese können wir jeden Tag etwas tun.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Laut Text sitzen Erwachsene in Österreich durchschnittlich über neun Stunden am Tag.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Was passiert laut Absatz 2 beim langen Sitzen?",
+     "o": [
+      "Die Beinmuskeln werden stärker.",
+      "Der Stoffwechsel wird langsamer.",
+      "Der Blutzucker sinkt nach dem Essen schneller."
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Wer abends Sport macht, hat kein erhöhtes Risiko mehr.",
+     "a": "f",
+     "ex": "Absatz 3: trotzdem erhöhtes Risiko."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist laut Gruber beim Stehschreibtisch am wichtigsten?",
+     "o": [
+      "möglichst lange zu stehen",
+      "die Position regelmäßig zu wechseln",
+      "den Tisch jeden Tag neu einzustellen"
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "Bewegte Pausen können die Zahl der Krankenstände verringern.",
+     "a": "r",
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "tf",
+     "q": "Gruber hält langes Sitzen für genauso gefährlich wie Rauchen.",
+     "a": "f",
+     "ex": "Absatz 6: Vergleich übertrieben."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich ist ein Stehschreibtisch für alle Büros gesetzlich vorgeschrieben.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Tipps, die der Sportmediziner für den Alltag gibt.",
+     "a": "jede halbe Stunde aufstehen; im Gehen telefonieren; Treppen statt Lift"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 291,
+   "minutes": 13
+  },
+  {
+   "id": "breitensport",
+   "level": "B2+",
+   "topic": "Gesundheit",
+   "wt": "2.4",
+   "kicker": "Sport",
+   "title": "Laufen statt Zuschauen: Der Boom der Hobbysportler",
+   "lead": "Marathonläufe sind in Minuten ausgebucht, Fitnessstudios melden Rekorde. Gleichzeitig kämpfen Sportvereine um Mitglieder. Was ist da los?",
+   "paras": [
+    "Als die Anmeldung für den Vienna City Marathon im Herbst startete, waren die Startplätze für die volle Distanz binnen weniger Tage vergeben. Ähnliches berichten Veranstalter von Trailläufen in den Alpen oder von Radrennen für Hobbysportler. Sport, so scheint es, ist für viele Menschen nicht mehr etwas, das man im Fernsehen anschaut, sondern etwas, das man selbst macht.",
+    "Hinter dem Boom stehen mehrere Entwicklungen. Gesundheit ist zu einem zentralen Wert geworden, und Sportuhren sowie Apps machen Fortschritte messbar: Wer seine Laufzeiten, Puls und Kalorien aufzeichnet, bleibt eher am Ball. Dazu kommt die soziale Komponente. In Laufgruppen und Online-Communities motivieren sich Menschen gegenseitig und teilen ihre Erfolge.",
+    "Von dieser Begeisterung profitieren aber nicht alle. Klassische Sportvereine – vom Fußballklub im Dorf bis zum Turnverein in der Stadt – klagen über sinkende Mitgliederzahlen, vor allem bei Erwachsenen. Viele Menschen wollen flexibel trainieren, wann es ihnen passt, und sich nicht an feste Trainingszeiten oder Ehrenämter binden. „Der Trend geht vom Verein zum Individualsport“, sagt der Sportsoziologe Michael Wallner.",
+    "Das hat Folgen, die über den Sport hinausgehen. Vereine erfüllen wichtige soziale Aufgaben: Kinder lernen dort Teamgeist, Zugezogene finden Anschluss, ältere Menschen bleiben aktiv. Wenn die Ehrenamtlichen fehlen, die Trainings leiten und Turniere organisieren, müssen manche Vereine Angebote streichen – besonders auf dem Land.",
+    "Einige Vereine reagieren mit neuen Konzepten. Sie bieten Kurse ohne Mitgliedschaft an, gründen Laufgruppen mit flexiblen Treffpunkten oder öffnen ihre Anlagen für Menschen, die nur gelegentlich vorbeikommen wollen. Auch die Politik ist gefragt: Sportstätten müssten für alle zugänglich und leistbar bleiben, fordert Wallner.",
+    "Ein weiteres Problem: Der Boom erreicht nicht alle Bevölkerungsgruppen gleichermaßen. Menschen mit niedrigem Einkommen treiben deutlich seltener Sport als gut verdienende. Teure Ausrüstung, Startgebühren und Mitgliedsbeiträge können zur Hürde werden. Wer will, dass Bewegung wirklich ein Massenphänomen wird, müsse auch hier ansetzen."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Die Startplätze für den Wiener Marathon waren schnell vergeben.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Rolle spielen Sportuhren und Apps laut Text?",
+     "o": [
+      "Sie ersetzen den Trainer.",
+      "Sie machen Fortschritte sichtbar und motivieren.",
+      "Sie machen Sport billiger."
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Sportvereine verzeichnen vor allem bei Kindern weniger Mitglieder.",
+     "a": "f",
+     "ex": "Absatz 3: vor allem bei Erwachsenen."
+    },
+    {
+     "t": "mc",
+     "q": "Warum treten laut Text weniger Menschen Vereinen bei?",
+     "o": [
+      "Weil Vereine zu teuer geworden sind.",
+      "Weil sie flexibel trainieren und sich nicht binden wollen.",
+      "Weil es zu wenige Sportplätze gibt."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Vereine helfen auch Zugezogenen, Kontakte zu finden.",
+     "a": "r",
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "Die Regierung hat bereits neue Förderungen für Sportvereine beschlossen.",
+     "a": "n",
+     "ex": "Wallner fordert nur; über Beschlüsse sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 4–6 die passende Überschrift zu. Eine Überschrift bleibt übrig.",
+     "paras": [
+      4,
+      5,
+      6
+     ],
+     "heads": [
+      "Neue Wege für alte Vereine",
+      "Sport als Frage des Geldbeutels",
+      "Mehr als nur Training",
+      "Rekorde im Profisport"
+     ],
+     "a": [
+      2,
+      0,
+      1
+     ],
+     "ex": "4: soziale Aufgaben; 5: neue Konzepte; 6: Einkommen."
+    },
+    {
+     "t": "open",
+     "q": "Welche Hürden für Menschen mit niedrigem Einkommen nennt der Text?",
+     "a": "teure Ausrüstung, Startgebühren, Mitgliedsbeiträge"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 293,
+   "minutes": 13
+  },
+  {
+   "id": "zeitdruck",
+   "level": "C1",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.4",
+   "kicker": "Zeit",
+   "title": "Immer in Eile: Warum uns die Zeit davonläuft",
+   "lead": "Wir haben Geschirrspüler, Lieferdienste und Smartphones, die uns Wege ersparen. Trotzdem klagen so viele Menschen wie nie über Zeitnot. Ein Soziologe erklärt das Paradox.",
+   "paras": [
+    "„Ich habe keine Zeit“ gehört zu den meistgesagten Sätzen unserer Epoche. In Umfragen gibt mehr als die Hälfte der Erwerbstätigen an, sich häufig gehetzt zu fühlen. Dabei verfügen wir über so viele zeitsparende Technologien wie keine Generation vor uns. Wie passt das zusammen?",
+    "Der Soziologe Hartmut Rosa spricht in diesem Zusammenhang von „sozialer Beschleunigung“. Gemeint ist, dass technische Neuerungen zwar einzelne Tätigkeiten verkürzen, gleichzeitig aber die Zahl der Tätigkeiten wächst. Eine E-Mail ist schneller geschrieben als ein Brief – doch wir schreiben heute ein Vielfaches an Nachrichten. Die gewonnene Zeit wird sofort wieder verplant.",
+    "Hinzu kommt die ständige Erreichbarkeit. Wer abends noch schnell die beruflichen Nachrichten checkt, ist gedanklich nie ganz frei. Psychologinnen beobachten, dass vor allem die Unterbrechungen belasten: Jede Benachrichtigung reißt uns aus der Konzentration, und es dauert oft Minuten, bis wir wieder voll bei der Sache sind. Am Ende des Tages haben wir viel getan, aber wenig erledigt.",
+    "Auch die Freizeit ist von dieser Logik nicht verschont. Sie wird zunehmend wie ein Projekt behandelt, das möglichst effizient gestaltet werden soll: Sport, Treffen mit Freunden, Weiterbildung und Kultur sollen in wenigen freien Stunden Platz finden. Das Gefühl, etwas zu verpassen, ist ein ständiger Begleiter – in der Fachsprache als „Fear of missing out“ bekannt.",
+    "Was hilft? Zeitmanagement-Ratgeber versprechen Abhilfe durch bessere Planung, doch Kritiker halten das für Symptombekämpfung. Wer noch effizienter wird, schafft nur Platz für weitere Aufgaben. Sinnvoller sei es, bewusst Prioritäten zu setzen und manches wegzulassen. Einige Unternehmen experimentieren mit festen Zeiten ohne Meetings oder mit Regeln, nach Dienstschluss keine E-Mails zu verschicken.",
+    "Am Ende, so Rosa, gehe es nicht nur um Minuten und Stunden, sondern um die Qualität unserer Beziehung zur Welt. Momente, in denen wir ganz in einer Tätigkeit aufgehen – beim Musizieren, beim Gespräch, beim Wandern –, empfinden wir nicht als verlorene, sondern als erfüllte Zeit. Davon mehr zu haben, sei vielleicht das wichtigere Ziel als jede Effizienzsteigerung."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Laut Umfragen fühlt sich mehr als die Hälfte der Berufstätigen oft gehetzt.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Was meint Rosa mit „sozialer Beschleunigung“?",
+     "o": [
+      "Dass Menschen heute schneller gehen und sprechen.",
+      "Dass Technik Zeit spart, die Zahl der Aufgaben aber steigt.",
+      "Dass die Arbeitszeit gesetzlich verkürzt wurde."
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Was belastet laut Psychologinnen besonders?",
+     "o": [
+      "lange Arbeitswege",
+      "die häufigen Unterbrechungen",
+      "zu wenig Urlaub"
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Die Freizeit bleibt laut Text von Effizienzdenken unberührt.",
+     "a": "f",
+     "ex": "Absatz 4: auch die Freizeit ist nicht verschont."
+    },
+    {
+     "t": "tf",
+     "q": "Kritiker halten bessere Planung allein für keine echte Lösung.",
+     "a": "r",
+     "ex": "Absatz 5: „Symptombekämpfung“."
+    },
+    {
+     "t": "tf",
+     "q": "Rosa empfiehlt, das Smartphone ganz abzuschaffen.",
+     "a": "n",
+     "ex": "Davon ist im Text nicht die Rede."
+    },
+    {
+     "t": "head",
+     "q": "Welche Überschrift passt zu den Absätzen 2, 3 und 6? Zwei Überschriften bleiben übrig.",
+     "paras": [
+      2,
+      3,
+      6
+     ],
+     "heads": [
+      "Gewonnene Zeit ist schnell wieder weg",
+      "Ratgeber als sichere Lösung",
+      "Abgelenkt, aber beschäftigt",
+      "Erfüllte statt gesparte Zeit",
+      "Freizeit verliert an Bedeutung"
+     ],
+     "a": [
+      0,
+      2,
+      3
+     ],
+     "ex": "2: neue Aufgaben füllen die Zeit; 3: Unterbrechungen; 6: erfüllte Momente."
+    },
+    {
+     "t": "open",
+     "q": "Welche Maßnahmen von Unternehmen werden im Text genannt?",
+     "a": "feste Zeiten ohne Meetings; keine E-Mails nach Dienstschluss"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 315,
+   "minutes": 13
+  },
+  {
+   "id": "ehrenzeit",
+   "level": "B2",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "3.5",
+   "kicker": "Freizeit",
+   "title": "Gärtnern, Stricken, Brettspiele: Das analoge Hobby feiert ein Comeback",
+   "lead": "Nach Jahren am Bildschirm suchen junge Menschen in ihrer Freizeit wieder etwas zum Anfassen. Handarbeitskurse sind ausgebucht, Gemeinschaftsgärten haben Wartelisten.",
+   "paras": [
+    "Dienstagabend in einem Hinterhof in Wien-Neubau: Zwölf Frauen und drei Männer zwischen 20 und 35 sitzen an langen Tischen und stricken. Es wird gelacht, Tee getrunken und gelegentlich eine verlorene Masche gesucht. Der Kurs ist seit Monaten ausgebucht. „Ich sitze den ganzen Tag vor dem Laptop“, sagt die Grafikerin Jana. „Hier mache ich etwas mit den Händen und sehe am Ende, was ich geschafft habe.“",
+    "Jana ist mit diesem Wunsch nicht allein. Nach den Jahren der Pandemie, in denen sich viele Menschen zu Hause neue Beschäftigungen suchen mussten, haben analoge Hobbys einen erstaunlichen Aufschwung erlebt. Brettspielcafés eröffnen in allen größeren Städten, Töpferkurse sind begehrt, und die Nachfrage nach Parzellen in Gemeinschaftsgärten übersteigt in Wien das Angebot bei Weitem.",
+    "Psychologen sehen darin eine Gegenbewegung zur Digitalisierung. Tätigkeiten, bei denen man sich auf eine Sache konzentriert und mit den Händen arbeitet, wirken nachweislich entspannend. Sie senken den Stresspegel und können sogar ähnlich wirken wie Meditation. Außerdem liefern sie ein sichtbares Ergebnis – etwas, das im digitalen Berufsalltag oft fehlt.",
+    "Ein weiterer Grund ist das Bedürfnis nach Gemeinschaft. In Gemeinschaftsgärten teilen sich Nachbarinnen und Nachbarn Werkzeug, tauschen Samen und Tipps aus. Brettspielabende bringen Menschen an einen Tisch, die sich sonst nur über Messenger-Dienste schreiben würden. „Man redet wieder miteinander, statt nebeneinander aufs Handy zu schauen“, sagt ein Betreiber eines Spielecafés.",
+    "Ganz ohne Internet kommt der Trend allerdings nicht aus. Viele entdecken neue Hobbys über Videoplattformen, auf denen Anleitungen millionenfach angeschaut werden. Und manche Strickerinnen präsentieren ihre fertigen Pullover stolz in sozialen Netzwerken. Das Analoge und das Digitale, so scheint es, schließen einander nicht aus.",
+    "Für die Kursanbieterinnen ist der Boom ein Glücksfall. Jana jedenfalls plant schon ihr nächstes Projekt: einen Schal für ihre Großmutter, die ihr als Kind das Stricken beibringen wollte. „Damals fand ich es langweilig“, sagt sie und lacht. „Heute ist es mein Lieblingsmoment der Woche.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Der Strickkurs in Wien-Neubau hat noch freie Plätze.",
+     "a": "f",
+     "ex": "Absatz 1: seit Monaten ausgebucht."
+    },
+    {
+     "t": "mc",
+     "q": "Warum besucht Jana den Kurs?",
+     "o": [
+      "Weil ihr Arbeitgeber ihn bezahlt.",
+      "Weil sie nach der Bildschirmarbeit etwas mit den Händen machen will.",
+      "Weil sie Pullover verkaufen möchte."
+     ],
+     "a": 1,
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "tf",
+     "q": "In Wien gibt es mehr Interessierte als Plätze in Gemeinschaftsgärten.",
+     "a": "r",
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Wirkung haben Handarbeiten laut Psychologen?",
+     "o": [
+      "Sie machen müde.",
+      "Sie senken den Stress.",
+      "Sie verbessern das Gedächtnis für Zahlen."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Brettspielcafés sind vor allem bei Pensionisten beliebt.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "tf",
+     "q": "Der Trend zu analogen Hobbys verzichtet völlig auf das Internet.",
+     "a": "f",
+     "ex": "Absatz 5: Anleitungen in Videoplattformen, Fotos in sozialen Netzwerken."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Gründe für den Erfolg analoger Hobbys.",
+     "a": "Entspannung/weniger Stress; sichtbares Ergebnis; Gemeinschaft, man redet miteinander"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 305,
+   "minutes": 12
+  },
+  {
+   "id": "mehrsprachig",
+   "level": "B2+",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "4.2",
+   "kicker": "Sprache",
+   "title": "Zuhause Türkisch, in der Schule Deutsch: Mehrsprachigkeit als Chance",
+   "lead": "Fast jedes dritte Schulkind in Österreich spricht im Alltag eine andere Sprache als Deutsch. Lange galt das als Problem. Sprachwissenschaftlerinnen sehen es anders.",
+   "paras": [
+    "In der Klasse 3b einer Volksschule in Wien-Favoriten werden im Alltag mehr als zehn Sprachen gesprochen: Türkisch, Bosnisch, Arabisch, Rumänisch, Polnisch und noch einige mehr. Unterrichtssprache ist Deutsch, doch in den Pausen klingt es auf dem Gang wie in einer kleinen Weltstadt. Für die Lehrerin ist das Alltag – und zugleich eine Herausforderung.",
+    "Lange Zeit dominierte in der Bildungspolitik die Vorstellung, Kinder müssten möglichst schnell und ausschließlich Deutsch lernen. Eltern wurde mitunter geraten, zu Hause ebenfalls Deutsch zu sprechen, selbst wenn sie es nur unsicher beherrschten. Diese Empfehlung gilt heute in der Forschung als überholt.",
+    "„Eine gut entwickelte Erstsprache ist die beste Grundlage für jede weitere Sprache“, erklärt die Sprachwissenschaftlerin Elif Demir von der Universität Wien. Wer in seiner Familiensprache Geschichten erzählen, Gefühle beschreiben und Zusammenhänge erklären kann, überträgt diese Fähigkeiten leichter auf das Deutsche. Problematisch werde es dagegen, wenn Kinder keine Sprache richtig sicher beherrschen.",
+    "Mehrsprachigkeit hat zudem kognitive Vorteile. Studien deuten darauf hin, dass Kinder, die regelmäßig zwischen Sprachen wechseln, flexibler denken und sich besser auf das Wesentliche konzentrieren können. Im späteren Berufsleben sind zusätzliche Sprachkenntnisse in einer globalisierten Wirtschaft ohnehin ein Vorteil.",
+    "In der Praxis fehlen dafür jedoch oft die Mittel. Muttersprachlicher Unterricht wird in Österreich zwar angeboten, aber meist nur in wenigen Wochenstunden und nicht an allen Schulen. Lehrkräfte wünschen sich mehr Unterstützung, etwa durch zusätzliches Personal oder Fortbildungen zum Umgang mit sprachlicher Vielfalt.",
+    "Die Lehrerin der 3b hat ihren eigenen Weg gefunden. Einmal pro Woche dürfen die Kinder ein Wort aus ihrer Familiensprache an die Tafel schreiben und erklären. „Die Kinder sind stolz darauf, etwas zu können, was die anderen nicht können“, sagt sie. „Und alle lernen, dass Deutsch nicht die einzige Sprache ist, in der man klug sein kann.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "In der Klasse 3b sprechen alle Kinder zu Hause Deutsch.",
+     "a": "f",
+     "ex": "Absatz 1: mehr als zehn Sprachen."
+    },
+    {
+     "t": "tf",
+     "q": "Früher wurde Eltern teilweise empfohlen, zu Hause Deutsch zu sprechen.",
+     "a": "r",
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist laut Elif Demir die beste Basis für das Lernen weiterer Sprachen?",
+     "o": [
+      "möglichst früh Englisch",
+      "eine gut entwickelte Erstsprache",
+      "Nachhilfe ab dem Kindergarten"
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Wann wird es laut Demir problematisch?",
+     "o": [
+      "Wenn ein Kind zwei Sprachen spricht.",
+      "Wenn ein Kind keine Sprache sicher beherrscht.",
+      "Wenn Eltern ihre Muttersprache sprechen."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Muttersprachlicher Unterricht wird an jeder österreichischen Schule angeboten.",
+     "a": "f",
+     "ex": "Absatz 5: nicht an allen Schulen."
+    },
+    {
+     "t": "tf",
+     "q": "Mehrsprachige Kinder haben laut Studien bessere Noten in Mathematik.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 2, 4 und 5 die passende Überschrift zu. Eine bleibt übrig.",
+     "paras": [
+      2,
+      4,
+      5
+     ],
+     "heads": [
+      "Ein überholter Ratschlag",
+      "Gute Idee, wenig Geld",
+      "Mehr Sprachen, flexibleres Denken",
+      "Deutschpflicht in den Pausen"
+     ],
+     "a": [
+      0,
+      2,
+      1
+     ],
+     "ex": "2: alte Empfehlung; 4: Vorteile; 5: fehlende Mittel."
+    },
+    {
+     "t": "open",
+     "q": "Was macht die Lehrerin einmal pro Woche und warum?",
+     "a": "Kinder schreiben ein Wort aus ihrer Familiensprache an die Tafel und erklären es; sie sind stolz, alle lernen, dass man in vielen Sprachen klug sein kann"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 285,
+   "minutes": 13
+  },
+  {
+   "id": "robotik_pflege",
+   "level": "C1",
+   "topic": "Medien",
+   "wt": "4.7",
+   "kicker": "Technik",
+   "title": "Der Roboter bringt das Frühstück: Technik im Pflegeheim",
+   "lead": "Pflegeroboter, smarte Sensoren und digitale Assistenten sollen das überlastete Pflegepersonal entlasten. In einem Pilotprojekt in der Steiermark zeigt sich, was die Technik kann – und wo sie an Grenzen stößt.",
+   "paras": [
+    "Wenn „Lio“ morgens durch die Gänge des Pflegeheims in Graz rollt, drehen sich die Bewohnerinnen und Bewohner nach ihm um. Der gut einen Meter große Roboter bringt Getränke, erinnert an Termine und spielt auf Wunsch Volksmusik. Manche begrüßen ihn mit Namen, andere ignorieren ihn. „Am Anfang hatten viele Angst“, erzählt die Pflegeleiterin. „Heute gehört er dazu.“",
+    "Das Heim ist Teil eines Forschungsprojekts, in dem getestet wird, wie Technik den Pflegealltag verändern kann. Neben dem Roboter kommen Sensoren zum Einsatz, die Stürze erkennen und automatisch Alarm schlagen, sowie Tablets, über die Bewohner mit Angehörigen telefonieren können. Hintergrund ist der massive Personalmangel: Bis 2030 werden in Österreich Zehntausende zusätzliche Pflegekräfte benötigt.",
+    "Die bisherigen Ergebnisse fallen gemischt aus. Bei Routinetätigkeiten wie dem Transport von Wäsche oder Essen spart der Einsatz von Robotern tatsächlich Zeit. Auch die Sturzsensoren haben sich bewährt: In mehreren Fällen konnten Pflegekräfte schneller reagieren als zuvor. Die gewonnene Zeit, so die Hoffnung, könne in Gespräche und persönliche Zuwendung fließen.",
+    "Doch genau hier liegt ein Knackpunkt. Kritikerinnen befürchten, dass Betreiber die Technik nutzen könnten, um Personal einzusparen, statt es zu entlasten. „Ein Roboter kann keine Hand halten und keinen Trost spenden“, sagt eine Vertreterin der Gewerkschaft. Pflege sei Beziehungsarbeit, und die lasse sich nicht automatisieren.",
+    "Hinzu kommen ethische und rechtliche Fragen. Sensoren und Kameras sammeln sensible Daten über den Gesundheitszustand und das Verhalten älterer Menschen. Wer hat Zugriff darauf? Und was ist mit Bewohnerinnen mit Demenz, die nicht mehr verstehen, dass sie mit einer Maschine sprechen? Das Forschungsteam arbeitet deshalb eng mit einer Ethikkommission zusammen.",
+    "Die Pflegeleiterin zieht dennoch eine vorsichtig positive Bilanz. Die Technik sei kein Ersatz für Menschen, wohl aber ein Werkzeug, das richtig eingesetzt den Alltag erleichtere. „Entscheidend ist, wer bestimmt, wofür die gewonnene Zeit verwendet wird“, sagt sie. „Wenn sie bei den Menschen ankommt, haben alle gewonnen.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Alle Bewohner haben den Roboter von Anfang an begeistert aufgenommen.",
+     "a": "f",
+     "ex": "Absatz 1: am Anfang hatten viele Angst."
+    },
+    {
+     "t": "mc",
+     "q": "Was ist der Hauptgrund für das Projekt?",
+     "o": [
+      "sinkende Kosten für Roboter",
+      "der Mangel an Pflegepersonal",
+      "Wünsche der Angehörigen"
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Die Sturzsensoren haben in einigen Fällen zu schnellerer Hilfe geführt.",
+     "a": "r",
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "mc",
+     "q": "Was befürchtet die Gewerkschaft?",
+     "o": [
+      "dass Roboter zu teuer sind",
+      "dass Personal eingespart statt entlastet wird",
+      "dass Bewohner zu viel Musik hören"
+     ],
+     "a": 1,
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "Das Projekt wird von einer Ethikkommission begleitet.",
+     "a": "r",
+     "ex": "Absatz 5."
+    },
+    {
+     "t": "tf",
+     "q": "Das Pflegeheim plant, weitere Roboter zu kaufen.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 3–5 eine Überschrift zu. Eine bleibt übrig.",
+     "paras": [
+      3,
+      4,
+      5
+     ],
+     "heads": [
+      "Zeitgewinn bei Routinearbeit",
+      "Daten, Demenz und Datenschutz",
+      "Roboter ersetzen bald alle Pflegekräfte",
+      "Pflege bleibt Beziehungsarbeit"
+     ],
+     "a": [
+      0,
+      3,
+      1
+     ],
+     "ex": "3: Zeit gespart; 4: Kritik; 5: ethische Fragen."
+    },
+    {
+     "t": "open",
+     "q": "Unter welcher Bedingung sieht die Pflegeleiterin die Technik positiv?",
+     "a": "wenn die gewonnene Zeit den Bewohnern zugutekommt / bei den Menschen ankommt, nicht zum Personalabbau führt"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 300,
+   "minutes": 13
+  },
+  {
+   "id": "mietrecht_jung",
+   "level": "C1",
+   "topic": "Wohnen",
+   "wt": "4.9",
+   "kicker": "Recht",
+   "title": "Zu viel Miete gezahlt? Wie junge Menschen ihr Recht durchsetzen",
+   "lead": "Viele Mietverträge in Österreich enthalten unzulässige Klauseln oder überhöhte Mieten. Doch nur wenige Betroffene wehren sich. Eine Mieterberatung will das ändern.",
+   "paras": [
+    "Als Lukas M. nach drei Jahren aus seiner Altbauwohnung in Wien-Margareten auszog, hatte er eine Ahnung: Für 45 Quadratmeter hatte er knapp 900 Euro im Monat bezahlt – deutlich mehr, als ihm angemessen schien. Eine Mieterberatung prüfte seinen Vertrag und kam zu einem klaren Ergebnis. Die Miete lag weit über dem gesetzlich erlaubten Richtwert. Nach einem Verfahren bekam Lukas mehrere Tausend Euro zurück.",
+    "Fälle wie seiner sind keine Seltenheit. Für viele Altbauwohnungen gilt in Österreich das sogenannte Richtwertsystem, das eine Obergrenze für die Miete festlegt. Zuschläge für Lage oder Ausstattung sind möglich, müssen aber begründet werden. In der Praxis werden diese Regeln häufig nicht eingehalten, wie Beratungsstellen berichten.",
+    "Dass sich so wenige Betroffene wehren, hat mehrere Gründe. Viele kennen ihre Rechte schlicht nicht, denn das Mietrecht gilt als kompliziert. Andere fürchten, während eines laufenden Mietverhältnisses Ärger mit dem Vermieter zu bekommen oder bei befristeten Verträgen keine Verlängerung zu erhalten. Gerade junge Menschen, die oft befristet wohnen, sind daher in einer schwachen Position.",
+    "Juristinnen raten dennoch dazu, den Vertrag prüfen zu lassen – im Idealfall schon vor der Unterschrift. Mietervereinigungen und die Arbeiterkammer bieten Beratungen an, teils kostenlos. Wichtig sei, Unterlagen wie Vertrag, Zahlungsbestätigungen und Fotos vom Zustand der Wohnung aufzubewahren. Rückforderungen sind zudem an Fristen gebunden, die man nicht verstreichen lassen sollte.",
+    "Die Vermieterseite sieht die Lage naturgemäß anders. Vertreter der Immobilienwirtschaft kritisieren, das Richtwertsystem sei realitätsfern und mache Sanierungen von Altbauten unattraktiv. Wer investiere, müsse auch angemessene Erträge erzielen können. Eine Reform des Mietrechts wird seit Jahren gefordert, scheitert aber regelmäßig an politischen Differenzen.",
+    "Lukas hat mit seinem Geld inzwischen die Kaution für eine neue Wohnung bezahlt. Den Mietvertrag hat er diesmal vorher prüfen lassen. „Ich dachte immer, man kann eh nichts machen“, sagt er. „Jetzt weiß ich: Man muss nur wissen, wo man sich Hilfe holt.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Lukas hat nach dem Verfahren Geld zurückbekommen.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Was regelt das Richtwertsystem?",
+     "o": [
+      "die Dauer von Mietverträgen",
+      "eine Obergrenze für die Miete bestimmter Altbauwohnungen",
+      "die Höhe der Kaution"
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Zuschläge zur Richtwertmiete sind grundsätzlich verboten.",
+     "a": "f",
+     "ex": "Absatz 2: möglich, müssen aber begründet werden."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind junge Menschen laut Text in einer schwachen Position?",
+     "o": [
+      "Weil sie oft befristete Verträge haben.",
+      "Weil sie mehr Miete zahlen dürfen.",
+      "Weil sie keine Beratung bekommen dürfen."
+     ],
+     "a": 0,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Beratungen der Arbeiterkammer kosten immer Geld.",
+     "a": "f",
+     "ex": "Absatz 4: teils kostenlos."
+    },
+    {
+     "t": "tf",
+     "q": "Die Mietrechtsreform wurde im vergangenen Jahr beschlossen.",
+     "a": "f",
+     "ex": "Absatz 5: scheitert regelmäßig."
+    },
+    {
+     "t": "tf",
+     "q": "Lukas zahlt in der neuen Wohnung weniger Miete als vorher.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "open",
+     "q": "Welche Unterlagen sollte man laut Juristinnen aufbewahren?",
+     "a": "Mietvertrag, Zahlungsbestätigungen, Fotos vom Zustand der Wohnung"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 298,
+   "minutes": 13
+  },
+  {
+   "id": "religion_jugend",
+   "level": "C1",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.10",
+   "kicker": "Religion",
+   "title": "Glauben ohne Kirche? Junge Menschen und die Religion",
+   "lead": "Die Zahl der Kirchenaustritte in Österreich ist hoch, vor allem unter jungen Erwachsenen. Doch wer genauer hinsieht, entdeckt keine glaubenslose Generation, sondern eine, die anders sucht.",
+   "paras": [
+    "Jedes Jahr treten in Österreich Zehntausende Menschen aus der katholischen Kirche aus. Besonders häufig sind es Menschen zwischen 20 und 35 Jahren. Als Gründe nennen sie in Umfragen den Kirchenbeitrag, Skandale um Missbrauch sowie die Haltung der Kirche zu Themen wie Gleichberechtigung und Sexualität. Viele sagen auch schlicht, Religion spiele in ihrem Leben keine Rolle.",
+    "Wer daraus schließt, junge Menschen hätten mit Spiritualität nichts mehr am Hut, greift jedoch zu kurz. Studien zeigen, dass ein beträchtlicher Teil der Jugendlichen an „etwas Höheres“ glaubt, auch wenn er keiner Religionsgemeinschaft angehört. Fragen nach dem Sinn des Lebens, nach Tod und Gerechtigkeit beschäftigen die Generation nicht weniger als frühere.",
+    "Die Formen haben sich allerdings gewandelt. Statt am Sonntag in die Messe zu gehen, praktizieren manche Yoga oder Meditation, pilgern auf dem Jakobsweg oder suchen in der Natur nach Ruhe. Religionssoziologen sprechen von einer „Individualisierung des Glaubens“: Menschen stellen sich ihre Überzeugungen selbst zusammen, statt eine Lehre als Ganzes zu übernehmen.",
+    "Gleichzeitig ist die religiöse Landschaft in Österreich vielfältiger geworden. Muslimische, orthodoxe und freikirchliche Gemeinden wachsen, zum Teil durch Zuwanderung. Für viele junge Menschen aus diesen Familien ist Religion ein wichtiger Teil ihrer Identität. In Schulen und Universitäten treffen damit sehr unterschiedliche Haltungen aufeinander, was Gesprächsbedarf, aber auch Konflikte erzeugt.",
+    "Die großen Kirchen versuchen, auf den Wandel zu reagieren. Pfarren bieten Jugendgottesdienste mit moderner Musik an, sind in sozialen Netzwerken präsent oder engagieren sich sichtbar in der Flüchtlingshilfe und im Klimaschutz. Ob das den Trend umkehren kann, ist fraglich. Fachleute betonen aber, dass die soziale Arbeit kirchlicher Organisationen auch von Ausgetretenen geschätzt wird.",
+    "Der Religionspädagoge Andreas Köhler sieht in der Entwicklung weniger einen Verlust als einen Auftrag. „Junge Menschen wollen ernst genommen werden mit ihren Fragen“, sagt er. „Wer ihnen fertige Antworten vorsetzt, verliert sie. Wer mit ihnen nachdenkt, findet offene Ohren.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Kirchenaustritte betreffen vor allem Menschen über 60.",
+     "a": "f",
+     "ex": "Absatz 1: besonders zwischen 20 und 35."
+    },
+    {
+     "t": "mc",
+     "q": "Was zeigen Studien laut Absatz 2?",
+     "o": [
+      "Junge Menschen interessieren sich nicht für Sinnfragen.",
+      "Viele Jugendliche glauben an etwas Höheres, auch ohne Religionsgemeinschaft.",
+      "Die meisten Jugendlichen gehen regelmäßig in die Kirche."
+     ],
+     "a": 1,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Was bedeutet „Individualisierung des Glaubens“?",
+     "o": [
+      "Menschen stellen sich ihren Glauben selbst zusammen.",
+      "Jeder Mensch gründet eine eigene Kirche.",
+      "Religion wird nur noch zu Hause praktiziert."
+     ],
+     "a": 0,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Muslimische und orthodoxe Gemeinden in Österreich wachsen.",
+     "a": "r",
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "Jugendgottesdienste haben den Trend zu Austritten bereits umgekehrt.",
+     "a": "f",
+     "ex": "Absatz 5: „ob das den Trend umkehren kann, ist fraglich“."
+    },
+    {
+     "t": "tf",
+     "q": "Die Kirche erhält mehr Geld vom Staat als früher.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "open",
+     "q": "Was rät Andreas Köhler im Umgang mit jungen Menschen?",
+     "a": "ihre Fragen ernst nehmen, gemeinsam nachdenken statt fertige Antworten vorzugeben"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 298,
+   "minutes": 12
+  },
+  {
+   "id": "gletscher",
+   "level": "B2+",
+   "topic": "Umwelt und Verkehr",
+   "wt": "5.1",
+   "kicker": "Umwelt",
+   "title": "Abschied vom ewigen Eis: Österreichs Gletscher schmelzen",
+   "lead": "Die Pasterze am Großglockner verliert jedes Jahr Dutzende Meter an Länge. Glaziologen rechnen damit, dass die meisten österreichischen Gletscher bis zum Ende des Jahrhunderts verschwunden sein werden.",
+   "paras": [
+    "Wer heute vom Besucherzentrum an der Kaiser-Franz-Josefs-Höhe auf die Pasterze blickt, muss weit schauen. Vor hundert Jahren reichte der größte Gletscher Österreichs fast bis an die Aussichtsplattform. Heute führt ein langer Wanderweg mit Schildern hinunter, die anzeigen, wo das Eis in welchem Jahr stand. Die Abstände zwischen den Tafeln werden immer größer.",
+    "Die Messungen des Alpenvereins zeigen ein eindeutiges Bild: Nahezu alle der beobachteten Gletscher in Österreich ziehen sich zurück, viele um mehrere Dutzend Meter pro Jahr. In besonders heißen Sommern verlieren sie zusätzlich deutlich an Dicke. Hauptursache ist die Erwärmung, die in den Alpen etwa doppelt so stark ausfällt wie im weltweiten Durchschnitt.",
+    "Die Folgen reichen weit über das Landschaftsbild hinaus. Gletscher sind Wasserspeicher: Im Sommer geben sie Schmelzwasser ab und versorgen Bäche und Flüsse, auch wenn es wenig regnet. Verschwindet das Eis, könnten in trockenen Monaten künftig Engpässe drohen – für die Landwirtschaft ebenso wie für Wasserkraftwerke, die einen großen Teil des österreichischen Stroms liefern.",
+    "Auch für den Alpinismus ändert sich viel. Wo früher sichere Routen über Firn und Eis führten, liegen heute lose Felsen frei. Steinschlag und Murenabgänge nehmen zu, manche Hütten und Wege müssen verlegt oder gesperrt werden. Bergführerinnen berichten, dass klassische Hochtouren in den heißen Monaten kaum noch zu verantworten seien.",
+    "Lässt sich der Rückgang aufhalten? Für viele kleinere Gletscher kommt nach Einschätzung von Fachleuten jede Hilfe zu spät. Versuche, das Eis im Sommer mit weißen Planen abzudecken, verlangsamen das Schmelzen zwar lokal, etwa in Skigebieten, sind aber teuer und für große Flächen ungeeignet. Entscheidend sei, die globalen Emissionen rasch zu senken, um zumindest einen Teil des Eises in den höchsten Lagen zu erhalten.",
+    "Für die Glaziologin Andrea Fischer sind die Gletscher deshalb auch ein Symbol. „Man sieht hier mit eigenen Augen, was sonst nur in Statistiken steht“, sagt sie. Wer heute auf die Pasterze hinunterschaut, blickt auf ein Stück Landschaft, das die nächste Generation vielleicht nur noch von Fotos kennen wird."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Vor hundert Jahren war die Pasterze größer als heute.",
+     "a": "r",
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Wie stark erwärmen sich die Alpen im Vergleich zum weltweiten Durchschnitt?",
+     "o": [
+      "etwa halb so stark",
+      "etwa gleich stark",
+      "etwa doppelt so stark"
+     ],
+     "a": 2,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind Gletscher als Wasserspeicher wichtig?",
+     "o": [
+      "Sie liefern im Sommer Wasser, auch wenn es wenig regnet.",
+      "Sie verhindern Überschwemmungen im Winter.",
+      "Sie kühlen die Städte im Tal."
+     ],
+     "a": 0,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Steinschlag in den Alpen hat in den letzten Jahren abgenommen.",
+     "a": "f",
+     "ex": "Absatz 4: nimmt zu."
+    },
+    {
+     "t": "tf",
+     "q": "Weiße Planen eignen sich laut Text gut, um große Gletscher zu retten.",
+     "a": "f",
+     "ex": "Absatz 5: für große Flächen ungeeignet."
+    },
+    {
+     "t": "tf",
+     "q": "Die Pasterze wird jedes Jahr von über einer Million Menschen besucht.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 3–5 eine Überschrift zu. Eine bleibt übrig.",
+     "paras": [
+      3,
+      4,
+      5
+     ],
+     "heads": [
+      "Gefährliche Wege für Bergsteiger",
+      "Wenn der Wasserspeicher leer wird",
+      "Skifahren wird billiger",
+      "Planen allein helfen nicht"
+     ],
+     "a": [
+      1,
+      0,
+      3
+     ],
+     "ex": "3: Wasser; 4: Alpinismus; 5: Gegenmaßnahmen."
+    },
+    {
+     "t": "open",
+     "q": "Was ist laut Fachleuten die wichtigste Maßnahme, um einen Teil des Eises zu erhalten?",
+     "a": "die globalen Emissionen rasch senken"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 317,
+   "minutes": 13
+  },
+  {
+   "id": "insekten",
+   "level": "B2+",
+   "topic": "Umwelt und Verkehr",
+   "wt": "5.2",
+   "kicker": "Biologie",
+   "title": "Stille Wiesen: Warum die Insekten verschwinden",
+   "lead": "Früher war die Windschutzscheibe nach einer Sommerfahrt voller Insekten, heute bleibt sie oft sauber. Was viele aus eigener Erfahrung kennen, bestätigen Forscherinnen: Die Zahl der Insekten geht dramatisch zurück.",
+   "paras": [
+    "Es war eine Studie, die vor einigen Jahren international für Aufsehen sorgte: Ehrenamtliche Insektenkundler hatten in deutschen Naturschutzgebieten über Jahrzehnte Fluginsekten gesammelt und gewogen. Das Ergebnis: Die Biomasse war in knapp drei Jahrzehnten um mehr als drei Viertel gesunken. Auch Untersuchungen in Österreich deuten auf einen deutlichen Rückgang hin, vor allem bei Schmetterlingen und Wildbienen.",
+    "Dass das nicht nur Insektenfreunde betrifft, erklärt die Biologin Johanna Leitner. „Insekten bestäuben einen Großteil unserer Nutzpflanzen, zersetzen totes Material und sind Nahrung für Vögel, Fledermäuse und Fische“, sagt sie. Verschwinden die Insekten, gerät das gesamte Ökosystem aus dem Gleichgewicht – mit Folgen auch für die Landwirtschaft.",
+    "Als Hauptursachen gelten der Verlust von Lebensräumen und die intensive Landwirtschaft. Wo früher bunte Blumenwiesen und Hecken standen, dominieren heute vielerorts Monokulturen und häufig gemähte Grünflächen. Pestizide töten nicht nur Schädlinge, sondern auch nützliche Arten. Hinzu kommen die Versiegelung von Böden durch Straßen und Siedlungen sowie die Lichtverschmutzung, die nachtaktive Insekten in die Irre führt.",
+    "Gegenmaßnahmen gibt es durchaus. Gemeinden lassen Straßenränder seltener mähen und säen heimische Wildblumen an. Landwirte erhalten Förderungen, wenn sie Blühstreifen am Rand ihrer Felder anlegen. Und auch in privaten Gärten kann jeder etwas tun: ein Stück Wiese wachsen lassen, auf Gift verzichten, heimische Pflanzen statt exotischer Zierpflanzen setzen.",
+    "Kritikerinnen bemängeln jedoch, dass viele Maßnahmen zu klein seien, um den Trend umzukehren. „Ein paar Blühstreifen ändern nichts, wenn die Landschaft drumherum ausgeräumt bleibt“, sagt Leitner. Nötig sei eine Agrarpolitik, die Artenschutz nicht als Zusatz, sondern als Grundprinzip begreife.",
+    "Immerhin: Wo Lebensräume wiederhergestellt werden, erholen sich Insektenpopulationen oft erstaunlich schnell. „Die Natur ist widerstandsfähiger, als man denkt“, so Leitner. „Aber sie braucht Platz. Und den müssen wir ihr zurückgeben.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Die erwähnte Studie wurde von Freiwilligen über viele Jahre durchgeführt.",
+     "a": "r",
+     "ex": "Absatz 1: ehrenamtliche Insektenkundler, über Jahrzehnte."
+    },
+    {
+     "t": "mc",
+     "q": "Um wie viel ist die Biomasse der Fluginsekten laut Studie gesunken?",
+     "o": [
+      "um etwa ein Viertel",
+      "um etwa die Hälfte",
+      "um mehr als drei Viertel"
+     ],
+     "a": 2,
+     "ex": "Absatz 1."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Funktion von Insekten nennt Leitner NICHT?",
+     "o": [
+      "Bestäubung von Nutzpflanzen",
+      "Nahrung für Vögel",
+      "Produktion von Sauerstoff"
+     ],
+     "a": 2,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "tf",
+     "q": "Lichtverschmutzung schadet laut Text vor allem tagaktiven Insekten.",
+     "a": "f",
+     "ex": "Absatz 3: nachtaktive Insekten."
+    },
+    {
+     "t": "tf",
+     "q": "Landwirte können Geld für Blühstreifen bekommen.",
+     "a": "r",
+     "ex": "Absatz 4."
+    },
+    {
+     "t": "tf",
+     "q": "Leitner hält die bisherigen Maßnahmen für ausreichend.",
+     "a": "f",
+     "ex": "Absatz 5: zu klein."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich sind Pestizide seit Kurzem vollständig verboten.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "open",
+     "q": "Was kann man laut Text im eigenen Garten tun? Nennen Sie zwei Dinge.",
+     "a": "Wiese wachsen lassen; auf Gift verzichten; heimische Pflanzen setzen"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 274,
+   "minutes": 13
+  },
+  {
+   "id": "mikroplastik",
+   "level": "C1",
+   "topic": "Konsumgesellschaft",
+   "wt": "5.3",
+   "kicker": "Chemie",
+   "title": "Unsichtbar und überall: Mikroplastik in unserem Alltag",
+   "lead": "Winzige Kunststoffteilchen finden sich im Meer, in der Donau, im Trinkwasser und sogar im menschlichen Blut. Was wir wissen – und was noch unklar ist.",
+   "paras": [
+    "Als Mikroplastik bezeichnen Fachleute Kunststoffpartikel, die kleiner als fünf Millimeter sind. Ein Teil davon wird gezielt hergestellt, etwa als Schleifmittel in Kosmetik. Der weitaus größere Teil entsteht jedoch, wenn größere Plastikstücke zerfallen: Verpackungen, die in der Natur landen, Reifenabrieb auf der Straße oder Fasern, die sich beim Waschen synthetischer Kleidung lösen.",
+    "Wie verbreitet die Partikel sind, überrascht selbst Forschende. Messungen haben Mikroplastik in der Donau, in Gebirgsseen der Alpen und im Schnee abgelegener Regionen nachgewiesen. Über die Luft werden die leichten Teilchen weit transportiert. Auch in Lebensmitteln wie Meeresfrüchten, Salz und Honig wurden sie gefunden – und schließlich im menschlichen Körper selbst.",
+    "Welche Folgen das für die Gesundheit hat, ist bislang nicht abschließend geklärt. Laborversuche deuten darauf hin, dass sehr kleine Partikel Entzündungen auslösen können. Zudem können sich an der Oberfläche von Kunststoffen Schadstoffe anlagern, und manche Kunststoffe enthalten Zusatzstoffe, die in den Hormonhaushalt eingreifen. „Wir haben ernsthafte Hinweise, aber noch keine Gewissheit“, fasst die Umweltchemikerin Verena Haas den Forschungsstand zusammen.",
+    "Die Europäische Union hat inzwischen reagiert. Absichtlich zugesetztes Mikroplastik in vielen Produkten wird schrittweise verboten, und für Einwegplastik gelten strengere Regeln. Kritiker halten das jedoch für unzureichend, weil die Hauptquellen – Reifenabrieb und der Zerfall von Abfall – kaum erfasst werden.",
+    "Auch technische Lösungen werden erprobt. Kläranlagen können mit zusätzlichen Filterstufen einen Großteil der Partikel zurückhalten, was allerdings teuer ist. Waschmaschinenhersteller entwickeln Filter für Mikrofasern, und Forschungsteams arbeiten an Kunststoffen, die sich in der Umwelt vollständig abbauen. Ein Allheilmittel ist bislang nicht in Sicht.",
+    "Was kann man selbst tun? Haas empfiehlt, Kleidung aus Naturfasern zu bevorzugen, synthetische Textilien seltener und bei niedriger Temperatur zu waschen und Plastikverpackungen zu vermeiden. „Das Problem lässt sich nicht allein im Einkaufswagen lösen“, betont sie. „Aber jedes Stück Plastik, das gar nicht erst entsteht, kann auch nicht zerfallen.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Der größte Teil des Mikroplastiks wird absichtlich hergestellt.",
+     "a": "f",
+     "ex": "Absatz 1: der weitaus größere Teil entsteht durch Zerfall."
+    },
+    {
+     "t": "mc",
+     "q": "Wie gelangt Mikroplastik in abgelegene Regionen?",
+     "o": [
+      "über die Luft",
+      "nur über Flüsse",
+      "durch Touristen"
+     ],
+     "a": 0,
+     "ex": "Absatz 2."
+    },
+    {
+     "t": "mc",
+     "q": "Wie beschreibt Verena Haas den Forschungsstand?",
+     "o": [
+      "Die Gefahr ist eindeutig bewiesen.",
+      "Es gibt ernsthafte Hinweise, aber keine Gewissheit.",
+      "Mikroplastik ist sicher unschädlich."
+     ],
+     "a": 1,
+     "ex": "Absatz 3."
+    },
+    {
+     "t": "tf",
+     "q": "Die EU-Regeln erfassen auch den Reifenabrieb vollständig.",
+     "a": "f",
+     "ex": "Absatz 4: Hauptquellen kaum erfasst."
+    },
+    {
+     "t": "tf",
+     "q": "Zusätzliche Filter in Kläranlagen sind kostengünstig.",
+     "a": "f",
+     "ex": "Absatz 5: teuer."
+    },
+    {
+     "t": "tf",
+     "q": "In Österreich gibt es bereits Waschmaschinen mit gesetzlich vorgeschriebenem Filter.",
+     "a": "n",
+     "ex": "Darüber sagt der Text nichts."
+    },
+    {
+     "t": "head",
+     "q": "Ordnen Sie den Absätzen 2, 3 und 5 eine Überschrift zu. Eine bleibt übrig.",
+     "paras": [
+      2,
+      3,
+      5
+     ],
+     "heads": [
+      "Von den Alpen bis ins Blut",
+      "Viele Fragen, wenige Antworten",
+      "Technik als Teil der Lösung",
+      "Ein einfaches Verbot genügt"
+     ],
+     "a": [
+      0,
+      1,
+      2
+     ],
+     "ex": "2: Verbreitung; 3: Gesundheit unklar; 5: Technik."
+    },
+    {
+     "t": "open",
+     "q": "Nennen Sie zwei Empfehlungen von Haas für den Alltag.",
+     "a": "Naturfasern bevorzugen; synthetische Kleidung seltener und kühler waschen; Plastikverpackungen vermeiden"
+    }
+   ],
+   "src": "Übungstext im Stil eines Artikels aus der Tageszeitung der Standard",
+   "words": 294,
+   "minutes": 13
   }
  ]
 }

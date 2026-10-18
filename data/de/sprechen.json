@@ -495,6 +495,697 @@
    ]
   },
   {
+   "id": "sp_schule_digital",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.1",
+   "kind": "Grafik",
+   "title": "Tablets statt Schulbücher?",
+   "ru": "График: как часто школьники учатся с цифровыми устройствами.",
+   "impulse": "Die Grafik zeigt, wie oft Schülerinnen und Schüler der Oberstufe in Österreich im Unterricht digitale Geräte verwenden.",
+   "chart": {
+    "title": "Nutzung digitaler Geräte im Unterricht (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "täglich",
+      41
+     ],
+     [
+      "mehrmals pro Woche",
+      33
+     ],
+     [
+      "einmal pro Woche",
+      15
+     ],
+     [
+      "seltener",
+      8
+     ],
+     [
+      "nie",
+      3
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Welche Vorteile haben digitale Geräte im Unterricht?",
+    "Welche Nachteile oder Risiken sehen Sie?",
+    "Wie war das in Ihrer Schulzeit?",
+    "Sollten Schulen ganz auf gedruckte Bücher verzichten? Begründen Sie."
+   ],
+   "fragen": [
+    "Sollte man Handys an Schulen verbieten?",
+    "Lernt man mit dem Tablet besser als mit dem Heft?",
+    "Wer sollte die Geräte bezahlen: Eltern oder Staat?",
+    "Brauchen Lehrkräfte mehr digitale Weiterbildung?",
+    "Wie wird die Schule in 20 Jahren aussehen?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_wissenschaft_vertrauen",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "1.3",
+   "kind": "Zitat",
+   "title": "Vertrauen in die Wissenschaft",
+   "ru": "Цитата о доверии к науке.",
+   "impulse": "„Wissenschaft ist nicht eine Sammlung von Wahrheiten, sondern eine Methode, Irrtümer zu korrigieren.“ (frei nach Karl Popper)",
+   "leitfragen": [
+    "Erklären Sie das Zitat mit eigenen Worten.",
+    "Warum vertrauen manche Menschen der Wissenschaft heute weniger?",
+    "Welche Rolle spielen soziale Medien dabei?",
+    "Wie könnten Forschende mehr Vertrauen gewinnen?",
+    "Wie ist das Vertrauen in die Wissenschaft in Ihrem Heimatland?"
+   ],
+   "fragen": [
+    "Sollten Forschungsergebnisse für alle kostenlos zugänglich sein?",
+    "Darf die Wirtschaft Forschung finanzieren?",
+    "Haben Sie selbst schon einmal einer Studie misstraut?",
+    "Sollten Wissenschaftler politisch Stellung nehmen?",
+    "Welche Erfindung der letzten 50 Jahre war am wichtigsten?"
+   ],
+   "redemittel": [
+    "Mit diesem Zitat ist gemeint, dass …",
+    "Ich stimme dem Autor / der Autorin insofern zu, als …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Dagegen spricht, dass …",
+    "Abschließend möchte ich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_ernaehrung",
+   "topic": "Gesundheit",
+   "wt": "2.1",
+   "kind": "Grafik",
+   "title": "Was Österreich isst",
+   "ru": "График: как питаются люди в Австрии.",
+   "impulse": "Die Grafik zeigt, welchen Ernährungsstil Erwachsene in Österreich laut einer Befragung für sich angeben.",
+   "chart": {
+    "title": "Ernährungsstil der Erwachsenen (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "isst alles",
+      58
+     ],
+     [
+      "Flexitarier",
+      27
+     ],
+     [
+      "vegetarisch",
+      9
+     ],
+     [
+      "vegan",
+      3
+     ],
+     [
+      "andere",
+      3
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Aus welchen Gründen essen Menschen weniger Fleisch?",
+    "Wie ernähren Sie sich selbst?",
+    "Welche Rolle spielt der Preis bei der Ernährung?",
+    "Sollte der Staat gesunde Ernährung fördern, zum Beispiel durch Steuern?"
+   ],
+   "fragen": [
+    "Sollte es in Kantinen jeden Tag ein vegetarisches Gericht geben?",
+    "Ist Bio-Essen wirklich besser?",
+    "Kochen junge Menschen heute weniger als früher?",
+    "Was halten Sie von einer Zuckersteuer?",
+    "Welches Gericht aus Ihrem Land würden Sie empfehlen?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_koerper_ideal",
+   "topic": "Gesundheit",
+   "wt": "2.2",
+   "kind": "Text",
+   "title": "Schönheitsideale und soziale Medien",
+   "ru": "Короткий текст: идеалы красоты в соцсетях.",
+   "impulse": "„Gefilterte Gesichter, perfekte Körper: Auf Instagram und TikTok sehen Jugendliche täglich hunderte Bilder, die mit der Realität wenig zu tun haben. Psychologinnen warnen, dass das Selbstbild vieler junger Menschen darunter leidet. Einige Länder verlangen bereits, dass bearbeitete Werbefotos gekennzeichnet werden.“",
+   "leitfragen": [
+    "Fassen Sie den Text kurz zusammen.",
+    "Wie beeinflussen soziale Medien das Körperbild junger Menschen?",
+    "Sollten bearbeitete Fotos gekennzeichnet werden müssen?",
+    "Was können Eltern und Schulen tun?",
+    "Haben Sie selbst Erfahrungen mit diesem Thema gemacht?"
+   ],
+   "fragen": [
+    "Gab es früher keine Schönheitsideale?",
+    "Sind Influencer Vorbilder?",
+    "Sollte es eine Altersgrenze für soziale Medien geben?",
+    "Wie wichtig ist Ihnen Ihr Aussehen?",
+    "Was halten Sie von Schönheitsoperationen?"
+   ],
+   "redemittel": [
+    "Der Text behandelt das Thema …",
+    "Im Mittelpunkt steht die Frage, …",
+    "Der Autor vertritt die Meinung, dass …",
+    "Aus meiner Sicht …",
+    "In meinem Heimatland ist das anders: …",
+    "Zusammenfassend lässt sich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_gesundheit_system",
+   "topic": "Gesundheit",
+   "wt": "2.3",
+   "kind": "These",
+   "title": "Wer ungesund lebt, soll mehr zahlen",
+   "ru": "Тезис: кто ведёт нездоровый образ жизни, должен платить больше за страховку.",
+   "impulse": "These: „Wer raucht, viel Alkohol trinkt oder keinen Sport macht, sollte höhere Krankenversicherungsbeiträge zahlen.“",
+   "leitfragen": [
+    "Nehmen Sie Stellung zu der These.",
+    "Welche Argumente sprechen dafür?",
+    "Welche Argumente sprechen dagegen?",
+    "Wie ist das Gesundheitssystem in Ihrem Heimatland organisiert?",
+    "Welche Alternativen gäbe es, um gesundes Verhalten zu fördern?"
+   ],
+   "fragen": [
+    "Wer kontrolliert, wie gesund jemand lebt?",
+    "Ist Übergewicht immer selbst verschuldet?",
+    "Sollte Sport im Fitnessstudio steuerlich absetzbar sein?",
+    "Was halten Sie von Gesundheits-Apps der Versicherungen?",
+    "Ist das österreichische Gesundheitssystem gerecht?"
+   ],
+   "redemittel": [
+    "Ich halte diese These für (nicht) überzeugend, weil …",
+    "Dafür spricht vor allem, dass …",
+    "Man darf aber nicht vergessen, dass …",
+    "Da muss ich widersprechen: …",
+    "Könnten Sie das bitte genauer erklären?",
+    "Das ist ein guter Punkt, aber …"
+   ]
+  },
+  {
+   "id": "sp_sport_schule",
+   "topic": "Gesundheit",
+   "wt": "2.4",
+   "kind": "Grafik",
+   "title": "Bewegen sich Kinder zu wenig?",
+   "ru": "График: сколько двигаются дети и подростки.",
+   "impulse": "Die Grafik zeigt, wie viele Kinder und Jugendliche in Österreich die Empfehlung von täglich 60 Minuten Bewegung erreichen.",
+   "chart": {
+    "title": "Erreichen täglich 60 Minuten Bewegung (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "6–9 Jahre",
+      42
+     ],
+     [
+      "10–12 Jahre",
+      31
+     ],
+     [
+      "13–15 Jahre",
+      19
+     ],
+     [
+      "16–18 Jahre",
+      14
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Wie erklären Sie, dass ältere Jugendliche sich weniger bewegen?",
+    "Welche Rolle spielen Schule und Sportvereine?",
+    "Sollte es eine tägliche Turnstunde geben?",
+    "Wie viel Sport machen Sie selbst?"
+   ],
+   "fragen": [
+    "Ist Leistungssport für Kinder gesund?",
+    "Sollten Noten im Sportunterricht abgeschafft werden?",
+    "Was macht Bewegung für Jugendliche attraktiv?",
+    "Welche Sportart ist in Ihrem Land am beliebtesten?",
+    "Ist E-Sport echter Sport?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_zeit_vierTage",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.4",
+   "kind": "Zitat",
+   "title": "Keine Zeit? Über Hektik und Muße",
+   "ru": "Цитата о нехватке времени.",
+   "impulse": "„Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen.“ (Seneca)",
+   "leitfragen": [
+    "Erklären Sie das Zitat.",
+    "Warum fühlen sich heute so viele Menschen gestresst?",
+    "Wie gehen Sie mit Ihrer Zeit um?",
+    "Welche Rolle spielen Smartphones?",
+    "Ist Langeweile manchmal etwas Gutes?"
+   ],
+   "fragen": [
+    "Würden Sie für weniger Arbeitszeit auf Gehalt verzichten?",
+    "Was ist für Sie verschwendete Zeit?",
+    "Hilft Zeitmanagement wirklich?",
+    "Wie verbringen Sie einen perfekten Sonntag?",
+    "Sind Menschen auf dem Land weniger gestresst?"
+   ],
+   "redemittel": [
+    "Mit diesem Zitat ist gemeint, dass …",
+    "Ich stimme dem Autor / der Autorin insofern zu, als …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Dagegen spricht, dass …",
+    "Abschließend möchte ich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_freizeit",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "3.5",
+   "kind": "Grafik",
+   "title": "Wie wir unsere Freizeit verbringen",
+   "ru": "График: чем люди занимаются в свободное время.",
+   "impulse": "Die Grafik zeigt die häufigsten Freizeitaktivitäten junger Erwachsener (18–29 Jahre) in Österreich.",
+   "chart": {
+    "title": "Mindestens einmal pro Woche (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten",
+    "bars": [
+     [
+      "Streaming / Serien",
+      84
+     ],
+     [
+      "Freunde treffen",
+      71
+     ],
+     [
+      "Sport",
+      52
+     ],
+     [
+      "Lesen",
+      29
+     ],
+     [
+      "Ehrenamt",
+      11
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Was überrascht Sie, was nicht?",
+    "Wie hat sich die Freizeitgestaltung durch die Digitalisierung verändert?",
+    "Was machen Sie selbst in Ihrer Freizeit?",
+    "Sollte man Freizeit sinnvoll nutzen oder einfach entspannen?"
+   ],
+   "fragen": [
+    "Ist Streaming eine Gefahr für Kinos?",
+    "Warum engagieren sich so wenige ehrenamtlich?",
+    "Ist Freizeit heute teurer als früher?",
+    "Welches Hobby würden Sie gern lernen?",
+    "Haben Menschen heute mehr oder weniger Freizeit als früher?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_sprache_englisch",
+   "topic": "Lernen, Bildung, Studium und Wissenschaft",
+   "wt": "4.2",
+   "kind": "These",
+   "title": "Englisch statt Deutsch an der Uni?",
+   "ru": "Тезис: в университетах лучше преподавать на английском.",
+   "impulse": "These: „Masterstudien an österreichischen Universitäten sollten nur noch auf Englisch angeboten werden.“",
+   "leitfragen": [
+    "Nehmen Sie Stellung zu der These.",
+    "Welche Vorteile hätte Englisch als Unterrichtssprache?",
+    "Welche Nachteile hätte es für die deutsche Sprache und für Studierende?",
+    "Wie ist die Situation in Ihrem Heimatland?",
+    "Welche Sprachen sollte man heute lernen?"
+   ],
+   "fragen": [
+    "Wie viele Sprachen sollte ein Mensch sprechen?",
+    "Verändert sich das Deutsche durch Anglizismen?",
+    "Ist Dialekt ein Problem für Zugewanderte?",
+    "Wie haben Sie Deutsch gelernt?",
+    "Werden Übersetzungsprogramme Sprachenlernen überflüssig machen?"
+   ],
+   "redemittel": [
+    "Ich halte diese These für (nicht) überzeugend, weil …",
+    "Dafür spricht vor allem, dass …",
+    "Man darf aber nicht vergessen, dass …",
+    "Da muss ich widersprechen: …",
+    "Könnten Sie das bitte genauer erklären?",
+    "Das ist ein guter Punkt, aber …"
+   ]
+  },
+  {
+   "id": "sp_energie",
+   "topic": "Umwelt und Verkehr",
+   "wt": "4.3",
+   "kind": "Grafik",
+   "title": "Woher Österreichs Strom kommt",
+   "ru": "График: источники электроэнергии в Австрии.",
+   "impulse": "Die Grafik zeigt, aus welchen Quellen der in Österreich erzeugte Strom stammt.",
+   "chart": {
+    "title": "Stromerzeugung nach Quelle (in %)",
+    "unit": "%",
+    "source": "fiktive Übungsdaten, gerundet",
+    "bars": [
+     [
+      "Wasserkraft",
+      60
+     ],
+     [
+      "Windkraft",
+      13
+     ],
+     [
+      "Erdgas",
+      12
+     ],
+     [
+      "Photovoltaik",
+      8
+     ],
+     [
+      "Biomasse und andere",
+      7
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Welche Vor- und Nachteile hat die Wasserkraft?",
+    "Wie könnte der Anteil erneuerbarer Energien weiter steigen?",
+    "Wie spart man im Alltag Energie?",
+    "Wie wird in Ihrem Heimatland Strom erzeugt?"
+   ],
+   "fragen": [
+    "Würden Sie ein Windrad neben Ihrem Haus akzeptieren?",
+    "Ist Atomkraft eine Lösung gegen den Klimawandel?",
+    "Sollte jedes neue Haus Solarzellen haben?",
+    "Wer soll die Energiewende bezahlen?",
+    "Ist Energie heute zu teuer?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_medien_nachrichten",
+   "topic": "Medien",
+   "wt": "4.8",
+   "kind": "Text",
+   "title": "Nachrichten nur noch aus dem Feed",
+   "ru": "Короткий текст: молодые люди узнают новости из соцсетей.",
+   "impulse": "„Immer weniger junge Menschen lesen Zeitung oder schauen Nachrichten im Fernsehen. Stattdessen erfahren sie von Ereignissen über TikTok, Instagram oder YouTube. Medienforscher sehen darin eine Gefahr: Algorithmen zeigen bevorzugt, was Aufmerksamkeit erzeugt – nicht unbedingt, was stimmt.“",
+   "leitfragen": [
+    "Fassen Sie den Text zusammen.",
+    "Wo informieren Sie sich über aktuelle Ereignisse?",
+    "Welche Gefahren sehen Sie bei Nachrichten aus sozialen Medien?",
+    "Wie erkennt man Falschmeldungen?",
+    "Sollte Medienkompetenz ein Schulfach sein?"
+   ],
+   "fragen": [
+    "Haben Zeitungen eine Zukunft?",
+    "Sollten Plattformen für Falschmeldungen haften?",
+    "Zahlen Sie für Journalismus?",
+    "Ist der öffentlich-rechtliche Rundfunk noch zeitgemäß?",
+    "Vertrauen Sie Nachrichten, die von KI geschrieben wurden?"
+   ],
+   "redemittel": [
+    "Der Text behandelt das Thema …",
+    "Im Mittelpunkt steht die Frage, …",
+    "Der Autor vertritt die Meinung, dass …",
+    "Aus meiner Sicht …",
+    "In meinem Heimatland ist das anders: …",
+    "Zusammenfassend lässt sich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_recht_strafe",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.9",
+   "kind": "Zitat",
+   "title": "Strafe oder zweite Chance?",
+   "ru": "Цитата о наказании и исправлении.",
+   "impulse": "„Wer Schulen öffnet, schließt Gefängnisse.“ (Victor Hugo)",
+   "leitfragen": [
+    "Erklären Sie das Zitat.",
+    "Welche Rolle spielt Bildung bei der Vorbeugung von Kriminalität?",
+    "Sollten Strafen eher abschrecken oder resozialisieren?",
+    "Wie gehen Gerichte in Ihrem Heimatland mit jugendlichen Tätern um?",
+    "Was halten Sie von Sozialarbeit statt Haft bei kleineren Delikten?"
+   ],
+   "fragen": [
+    "Sollte das Strafmündigkeitsalter gesenkt werden?",
+    "Fühlen Sie sich in Wien sicher?",
+    "Ist Videoüberwachung im öffentlichen Raum sinnvoll?",
+    "Sollte Schwarzfahren eine Straftat sein?",
+    "Was ist für Sie Gerechtigkeit?"
+   ],
+   "redemittel": [
+    "Mit diesem Zitat ist gemeint, dass …",
+    "Ich stimme dem Autor / der Autorin insofern zu, als …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Dagegen spricht, dass …",
+    "Abschließend möchte ich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_religion_schule",
+   "topic": "Gesellschaft und soziales Engagement",
+   "wt": "4.10",
+   "kind": "These",
+   "title": "Ethik statt Religionsunterricht",
+   "ru": "Тезис: вместо уроков религии — этика для всех.",
+   "impulse": "These: „In öffentlichen Schulen sollte es keinen Religionsunterricht mehr geben, sondern einen gemeinsamen Ethikunterricht für alle.“",
+   "leitfragen": [
+    "Nehmen Sie Stellung zu der These.",
+    "Was spricht für gemeinsamen Ethikunterricht?",
+    "Was spricht für Religionsunterricht?",
+    "Wie ist das in Ihrem Heimatland geregelt?",
+    "Welche Rolle sollte Religion in einer modernen Gesellschaft spielen?"
+   ],
+   "fragen": [
+    "Sollten religiöse Symbole in Klassenzimmern hängen dürfen?",
+    "Was können Religionen zum Zusammenleben beitragen?",
+    "Sind Feiertage wie Weihnachten noch religiös?",
+    "Was halten Sie von Kirchenaustritten?",
+    "Kann man Werte ohne Religion vermitteln?"
+   ],
+   "redemittel": [
+    "Ich halte diese These für (nicht) überzeugend, weil …",
+    "Dafür spricht vor allem, dass …",
+    "Man darf aber nicht vergessen, dass …",
+    "Da muss ich widersprechen: …",
+    "Könnten Sie das bitte genauer erklären?",
+    "Das ist ein guter Punkt, aber …"
+   ]
+  },
+  {
+   "id": "sp_erde_klima",
+   "topic": "Umwelt und Verkehr",
+   "wt": "5.1",
+   "kind": "Grafik",
+   "title": "Wer am meisten CO₂ ausstößt",
+   "ru": "График: выбросы CO₂ на человека по странам.",
+   "impulse": "Die Grafik zeigt die durchschnittlichen CO₂-Emissionen pro Kopf und Jahr in ausgewählten Ländern.",
+   "chart": {
+    "title": "CO₂-Emissionen pro Kopf (Tonnen pro Jahr)",
+    "unit": "t",
+    "source": "fiktive, gerundete Übungsdaten",
+    "bars": [
+     [
+      "USA",
+      14
+     ],
+     [
+      "Deutschland",
+      8
+     ],
+     [
+      "Österreich",
+      7
+     ],
+     [
+      "China",
+      8
+     ],
+     [
+      "Indien",
+      2
+     ]
+    ]
+   },
+   "leitfragen": [
+    "Beschreiben Sie die Grafik.",
+    "Wie erklären Sie die großen Unterschiede?",
+    "Wer trägt die größte Verantwortung für den Klimaschutz?",
+    "Was tun Sie selbst für die Umwelt?",
+    "Reichen individuelle Maßnahmen aus oder braucht es Gesetze?"
+   ],
+   "fragen": [
+    "Sollten Flüge teurer werden?",
+    "Ist Klimaprotest auf der Straße gerechtfertigt?",
+    "Was halten Sie von einer CO₂-Steuer?",
+    "Würden Sie auf ein Auto verzichten?",
+    "Ist es für den Klimaschutz schon zu spät?"
+   ],
+   "redemittel": [
+    "Die Grafik zeigt / veranschaulicht …",
+    "Auf den ersten Blick fällt auf, dass …",
+    "An erster Stelle steht …, gefolgt von …",
+    "Im Vergleich zu … ist der Anteil deutlich höher.",
+    "Daraus lässt sich schließen, dass …",
+    "Meiner Ansicht nach …",
+    "Das sehe ich anders: …"
+   ]
+  },
+  {
+   "id": "sp_bio_tiere",
+   "topic": "Umwelt und Verkehr",
+   "wt": "5.2",
+   "kind": "Zitat",
+   "title": "Tiere schützen – um jeden Preis?",
+   "ru": "Цитата о защите животных.",
+   "impulse": "„Die Größe und den moralischen Fortschritt einer Nation kann man daran messen, wie sie ihre Tiere behandelt.“ (Mahatma Gandhi zugeschrieben)",
+   "leitfragen": [
+    "Erklären Sie das Zitat.",
+    "Wie werden Tiere in der Landwirtschaft heute behandelt?",
+    "Sollten Tierversuche verboten werden?",
+    "Wie wichtig ist der Schutz bedrohter Arten?",
+    "Wie ist die Einstellung zu Tieren in Ihrem Heimatland?"
+   ],
+   "fragen": [
+    "Sollten Zoos abgeschafft werden?",
+    "Ist es ethisch, Fleisch zu essen?",
+    "Brauchen Wölfe in Österreich Schutz?",
+    "Haben Sie ein Haustier?",
+    "Würden Sie mehr für Fleisch aus artgerechter Haltung zahlen?"
+   ],
+   "redemittel": [
+    "Mit diesem Zitat ist gemeint, dass …",
+    "Ich stimme dem Autor / der Autorin insofern zu, als …",
+    "Einerseits …, andererseits …",
+    "Ein Beispiel dafür ist …",
+    "Dagegen spricht, dass …",
+    "Abschließend möchte ich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_chemie_plastik",
+   "topic": "Konsumgesellschaft",
+   "wt": "5.3",
+   "kind": "Text",
+   "title": "Leben ohne Plastik?",
+   "ru": "Короткий текст: можно ли жить без пластика.",
+   "impulse": "„Eine Wiener Familie hat ein Jahr lang versucht, ohne Plastik zu leben. Sie kaufte auf dem Markt ein, nahm eigene Behälter mit und verzichtete auf vieles. Ihr Fazit: Es ist möglich, aber aufwendig und teurer. Ganz ohne Kunststoff geht es nicht – vor allem bei Medikamenten und Elektronik.“",
+   "leitfragen": [
+    "Fassen Sie den Text zusammen.",
+    "Warum ist Plastik ein Umweltproblem?",
+    "Wie viel Plastik verwenden Sie im Alltag?",
+    "Wer sollte Plastik reduzieren: Konsumenten, Handel oder Politik?",
+    "Welche Alternativen zu Plastik kennen Sie?"
+   ],
+   "fragen": [
+    "Sollten Plastiksackerl ganz verboten werden?",
+    "Ist Recycling eine Lösung?",
+    "Kaufen Sie unverpackte Lebensmittel?",
+    "Ist ein plastikfreies Leben Luxus?",
+    "Was halten Sie von Pfand auf Flaschen?"
+   ],
+   "redemittel": [
+    "Der Text behandelt das Thema …",
+    "Im Mittelpunkt steht die Frage, …",
+    "Der Autor vertritt die Meinung, dass …",
+    "Aus meiner Sicht …",
+    "In meinem Heimatland ist das anders: …",
+    "Zusammenfassend lässt sich sagen, dass …"
+   ]
+  },
+  {
+   "id": "sp_arbeit_zukunft",
+   "topic": "Arbeitswelt und Wirtschaft",
+   "wt": "3.2",
+   "kind": "These",
+   "title": "Die Arbeit der Zukunft",
+   "ru": "Тезис: через 20 лет большинство профессий заменит ИИ — разговор о будущем.",
+   "impulse": "These: „In zwanzig Jahren werden die meisten heutigen Berufe von Maschinen und künstlicher Intelligenz erledigt.“",
+   "leitfragen": [
+    "Nehmen Sie Stellung zu der These.",
+    "Welche Berufe könnten verschwinden, welche neu entstehen?",
+    "Wie sollten sich Schulen und Universitäten darauf vorbereiten?",
+    "Wie stellen Sie sich Ihren eigenen Arbeitsalltag in 20 Jahren vor?",
+    "Braucht es ein bedingungsloses Grundeinkommen?"
+   ],
+   "fragen": [
+    "Würden Sie gern von zu Hause arbeiten?",
+    "Ist lebenslanges Lernen realistisch?",
+    "Sollte KI besteuert werden?",
+    "Welcher Beruf ist für Sie ein Traumberuf?",
+    "Macht Arbeit glücklich?"
+   ],
+   "redemittel": [
+    "Ich halte diese These für (nicht) überzeugend, weil …",
+    "Dafür spricht vor allem, dass …",
+    "Man darf aber nicht vergessen, dass …",
+    "Da muss ich widersprechen: …",
+    "Könnten Sie das bitte genauer erklären?",
+    "Das ist ein guter Punkt, aber …"
+   ]
+  },
+  {
    "id": "sp_dialog_frei",
    "topic": "Dialog mit der Kommission",
    "kind": "These",

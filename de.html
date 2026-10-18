@@ -403,6 +403,12 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 /* ---------- адаптив ---------- */
 @media (max-width:1020px){.reader,.talk{grid-template-columns:1fr}.side,.taskcard{position:static;max-height:none}.grid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}}
 @media (max-width:700px){main{padding:18px 16px 90px}.grid,.list,.pgrid{grid-template-columns:1fr}.article{padding:22px 20px}.article p.pa .pn{position:static;margin-right:6px}.keyrow{grid-template-columns:1fr}.home span{display:none}.top{gap:6px}.frei-banner{flex-direction:column;align-items:flex-start}}
+.hints{display:grid;gap:12px;max-width:760px}
+.card.hint{display:flex;gap:14px;align-items:flex-start;padding:16px 18px}
+.card.hint .hn{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+.card.hint b{font-size:15.5px}.card.hint p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
+.todo .ck{cursor:pointer}.todo a.auto .ck{cursor:default}
+.colrow{display:flex;align-items:center;gap:12px;padding:8px 0}.colrow input[type=color]{width:42px;height:34px;border:none;border-radius:10px;background:none;padding:0;cursor:pointer}.colrow span{flex:1;font-weight:600}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -482,17 +488,17 @@ function header(cur){
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD.slice(0,4);
   $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-nav-toggle>${EP.icon("menu",22)}Меню</button>`;
   // боковая панель: модуль сверху, ниже — только то, что внутри модуля (не список модулей ещё раз)
-  let mod="";
+  let mod="";const inMod=["grammatik","lesen","hoeren","sprechen"].includes(k);
   if(frei)mod=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","star","var(--c-f)",h.length===1)+SUB_FREI.map(([key,t,href,i,c])=>navItem(href,t,i,c,h.length>1&&key===on)).join("");
   else if(k==="grammatik")mod=`<div class="nav-gt">Темы</div><div id="navTopics">${navItem("#/grammatik","Все темы","gram","var(--c-g)",H==="#/grammatik")}</div>`;
-  else if(k==="lesen")mod=`<div class="nav-gt">Lesen</div>`+navItem("#/lesen","Все тексты","book","var(--c-l)",H==="#/lesen");
-  else if(k==="hoeren")mod=`<div class="nav-gt">Hören</div>`+navItem("#/hoeren","Все аудио","ear","var(--c-h)",H==="#/hoeren");
-  else if(k==="sprechen")mod=`<div class="nav-gt">Sprechen</div>`+navItem("#/sprechen","Все задания","mic","var(--c-sp)",H==="#/sprechen");
+  else if(k==="lesen")mod=`<div class="nav-gt">Lesen</div>`+navItem("#/lesen","Тексты и задания","book","var(--c-l)",H==="#/lesen");
+  else if(k==="hoeren")mod=`<div class="nav-gt">Hören</div>`+navItem("#/hoeren","Аудио и задания","ear","var(--c-h)",H==="#/hoeren");
+  else if(k==="sprechen")mod=`<div class="nav-gt">Sprechen</div>`+navItem("#/sprechen","Задания","mic","var(--c-sp)",H==="#/sprechen");
   else if(k==="home")mod=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home","var(--primary)",H==="#/"||H==="#");
   $("#nav").innerHTML=EP.switcher(k==="settings"?"home":k)+mod+
     `<div class="nav-gt">С ИИ</div>`+navItem("#/grammatik/ai","Письмо с ИИ","spark","#8B5CF6",H==="#/grammatik/ai","грамматика в своём тексте")+navItem("/woerter#tab=practice","Практика слов с ИИ","spark","#8B5CF6",false,"пиши — ИИ проверит")+
-    `<div class="nav-gt">Теория</div>`+navItem("#/grammatik","Теория грамматики","book","var(--c-g)",false)+navItem("/schreiben#theory","Теория письма","book","#0EA5B7",false)+
-    `<div class="nav-gt">Мой путь</div>`+navItem("#/plan","План и даты","cal","var(--c-p)",k==="plan")+navItem("#/settings","Настройки","gear","var(--muted)",k==="settings")+
+    `<div class="nav-gt">Теория</div>`+(inMod&&k!=="grammatik"?navItem(`#/${k}/hints`,"Подсказки","bulb",MOD[k].c,H===`#/${k}/hints`):"")+navItem("#/grammatik","Теория грамматики","book","var(--c-g)",false)+navItem("/schreiben#theory","Теория письма","book","#0EA5B7",false)+
+    `<div class="nav-gt">Мой путь</div>`+(inMod?navItem(`#/${k}/errors`,"Ошибки","target",MOD[k].c,H===`#/${k}/errors`)+navItem(`#/${k}/progress`,"Мой прогресс","chart",MOD[k].c,H===`#/${k}/progress`):"")+navItem("#/plan","План и даты","cal","var(--c-p)",k==="plan")+navItem("#/settings","Настройки","gear","var(--muted)",k==="settings")+
     `<hr>${EP.tip(k==="settings"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
   $$("#nav a.nav-ai,#nav a").forEach(a=>{if(/Письмо с ИИ|Практика слов/.test(a.textContent))a.classList.add("nav-ai")});
   if(k==="grammatik")data("de","grammatik").then(gr=>{const el=$("#navTopics");if(el)el.insertAdjacentHTML("beforeend",(gr.topics||[]).map(t=>navItem("#/grammatik/"+t.id,t.title,"gram","var(--c-g)",H.startsWith("#/grammatik/"+t.id))).join(""))});
@@ -505,6 +511,8 @@ const navHidden=()=>{try{return sessionStorage.getItem("ep_navopen")!=="1"}catch
 function applyNav(){document.body.classList.toggle("navhide",navHidden())}
 function toggleNav(){if(innerWidth>980){try{if(navHidden())sessionStorage.setItem("ep_navopen","1");else sessionStorage.removeItem("ep_navopen")}catch(e){}applyNav()}else document.body.classList.toggle("navopen")}
 document.addEventListener("click",e=>{
+  const ck=e.target.closest(".todo .ck");
+  if(ck){e.preventDefault();const a=ck.closest("a");if(!a||a.classList.contains("auto"))return;const P=get("pchk",{}),t=today(),k=a.dataset.k;P[t]=P[t]||{};if(P[t][k])delete P[t][k];else P[t][k]=1;Object.keys(P).forEach(x=>{if(+x<t-3)delete P[x]});save("pchk",P);route();return}
   if(e.target.closest("#burger,[data-nav-toggle]")){e.preventDefault();toggleNav();return}
   if(e.target.closest("#veil")||(e.target.closest("#nav a")&&innerWidth<=980))document.body.classList.remove("navopen");
   if(e.target.closest("#nav [data-ep-theme]"))EP.toggleTheme();
@@ -536,7 +544,9 @@ async function route(){
 async function dispatch(a,b,c){
   try{
     if(!a)return await vHome();
+    if(a==="grammatik"&&MODX[a]&&["errors","progress"].includes(b))return await vModExtra(a,b);
     if(a==="grammatik")return b==="ai"?await vGramAI():b?await vGram("de",b,c):await vGramList("de");
+    if(MODX[a]&&["hints","errors","progress"].includes(b))return await vModExtra(a,b);
     if(a==="lesen")return b?await vLesen("de",b):await vLesenList("de");
     if(a==="hoeren")return b?await vHoeren("de",b):await vHoerenList("de");
     if(a==="sprechen")return b?await vSprechen("de",b):await vSprechenList("de");
@@ -597,9 +607,11 @@ async function todayList(){
     {k:"schreiben",done:sch.today>0,t:"Schreiben: один текст",s:sch.n?`проверено текстов: ${sch.n}`:"Stellungnahme или Erörterung",href:"/schreiben"},
     {k:"sprechen",done:(L.s||0)>0,t:rec.s?`Sprechen: ${rec.s.title}`:"Sprechen",s:"ответь голосом, ИИ разберёт",href:rec.s?"#/sprechen/"+rec.s.id:"#/sprechen"}
   ];
+  const M=(get("pchk",{})[today()])||{};
+  items.forEach(x=>{x.auto=x.done;x.done=x.done||!!M[x.k]});
   return {items,w,sch,rec};
 }
-function todoHTML(items){return `<div class="todo">${items.map(x=>{const m=MOD[x.k];return `<a href="${x.href}" class="${x.done?"done":""}" style="--c:${m.c}"><span class="ck">${x.done?'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>':""}</span><span class="mi">${ic(m.i,17)}</span><span class="tx"><b>${esc(x.t)}</b><small>${esc(x.s)}</small></span></a>`}).join("")}</div>`}
+function todoHTML(items){return `<div class="todo">${items.map(x=>{const m=MOD[x.k];return `<a href="${x.href}" data-k="${x.k}" class="${x.done?"done":""}${x.auto?" auto":""}" style="--c:${m.c}"><span class="ck" title="${x.auto?"Выполнено само":"Отметить вручную"}">${x.done?'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>':""}</span><span class="mi">${ic(m.i,17)}</span><span class="tx"><b>${esc(x.t)}</b><small>${esc(x.s)}</small></span></a>`}).join("")}</div>`}
 function countdowns(){
   const p=get("plan",{}),out=[];
   [["epd","до EPD","var(--c-p)"],["bt1","до Bonustest 1","var(--c-g)"],["bt2","до Bonustest 2","var(--c-l)"]].forEach(([k,t,c])=>{const d=dateToDay(p[k]);if(d&&d>=today())out.push({n:d-today(),t,c})});
@@ -632,8 +644,8 @@ async function vHome(){
     ${modCard("#/lesen","lesen","Lesen","Статьи в стиле der Standard от B2 до C1. Выдели слово — перевод появится сбоку.",[`${cnt(le.texts,"l-de-")}/${(le.texts||[]).length} прочитано`])}
     ${modCard("#/hoeren","hoeren","Hören","Радио, интервью, подкасты, доклады — живыми голосами, задания как на экзамене.",[`${cnt(ho.items,"h-de-")}/${(ho.items||[]).length} прослушано`])}
     ${modCard("#/sprechen","sprechen","Sprechen","Монолог по графику или цитате и диалог с экзаменатором. Говоришь — ИИ разбирает и отвечает голосом.",[`${(sp.tasks||[]).length} заданий`])}
+    ${modCard("#/frei","frei","Свободный немецкий","Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг, свои тексты, аудио и видео.",["не для экзамена"])}
   </div>
-  <a class="frei-banner" href="#/frei"><span class="ic">${ic("star",28)}</span><div><h3>Свободный немецкий</h3><p>Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг и мат, своя грамматика, тексты, аудио, разговоры и видео.</p></div></a>
   `);
 }
 function modCard(href,k,t,p,meta){const m=MOD[k];return `<a class="mod" href="${href}" style="--c:${m.c}"><span class="ic">${ic(m.i,24)}</span><h3>${t}</h3><p>${p}</p><div class="meta">${meta.filter(Boolean).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div></a>`}
@@ -1132,23 +1144,68 @@ async function vPlan(){
   $("#pSave").onclick=()=>{const q=get("plan",{});q.epd=$("#pEpd").value;q.bt1=$("#pBt1").value;q.bt2=$("#pBt2").value;q.words=+$("#pWords").value||0;save("plan",q);toast("План сохранён");vPlan()};
 }
 
+// ---------- Подсказки, Ошибки, Мой прогресс внутри модуля ----------
+const MODX={grammatik:["grammatik","topics","g-"],lesen:["lesen","texts","l-"],hoeren:["hoeren","items","h-"],sprechen:["sprechen","tasks","s-"]};
+const HINTS={
+  lesen:[["Сначала задания, потом текст","Прочитай вопросы и только потом статью: так ищешь нужное, а не читаешь всё подряд. Подчёркивай в тексте слово, по которому нашёл ответ."],["richtig / falsch / nicht im Text","«Nicht im Text» — если в тексте об этом ничего нет. Не додумывай и не подставляй свои знания: отвечает только то, что написано."],["Заголовки к абзацам","Ищи в абзаце главную мысль, а не знакомые слова. Лишний заголовок всегда есть — отбрось его в конце."],["Незнакомые слова","Двойной клик по слову — перевод появится рядом. Не останавливайся на каждом слове: смысл абзаца важнее."],["Время","На экзамене Lesen — примерно 40 минут на два текста. Тренируйся с таймером, когда освоишься."]],
+  hoeren:[["Дважды","На EPD текст звучит дважды: первый раз — общий смысл, второй — детали. Не пытайся записать всё с первого раза."],["Ключевые слова","Записывай ключевые слова и цифры, а не предложения. Сразу после аудио превращай их в ответы."],["Сначала задания","Пока идёт пауза перед аудио, прочитай все задания и предскажи, о чём будет речь."],["Отвлекающие варианты","Часто в записи звучат сразу несколько вариантов, а правильный — тот, который говорящий в итоге подтвердил."],["Скрипт — после","Послушай, ответь, проверь и только потом открой текст: так тренируется ухо, а не глаза."]],
+  sprechen:[["Структура монолога","Вступление (тема и твой тезис) → 2–3 аргумента с примерами → вывод. Говори по Leitfragen: каждая — 40–60 секунд."],["Не понял вопрос","Так и скажи: «Könnten Sie die Frage bitte wiederholen?» Это нормально и экономит нервы."],["Связки","Zum einen … zum anderen, einerseits … andererseits, daher, dennoch, folglich — несколько связок дают ощущение уровня C1."],["График","Опиши, что видно (Überblick), выдели главное, затем сравни и объясни возможные причины."],["Пауза","Если нужное слово забыл, перефразируй: «das heißt …», «anders gesagt …». Молчание хуже ошибки."]],
+  grammatik:[]
+};
+function modRows(k,arr,f){return arr.length?`<div class="list">${arr.join("")}</div>`:f}
+async function vModExtra(k,sec){
+  header(k);setC(MOD[k].c);
+  const [dn,an,pref]=MODX[k],d=await data("de",dn),items=d[an]||[];
+  const row=(href,tags,title,sub,pct)=>`<a class="item" href="${href}"><div class="row">${tags}</div><h3>${esc(title)}</h3>${sub?`<p>${esc(sub)}</p>`:""}${pct==null?"":`<div class="row" style="margin-top:4px"><div class="bar" style="flex:1"><i style="width:${pct}%"></i></div><small class="muted">${pct}%</small></div>`}</a>`;
+  const lv=x=>x.level?`<span class="tag lv">${esc(x.level)}</span>`:"";
+  let h="",title={hints:"Подсказки",errors:"Ошибки",progress:"Мой прогресс"}[sec],lead="";
+  if(sec==="hints"){
+    lead="Короткие правила решения заданий — как на экзамене.";
+    h=`<div class="hints">${(HINTS[k]||[]).map(([t,x],i)=>`<div class="card hint"><span class="hn">${i+1}</span><div><b>${esc(t)}</b><p>${esc(x)}</p></div></div>`).join("")}</div>`;
+  }else if(sec==="progress"){
+    const rows=items.map(x=>{
+      if(k==="grammatik"){const p=gramPct("de",x);return {done:p>=90,html:row("#/grammatik/"+x.id,lv(x)+(p>=90?'<span class="tag ok">✓ освоено</span>':""),x.title,x.ru||"",p)}}
+      const r=get(pref+"de-"+x.id);
+      if(k==="sprechen")return {done:!!(r&&r.n),html:row("#/sprechen/"+x.id,r&&r.n?`<span class="tag ok">ответов: ${r.n}</span>`:"",x.title,x.topic||"")};
+      return {done:!!r,html:row(`#/${k}/${x.id}`,lv(x)+(r?`<span class="tag ok">✓ ${r.s}/${r.m}</span>`:""),x.title,x.topic||"")};
+    });
+    const n=rows.filter(x=>x.done).length;
+    lead=`Пройдено ${n} из ${items.length}.`;
+    h=`<div class="bar" style="margin-bottom:14px"><i style="width:${items.length?Math.round(n/items.length*100):0}%"></i></div><div class="list">${rows.map(x=>x.html).join("")}</div>`;
+  }else{
+    lead="Здесь собраны задания, где были ошибки. Открой и пройди ещё раз.";
+    const rows=[];
+    items.forEach(x=>{
+      if(k==="grammatik"){const r=(get("g-de-"+x.id,{}).r)||{},bad=Object.values(r).filter(v=>v!==1).length;if(bad)rows.push(row("#/grammatik/"+x.id,lv(x)+`<span class="tag">ошибок: ${bad}</span>`,x.title,x.ru||""));return}
+      const r=get(pref+"de-"+x.id);
+      if(k==="sprechen"){if(r&&r.n&&r.hist&&r.hist[0])rows.push(row("#/sprechen/"+x.id,`<span class="tag">последний разбор</span>`,x.title,x.topic||""));return}
+      if(r&&r.m&&r.s<r.m)rows.push(row(`#/${k}/${x.id}`,lv(x)+`<span class="tag">ошибок: ${r.m-r.s}</span>`,x.title,x.topic||""));
+    });
+    h=modRows(k,rows,`<div class="empty">Пока ошибок нет. Пройди несколько заданий — неверные ответы появятся здесь.</div>`);
+  }
+  page(`<h1>${title}</h1><p class="lead">${lead}</p>${h}`);
+}
+
 // ---------- Настройки ----------
+const COLS=[["grammatik","Grammatik","--c-g"],["lesen","Lesen","--c-l"],["hoeren","Hören","--c-h"],["sprechen","Sprechen","--c-sp"],["frei","Свободный немецкий","--c-f"],["plan","План","--c-p"]];
+function applyColors(){const C=get("colors",{}),r=document.documentElement.style;COLS.forEach(([k,,v])=>{if(C[k])r.setProperty(v,C[k]);else r.removeProperty(v)})}
+const hex=c=>{c=String(c).trim();if(c[0]==="#"&&c.length===7)return c;const m=c.match(/\d+/g);return m&&m.length>=3?"#"+m.slice(0,3).map(n=>(+n).toString(16).padStart(2,"0")).join(""):String(c).trim()};
 async function vSettings(){
   header("settings");setC();
   const s=await api("/de/settings");
-  const K=[["anthropic","Claude (Anthropic)","Разбор Sprechen, проверка заданий, пояснение слов, Schreiben, «Практика» в Wörter","sk-ant-…"],["openai","OpenAI","Живые голоса в Hören и Sprechen, распознавание твоей речи","sk-…"],["deepl","DeepL","Перевод выделенных слов (без него — Claude или MyMemory)","…:fx"]];
-  page(`<h1>Настройки</h1><p class="lead">Ключи хранятся только на твоём компьютере (папка db/) и никуда не отправляются, кроме самих сервисов.</p>
+  const K=[["anthropic","Claude","sk-ant-…"],["openai","OpenAI","sk-…"],["deepl","DeepL","…:fx"]],C=get("colors",{});
+  const cur=v=>{const r=document.documentElement.style,o=r.getPropertyValue(v);r.removeProperty(v);const x=hex(getComputedStyle(document.documentElement).getPropertyValue(v).trim()||"#888888");if(o)r.setProperty(v,o);return x};
+  page(`<h1>Настройки</h1>
   <div class="pgrid">
-   <div class="card"><h2 style="margin-top:0">Ключи API</h2>${K.map(([k,n,d,ph])=>`<div class="keyrow"><div><span class="dot ${s.keys[k]?"on":""}"></span><b>${n}</b><div class="muted" style="font-size:12.5px">${d}</div></div>${s.owner?`<input type="password" id="k_${k}" placeholder="${s.keys[k]?"ключ сохранён — вставь новый, чтобы заменить":ph}" autocomplete="off">`:`<span class="muted">${s.keys[k]?"подключён":"нет"}</span>`}${s.owner?`<button class="btn sm" data-key="${k}">Сохранить</button>`:"<span></span>"}</div>`).join("")}
-    <p class="muted" style="font-size:13px;margin-bottom:0">Расходы ИИ: сегодня $${s.spent_today}, за 30 дней $${s.spent_month} (предохранитель: $${s.budget_day} в день). Модели: разговор — ${esc(s.models.talk)}, слова и проверка — ${esc(s.models.ctx)}, голос — ${esc(s.models.tts)}, речь — ${esc(s.models.stt)}.</p></div>
-   <div class="card"><h2 style="margin-top:0">Приглашения для друзей</h2>${s.owner?`<p class="muted" style="margin-top:0;font-size:14px">Регистрация закрыта для всех. Создай код и отдай другу — он введёт его при регистрации на стартовой странице. Код одноразовый.</p><button class="btn primary sm" id="newInv">+ Новый код</button><div style="margin-top:10px">${(s.invites||[]).map(i=>`<div class="inv"><code>${esc(i.code)}</code>${i.used?`<span class="muted">использовал(а): ${esc(i.used_name||"—")}</span>`:`<span class="muted">свободен</span><button class="btn sm" data-delinv="${esc(i.code)}" style="margin-left:auto">Удалить</button>`}</div>`).join("")||'<div class="muted">Кодов пока нет</div>'}</div>`:`<p class="muted">Приглашения создаёт владелец.</p>`}
-    <h2>Аккаунт</h2><div class="row"><a class="btn sm" href="/woerter#acct">Профиль и аватар</a><a class="btn sm" href="/woerter#friends">Друзья и рейтинг</a><button class="btn sm" id="theme">Сменить тему</button><button class="btn sm" id="logout">Выйти</button></div></div>
+   <div class="card"><h2 style="margin-top:0">Профиль</h2><p class="muted" style="margin-top:0;font-size:14px">Свой цвет для каждого раздела — меняется на всех страницах Deutsch.</p>
+    ${COLS.map(([k,n,v])=>`<div class="colrow"><span>${n}</span><input type="color" data-col="${k}" value="${C[k]||cur(v)}"></div>`).join("")}
+    <div class="row" style="margin-top:8px"><button class="btn sm" id="colReset">Сбросить цвета</button><button class="btn sm" id="logout">Выйти</button></div></div>
+   <div class="card"><h2 style="margin-top:0">Ключи</h2>${K.map(([k,n,ph])=>`<div class="keyrow"><div><span class="dot ${s.keys[k]?"on":""}"></span><b>${n}</b></div>${s.owner?`<input type="password" id="k_${k}" placeholder="${s.keys[k]?"сохранён — вставь новый, чтобы заменить":ph}" autocomplete="off">`:`<span class="muted">${s.keys[k]?"подключён":"нет"}</span>`}${s.owner?`<button class="btn sm" data-key="${k}">Сохранить</button>`:"<span></span>"}</div>`).join("")}</div>
   </div>`);
   $$("[data-key]").forEach(b=>b.onclick=async()=>{const k=b.dataset.key,v=$("#k_"+k).value.trim();if(!v){toast("Вставь ключ");return}try{await api("/de/settings/key",{method:"POST",body:JSON.stringify({name:k,value:v})});toast("Ключ сохранён");await loadState();vSettings()}catch(e){toast(e.message)}});
-  const ni=$("#newInv");if(ni)ni.onclick=async()=>{try{const r=await api("/de/invites",{method:"POST"});try{await navigator.clipboard.writeText(r.code)}catch(e){}toast("Код "+r.code+" скопирован");vSettings()}catch(e){toast(e.message)}};
-  $$("[data-delinv]").forEach(b=>b.onclick=async()=>{await api("/de/invites/"+b.dataset.delinv,{method:"DELETE"});vSettings()});
+  $$("[data-col]").forEach(i=>i.oninput=()=>{const c=get("colors",{});c[i.dataset.col]=i.value;save("colors",c);applyColors()});
+  $("#colReset").onclick=()=>{save("colors",{});applyColors();vSettings()};
   $("#logout").onclick=async()=>{try{await api("/logout",{method:"POST"})}catch(e){}location.href="/"};
-  $("#theme").onclick=()=>{const d=document.documentElement,cur=d.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"),nx=cur==="dark"?"light":"dark";d.setAttribute("data-theme",nx);try{const o=JSON.parse(localStorage.getItem("usd3-v1")||"{}");o.theme=nx;localStorage.setItem("usd3-v1",JSON.stringify(o))}catch(e){}};
 }
 
 // ---------- старт ----------
@@ -1161,6 +1218,7 @@ async function loadState(){
 (async()=>{
   try{await loadState()}catch(e){EP.ready();return}
   try{speechSynthesis.getVoices()}catch(e){}
+  applyColors();
   await route();
   document.body.classList.add("ready");EP.ready();
 })();

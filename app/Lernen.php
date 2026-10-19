@@ -17,7 +17,7 @@ class Lernen
 
     public static function keyStatus(): array
     {
-        return ['anthropic' => (bool)Ai::key(), 'openai' => (bool)Ai::openaiKey(), 'deepl' => (bool)Ai::deeplKey()];
+        return Ai::keyStatus();
     }
 
     // ---------- приглашения ----------
@@ -396,14 +396,15 @@ class Lernen
             if ($u['role'] === 'owner') {
                 $inv = Db::all('SELECT i.code,i.created,i.used,u.name AS used_name FROM invites i LEFT JOIN users u ON u.id=i.used_by ORDER BY i.created DESC LIMIT 30');
             }
-            return ['keys' => self::keyStatus(), 'owner' => $u['role'] === 'owner', 'invites' => $inv,
+            return ['keys' => self::keyStatus(), 'mine' => Keys::status((int)$u['id']), 'site_keys' => (bool)cfg('site_keys_for_users', false) || $u['role'] === 'owner', 'owner' => $u['role'] === 'owner', 'invites' => $inv,
                     'spent_today' => round($spent, 3), 'spent_month' => round($month, 2), 'budget_day' => Ai::SITE_DAY_USD,
                     'models' => ['talk' => self::TALK_MODEL, 'ctx' => self::CTX_MODEL, 'tts' => self::TTS_MODEL, 'stt' => self::STT_MODEL]];
         }
 
+        // старый адрес: ключ сохраняется в профиле самого пользователя (зашифрованно), а не в config.local.php
         if ($p === '/settings/key' && $method === 'POST') {
-            if ($u['role'] !== 'owner') { throw new ApiError(403, 'Ключи может менять только владелец'); }
-            throw new ApiError(409, 'На хостинге ключи задаются в файле config/config.local.php (anthropic_key, openai_key, deepl_key), а не в админке. Значения ключей сайт не показывает.');
+            $d = Http::json();
+            return Keys::handleSave($u, ['provider' => $d['name'] ?? '', 'value' => $d['value'] ?? ''])  + ['msg' => 'Ключ сохраняется в вашем профиле'];
         }
 
         if ($p === '/invites' && $method === 'POST') {

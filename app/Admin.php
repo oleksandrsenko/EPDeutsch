@@ -135,6 +135,7 @@ class Admin
         $st = [];
         foreach (Db::all('SELECT * FROM stats') as $r) { $st[(int)$r['user_id']] = $r; }
         $out = [];
+        $kp = Keys::presence();
         foreach (Db::all('SELECT id,name,email,avatar,code,created,last_seen,tz,device,lang,news,plan,plan_until,role,ui_lang,must_change_password,blocked FROM users ORDER BY created DESC') as $u) {
             $id = (int)$u['id'];
             $s = $prog[$id] ?? Util::progressSummary([]);
@@ -150,6 +151,7 @@ class Admin
                 'cur' => $bw['sec'][$s['cur']] ?? (str_starts_with((string)$s['cur'], 'u:') ? 'Свой набор' : $s['cur']),
                 'usets' => $s['usets'], 'news' => (bool)$u['news'], 'plan' => $u['plan'] ?: 'free', 'plan_until' => (int)($u['plan_until'] ?: 0),
                 'lang' => $u['ui_lang'] ?: 'ru', 'blocked' => (bool)$u['blocked'], 'must_change_password' => (bool)$u['must_change_password'],
+                'has_keys' => ['anthropic' => !empty($kp[$id]['anthropic']), 'openai' => !empty($kp[$id]['openai']), 'deepl' => !empty($kp[$id]['deepl'])],
             ];
             $out[] = $row + Users::schreibenSummary($id);
         }

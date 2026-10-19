@@ -13,7 +13,7 @@ class Schreiben
 
     private static function load(string $name): array
     {
-        return json_decode((string)file_get_contents(EPD_PUBLIC . '/schreiben/data/' . $name), true) ?: [];
+        return json_decode((string)file_get_contents(EPD_PUBLIC . '/data/schreiben/' . $name), true) ?: [];
     }
 
     public static function wordCount(string $text): int
@@ -175,7 +175,7 @@ class Schreiben
                 }
                 $essays[] = $e;
             }
-            return ['data' => $r ? Util::jd($r['data']) : null, 'essays' => $essays, 'ai' => (bool)Ai::key()];
+            return ['data' => $r ? Util::jd($r['data']) : null, 'essays' => $essays, 'ai' => Ai::keyStatus()['anthropic']];
         }
         if ($sub === 'state' && $method === 'PUT') {
             $body = Http::jsonObj();

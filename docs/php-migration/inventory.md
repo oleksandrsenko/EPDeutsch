@@ -52,7 +52,7 @@
 | `/de` | `de.html` | **=** |
 | `/woerter` | `index.html`, из него вынимается словарь BOOK в `/assets/book.<хэш>.js` | **=** (PHP делает ту же нарезку, кэш в `storage/cache`) |
 | `/index.html`, `/en`, `/epd`, `/terms`, `/privacy`, `/start`, `/admin` | 301/302 на `/` | **=**, кроме `/admin`: отдаётся `admin.html` (иначе адаптированную админку нельзя открыть; см. «Открытые вопросы») |
-| `/schreiben`, `/schreiben/data/*.json` | модуль Schreiben | **=** (файлы скопированы из `../EPSchreiben`) |
+| `/schreiben`, `/data/schreiben/*.json` | модуль Schreiben | **=** (файлы скопированы из `../EPSchreiben`) |
 | `/data/(de|frei)/*.json` | данные модулей | **=** (отдаются Apache напрямую) |
 | `/audio/<hash>.mp3` | кэш озвучки с поддержкой Range | **=** (PHP-раздача из `storage/audio`, Range и кэш сохранены) |
 | `/ep.js`, `/mail/*.png`, `/icon*.png`, `/og.png`, `/icon.svg`, `/apple-touch-icon.png` | статика | **=** |

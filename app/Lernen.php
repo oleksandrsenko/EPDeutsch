@@ -265,6 +265,19 @@ class Lernen
             return ['results' => array_values($out)];
         }
 
+        if ($p === '/sfort' && $method === 'POST') {   // «Satzanfänge fortsetzen»: оценка продолжения 0–3 по критериям EPD
+            self::needAiKey();
+            $d = Http::json();
+            $q = Util::str($d['q'] ?? '', 300); $ans = Util::str($d['answer'] ?? '', 500); $model = Util::str($d['model'] ?? '', 400);
+            if ($ans === '' || $q === '') { throw new ApiError(400, 'Пустой ответ'); }
+            $ck = 'sf:' . hash('sha256', json_encode([AiGen::MODEL, $q, $ans, $model], JSON_UNESCAPED_UNICODE));
+            if ($c = Ai::cacheGet($ck)) { return $c; }
+            $res = Ai::ask($u, 'sfort', AiGen::MODEL, self::prompt('lernen_sfort'), "Satzanfang: $q\nПродолжение студента: $ans\nОбразец: " . ($model ?: '—'),
+                self::schema('lernen_sfort'), 500, 'low', 45, 'ИИ сейчас недоступен, попробуй ещё раз');
+            Ai::cachePut($ck, $res);
+            return $res;
+        }
+
         if ($p === '/gwrite' && $method === 'POST') {
             self::needAiKey();
             $d = Http::json();

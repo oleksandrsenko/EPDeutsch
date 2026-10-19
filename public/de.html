@@ -601,10 +601,11 @@ async function api(p,o={}){
 const ST={state:{},keys:{},user:null,me:null};
 const DATA={};
 // AIX: пока открыт экран «Практика с ИИ», в данные модуля подмешивается сгенерированный элемент с id "ai" (в списки он не попадает)
-let AIX=null;
+let AIX=null,EXAM_T=null;
 const AILIST={grammatik:"topics",lesen:"texts",hoeren:"items",sprechen:"tasks"};
 async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("/data/"+k+".json",{credentials:"same-origin"}).then(r=>r.ok?r.json():{}).catch(()=>({}));
   const d=await DATA[k];
+  if(area==="de"&&name==="grammatik"&&EXAM_T&&/\/pruefung$/.test(location.hash))return {...d,topics:[...(d.topics||[]).filter(x=>x.id!=="pruefung"),EXAM_T]};
   if(area==="de"&&AIX===name&&/\/aix$/.test(location.hash)){const it=get("aiitem-"+name);if(it)return {...d,[AILIST[name]]:[...(d[AILIST[name]]||[]).filter(x=>x.id!=="ai"),it]}}
   return d}
 const get=(k,d)=>ST.state[k]===undefined?d:ST.state[k];
@@ -741,6 +742,7 @@ async function dispatch(a,b,c){
       if(b==="progress")return await vModProgress(a);
       if(["hints","errors"].includes(b))return await vModExtra(a,b);
       if(b==="aix")return await vAIRun(a);
+      if(b==="pruefung"&&a==="grammatik")return await vPruefung();
       if(b==="all"){LVF=c?decodeURIComponent(c):null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
     }
     if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
@@ -967,7 +969,7 @@ async function vGram(area,id,sub){
   if(!t){page('<div class="empty">Тема не найдена</div>');return}
   const st=get("g-"+area+"-"+id,{r:{}});if(area==="de")touchRecent("grammatik",id);
   const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
-  G={area,t,st,tab:sub==="ai"&&t.write?"ai":st.seenTheory?"ex":"th",lv:null,queue:[],pos:0,ok:0,answered:false};
+  G={area,t,st,tab:sub==="ai"&&t.write?"ai":(st.seenTheory||t.exam)?"ex":"th",lv:null,queue:[],pos:0,ok:0,pts:0,answered:false};
   renderGram();
 }
 // ---------- письмо с ИИ: свой текст с конструкцией темы, Claude проверяет ----------
@@ -1010,7 +1012,7 @@ function renderGram(){
   const body=$("#gbody");
   if(G.tab==="ai"){gramWrite(body);return}
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
-  if(t.ai&&!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // ИИ-набор: сразу все 10 заданий, без выбора ступени
+  if((t.ai||t.exam)&&!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // ИИ-набор: сразу все 10 заданий, без выбора ступени
   if(!G.queue.length||G.done){
     body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень. Задания идут от простых к сложным; ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;
     $$("[data-lv]").forEach(b=>b.onclick=()=>startGram(+b.dataset.lv));
@@ -1018,7 +1020,7 @@ function renderGram(){
   }
   renderQ();
 }
-function summaryHTML(){const n=G.queue.length;return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены, повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
+function summaryHTML(){const n=G.queue.length;if(G.t.exam){const mx=G.t.items.reduce((a,x)=>a+(x.pts||1),0),p=G.pts||0,pass=p>=12;return `<div class="card summary"><div class="big">${p}/${mx}</div><p><b>${pass?"Порог пройден":"Ниже порога"}</b>: в части Strukturen und Wortschatz на экзамене нужно минимум 12 из 25. ${pass?"":"Перечитай теорию к заданиям, которые не получились, и повтори пробный вариант."}</p></div>`}return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены, повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
 function startGram(lv){
   const t=G.t;let idx=t.items.map((x,i)=>i);
   if(lv>0){idx=idx.filter(i=>(t.items[i].lv||1)===lv);
@@ -1026,7 +1028,7 @@ function startGram(lv){
     const RN=get("ground",15);if(idx.length>RN){const r=G.st.r||{},rank=i=>r[i]===undefined?0:r[i]===0?1:2;idx=idx.map(i=>[rank(i),Math.random(),i]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).slice(0,RN).map(x=>x[2])}}
   if(lv===-1)idx=idx.filter(i=>G.st.r[i]===0);
   if(!idx.length){toast(lv===-1?"Ошибок нет":"Пусто");return}
-  G.queue=idx;G.pos=0;G.ok=0;G.done=false;G.answered=false;G.retry=[];renderGram();
+  G.queue=idx;G.pos=0;G.ok=0;G.pts=0;G.done=false;G.answered=false;G.retry=[];renderGram();
 }
 function renderQ(){
   const t=G.t,i=G.queue[G.pos],q=t.items[i];
@@ -1060,6 +1062,16 @@ function checkQ(skip){
   else{ans=($("#ans").value||"").trim();const A=(q.a||[]).map(loose);ok=!skip&&ans&&A.includes(loose(ans));$("#ans").readOnly=true}
   const nfFull=a=>((q.pre||"")+a+(q.post||"")).replace(/\s+([,.])/g,"$1").trim();
   const model=q.t==="mc"?q.o[q.a]:q.t==="nf"?nfFull((q.a||[])[0]):(q.a||[])[0];
+  if(q.free&&!skip&&ans&&ST.keys.anthropic){ // свободное продолжение: оценка ИИ по критериям EPD, 0–3 балла
+    logDone("g",1);const fb0=$("#fb");
+    fb0.innerHTML='<div class="fb ai"><span class="spin"></span> ИИ оценивает по критериям EPD…</div>';$("#chk").disabled=true;$("#skip").hidden=true;
+    api("/de/sfort",{method:"POST",body:JSON.stringify({q:q.q.replace(/…\s*$/,"").trim(),answer:ans,model:(q.a||[])[0]||""})}).then(r=>{
+      const okk=r.points>=2;G.st.r[i]=okk?1:0;G.st.p=G.st.p||{};G.st.p[i]=r.points;G.st.last=today();save(gramKey(),G.st);
+      if(okk){G.ok++;logDone("gk",1)}G.pts=(G.pts||0)+r.points;
+      fb0.innerHTML=`<div class="fb ${r.points>=3?"ok":r.points>=2?"ai":"no"}"><b class="h">${r.points} из 3 ${r.points>=3?"· комплексное и верное":r.points>=2?"· верно, но просто":r.points>=1?"· есть ошибка":"· не засчитано"}</b><div class="model">${esc(r.fixed)}</div><div style="margin-top:6px">${esc(r.why)}</div><div class="muted" style="font-size:13px;margin-top:6px">Образец: ${esc(q.q.replace(/…\s*$/,"").trim())} ${esc((q.a[0]||"").replace(/^…\s*/,""))}</div></div>`;
+      $("#chk").disabled=false;$("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог"}).catch(e=>{fb0.innerHTML=`<div class="fb no">${esc(e.message)}</div>`;$("#chk").disabled=false;$("#ans").readOnly=false;G.answered=false;$("#skip").hidden=false});
+    return;
+  }
   if(q.free&&!skip&&ans&&!ok){ // свободный ответ: много верных вариантов, сверка с образцом, «засчитать себе» или проверка ИИ
     logDone("g",1);
     $("#fb").innerHTML=`<div class="fb ai"><b class="h">Сравни с образцом</b><div class="model">${esc(q.q.replace(/…\s*$/,""))} ${esc(model.replace(/^…\s*/,""))}</div>${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}<div class="row" style="margin-top:10px"><button class="btn sm" id="selfOk">✓ У меня тоже верно</button><button class="btn sm" id="selfNo">✗ Есть ошибка</button>${ST.keys.anthropic?`<button class="btn sm" id="aiChk">${ic("star",14)} Проверить с ИИ</button>`:""}</div></div>`;
@@ -1072,14 +1084,14 @@ function checkQ(skip){
     $("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог";$("#skip").hidden=true;return;
   }
   G.st.r[i]=ok?1:0;G.st.last=today();save(gramKey(),G.st);
-  if(ok)G.ok++;else if(!skip&&q.t!=="mc")G.retry.push(i);
+  if(ok){G.ok++;G.pts=(G.pts||0)+(q.pts||1)}else if(!skip&&q.t!=="mc"&&!t.exam)G.retry.push(i);
   logDone("g",1);if(ok)logDone("gk",1);
   const fb=$("#fb");
   fb.innerHTML=`<div class="fb ${ok?"ok":"no"}"><b class="h">${ok?"Верно!":skip?"Правильный ответ:":"Не совсем. Правильно:"}</b>${ok&&q.t==="mc"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(x=>esc(q.t==="nf"?nfFull(x):x)).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
    ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
   const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
     try{const r=await api("/de/check",{method:"POST",body:JSON.stringify(q.t==="nf"?{task:"Umformung: ersetze die unterstrichene Wendung; der Rest des Satzes bleibt unverändert",q:q.q.replace(/\[\[|\]\]/g,"")+" → "+(q.pre||"")+"___"+(q.post||""),a:q.a.map(nfFull),answer:nfFull(ans)}:{task:q.task||"",q:q.q,a:q.a,answer:ans})});
-      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.retry=G.retry.filter(x=>x!==i)}
+      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.pts=(G.pts||0)+(q.pts||1);G.retry=G.retry.filter(x=>x!==i)}
       fb.insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"ai"}"><b class="h">${r.ok?"ИИ: твой вариант верный ✓":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`);ai.remove()}
     catch(e){ai.disabled=false;ai.textContent=e.message}};
   $("#chk").textContent=G.pos+1<G.queue.length||G.retry.length?"Дальше →":"Итог";
@@ -1276,6 +1288,17 @@ async function vLesenList(area){
 function itemsByLevel(arr,area,kind,pref){
   const groups={};[...arr].sort(lvSort).forEach(x=>(groups[x.level||"—"]=groups[x.level||"—"]||[]).push(x));
   return Object.entries(groups).map(([lv,a])=>`<div class="lvl-h">${esc(lv)}</div><div class="list">${a.map(x=>{const r=get(pref+area+"-"+x.id);return `<a class="item" href="${base(area)}${kind}/${x.id}"><div class="row"><span class="tag lv">${esc(x.level||"")}</span>${x.kind?`<span class="tag">${esc(x.kind)}</span>`:""}${r?`<span class="tag ok">✓ ${r.s}/${r.m}</span>`:""}</div><h3>${esc(x.title)}</h3><p>${esc(x.topic||"")}${x.words?` · ${x.words} слов`:""}${x.minutes?` · ~${x.minutes} мин`:""}</p></a>`}).join("")}</div>`).join("");
+}
+// «Strukturen und Wortschatz»: пробный вариант как на экзамене VWU (25 баллов): 5 × Umformen (по 2) + 5 × Satzanfänge fortsetzen (по 3)
+async function vPruefung(){
+  const gr=await data("de","grammatik"),pick=(a,n)=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b.slice(0,n)};
+  const nf=[].concat(...(gr.topics||[]).filter(x=>x.id==="nominal"||x.id==="verbal").map(x=>x.items.filter(i=>i.t==="nf"&&i.lv>=2))),fr=((gr.topics||[]).find(x=>x.id==="satzfort")||{items:[]}).items.filter(i=>i.free&&i.lv>=2);
+  const seen=new Set(),uniq=a=>a.filter(i=>!seen.has(i.q)&&seen.add(i.q));
+  const items=pick(uniq(nf),5).map(i=>({...i,pts:2,task:"Formen Sie den unterstrichenen Textteil um (Nebensatz, Infinitivkonstruktion, Passiv oder Nominalgruppe), ohne den Inhalt zu verändern"})).concat(pick(uniq(fr),5).map(i=>({...i,pts:3})));
+  EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 5 заданий Umformen (по 2 балла) и 5 Satzanfänge (по 3 балла), всего 25",level:"B2–C1",tag:"Prüfung",items,
+    theory:"<p>Как на EPD (VWU): <b class='k'>10 заданий, 25 баллов</b>. В первой части (Umformen) перестрой подчёркнутое, вписывая только пропуск. Во второй (Satzanfänge) продолжи предложение: 2 балла за верное простое продолжение, 3 за комплексное. Чтобы сдать, нужно минимум 12 баллов.</p>"};
+  header("grammatik");setC(MOD.grammatik.c);
+  return await vGram("de","pruefung");
 }
 // виды заданий EPD, которые ИИ добавляет к любому тексту Lesen
 const LKINDS=[["rfb","Richtig / Falsch + Beleg","5 утверждений · 10 б."],["mc3","Single-Choice","6 вопросов · 6 б."],["qs","Kurzantworten","до 4 слов · оценивает ИИ"],["ref","Bezugswörter","на что ссылается слово"],["who","Wer sagt was?","чьё это мнение"],["para","Umschreibungen","найди слово по определению"],["sum","Paralleltext","8 пропусков, слова из текста"],["box","Wortkasten","8 пропусков, 11 слов"],["cl4","Слово a–d","6 пропусков, 4 варианта"]];
@@ -1587,7 +1610,8 @@ async function vModHome(k){
   <h2 class="h-sec">Темы <small>${items.length} тем · ${items.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</small></h2>${gramListHTML("de",{topics:items})}`
   :`${k==="sprechen"?`<h2 class="h-sec">Что бывает на устном экзамене</h2><div class="kindinfo">${["Grafik","Zitat","Text","These"].map(kd=>`<div style="--c:${MOD[k].c}"><span class="ic">${ic(KIND_RU[kd][1],17)}</span><span><b>${KIND_RU[kd][0]}</b><small>${KIND_RU[kd][2]}</small></span></div>`).join("")}</div>`:""}
   <h2 class="h-sec">Темы <small>как в Wörter · ${items.length} ${plural(items.length,...({lesen:["текст","текста","текстов"],hoeren:["аудио","аудио","аудио"],sprechen:["задание","задания","заданий"]}[k]))}</small></h2>${topicCards(k,items)}`}
-  <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему: ИИ даст теорию или текст или аудио и задания по ней.</p></div></a>`);
+  <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему: ИИ даст теорию или текст или аудио и задания по ней.</p></div></a>
+  ${k==="grammatik"?`<a class="ai-card" href="#/grammatik/pruefung"><span class="ic">${ic("target",24)}</span><div><h3>Пробный вариант: Strukturen und Wortschatz</h3><p>10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Продолжения оценивает ИИ (2–3 балла).</p></div></a>`:""}`);
 }
 // ---------- практика с ИИ: тема от тебя → теория и задания / текст / аудио / разговор (Claude Haiku 5.5) ----------
 // ИИ отдаёт данные в формате обычных заданий модуля, поэтому показывает их тот же экран (id "ai"), а над ним стоит панель «Ещё / Сложнее / Легче».

@@ -46,22 +46,7 @@ class AiGen
                     'paras' => $paras, 'tasks' => $tasks, 'src' => 'Текст от ИИ в стиле der Standard', 'words' => $words, 'minutes' => max(5, (int)round($words / 28))];
         }
         if ($mod === 'hoeren') {
-            $voices = []; $f = 0; $m = 0;
-            foreach (array_slice(is_array($r['speakers'] ?? null) ? $r['speakers'] : [], 0, 3) as $sp) {
-                if (!is_array($sp)) { continue; }
-                $id = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($sp['id'] ?? '')), 0, 1);
-                if ($id === '' || isset($voices[$id])) { continue; }
-                $fem = !empty($sp['female']);
-                $voices[$id] = ['voice' => $fem ? self::FEMALE[$f++ % 3] : self::MALE[$m++ % 3], 'name' => $s($sp['name'] ?? '', 40) ?: $id,
-                                'style' => 'Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung, lebendig wie in einem echten Gespräch oder Radiobeitrag.'];
-            }
-            $lines = [];
-            foreach (array_slice(is_array($r['lines'] ?? null) ? $r['lines'] : [], 0, 40) as $ln) {
-                $sp = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($ln['s'] ?? '')), 0, 1); $tx = $s($ln['text'] ?? '', 1200);
-                if ($tx === '') { continue; }
-                if (!isset($voices[$sp])) { $sp = array_key_first($voices) ?? 'A'; if (!isset($voices[$sp])) { $voices[$sp] = ['voice' => 'sage', 'name' => 'Sprecher', 'style' => '']; } }
-                $lines[] = [$sp, $tx];
-            }
+            [$voices, $lines] = self::script($r, 3, 40);
             $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 14, false, true);
             if (count($lines) < 3 || count($tasks) < 3) { throw new ApiError(502, 'ИИ вернул неполную запись, попробуй ещё раз'); }
             $words = array_sum(array_map(fn($l) => count(preg_split('/\s+/u', $l[1], -1, PREG_SPLIT_NO_EMPTY)), $lines));
@@ -75,6 +60,90 @@ class AiGen
         if ($imp === '' || count($lf) < 2) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
         return ['id' => 'ai', 'topic' => $topic, 'kind' => $kind, 'title' => $title, 'ru' => $s($r['ru'] ?? '', 240), 'impulse' => $imp,
                 'leitfragen' => $lf, 'fragen' => $list($r['fragen'] ?? [], 6, 300), 'redemittel' => $list($r['redemittel'] ?? [], 10, 120)];
+    }
+
+    /** Голоса (speakers) и реплики (lines) записи от ИИ → [voices, lines] */
+    private static function script(array $r, int $maxSp, int $maxLines): array
+    {
+        $s = fn($v, $n = 600) => Util::str($v, $n);
+        $voices = []; $f = 0; $m = 0;
+        foreach (array_slice(is_array($r['speakers'] ?? null) ? $r['speakers'] : [], 0, $maxSp) as $sp) {
+            if (!is_array($sp)) { continue; }
+            $id = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($sp['id'] ?? '')), 0, 1);
+            if ($id === '' || isset($voices[$id])) { continue; }
+            $fem = !empty($sp['female']);
+            $voices[$id] = ['voice' => $fem ? self::FEMALE[$f++ % 3] : self::MALE[$m++ % 3], 'name' => $s($sp['name'] ?? '', 40) ?: $id,
+                            'style' => 'Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung, lebendig wie in einem echten Gespräch oder Radiobeitrag.'];
+        }
+        $lines = [];
+        foreach (array_slice(is_array($r['lines'] ?? null) ? $r['lines'] : [], 0, $maxLines) as $ln) {
+            $sp = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($ln['s'] ?? '')), 0, 1); $tx = $s($ln['text'] ?? '', 1200);
+            if ($tx === '') { continue; }
+            if (!isset($voices[$sp])) { $sp = array_key_first($voices) ?? 'A'; if (!isset($voices[$sp])) { $voices[$sp] = ['voice' => 'sage', 'name' => 'Sprecher', 'style' => '']; } }
+            $lines[] = [$sp, $tx];
+        }
+        return [$voices, $lines];
+    }
+
+    const HEXAM = [1, 2];
+
+    /** Пробный Hören как на экзамене: Teil 1 (7 записей, вопросы a–d) и Teil 2 (запись и конспект с 8 пропусками). */
+    public static function hexamRequest(array $d): array
+    {
+        $part = (int)($d['part'] ?? 0);
+        if (!in_array($part, self::HEXAM, true)) { throw new ApiError(400, 'Неизвестная часть'); }
+        $topic = Util::str($d['topic'] ?? '', 200);
+        $level = in_array($d['level'] ?? '', ['B2', 'C1'], true) ? $d['level'] : 'B2';
+        $diff = max(-2, min(2, (int)($d['diff'] ?? 0)));
+        $prev = [];
+        foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 12) as $x) { $x = Util::str($x, 160); if ($x !== '') { $prev[] = $x; } }
+        $content = "Тема: " . ($topic !== '' ? $topic : '(не указана, выбери сам)') . "\nУровень: $level\nСложность: $diff"
+            . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
+        return [Lernen::prompt('lernen_hexam' . $part), $content, Lernen::schema('lernen_hexam' . $part), 8000];
+    }
+
+    public static function hexamNormalize(int $part, array $r, string $topic, string $level): array
+    {
+        $s = fn($v, $n = 600) => Util::str($v, $n);
+        [$voices, $lines] = self::script($r, 4, $part === 1 ? 60 : 40);
+        $src = implode(' ', array_map(fn($l) => $l[1], $lines));
+        if (count($lines) < ($part === 1 ? 14 : 8) || mb_strlen($src) < 2500) { throw new ApiError(502, 'ИИ вернул слишком короткую запись, попробуй ещё раз'); }
+        if ($part === 1) {
+            $tasks = [];
+            foreach (array_slice(is_array($r['tasks'] ?? null) ? $r['tasks'] : [], 0, 9) as $x) {
+                if (!is_array($x)) { continue; }
+                $o = array_values(array_filter(array_map(fn($a) => $s($a, 300), is_array($x['o'] ?? null) ? array_slice($x['o'], 0, 6) : []), fn($a) => $a !== ''));
+                $ai = is_numeric($x['ai'] ?? null) ? (int)$x['ai'] : -1; $q = $s($x['q'] ?? '', 400);
+                if ($q === '' || count($o) !== 4 || $ai < 0 || $ai > 3) { continue; }
+                $tasks[] = ['t' => 'mc', 'q' => $q, 'o' => $o, 'a' => $ai, 'ex' => $s($x['ex'] ?? '', 400)];
+            }
+            if (count($tasks) < 6) { throw new ApiError(502, 'ИИ вернул неполные вопросы, попробуй ещё раз'); }
+            $tasks = array_slice($tasks, 0, 7);
+        } else {
+            $srcWords = array_flip(self::words($src));
+            $inText = fn(string $form) => $form !== '' && !array_diff(self::words($form), array_keys($srcWords));
+            $notes = $s($r['notes'] ?? '', 2000);
+            preg_match_all('/\[\[(\d+)\]\]/', $notes, $mm);
+            $gapsRaw = array_values(array_filter(is_array($r['gaps'] ?? null) ? $r['gaps'] : [], 'is_array'));
+            if (count($mm[1]) < 6 || count($mm[1]) !== count($gapsRaw)) { throw new ApiError(502, 'ИИ вернул неполный конспект, попробуй ещё раз'); }
+            $keep = []; $gaps = [];
+            foreach ($gapsRaw as $k => $x) {
+                $at = array_values(array_filter(array_map(fn($a) => $s($a, 60), is_array($x['at'] ?? null) ? array_slice($x['at'], 0, 3) : []), fn($a) => $a !== ''));
+                $forms = array_values(array_filter($at, fn($a) => $inText($a) && count(self::words($a)) <= 3));
+                if ($forms) { $gaps[] = $forms; $keep[$k + 1] = count($gaps); }
+                else { $keep[$k + 1] = $at[0] ?? false; }   // слова нет в записи: подставляем в текст готовым
+            }
+            if (count($gaps) < 6) { throw new ApiError(502, 'ИИ вернул неполный конспект, попробуй ещё раз'); }
+            $notes = preg_replace_callback('/\[\[(\d+)\]\]/', function ($m) use ($keep) {
+                $v = $keep[(int)$m[1]] ?? false;
+                return is_int($v) ? '[[' . $v . ']]' : (string)$v;
+            }, $notes);
+            $tasks = [['t' => 'sum', 'q' => 'Hören Sie den Beitrag und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).', 'text' => $notes, 'a' => $gaps]];
+        }
+        $words = array_sum(array_map(fn($l) => count(preg_split('/\s+/u', $l[1], -1, PREG_SPLIT_NO_EMPTY)), $lines));
+        return ['id' => 'ex' . $part, 'part' => $part, 'level' => $level, 'kind' => $s($r['kind'] ?? '', 40) ?: 'Hörverstehen Teil ' . $part, 'topic' => $topic,
+                'title' => $s($r['title'] ?? '', 140) ?: 'Hörverstehen Teil ' . $part, 'intro' => $s($r['intro'] ?? '', 300),
+                'voices' => $voices, 'lines' => $lines, 'tasks' => $tasks, 'words' => $words, 'minutes' => max(2, (int)round($words / 140))];
     }
 
     /** Приводит задания к формату data/de/*.json и отбрасывает битые. */

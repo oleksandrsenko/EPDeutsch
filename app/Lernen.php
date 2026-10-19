@@ -248,6 +248,14 @@ class Lernen
             return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
         }
 
+        if ($p === '/hexam' && $method === 'POST') {   // пробный Hören (Teil 1 или Teil 2) как на экзамене
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::hexamRequest($d);
+            $res = Ai::ask($u, 'hexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 150, 'ИИ сейчас недоступен, попробуй ещё раз');
+            return AiGen::hexamNormalize((int)$d['part'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2');
+        }
+
         if ($p === '/htasks' && $method === 'POST') {   // дополнительные вопросы к записи Hören
             self::needAiKey();
             $d = Http::json();

@@ -1,0 +1,95 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "kind",
+  "title",
+  "intro",
+  "speakers",
+  "lines",
+  "tasks"
+ ],
+ "properties": {
+  "kind": {
+   "type": "string"
+  },
+  "title": {
+   "type": "string"
+  },
+  "intro": {
+   "type": "string"
+  },
+  "speakers": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "female"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "female": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "lines": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "s",
+     "text"
+    ],
+    "properties": {
+     "s": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "tasks": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "q",
+     "o",
+     "ai",
+     "ex"
+    ],
+    "properties": {
+     "q": {
+      "type": "string"
+     },
+     "o": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ai": {
+      "type": "integer"
+     },
+     "ex": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

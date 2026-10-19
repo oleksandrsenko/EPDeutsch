@@ -619,6 +619,7 @@ async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("
   const d=await DATA[k];
   if(area==="de"&&name==="grammatik"&&EXAM_T&&/\/pruefung$/.test(location.hash))return {...d,topics:[...(d.topics||[]).filter(x=>x.id!=="pruefung"),EXAM_T]};
   if(area==="de"&&name==="hoeren"&&/\/hoeren\/ex[12]$/.test(location.hash)){const a=[get("hexam-1",null),get("hexam-2",null)].filter(Boolean);if(a.length)return {...d,items:[...(d.items||[]).filter(x=>x.id!=="ex1"&&x.id!=="ex2"),...a]}}
+  if(area==="de"&&name==="lesen"&&/\/lesen\/lex[12]$/.test(location.hash)){const a=[get("lexam-1",null),get("lexam-2",null)].filter(Boolean);if(a.length)return {...d,texts:[...(d.texts||[]).filter(x=>x.id!=="lex1"&&x.id!=="lex2"),...a]}}
   if(area==="de"&&AIX===name&&/\/aix$/.test(location.hash)){const it=get("aiitem-"+name);if(it)return {...d,[AILIST[name]]:[...(d[AILIST[name]]||[]).filter(x=>x.id!=="ai"),it]}}
   return d}
 const get=(k,d)=>ST.state[k]===undefined?d:ST.state[k];
@@ -759,8 +760,8 @@ async function dispatch(a,b,c){
       if(b==="all"){LVF=c?decodeURIComponent(c):null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
     }
     if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
-    if(a==="lesen")return b?await vLesen("de",b):await vLesenList("de");
-    if(a==="hoeren")return b==="pruefung"?await vHoerenExam():b?await vHoeren("de",b):await vHoerenList("de");
+    if(a==="lesen")return !b||b==="pruefung"?await vLesenExam():await vLesen("de",b);
+    if(a==="hoeren")return b==="pruefung"||!b?await vHoerenExam():b?await vHoeren("de",b):await vHoerenList("de");
     if(a==="sprechen")return b?await vSprechen("de",b):await vSprechenList("de");
     if(a==="plan")return await vHome({plan:true});   // план теперь на обзоре, в блоке приветствия
     if(a==="settings")return await vSettings();
@@ -1347,6 +1348,31 @@ async function vPruefung(){
 }
 // виды заданий EPD, которые ИИ добавляет к любому тексту Lesen
 const LKINDS=[["rfb","Richtig / Falsch + Beleg","5 утверждений · 10 б."],["mc3","Single-Choice","6 вопросов · 6 б."],["qs","Kurzantworten","до 4 слов · оценивает ИИ"],["ref","Bezugswörter","на что ссылается слово"],["who","Wer sagt was?","чьё это мнение"],["para","Umschreibungen","найди слово по определению"],["sum","Paralleltext","8 пропусков, слова из текста"],["box","Wortkasten","8 пропусков, 11 слов"],["cl4","Слово a–d","6 пропусков, 4 варианта"]];
+// ---------- Пробный вариант Lesen как на экзамене (VWU): два текста, задания официальных типов, всё генерирует ИИ ----------
+async function vLesenExam(){
+  header("lesen");setC("var(--c-l)");
+  const cfg=get("lexam-cfg",{topic:"",level:"B2"}),p1=get("lexam-1",null),p2=get("lexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
+  const r1=p1&&get("l-de-lex1",null),r2=p2&&get("l-de-lex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
+  const row=(n,p,r)=>p?`<a href="#/lesen/lex${n}"><span><b>Text ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${(p.tasks||[]).length} заданий · ${p.words} слов · ~${p.minutes} мин</small></span><small>${r?`${fmtPts(r.s)}/${fmtPts(r.m)} · пройти снова →`:"начать →"}</small></a>`:"";
+  page(`<h1>Lesen</h1>
+   <p class="lead">Как на экзамене: два текста в стиле der Standard (по 900–1100 слов), к каждому richtig/falsch с Belegsatz, Single-Choice и Kurzantworten, ко второму ещё Wortkasten и Wer sagt was. Тексты и задания ИИ создаёт заново для каждого варианта. Любой текст можно дополнить другими типами заданий.</p>
+   <div class="card"><div class="field"><label for="lxT">Темы (необязательно)</label><input id="lxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, образование. Пусто: ИИ выберет сам" autocomplete="off"></div>
+    <div class="row" style="margin-top:12px"><select id="lxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="lxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
+    <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится до двух минут.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
+   ${p1||p2?`<h2 class="h-sec">Твой вариант${mx?` <small>${fmtPts(sc)} из ${fmtPts(mx)} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-l)">${row(1,p1,r1)}${row(2,p2,r2)}</div>`:""}
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-l)"><a href="#/lesen/ai"><span><b>Практика с ИИ: один текст по твоей теме</b></span><small>открыть →</small></a><a href="#/lesen/all"><span><b>Архив старых текстов</b></span><small>открыть →</small></a><a href="#/lesen/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
+  $("#lxGo").onclick=async()=>{const topic=$("#lxT").value.trim(),level=$("#lxL").value,b=$("#lxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ пишет два текста… (до двух минут)';
+    save("lexam-cfg",{topic,level});
+    const rnd=WT.map(t=>t[1]).sort(()=>Math.random()-.5),tp=[topic||rnd[0],topic?topic+" (другой аспект)":rnd[1]],prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
+    const gen=(t,pv)=>api("/de/aigen",{method:"POST",body:JSON.stringify({module:"lesen",topic:t,level,diff:0,mode:"new",prev:pv})});
+    try{
+      const [a,c]=await Promise.all([gen(tp[0],prev),gen(tp[1],prev)]);
+      // второй текст дополняем Wortkasten и Wer sagt was (как на экзамене)
+      const more=await Promise.all(["box","who"].map(kind=>api("/de/ltasks",{method:"POST",body:JSON.stringify({kind,paras:c.paras})}).then(r=>r.tasks||[]).catch(()=>[])));
+      a.id="lex1";a.src="Probe-Text 1 · "+a.src;c.id="lex2";c.src="Probe-Text 2 · "+c.src;c.tasks=c.tasks.concat(...more);
+      save("lexam-1",a);save("lexam-2",c);save("l-de-lex1",null);save("l-de-lex2",null);save("lx-de-lex1",null);save("lx-de-lex2",null);vLesenExam()}
+    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
+}
 async function vLesen(area,id){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen"),t=(d.texts||[]).find(x=>x.id===id);
@@ -1401,12 +1427,13 @@ async function vHoerenExam(){
   const cfg=get("hexam-cfg",{topic:"",level:"B2"}),p1=get("hexam-1",null),p2=get("hexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
   const r1=p1&&get("h-de-ex1",null),r2=p2&&get("h-de-ex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
   const row=(n,p,r,what)=>p?`<a href="#/hoeren/ex${n}"><span><b>Teil ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${what} · ~${p.minutes} мин · ${p.words} слов</small></span><small>${r?`${r.s}/${r.m} · пройти снова →`:"начать →"}</small></a>`:"";
-  page(`${crumb("#/hoeren","Hören")}<h1>Пробный вариант Hören</h1>
-   <p class="lead">Как на экзамене, 15 вопросов. Teil 1: семь коротких записей на разные темы, к каждой вопрос с вариантами a–d («о чём говорится»). Teil 2: одна запись на 7–8 минут и конспект, в который нужно вписать услышанные слова (8 пропусков). Каждую запись слушаешь дважды.</p>
+  page(`<h1>Hören</h1>
+   <p class="lead">Задания как на экзамене, 15 вопросов, каждый вариант ИИ создаёт заново.  Teil 1: семь коротких записей на разные темы, к каждой вопрос с вариантами a–d («о чём говорится»). Teil 2: одна запись на 7–8 минут и конспект, в который нужно вписать услышанные слова (8 пропусков). Каждую запись слушаешь дважды. Ответы можно проверить, а текст записи открывается после проверки.</p>
    <div class="card"><div class="field"><label for="hxT">Темы (необязательно)</label><input id="hxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, экология. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="hxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="hxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
     <p class="muted" style="margin:10px 0 0;font-size:13px">ИИ готовит обе части сразу, это занимает до минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
-   ${p1||p2?`<h2 class="h-sec">Твой вариант${mx?` <small>${fmtPts(sc)} из ${mx} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-h)">${row(1,p1,r1,"7 вопросов a–d")}${row(2,p2,r2,"8 пропусков")}</div>`:""}`);
+   ${p1||p2?`<h2 class="h-sec">${p1||p2?"Твой вариант":""}${mx?` <small>${fmtPts(sc)} из ${mx} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-h)">${row(1,p1,r1,"7 вопросов a–d")}${row(2,p2,r2,"8 пропусков")}</div>`:""}
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-h)"><a href="#/hoeren/ai"><span><b>Практика с ИИ: одна запись по твоей теме</b></span><small>открыть →</small></a><a href="#/hoeren/all"><span><b>Архив старых записей</b></span><small>открыть →</small></a><a href="#/hoeren/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
   $("#hxGo").onclick=async()=>{const topic=$("#hxT").value.trim(),level=$("#hxL").value,b=$("#hxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит обе части… (до минуты)';
     save("hexam-cfg",{topic,level});
     const prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);

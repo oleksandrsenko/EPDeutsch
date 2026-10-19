@@ -881,6 +881,22 @@ textarea.essay{display:block;width:100%;min-height:560px;resize:none;overflow:hi
 .tc-f{display:flex;align-items:center;gap:6px;margin-top:10px}
 .tc-f .btn{white-space:nowrap}
 .tour-hl,.tour-card{will-change:left,top}
+/* ---------- телефон: нижняя панель не пропадает, ничего не вылезает за экран ---------- */
+html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+.tabbar{-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+img,svg,video,canvas{max-width:100%}
+@media (max-width:640px){
+  body{min-height:100vh;min-height:100dvh}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:16px!important}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+  .theory,.article,.card,.panel,.tq,.item,.aihist a{overflow-wrap:anywhere}
+  h1{font-size:clamp(24px,7.4vw,32px);line-height:1.2}
+  .ep-fr{padding:8px;align-items:end}.ep-fr>div{max-height:88dvh;border-radius:22px 22px 14px 14px;padding:18px 16px 20px}
+  .lead{font-size:15px}
+  .lbr{flex-wrap:wrap;gap:8px}.lb-t{min-width:0;flex:1 1 140px}.lb-t small{white-space:normal;overflow-wrap:anywhere}.lbr .lb-v{margin-left:auto}
+}
 </style>
 <script src="/ep.js"></script>
 </head>

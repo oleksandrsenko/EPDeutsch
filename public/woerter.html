@@ -63,7 +63,7 @@ d.classList.add("bootacc");d.classList.add("bootnav")}catch(e){}})();
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{margin:0}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5;overflow-x:hidden}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5}
 svg{flex:none;display:block}
 button{font:inherit;color:inherit}
 button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.card:focus-visible,a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
@@ -1525,6 +1525,22 @@ body[data-curtab="land"] .ld-hero h1 em{background-image:linear-gradient(90deg,v
 body.guest,body[data-curtab="land"],body[data-curtab="guide"]{--oli:#2BB3A3;--oli-d:#159283;--primary:#0E8C7F;--primary-h:#0B7569;--primary-soft:#DDF3EF;--link:#0B7569;--acc-rgb:14,140,127}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body.guest,:root:not([data-theme="light"]) body[data-curtab="land"],:root:not([data-theme="light"]) body[data-curtab="guide"]{--primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--link:#7FDDD1;--acc-rgb:59,194,178}}
 :root[data-theme="dark"] body.guest,:root[data-theme="dark"] body[data-curtab="land"],:root[data-theme="dark"] body[data-curtab="guide"]{--primary:#3BC2B2;--primary-h:#5AD3C4;--primary-soft:#173F3C;--link:#7FDDD1;--acc-rgb:59,194,178}
+/* ---------- телефон: нижняя панель не пропадает, ничего не вылезает за экран ---------- */
+html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+.tabbar{-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+img,svg,video,canvas{max-width:100%}
+@media (max-width:640px){
+  body{min-height:100vh;min-height:100dvh}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:16px!important}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+  .theory,.article,.card,.panel,.tq,.item,.aihist a{overflow-wrap:anywhere}
+  h1{font-size:clamp(24px,7.4vw,32px);line-height:1.2}
+  .ep-fr{padding:8px;align-items:end}.ep-fr>div{max-height:88dvh;border-radius:22px 22px 14px 14px;padding:18px 16px 20px}
+  .lead{font-size:15px}
+  .lbr{flex-wrap:wrap;gap:8px}.lb-t{min-width:0;flex:1 1 140px}.lb-t small{white-space:normal;overflow-wrap:anywhere}.lbr .lb-v{margin-left:auto}
+}
 </style>
 </head>
 <body class="guest">

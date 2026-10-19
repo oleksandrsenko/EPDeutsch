@@ -184,6 +184,7 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-sbtn{display:inline-flex;align-items:center;gap:8px;flex:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:12px;padding:7px 10px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
 .ep-frbtn{display:inline-flex;align-items:center;gap:7px;flex:none;border:0;background:var(--panel2);color:var(--fg);border-radius:12px;height:40px;padding:0 12px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer}.ep-frbtn:hover{background:color-mix(in srgb,var(--primary) 16%,var(--panel2))}
 @media (max-width:900px){.ep-frbtn span{display:none}.ep-frbtn{padding:0 10px}}
+@media (max-width:640px){.ep-frbtn{display:none}}
 .ep-fbtn{margin-left:6px}
 .ep-fr{position:fixed;inset:0;z-index:200;background:rgba(10,8,30,.55);display:grid;place-items:center;padding:16px}
 .ep-fr>div{width:min(620px,100%);max-height:92vh;overflow:auto;background:var(--panel);color:var(--fg);border-radius:24px;padding:22px 22px 24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
@@ -193,6 +194,7 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-fr .frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .ep-fr input{flex:1;min-width:140px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 12px;font:inherit;text-transform:uppercase;outline:none}
 .ep-fr input:focus{border-color:var(--primary)}
+.ep-fr input::placeholder{text-transform:none}
 .ep-fr .fb{border:0;background:var(--primary);color:#fff;border-radius:12px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer}.ep-fr .fb.g{background:var(--panel2);color:var(--fg)}
 .ep-fr h3{margin:18px 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .ep-fr .lbr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px}.ep-fr .lbr.me{background:color-mix(in srgb,var(--primary) 12%,transparent)}
@@ -337,7 +339,7 @@ async function friendsOpen(){
       dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">XP считается во всех модулях: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen. Друзья общие для всех.</p>
       <div class="frow"><div><small class="muted">Твой код друга</small><div class="fcode">${esc(me.user.code)}</div></div><button class="fb g" id="fCp" style="margin-left:auto">Скопировать ссылку</button></div>
       <form class="frow" id="fAdd" style="margin-top:6px"><input id="fCode" maxlength="8" placeholder="Код друга, например K7M2QX" autocomplete="off"><button class="fb" type="submit">Добавить</button></form>
-      <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${uava(f,36)}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · Schreiben ${f.s_xp||0} · EPD ${f.de_xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp_total||0} XP</span></div>`).join("")}
+      <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${window.EP.uava?window.EP.uava(f,36):""}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · Schreiben ${f.s_xp||0} · EPD ${f.de_xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp_total||0} XP</span></div>`).join("")}
       ${rows.length<2?'<p class="muted" style="font-size:13px">Пока здесь только ты. Отправь другу ссылку-приглашение или код.</p>':""}
       <h3>Забеги</h3>${(rc.races||[]).length?rc.races.map(r=>{const a=r.me.v,b=r.rival.v,mx=Math.max(1,a,b);return `<div class="race"><b>${esc(r.metricName)} · ${r.live?"до финиша "+left(r.end):"забег окончен"}</b>Ты: ${a}<div class="rbar"><i style="width:${a/mx*100}%"></i></div>${esc(r.rival.name)}: ${b}<div class="rbar"><i style="width:${b/mx*100}%;opacity:.6"></i></div></div>`}).join(""):'<p class="muted" style="font-size:13px">Забегов пока нет.</p>'}
       ${rows.filter(f=>!f.me).length?`<div class="frow" style="margin-top:10px"><select id="rF" style="flex:1;min-width:120px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit">${rows.filter(f=>!f.me).map(f=>`<option value="${f.id}">${esc(f.name)}</option>`).join("")}</select><select id="rD" style="border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit"><option value="3">3 дня</option><option value="7" selected>7 дней</option><option value="14">14 дней</option></select><button class="fb" id="rGo">Забег по XP</button></div>`:""}`;

@@ -36,7 +36,7 @@
   --sh:0 .25rem 1rem 0 rgba(0,0,0,.35);--sh-card:0 .6rem 2rem 0 rgba(0,0,0,.5);color-scheme:dark}
 *{box-sizing:border-box}[hidden]{display:none!important}
 html,body{margin:0}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5;min-height:100vh;-webkit-font-smoothing:antialiased}
 a{color:var(--link)}
 button{font:inherit;color:inherit}
 svg{flex:none}
@@ -576,7 +576,7 @@ html{scrollbar-gutter:stable}
 /* ---------- настройки: профиль и цвета во всю ширину, ниже ключи и приглашения ---------- */
 .sgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px}
 .sgrid h2{margin-top:0}
-@media (max-width:900px){.sgrid{grid-template-columns:1fr}}
+@media (max-width:900px){.sgrid{grid-template-columns:minmax(0,1fr)}.sgrid>*{min-width:0}}
 .inv-new{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--primary-soft);border-radius:16px;padding:12px 14px;margin:6px 0 10px}
 .inv-new code{font-size:20px;font-weight:800;letter-spacing:.14em}
 /* ---------- плитки и блики, как в Wörter и Schreiben ---------- */
@@ -598,6 +598,22 @@ html{scrollbar-gutter:stable}
 .btn.primary:hover::after{transform:translateX(380%) skewX(-18deg)}
 .aihist{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 @media (prefers-reduced-motion:reduce){.nav a.nav-ai::after,.ai-card::after,.nav a.nav-ai .ni svg{animation:none}.item::before,.lvcard::before,.mod::before,.btn.primary::after{display:none}}
+/* ---------- телефон: нижняя панель не пропадает, ничего не вылезает за экран ---------- */
+html{background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+.tabbar{-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+img,svg,video,canvas{max-width:100%}
+@media (max-width:640px){
+  body{min-height:100vh;min-height:100dvh}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:16px!important}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+  .theory,.article,.card,.panel,.tq,.item,.aihist a{overflow-wrap:anywhere}
+  h1{font-size:clamp(24px,7.4vw,32px);line-height:1.2}
+  .ep-fr{padding:8px;align-items:end}.ep-fr>div{max-height:88dvh;border-radius:22px 22px 14px 14px;padding:18px 16px 20px}
+  .lead{font-size:15px}
+  .lbr{flex-wrap:wrap;gap:8px}.lb-t{min-width:0;flex:1 1 140px}.lb-t small{white-space:normal;overflow-wrap:anywhere}.lbr .lb-v{margin-left:auto}
+}
 </style>
 </head>
 <body>
@@ -775,7 +791,7 @@ async function dispatch(a,b,c){
     LVF=null;
     if(!a)return await vHome();
     if(MODNAV[a]){
-      if(!b)return await vModHome(a);
+      if(!b)return await ({lesen:vLesenExam,hoeren:vHoerenExam,sprechen:vSprechenExam}[a]||vModHome)(a);
       if(b==="ai")return await vAIPractice(a);
       if(b==="progress")return await vModProgress(a);
       if(["hints","errors"].includes(b))return await vModExtra(a,b);

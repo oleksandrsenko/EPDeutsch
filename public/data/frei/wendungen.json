@@ -1024,6 +1024,776 @@
      "note": ""
     }
    ]
+  },
+  {
+   "id": "at-redewendungen",
+   "title": "Österreichische Redewendungen",
+   "ru": "Фразы и междометия, которые слышишь на улице, в кафе и на работе",
+   "color": "#C4687A",
+   "cards": [
+    {
+     "de": "Na geh!",
+     "ru": "Да ну! / Ну вот ещё! (недоверие, досада)",
+     "ex": "Na geh, das glaub ich dir nicht!",
+     "note": "очень австрийское; ударение на geh"
+    },
+    {
+     "de": "Geh bitte!",
+     "ru": "Да брось! / Ну пожалуйста!",
+     "ex": "Geh bitte, jetzt sei nicht gleich beleidigt.",
+     "note": "мягкий упрёк или просьба"
+    },
+    {
+     "de": "Na servas!",
+     "ru": "Ну и ну! (удивление, чаще неприятное)",
+     "ex": "Na servas, schon wieder Stau auf der Südosttangente!",
+     "note": ""
+    },
+    {
+     "de": "Passt scho.",
+     "ru": "Ладно, нормально.",
+     "ex": "Brauchst du Hilfe? – Nein, passt scho, danke.",
+     "note": "в Австрии часто «passt eh»"
+    },
+    {
+     "de": "Das ist mir Powidl.",
+     "ru": "Мне всё равно.",
+     "ex": "Ob wir Pizza oder Nudeln essen, ist mir Powidl.",
+     "note": "Powidl = сливовое повидло; как «Das ist mir Wurst»"
+    },
+    {
+     "de": "Nur ka Hektik!",
+     "ru": "Только без суеты!",
+     "ex": "Wir haben noch eine Stunde Zeit – nur ka Hektik!",
+     "note": "диалектное «ka» = kein"
+    },
+    {
+     "de": "Schau ma mal, dann seh ma scho.",
+     "ru": "Посмотрим, там видно будет.",
+     "ex": "Ob ich morgen komme? Schau ma mal, dann seh ma scho.",
+     "note": "«schau mal» + «sehen wir schon»"
+    },
+    {
+     "de": "Alles Walzer!",
+     "ru": "Всё в порядке! Всё отлично!",
+     "ex": "Wie geht's? – Alles Walzer!",
+     "note": "шутливо, по-венски"
+    },
+    {
+     "de": "Jö, schau!",
+     "ru": "Ой, смотри! (умиление)",
+     "ex": "Jö, schau, ein Kätzchen!",
+     "note": "когда что-то милое"
+    },
+    {
+     "de": "Da legst di nieder!",
+     "ru": "Упасть можно!",
+     "ex": "Eine Wohnung um 300 Euro? Da legst di nieder!",
+     "note": "«da legst du dich nieder»"
+    },
+    {
+     "de": "Gemma!",
+     "ru": "Пошли!",
+     "ex": "Gemma Kaffee trinken!",
+     "note": "венское «gehen wir»"
+    },
+    {
+     "de": "Hauptsache g'sund!",
+     "ru": "Главное, чтобы здоровье!",
+     "ex": "Ob Bub oder Mädel – Hauptsache g'sund!",
+     "note": "типичное пожелание"
+    },
+    {
+     "de": "Es is, wie's is.",
+     "ru": "Что есть, то есть.",
+     "ex": "Ändern können wir es nicht – es is, wie's is.",
+     "note": "венский фатализм"
+    },
+    {
+     "de": "Da kannst lang warten.",
+     "ru": "Жди-пожди.",
+     "ex": "Auf eine Antwort vom Amt kannst lang warten.",
+     "note": ""
+    },
+    {
+     "de": "Das ist ein Gfrett.",
+     "ru": "Это морока.",
+     "ex": "Mit dem Antrag ist das ein Gfrett.",
+     "note": "Gfrett = канитель, возня"
+    },
+    {
+     "de": "eine Wuchtel schieben",
+     "ru": "рассказывать анекдоты, шутить",
+     "ex": "Er schiebt den ganzen Abend Wuchteln.",
+     "note": "Wuchtel — шутка (и дрожжевая булочка)"
+    },
+    {
+     "de": "ein Hund sein",
+     "ru": "быть ловкачом, пройдохой",
+     "ex": "Der Schlosser ist ein Hund – der kriegt jeden Preis herunter.",
+     "note": "в Австрии часто восхищённо"
+    },
+    {
+     "de": "einen Bahöl machen",
+     "ru": "поднимать шум, устраивать переполох",
+     "ex": "Wegen so einer Kleinigkeit muss man doch keinen Bahöl machen.",
+     "note": ""
+    },
+    {
+     "de": "Das Leben ist ka Wunschkonzert.",
+     "ru": "Жизнь — не концерт по заявкам.",
+     "ex": "Aber ich will das nicht! – Das Leben ist ka Wunschkonzert.",
+     "note": ""
+    },
+    {
+     "de": "Schleich di!",
+     "ru": "Отстань! Проваливай!",
+     "ex": "Schleich di, ich hab jetzt keine Zeit!",
+     "note": "грубовато"
+    },
+    {
+     "de": "Eh klar.",
+     "ru": "Ясное дело.",
+     "ex": "Kommst du am Samstag? – Eh klar!",
+     "note": "eh = ohnehin, sowieso"
+    },
+    {
+     "de": "einen Zorn haben",
+     "ru": "быть злым, злиться",
+     "ex": "Ich hab einen Zorn auf die Bahn.",
+     "note": "разговорное «wütend sein», в Австрии очень частое"
+    },
+    {
+     "de": "sich etwas ausmachen",
+     "ru": "договариваться о чём-то",
+     "ex": "Machen wir uns einen Termin aus!",
+     "note": "ausmachen = vereinbaren"
+    },
+    {
+     "de": "Mir geht's gut, danke der Nachfrage.",
+     "ru": "У меня всё хорошо, спасибо, что спросили.",
+     "ex": "Wie geht's dir? – Mir geht's gut, danke der Nachfrage.",
+     "note": ""
+    },
+    {
+     "de": "Servus und baba!",
+     "ru": "Пока!",
+     "ex": "Servus und baba, bis morgen!",
+     "note": "servus — и «привет», и «пока»"
+    },
+    {
+     "de": "Das passt eh.",
+     "ru": "Да это нормально, подходит.",
+     "ex": "Ist das Zimmer okay? – Ja, das passt eh.",
+     "note": ""
+    },
+    {
+     "de": "auf Schmäh",
+     "ru": "в шутку, для красного словца",
+     "ex": "Das hab ich nur auf Schmäh gesagt.",
+     "note": "Schmäh — венский юмор"
+    },
+    {
+     "de": "einen Narren gefressen haben",
+     "ru": "души не чаять",
+     "ex": "Die Oma hat an ihrem Enkel einen Narren gefressen.",
+     "note": ""
+    },
+    {
+     "de": "Mahlzeit!",
+     "ru": "Приятного аппетита! (и как приветствие в обед)",
+     "ex": "Mahlzeit, die Herren!",
+     "note": "в Австрии говорят днём коллегам"
+    },
+    {
+     "de": "ein Tschick",
+     "ru": "сигарета",
+     "ex": "Hast du einen Tschick für mich?",
+     "note": "Tschick — разг. «сигарета»"
+    },
+    {
+     "de": "grantig sein",
+     "ru": "быть в дурном настроении, ворчать",
+     "ex": "Heute ist er wieder grantig.",
+     "note": "венская особенность: «Grant» — ворчливость"
+    },
+    {
+     "de": "in Pension gehen",
+     "ru": "уйти на пенсию",
+     "ex": "Mein Vater geht nächstes Jahr in Pension.",
+     "note": "в Австрии Pension, не Rente"
+    }
+   ]
+  },
+  {
+   "id": "at-essen",
+   "title": "Essen & Trinken auf Österreichisch",
+   "ru": "Что в меню и на рынке: австрийские названия продуктов и блюд",
+   "color": "#18AE79",
+   "cards": [
+    {
+     "de": "das Faschierte",
+     "ru": "фарш (Hackfleisch)",
+     "ex": "Zum Mittag gibt's Faschierte Laibchen.",
+     "note": "Hackfleisch — в Германии"
+    },
+    {
+     "de": "der Karfiol",
+     "ru": "цветная капуста",
+     "ex": "Der Karfiol wird mit Butterbröseln serviert.",
+     "note": "Blumenkohl — в Германии"
+    },
+    {
+     "de": "die Fisolen",
+     "ru": "стручковая фасоль",
+     "ex": "Fisolen mit Erdäpfeln, das schmeckt mir.",
+     "note": "grüne Bohnen"
+    },
+    {
+     "de": "der Kukuruz",
+     "ru": "кукуруза",
+     "ex": "Auf dem Feld wächst Kukuruz.",
+     "note": "Mais"
+    },
+    {
+     "de": "die Ribisel",
+     "ru": "смородина",
+     "ex": "Die Ribisel im Garten sind reif.",
+     "note": "Johannisbeere"
+    },
+    {
+     "de": "die Melanzani",
+     "ru": "баклажан",
+     "ex": "Gefüllte Melanzani sind meine Spezialität.",
+     "note": "Aubergine"
+    },
+    {
+     "de": "die Zwetschke",
+     "ru": "слива (Zwetschge)",
+     "ex": "Zwetschkenknödel sind im Herbst ein Klassiker.",
+     "note": "Zwetschge"
+    },
+    {
+     "de": "das Eierschwammerl",
+     "ru": "лисичка (гриб)",
+     "ex": "Wir gehen Eierschwammerl suchen.",
+     "note": "Pfifferling; Schwammerl = Pilz"
+    },
+    {
+     "de": "die Eierspeise",
+     "ru": "яичница-болтунья",
+     "ex": "Zum Frühstück machen wir eine Eierspeise.",
+     "note": "Rührei"
+    },
+    {
+     "de": "die Palatschinke",
+     "ru": "тонкий блин",
+     "ex": "Zum Nachtisch gibt es Palatschinken mit Marillenmarmelade.",
+     "note": "Pfannkuchen"
+    },
+    {
+     "de": "der Kaiserschmarrn",
+     "ru": "кайзершмарн (рваный сладкий блин)",
+     "ex": "Nach der Wanderung bestellen wir einen Kaiserschmarrn.",
+     "note": "mit Zwetschkenröster"
+    },
+    {
+     "de": "der Topfenstrudel",
+     "ru": "штрудель с творогом",
+     "ex": "Der Topfenstrudel ist noch warm.",
+     "note": "Topfen = Quark"
+    },
+    {
+     "de": "der Germknödel",
+     "ru": "дрожжевой кнедль с повидлом",
+     "ex": "Auf der Skihütte esse ich einen Germknödel.",
+     "note": "mit Powidl, Mohn und Butter"
+    },
+    {
+     "de": "der Marillenknödel",
+     "ru": "абрикосовый кнедль",
+     "ex": "Im Sommer gibt es Marillenknödel.",
+     "note": "Marille = Aprikose"
+    },
+    {
+     "de": "die Buchtel",
+     "ru": "булочка с повидлом",
+     "ex": "Omas Buchteln mit Vanillesauce sind legendär.",
+     "note": "Hefegebäck"
+    },
+    {
+     "de": "das Kipferl",
+     "ru": "рогалик",
+     "ex": "Zum Kaffee ein Kipferl, bitte.",
+     "note": "Hörnchen"
+    },
+    {
+     "de": "der Krapfen",
+     "ru": "пончик",
+     "ex": "Zu Fasching isst man Krapfen.",
+     "note": "Berliner"
+    },
+    {
+     "de": "der Gugelhupf",
+     "ru": "кекс-кугельхопф",
+     "ex": "Am Sonntag backt sie einen Gugelhupf.",
+     "note": ""
+    },
+    {
+     "de": "die Sachertorte",
+     "ru": "торт «Захер»",
+     "ex": "In Wien muss man eine Sachertorte probieren.",
+     "note": "mit Marillenmarmelade und Schokoglasur"
+    },
+    {
+     "de": "das Backhendl",
+     "ru": "жареный в панировке цыплёнок",
+     "ex": "Am Sonntag gibt es Backhendl mit Erdäpfelsalat.",
+     "note": ""
+    },
+    {
+     "de": "der Tafelspitz",
+     "ru": "отварная говядина (тафельшпиц)",
+     "ex": "Der Tafelspitz mit Kren war Kaiser Franz Josephs Lieblingsspeise.",
+     "note": "mit Apfelkren und Schnittlauchsauce"
+    },
+    {
+     "de": "das Beuschel",
+     "ru": "блюдо из лёгких в соусе",
+     "ex": "Einmal Beuschel mit Semmelknödel, bitte.",
+     "note": "Innereien"
+    },
+    {
+     "de": "die Frittatensuppe",
+     "ru": "бульон с блинной лапшой",
+     "ex": "Zum Start eine Frittatensuppe.",
+     "note": "Rindsuppe mit Pfannkuchenstreifen"
+    },
+    {
+     "de": "der Erdäpfelsalat",
+     "ru": "картофельный салат",
+     "ex": "Der Erdäpfelsalat wird lauwarm gegessen.",
+     "note": "mit Essig und Zwiebel"
+    },
+    {
+     "de": "die Kasnocken",
+     "ru": "сырные клёцки",
+     "ex": "In Salzburg gibt es hervorragende Kasnocken.",
+     "note": "Käsespätzle"
+    },
+    {
+     "de": "das Geselchte",
+     "ru": "копчёное мясо",
+     "ex": "Geselchtes mit Sauerkraut und Knödel.",
+     "note": "Selchfleisch"
+    },
+    {
+     "de": "das Zuckerl",
+     "ru": "конфета, леденец",
+     "ex": "Möchtest du ein Zuckerl?",
+     "note": "Bonbon"
+    },
+    {
+     "de": "das Kracherl",
+     "ru": "лимонад (газировка)",
+     "ex": "Die Kinder trinken ein Kracherl.",
+     "note": "Limonade"
+    },
+    {
+     "de": "der Sturm",
+     "ru": "молодое вино-брага (осенью)",
+     "ex": "Im Herbst trinkt man Sturm und isst Maroni.",
+     "note": "teilweise vergorener Traubenmost"
+    },
+    {
+     "de": "der Würstelstand",
+     "ru": "киоск с сосисками",
+     "ex": "Nach dem Theater gehen wir zum Würstelstand.",
+     "note": "Käsekrainer (die «Eitrige») ist der Klassiker"
+    },
+    {
+     "de": "die Leberkässemmel",
+     "ru": "булочка с леберкезе",
+     "ex": "Eine Leberkässemmel mit Senf, bitte.",
+     "note": "Leberkäse ist keine Leber und kein Käse"
+    },
+    {
+     "de": "der Einspänner",
+     "ru": "кофе со взбитыми сливками в стакане",
+     "ex": "Zum Lesen bestelle ich einen Einspänner.",
+     "note": "Kaffee mit Schlagobers"
+    },
+    {
+     "de": "ein kleiner Brauner",
+     "ru": "маленький эспрессо с молоком",
+     "ex": "Einen kleinen Braunen und ein Glas Wasser, bitte.",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "id": "at-alltag",
+   "title": "Alltag, Ämter & Verkehr in Österreich",
+   "ru": "Австрийские слова для дома, транспорта, врача, учёбы и учреждений",
+   "color": "#3D7BF7",
+   "cards": [
+    {
+     "de": "die Trafik",
+     "ru": "табачный киоск (и газеты, билеты)",
+     "ex": "Ich hol mir in der Trafik eine Wochenkarte.",
+     "note": "dort kauft man auch Zeitungen und Vignetten"
+    },
+    {
+     "de": "der Greißler",
+     "ru": "владелец маленького продуктового магазина",
+     "ex": "Der Greißler ums Eck hat noch frisches Brot.",
+     "note": "die Greißlerei = Tante-Emma-Laden"
+    },
+    {
+     "de": "das Pickerl",
+     "ru": "наклейка (виньетка, парковочная)",
+     "ex": "Das Auto braucht ein neues Pickerl.",
+     "note": "Autobahnpickerl, Parkpickerl, Pickerl beim «Service»"
+    },
+    {
+     "de": "das Parkpickerl",
+     "ru": "разрешение на парковку для жителей района",
+     "ex": "In Wien braucht man ein Parkpickerl.",
+     "note": "gilt in Kurzparkzonen"
+    },
+    {
+     "de": "die Kurzparkzone",
+     "ru": "зона краткосрочной парковки",
+     "ex": "In der Kurzparkzone darf man nur zwei Stunden parken.",
+     "note": ""
+    },
+    {
+     "de": "das Strafmandat",
+     "ru": "штраф (квитанция)",
+     "ex": "Ich hab ein Strafmandat bekommen.",
+     "note": "Strafzettel"
+    },
+    {
+     "de": "die Lenkerberechtigung",
+     "ru": "водительское удостоверение",
+     "ex": "Die Lenkerberechtigung musste ich neu beantragen.",
+     "note": "Führerschein im Alltag"
+    },
+    {
+     "de": "der Gehsteig",
+     "ru": "тротуар",
+     "ex": "Bitte nicht am Gehsteig parken!",
+     "note": "Bürgersteig"
+    },
+    {
+     "de": "der Mistkübel",
+     "ru": "мусорное ведро",
+     "ex": "Wirf das in den Mistkübel!",
+     "note": "Mülleimer"
+    },
+    {
+     "de": "das Sackerl",
+     "ru": "пакет (пластиковый, бумажный)",
+     "ex": "Brauchen Sie ein Sackerl?",
+     "note": "Tüte, Beutel"
+    },
+    {
+     "de": "der Gemeindebau",
+     "ru": "муниципальное жильё (Вена)",
+     "ex": "Meine Tante wohnt im Gemeindebau.",
+     "note": "Wiener Besonderheit, günstige Mieten"
+    },
+    {
+     "de": "das Grätzel",
+     "ru": "квартал, район (Вена)",
+     "ex": "In meinem Grätzel gibt es einen netten Markt.",
+     "note": "Viertel"
+    },
+    {
+     "de": "die Stiege",
+     "ru": "лестница (и подъезд)",
+     "ex": "Wir wohnen im dritten Stock, Stiege 2.",
+     "note": "Treppe, auch «Stiege 2» = Aufgang 2"
+    },
+    {
+     "de": "der Polster",
+     "ru": "подушка",
+     "ex": "Ich brauche einen zweiten Polster.",
+     "note": "Kopfkissen"
+    },
+    {
+     "de": "der Kasten",
+     "ru": "шкаф",
+     "ex": "Hängst du die Jacke in den Kasten?",
+     "note": "Schrank"
+    },
+    {
+     "de": "das Haustor",
+     "ru": "входная дверь дома",
+     "ex": "Das Haustor ist ab 22 Uhr versperrt.",
+     "note": "Haustür"
+    },
+    {
+     "de": "der Rauchfangkehrer",
+     "ru": "трубочист",
+     "ex": "Der Rauchfangkehrer kommt im Herbst.",
+     "note": "Schornsteinfeger; bringt Glück"
+    },
+    {
+     "de": "der Fleischhauer",
+     "ru": "мясник",
+     "ex": "Ich kauf das Faschierte beim Fleischhauer.",
+     "note": "Metzger"
+    },
+    {
+     "de": "die Ordination",
+     "ru": "приём врача / кабинет врача",
+     "ex": "Die Ordination ist bis 18 Uhr geöffnet.",
+     "note": "Arztpraxis"
+    },
+    {
+     "de": "die Rettung",
+     "ru": "скорая помощь",
+     "ex": "Rufen Sie die Rettung unter 144!",
+     "note": "Krankenwagen; Notruf 144"
+    },
+    {
+     "de": "der Zeitausgleich",
+     "ru": "отгул вместо оплаты переработок",
+     "ex": "Für die Überstunden nehme ich Zeitausgleich.",
+     "note": ""
+    },
+    {
+     "de": "die Karenz",
+     "ru": "декретный/родительский отпуск",
+     "ex": "Mein Mann geht zwei Monate in Karenz.",
+     "note": ""
+    },
+    {
+     "de": "die Familienbeihilfe",
+     "ru": "пособие на ребёнка",
+     "ex": "Die Familienbeihilfe beantragt man online.",
+     "note": ""
+    },
+    {
+     "de": "der Steuerausgleich",
+     "ru": "возврат/пересчёт налога (Arbeitnehmerveranlagung)",
+     "ex": "Mach unbedingt den Steuerausgleich, du kriegst Geld zurück.",
+     "note": ""
+    },
+    {
+     "de": "ansuchen um",
+     "ru": "подавать заявление о",
+     "ex": "Ich möchte um eine Beihilfe ansuchen.",
+     "note": "stellt einen Antrag; ansuchen = beantragen"
+    },
+    {
+     "de": "der Magistrat",
+     "ru": "городская администрация (Вена, Graz)",
+     "ex": "Die Anmeldung läuft über den Magistrat.",
+     "note": "Stadtverwaltung; MA = Magistratsabteilung"
+    },
+    {
+     "de": "der Arbeiterkammer-Beitrag (AK)",
+     "ru": "членский взнос в Палату труда",
+     "ex": "Von meinem Lohn wird der AK-Beitrag abgezogen.",
+     "note": "Arbeiterkammer vertritt Arbeitnehmer"
+    },
+    {
+     "de": "die ÖH",
+     "ru": "студенческое представительство ÖH",
+     "ex": "Bei der ÖH gibt es kostenlose Beratung.",
+     "note": "Österreichische Hochschüler:innenschaft; Beitrag mit dem Studienbeitrag"
+    },
+    {
+     "de": "inskribieren",
+     "ru": "записываться на курсы (разг.)",
+     "ex": "Ich muss mich noch für die Vorlesungen inskribieren.",
+     "note": "heute eher: sich anmelden/zulassen"
+    },
+    {
+     "de": "Jus studieren",
+     "ru": "изучать право",
+     "ex": "Meine Schwester studiert Jus an der Uni Wien.",
+     "note": "Jus = Rechtswissenschaften"
+    }
+   ]
+  },
+  {
+   "id": "at-slang",
+   "title": "Wienerisch & Slang 2",
+   "ru": "Больше венского и австрийского разговорного: друзья, эмоции, сленг",
+   "color": "#8B5CF6",
+   "cards": [
+    {
+     "de": "der Oida",
+     "ru": "чувак, братан (дружеск.)",
+     "ex": "Oida, was machst du da?",
+     "note": "von «Alter»; в быстрой речи «Oida»"
+    },
+    {
+     "de": "der Hawara",
+     "ru": "друг, приятель",
+     "ex": "Das ist mein alter Hawara.",
+     "note": "Wienerisch"
+    },
+    {
+     "de": "der Haberer",
+     "ru": "приятель, кореш",
+     "ex": "Ich geh mit meinen Haberern ins Stadion.",
+     "note": ""
+    },
+    {
+     "de": "das Gspusi",
+     "ru": "любовная интрижка, «пассия»",
+     "ex": "Er hat ein Gspusi in Salzburg.",
+     "note": ""
+    },
+    {
+     "de": "das Tschapperl",
+     "ru": "бедняжка",
+     "ex": "Das arme Tschapperl hat sich den Fuß gebrochen.",
+     "note": "ласково-жалостливо"
+    },
+    {
+     "de": "der Zniachtl",
+     "ru": "хлюпик, слабак",
+     "ex": "Sei kein Zniachtl, komm mit!",
+     "note": ""
+    },
+    {
+     "de": "der Gschaftlhuber",
+     "ru": "хлопотун, выскочка",
+     "ex": "Der Gschaftlhuber mischt sich überall ein.",
+     "note": ""
+    },
+    {
+     "de": "raunzen",
+     "ru": "ныть, ворчать",
+     "ex": "Hör auf zu raunzen und pack mit an.",
+     "note": "jammern; «Raunzer» = nörgler"
+    },
+    {
+     "de": "sekkieren",
+     "ru": "донимать, изводить",
+     "ex": "Sekkier mich nicht ständig!",
+     "note": "nerven, ärgern"
+    },
+    {
+     "de": "zach",
+     "ru": "тягучий, нудный, тяжёлый",
+     "ex": "Die Verhandlung war richtig zach.",
+     "note": "zäh, mühsam"
+    },
+    {
+     "de": "fesch",
+     "ru": "стильный, симпатичный",
+     "ex": "Die Jacke ist ja fesch!",
+     "note": "schick, hübsch"
+    },
+    {
+     "de": "gach",
+     "ru": "резкий, быстрый",
+     "ex": "Die Bremse kam gach.",
+     "note": "plötzlich, schnell"
+    },
+    {
+     "de": "der Pfusch",
+     "ru": "халтура / работа «по-чёрному»",
+     "ex": "Das ist alles nur Pfusch.",
+     "note": "schlampige oder schwarze Arbeit"
+    },
+    {
+     "de": "der Patschen",
+     "ru": "прокол колеса / домашний тапок",
+     "ex": "Ich hab einen Patschen am Fahrrad.",
+     "note": "Reifenpanne; Hausschuh"
+    },
+    {
+     "de": "das Gschnas",
+     "ru": "костюмированная вечеринка",
+     "ex": "Zum Gschnas geh ich als Pirat.",
+     "note": "Faschings- oder Kostümfest"
+    },
+    {
+     "de": "der Wuzzler",
+     "ru": "настольный футбол",
+     "ex": "Komm, wir spielen eine Runde Wuzzler.",
+     "note": "Tischfußball; «wuzzeln»"
+    },
+    {
+     "de": "zwiderwurzn",
+     "ru": "сварливый человек",
+     "ex": "Der Nachbar ist ein richtiger Zwiderwurzn.",
+     "note": "Griesgram"
+    },
+    {
+     "de": "der Hackler",
+     "ru": "работяга, трудяга",
+     "ex": "Mein Opa war ein Hackler.",
+     "note": "Arbeiter, einer der hart arbeitet"
+    },
+    {
+     "de": "die Blunzen",
+     "ru": "кровяная колбаса",
+     "ex": "Zu Silvester gibt's Blunzen.",
+     "note": "Blutwurst; «Blunzn» = auch dicke Frau (vulgär)"
+    },
+    {
+     "de": "anpatzen",
+     "ru": "оклеветать, запятнать",
+     "ex": "Er wollte sie in der Zeitung anpatzen.",
+     "note": "beschmutzen"
+    },
+    {
+     "de": "a bissl",
+     "ru": "чуть-чуть, немного",
+     "ex": "Warte a bissl, ich bin gleich so weit.",
+     "note": "ein bisschen"
+    },
+    {
+     "de": "Schas reden",
+     "ru": "нести чушь (грубовато)",
+     "ex": "Red keinen Schas!",
+     "note": "Schas = Unsinn, derb"
+    },
+    {
+     "de": "das ist urleiwand",
+     "ru": "это супер-класс",
+     "ex": "Der Abend war urleiwand!",
+     "note": "«ur-» усиливает"
+    },
+    {
+     "de": "Servas, Oida!",
+     "ru": "Здорово, чувак!",
+     "ex": "Servas, Oida, lang nicht gesehen!",
+     "note": "для друзей"
+    },
+    {
+     "de": "ausflippen",
+     "ru": "срываться, выходить из себя",
+     "ex": "Er ist völlig ausgeflippt, als er die Rechnung sah.",
+     "note": "in Österreich sehr gängig"
+    },
+    {
+     "de": "sich Schmähs erzählen",
+     "ru": "травить байки",
+     "ex": "Wir sitzen im Beisl und erzählen uns Schmähs.",
+     "note": "Schmäh = Witz, Anekdote"
+    },
+    {
+     "de": "die Gnackwatschn",
+     "ru": "подзатыльник",
+     "ex": "Dafür gibt's eine Gnackwatschn.",
+     "note": "Ohrfeige/Schlag auf den Nacken"
+    },
+    {
+     "de": "hackeln",
+     "ru": "вкалывать",
+     "ex": "Ich hab die ganze Woche gehackelt.",
+     "note": "schwer arbeiten"
+    }
+   ]
   }
  ]
 }

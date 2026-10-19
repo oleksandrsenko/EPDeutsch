@@ -1133,6 +1133,686 @@
     "Erörtern Sie Argumente, die für und gegen autofreie Innenstädte sprechen.",
     "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
    ]
+  },
+  {
+   "id": "e-matura-online",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "Fernstudium statt Hörsaal",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sind Online-Studien besser als ein Studium vor Ort?",
+    "text": "Immer mehr Universitäten in Österreich bieten ganze Studiengänge online an. Befürworter schätzen die Flexibilität, Kritiker sehen im Hörsaal und auf dem Campus einen unersetzlichen Ort des Austauschs.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-noten",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "Noten in der Schule",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte man in der Schule auf Noten verzichten?",
+    "text": "In einigen österreichischen Volksschulen werden Kinder bereits ohne Ziffernnoten beurteilt. Eltern und Lehrkräfte streiten darüber, ob Noten motivieren oder unter Druck setzen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-auslandssemester",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "Studieren im Ausland",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte ein Auslandssemester für alle Studierenden verpflichtend sein?",
+    "text": "Das Erasmus-Programm ermöglicht Studierenden einen Aufenthalt an einer Partneruniversität in Europa. Manche Fachleute fordern, dass diese Erfahrung künftig zum Studium dazugehören müsse, andere verweisen auf Kosten und persönliche Lebensumstände.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-ki-hausaufgaben",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "KI im Studium",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der Einsatz von künstlicher Intelligenz bei Seminararbeiten erlaubt sein?",
+    "text": "Sprachmodelle schreiben heute in Sekunden ganze Texte. Universitäten diskutieren, ob solche Programme als erlaubtes Hilfsmittel gelten oder ob sie das selbstständige wissenschaftliche Arbeiten gefährden.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-numerus",
+   "typ": "eroert",
+   "thema": "bildung",
+   "titel": "Aufnahmetests",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sind Aufnahmeverfahren für stark nachgefragte Studienfächer gerecht?",
+    "text": "Für Fächer wie Medizin oder Psychologie gibt es an österreichischen Universitäten deutlich mehr Bewerberinnen und Bewerber als Studienplätze. Aufnahmetests sollen die Geeignetsten auswählen, werden aber von vielen als unfair empfunden.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-ehrenamt-pflicht",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Ehrenamt",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Ehrenamt in der Schule oder im Studium honoriert werden?",
+    "text": "In Österreich engagieren sich Millionen Menschen unbezahlt, etwa bei der Freiwilligen Feuerwehr oder beim Roten Kreuz. Manche fordern, dass dieses Engagement durch Studienpunkte oder Steuervorteile anerkannt wird.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-wahlalter",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Wählen mit 16",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte das Wahlalter generell auf 16 Jahre gesenkt werden?",
+    "text": "Bei Nationalratswahlen dürfen in Österreich Menschen ab 16 Jahren wählen, bei vielen anderen Wahlen aber nicht. Befürworter sprechen von mehr Mitbestimmung, Gegner bezweifeln die politische Reife von Jugendlichen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-spenden",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Spenden",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der Staat soziale Aufgaben stärker selbst übernehmen, statt sich auf Spenden zu verlassen?",
+    "text": "Hilfsorganisationen wie die Caritas finanzieren einen großen Teil ihrer Arbeit durch private Spenden. Kritiker meinen, dass Hilfe für Bedürftige eine staatliche Aufgabe sein sollte, nicht von der Großzügigkeit Einzelner abhängen dürfe.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-integration",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Integration",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist verpflichtender Deutschunterricht für Zugewanderte der beste Weg zur Integration?",
+    "text": "Wer neu nach Österreich kommt, muss in vielen Fällen Deutschkurse besuchen und Prüfungen ablegen. Manche halten das für den wichtigsten Schlüssel zur Integration, andere sehen darin zusätzlichen Druck.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-barrierefrei",
+   "typ": "eroert",
+   "thema": "ges",
+   "titel": "Barrierefreiheit",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten alle öffentlichen Gebäude gesetzlich zu vollständiger Barrierefreiheit verpflichtet werden?",
+    "text": "Viele Altbauten in Wiener Innenstadtlagen besitzen weder Rampen noch Aufzüge. Eine strenge Pflicht zum Umbau würde Menschen mit Behinderung nützen, könnte aber historische Gebäude und Eigentümer stark belasten.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-overtourism",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Massentourismus",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten beliebte Orte wie Hallstatt die Zahl der Besucher begrenzen dürfen?",
+    "text": "In Hallstatt drängen sich im Sommer täglich tausende Tagestouristen durch ein Dorf mit nur wenigen hundert Einwohnern. Die Bewohner klagen über Lärm und überfüllte Straßen, Geschäfte profitieren hingegen von den Gästen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-kreuzfahrt",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Kreuzfahrten",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Kreuzfahrten aus Umweltgründen stark eingeschränkt werden?",
+    "text": "Große Kreuzfahrtschiffe verbrauchen enorme Mengen an Treibstoff und belasten Hafenstädte mit Abgasen. Gleichzeitig sichern sie in vielen Regionen Arbeitsplätze und Einnahmen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-urlaub-inland",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Urlaub in der Heimat",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist Urlaub im eigenen Land besser als eine Fernreise?",
+    "text": "Viele Österreicherinnen und Österreicher verbringen ihren Urlaub heuer wieder in den Bergen oder an einem Kärntner See. Fernreisen versprechen dagegen Abenteuer und fremde Kulturen, belasten aber das Klima.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-sanfter-tourismus",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Sanfter Tourismus",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Reisende für ökologisch nachhaltiges Reisen mehr bezahlen müssen?",
+    "text": "Bahnreisen, regionale Unterkünfte und CO2-Ausgleich gelten als umweltfreundlich, sind aber häufig teurer. Fachleute streiten darüber, ob höhere Preise die richtigen Anreize setzen oder nur Wohlhabenden nachhaltiges Reisen erlauben.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-reisen-sprache",
+   "typ": "eroert",
+   "thema": "reisen",
+   "titel": "Reisen und Sprache",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist es heute noch notwendig, vor einer Reise die Landessprache zu lernen?",
+    "text": "Übersetzungs-Apps helfen Reisenden, sich fast überall zu verständigen. Sprachlehrerinnen und Sprachlehrer betonen dagegen, dass man ein Land erst durch seine Sprache wirklich kennenlernt.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-social-media-alter",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Soziale Netzwerke",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte es ein Mindestalter von 16 Jahren für soziale Netzwerke geben?",
+    "text": "Viele Kinder in Österreich haben schon in der Volksschule ein eigenes Smartphone und nutzen Plattformen wie TikTok oder Instagram. Experten warnen vor Suchtgefahr, Cybermobbing und Schönheitsidealen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-printmedien",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Zeitungen",
+   "impuls": {
+    "art": "frage",
+    "titel": "Haben gedruckte Zeitungen noch eine Zukunft?",
+    "text": "Immer weniger Menschen kaufen die Tageszeitung am Kiosk, viele informieren sich nur noch über das Smartphone. Verlage kämpfen mit sinkenden Auflagen und suchen nach neuen Geschäftsmodellen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-fakenews",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Falschmeldungen",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Plattformbetreiber für Falschmeldungen auf ihren Seiten rechtlich haftbar sein?",
+    "text": "In sozialen Netzwerken verbreiten sich erfundene Nachrichten oft schneller als geprüfte Informationen. Die Politik diskutiert, ob Konzerne stärker kontrollieren und haften sollten oder ob das die Meinungsfreiheit bedroht.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-oerf-gebuehr",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Öffentlich-rechtlicher Rundfunk",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der öffentlich-rechtliche Rundfunk über Gebühren finanziert werden?",
+    "text": "Der ORF wird in Österreich zu großen Teilen über eine verpflichtende Haushaltsabgabe finanziert. Befürworter sehen darin die Basis unabhängiger Information, Kritiker meinen, jeder solle nur das bezahlen, was er tatsächlich nutzt.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-influencer",
+   "typ": "eroert",
+   "thema": "medien",
+   "titel": "Influencer",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Werbung von Influencern strenger kontrolliert werden?",
+    "text": "Viele Jugendliche orientieren sich an Influencern, die Produkte bewerben, ohne dies immer klar zu kennzeichnen. Verbraucherschützer fordern härtere Regeln, andere sehen darin eine Einschränkung der Kreativität.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-klimaticket",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Klimaticket",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der öffentliche Verkehr in ganz Österreich kostenlos sein?",
+    "text": "Mit dem Klimaticket können Fahrgäste um einen Fixpreis alle öffentlichen Verkehrsmittel des Landes nutzen. Manche fordern, den öffentlichen Verkehr völlig gratis anzubieten, um möglichst viele zum Umstieg zu bewegen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-tempolimit",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Tempolimit",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte auf Autobahnen ein generelles Tempolimit von 100 km/h gelten?",
+    "text": "In Österreich gilt auf Autobahnen meist Tempo 130. Befürworter eines niedrigeren Limits verweisen auf Umwelt und Sicherheit, Gegner auf Freiheit und Fahrzeiten.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-plastik",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Plastik",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Einwegverpackungen aus Plastik komplett verboten werden?",
+    "text": "Plastikmüll belastet Meere, Böden und die Gesundheit. Ein Verbot würde Verpackungen verteuern und Unternehmen vor Herausforderungen stellen, könnte aber Abfall deutlich verringern.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-atomkraft",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Energiewende",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Österreich stärker auf erneuerbare Energien setzen, auch wenn Strom dadurch teurer wird?",
+    "text": "Wasserkraft, Sonne und Wind sollen fossile Brennstoffe ersetzen. Der Ausbau von Windrädern und Solaranlagen stößt in manchen Regionen allerdings auf Widerstand, und die Umstellung kostet viel Geld.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-radwege",
+   "typ": "eroert",
+   "thema": "umwelt",
+   "titel": "Radverkehr",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten mehr Parkplätze in Städten zugunsten von Radwegen aufgegeben werden?",
+    "text": "Wiens Bezirke bauen immer mehr Radwege, oft auf Kosten von Parkplätzen. Anrainer fürchten um Erreichbarkeit und Geschäfte, Radfahrende fordern mehr Sicherheit.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-viertagewoche",
+   "typ": "eroert",
+   "thema": "arbeit",
+   "titel": "Viertagewoche",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte die Viertagewoche bei vollem Lohn eingeführt werden?",
+    "text": "Einige Betriebe in Österreich testen eine Arbeitswoche mit nur vier Tagen. Beschäftigte berichten von mehr Erholung, Arbeitgeber fürchten Kosten und Personalmangel.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-praktikum",
+   "typ": "eroert",
+   "thema": "arbeit",
+   "titel": "Unbezahlte Praktika",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Praktika verpflichtend bezahlt werden?",
+    "text": "Viele junge Menschen arbeiten während oder nach dem Studium in Praktika, für die sie wenig oder gar nichts bekommen. Gewerkschaften verlangen eine gesetzliche Mindestentlohnung, Unternehmen verweisen auf den Ausbildungscharakter.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-ki-arbeitsplatz",
+   "typ": "eroert",
+   "thema": "arbeit",
+   "titel": "KI am Arbeitsplatz",
+   "impuls": {
+    "art": "frage",
+    "titel": "Wird künstliche Intelligenz mehr Arbeitsplätze vernichten als schaffen?",
+    "text": "Programme übernehmen bereits Aufgaben in Büros, Banken und Callcentern. Optimisten erwarten neue Berufe und Entlastung, Pessimisten befürchten Arbeitslosigkeit.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-karenz",
+   "typ": "eroert",
+   "thema": "bez",
+   "titel": "Väterkarenz",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Väter gesetzlich zu einer Karenzzeit verpflichtet werden?",
+    "text": "In Österreich nehmen noch immer nur wenige Väter Karenz, obwohl sie rechtlich möglich wäre. Eine Pflicht soll eine gerechtere Aufteilung der Kinderbetreuung bringen, Kritiker sehen darin einen Eingriff in die Entscheidungsfreiheit der Familien.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-gendern",
+   "typ": "eroert",
+   "thema": "bez",
+   "titel": "Gendergerechte Sprache",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte gendergerechte Sprache an Universitäten verpflichtend sein?",
+    "text": "Viele Universitäten empfehlen in Texten Formen wie Studierende oder das Gendersternchen. Befürworter wollen alle Geschlechter sichtbar machen, Gegner sprechen von Zwang und schwerer Lesbarkeit.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-generationen",
+   "typ": "eroert",
+   "thema": "bez",
+   "titel": "Zusammenleben der Generationen",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist das Zusammenleben mehrerer Generationen unter einem Dach noch zeitgemäß?",
+    "text": "Früher lebten Großeltern, Eltern und Kinder oft im selben Haus. Heute wohnen die Generationen häufig weit voneinander entfernt, einige Familien entscheiden sich aber bewusst wieder für ein gemeinsames Wohnen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-mietpreisbremse",
+   "typ": "eroert",
+   "thema": "wohnen",
+   "titel": "Mieten",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der Staat die Höhe der Mieten gesetzlich begrenzen?",
+    "text": "In Wien und Graz sind die Mieten in den letzten Jahren stark gestiegen. Eine gesetzliche Obergrenze würde Mieter entlasten, könnte aber Vermieter vom Bau neuer Wohnungen abhalten.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-land-stadt",
+   "typ": "eroert",
+   "thema": "wohnen",
+   "titel": "Stadt oder Land",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist das Leben auf dem Land dem Leben in der Stadt vorzuziehen?",
+    "text": "Während viele junge Menschen in Städte ziehen, träumen andere von Ruhe und Natur im Grünen. Weniger Infrastruktur und längere Wege stehen dem Wunsch nach günstigeren Wohnungen und besserer Luft gegenüber.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-leerstand",
+   "typ": "eroert",
+   "thema": "wohnen",
+   "titel": "Leerstand",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollten Eigentümer leerstehender Wohnungen eine Abgabe zahlen müssen?",
+    "text": "In vielen österreichischen Städten stehen Wohnungen leer, obwohl Wohnraum knapp ist. Eine Leerstandsabgabe soll Eigentümer zur Vermietung bewegen, wird aber als Eingriff in das Eigentum kritisiert.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-schulessen",
+   "typ": "eroert",
+   "thema": "gesund",
+   "titel": "Gesunde Ernährung",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte es in allen Schulen ein kostenloses, gesundes Mittagessen geben?",
+    "text": "Viele Kinder in Österreich essen in der Schule nur ein belegtes Brot oder gar nichts. Ein kostenloses Mittagessen soll Gesundheit und Konzentration fördern, würde die öffentliche Hand aber viel Geld kosten.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-psychotherapie",
+   "typ": "eroert",
+   "thema": "gesund",
+   "titel": "Psychische Gesundheit",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte Psychotherapie vollständig von der Krankenkasse bezahlt werden?",
+    "text": "Immer mehr junge Menschen leiden unter Stress, Angst oder Erschöpfung. Therapieplätze auf Kassenkosten sind jedoch knapp, wer schnell Hilfe möchte, muss oft privat zahlen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-sport-schule",
+   "typ": "eroert",
+   "thema": "gesund",
+   "titel": "Bewegung",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte es in der Schule täglich eine Stunde Sport geben?",
+    "text": "Kinder sitzen heute viel vor Bildschirmen und bewegen sich zu wenig. Befürworter einer täglichen Turnstunde erwarten gesündere Schülerinnen und Schüler, Kritiker fürchten einen Verlust an Zeit für andere Fächer.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-fast-fashion",
+   "typ": "eroert",
+   "thema": "konsum",
+   "titel": "Billige Mode",
+   "impuls": {
+    "art": "frage",
+    "titel": "Sollte der Verkauf besonders billiger Kleidung eingeschränkt werden?",
+    "text": "Fast Fashion macht modische Kleidung für fast alle erschwinglich, verursacht aber Müllberge und schlechte Arbeitsbedingungen in der Produktion. Eine Einschränkung würde Kleidung teurer machen.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-onlineshopping",
+   "typ": "eroert",
+   "thema": "konsum",
+   "titel": "Online-Shopping",
+   "impuls": {
+    "art": "frage",
+    "titel": "Gefährdet der Online-Handel die Innenstädte?",
+    "text": "Immer mehr Menschen bestellen im Internet, in Fußgängerzonen stehen Geschäfte leer. Befürworter schätzen Preis und Bequemlichkeit, Kritiker fürchten um Arbeitsplätze und das Leben in den Zentren.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
+  },
+  {
+   "id": "e-pfand",
+   "typ": "eroert",
+   "thema": "konsum",
+   "titel": "Pfandsystem",
+   "impuls": {
+    "art": "frage",
+    "titel": "Ist ein Pfand auf alle Verpackungen sinnvoll?",
+    "text": "In Österreich wurde ein Pfandsystem für Einweg-Getränkeflaschen und Dosen eingeführt. Weitere Verpackungen könnten folgen, was die Sammelquote erhöhen würde, aber auch mit Aufwand für Handel und Konsumenten verbunden ist.",
+    "quelle": "Übungsaufgabe"
+   },
+   "punkte": [
+    "Führen Sie kurz in das Thema ein.",
+    "Erörtern Sie Argumente, die für und gegen diese Position sprechen.",
+    "Wägen Sie die Argumente ab und begründen Sie Ihre eigene Position."
+   ]
   }
  ]
 }

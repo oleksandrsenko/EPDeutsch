@@ -274,6 +274,13 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .tq .why{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}
 .tq .why b{color:var(--fg)}
 .tq textarea{min-height:60px;font-size:14px}
+.errs{display:flex;flex-direction:column;gap:10px}.errc{background:var(--panel);border:2px solid var(--line);border-radius:16px;padding:12px 14px}
+.errsrc{font-weight:800;font-size:13.5px;color:var(--c,var(--primary));text-decoration:none}.errq{margin-top:6px;font-size:13.5px;color:var(--muted)}
+.errl{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;margin-top:6px;font-size:15px;font-family:var(--serif)}.errl .no s{color:var(--bad)}.errl .ok b{color:var(--good)}.errl .arr{color:var(--muted)}
+.errw{margin-top:8px;font-size:13.5px;line-height:1.5;color:var(--fg);background:color-mix(in srgb,var(--c,var(--primary)) 7%,var(--panel));border-radius:10px;padding:8px 10px}
+.umbar{position:fixed;z-index:60;display:flex;gap:4px;padding:4px;border:2px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:var(--sh-card,0 8px 24px rgba(0,0,0,.14))}
+.umbar button{min-width:32px;height:32px;border:0;border-radius:8px;background:color-mix(in srgb,var(--c,var(--primary)) 10%,var(--panel));color:var(--fg);font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.umbar button:hover{background:var(--c,var(--primary));color:#fff}
 .tq .ttask{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .tq u.ul{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--c,var(--primary));font-weight:800}
 .evin{width:100%;margin-top:8px;font-size:14px!important;padding:8px 11px!important}.evin.right{border-color:var(--good)!important;background:var(--good-soft)}.evin.wrong{border-color:var(--bad)!important;background:var(--bad-soft)}
@@ -476,6 +483,9 @@ html{scrollbar-gutter:stable}
 .trdirs{display:inline-flex;gap:4px;background:var(--panel2);border-radius:14px;padding:4px;margin-left:auto}
 .trdirs button{border:0;background:none;border-radius:10px;padding:7px 12px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;white-space:nowrap}
 .trdirs button.on{background:var(--panel);color:var(--fg);box-shadow:var(--sh)}
+.atcard{margin-top:16px;background:var(--panel);border-radius:22px;padding:18px 20px;box-shadow:var(--sh);border:2px solid color-mix(in srgb,#C4687A 35%,transparent)}
+.atcard .at-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}.atcard .at-flag{background:#C4687A;color:#fff;font-weight:800;font-size:11px;border-radius:7px;padding:2px 6px}
+.atcard .at-de{font-family:var(--serif);font-size:24px;font-weight:700;margin-top:10px}.atcard .at-ru{font-size:15px;color:var(--muted);margin-top:2px}.atcard .at-ex{margin-top:8px;font-family:var(--serif);font-size:16px;font-style:italic}
 .trinw{display:flex;flex-direction:column;gap:8px;min-width:0}.trinw textarea{flex:1}.trsug{display:flex;flex-wrap:wrap;gap:6px}.trsug button{border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:5px 12px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline;max-width:100%}.trsug button small{color:var(--muted);font-weight:500;font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.trsug button:first-child{border-color:var(--c)}.trsug button:hover{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--panel))}.trsug kbd{font:inherit;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 4px}
 .trbox{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch}
 .trbox textarea{width:100%;min-height:120px;border-radius:16px;border:2px solid var(--line);padding:12px 14px;font:inherit;font-size:16px;background:var(--bg);color:var(--fg);resize:vertical}
@@ -899,13 +909,28 @@ async function vHome(opt){
     ${modCard("#/sprechen","sprechen","Sprechen","Монолог и диалог с экзаменатором: говоришь, ИИ разбирает и отвечает голосом.",[`${(sp.tasks||[]).length} заданий`])}
     <a class="mod wide" href="#/frei"><span class="ic">${ic("star",24)}</span><div><h3>Свободный немецкий</h3><p>Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг, свои тексты, аудио и видео.</p></div><span class="go">${ic("chev",18)}</span></a>
   </div>
+  <section class="atcard" id="atc" hidden></section>
   <section class="trcard" id="trc"><div class="trhead"><span class="ic">${ic("globe",24)}</span><div><h3>Переводчик</h3><p>Пиши, перевод появится сам. DeepL.</p></div><div class="trdirs" role="tablist">${TR_DIRS.map(([v,t])=>`<button type="button" data-trd="${v}" class="${trDir()===v?"on":""}">${t}</button>`).join("")}</div></div>
    <div class="trbox"><div class="trinw"><textarea id="trIn" maxlength="1500" placeholder="Текст для перевода" spellcheck="false" autocomplete="off"></textarea><div class="trsug" id="trSug" hidden></div></div><button type="button" class="trswap" id="trSwap" title="Поменять языки">${ic("swap",18)}</button><textarea id="trOut" readonly placeholder="Перевод"></textarea></div>
    <div class="trmeta"><span id="trProv"></span><button type="button" class="btn sm" id="trSay" style="margin-left:auto" hidden>${ic("speaker",15)}Озвучить</button></div></section>
   `);
   if(PLED){bindPlanEditor();window.scrollTo(0,y)}
   $("#plEdit").onclick=()=>{PLED=!PLED;vHome()};
-  bindTranslator();
+  bindTranslator();bindAtWord();
+}
+// «Österreichisch heute»: слово или идиома дня из колод австрийского немецкого (Свободный немецкий)
+let AT_I=0;
+async function bindAtWord(){
+  const box=$("#atc");if(!box)return;
+  const w=await data("frei","wendungen"),all=[].concat(...(w.decks||[]).filter(x=>x.id==="austria"||x.id.startsWith("at-")).map(x=>x.cards.map(c=>({...c,deck:x.title}))));
+  if(!all.length)return;
+  const draw=()=>{const c=all[(today()*5+AT_I)%all.length];
+    box.hidden=false;box.innerHTML=`<div class="at-h"><span class="at-flag">AT</span><b>Österreichisch heute</b><span class="muted">${esc(c.deck)}</span></div>
+      <div class="at-de" lang="de">${esc(c.de)}</div><div class="at-ru">${esc(c.ru)}</div>
+      ${c.ex?`<div class="at-ex" lang="de">${esc(c.ex)}</div>`:""}${c.note?`<div class="muted" style="font-size:13px;margin-top:4px">${esc(c.note)}</div>`:""}
+      <div class="row" style="margin-top:10px"><button class="btn sm" id="atSay">${ic("speaker",15)}Озвучить</button><button class="btn sm" id="atNext">Ещё одно</button><a class="btn sm" href="#/frei/karten">Все колоды</a></div>`;
+    $("#atSay").onclick=()=>say((c.de.replace(/\s*\/\s*.*$/,"")+". "+(c.ex||"")).trim());$("#atNext").onclick=()=>{AT_I++;draw()}};
+  draw();
 }
 const TR_DIRS=[["de-ru","DE → RU"],["ru-de","RU → DE"],["en-de","EN → DE"],["de-en","DE → EN"]];
 const trDir=()=>{const v=get("trdir","de-ru");return TR_DIRS.some(x=>x[0]===v)?v:"de-ru"};
@@ -1066,7 +1091,7 @@ function checkQ(skip){
     logDone("g",1);const fb0=$("#fb");
     fb0.innerHTML='<div class="fb ai"><span class="spin"></span> ИИ оценивает по критериям EPD…</div>';$("#chk").disabled=true;$("#skip").hidden=true;
     api("/de/sfort",{method:"POST",body:JSON.stringify({q:q.q.replace(/…\s*$/,"").trim(),answer:ans,model:(q.a||[])[0]||""})}).then(r=>{
-      const okk=r.points>=2;G.st.r[i]=okk?1:0;G.st.p=G.st.p||{};G.st.p[i]=r.points;G.st.last=today();save(gramKey(),G.st);
+      const okk=r.points>=2;if(!t.ai){const cq=plainQ(q.q).slice(0,100);if(okk)okErr("grammatik",t.id,cq);else logErr("grammatik",{ref:t.id,title:t.title,href:"#/grammatik/"+t.id,q:cq,ans,right:r.fixed,why:r.why})}G.st.r[i]=okk?1:0;G.st.p=G.st.p||{};G.st.p[i]=r.points;G.st.last=today();save(gramKey(),G.st);
       if(okk){G.ok++;logDone("gk",1)}G.pts=(G.pts||0)+r.points;
       fb0.innerHTML=`<div class="fb ${r.points>=3?"ok":r.points>=2?"ai":"no"}"><b class="h">${r.points} из 3 ${r.points>=3?"· комплексное и верное":r.points>=2?"· верно, но просто":r.points>=1?"· есть ошибка":"· не засчитано"}</b><div class="model">${esc(r.fixed)}</div><div style="margin-top:6px">${esc(r.why)}</div><div class="muted" style="font-size:13px;margin-top:6px">Образец: ${esc(q.q.replace(/…\s*$/,"").trim())} ${esc((q.a[0]||"").replace(/^…\s*/,""))}</div></div>`;
       $("#chk").disabled=false;$("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог"}).catch(e=>{fb0.innerHTML=`<div class="fb no">${esc(e.message)}</div>`;$("#chk").disabled=false;$("#ans").readOnly=false;G.answered=false;$("#skip").hidden=false});
@@ -1084,6 +1109,7 @@ function checkQ(skip){
     $("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог";$("#skip").hidden=true;return;
   }
   G.st.r[i]=ok?1:0;G.st.last=today();save(gramKey(),G.st);
+  if(!t.ai){const cq=plainQ(q.q).slice(0,100);if(ok)okErr("grammatik",t.id,cq);else logErr("grammatik",{ref:t.id,title:t.title,href:"#/grammatik/"+t.id,q:cq,ans:q.t==="mc"?(G.sel!=null?q.o[G.sel]:""):ans,right:q.t==="nf"?nfFull((q.a||[])[0]):model,why:q.ex||""})}
   if(ok){G.ok++;G.pts=(G.pts||0)+(q.pts||1)}else if(!skip&&q.t!=="mc"&&!t.exam)G.retry.push(i);
   logDone("g",1);if(ok)logDone("gk",1);
   const fb=$("#fb");
@@ -1091,7 +1117,7 @@ function checkQ(skip){
    ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
   const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
     try{const r=await api("/de/check",{method:"POST",body:JSON.stringify(q.t==="nf"?{task:"Umformung: ersetze die unterstrichene Wendung; der Rest des Satzes bleibt unverändert",q:q.q.replace(/\[\[|\]\]/g,"")+" → "+(q.pre||"")+"___"+(q.post||""),a:q.a.map(nfFull),answer:nfFull(ans)}:{task:q.task||"",q:q.q,a:q.a,answer:ans})});
-      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.pts=(G.pts||0)+(q.pts||1);G.retry=G.retry.filter(x=>x!==i)}
+      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.pts=(G.pts||0)+(q.pts||1);G.retry=G.retry.filter(x=>x!==i);if(!t.ai)okErr("grammatik",t.id,plainQ(q.q).slice(0,100))}
       fb.insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"ai"}"><b class="h">${r.ok?"ИИ: твой вариант верный ✓":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`);ai.remove()}
     catch(e){ai.disabled=false;ai.textContent=e.message}};
   $("#chk").textContent=G.pos+1<G.queue.length||G.retry.length?"Дальше →":"Итог";
@@ -1335,12 +1361,12 @@ async function vLesen(area,id){
   const draw=()=>{const tasks=T();$("#tq").innerHTML=tasksHTML(tasks,ans,checked,res);if(!checked)bindTasks($("#tq"),tasks,ans,draw);
     const [s,m]=taskScore(tasks,ans,res);$("#tcnt").textContent=`${tasks.length} шт. · ${fmtPts(m)} б.`;
     if(checked){$("#score").innerHTML=`<div class="score"><b>${fmtPts(s)}/${fmtPts(m)}</b><span>${m?`≈ ${fmtPts(Math.round(s/m*25*2)/2)} из 25 по шкале Lesen. `:""}${s/m>=.8?"Отлично!":s/m>=.48?"Порог пройден: на экзамене нужно минимум 12 из 25.":"Ниже порога (12 из 25). Перечитай абзацы с ошибками."}</span></div>`;
-      $$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()})}
+      $$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,tasks,ans,res);draw()})}
     else $("#score").innerHTML="";
     $("#lcheck").hidden=checked;$("#lreset").hidden=!checked;drawX()};
   draw();
   $("#lcheck").onclick=async()=>{const b=$("#lcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
-    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
+    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,T(),ans,res);logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
   $("#lreset").onclick=()=>{checked=false;ans=[];res={};draw()};
 }
 
@@ -1390,7 +1416,7 @@ async function vHoeren(area,id){
     if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(it.tasks||[],ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()});const [s,m]=taskScore(it.tasks||[],ans,res);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
     $("#hcheck").hidden=checked};
   draw();
-  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(it.tasks||[],ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(it.tasks||[],ans,res);save(key,{s,m,ans,res,d:today()});logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
+  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(it.tasks||[],ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(it.tasks||[],ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("hoeren",id,it.title,"#/hoeren/"+id,it.tasks||[],ans,res);logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
   $("#hreset").onclick=()=>{checked=false;ans=[];res={};plays=0;setPlays();draw()};
   $("#hscript").onclick=()=>{showScript=!showScript;$("#script").hidden=!showScript;$("#hscript").textContent=showScript?"Скрыть текст":"Показать текст"};
 }
@@ -1474,6 +1500,7 @@ async function vSprechen(area,id){
     try{
       const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,item:t.id==="ai"?t:undefined,text,phase:SP.phase,history:SP.turns})});
       SP.turns.push({role:"me",text:r.transcript||text});
+      if(area==="de")(r.errors||[]).slice(0,8).forEach(e=>logErr("sprechen",{ref:t.id,title:t.title,href:"#/sprechen/"+t.id,q:e.wrong,ans:e.wrong,right:e.right,why:e.why}));
       $("#pending").outerHTML=fbHTML(r);
       addEx(r.reply_de,r.reply_ru);
       say(r.reply_de,{voice:area==="frei"?(t.voice||"ash"):"sage",style:t.style});
@@ -1602,7 +1629,7 @@ async function vModHome(k){
     <div class="hero-top"><div class="hero-l">${oliC(MOD[k].c,gd?"cheer":g.n?"happy":"think")}<div><h1>${helloRu()}, ${esc(nm)}!</h1><p class="hero-sub">${esc(sub)}</p></div></div>
       <div class="hero-cta">${next?`<a class="btn cta" href="${itemHref(k,next)}" style="--c:${MOD[k].c}">${ic(MOD[k].i,18)}${done||rec.length?"Дальше":"Начать"}: ${esc(short(next.title))}</a>`:""}</div></div>
     <div class="hgoal${gd?" done":""}"><div class="hg-t"><span>Цель дня</span><b>${g.n} из ${g.of}</b></div><div class="bar"><i style="width:${Math.min(100,Math.round(g.n/g.of*100))}%"></i></div></div>
-    <div class="hfacts" style="margin-top:0;padding-top:0;border-top:0"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><span class="hf">${ic("check",17)}Пройдено <b>${done}</b> из ${items.length}</span>${acc!=null?`<span class="hf">${ic("target",17)}${k==="sprechen"?`Средняя оценка <b>${acc}</b>`:`Точность <b>${acc}%</b>`}</span>`:""}<a class="hf-more" href="#/${k}/progress">Прогресс и настройки ${ic("chev",16)}</a></div>
+    <div class="hfacts" style="margin-top:0;padding-top:0;border-top:0"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><span class="hf">${ic("check",17)}Пройдено <b>${done}</b> из ${items.length}</span>${acc!=null?`<span class="hf">${ic("target",17)}${k==="sprechen"?`Средняя оценка <b>${acc}</b>`:`Точность <b>${acc}%</b>`}</span>`:""}${errList(k).filter(x=>!x.fixed).length?`<a class="hf" href="#/${k}/errors" style="text-decoration:none">${ic("target",17)}Ошибок: <b>${errList(k).filter(x=>!x.fixed).length}</b></a>`:""}<a class="hf-more" href="#/${k}/progress">Прогресс и настройки ${ic("chev",16)}</a></div>
   </section>
   ${rec.length?`<h2 class="h-sec">Недавние</h2><div class="recent">${rec.map(x=>`<a class="rcard" href="${itemHref(k,x)}" style="--c:${MOD[k].c}"><span class="ic">${ic(MOD[k].i,22)}</span><span style="min-width:0"><b>${esc(x.title)}</b><small>${esc(itemSub(k,x))}</small></span><span class="go">${ic("chev",15)}</span></a>`).join("")}</div>`:""}
   ${k==="grammatik"?`<h2 class="h-sec">Уровни <small>${groupsOf(k,items).length} ${plural(groupsOf(k,items).length,"уровень","уровня","уровней")}</small></h2>
@@ -1709,7 +1736,44 @@ async function vModExtra(k,sec){
     if(k==="sprechen"){if(r&&r.n&&r.hist&&r.hist[0])rows.push(row("#/sprechen/"+x.id,`<span class="tag">последний разбор · оценка ${r.hist[0].score}</span>`,x.title,wtName(x.wt)));return}
     if(r&&r.m&&r.s<r.m)rows.push(row(`#/${k}/${x.id}`,lv(x)+`<span class="tag">ошибок: ${r.m-r.s}</span>`,x.title,wtName(x.wt)));
   });
-  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Ошибки</h1><p class="lead">Задания, где были ошибки. Открой и пройди ещё раз, пока не будет без ошибок.</p>${modRows(k,rows,`<div class="empty">Пока ошибок нет. Пройди несколько заданий, неверные ответы появятся здесь.</div>`)}`);
+  const J=errList(k),open=J.filter(x=>!x.fixed),done=J.filter(x=>x.fixed);
+  const card=(x,i)=>`<div class="errc"><div class="row" style="justify-content:space-between;gap:8px"><a href="${esc(x.href||"#/"+k)}" class="errsrc">${esc(x.title||"")}</a><span class="tag">${x.n>1?"×"+x.n+" · ":""}${esc(new Date((x.d||today())*864e5).toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit"}))}</span></div>
+    ${x.q&&x.q!==x.ans?`<div class="errq">${esc(x.q)}</div>`:""}
+    <div class="errl"><span class="no">${x.ans?`<s>${esc(x.ans)}</s>`:'<i class="muted">нет ответа</i>'}</span><span class="arr">→</span><span class="ok"><b>${esc(x.right||"")}</b></span></div>
+    ${x.why?`<div class="errw"><b>Как исправить:</b> ${esc(x.why)}</div>`:""}
+    <div class="row" style="margin-top:8px"><a class="btn sm" href="${esc(x.href||"#/"+k)}">Повторить</a>${ST.keys.anthropic&&!x.fixed?`<button class="btn sm" data-expl="${i}">${ic("spark",14)} Объяснить (ИИ)</button>`:""}</div><div class="errx" id="errx${i}"></div></div>`;
+  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Ошибки</h1><p class="lead">Журнал: что было неверно, как правильно и как это исправить. Ошибка уходит в «Исправлено», когда ты решишь это задание верно.</p>
+    ${open.length?`<h2 class="h-sec">Нужно исправить <small>${open.length}</small></h2><div class="errs">${open.slice(0,60).map((x,i)=>card(x,J.indexOf(x))).join("")}</div>`:`<div class="empty">Открытых ошибок нет. Решай задания, неверные ответы появятся здесь с объяснением.</div>`}
+    ${rows.length?`<h2 class="h-sec">По заданиям <small>${rows.length}</small></h2>${modRows(k,rows,"")}`:""}
+    ${done.length?`<details style="margin-top:16px"><summary class="h-sec" style="cursor:pointer">Исправлено <small>${done.length}</small></summary><div class="errs">${done.slice(0,40).map(x=>card(x,J.indexOf(x))).join("")}</div></details>`:""}`);
+  $$("[data-expl]").forEach(b=>b.onclick=async()=>{const x=J[+b.dataset.expl];b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ объясняет…';
+    try{const r=await api("/de/check",{method:"POST",body:JSON.stringify({task:"Erkläre den Fehler und gib eine Merkregel",q:x.q||x.ans,a:[x.right],answer:x.ans||"—"})});$("#errx"+b.dataset.expl).innerHTML=`<div class="errw" style="margin-top:8px"><b>ИИ:</b> ${esc(r.why)}</div>`;b.remove()}
+    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",14)+" Объяснить (ИИ)"}});
+}
+// ---------- журнал ошибок: что было неверно и как это исправить (все модули /de) ----------
+const ERRK=k=>"errlog-"+k;
+const errList=k=>get(ERRK(k),[])||[];
+function logErr(k,e){
+  const L=[...errList(k)],id=(e.ref||"")+"|"+String(e.q||e.ans||"").slice(0,80),x=L.find(y=>y.id===id);
+  if(x)Object.assign(x,e,{id,n:(x.n||1)+1,fixed:false,d:today()});else L.unshift({...e,id,n:1,fixed:false,d:today()});
+  save(ERRK(k),L.slice(0,150));
+}
+function okErr(k,ref,q){const L=errList(k),id=ref+"|"+String(q).slice(0,80),x=L.find(y=>y.id===id);if(x&&!x.fixed){x.fixed=true;x.fd=today();save(ERRK(k),[...L])}}
+const plainQ=q=>String(q||"").replace(/\[\[(.+?)\]\]/g,"$1").slice(0,160);
+// ошибки по заданиям Lesen / Hören после проверки
+function logTaskErrors(k,ref,title,href,tasks,ans,res){
+  tasks.forEach((q,i)=>{
+    const a=ans[i],[s,m]=taskCalc(q,a,res&&res[i]),qq=plainQ(q.q||q.text||"")+(q.t==="sum"||q.t==="box"||q.t==="cl4"?" (пропуски)":"")+" #"+(i+1);
+    if(s>=m){okErr(k,ref,qq);return}
+    let mine="",right="",why=q.ex||"";const L=n=>String.fromCharCode(97+n);
+    if(q.t==="mc"){mine=a==null?"":q.o[a];right=q.o[q.a]}
+    else if(q.t==="tf"){const T={r:"richtig",f:"falsch",n:"nicht im Text"};mine=T[a]||"";right=T[q.a]}
+    else if(q.t==="rfb"){mine=a&&a.v?(a.v==="r"?"richtig":"falsch")+(a.e?`, «${a.e}»`:""):"";right=(q.a==="r"?"richtig":"falsch")+`, «${q.ev} …»`;why=why||"Ответ и первые четыре слова предложения-доказательства должны совпасть с текстом."}
+    else if(q.t==="qs"||q.t==="open"||q.t==="short"||q.t==="gap"){mine=String(a||"");right=(Array.isArray(q.a)?q.a:[q.a]).join(" / ");const r=res&&res[i];if(r&&r.why)why=r.why}
+    else if(q.t==="sum"||q.t==="box"||q.t==="cl4"){const bad=[];q.a.forEach((x,j)=>{const ok=q.t==="sum"?a&&a[j]&&x.map(loose).includes(loose(a[j])):a&&a[j]===x;if(!ok)bad.push([j+1,q.t==="sum"?(a&&a[j])||"—":q.t==="box"?(a&&a[j])||"—":a&&a[j]!=null?q.o[j][a[j]]:"—",q.t==="sum"?x[0]:q.t==="box"?x:q.o[j][x]])});mine=bad.map(x=>`(${x[0]}) ${x[1]}`).join(", ");right=bad.map(x=>`(${x[0]}) ${x[2]}`).join(", ");why=why||"Смотри на форму слова (падеж, лицо, окончание) и на смысл абзаца."}
+    else{mine="";right=(q.a||[]).map(x=>q.t==="match"?q.opts[x]:LETTER(x)).join(", ");why=why||"Сверь с текстом: найди предложение, которое подтверждает ответ."}
+    logErr(k,{ref,title,href,q:qq,ans:mine,right,why});
+  });
 }
 // статистика модуля за день: [сделано, верно, всего проверено]
 function dayStat(k,day){
@@ -1798,6 +1862,34 @@ async function vSettings(){
   const ic2=$("#invCopy");if(ic2)ic2.onclick=()=>{navigator.clipboard.writeText(`Код приглашения: ${NEWINV}\n${location.origin}/`).then(()=>toast("Скопировано"),()=>toast(NEWINV))};
   $$("[data-invdel]").forEach(b=>b.onclick=async()=>{try{await api("/de/invites/"+b.dataset.invdel,{method:"DELETE"});if(NEWINV===b.dataset.invdel)NEWINV=null;vSettings()}catch(e){toast(e.message)}});
 }
+
+// ---------- ä ö ü ß: плавающая панель под полем ввода (грамматика, Lesen, Hören, Sprechen, переводчик …) ----------
+const UMK=["ä","ö","ü","ß","Ä","Ö","Ü"];
+(()=>{
+  let bar=null,cur=null;
+  const ok=el=>el&&(el.tagName==="TEXTAREA"||(el.tagName==="INPUT"&&(!el.type||el.type==="text")))&&!el.readOnly&&!el.disabled&&el.lang!=="ru"&&!el.closest("[data-nolat]")&&el.id!=="aiT"&&!el.classList.contains("ep-sinp");
+  // панель стоит внутри поля справа (текст отступает), в узкое поле — над ним; ничего вокруг не закрывает
+  const place=()=>{if(!bar||!cur)return;const r=cur.getBoundingClientRect(),bw=bar.offsetWidth||240,bh=bar.offsetHeight||40;
+    if(r.width>=bw+150){bar.style.left=(r.right-bw-8)+"px";bar.style.top=(cur.tagName==="TEXTAREA"?r.bottom-bh-8:r.top+(r.height-bh)/2)+"px";if(cur.dataset.umpad==null){cur.dataset.umpad=cur.style.paddingRight||"";cur.style.paddingRight=(bw+16)+"px"}}
+    else{bar.style.left=Math.max(8,Math.min(r.left,innerWidth-bw-8))+"px";bar.style.top=(r.top-bh-6>56?r.top-bh-6:r.bottom+4)+"px"}};
+  const hide=()=>{if(bar){bar.remove();bar=null}if(cur&&cur.dataset.umpad!=null){cur.style.paddingRight=cur.dataset.umpad;delete cur.dataset.umpad}cur=null};
+  const show=el=>{
+    if(cur&&cur!==el&&cur.dataset.umpad!=null){cur.style.paddingRight=cur.dataset.umpad;delete cur.dataset.umpad}
+    cur=el;
+    if(!bar){bar=document.createElement("div");bar.className="umbar";bar.setAttribute("role","group");bar.setAttribute("aria-label","Немецкие буквы");
+      bar.innerHTML=UMK.map(c=>`<button type="button" tabindex="-1" data-um="${c}">${c}</button>`).join("");
+      bar.addEventListener("mousedown",e=>e.preventDefault());
+      bar.addEventListener("click",e=>{const b=e.target.closest("[data-um]");if(!b||!cur)return;const el2=cur,st=el2.selectionStart,en=el2.selectionEnd,v=el2.value;
+        el2.value=v.slice(0,st)+b.dataset.um+v.slice(en);el2.setSelectionRange(st+1,st+1);el2.focus();el2.dispatchEvent(new Event("input",{bubbles:true}))});
+      document.body.appendChild(bar)}
+    place();
+  };
+  document.addEventListener("focusin",e=>{if(ok(e.target))show(e.target);else hide()});
+  document.addEventListener("focusout",e=>{if(e.target===cur)setTimeout(()=>{if(document.activeElement!==cur)hide()},120)});
+  addEventListener("scroll",place,true);addEventListener("resize",place);
+  addEventListener("hashchange",hide);
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
+})();
 
 // ---------- старт ----------
 async function loadState(){

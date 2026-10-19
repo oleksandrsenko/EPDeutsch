@@ -274,6 +274,18 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .tq .why{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}
 .tq .why b{color:var(--fg)}
 .tq textarea{min-height:60px;font-size:14px}
+.tq .ttask{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tq u.ul{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--c,var(--primary));font-weight:800}
+.evin{width:100%;margin-top:8px;font-size:14px!important;padding:8px 11px!important}.evin.right{border-color:var(--good)!important;background:var(--good-soft)}.evin.wrong{border-color:var(--bad)!important;background:var(--bad-soft)}
+.tq .seg+.evin{margin-top:8px}
+.gaptext{line-height:2.2;font-size:14.5px}.gw{display:inline-flex;flex-direction:column;vertical-align:bottom;margin:0 2px}
+.gi,.gs{font:inherit!important;font-size:14px!important;padding:3px 8px!important;border-width:2px!important;border-radius:9px!important;width:auto}.gs{max-width:100%;width:auto!important;padding-right:30px!important}
+.gi.right,.gs.right{border-color:var(--good)!important;background:var(--good-soft)}.gi.wrong,.gs.wrong{border-color:var(--bad)!important;background:var(--bad-soft)}
+.gc{font-size:11.5px;color:var(--good);font-weight:800;line-height:1.2}
+.wbox{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:10px;border:2px dashed var(--line);border-radius:12px}.wbox span{background:color-mix(in srgb,var(--c) 10%,var(--panel));border-radius:8px;padding:2px 9px;font-weight:700;font-size:13.5px}.wbox span.used{opacity:.35;text-decoration:line-through}
+.airow{display:flex;gap:10px;align-items:flex-start;margin-top:8px;font-size:13.5px;line-height:1.5}.airow .sc{flex:none;min-width:34px;text-align:center;border-radius:9px;padding:2px 8px;font-weight:800;color:#fff;background:var(--bad)}.airow .sc.s05{background:#d99a00}.airow .sc.s1{background:var(--good)}
+.xadd{margin-top:16px;padding-top:14px;border-top:1px solid var(--line2)}.xadd .xh{display:flex;flex-direction:column;gap:2px;margin-bottom:8px;font-size:13px}.xadd .xh b{font-size:14.5px}.xk{display:flex;flex-wrap:wrap;gap:6px}
+
 .score{display:flex;align-items:center;gap:14px;background:color-mix(in srgb,var(--c) 10%,var(--panel));border-radius:16px;padding:12px 16px;margin-bottom:6px}
 .score b{font-size:26px;color:var(--c)}
 .pop{position:absolute;z-index:120;background:var(--panel);border-radius:16px;box-shadow:0 18px 40px -12px rgba(10,9,45,.45);padding:12px 14px;max-width:300px;font-size:14px;border:1px solid var(--line2);animation:pageIn .15s}
@@ -1134,13 +1146,78 @@ async function lookup(word,sentence,rect){
 document.addEventListener("mousedown",e=>{if(POP&&!POP.contains(e.target))closePop()});
 
 // ---------- задания к текстам (Lesen, Hören) ----------
-function tasksHTML(tasks,ans,checked){
+// ---------- задания Lesen / Hören: официальные типы EPD (VWU), баллы и оценка открытых ответов ИИ ----------
+// Типы: tf, mc, gap, open / qs (Kurzantworten, оценивает ИИ), short (короткий ответ: Bezugswörter, Wer sagt was, Umschreibungen),
+// rfb (richtig/falsch + первые 4 слова предложения-доказательства), head, sent, match (выпадающие списки),
+// sum (Paralleltext, слова из оригинала), box (Wortkasten), cl4 (слово a–d в пропуск).
+const uMark=h=>h.replace(/\[\[(.+?)\]\]/g,'<u class="ul">$1</u>');
+const wordsOf=s=>String(s||"").toLowerCase().replace(/[^\p{L}\p{N}\s]+/gu," ").split(/\s+/).filter(Boolean);
+const AI_T=q=>q.t==="qs"||q.t==="open";
+function evOK(q,a){
+  const e=wordsOf(a&&a.e).slice(0,6),w=wordsOf(q.ev).slice(0,4);
+  if(!w.length||e.length<3)return false;
+  let n=0;for(let i=0;i<w.length&&i<e.length;i++){if(e[i]===w[i])n++;else break}
+  return n>=Math.min(3,w.length)||e.join(" ").includes(w.join(" "));
+}
+// [набрано, максимум] по одному заданию; r — результат ИИ или самооценка {score}
+function taskCalc(q,a,r){
+  const sc=r&&typeof r.score==="number"?r.score:0;
+  switch(q.t){
+    case "mc":case "tf":return [a===q.a?1:0,1];
+    case "gap":return [(Array.isArray(q.a)?q.a:[q.a]).map(loose).includes(loose(a||""))?1:0,1];
+    case "short":return [a&&(q.a||[]).map(loose).includes(loose(a))?1:sc,1];
+    case "qs":case "open":return [sc,1];
+    case "rfb":{const ev=evOK(q,a);return [(ev?1:0)+(ev&&a&&a.v===q.a?1:0),2]}
+    case "head":case "sent":case "match":return [q.a.reduce((n,x,k)=>n+(a&&a[k]===x?1:0),0),q.a.length];
+    case "sum":return [q.a.reduce((n,f,k)=>n+(a&&a[k]&&f.map(loose).includes(loose(a[k]))?1:0),0),q.a.length];
+    case "box":case "cl4":return [q.a.reduce((n,x,k)=>n+(a&&a[k]===x?1:0),0),q.a.length];
+  }
+  return [0,0];
+}
+function taskScore(tasks,ans,res){let s=0,m=0;tasks.forEach((q,i)=>{const [x,y]=taskCalc(q,ans[i],res&&res[i]);s+=x;m+=y});return [s,m]}
+const fmtPts=n=>String(Math.round(n*2)/2).replace(".",",");
+function taskRight(q,a){const [s,m]=taskCalc(q,a);return s===m}
+const LETTER=i=>String.fromCharCode(65+i);
+// пропуски [[n]] в связном тексте: поля ввода (sum), выпадающие слова из ящика (box) или варианты a–d (cl4)
+function gapText(q,i,a,checked){
+  a=a||[];const res=[];
+  return esc(q.text).replace(/\[\[(\d+)\]\]/g,(m,n)=>{
+    const k=+n-1,v=a[k];let ok=null,corr="";
+    if(checked){
+      if(q.t==="sum"){ok=!!v&&q.a[k].map(loose).includes(loose(v));corr=q.a[k][0]}
+      else if(q.t==="box"){ok=v===q.a[k];corr=q.a[k]}
+      else{ok=v===q.a[k];corr=String.fromCharCode(97+q.a[k])+") "+q.o[k][q.a[k]]}
+    }
+    const cls=checked?(ok?" right":" wrong"):"";
+    let el;
+    if(q.t==="sum")el=`<input class="gi${cls}" data-q="${i}" data-g="${k}" value="${esc(v||"")}" ${checked?"readonly":""} style="width:${Math.max(9,Math.min(22,(v||"").length+4))}ch" autocomplete="off" spellcheck="false" aria-label="Lücke ${n}">`;
+    else if(q.t==="box")el=`<select class="gs${cls}" data-q="${i}" data-g="${k}" ${checked?"disabled":""} aria-label="Lücke ${n}"><option value="">(${n})</option>${q.words.map(w=>`<option ${v===w?"selected":""}>${esc(w)}</option>`).join("")}</select>`;
+    else el=`<select class="gs${cls}" data-q="${i}" data-g="${k}" data-n="1" ${checked?"disabled":""} aria-label="Lücke ${n}"><option value="">(${n})</option>${q.o[k].map((w,j)=>`<option value="${j}" ${v===j?"selected":""}>${String.fromCharCode(97+j)}) ${esc(w)}</option>`).join("")}</select>`;
+    return `<span class="gw">${el}${checked&&!ok?`<small class="gc">${esc(corr)}</small>`:""}</span>`;
+  });
+}
+function aiBlock(q,i,r,checked,hasKey){
+  if(!checked||!AI_T(q)&&q.t!=="short")return "";
+  const a=q.a,models=Array.isArray(a)?a:[a];
+  if(q.t==="short")return "";
+  if(r&&typeof r.score==="number")return `<div class="airow"><span class="sc s${String(r.score).replace(".","")}">${fmtPts(r.score)}</span><span>${esc(r.why||"")}${r.self?'<i class="muted"> · твоя оценка</i>':""}</span></div><div class="why"><b>Образец:</b> ${models.map(esc).join(" / ")}</div>`;
+  return `<div class="why"><b>Образец:</b> ${models.map(esc).join(" / ")}</div>${hasKey?"":`<div class="row" style="margin-top:6px"><span class="muted" style="font-size:12.5px">Нет ключа Claude, оцени сам:</span><button class="btn sm" data-self="${i}" data-v="1">✓ верно</button><button class="btn sm" data-self="${i}" data-v="0.5">½</button><button class="btn sm" data-self="${i}" data-v="0">✗ неверно</button></div>`}`;
+}
+function tasksHTML(tasks,ans,checked,res){
+  const hasKey=!!(ST.keys&&ST.keys.anthropic);
   return tasks.map((q,i)=>{
-    const a=ans[i];let body="";
+    const a=ans[i],r=res&&res[i];let body="",why="",head="";
+    if(q.task&&!q.t.match(/^(head|sent|match)$/))head=`<div class="ttask">${esc(q.task)}${q.sec?` · Absatz ${q.sec}`:""}</div>`;
     if(q.t==="tf"){const L=[["r","richtig"],["f","falsch"],["n","nicht im Text"]].filter(x=>q.two?x[0]!=="n":true);
       body=`<div class="seg">${L.map(([v,t])=>`<button data-q="${i}" data-v="${v}" class="${a===v?"sel":""} ${checked?(v===q.a?"right":a===v?"wrong":""):""}">${t}</button>`).join("")}</div>`}
+    else if(q.t==="rfb"){const L=[["r","richtig"],["f","falsch"]];const evOk=checked&&evOK(q,a);
+      body=`<div class="seg">${L.map(([v,t])=>`<button data-q="${i}" data-v="${v}" class="${a&&a.v===v?"sel":""} ${checked?(v===q.a?"right":a&&a.v===v?"wrong":""):""}">${t}</button>`).join("")}</div>
+        <input class="evin${checked?(evOk?" right":" wrong"):""}" data-q="${i}" data-e="1" value="${esc((a&&a.e)||"")}" ${checked?"readonly":""} placeholder="Erste vier Wörter des Beweissatzes" autocomplete="off" spellcheck="false">`}
     else if(q.t==="mc")body=`<div class="mco">${q.o.map((o,k)=>`<button data-q="${i}" data-v="${k}" class="${a===k?"sel":""} ${checked?(k===q.a?"right":a===k?"wrong":""):""}">${String.fromCharCode(97+k)}) ${esc(o)}</button>`).join("")}</div>`;
-    else if(q.t==="open")body=`<textarea data-q="${i}" placeholder="Кратко, по-немецки" ${checked?"readonly":""}>${esc(a||"")}</textarea>`;
+    else if(q.t==="open")body=`<textarea data-q="${i}" placeholder="Kurze Antwort auf Deutsch" ${checked?"readonly":""}>${esc(a||"")}</textarea>`;
+    else if(q.t==="qs")body=`<input class="evin${checked&&r&&typeof r.score==="number"?(r.score>=1?" right":r.score>0?"":" wrong"):""}" data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} placeholder="Maximal 4 Wörter" autocomplete="off" spellcheck="false">`;
+    else if(q.t==="short")body=`<input class="evin${checked?(taskCalc(q,a,r)[0]>=1?" right":taskCalc(q,a,r)[0]>0?"":" wrong"):""}" data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} placeholder="Antwort" autocomplete="off" spellcheck="false">`;
+    else if(q.t==="sum"||q.t==="box"||q.t==="cl4")body=`${q.t==="box"?`<div class="wbox">${q.words.map(w=>`<span class="${checked?"":(a||[]).includes(w)?"used":""}">${esc(w)}</span>`).join("")}</div>`:""}<div class="gaptext">${gapText(q,i,a,checked)}</div>`;
     else if(q.t==="head"||q.t==="sent"||q.t==="match"){
       // много выпадающих списков: заголовок к абзацу, предложение в пропуск, высказывание к человеку
       const rows=q.t==="head"?q.paras.map(pn=>"Absatz "+pn):q.t==="sent"?q.a.map((x,k)=>"Lücke "+(k+1)):q.items,opts=q.t==="head"?q.heads:q.t==="sent"?q.sents:q.opts;
@@ -1148,43 +1225,69 @@ function tasksHTML(tasks,ans,checked){
       body=(q.t==="sent"?`<div class="sents">${q.sents.map((x,hi)=>`<div><b>${String.fromCharCode(65+hi)}</b>${esc(x)}</div>`).join("")}</div>`:"")+
         rows.map((rw,k)=>`<div class="mrow${q.t==="match"?" wide":""}"><span class="ml">${q.t==="match"?`${k+1}. `:""}${esc(rw)}</span><span class="mr"><select data-q="${i}" data-k="${k}" ${checked?"disabled":""}><option value="">—</option>${opts.map((h,hi)=>`<option value="${hi}" ${a&&a[k]===hi?"selected":""}>${q.t==="head"?String.fromCharCode(65+hi)+") "+esc(h):q.t==="sent"?String.fromCharCode(65+hi)+") "+esc(h.length>60?h.slice(0,58)+"…":h):esc(h)}</option>`).join("")}</select>${checked?(a&&a[k]===q.a[k]?' <span class="ok">✓</span>':` <span class="no">→ ${lab(q.a[k])}</span>`):""}</span></div>`).join("");}
     else if(q.t==="gap")body=`<input data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} style="width:100%">`;
-    let why="";
-    if(checked){const right=taskRight(q,a);
-      why=`<div class="why">${q.t==="open"||q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}${q.t==="open"?' <span class="muted">Сверь сам, засчитай, если смысл совпадает.</span>':""}</div>`;
-      if(q.t!=="open"&&q.t!=="head"&&q.t!=="sent"&&q.t!=="match")why=(right?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+why}
-    return `<div class="tq"><div class="qt"><span class="qn">${i+1}.</span>${esc(q.q)}</div>${body}${why}</div>`;
+    if(checked){
+      const [s,m]=taskCalc(q,a,r);
+      if(q.t==="open"||q.t==="qs")why=aiBlock(q,i,r,true,hasKey)+(q.ex?`<div class="why">${esc(q.ex)}</div>`:"");
+      else if(q.t==="short")why=`${s>=1?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':s>0?'<div class="why" style="color:var(--warn,#c77f00);font-weight:800">½</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>'}<div class="why"><b>Ответ:</b> ${esc((q.a||[]).join(" / "))}${r&&r.why&&s<1?`<br>${esc(r.why)}`:""}</div>`;
+      else if(q.t==="rfb")why=`${s>=2?'<div class="why" style="color:var(--good);font-weight:800">✓ верно, 2 балла</div>':`<div class="why" style="color:var(--bad);font-weight:800">${s>=1?"Доказательство верно, но ответ нет: 1 балл":"✗ 0 баллов (нужны и ответ, и первые слова доказательства)"}</div>`}<div class="why"><b>Beweissatz:</b> «${esc(q.ev)} …»${q.ex?`<br>${esc(q.ex)}`:""}</div>`;
+      else if(q.t==="sum"||q.t==="box"||q.t==="cl4")why=`<div class="why"><b>${fmtPts(s)} из ${m}.</b> Неверные пропуски подписаны правильным ответом.</div>`;
+      else if(q.t==="head"||q.t==="sent"||q.t==="match")why=`<div class="why">${fmtPts(s)} из ${m}${q.ex?" · "+esc(q.ex):""}</div>`;
+      else why=(s>=1?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+`<div class="why">${q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}</div>`;
+    }
+    const qt=q.t==="sum"||q.t==="box"||q.t==="cl4"?esc(q.q):uMark(esc(q.q));
+    return `<div class="tq">${head}<div class="qt"><span class="qn">${i+1}.</span>${qt}</div>${body}${why}</div>`;
   }).join("");
 }
 const gapsHTML=h=>h.replace(/\[\[(\d+)\]\]/g,(m,n)=>`<span class="lgap" data-gap="${n}">${n}</span>`);
-function taskRight(q,a){
-  if(q.t==="tf"||q.t==="mc")return a===q.a;
-  if(q.t==="gap")return (Array.isArray(q.a)?q.a:[q.a]).map(loose).includes(loose(a||""));
-  if(q.t==="head"||q.t==="sent"||q.t==="match")return 0;
-  return null;
-}
-function taskScore(tasks,ans){let s=0,m=0;tasks.forEach((q,i)=>{if(q.t==="open")return;if(q.t==="head"||q.t==="sent"||q.t==="match"){q.a.forEach((x,k)=>{m++;if(ans[i]&&ans[i][k]===x)s++});return}m++;if(taskRight(q,ans[i]))s++});return [s,m]}
 function bindTasks(root,tasks,ans,onChange){
-  root.querySelectorAll("button[data-q]").forEach(b=>b.onclick=()=>{const i=+b.dataset.q,q=tasks[i];ans[i]=q.t==="mc"?+b.dataset.v:b.dataset.v;onChange()});
-  root.querySelectorAll("textarea[data-q],input[data-q]").forEach(t=>t.oninput=()=>{ans[+t.dataset.q]=t.value});
-  root.querySelectorAll("select[data-q]").forEach(s=>s.onchange=()=>{const i=+s.dataset.q;ans[i]=ans[i]||[];ans[i][+s.dataset.k]=s.value===""?null:+s.value});
+  root.querySelectorAll("button[data-q]").forEach(b=>b.onclick=()=>{const i=+b.dataset.q,q=tasks[i];
+    if(q.t==="rfb")ans[i]=Object.assign({},ans[i],{v:b.dataset.v});else ans[i]=q.t==="mc"?+b.dataset.v:b.dataset.v;onChange()});
+  root.querySelectorAll("textarea[data-q],input[data-q]").forEach(t=>t.oninput=()=>{const i=+t.dataset.q;
+    if(t.dataset.e)ans[i]=Object.assign({},ans[i],{e:t.value});
+    else if(t.dataset.g!=null){ans[i]=ans[i]||[];ans[i][+t.dataset.g]=t.value}
+    else ans[i]=t.value});
+  root.querySelectorAll("select[data-q]").forEach(s=>s.onchange=()=>{const i=+s.dataset.q;ans[i]=ans[i]||[];
+    if(s.dataset.g!=null){const k=+s.dataset.g;ans[i][k]=s.value===""?null:(s.dataset.n?+s.value:s.value);if(tasks[i].t==="box")onChange()}
+    else ans[i][+s.dataset.k]=s.value===""?null:+s.value});
+}
+// оценка открытых ответов ИИ одним запросом; без ключа или при ошибке оценивает пользователь сам (кнопки ✓ / ½ / ✗)
+async function gradeOpen(tasks,ans,res,paras){
+  const pend=[];
+  tasks.forEach((q,i)=>{
+    if(res[i]&&typeof res[i].score==="number")return;
+    const a=ans[i];
+    if(AI_T(q)&&String(a||"").trim())pend.push([i,q]);
+    else if(q.t==="short"&&a&&!(q.a||[]).map(loose).includes(loose(a)))pend.push([i,q]);
+  });
+  if(!pend.length||!(ST.keys&&ST.keys.anthropic))return false;
+  try{
+    const r=await api("/de/lcheck",{method:"POST",body:JSON.stringify({paras,items:pend.map(([i,q])=>({q:(q.task?q.task+": ":"")+String(q.q).replace(/\[\[|\]\]/g,""),models:Array.isArray(q.a)?q.a:[q.a],ans:String(ans[i]),max:q.t==="qs"?4:0}))})});
+    (r.results||[]).forEach((x,n)=>{res[pend[n][0]]={score:x.score,why:x.why}});
+    return true;
+  }catch(e){toast(e.message);return false}
 }
 
 // ---------- Lesen ----------
 async function vLesenList(area){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"lesen")}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете, для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам Wörter, от B2 к C1. Задания как на EPD: richtig/falsch/nicht im Text, выбор ответа, заголовки к абзацам, предложения в пропуски."} Выдели любое слово, перевод появится прямо у слова.</p>${area==="de"?itemsByTopic(lf(d.texts,area),"lesen","l-"):itemsByLevel(lf(d.texts,area),area,"lesen","l-")}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"lesen")}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете, для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам Wörter, от B2 к C1. Задания как на EPD (VWU, 25 баллов): richtig/falsch с Belegsatz, Single-Choice, Kurzantworten, Satzteile, Wer sagt was. Любой текст можно дополнить другими официальными типами (Wortkasten, Paralleltext, Bezugswörter, Umschreibungen): ИИ составит задания, а открытые ответы оценит."} Выдели любое слово, перевод появится прямо у слова.</p>${area==="de"?itemsByTopic(lf(d.texts,area),"lesen","l-"):itemsByLevel(lf(d.texts,area),area,"lesen","l-")}`);
 }
 function itemsByLevel(arr,area,kind,pref){
   const groups={};[...arr].sort(lvSort).forEach(x=>(groups[x.level||"—"]=groups[x.level||"—"]||[]).push(x));
   return Object.entries(groups).map(([lv,a])=>`<div class="lvl-h">${esc(lv)}</div><div class="list">${a.map(x=>{const r=get(pref+area+"-"+x.id);return `<a class="item" href="${base(area)}${kind}/${x.id}"><div class="row"><span class="tag lv">${esc(x.level||"")}</span>${x.kind?`<span class="tag">${esc(x.kind)}</span>`:""}${r?`<span class="tag ok">✓ ${r.s}/${r.m}</span>`:""}</div><h3>${esc(x.title)}</h3><p>${esc(x.topic||"")}${x.words?` · ${x.words} слов`:""}${x.minutes?` · ~${x.minutes} мин`:""}</p></a>`}).join("")}</div>`).join("");
 }
+// виды заданий EPD, которые ИИ добавляет к любому тексту Lesen
+const LKINDS=[["rfb","Richtig / Falsch + Beleg","5 утверждений · 10 б."],["mc3","Single-Choice","6 вопросов · 6 б."],["qs","Kurzantworten","до 4 слов · оценивает ИИ"],["ref","Bezugswörter","на что ссылается слово"],["who","Wer sagt was?","чьё это мнение"],["para","Umschreibungen","найди слово по определению"],["sum","Paralleltext","8 пропусков, слова из текста"],["box","Wortkasten","8 пропусков, 11 слов"],["cl4","Слово a–d","6 пропусков, 4 варианта"]];
 async function vLesen(area,id){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen"),t=(d.texts||[]).find(x=>x.id===id);
   if(!t){page('<div class="empty">Текст не найден</div>');return}
-  const key="l-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("lesen",id);
-  let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],checked=!!prev;
+  const key="l-"+area+"-"+id,xk="lx-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("lesen",id);
+  let extra=((get(xk,null)||{}).tasks)||[];
+  const T=()=>t.tasks.concat(extra);
+  let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev;
+  const canAdd=area==="de"&&!!(ST.keys&&ST.keys.anthropic);
   page(`${crumb(base(area)+"lesen","Lesen")}
   <div class="reader" style="margin-top:10px">
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
@@ -1192,17 +1295,30 @@ async function vLesen(area,id){
     <aside class="side" id="side">
       ${area==="de"?howtoHTML("lesen"):""}
       <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик), перевод DeepL появится прямо у слова.</div></div>
-      <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">${t.tasks.length} шт.</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div></div>
+      <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px" id="tcnt"></span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div>
+        ${area==="de"?`<div class="xadd" id="xadd"></div>`:""}</div>
       <div class="wordbox"><b style="font-size:14px">Слова из этого текста</b><div class="vlist"><div><span>пока пусто</span></div></div></div>
     </aside>
   </div>`);
   bindLookup($("#art"),$("#side"));
-  const draw=()=>{$("#tq").innerHTML=tasksHTML(t.tasks,ans,checked);if(!checked)bindTasks($("#tq"),t.tasks,ans,draw);
-    if(checked){const [s,m]=taskScore(t.tasks,ans);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${s/m>=.8?"Отлично!":s/m>=.5?"Порог пройден (на экзамене минимум, половина).":"Ниже порога. Перечитай абзацы с ошибками."}</span></div>`}else $("#score").innerHTML="";
-    $("#lcheck").hidden=checked;$("#lreset").hidden=!checked};
+  const drawX=()=>{const box=$("#xadd");if(!box)return;
+    box.innerHTML=`<div class="xh"><b>Задания как на EPD</b><span class="muted">ИИ добавит официальные типы к этому тексту${extra.length?` · добавлено ${extra.length}`:""}</span></div>
+      ${canAdd?`<div class="xk">${LKINDS.map(([k,n,sub])=>`<button class="btn sm" data-xk="${k}" title="${esc(sub)}">${esc(n)}</button>`).join("")}</div>${extra.length?`<button class="btn sm" id="xclear" style="margin-top:8px">Убрать добавленные</button>`:""}`:`<p class="muted" style="margin:6px 0 0;font-size:13px">Нужен ключ Claude (Настройки).</p>`}`;
+    $$("[data-xk]").forEach(b=>b.onclick=async()=>{const kd=b.dataset.xk,label=b.textContent;$$("[data-xk]").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> '+esc(label);
+      try{const r=await api("/de/ltasks",{method:"POST",body:JSON.stringify({kind:kd,paras:t.paras})});extra=extra.concat(r.tasks||[]);save(xk,{tasks:extra});checked=false;draw()}
+      catch(e){toast(e.message);drawX()}});
+    const xc=$("#xclear");if(xc)xc.onclick=()=>{extra=[];save(xk,{tasks:[]});ans.length=Math.min(ans.length,t.tasks.length);Object.keys(res).forEach(k=>{if(+k>=t.tasks.length)delete res[k]});checked=false;draw()};
+  };
+  const draw=()=>{const tasks=T();$("#tq").innerHTML=tasksHTML(tasks,ans,checked,res);if(!checked)bindTasks($("#tq"),tasks,ans,draw);
+    const [s,m]=taskScore(tasks,ans,res);$("#tcnt").textContent=`${tasks.length} шт. · ${fmtPts(m)} б.`;
+    if(checked){$("#score").innerHTML=`<div class="score"><b>${fmtPts(s)}/${fmtPts(m)}</b><span>${m?`≈ ${fmtPts(Math.round(s/m*25*2)/2)} из 25 по шкале Lesen. `:""}${s/m>=.8?"Отлично!":s/m>=.48?"Порог пройден: на экзамене нужно минимум 12 из 25.":"Ниже порога (12 из 25). Перечитай абзацы с ошибками."}</span></div>`;
+      $$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()})}
+    else $("#score").innerHTML="";
+    $("#lcheck").hidden=checked;$("#lreset").hidden=!checked;drawX()};
   draw();
-  $("#lcheck").onclick=()=>{checked=true;const [s,m]=taskScore(t.tasks,ans);save(key,{s,m,ans,d:today()});logDone("l",area+":"+id);draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
-  $("#lreset").onclick=()=>{checked=false;ans=[];draw()};
+  $("#lcheck").onclick=async()=>{const b=$("#lcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
+    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
+  $("#lreset").onclick=()=>{checked=false;ans=[];res={};draw()};
 }
 
 // ---------- Hören ----------
@@ -1216,7 +1332,7 @@ async function vHoeren(area,id){
   const d=await data(area,"hoeren"),it=(d.items||[]).find(x=>x.id===id);
   if(!it){page('<div class="empty">Аудио не найдено</div>');return}
   const key="h-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("hoeren",id);
-  let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],checked=!!prev,plays=0,showScript=!!prev;
+  let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev,plays=0,showScript=!!prev;
   const names=it.voices||{};
   page(`${crumb(base(area)+"hoeren","Hören")}<h1>${esc(it.title)}</h1><p class="lead">${esc(it.intro||"")}</p>
    <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене, два прослушивания"><i></i><i></i></div></div></div>
@@ -1247,12 +1363,12 @@ async function vHoeren(area,id){
     else if(!stopFlag&&id!=="ai"){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
     playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";
   };
-  const draw=()=>{$("#tq").innerHTML=tasksHTML(it.tasks||[],ans,checked);if(!checked)bindTasks($("#tq"),it.tasks||[],ans,draw);
-    if(checked){const [s,m]=taskScore(it.tasks||[],ans);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
+  const draw=()=>{$("#tq").innerHTML=tasksHTML(it.tasks||[],ans,checked,res);if(!checked)bindTasks($("#tq"),it.tasks||[],ans,draw);
+    if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(it.tasks||[],ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()});const [s,m]=taskScore(it.tasks||[],ans,res);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
     $("#hcheck").hidden=checked};
   draw();
-  $("#hcheck").onclick=()=>{checked=true;const [s,m]=taskScore(it.tasks||[],ans);save(key,{s,m,ans,d:today()});logDone("h",area+":"+id);draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
-  $("#hreset").onclick=()=>{checked=false;ans=[];plays=0;setPlays();draw()};
+  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(it.tasks||[],ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(it.tasks||[],ans,res);save(key,{s,m,ans,res,d:today()});logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
+  $("#hreset").onclick=()=>{checked=false;ans=[];res={};plays=0;setPlays();draw()};
   $("#hscript").onclick=()=>{showScript=!showScript;$("#script").hidden=!showScript;$("#hscript").textContent=showScript?"Скрыть текст":"Показать текст"};
 }
 const playIcon=()=>'<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>';
@@ -1543,7 +1659,7 @@ function resHTML(r){return `<div class="card gwres" style="margin-top:12px"><div
 const MODX={grammatik:["grammatik","topics","g-"],lesen:["lesen","texts","l-"],hoeren:["hoeren","items","h-"],sprechen:["sprechen","tasks","s-"]};
 // [заголовок, текст]: exam — как решать на экзамене, train — как тренироваться (советы преподавателей и тех, кто сдал)
 const HINTS={
-  lesen:{exam:[["Сначала задания, потом текст","Прочитай вопросы и только потом статью: так ищешь нужное, а не читаешь всё подряд. Подчёркивай слово, по которому нашёл ответ."],["richtig / falsch / nicht im Text","«Nicht im Text», если в тексте об этом ничего нет. Не додумывай и не подставляй свои знания: отвечает только то, что написано."],["Заголовки к абзацам","Ищи главную мысль абзаца, а не знакомые слова. Лишний заголовок есть всегда, отбрось его в конце."],["Пропуски с предложениями","Смотри на слова до и после пропуска: местоимения (dies, diese Entwicklung), связки (jedoch, deshalb) и время глагола подсказывают, какое предложение подходит."],["Синонимы вместо повторов","В заданиях почти никогда не повторяют слова текста: «gestiegen» в тексте станет «zugenommen» в задании. Ищи смысл, а не совпадение."],["Время","На EPD на Lesen около 50 минут. Не застревай: отметь сложный вопрос и вернись к нему в конце."]],
+  lesen:{exam:[["Как устроено Leseverstehen на EPD (VWU)","2–3 текста, 25 баллов. Чтобы сдать письменную часть, нужно ≥12 баллов в каждой из трёх частей (Lesen, Strukturen, Textproduktion) и ≥45 из 75 в сумме. Время на одну часть около 60 минут, порядок: Lesen → Grammatik → Textproduktion."],["Paralleltext ergänzen","Краткое изложение текста с пропусками. Вписывай слово из оригинального текста, в нужной форме (лицо, падеж, окончание). Один пропуск = 1 балл."],["Bezugswörter и Wer sagt was?","Bezugswörter: на что ссылается sie / dies / dort (ищи в предыдущем предложении). Wer sagt was: кто автор мысли (эксперт, исследование, группа). Отвечай одним-тремя словами."],["Lückentext: Wortkasten и a–d","В Wortkasten лишние слова. Сначала вставь очевидные, потом проверь форму (Artikel, Kasus, Zeit). Для a–d сначала пойми смысл фразы, потом отбрасывай варианты по грамматике."],["Richtig/Falsch с Belegsatz","Нужно не только решить, но и вписать первые четыре слова предложения, которое доказывает ответ. Баллы даются только за верное доказательство. Копируй слова буква в букву."],["Single-Choice","3 варианта (a–c). Неверные варианты часто верны вообще, но не по этому тексту. Ищи предложение-источник и сверяй каждый вариант."],["Kurzantworten","Максимум 4 слова, лучше ключевые слова. Отвечай именно на вопрос: причина, способ, пример. ИИ проверит смысл и поставит 0, ½ или 1."],["Interview-Fragen zuordnen","Вопросы A–K, ответы 1–11, два вопроса лишние. Ищи слово из вопроса в начале ответа или повторяющийся образ."],["Umschreibungen und Satzteile","Umschreibungen: определение → слово из указанного абзаца, в той же форме, как в тексте. Satzteile (A–N): смотри на грамматику стыка (глагол в конце, падеж, союз); два фрагмента лишние."],["Время","Около 20 минут на текст. Если застрял, переходи к следующему заданию: баллы за простые пропуски такие же."]],
     train:[["Читай каждый день немного","Лучше 15 минут каждый день, чем два часа в выходные. Одна статья der Standard, ORF или Zeit в день быстро даёт словарь и скорость."],["Сначала на понимание, потом на детали","Прочитай текст один раз целиком, не останавливаясь. Перескажи себе главную мысль в 2–3 предложениях. Потом второй раз со словарём."],["Выписывай связки, а не только слова","Глаголы с предлогами (sich auswirken auf), устойчивые сочетания (eine Rolle spielen) и связки дают баллы и в Schreiben."],["Пересказ своими словами","После текста напиши 3–4 предложения резюме по-немецки. Это тренирует и чтение, и письмо, и сразу показывает, что понял не до конца."],["Читай вслух","2–3 абзаца вслух в день: помогает с длинными словами, порядком слов в придаточных и потом с Sprechen."],["Тексты чуть выше уровня","Хорош текст, где понятно 85–90 % слов. Если незнакомо каждое пятое слово, возьми тему проще, иначе чтение превратится в перевод."],["Повторяй слова из текстов","Добавляй незнакомые слова в Wörter прямо из окна перевода: через день, три и неделю они вернутся, и ты их запомнишь."]]},
   hoeren:{exam:[["Слушаешь дважды","Первый раз только общий смысл и заметки, второй раз детали и ответы. Не пытайся записать всё с первого раза."],["Ключевые слова","Записывай ключевые слова и цифры, а не предложения. Сразу после аудио превращай их в ответы."],["Сначала задания","Пока идёт пауза перед аудио, прочитай все задания и предскажи, о чём будет речь."],["Отвлекающие варианты","В записи часто звучат сразу несколько вариантов, правильный тот, который говорящий в итоге подтвердил. Слушай «aber», «eigentlich», «doch nicht»."],["Числа и даты","Частая ловушка: проценты, годы, сравнения. Проверяй их при втором прослушивании."]],
     train:[["Слушай каждый день","Подкасты по дороге: Ö1 Journale, «Easy German», «Deutschlandfunk Nova», «Langsam gesprochene Nachrichten» от DW. 10–15 минут ежедневно дают больше, чем час раз в неделю."],["Активное, а не фоновое","Фоновое радио привыкает ухо к звучанию, но для экзамена нужно активное: слушай кусок 1–2 минуты, перескажи, послушай снова."],["Шэдоуинг","Повторяй за диктором с отставанием в полсекунды. Так ухо и рот привыкают к темпу, ударениям и связной речи."],["Диктант","Возьми минуту аудио и запиши дословно. Потом сверь со скриптом: увидишь, какие слова «съедаются» в речи."],["Сначала без текста","Послушай, ответь на вопросы, проверь, и только потом открой скрипт. Так тренируется ухо, а не глаза."],["Австрийский акцент","На экзамене в Вене звучит австрийский немецкий. Слушай ORF, «FM4», интервью на derstandard.at, чтобы привыкнуть к Jänner, heuer, Paradeiser."]]},

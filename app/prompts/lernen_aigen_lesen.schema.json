@@ -39,7 +39,8 @@
      "hint",
      "s",
      "task",
-     "two"
+     "two",
+     "ev"
     ],
     "properties": {
      "t": {
@@ -49,7 +50,9 @@
        "gap",
        "tr",
        "tf",
-       "open"
+       "open",
+       "rfb",
+       "qs"
       ]
      },
      "q": {
@@ -84,6 +87,9 @@
      },
      "two": {
       "type": "boolean"
+     },
+     "ev": {
+      "type": "string"
      }
     }
    }

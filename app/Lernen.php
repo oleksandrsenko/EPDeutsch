@@ -220,6 +220,51 @@ class Lernen
             return AiGen::normalize((string)$d['module'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2', $mode);
         }
 
+        if ($p === '/ltasks' && $method === 'POST') {   // задания официальных типов EPD к тексту Lesen
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::ltasksRequest($d);
+            $res = Ai::ask($u, 'ltasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 60, 'ИИ сейчас недоступен, попробуй ещё раз');
+            return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
+        }
+
+        if ($p === '/lcheck' && $method === 'POST') {   // оценка открытых ответов Lesen (Kurzantworten и т.п.): 0 / 0,5 / 1
+            self::needAiKey();
+            $d = Http::json();
+            $items = [];
+            foreach (array_slice(is_array($d['items'] ?? null) ? $d['items'] : [], 0, 12) as $x) {
+                if (!is_array($x)) { continue; }
+                $items[] = ['q' => Util::str($x['q'] ?? '', 400), 'm' => array_values(array_filter(array_map(fn($a) => Util::str($a, 200), is_array($x['models'] ?? null) ? array_slice($x['models'], 0, 5) : []), fn($a) => $a !== '')),
+                            'a' => Util::str($x['ans'] ?? '', 300), 'max' => Util::int($x['max'] ?? 0, 0, 12)];
+            }
+            if (!$items) { throw new ApiError(400, 'Нечего проверять'); }
+            $ctx = Util::str(implode(' ', AiGen::paras($d['paras'] ?? [])), 6000);
+            $out = []; $todo = [];
+            foreach ($items as $i => $it) {
+                if ($it['a'] === '') { $out[$i] = ['score' => 0, 'why' => 'Ответа нет.']; } else { $todo[] = $i; }
+            }
+            if ($todo) {
+                $content = "Text:\n" . ($ctx ?: '—') . "\n\nAntworten zur Bewertung:\n";
+                foreach ($todo as $n => $i) {
+                    $it = $items[$i];
+                    $content .= ($n + 1) . ". Frage: " . $it['q'] . ($it['max'] ? " (максимум {$it['max']} слов)" : '') . "\n   Эталоны: " . implode(' || ', $it['m']) . "\n   Ответ студента: " . $it['a'] . "\n";
+                }
+                $ck = 'lchk:' . hash('sha256', json_encode([AiGen::MODEL, $content], JSON_UNESCAPED_UNICODE));
+                $res = Ai::cacheGet($ck);
+                if (!$res) {
+                    $res = Ai::ask($u, 'lcheck', AiGen::MODEL, self::prompt('lernen_lcheck'), $content, self::schema('lernen_lcheck'), 900, 'low', 45, 'ИИ сейчас недоступен, попробуй ещё раз');
+                    Ai::cachePut($ck, $res);
+                }
+                foreach ($todo as $n => $i) {
+                    $r = $res['results'][$n] ?? null;
+                    $sc = $r ? (float)$r['score'] : 0;
+                    $out[$i] = ['score' => in_array($sc, [0.0, 0.5, 1.0], true) ? $sc : 0, 'why' => Util::str($r['why'] ?? '', 400)];
+                }
+            }
+            ksort($out);
+            return ['results' => array_values($out)];
+        }
+
         if ($p === '/gwrite' && $method === 'POST') {
             self::needAiKey();
             $d = Http::json();

@@ -1,0 +1,19 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["results"],
+ "properties": {
+  "results": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["score", "why"],
+    "properties": {
+     "score": {"type": "number", "enum": [0, 0.5, 1]},
+     "why": {"type": "string"}
+    }
+   }
+  }
+ }
+}

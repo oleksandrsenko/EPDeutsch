@@ -187,6 +187,7 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-sf{position:relative;flex:1 1 auto;min-width:0;max-width:560px;margin:0 auto;display:flex;align-items:center;gap:10px;background:var(--bg);border-radius:999px;padding:0 14px 0 16px;height:42px;color:var(--muted);border:2px solid transparent;transition:border-color .15s,background .15s}
 .ep-sf:focus-within{border-color:var(--primary);background:var(--panel)}
 .ep-sf input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:14.5px;font-weight:600;color:var(--fg);outline:none;padding:0}
+.ep-sf input:focus,.ep-sf input:focus-visible{outline:none!important;box-shadow:none!important;border:0!important;background:none!important}
 .ep-sf input::placeholder{color:var(--muted);font-weight:500}
 .ep-sf input::-webkit-search-cancel-button{display:none}
 .ep-sf kbd{font:inherit;font-size:11px;font-weight:700;background:var(--panel2);border-radius:6px;padding:2px 6px;color:var(--muted)}

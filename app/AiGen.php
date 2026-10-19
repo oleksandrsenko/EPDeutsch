@@ -23,7 +23,7 @@ class AiGen
         foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 12) as $x) { $s = Util::str($x, 160); if ($s !== '') { $prev[] = $s; } }
         $content = "Тема: $topic\nУровень: $level\nСложность: $diff\nРежим: $mode"
             . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
-        $tokens = ['grammatik' => 4500, 'lesen' => 5600, 'hoeren' => 4200, 'sprechen' => 1800][$mod];
+        $tokens = ['grammatik' => 4500, 'lesen' => 11000, 'hoeren' => 8500, 'sprechen' => 1800][$mod];
         return [Lernen::prompt('lernen_aigen_' . $mod), $content, Lernen::schema('lernen_aigen_' . $mod), $tokens];
     }
 
@@ -39,7 +39,7 @@ class AiGen
         }
         if ($mod === 'lesen') {
             $paras = $list($r['paras'] ?? [], 8, 1800);
-            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open', 'rfb', 'qs'], 12, false, false, implode(' ', $paras));
+            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open', 'rfb', 'qs'], 18, false, false, implode(' ', $paras));
             if (count($paras) < 3 || count($tasks) < 5) { throw new ApiError(502, 'ИИ вернул неполный текст, попробуй ещё раз'); }
             $words = array_sum(array_map(fn($p) => count(preg_split('/\s+/u', $p, -1, PREG_SPLIT_NO_EMPTY)), $paras));
             return ['id' => 'ai', 'level' => $level, 'topic' => $topic, 'kicker' => $s($r['kicker'] ?? '', 60) ?: $topic, 'title' => $title, 'lead' => $s($r['lead'] ?? '', 400),
@@ -56,13 +56,13 @@ class AiGen
                                 'style' => 'Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung, lebendig wie in einem echten Gespräch oder Radiobeitrag.'];
             }
             $lines = [];
-            foreach (array_slice(is_array($r['lines'] ?? null) ? $r['lines'] : [], 0, 30) as $ln) {
+            foreach (array_slice(is_array($r['lines'] ?? null) ? $r['lines'] : [], 0, 40) as $ln) {
                 $sp = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($ln['s'] ?? '')), 0, 1); $tx = $s($ln['text'] ?? '', 1200);
                 if ($tx === '') { continue; }
                 if (!isset($voices[$sp])) { $sp = array_key_first($voices) ?? 'A'; if (!isset($voices[$sp])) { $voices[$sp] = ['voice' => 'sage', 'name' => 'Sprecher', 'style' => '']; } }
                 $lines[] = [$sp, $tx];
             }
-            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 8, false, true);
+            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 14, false, true);
             if (count($lines) < 3 || count($tasks) < 3) { throw new ApiError(502, 'ИИ вернул неполную запись, попробуй ещё раз'); }
             $words = array_sum(array_map(fn($l) => count(preg_split('/\s+/u', $l[1], -1, PREG_SPLIT_NO_EMPTY)), $lines));
             return ['id' => 'ai', 'level' => $level, 'kind' => $s($r['kind'] ?? '', 40) ?: 'Audio', 'topic' => $topic, 'title' => $title, 'intro' => $s($r['intro'] ?? '', 300),
@@ -154,6 +154,35 @@ class AiGen
     const LKINDS = ['rfb', 'mc3', 'cl4', 'box', 'sum', 'ref', 'who', 'para', 'qs'];
 
     /** @return array{0:string,1:string,2:array,3:int} */
+    const HKINDS = ['mix', 'tf', 'mc', 'open'];
+
+    /** Дополнительные вопросы к записи Hören: транскрипт → задания. */
+    public static function htasksRequest(array $d): array
+    {
+        $kind = Util::str($d['kind'] ?? '', 10);
+        if (!in_array($kind, self::HKINDS, true)) { throw new ApiError(400, 'Неизвестный тип задания'); }
+        $voices = is_array($d['voices'] ?? null) ? $d['voices'] : [];
+        $txt = '';
+        foreach (array_slice(is_array($d['lines'] ?? null) ? $d['lines'] : [], 0, 40) as $ln) {
+            if (!is_array($ln) || count($ln) < 2) { continue; }
+            $name = Util::str(is_array($voices[$ln[0]] ?? null) ? ($voices[$ln[0]]['name'] ?? $ln[0]) : $ln[0], 40);
+            $t = Util::str($ln[1], 1200);
+            if ($t !== '') { $txt .= $name . ': ' . $t . "\n"; }
+        }
+        if (mb_strlen($txt) < 200) { throw new ApiError(400, 'Нужен текст записи'); }
+        $had = [];
+        foreach (array_slice(is_array($d['had'] ?? null) ? $d['had'] : [], 0, 30) as $q) { $q = Util::str($q, 160); if ($q !== '') { $had[] = $q; } }
+        $content = "kind: $kind\n\nТранскрипт:\n" . $txt . ($had ? "\nУже заданные вопросы (не повторяй):\n- " . implode("\n- ", $had) : '');
+        return [Lernen::prompt('lernen_htasks'), $content, Lernen::schema('lernen_htasks'), 3200];
+    }
+
+    public static function htasksNormalize(array $r): array
+    {
+        $out = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 8, false, true);
+        if (count($out) < 3) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
+        return $out;
+    }
+
     public static function ltasksRequest(array $d): array
     {
         $kind = Util::str($d['kind'] ?? '', 10);
@@ -162,7 +191,7 @@ class AiGen
         if (count($paras) < 2) { throw new ApiError(400, 'Нужен текст'); }
         $txt = '';
         foreach ($paras as $i => $p) { $txt .= 'Absatz ' . ($i + 1) . ': ' . $p . "\n"; }
-        $tokens = ['rfb' => 1100, 'mc3' => 1400, 'cl4' => 1800, 'box' => 1800, 'sum' => 1800, 'ref' => 900, 'who' => 900, 'para' => 1000, 'qs' => 1000][$kind];
+        $tokens = ['rfb' => 1600, 'mc3' => 2000, 'cl4' => 1800, 'box' => 1800, 'sum' => 1800, 'ref' => 900, 'who' => 900, 'para' => 1000, 'qs' => 1500][$kind];
         return [Lernen::prompt('lernen_ltasks'), "kind: $kind\n\nText:\n" . $txt, Lernen::schema('lernen_ltasks'), $tokens];
     }
 
@@ -191,7 +220,7 @@ class AiGen
             $map = ['rfb' => ['rfb'], 'mc3' => ['mc'], 'qs' => ['qs']][$kind][0];
             $out = self::tasks(array_map(function ($x) use ($map, $at) {
                 return ['t' => $map, 'q' => $x['q'] ?? '', 'o' => $x['o'] ?? [], 'ai' => $x['ai'] ?? -1, 'at' => $at($x), 'ev' => $x['ev'] ?? '', 'ex' => ''];
-            }, $items), [$map], 8, false, false, $src);
+            }, $items), [$map], 10, false, false, $src);
             if (count($out) < ($kind === 'rfb' ? 3 : 3)) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
             foreach ($out as &$o) { if ($kind === 'mc3' && count($o['o']) !== 3) { $o['o'] = array_slice($o['o'], 0, max(2, count($o['o']))); } }
             return $out;

@@ -215,7 +215,7 @@ class Lernen
             self::needAiKey();
             $d = Http::json();
             [$system, $content, $schema, $tokens] = AiGen::request($d);
-            $res = Ai::ask($u, 'aigen', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 60, 'ИИ сейчас недоступен, попробуй ещё раз');
+            $res = Ai::ask($u, 'aigen', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 150, 'ИИ сейчас недоступен, попробуй ещё раз');
             $mode = in_array($d['mode'] ?? '', AiGen::MODES, true) ? $d['mode'] : 'new';
             return AiGen::normalize((string)$d['module'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2', $mode);
         }
@@ -226,6 +226,14 @@ class Lernen
             [$system, $content, $schema, $tokens] = AiGen::ltasksRequest($d);
             $res = Ai::ask($u, 'ltasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 60, 'ИИ сейчас недоступен, попробуй ещё раз');
             return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
+        }
+
+        if ($p === '/htasks' && $method === 'POST') {   // дополнительные вопросы к записи Hören
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::htasksRequest($d);
+            $res = Ai::ask($u, 'htasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 90, 'ИИ сейчас недоступен, попробуй ещё раз');
+            return ['tasks' => AiGen::htasksNormalize($res)];
         }
 
         if ($p === '/lcheck' && $method === 'POST') {   // оценка открытых ответов Lesen (Kurzantworten и т.п.): 0 / 0,5 / 1

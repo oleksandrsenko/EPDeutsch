@@ -1383,9 +1383,14 @@ async function vHoeren(area,id){
   const key="h-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("hoeren",id);
   let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev,plays=0,showScript=!!prev;
   const names=it.voices||{};
+  // дополнительные вопросы от ИИ хранятся отдельно; у записи от ИИ (id "ai") ключ привязан к названию
+  const xk="hx-"+area+"-"+id+(id==="ai"?":"+(it.title||""):"");
+  let extra=((get(xk,null)||{}).tasks)||[];
+  const T=()=>(it.tasks||[]).concat(extra);
+  const canAdd=!!(ST.keys&&ST.keys.anthropic);
   page(`${crumb(base(area)+"hoeren","Hören")}<h1>${esc(it.title)}</h1><p class="lead">${esc(it.intro||"")}</p>
    <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене, два прослушивания"><i></i><i></i></div></div></div>
-   <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button></div></div>
+   <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button></div><div class="xadd" id="xadd"></div></div>
      <div class="script" id="script" style="margin-top:16px" ${showScript?"":"hidden"}>${(it.lines||[]).map(([s,tx])=>`<p><b>${esc((names[s]||{}).name||s)}</b>${esc(tx)}</p>`).join("")}</div></div>
    <aside class="side" id="side">${area==="de"?howtoHTML("hoeren"):""}<div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте, перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
   bindLookup($("#script"),$("#side"));
@@ -1412,11 +1417,20 @@ async function vHoeren(area,id){
     else if(!stopFlag&&id!=="ai"){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
     playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";
   };
-  const draw=()=>{$("#tq").innerHTML=tasksHTML(it.tasks||[],ans,checked,res);if(!checked)bindTasks($("#tq"),it.tasks||[],ans,draw);
-    if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(it.tasks||[],ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()});const [s,m]=taskScore(it.tasks||[],ans,res);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
-    $("#hcheck").hidden=checked};
+  const draw=()=>{$("#tq").innerHTML=tasksHTML(T(),ans,checked,res);if(!checked)bindTasks($("#tq"),T(),ans,draw);
+    if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(T(),ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()});const [s,m]=taskScore(T(),ans,res);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
+    $("#hcheck").hidden=checked;drawX()};
+  const HK=[["mix","Ещё вопросы (смешанные)","3 richtig/falsch · 3 выбор · 2 коротких"],["tf","Richtig / Falsch","8 утверждений"],["mc","Выбор из трёх","6 вопросов"],["open","Короткие ответы","6 вопросов, 1–4 слова"]];
+  const drawX=()=>{const box=$("#xadd");if(!box)return;
+    box.innerHTML=`<div class="xh"><b>Ещё вопросы к записи</b><span class="muted">ИИ добавит новые, более сложные вопросы${extra.length?` · добавлено ${extra.length}`:""}</span></div>
+      ${canAdd?`<div class="xk">${HK.map(([k,n,sub])=>`<button class="btn sm" data-hk="${k}" title="${esc(sub)}">${esc(n)}</button>`).join("")}</div>${extra.length?`<button class="btn sm" id="hxclear" style="margin-top:8px">Убрать добавленные</button>`:""}`:`<p class="muted" style="margin:6px 0 0;font-size:13px">Нужен ключ Claude (Настройки).</p>`}`;
+    $$("[data-hk]").forEach(b=>b.onclick=async()=>{const kd=b.dataset.hk,label=b.textContent;$$("[data-hk]").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> '+esc(label);
+      try{const r=await api("/de/htasks",{method:"POST",body:JSON.stringify({kind:kd,lines:it.lines,voices:names,had:T().map(x=>x.q)})});extra=extra.concat(r.tasks||[]);save(xk,{tasks:extra});checked=false;draw()}
+      catch(e){toast(e.message);drawX()}});
+    const xc=$("#hxclear");if(xc)xc.onclick=()=>{extra=[];save(xk,{tasks:[]});const n=(it.tasks||[]).length;ans.length=Math.min(ans.length,n);Object.keys(res).forEach(k=>{if(+k>=n)delete res[k]});checked=false;draw()};
+  };
   draw();
-  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(it.tasks||[],ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(it.tasks||[],ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("hoeren",id,it.title,"#/hoeren/"+id,it.tasks||[],ans,res);logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
+  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(T(),ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("hoeren",id,it.title,"#/hoeren/"+id,T(),ans,res);logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
   $("#hreset").onclick=()=>{checked=false;ans=[];res={};plays=0;setPlays();draw()};
   $("#hscript").onclick=()=>{showScript=!showScript;$("#script").hidden=!showScript;$("#hscript").textContent=showScript?"Скрыть текст":"Показать текст"};
 }

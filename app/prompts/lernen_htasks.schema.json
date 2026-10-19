@@ -1,0 +1,59 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "tasks"
+ ],
+ "properties": {
+  "tasks": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "t",
+     "q",
+     "o",
+     "ai",
+     "at",
+     "ex",
+     "two"
+    ],
+    "properties": {
+     "t": {
+      "type": "string",
+      "enum": [
+       "tf",
+       "mc",
+       "open"
+      ]
+     },
+     "q": {
+      "type": "string"
+     },
+     "o": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ai": {
+      "type": "integer"
+     },
+     "at": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ex": {
+      "type": "string"
+     },
+     "two": {
+      "type": "boolean"
+     }
+    }
+   }
+  }
+ }
+}

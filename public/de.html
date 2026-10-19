@@ -1641,18 +1641,28 @@ async function vSprechen(area,id){
 }
 
 // ---------- Свободный немецкий ----------
+// Свободный немецкий делится на три раздела: B1, Österreich (австрийский уклон) и общий немецкий
+const FGRP=[["b1","B1","простая и понятная речь, основа"],["at","Österreich","австрийский немецкий: слова, реалии, речь"],["de","Общий немецкий","живой язык без привязки к Австрии"]];
+const grpOf=x=>x.grp||(/^(A2|B1)/.test(x.level||"")?"b1":/^(at-|austria$)/.test(x.id||"")?"at":"de");
+function byGrp(arr,render){
+  const sel=get("frei-grp","all");
+  return FGRP.filter(g=>sel==="all"||sel===g[0]).map(([k,t,sub])=>{const a=(arr||[]).filter(x=>grpOf(x)===k);return a.length?`<div class="lvl-h grp-h" data-g="${k}"><span>${t}</span> · ${sub}</div>${render(a)}`:""}).join("")||'<div class="empty">Здесь пока пусто</div>'}
 async function vFrei(tab){
   header("frei");setC("var(--c-f)");tab=tab||"karten";
   const tabs=[["karten","Карточки"],["grammatik","Грамматика"],["lesen","Lesen"],["hoeren","Hören"],["sprechen","Sprechen"],["videos","Видео"]];
   let body="";
-  if(tab==="karten"){const w=await data("frei","wendungen");body=`<div class="list">${(w.decks||[]).map(dk=>{const st=get("k-"+dk.id,{});const due=dueCards(dk,st).length;const known=Object.values(st).filter(x=>x[0]>=3).length;return `<a class="item" href="#/frei/karten/${dk.id}" style="--c:${dk.color||"var(--c-f)"}"><div class="row"><span class="tag lv">${dk.cards.length} карточек</span>${due?`<span class="tag">${due} на сегодня</span>`:'<span class="tag ok">✓ на сегодня всё</span>'}</div><h3>${esc(dk.title)}</h3><p>${esc(dk.ru||"")}</p><div class="row"><div class="bar" style="flex:1"><i style="width:${known/dk.cards.length*100}%"></i></div><small class="muted">${known} знаю</small></div></a>`}).join("")}</div>`}
-  else if(tab==="grammatik")body=gramListHTML("frei",await data("frei","grammatik"));
-  else if(tab==="lesen")body=itemsByLevel((await data("frei","lesen")).texts||[],"frei","lesen","l-");
-  else if(tab==="hoeren")body=itemsByLevel((await data("frei","hoeren")).items||[],"frei","hoeren","h-");
-  else if(tab==="sprechen"){const d=await data("frei","sprechen");body=`<div class="list">${(d.tasks||[]).map(t=>{const r=get("s-frei-"+t.id);return `<a class="item" href="#/frei/sprechen/${t.id}"><div class="row"><span class="tag lv">${esc(t.kind||"Gespräch")}</span>${r?`<span class="tag ok">✓ ${r.n}</span>`:""}</div><h3>${esc(t.title)}</h3><p>${esc(t.ru||"")}</p></a>`}).join("")}</div>`}
+  if(tab==="karten"){const w=await data("frei","wendungen");
+    const card=dk=>{const st=get("k-"+dk.id,{});const due=dueCards(dk,st).length;const known=Object.values(st).filter(x=>x[0]>=3).length;return `<a class="item" href="#/frei/karten/${dk.id}" style="--c:${dk.color||"var(--c-f)"}"><div class="row"><span class="tag lv">${dk.cards.length} карточек</span>${due?`<span class="tag">${due} на сегодня</span>`:'<span class="tag ok">✓ на сегодня всё</span>'}</div><h3>${esc(dk.title)}</h3><p>${esc(dk.ru||"")}</p><div class="row"><div class="bar" style="flex:1"><i style="width:${known/dk.cards.length*100}%"></i></div><small class="muted">${known} знаю</small></div></a>`};
+    body=byGrp(w.decks||[],a=>`<div class="list">${a.map(card).join("")}</div>`)}
+  else if(tab==="grammatik"){const g=await data("frei","grammatik");body=byGrp(g.topics||[],a=>gramListHTML("frei",{topics:a}))}
+  else if(tab==="lesen"){const t=(await data("frei","lesen")).texts||[];body=byGrp(t,a=>itemsByLevel(a,"frei","lesen","l-"))}
+  else if(tab==="hoeren"){const t=(await data("frei","hoeren")).items||[];body=byGrp(t,a=>itemsByLevel(a,"frei","hoeren","h-"))}
+  else if(tab==="sprechen"){const d=await data("frei","sprechen");body=byGrp(d.tasks||[],a=>`<div class="list">${a.map(t=>{const r=get("s-frei-"+t.id);return `<a class="item" href="#/frei/sprechen/${t.id}"><div class="row"><span class="tag lv">${esc(t.kind||"Gespräch")}</span>${r?`<span class="tag ok">✓ ${r.n}</span>`:""}</div><h3>${esc(t.title)}</h3><p>${esc(t.ru||"")}</p></a>`}).join("")}</div>`)}
   else if(tab==="videos"){const v=await data("frei","videos");body=(v.groups||[]).map(g=>`<div class="lvl-h">${esc(g.title)}</div><div class="list">${g.items.map(x=>`<a class="vid" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="yt"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 7.5v9l7.5-4.5z"/></svg></span><div><h3>${esc(x.title)}</h3><div class="row" style="gap:6px"><span class="tag">${esc(x.by)}</span>${x.level?`<span class="tag lv">${esc(x.level)}</span>`:""}</div><p>${esc(x.what)}</p></div></a>`).join("")}</div>`).join("")}
   page(`<h1>Свободный немецкий</h1><p class="lead">Всё, что не про экзамен: как говорят на самом деле. Прогресс здесь отдельный и в план подготовки не входит.</p>
-   <div class="tabs" style="margin-bottom:20px">${tabs.map(([k,t])=>`<a href="#/frei${k==="karten"?"":"/"+k}" class="${k===tab?"on":""}">${t}</a>`).join("")}</div>${body}`);
+   <div class="tabs" style="margin-bottom:14px">${tabs.map(([k,t])=>`<a href="#/frei${k==="karten"?"":"/"+k}" class="${k===tab?"on":""}">${t}</a>`).join("")}</div>
+   ${tab==="videos"?"":`<div class="tabs fgrp" style="margin-bottom:18px">${[["all","Всё"]].concat(FGRP.map(g=>[g[0],g[1]])).map(([k,t])=>`<button type="button" data-fg="${k}" class="${(get("frei-grp","all"))===k?"on":""}">${t}</button>`).join("")}</div>`}${body}`);
+  $$("[data-fg]").forEach(b=>b.onclick=()=>{save("frei-grp",b.dataset.fg);vFrei(tab)});
 }
 const INT=[0,1,3,7,14,30,60];
 const NEW_PER_DAY=15;

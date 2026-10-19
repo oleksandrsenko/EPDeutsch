@@ -1,6 +1,646 @@
 {
  "decks": [
   {
+   "id": "b1-alltag",
+   "title": "B1 · Wohnen und Alltag",
+   "ru": "Квартира, соседи, покупки, договорённости",
+   "color": "#2FA7B8",
+   "grp": "b1",
+   "level": "B1",
+   "cards": [
+    {
+     "de": "die Miete",
+     "ru": "арендная плата",
+     "ex": "Die Miete ist jeden Monat am Ersten fällig.",
+     "note": ""
+    },
+    {
+     "de": "die Nebenkosten (Pl.)",
+     "ru": "коммунальные платежи",
+     "ex": "Zur Miete kommen noch die Nebenkosten dazu.",
+     "note": "в Австрии часто «Betriebskosten»"
+    },
+    {
+     "de": "der Vermieter / die Vermieterin",
+     "ru": "арендодатель",
+     "ex": "Ich muss den Vermieter wegen der Heizung anrufen.",
+     "note": ""
+    },
+    {
+     "de": "der Mieter / die Mieterin",
+     "ru": "арендатор, жилец",
+     "ex": "Die Mieter im ersten Stock sind sehr nett.",
+     "note": ""
+    },
+    {
+     "de": "einziehen",
+     "ru": "въезжать, переезжать (в жильё)",
+     "ex": "Wir ziehen nächsten Monat in die neue Wohnung ein.",
+     "note": "ich ziehe ein, bin eingezogen"
+    },
+    {
+     "de": "ausziehen",
+     "ru": "съезжать",
+     "ex": "Mein Bruder ist letztes Jahr ausgezogen.",
+     "note": ""
+    },
+    {
+     "de": "der Umzug",
+     "ru": "переезд",
+     "ex": "Beim Umzug haben uns viele Freunde geholfen.",
+     "note": ""
+    },
+    {
+     "de": "die Kaution",
+     "ru": "залог",
+     "ex": "Die Kaution bekommt man beim Auszug zurück.",
+     "note": ""
+    },
+    {
+     "de": "der Mietvertrag",
+     "ru": "договор аренды",
+     "ex": "Bitte lesen Sie den Mietvertrag genau durch.",
+     "note": ""
+    },
+    {
+     "de": "die Hausordnung",
+     "ru": "правила проживания в доме",
+     "ex": "Laut Hausordnung ist ab 22 Uhr Ruhe.",
+     "note": ""
+    },
+    {
+     "de": "der Nachbar / die Nachbarin",
+     "ru": "сосед, соседка",
+     "ex": "Unsere Nachbarin gießt im Urlaub die Blumen.",
+     "note": ""
+    },
+    {
+     "de": "der Müll",
+     "ru": "мусор",
+     "ex": "Den Müll bringe ich jeden Abend runter.",
+     "note": "в Австрии также «der Mist» в разговорной речи"
+    },
+    {
+     "de": "die Mülltrennung",
+     "ru": "раздельный сбор мусора",
+     "ex": "In Österreich ist die Mülltrennung sehr wichtig.",
+     "note": ""
+    },
+    {
+     "de": "die Waschmaschine",
+     "ru": "стиральная машина",
+     "ex": "Die Waschmaschine ist leider kaputt.",
+     "note": ""
+    },
+    {
+     "de": "der Kühlschrank",
+     "ru": "холодильник",
+     "ex": "Im Kühlschrank ist nur noch Milch.",
+     "note": ""
+    },
+    {
+     "de": "einkaufen gehen",
+     "ru": "ходить за покупками",
+     "ex": "Ich gehe am Samstag auf dem Markt einkaufen.",
+     "note": ""
+    },
+    {
+     "de": "die Einkaufsliste",
+     "ru": "список покупок",
+     "ex": "Ich habe die Einkaufsliste zu Hause vergessen.",
+     "note": ""
+    },
+    {
+     "de": "bezahlen / zahlen",
+     "ru": "платить",
+     "ex": "Zahlen Sie bar oder mit Karte?",
+     "note": "в кафе: «Zahlen, bitte!»"
+    },
+    {
+     "de": "das Angebot",
+     "ru": "предложение, акция",
+     "ex": "Diese Woche gibt es Äpfel im Angebot.",
+     "note": ""
+    },
+    {
+     "de": "der Kassenbon",
+     "ru": "кассовый чек",
+     "ex": "Bitte heben Sie den Kassenbon auf.",
+     "note": "в Австрии также «der Bon»"
+    },
+    {
+     "de": "umtauschen",
+     "ru": "обменять (товар)",
+     "ex": "Kann ich die Jacke umtauschen?",
+     "note": ""
+    },
+    {
+     "de": "sich verabreden",
+     "ru": "договариваться о встрече",
+     "ex": "Wir haben uns für 18 Uhr verabredet.",
+     "note": "mit + Dativ"
+    },
+    {
+     "de": "pünktlich",
+     "ru": "вовремя, точно",
+     "ex": "Bitte komm pünktlich, wir fangen um acht an.",
+     "note": ""
+    },
+    {
+     "de": "vorbeikommen",
+     "ru": "заглянуть, зайти",
+     "ex": "Komm doch morgen mal vorbei!",
+     "note": "ich komme vorbei, bin vorbeigekommen"
+    },
+    {
+     "de": "Das passt mir gut.",
+     "ru": "Мне это подходит.",
+     "ex": "Samstag um zehn passt mir gut.",
+     "note": "про время и договорённости"
+    }
+   ]
+  },
+  {
+   "id": "b1-arbeit",
+   "title": "B1 · Arbeit und Ausbildung",
+   "ru": "Работа, собеседование, коллеги, обучение",
+   "color": "#5A7BD8",
+   "grp": "b1",
+   "level": "B1",
+   "cards": [
+    {
+     "de": "die Bewerbung",
+     "ru": "заявка на вакансию, резюме с письмом",
+     "ex": "Ich schreibe heute meine Bewerbung für die Stelle.",
+     "note": ""
+    },
+    {
+     "de": "sich bewerben um / bei",
+     "ru": "подавать заявку на",
+     "ex": "Ich bewerbe mich um eine Stelle als Verkäuferin.",
+     "note": "um + Akk."
+    },
+    {
+     "de": "der Lebenslauf",
+     "ru": "резюме",
+     "ex": "Der Lebenslauf sollte höchstens zwei Seiten lang sein.",
+     "note": ""
+    },
+    {
+     "de": "das Vorstellungsgespräch",
+     "ru": "собеседование",
+     "ex": "Morgen habe ich ein Vorstellungsgespräch.",
+     "note": ""
+    },
+    {
+     "de": "die Stelle",
+     "ru": "рабочее место, должность",
+     "ex": "Die Stelle ist leider schon besetzt.",
+     "note": ""
+    },
+    {
+     "de": "der Arbeitgeber",
+     "ru": "работодатель",
+     "ex": "Mein Arbeitgeber bezahlt die Weiterbildung.",
+     "note": ""
+    },
+    {
+     "de": "der Arbeitnehmer",
+     "ru": "работник по найму",
+     "ex": "Arbeitnehmer haben Anspruch auf Urlaub.",
+     "note": ""
+    },
+    {
+     "de": "das Gehalt",
+     "ru": "зарплата (оклад)",
+     "ex": "Das Gehalt wird am Monatsende überwiesen.",
+     "note": "в Австрии «der Lohn» чаще у рабочих"
+    },
+    {
+     "de": "die Kündigung",
+     "ru": "увольнение, расторжение договора",
+     "ex": "Ich habe die Kündigung gestern bekommen.",
+     "note": ""
+    },
+    {
+     "de": "kündigen",
+     "ru": "уволиться; уволить",
+     "ex": "Ich habe zum Monatsende gekündigt.",
+     "note": ""
+    },
+    {
+     "de": "befristet / unbefristet",
+     "ru": "срочный / бессрочный",
+     "ex": "Mein Vertrag ist auf ein Jahr befristet.",
+     "note": ""
+    },
+    {
+     "de": "die Probezeit",
+     "ru": "испытательный срок",
+     "ex": "In der Probezeit kann man schneller kündigen.",
+     "note": ""
+    },
+    {
+     "de": "der Kollege / die Kollegin",
+     "ru": "коллега",
+     "ex": "Meine Kollegin hilft mir bei dem Projekt.",
+     "note": ""
+    },
+    {
+     "de": "der Chef / die Chefin",
+     "ru": "начальник, начальница",
+     "ex": "Die Chefin ist heute auf Dienstreise.",
+     "note": ""
+    },
+    {
+     "de": "die Besprechung",
+     "ru": "совещание",
+     "ex": "Die Besprechung beginnt um halb zehn.",
+     "note": ""
+    },
+    {
+     "de": "der Termin",
+     "ru": "встреча, назначенное время",
+     "ex": "Ich habe heute zwei Termine.",
+     "note": ""
+    },
+    {
+     "de": "die Überstunden (Pl.)",
+     "ru": "сверхурочные",
+     "ex": "Diese Woche mache ich viele Überstunden.",
+     "note": ""
+    },
+    {
+     "de": "Urlaub nehmen",
+     "ru": "брать отпуск",
+     "ex": "Im August nehme ich drei Wochen Urlaub.",
+     "note": ""
+    },
+    {
+     "de": "sich krankmelden",
+     "ru": "сообщить о болезни",
+     "ex": "Ich muss mich leider krankmelden.",
+     "note": ""
+    },
+    {
+     "de": "das Homeoffice",
+     "ru": "удалённая работа",
+     "ex": "Zweimal pro Woche arbeite ich im Homeoffice.",
+     "note": ""
+    },
+    {
+     "de": "die Fortbildung",
+     "ru": "повышение квалификации",
+     "ex": "Die Firma bietet jedes Jahr eine Fortbildung an.",
+     "note": "также «Weiterbildung»"
+    },
+    {
+     "de": "die Ausbildung",
+     "ru": "профессиональное обучение",
+     "ex": "Er macht eine Ausbildung zum Koch.",
+     "note": ""
+    },
+    {
+     "de": "das Praktikum",
+     "ru": "стажировка",
+     "ex": "Im Sommer mache ich ein Praktikum bei einer Bank.",
+     "note": ""
+    },
+    {
+     "de": "der Beruf",
+     "ru": "профессия",
+     "ex": "Welchen Beruf haben Sie?",
+     "note": ""
+    },
+    {
+     "de": "zuständig sein für",
+     "ru": "отвечать за",
+     "ex": "Wer ist für die Rechnungen zuständig?",
+     "note": "für + Akk."
+    }
+   ]
+  },
+  {
+   "id": "b1-reisen",
+   "title": "B1 · Reisen und Verkehr",
+   "ru": "Поезда, билеты, отели, дорога",
+   "color": "#3FA56B",
+   "grp": "b1",
+   "level": "B1",
+   "cards": [
+    {
+     "de": "die Fahrkarte / das Ticket",
+     "ru": "билет",
+     "ex": "Eine Fahrkarte nach Salzburg, bitte.",
+     "note": "в Австрии «das Ticket»"
+    },
+    {
+     "de": "der Fahrplan",
+     "ru": "расписание",
+     "ex": "Laut Fahrplan fährt der Zug um 8:12 Uhr.",
+     "note": ""
+    },
+    {
+     "de": "die Verspätung",
+     "ru": "опоздание (транспорта)",
+     "ex": "Der Zug hat zehn Minuten Verspätung.",
+     "note": ""
+    },
+    {
+     "de": "der Bahnsteig / das Gleis",
+     "ru": "платформа / путь",
+     "ex": "Der Zug nach Graz fährt auf Gleis 3 ab.",
+     "note": ""
+    },
+    {
+     "de": "umsteigen",
+     "ru": "делать пересадку",
+     "ex": "In Linz müssen wir umsteigen.",
+     "note": "ich steige um, bin umgestiegen"
+    },
+    {
+     "de": "einsteigen / aussteigen",
+     "ru": "садиться / выходить",
+     "ex": "Bitte hier aussteigen!",
+     "note": ""
+    },
+    {
+     "de": "die Haltestelle",
+     "ru": "остановка",
+     "ex": "Die nächste Haltestelle ist Karlsplatz.",
+     "note": ""
+    },
+    {
+     "de": "die Öffis (Pl.)",
+     "ru": "общественный транспорт (разг.)",
+     "ex": "In Wien fahre ich nur mit den Öffis.",
+     "note": "австр. разговорное"
+    },
+    {
+     "de": "das Klimaticket",
+     "ru": "единый проездной по Австрии",
+     "ex": "Mit dem Klimaticket fährt man durch ganz Österreich.",
+     "note": "австрийская реалия"
+    },
+    {
+     "de": "der Flug",
+     "ru": "рейс, перелёт",
+     "ex": "Der Flug nach Berlin dauert eine Stunde.",
+     "note": ""
+    },
+    {
+     "de": "der Flughafen",
+     "ru": "аэропорт",
+     "ex": "Wir müssen zwei Stunden vor dem Abflug am Flughafen sein.",
+     "note": ""
+    },
+    {
+     "de": "das Gepäck",
+     "ru": "багаж",
+     "ex": "Mein Gepäck ist leider nicht angekommen.",
+     "note": "только ед. число"
+    },
+    {
+     "de": "das Handgepäck",
+     "ru": "ручная кладь",
+     "ex": "Handgepäck darf nur acht Kilo wiegen.",
+     "note": ""
+    },
+    {
+     "de": "buchen / reservieren",
+     "ru": "бронировать",
+     "ex": "Wir haben ein Hotelzimmer für zwei Nächte gebucht.",
+     "note": ""
+    },
+    {
+     "de": "die Unterkunft",
+     "ru": "жильё (на время поездки)",
+     "ex": "Die Unterkunft liegt direkt am See.",
+     "note": ""
+    },
+    {
+     "de": "die Übernachtung",
+     "ru": "ночёвка",
+     "ex": "Eine Übernachtung kostet 80 Euro.",
+     "note": ""
+    },
+    {
+     "de": "das Frühstück ist inklusive",
+     "ru": "завтрак включён",
+     "ex": "Im Preis ist das Frühstück inklusive.",
+     "note": ""
+    },
+    {
+     "de": "die Sehenswürdigkeit",
+     "ru": "достопримечательность",
+     "ex": "In Wien gibt es viele Sehenswürdigkeiten.",
+     "note": ""
+    },
+    {
+     "de": "sich verlaufen",
+     "ru": "заблудиться (пешком)",
+     "ex": "Wir haben uns in der Altstadt verlaufen.",
+     "note": ""
+    },
+    {
+     "de": "nach dem Weg fragen",
+     "ru": "спросить дорогу",
+     "ex": "Entschuldigung, kann ich Sie nach dem Weg fragen?",
+     "note": ""
+    },
+    {
+     "de": "geradeaus / links / rechts",
+     "ru": "прямо / налево / направо",
+     "ex": "Gehen Sie geradeaus und dann die zweite Straße links.",
+     "note": ""
+    },
+    {
+     "de": "der Reisepass",
+     "ru": "загранпаспорт",
+     "ex": "Vergiss deinen Reisepass nicht!",
+     "note": ""
+    },
+    {
+     "de": "das Visum",
+     "ru": "виза",
+     "ex": "Für die Reise brauche ich ein Visum.",
+     "note": ""
+    },
+    {
+     "de": "die Reise genießen",
+     "ru": "наслаждаться поездкой",
+     "ex": "Wir haben die Reise sehr genossen.",
+     "note": ""
+    },
+    {
+     "de": "Gute Fahrt! / Gute Reise!",
+     "ru": "Счастливого пути!",
+     "ex": "Gute Reise und melde dich, wenn du angekommen bist!",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "id": "b1-gesund",
+   "title": "B1 · Gesundheit und Körper",
+   "ru": "Врач, симптомы, лекарства, здоровый образ жизни",
+   "color": "#D9715B",
+   "grp": "b1",
+   "level": "B1",
+   "cards": [
+    {
+     "de": "der Arzt / die Ärztin",
+     "ru": "врач",
+     "ex": "Ich muss morgen zum Arzt gehen.",
+     "note": ""
+    },
+    {
+     "de": "der Termin beim Arzt",
+     "ru": "приём у врача",
+     "ex": "Ich möchte einen Termin vereinbaren.",
+     "note": ""
+    },
+    {
+     "de": "die Ordination",
+     "ru": "врачебный кабинет",
+     "ex": "Die Ordination ist von 8 bis 12 Uhr geöffnet.",
+     "note": "австр.; в Германии «die Praxis»"
+    },
+    {
+     "de": "das Spital",
+     "ru": "больница",
+     "ex": "Er liegt seit Montag im Spital.",
+     "note": "австр.; в Германии «das Krankenhaus»"
+    },
+    {
+     "de": "die e-card",
+     "ru": "карта медстрахования в Австрии",
+     "ex": "Bitte bringen Sie Ihre e-card mit.",
+     "note": "австрийская реалия"
+    },
+    {
+     "de": "die Krankenversicherung",
+     "ru": "медицинская страховка",
+     "ex": "Ohne Krankenversicherung wird ein Arztbesuch teuer.",
+     "note": ""
+    },
+    {
+     "de": "das Rezept",
+     "ru": "рецепт (врача)",
+     "ex": "Der Arzt hat mir ein Rezept ausgestellt.",
+     "note": ""
+    },
+    {
+     "de": "die Apotheke",
+     "ru": "аптека",
+     "ex": "In der Apotheke bekommt man Tabletten gegen Kopfschmerzen.",
+     "note": ""
+    },
+    {
+     "de": "die Tablette / das Medikament",
+     "ru": "таблетка / лекарство",
+     "ex": "Nehmen Sie die Tablette dreimal täglich.",
+     "note": ""
+    },
+    {
+     "de": "die Kopfschmerzen (Pl.)",
+     "ru": "головная боль",
+     "ex": "Ich habe seit gestern Kopfschmerzen.",
+     "note": ""
+    },
+    {
+     "de": "der Husten / der Schnupfen",
+     "ru": "кашель / насморк",
+     "ex": "Ich habe Husten und Schnupfen.",
+     "note": ""
+    },
+    {
+     "de": "das Fieber",
+     "ru": "температура",
+     "ex": "Das Kind hat Fieber.",
+     "note": ""
+    },
+    {
+     "de": "die Erkältung",
+     "ru": "простуда",
+     "ex": "Ich glaube, ich habe eine Erkältung.",
+     "note": ""
+    },
+    {
+     "de": "sich erkälten",
+     "ru": "простудиться",
+     "ex": "Ich habe mich erkältet.",
+     "note": ""
+    },
+    {
+     "de": "Mir ist schlecht.",
+     "ru": "Меня тошнит.",
+     "ex": "Mir ist schlecht, ich muss mich hinsetzen.",
+     "note": ""
+    },
+    {
+     "de": "Es tut weh.",
+     "ru": "Болит.",
+     "ex": "Mein Rücken tut weh.",
+     "note": ""
+    },
+    {
+     "de": "der Verband / das Pflaster",
+     "ru": "повязка / пластырь",
+     "ex": "Ich brauche ein Pflaster für den Finger.",
+     "note": ""
+    },
+    {
+     "de": "verletzt sein",
+     "ru": "быть травмированным",
+     "ex": "Er ist beim Fußball am Knie verletzt worden.",
+     "note": ""
+    },
+    {
+     "de": "der Krankenwagen",
+     "ru": "скорая помощь (машина)",
+     "ex": "Rufen Sie sofort den Krankenwagen!",
+     "note": "в Австрии номер 144"
+    },
+    {
+     "de": "krankgeschrieben sein",
+     "ru": "быть на больничном",
+     "ex": "Der Arzt hat mich für eine Woche krankgeschrieben.",
+     "note": ""
+    },
+    {
+     "de": "sich ausruhen",
+     "ru": "отдыхать",
+     "ex": "Du solltest dich ein paar Tage ausruhen.",
+     "note": ""
+    },
+    {
+     "de": "gesund essen",
+     "ru": "питаться здоровой пищей",
+     "ex": "Ich versuche, gesund zu essen.",
+     "note": ""
+    },
+    {
+     "de": "regelmäßig Sport treiben",
+     "ru": "регулярно заниматься спортом",
+     "ex": "Er treibt regelmäßig Sport.",
+     "note": ""
+    },
+    {
+     "de": "der Schlaf",
+     "ru": "сон",
+     "ex": "Genug Schlaf ist wichtig für die Gesundheit.",
+     "note": ""
+    },
+    {
+     "de": "Gute Besserung!",
+     "ru": "Выздоравливай!",
+     "ex": "Gute Besserung und ruh dich aus!",
+     "note": ""
+    }
+   ]
+  },
+  {
    "id": "idiome",
    "title": "Redewendungen",
    "ru": "Идиомы, которые немцы и австрийцы говорят каждый день",
@@ -246,7 +886,8 @@
      "ex": "",
      "note": ""
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "umgang",
@@ -434,7 +1075,8 @@
      "ex": "Verpiss dich!",
      "note": "грубо"
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "austria",
@@ -658,7 +1300,8 @@
      "ex": "",
      "note": ""
     }
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "schimpf",
@@ -835,7 +1478,8 @@
      "ex": "",
      "note": "шутливо-обидное, австр."
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "alltag",
@@ -1023,7 +1667,8 @@
      "ex": "",
      "note": ""
     }
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "at-redewendungen",
@@ -1223,7 +1868,8 @@
      "ex": "Mein Vater geht nächstes Jahr in Pension.",
      "note": "в Австрии Pension, не Rente"
     }
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "at-essen",
@@ -1429,7 +2075,8 @@
      "ex": "Einen kleinen Braunen und ein Glas Wasser, bitte.",
      "note": ""
     }
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "at-alltag",
@@ -1617,7 +2264,8 @@
      "ex": "Meine Schwester studiert Jus an der Uni Wien.",
      "note": "Jus = Rechtswissenschaften"
     }
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "at-slang",
@@ -1793,7 +2441,8 @@
      "ex": "Ich hab die ganze Woche gehackelt.",
      "note": "schwer arbeiten"
     }
-   ]
+   ],
+   "grp": "at"
   }
  ]
 }

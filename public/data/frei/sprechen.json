@@ -18,7 +18,8 @@
     "Was mich an Wien überrascht hat, ist …",
     "Und du, was machst du so?",
     "Prost!"
-   ]
+   ],
+   "grp": "at"
   },
   {
    "id": "fs_wohnung",
@@ -38,7 +39,8 @@
     "Ab wann wäre die Wohnung frei?",
     "Ist der Mietvertrag befristet?",
     "Wäre es möglich, dass …"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_arzt",
@@ -58,7 +60,8 @@
     "Ich bin gegen … allergisch.",
     "Brauche ich eine Krankmeldung?",
     "Wie oft soll ich das Medikament nehmen?"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_nachbar",
@@ -78,7 +81,8 @@
     "Aber ehrlich gesagt …",
     "Wie wär's, wenn wir …",
     "Nichts für ungut!"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_date",
@@ -98,7 +102,8 @@
     "Das klingt spannend!",
     "Ich muss zugeben, dass …",
     "Hättest du Lust, mal …?"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_reklamation",
@@ -118,7 +123,8 @@
     "Ich hätte gern mein Geld zurück.",
     "Ein Gutschein kommt für mich nicht in Frage.",
     "Könnte ich bitte mit Ihrem Vorgesetzten sprechen?"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_politik",
@@ -138,7 +144,8 @@
     "Das ist doch übertrieben.",
     "Okay, in dem Punkt geb ich dir recht, aber …",
     "Und was ist mit Leuten, die …?"
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fs_frei",
@@ -158,7 +165,8 @@
     "Was meinst du dazu?",
     "Ach echt?",
     "Wie auch immer …"
-   ]
+   ],
+   "grp": "de"
   }
  ]
 }

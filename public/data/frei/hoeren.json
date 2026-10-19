@@ -112,7 +112,8 @@
     }
    ],
    "words": 223,
-   "minutes": 2
+   "minutes": 2,
+   "grp": "at"
   },
   {
    "id": "wg_streit",
@@ -217,7 +218,8 @@
     }
    ],
    "words": 166,
-   "minutes": 2
+   "minutes": 2,
+   "grp": "de"
   },
   {
    "id": "arzt",
@@ -320,7 +322,8 @@
     }
    ],
    "words": 147,
-   "minutes": 2
+   "minutes": 2,
+   "grp": "b1"
   },
   {
    "id": "party",
@@ -429,7 +432,8 @@
     }
    ],
    "words": 189,
-   "minutes": 2
+   "minutes": 2,
+   "grp": "de"
   }
  ]
 }

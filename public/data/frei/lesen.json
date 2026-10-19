@@ -1,6 +1,250 @@
 {
  "texts": [
   {
+   "id": "b1_wohnung",
+   "topic": "Wohnen",
+   "kicker": "Alltag",
+   "title": "Meine erste eigene Wohnung in Graz",
+   "lead": "Nach drei Jahren in einer WG zieht Lena endlich in ihre eigene Wohnung. Das war gar nicht so einfach.",
+   "paras": [
+    "Lena ist 24 Jahre alt und arbeitet seit zwei Jahren als Grafikerin in Graz. Bisher hat sie in einer WG mit zwei Freundinnen gewohnt. Das war lustig, aber manchmal auch anstrengend, vor allem am Morgen, wenn alle gleichzeitig ins Bad wollten. Deshalb hat sie im Frühling beschlossen, eine eigene Wohnung zu suchen.",
+    "Die Suche war schwieriger, als sie gedacht hatte. Fast jeden Abend hat sie im Internet Anzeigen gelesen und Vermieter angerufen. Viele Wohnungen waren zu teuer oder zu weit vom Zentrum entfernt. Bei einer Besichtigung standen plötzlich fünfzehn Leute im Vorzimmer, und alle wollten dieselbe Wohnung. Lena hat damals gedacht: „Das schaffe ich nie.“",
+    "Nach sechs Wochen hat es dann doch geklappt. Die Wohnung hat zwei Zimmer, eine kleine Küche und einen Balkon. Die Miete beträgt 620 Euro im Monat, die Nebenkosten sind schon dabei. Der Vermieter, Herr Pichler, ist sehr freundlich und hat ihr sogar einen alten Tisch geschenkt.",
+    "Am Wochenende ist Lena eingezogen. Ihre Freundinnen haben beim Umzug geholfen, und am Abend haben sie zusammen Pizza gegessen – auf dem Boden, weil es noch keine Stühle gab. „Es ist ein komisches Gefühl, so viel Ruhe zu haben“, sagt Lena. „Aber ich glaube, ich werde mich schnell daran gewöhnen.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Lena hat früher allein gewohnt.",
+     "a": "f",
+     "ex": "Sie hat in einer WG gewohnt."
+    },
+    {
+     "t": "tf",
+     "q": "Die Wohnungssuche hat sechs Wochen gedauert.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Nebenkosten muss Lena extra bezahlen.",
+     "a": "f",
+     "ex": "Sie sind schon in der Miete dabei."
+    },
+    {
+     "t": "tf",
+     "q": "Herr Pichler hat Lena beim Umzug geholfen.",
+     "a": "n",
+     "ex": "Im Text helfen die Freundinnen, nicht der Vermieter."
+    },
+    {
+     "t": "mc",
+     "q": "Warum wollte Lena aus der WG ausziehen?",
+     "o": [
+      "Sie hatte zu wenig Geld.",
+      "Es war morgens oft stressig im Bad.",
+      "Ihre Freundinnen sind ausgezogen."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was hat der Vermieter Lena geschenkt?",
+     "a": "einen (alten) Tisch",
+     "ex": ""
+    }
+   ],
+   "level": "B1",
+   "grp": "b1",
+   "src": "Übungstext B1",
+   "words": 201,
+   "minutes": 4
+  },
+  {
+   "id": "b1_homeoffice",
+   "topic": "Arbeit",
+   "kicker": "Beruf",
+   "title": "Homeoffice oder Büro? Ein Tag, zwei Meinungen",
+   "lead": "Seit der Pandemie arbeiten viele Menschen von zu Hause. Aber wollen das wirklich alle?",
+   "paras": [
+    "Thomas arbeitet als Softwareentwickler in Wien. Drei Tage pro Woche bleibt er zu Hause. „Ich spare mir jeden Tag fast zwei Stunden Fahrzeit“, sagt er. „Die Zeit nutze ich lieber für Sport oder zum Kochen.“ Außerdem findet er es zu Hause ruhiger, deshalb kann er sich besser konzentrieren.",
+    "Seine Kollegin Sabine sieht das anders. Sie lebt allein in einer kleinen Wohnung und vermisst im Homeoffice den Kontakt zu den anderen. „Im Büro trinken wir zusammen Kaffee und sprechen über alles Mögliche. Zu Hause sitze ich den ganzen Tag allein vor dem Bildschirm“, erzählt sie. Deshalb kommt sie vier Tage pro Woche ins Büro.",
+    "Die Firma hat beide Wünsche ernst genommen. Jeder Mitarbeiter darf selbst entscheiden, wie oft er von zu Hause arbeitet. Nur der Dienstag ist für alle ein Büro-Tag, weil dann die wichtigen Besprechungen stattfinden.",
+    "Die Chefin ist mit der Lösung zufrieden. „Die Leute sind motivierter, wenn sie selbst entscheiden können“, sagt sie. Allerdings gibt es auch Probleme: Neue Kollegen lernen sich schwerer kennen, und manchmal wissen die Leute nicht, wer gerade erreichbar ist. Deshalb plant die Firma jetzt ein gemeinsames Frühstück pro Monat."
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Thomas arbeitet jeden Tag im Büro.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Sabine fehlt im Homeoffice der Kontakt zu den Kollegen.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Alle Mitarbeiter müssen am Dienstag im Büro sein.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Die Firma will Homeoffice künftig verbieten.",
+     "a": "f",
+     "ex": "Jeder darf selbst entscheiden."
+    },
+    {
+     "t": "mc",
+     "q": "Warum sind Besprechungen am Dienstag?",
+     "o": [
+      "Weil Thomas dann im Büro ist.",
+      "Weil an diesem Tag alle im Büro sind.",
+      "Weil die Chefin dann Zeit hat."
+     ],
+     "a": 1,
+     "ex": "Nur der Dienstag ist für alle ein Büro-Tag."
+    },
+    {
+     "t": "open",
+     "q": "Was plant die Firma, damit sich die Kollegen besser kennenlernen?",
+     "a": "ein gemeinsames Frühstück (pro Monat)",
+     "ex": ""
+    }
+   ],
+   "level": "B1",
+   "grp": "b1",
+   "src": "Übungstext B1",
+   "words": 185,
+   "minutes": 4
+  },
+  {
+   "id": "b1_zug",
+   "topic": "Reisen",
+   "kicker": "Reise",
+   "title": "Mit dem Zug durch Österreich: Warum immer mehr Leute umsteigen",
+   "lead": "Statt Auto oder Flugzeug nehmen viele jetzt lieber die Bahn. Ein Wochenende mit dem Klimaticket.",
+   "paras": [
+    "Seit es das Klimaticket gibt, fahren viele Österreicherinnen und Österreicher öfter mit dem Zug. Für etwa tausend Euro im Jahr darf man alle Öffis im ganzen Land benutzen: Züge, Busse, Straßenbahnen und U-Bahnen. Wer oft unterwegs ist, spart damit viel Geld.",
+    "Familie Berger aus Linz hat das Klimaticket im Herbst ausprobiert. An einem Wochenende sind sie nach Salzburg gefahren, am Sonntag weiter nach Innsbruck. Das Auto blieb zu Hause. „Wir mussten nicht nach einem Parkplatz suchen und konnten im Zug die Landschaft anschauen“, erzählt der Vater.",
+    "Natürlich war nicht alles perfekt. Auf der Rückfahrt hatte der Zug in Salzburg zwanzig Minuten Verspätung, und die Familie hat den Anschluss verpasst. Sie mussten eine Stunde auf den nächsten Zug warten. Die Kinder haben die Wartezeit trotzdem genossen und im Bahnhof Karten gespielt.",
+    "Am Ende waren sich alle einig: Das war nicht die letzte Reise mit der Bahn. „Ein bisschen mehr Zeit braucht man schon“, sagt die Mutter, „aber dafür ist man viel entspannter, wenn man ankommt.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Mit dem Klimaticket darf man nur Züge benutzen.",
+     "a": "f",
+     "ex": "Auch Busse, Straßenbahnen und U-Bahnen."
+    },
+    {
+     "t": "tf",
+     "q": "Familie Berger ist mit dem Auto nach Salzburg gefahren.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Der Zug hatte auf der Rückfahrt Verspätung.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Das Klimaticket kostet ungefähr 500 Euro.",
+     "a": "f",
+     "ex": "Es kostet etwa tausend Euro im Jahr."
+    },
+    {
+     "t": "mc",
+     "q": "Was haben die Kinder beim Warten gemacht?",
+     "o": [
+      "Sie haben geschlafen.",
+      "Sie haben Karten gespielt.",
+      "Sie haben die Landschaft angeschaut."
+     ],
+     "a": 1,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Was ist für die Mutter der Vorteil der Bahn?",
+     "a": "man ist entspannter (wenn man ankommt)",
+     "ex": ""
+    }
+   ],
+   "level": "B1",
+   "grp": "b1",
+   "src": "Übungstext B1",
+   "words": 164,
+   "minutes": 4
+  },
+  {
+   "id": "b1_gesund",
+   "topic": "Gesundheit",
+   "kicker": "Gesundheit",
+   "title": "Gesund bleiben im Alltag: Fünf einfache Tipps",
+   "lead": "Man muss nicht jeden Tag ins Fitnessstudio gehen, um etwas für die Gesundheit zu tun.",
+   "paras": [
+    "Viele Menschen wollen gesünder leben, wissen aber nicht, wie sie anfangen sollen. Die gute Nachricht: Schon kleine Änderungen im Alltag helfen. Ärztinnen und Ärzte empfehlen vor allem fünf Dinge.",
+    "Erstens: Bewegung. Man muss nicht lange laufen, aber jeden Tag dreißig Minuten sind ideal. Das kann auch ein Spaziergang nach der Arbeit sein. Zweitens: Schlaf. Erwachsene brauchen sieben bis acht Stunden pro Nacht. Wer zu wenig schläft, wird schneller krank und kann sich schlechter konzentrieren.",
+    "Drittens: Essen. Obst und Gemüse sollten jeden Tag auf dem Teller liegen. Süßigkeiten und Fast Food sind nicht verboten, aber man sollte sie nur selten essen. Viertens: Wasser. Viele Menschen trinken zu wenig, besonders im Büro. Zwei Liter pro Tag sind eine gute Menge.",
+    "Und fünftens: Pausen. Wer ständig unter Stress steht, wird auf Dauer krank. Deshalb sollte man sich bewusst Zeit zum Ausruhen nehmen, zum Beispiel ein Treffen mit Freunden oder ein gutes Buch. „Gesundheit ist kein Projekt für den Januar“, sagt die Hausärztin Dr. Maier. „Man muss jeden Tag ein bisschen darauf achten.“"
+   ],
+   "tasks": [
+    {
+     "t": "tf",
+     "q": "Man muss jeden Tag lange Sport treiben.",
+     "a": "f",
+     "ex": "Dreißig Minuten Bewegung genügen."
+    },
+    {
+     "t": "tf",
+     "q": "Erwachsene sollten sieben bis acht Stunden schlafen.",
+     "a": "r",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Süßigkeiten sind laut Text komplett verboten.",
+     "a": "f",
+     "ex": ""
+    },
+    {
+     "t": "tf",
+     "q": "Dr. Maier arbeitet in einem Fitnessstudio.",
+     "a": "n",
+     "ex": "Sie ist Hausärztin, mehr steht nicht im Text."
+    },
+    {
+     "t": "mc",
+     "q": "Was passiert, wenn man zu wenig schläft?",
+     "o": [
+      "Man wird schneller krank.",
+      "Man hat mehr Hunger.",
+      "Man braucht weniger Wasser."
+     ],
+     "a": 0,
+     "ex": ""
+    },
+    {
+     "t": "open",
+     "q": "Wie viel Wasser soll man pro Tag trinken?",
+     "a": "zwei Liter",
+     "ex": ""
+    }
+   ],
+   "level": "B1",
+   "grp": "b1",
+   "src": "Übungstext B1",
+   "words": 169,
+   "minutes": 4
+  },
+  {
    "id": "grant",
    "level": "C1",
    "topic": "Wien & Kultur",
@@ -63,7 +307,8 @@
    ],
    "src": "Übungstext",
    "words": 343,
-   "minutes": 9
+   "minutes": 9,
+   "grp": "at"
   },
   {
    "id": "kaffeehaus",
@@ -117,7 +362,8 @@
    ],
    "src": "Übungstext",
    "words": 282,
-   "minutes": 8
+   "minutes": 8,
+   "grp": "at"
   },
   {
    "id": "dating",
@@ -175,7 +421,8 @@
    ],
    "src": "Übungstext",
    "words": 257,
-   "minutes": 8
+   "minutes": 8,
+   "grp": "de"
   },
   {
    "id": "sprachstreit",
@@ -235,7 +482,8 @@
    ],
    "src": "Übungstext",
    "words": 310,
-   "minutes": 9
+   "minutes": 9,
+   "grp": "at"
   },
   {
    "id": "stadion",
@@ -289,7 +537,8 @@
    ],
    "src": "Übungstext",
    "words": 262,
-   "minutes": 8
+   "minutes": 8,
+   "grp": "de"
   }
  ]
 }

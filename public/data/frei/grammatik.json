@@ -1,6 +1,754 @@
 {
  "topics": [
   {
+   "id": "b1-perfekt",
+   "title": "Perfekt und Präteritum",
+   "ru": "О прошедшем: haben или sein, Partizip II, когда war/hatte",
+   "level": "B1",
+   "grp": "b1",
+   "theory": "<p>В разговоре о прошлом по-немецки чаще всего используют <b class=\"k\">Perfekt</b>: вспомогательный глагол <b>haben</b> или <b>sein</b> во второй позиции и <b>Partizip II</b> в конце.</p>\n<table><tr><th>Когда</th><th>Вспомогательный</th><th>Пример</th></tr>\n<tr><td>большинство глаголов</td><td><b>haben</b></td><td>Ich <b>habe</b> gestern Pizza <b>gegessen</b>.</td></tr>\n<tr><td>движение (gehen, fahren, kommen, fliegen)</td><td><b>sein</b></td><td>Wir <b>sind</b> nach Wien <b>gefahren</b>.</td></tr>\n<tr><td>изменение состояния (aufstehen, einschlafen, werden)</td><td><b>sein</b></td><td>Er <b>ist</b> früh <b>aufgestanden</b>.</td></tr>\n<tr><td>sein, bleiben, passieren</td><td><b>sein</b></td><td>Es <b>ist</b> nichts <b>passiert</b>.</td></tr></table>\n<p><b class=\"k\">Partizip II</b>: правильные глаголы ge-…-t (gemacht), сильные ge-…-en (gegangen). Приставки: отделяемые ge- в середине (<b>an</b>gerufen, <b>auf</b>gestanden), неотделяемые без ge- (besucht, verstanden). Глаголы на -ieren без ge- (studiert).</p>\n<p>Для <b>sein, haben</b> и модальных глаголов в разговоре обычно используют <b class=\"k\">Präteritum</b>: Ich <b>war</b> müde. Er <b>hatte</b> keine Zeit. Wir <b>konnten</b> nicht kommen.</p>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Gestern ___ ich lange im Büro gearbeitet.",
+     "o": [
+      "bin",
+      "habe",
+      "werde"
+     ],
+     "a": 1,
+     "ex": "arbeiten → haben."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir ___ am Sonntag nach Graz gefahren.",
+     "o": [
+      "haben",
+      "sind",
+      "waren"
+     ],
+     "a": 1,
+     "ex": "Движение → sein."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie ___ gestern spät angekommen.",
+     "o": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "a": 1,
+     "ex": "ankommen → sein."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er ___ das Buch schon gelesen.",
+     "o": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "a": 0,
+     "ex": "lesen → haben."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Ich habe gestern eingekauft.",
+      "Ich habe gestern einkaufen.",
+      "Ich bin gestern eingekauft."
+     ],
+     "a": 0,
+     "ex": "haben + Partizip II (ein-ge-kauft)."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Er hat das Fenster aufgemacht.",
+      "Er hat das Fenster gemacht auf.",
+      "Er hat aufgemacht das Fenster."
+     ],
+     "a": 0,
+     "ex": "Partizip II стоит в конце."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wie sagt man im Gespräch am besten?",
+     "o": [
+      "Ich war gestern müde.",
+      "Ich bin gestern müde gewesen.",
+      "Ich habe gestern müde gewesen."
+     ],
+     "a": 0,
+     "ex": "sein → обычно Präteritum: war."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Partizip II von „studieren“:",
+     "o": [
+      "gestudiert",
+      "studiert",
+      "gestudieren"
+     ],
+     "a": 1,
+     "ex": "Глаголы на -ieren без ge-."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Partizip II von „anrufen“:",
+     "o": [
+      "angerufen",
+      "geanrufen",
+      "anegerufen"
+     ],
+     "a": 0,
+     "ex": "Отделяемая приставка: an-ge-rufen."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Partizip II von „bringen“:",
+     "o": [
+      "gebringt",
+      "gebracht",
+      "gebrungen"
+     ],
+     "a": 1,
+     "ex": "Неправильный глагол: bringen – brachte – gebracht."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich ___ gestern meine Oma besucht. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir ___ am Wochenende nach Graz gefahren. (sein)",
+     "a": [
+      "sind"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er hat die E-Mail schon ___. (schreiben)",
+     "a": [
+      "geschrieben"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Sie ist früh ___. (aufstehen)",
+     "a": [
+      "aufgestanden"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Hast du das Fenster ___? (zumachen)",
+     "a": [
+      "zugemacht"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich ___ gestern keine Zeit. (haben, Präteritum)",
+     "a": [
+      "hatte"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Es hat gestern den ganzen Tag ___. (regnen)",
+     "a": [
+      "geregnet"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Letzte Woche ___ ich krank. (sein, Präteritum)",
+     "a": [
+      "war"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich fahre morgen nach Wien. (gestern)",
+     "s": "Ich bin …",
+     "a": [
+      "Ich bin gestern nach Wien gefahren.",
+      "Gestern bin ich nach Wien gefahren."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie den Satz im Perfekt."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er kauft ein Brot. (gestern)",
+     "s": "Er hat …",
+     "a": [
+      "Er hat gestern ein Brot gekauft.",
+      "Gestern hat er ein Brot gekauft.",
+      "Er hat ein Brot gekauft."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie den Satz im Perfekt."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir stehen um sieben auf. (heute Morgen)",
+     "s": "Wir sind …",
+     "a": [
+      "Wir sind heute Morgen um sieben aufgestanden.",
+      "Wir sind um sieben aufgestanden.",
+      "Heute Morgen sind wir um sieben aufgestanden."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie den Satz im Perfekt."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie ruft ihre Mutter an. (gestern)",
+     "s": "Sie hat …",
+     "a": [
+      "Sie hat gestern ihre Mutter angerufen.",
+      "Sie hat ihre Mutter angerufen.",
+      "Gestern hat sie ihre Mutter angerufen."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie den Satz im Perfekt."
+    }
+   ]
+  },
+  {
+   "id": "b1-nebensatz",
+   "title": "Nebensätze: weil, dass, wenn, obwohl, damit",
+   "ru": "Глагол уходит в конец: как строить придаточные",
+   "level": "B1",
+   "grp": "b1",
+   "theory": "<p>В придаточном предложении <b class=\"k\">спрягаемый глагол стоит в конце</b>. Перед придаточным ставится запятая.</p>\n<table><tr><th>Союз</th><th>Значение</th><th>Пример</th></tr>\n<tr><td><b>weil</b></td><td>потому что</td><td>Ich bleibe zu Hause, <b>weil</b> ich krank <b>bin</b>.</td></tr>\n<tr><td><b>dass</b></td><td>что</td><td>Er sagt, <b>dass</b> er keine Zeit <b>hat</b>.</td></tr>\n<tr><td><b>wenn</b></td><td>если; когда (повторяется)</td><td><b>Wenn</b> es regnet, bleiben wir zu Hause.</td></tr>\n<tr><td><b>als</b></td><td>когда (один раз в прошлом)</td><td><b>Als</b> ich ein Kind <b>war</b>, wohnte ich in Linz.</td></tr>\n<tr><td><b>obwohl</b></td><td>хотя</td><td><b>Obwohl</b> es kalt <b>ist</b>, gehen wir spazieren.</td></tr>\n<tr><td><b>damit</b></td><td>чтобы (разные подлежащие)</td><td>Ich spare, <b>damit</b> wir reisen <b>können</b>.</td></tr>\n<tr><td><b>ob</b></td><td>ли (косвенный вопрос)</td><td>Ich weiß nicht, <b>ob</b> er kommt.</td></tr></table>\n<p>Если придаточное стоит <b>первым</b>, то за ним сразу идёт глагол главного предложения: <b>Weil</b> ich müde <b>bin</b>, <b>gehe</b> ich früh schlafen.</p>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich bleibe zu Hause, ___ ich krank bin.",
+     "o": [
+      "weil",
+      "deshalb",
+      "aber"
+     ],
+     "a": 0,
+     "ex": "Причина → weil, глагол в конце."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich bleibe zu Hause, weil ich krank ___.",
+     "o": [
+      "bin",
+      "ich bin",
+      "habe"
+     ],
+     "a": 0,
+     "ex": "Глагол в конце придаточного."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er sagt, ___ er morgen kommt.",
+     "o": [
+      "dass",
+      "weil",
+      "wenn"
+     ],
+     "a": 0,
+     "ex": "dass = что."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "___ es regnet, bleiben wir zu Hause.",
+     "o": [
+      "Wenn",
+      "Dass",
+      "Denn"
+     ],
+     "a": 0,
+     "ex": "wenn = если."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Obwohl es kalt ___, gehen wir spazieren.",
+     "o": [
+      "ist",
+      "sein",
+      "wäre sein"
+     ],
+     "a": 0,
+     "ex": "Глагол в конце."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Ich lerne Deutsch, weil ich in Österreich arbeiten möchte.",
+      "Ich lerne Deutsch, weil ich möchte in Österreich arbeiten.",
+      "Ich lerne Deutsch, weil möchte ich in Österreich arbeiten."
+     ],
+     "a": 0,
+     "ex": "В конце стоит спрягаемый глагол (möchte)."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Ich weiß nicht, ob er kommt.",
+      "Ich weiß nicht, ob kommt er.",
+      "Ich weiß nicht, ob er kommen."
+     ],
+     "a": 0,
+     "ex": "ob + глагол в конце."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich spare Geld, ___ ich mir ein Auto kaufen kann.",
+     "o": [
+      "damit",
+      "weil sie",
+      "obwohl"
+     ],
+     "a": 0,
+     "ex": "damit = чтобы."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich arbeite viel, ___ ich wenig Geld verdiene.",
+     "o": [
+      "obwohl",
+      "damit",
+      "weil"
+     ],
+     "a": 0,
+     "ex": "obwohl: вопреки ожиданию."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "___ ich ein Kind war, wohnte ich in Linz.",
+     "o": [
+      "Als",
+      "Wenn",
+      "Dass"
+     ],
+     "a": 0,
+     "ex": "Один раз в прошлом → als."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich komme später, weil ich noch arbeiten ___. (müssen)",
+     "a": [
+      "muss"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er sagt, dass er keine Zeit ___. (haben)",
+     "a": [
+      "hat"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wenn ich Zeit ___, rufe ich dich an. (haben)",
+     "a": [
+      "habe"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Obwohl er müde ___, geht er noch ins Kino. (sein)",
+     "a": [
+      "ist"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich lerne Deutsch, ___ ich in Wien studieren kann. (чтобы)",
+     "a": [
+      "damit"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich weiß nicht, ___ er heute kommt. (ли)",
+     "a": [
+      "ob"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie ist glücklich, ___ sie die Prüfung bestanden hat. (потому что)",
+     "a": [
+      "weil"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich glaube, ___ das Wetter morgen schön wird. (что)",
+     "a": [
+      "dass"
+     ],
+     "ex": ""
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich bin müde. Ich habe schlecht geschlafen.",
+     "s": "Ich bin müde, weil …",
+     "a": [
+      "Ich bin müde, weil ich schlecht geschlafen habe."
+     ],
+     "ex": "",
+     "task": "Verbinden Sie die Sätze mit „weil“."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Er sagt etwas. Er hat keine Lust.",
+     "s": "Er sagt, dass …",
+     "a": [
+      "Er sagt, dass er keine Lust hat."
+     ],
+     "ex": "",
+     "task": "Verbinden Sie die Sätze mit „dass“."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir gehen spazieren. Es regnet.",
+     "s": "Wir gehen spazieren, …",
+     "a": [
+      "Wir gehen spazieren, obwohl es regnet.",
+      "Obwohl es regnet, gehen wir spazieren."
+     ],
+     "ex": "",
+     "task": "Verbinden Sie die Sätze mit „obwohl“."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich lerne jeden Tag. Ich will die Prüfung bestehen.",
+     "s": "Ich lerne jeden Tag, damit …",
+     "a": [
+      "Ich lerne jeden Tag, damit ich die Prüfung bestehe.",
+      "Ich lerne jeden Tag, damit ich die Prüfung bestehen kann.",
+      "Damit ich die Prüfung bestehe, lerne ich jeden Tag."
+     ],
+     "ex": "",
+     "task": "Verbinden Sie die Sätze mit „damit“."
+    }
+   ]
+  },
+  {
+   "id": "b1-adjektive",
+   "title": "Adjektivendungen",
+   "ru": "ein guter Freund, der gute Freund, gute Freunde: какое окончание",
+   "level": "B1",
+   "grp": "b1",
+   "theory": "<p>Прилагательное перед существительным получает окончание. Какое, зависит от <b class=\"k\">артикля, рода и падежа</b>.</p>\n<table><tr><th></th><th>m</th><th>f</th><th>n</th><th>Pl.</th></tr>\n<tr><td><b>der / die / das</b> (Nom.)</td><td>der gut<b>e</b> Freund</td><td>die gut<b>e</b> Idee</td><td>das gut<b>e</b> Buch</td><td>die gut<b>en</b> Freunde</td></tr>\n<tr><td><b>ein / eine</b> (Nom.)</td><td>ein gut<b>er</b> Freund</td><td>eine gut<b>e</b> Idee</td><td>ein gut<b>es</b> Buch</td><td>(kein) gut<b>e</b> Freunde</td></tr>\n<tr><td>Akkusativ</td><td>einen gut<b>en</b> Freund</td><td>eine gut<b>e</b> Idee</td><td>ein gut<b>es</b> Buch</td><td>gut<b>e</b> Freunde</td></tr>\n<tr><td>Dativ</td><td>einem gut<b>en</b> Freund</td><td>einer gut<b>en</b> Idee</td><td>einem gut<b>en</b> Buch</td><td>gut<b>en</b> Freunden</td></tr></table>\n<p>Запомни: в <b>Dativ</b> почти всегда <b>-en</b>; после <b>der/die/das</b> в Nominativ (и Akkusativ f, n) стоит <b>-e</b>; после <b>ein</b> видно род по окончанию: <b>-er</b> (m), <b>-es</b> (n).</p>",
+   "items": [
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Das ist ein gut___ Freund.",
+     "o": [
+      "er",
+      "e",
+      "en"
+     ],
+     "a": 0,
+     "ex": "ein + m, Nom. → -er."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich habe eine neu___ Wohnung.",
+     "o": [
+      "e",
+      "en",
+      "er"
+     ],
+     "a": 0,
+     "ex": "eine + f → -e."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Er trägt einen schwarz___ Mantel.",
+     "o": [
+      "en",
+      "er",
+      "e"
+     ],
+     "a": 0,
+     "ex": "einen (Akk. m) → -en."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Wir wohnen in einem klein___ Dorf.",
+     "o": [
+      "en",
+      "em",
+      "er"
+     ],
+     "a": 0,
+     "ex": "Dativ → -en."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Der groß___ Hund bellt.",
+     "o": [
+      "e",
+      "er",
+      "en"
+     ],
+     "a": 0,
+     "ex": "der + Nom. m → -e."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Ich kaufe das rot___ Kleid.",
+     "o": [
+      "e",
+      "es",
+      "en"
+     ],
+     "a": 0,
+     "ex": "das + Akk. n → -e."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Mit dem alt___ Auto fahren wir nach Graz.",
+     "o": [
+      "en",
+      "e",
+      "er"
+     ],
+     "a": 0,
+     "ex": "Dativ → -en."
+    },
+    {
+     "t": "mc",
+     "lv": 1,
+     "q": "Sie sucht eine günstig___ Wohnung.",
+     "o": [
+      "e",
+      "en",
+      "er"
+     ],
+     "a": 0,
+     "ex": "eine + f → -e."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Das sind interessant___ Bücher.",
+     "o": [
+      "e",
+      "en",
+      "er"
+     ],
+     "a": 0,
+     "ex": "Plural без артикля → -e."
+    },
+    {
+     "t": "mc",
+     "lv": 2,
+     "q": "Ich mag den süß___ Kuchen.",
+     "o": [
+      "en",
+      "e",
+      "er"
+     ],
+     "a": 0,
+     "ex": "den (Akk. m) → -en."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Das ist ein ___ Tag. (schön)",
+     "a": [
+      "schöner"
+     ],
+     "ex": "ein + m → -er."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Ich habe eine ___ Idee. (gut)",
+     "a": [
+      "gute"
+     ],
+     "ex": "eine + f → -e."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Er kauft einen ___ Computer. (neu)",
+     "a": [
+      "neuen"
+     ],
+     "ex": "einen → -en."
+    },
+    {
+     "t": "gap",
+     "lv": 1,
+     "q": "Wir sprechen mit dem ___ Lehrer. (nett)",
+     "a": [
+      "netten"
+     ],
+     "ex": "Dativ → -en."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Das ___ Wetter gefällt mir. (warm)",
+     "a": [
+      "warme"
+     ],
+     "ex": "das + Nom. n → -e."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Sie hat ___ Haare. (lang)",
+     "a": [
+      "lange"
+     ],
+     "ex": "Plural без артикля → -e."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Ich suche ein ___ Zimmer. (billig)",
+     "a": [
+      "billiges"
+     ],
+     "ex": "ein + n, Akk. → -es."
+    },
+    {
+     "t": "gap",
+     "lv": 2,
+     "q": "Die ___ Kinder spielen im Garten. (klein)",
+     "a": [
+      "kleinen"
+     ],
+     "ex": "die + Plural → -en."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Der Hund ist groß. Er bellt laut.",
+     "s": "Der …",
+     "a": [
+      "Der große Hund bellt laut."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie einen Satz mit dem Adjektiv vor dem Nomen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Ich habe ein Auto. Es ist alt.",
+     "s": "Ich habe ein …",
+     "a": [
+      "Ich habe ein altes Auto."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie einen Satz mit dem Adjektiv vor dem Nomen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Sie trägt ein Kleid. Es ist blau.",
+     "s": "Sie trägt …",
+     "a": [
+      "Sie trägt ein blaues Kleid."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie einen Satz mit dem Adjektiv vor dem Nomen."
+    },
+    {
+     "t": "tr",
+     "lv": 2,
+     "q": "Wir wohnen in einer Stadt. Sie ist klein.",
+     "s": "Wir wohnen …",
+     "a": [
+      "Wir wohnen in einer kleinen Stadt."
+     ],
+     "ex": "",
+     "task": "Schreiben Sie einen Satz mit dem Adjektiv vor dem Nomen."
+    }
+   ]
+  },
+  {
    "id": "partikeln",
    "title": "Modalpartikeln: doch, mal, halt, eben, ja, eh",
    "ru": "Маленькие слова, без которых речь звучит как робот",
@@ -154,7 +902,8 @@
      "ex": "doch/mal — приглашение.",
      "task": "Einladung mit Partikel."
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "vermutung",
@@ -278,7 +1027,8 @@
      "ex": "",
      "task": "Formen Sie mit „wollen“ um."
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "gesprochen",
@@ -383,7 +1133,8 @@
      "ex": "В письме — глагол в конец!",
      "task": "Formen Sie in korrektes Schriftdeutsch um."
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "fvg",
@@ -492,7 +1243,8 @@
      "ex": "",
      "task": "Verwenden Sie ein Funktionsverbgefüge."
     }
-   ]
+   ],
+   "grp": "de"
   },
   {
    "id": "ndekl",
@@ -585,7 +1337,8 @@
      "a": 0,
      "ex": "Особая форма: des Namens."
     }
-   ]
+   ],
+   "grp": "de"
   }
  ]
 }

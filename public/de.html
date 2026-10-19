@@ -579,6 +579,25 @@ html{scrollbar-gutter:stable}
 @media (max-width:900px){.sgrid{grid-template-columns:1fr}}
 .inv-new{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--primary-soft);border-radius:16px;padding:12px 14px;margin:6px 0 10px}
 .inv-new code{font-size:20px;font-weight:800;letter-spacing:.14em}
+/* ---------- плитки и блики, как в Wörter и Schreiben ---------- */
+.list,.lvgrid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.item{min-height:172px;padding:18px 20px 40px;overflow:hidden}
+.item::after{top:auto;bottom:16px;right:18px;transform:rotate(45deg)}
+.item:hover::after{transform:translate(3px,0) rotate(45deg)}
+.item::before,.lvcard::before,.mod::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.2) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s ease;pointer-events:none;z-index:1}
+.item:hover::before,.lvcard:hover::before,.mod:hover::before{transform:translateX(120%)}
+.lvcard{position:relative;overflow:hidden}.mod{overflow:hidden}
+.nav a.nav-ai,.ai-card,.btn.primary{position:relative;overflow:hidden}
+.nav a.nav-ai .ni{box-shadow:0 4px 12px -4px var(--c)}
+.nav a.nav-ai .ni svg{animation:aiTw 3.2s ease-in-out infinite}
+@keyframes aiTw{0%,70%,100%{transform:none}80%{transform:rotate(18deg) scale(1.15)}90%{transform:rotate(-8deg) scale(.95)}}
+.nav a.nav-ai::after,.ai-card::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-100%);animation:aiShine 6s ease-in-out infinite;pointer-events:none}
+@keyframes aiShine{0%,75%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.nav a.nav-ai[aria-current="page"]{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 28%,transparent),rgba(139,92,246,.18) 55%,rgba(255,205,31,.22))}
+.btn.primary::after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:38%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:translateX(-160%) skewX(-18deg);transition:transform .7s;pointer-events:none}
+.btn.primary:hover::after{transform:translateX(380%) skewX(-18deg)}
+.aihist{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+@media (prefers-reduced-motion:reduce){.nav a.nav-ai::after,.ai-card::after,.nav a.nav-ai .ni svg{animation:none}.item::before,.lvcard::before,.mod::before,.btn.primary::after{display:none}}
 </style>
 </head>
 <body>

@@ -1869,10 +1869,10 @@ const UMK=["ä","ö","ü","ß","Ä","Ö","Ü"];
 (()=>{
   let bar=null,cur=null;
   const ok=el=>el&&(el.tagName==="TEXTAREA"||(el.tagName==="INPUT"&&(!el.type||el.type==="text")))&&!el.readOnly&&!el.disabled&&el.lang!=="ru"&&!el.closest("[data-nolat]")&&el.id!=="aiT"&&!el.classList.contains("ep-sinp");
-  // панель стоит внутри поля справа (текст отступает), в узкое поле — над ним; ничего вокруг не закрывает
+  // панель стоит под полем ввода (слева); если снизу нет места, то над ним
   const place=()=>{if(!bar||!cur)return;const r=cur.getBoundingClientRect(),bw=bar.offsetWidth||240,bh=bar.offsetHeight||40;
-    if(r.width>=bw+150){bar.style.left=(r.right-bw-8)+"px";bar.style.top=(cur.tagName==="TEXTAREA"?r.bottom-bh-8:r.top+(r.height-bh)/2)+"px";if(cur.dataset.umpad==null){cur.dataset.umpad=cur.style.paddingRight||"";cur.style.paddingRight=(bw+16)+"px"}}
-    else{bar.style.left=Math.max(8,Math.min(r.left,innerWidth-bw-8))+"px";bar.style.top=(r.top-bh-6>56?r.top-bh-6:r.bottom+4)+"px"}};
+    bar.style.left=Math.max(8,Math.min(r.left,innerWidth-bw-8))+"px";
+    bar.style.top=(r.bottom+6+bh<=innerHeight?r.bottom+6:Math.max(8,r.top-bh-6))+"px"};
   const hide=()=>{if(bar){bar.remove();bar=null}if(cur&&cur.dataset.umpad!=null){cur.style.paddingRight=cur.dataset.umpad;delete cur.dataset.umpad}cur=null};
   const show=el=>{
     if(cur&&cur!==el&&cur.dataset.umpad!=null){cur.style.paddingRight=cur.dataset.umpad;delete cur.dataset.umpad}

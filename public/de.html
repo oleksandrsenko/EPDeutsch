@@ -218,6 +218,8 @@ textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .opt.right{border-color:var(--good);background:var(--good-soft)}
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .opt kbd{font:inherit;font-size:12px;font-weight:800;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--panel2);flex:none}
+.qcard .q u.ul{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--c,var(--primary));font-weight:700}
+.nfline{font-family:var(--serif);font-size:19px;line-height:2.1;margin:0 0 14px}.nfline .nfin{display:inline-block;width:24ch;max-width:100%;font-family:inherit;font-size:17px!important;padding:6px 12px!important;margin:0 4px;vertical-align:baseline}
 .ansin{width:100%;font-size:17px!important;padding:12px 14px!important}
 .start-hint{font-size:13.5px;color:var(--muted);margin:-8px 0 8px;font-weight:600}
 .fb{margin-top:14px;border-radius:16px;padding:14px 16px;font-size:14.5px;line-height:1.55}
@@ -1017,15 +1019,17 @@ function startGram(lv){
 function renderQ(){
   const t=G.t,i=G.queue[G.pos],q=t.items[i];
   const body=$("#gbody");
-  const qText=esc(q.q).replace(/___/g,'<span class="gap"></span>');
+  const nf=q.t==="nf";
+  const qText=nf?esc(q.q).replace(/\[\[(.+?)\]\]/g,'<u class="ul">$1</u>'):esc(q.q).replace(/___/g,'<span class="gap"></span>');
   body.innerHTML=`<div class="ex-run"><div class="progline"><div class="bar"><i style="width:${G.pos/G.queue.length*100}%"></i></div><small class="muted">${G.pos+1}/${G.queue.length}</small></div>
-  <div class="qcard"><div class="task">${esc(q.task||{mc:"Выбери правильный вариант",gap:"Вставь пропущенное",tr:"Перефразируй"}[q.t])}</div><div class="q">${qText}</div>
-   ${q.t==="mc"?`<div class="opts">${q.o.map((o,k)=>`<button class="opt" data-o="${k}"><kbd>${k+1}</kbd>${esc(o)}</button>`).join("")}</div>`:
+  <div class="qcard"><div class="task">${esc(q.task||{mc:"Выбери правильный вариант",gap:"Вставь пропущенное",tr:"Перефразируй",nf:"Перестрой подчёркнутое: впиши только пропуск, остальное уже написано"}[q.t])}</div><div class="q">${qText}</div>
+   ${nf?`${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<div class="nfline"><span>${esc(q.pre||"")}</span><span style="white-space:nowrap"><input class="ansin nfin" id="ans" autocomplete="off" spellcheck="false" placeholder="…">${esc((q.post||"").match(/^[,.;:]/)?q.post[0]:"")}</span><span>${esc((q.post||"").replace(/^[,.;:]/,""))}</span></div>`:q.t==="mc"?`<div class="opts">${q.o.map((o,k)=>`<button class="opt" data-o="${k}"><kbd>${k+1}</kbd>${esc(o)}</button>`).join("")}</div>`:
      `${q.s?`<div class="start-hint">Начни так: ${esc(q.s)}</div>`:""}${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<input class="ansin" id="ans" autocomplete="off" spellcheck="false" placeholder="${q.t==="gap"?"Пропущенное слово / форма":"Твой вариант…"}">`}
    <div class="row" style="margin-top:14px"><button class="btn primary" id="chk">${q.t==="mc"?"Дальше":"Проверить"}</button><button class="btn" id="skip">Не знаю</button><span class="muted" style="font-size:12.5px;margin-left:auto">Enter: проверить</span></div>
    <div id="fb"></div></div></div>`;
   G.answered=false;G.sel=null;
   const inp=$("#ans");if(inp){inp.focus();inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#chk").click()}}}
+  if(inp&&nf)inp.addEventListener("input",()=>{inp.style.width=Math.min(Math.max(inp.value.length*0.95+4,24),80)+"ch"});
   $$(".opt").forEach(b=>b.onclick=()=>{if(G.answered)return;$$(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");G.sel=+b.dataset.o;checkQ()});
   $("#chk").onclick=()=>{if(G.answered)return nextQ();if(q.t==="mc"&&G.sel==null)return;checkQ()};
   $("#skip").onclick=()=>{if(G.answered)return nextQ();checkQ(true)};
@@ -1042,7 +1046,8 @@ function checkQ(skip){
   let ok=false,ans="";
   if(q.t==="mc"){ok=!skip&&G.sel===q.a;$$(".opt").forEach((b,k)=>{if(k===q.a)b.classList.add("right");else if(k===G.sel)b.classList.add("wrong")})}
   else{ans=($("#ans").value||"").trim();const A=(q.a||[]).map(loose);ok=!skip&&ans&&A.includes(loose(ans));$("#ans").readOnly=true}
-  const model=q.t==="mc"?q.o[q.a]:(q.a||[])[0];
+  const nfFull=a=>((q.pre||"")+a+(q.post||"")).replace(/\s+([,.])/g,"$1").trim();
+  const model=q.t==="mc"?q.o[q.a]:q.t==="nf"?nfFull((q.a||[])[0]):(q.a||[])[0];
   if(q.free&&!skip&&ans&&!ok){ // свободный ответ: много верных вариантов, сверка с образцом, «засчитать себе» или проверка ИИ
     logDone("g",1);
     $("#fb").innerHTML=`<div class="fb ai"><b class="h">Сравни с образцом</b><div class="model">${esc(q.q.replace(/…\s*$/,""))} ${esc(model.replace(/^…\s*/,""))}</div>${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}<div class="row" style="margin-top:10px"><button class="btn sm" id="selfOk">✓ У меня тоже верно</button><button class="btn sm" id="selfNo">✗ Есть ошибка</button>${ST.keys.anthropic?`<button class="btn sm" id="aiChk">${ic("star",14)} Проверить с ИИ</button>`:""}</div></div>`;
@@ -1058,10 +1063,10 @@ function checkQ(skip){
   if(ok)G.ok++;else if(!skip&&q.t!=="mc")G.retry.push(i);
   logDone("g",1);if(ok)logDone("gk",1);
   const fb=$("#fb");
-  fb.innerHTML=`<div class="fb ${ok?"ok":"no"}"><b class="h">${ok?"Верно!":skip?"Правильный ответ:":"Не совсем. Правильно:"}</b>${ok&&q.t==="mc"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(esc).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
+  fb.innerHTML=`<div class="fb ${ok?"ok":"no"}"><b class="h">${ok?"Верно!":skip?"Правильный ответ:":"Не совсем. Правильно:"}</b>${ok&&q.t==="mc"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(x=>esc(q.t==="nf"?nfFull(x):x)).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
    ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
   const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
-    try{const r=await api("/de/check",{method:"POST",body:JSON.stringify({task:q.task||"",q:q.q,a:q.a,answer:ans})});
+    try{const r=await api("/de/check",{method:"POST",body:JSON.stringify(q.t==="nf"?{task:"Umformung: ersetze die unterstrichene Wendung; der Rest des Satzes bleibt unverändert",q:q.q.replace(/\[\[|\]\]/g,"")+" → "+(q.pre||"")+"___"+(q.post||""),a:q.a.map(nfFull),answer:nfFull(ans)}:{task:q.task||"",q:q.q,a:q.a,answer:ans})});
       if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.retry=G.retry.filter(x=>x!==i)}
       fb.insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"ai"}"><b class="h">${r.ok?"ИИ: твой вариант верный ✓":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`);ai.remove()}
     catch(e){ai.disabled=false;ai.textContent=e.message}};

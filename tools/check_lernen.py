@@ -72,6 +72,9 @@ def check_gram(area, d):
             if k == "mc":
                 if not 0 <= q.get("a", -1) < len(q.get("o", [])):
                     err(wi, "mc: неверный индекс")
+            elif k == "nf":
+                if q.get("q", "").count("[[") != 1 or not q.get("a") or "pre" not in q or "post" not in q:
+                    err(wi, "nf: нужны [[подчёркнутое]] в q, pre, post и эталоны a")
             elif k in ("gap", "tr"):
                 if not q.get("a") or not all(isinstance(x, str) and x.strip() for x in q["a"]):
                     err(wi, "нет эталонных ответов")

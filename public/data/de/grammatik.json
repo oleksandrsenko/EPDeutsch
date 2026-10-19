@@ -3248,1051 +3248,477 @@
    "ru": "Wegen der hohen Mieten → Weil die Mieten hoch sind: превращаем предлог в придаточное",
    "level": "C1",
    "tag": "Strukturen und Wortschatz",
-   "theory": "\n<p>Официальные тексты любят существительные: <i>nach Abschluss des Studiums</i>, <i>zur Verbesserung der Luftqualität</i>. На экзамене такой оборот нужно развернуть в придаточное предложение с глаголом. Главное — подобрать <b class=\"k\">союз к предлогу</b> и превратить существительное обратно в глагол.</p>\n<table>\n<tr><th>Смысл</th><th>Предлог (Nominal)</th><th>Союз (Verbal)</th></tr>\n<tr><td>время</td><td>bei, während, nach, vor, seit, bis zu</td><td>wenn/als, während, nachdem, bevor, seit(dem), bis</td></tr>\n<tr><td>причина</td><td>wegen, aufgrund, infolge, aus</td><td>weil, da</td></tr>\n<tr><td>условие</td><td>bei, im Falle, ohne</td><td>wenn, falls, wenn … nicht</td></tr>\n<tr><td>уступка</td><td>trotz, ungeachtet</td><td>obwohl</td></tr>\n<tr><td>цель</td><td>zu, zur/zum, zwecks, für</td><td>um … zu, damit</td></tr>\n<tr><td>способ</td><td>durch, mittels</td><td>indem, dadurch, dass</td></tr>\n<tr><td>замена</td><td>statt, anstelle</td><td>(an)statt dass / zu</td></tr>\n<tr><td>пропорция</td><td>mit zunehmendem …</td><td>je …, desto …</td></tr>\n<tr><td>мнение</td><td>nach Ansicht / laut</td><td>… sind der Ansicht, dass …</td></tr>\n</table>\n<h3>Существительное → глагол, атрибуты → наречия</h3>\n<div class=\"ex\">nach <b>gründlicher Prüfung</b> der Unterlagen → nachdem man die Unterlagen <b>gründlich geprüft</b> hatte</div>\n<div class=\"ex\">die Erhöhung <b>der Preise</b> (Genitiv) → <b>die Preise</b> werden erhöht / man erhöht die Preise</div>\n<div class=\"ex\">bei <b>Nichteinhaltung</b> der Frist → wenn die Frist <b>nicht eingehalten</b> wird</div>\n<div class=\"tip\">Следи за временем: <b>nachdem</b> требует предпрошедшего (Plusquamperfekt), если главное предложение в Präteritum: <i>Nachdem sie das Studium abgeschlossen <b>hatte</b>, ging sie ins Ausland.</i></div>\n<p>Если субъекта нет, используй <b>man</b> или пассив. Если субъект совпадает с главным — можно <b>um … zu</b>.</p>\n",
+   "theory": "\n<p>Официальные тексты любят существительные: <i>nach Abschluss des Studiums</i>, <i>zur Verbesserung der Luftqualität</i>. На экзамене такой оборот нужно развернуть в придаточное предложение с глаголом. Главное — подобрать <b class=\"k\">союз к предлогу</b> и превратить существительное обратно в глагол.</p>\n<table>\n<tr><th>Смысл</th><th>Предлог (Nominal)</th><th>Союз (Verbal)</th></tr>\n<tr><td>время</td><td>bei, während, nach, vor, seit, bis zu</td><td>wenn/als, während, nachdem, bevor, seit(dem), bis</td></tr>\n<tr><td>причина</td><td>wegen, aufgrund, infolge, aus</td><td>weil, da</td></tr>\n<tr><td>условие</td><td>bei, im Falle, ohne</td><td>wenn, falls, wenn … nicht</td></tr>\n<tr><td>уступка</td><td>trotz, ungeachtet</td><td>obwohl</td></tr>\n<tr><td>цель</td><td>zu, zur/zum, zwecks, für</td><td>um … zu, damit</td></tr>\n<tr><td>способ</td><td>durch, mittels</td><td>indem, dadurch, dass</td></tr>\n<tr><td>замена</td><td>statt, anstelle</td><td>(an)statt dass / zu</td></tr>\n<tr><td>пропорция</td><td>mit zunehmendem …</td><td>je …, desto …</td></tr>\n<tr><td>мнение</td><td>nach Ansicht / laut</td><td>… sind der Ansicht, dass …</td></tr>\n</table>\n<h3>Существительное → глагол, атрибуты → наречия</h3>\n<div class=\"ex\">nach <b>gründlicher Prüfung</b> der Unterlagen → nachdem man die Unterlagen <b>gründlich geprüft</b> hatte</div>\n<div class=\"ex\">die Erhöhung <b>der Preise</b> (Genitiv) → <b>die Preise</b> werden erhöht / man erhöht die Preise</div>\n<div class=\"ex\">bei <b>Nichteinhaltung</b> der Frist → wenn die Frist <b>nicht eingehalten</b> wird</div>\n<div class=\"tip\">Следи за временем: <b>nachdem</b> требует предпрошедшего (Plusquamperfekt), если главное предложение в Präteritum: <i>Nachdem sie das Studium abgeschlossen <b>hatte</b>, ging sie ins Ausland.</i></div>\n<p>Если субъекта нет, используй <b>man</b> или пассив. Если субъект совпадает с главным — можно <b>um … zu</b>.</p>\n\n<h3>Сложные случаи (C1)</h3>\n<table>\n<tr><th>Предлог (Nominal)</th><th>Союз / оборот (Verbal)</th></tr>\n<tr><td>angesichts, infolge, aufgrund, mangels, dank + G</td><td>da / weil (dank: weil … positiv)</td></tr>\n<tr><td>ungeachtet, trotz + G</td><td>obwohl, obgleich, auch wenn</td></tr>\n<tr><td>im Falle + G, bei + D, ohne + A</td><td>falls / wenn / wenn … nicht, Sind …, …</td></tr>\n<tr><td>mittels, durch + A</td><td>indem, dadurch, dass</td></tr>\n<tr><td>zwecks, zur / zum + D</td><td>um … zu, damit</td></tr>\n<tr><td>(an)statt + G</td><td>(an)statt dass</td></tr>\n<tr><td>mit + D (параллельное развитие)</td><td>während, in dem Maße, wie</td></tr>\n</table>\n<div class=\"ex\">die <b>sich verschärfenden</b> Auseinandersetzungen → <b>da sich</b> die Auseinandersetzungen <b>verschärften</b> (Partizip-Attribut → Prädikat)</div>\n<div class=\"ex\">nach <b>reiflicher Überlegung und eingehender Beratung</b> → nachdem sie <b>überlegt und sich beraten hatte</b> (два существительных → два глагола с одним подлежащим)</div>\n<div class=\"tip\">В упражнении вписывается только подчёркнутая часть. Запятая и остаток предложения уже стоят. Следи за временем: после Präteritum в главном предложении «nachdem» требует Plusquamperfekt.</div>\n",
    "items": [
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Nach dem Abschluss des Studiums ging sie ins Ausland.",
-     "s": "Nachdem sie …",
+     "q": "[[Aufgrund der kontinuierlich steigenden Mieten]] entscheiden sich immer mehr Studierende für eine Wohngemeinschaft.",
+     "pre": "",
+     "post": ", entscheiden sich immer mehr Studierende für eine Wohngemeinschaft.",
      "a": [
-      "Nachdem sie das Studium abgeschlossen hatte, ging sie ins Ausland.",
-      "Nachdem sie ihr Studium abgeschlossen hatte, ging sie ins Ausland."
+      "Weil die Mieten kontinuierlich steigen",
+      "Da die Mieten kontinuierlich steigen",
+      "Weil die Mieten kontinuierlich gestiegen sind",
+      "Da die Mieten kontinuierlich gestiegen sind"
      ],
-     "ex": "nachdem + Plusquamperfekt."
+     "ex": "aufgrund + Genitiv → weil/da. «die steigenden Mieten» → «die Mieten steigen», Adjektiv «kontinuierlich» → Adverb.",
+     "hint": "weil / da"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Wegen der hohen Mieten ziehen viele Familien an den Stadtrand.",
-     "s": "Weil …",
+     "q": "Die Stadt Wien plant, [[nach der Fertigstellung der neuen U-Bahn-Linie]] den Busverkehr im Westen einzuschränken.",
+     "pre": "Die Stadt Wien plant, ",
+     "post": ", den Busverkehr im Westen einzuschränken.",
      "a": [
-      "Weil die Mieten hoch sind, ziehen viele Familien an den Stadtrand.",
-      "Weil die Mieten so hoch sind, ziehen viele Familien an den Stadtrand."
+      "nachdem die neue U-Bahn-Linie fertiggestellt worden ist",
+      "nachdem die neue U-Bahn-Linie fertiggestellt wurde",
+      "nachdem man die neue U-Bahn-Linie fertiggestellt hat"
      ],
-     "ex": ""
+     "ex": "nach + Dativ → nachdem. Die Handlung ist vorzeitig: Perfekt (fertiggestellt worden ist), weil der Hauptsatz im Präsens steht.",
+     "hint": "nachdem"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Trotz intensiver Vorbereitung bestand er die Prüfung nicht.",
-     "s": "Obwohl er …",
+     "q": "[[Trotz wiederholter Warnungen der Verbraucherschützer]] geben viele Nutzer weiterhin sensible Daten preis.",
+     "pre": "",
+     "post": ", geben viele Nutzer weiterhin sensible Daten preis.",
      "a": [
-      "Obwohl er sich intensiv vorbereitet hatte, bestand er die Prüfung nicht.",
-      "Obwohl er sich intensiv vorbereitet hat, bestand er die Prüfung nicht."
+      "Obwohl die Verbraucherschützer wiederholt gewarnt haben",
+      "Obwohl Verbraucherschützer wiederholt gewarnt haben",
+      "Obwohl die Verbraucherschützer immer wieder gewarnt haben",
+      "Obwohl die Verbraucherschützer wiederholt warnen"
      ],
-     "ex": "Vorbereitung → sich vorbereiten; intensive → intensiv."
+     "ex": "trotz + Genitiv → obwohl. Die Warnungen → die Verbraucherschützer warnen (Nomen → Verb, Genitiv → Subjekt).",
+     "hint": "obwohl"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Bei schlechtem Wetter findet die Veranstaltung im Saal statt.",
-     "s": "Wenn …",
+     "q": "Wissenschaftler empfehlen, [[zur Senkung des Energieverbrauchs in Altbauten]] die Fassaden zu dämmen.",
+     "pre": "Wissenschaftler empfehlen, ",
+     "post": ", die Fassaden zu dämmen.",
      "a": [
-      "Wenn das Wetter schlecht ist, findet die Veranstaltung im Saal statt."
+      "um den Energieverbrauch in Altbauten zu senken",
+      "damit der Energieverbrauch in Altbauten sinkt",
+      "damit man den Energieverbrauch in Altbauten senkt"
      ],
-     "ex": ""
+     "ex": "zur + Nomen (Zweck) → um … zu + Infinitiv (gleiches Subjekt) oder damit.",
+     "hint": "um … zu / damit"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Vor der Abgabe der Arbeit sollte man sie gründlich korrigieren.",
-     "s": "Bevor man …",
+     "q": "[[Bei unzureichender Vorbereitung auf das Gespräch]] wirken die Antworten schnell unsicher.",
+     "pre": "",
+     "post": ", wirken die Antworten schnell unsicher.",
      "a": [
-      "Bevor man die Arbeit abgibt, sollte man sie gründlich korrigieren."
+      "Wenn man sich unzureichend auf das Gespräch vorbereitet",
+      "Wenn man sich auf das Gespräch unzureichend vorbereitet",
+      "Wenn man sich nicht ausreichend auf das Gespräch vorbereitet",
+      "Wenn die Vorbereitung auf das Gespräch unzureichend ist",
+      "Falls man sich unzureichend auf das Gespräch vorbereitet",
+      "Falls man sich nicht ausreichend auf das Gespräch vorbereitet"
      ],
-     "ex": ""
+     "ex": "bei + Dativ (Bedingung) → wenn/falls. Vorbereitung → sich vorbereiten, unzureichend bleibt Adverb. Ohne Subjekt: man.",
+     "hint": "wenn / falls"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Zur Verbesserung der Luftqualität wurden Fahrverbote eingeführt.",
-     "s": "Um …",
+     "q": "Die Gewerkschaft fordert höhere Löhne, [[ungeachtet der angespannten Wirtschaftslage]].",
+     "pre": "Die Gewerkschaft fordert höhere Löhne, ",
+     "post": ".",
      "a": [
-      "Um die Luftqualität zu verbessern, wurden Fahrverbote eingeführt."
+      "obwohl die Wirtschaftslage angespannt ist",
+      "obgleich die Wirtschaftslage angespannt ist",
+      "auch wenn die Wirtschaftslage angespannt ist",
+      "obwohl sich die Wirtschaft in einer angespannten Lage befindet"
      ],
-     "ex": "Цель: zur + Nomen → um … zu."
+     "ex": "ungeachtet + Genitiv ist eine Konzessivpräposition → obwohl. Das Adjektiv wird zum Prädikat: die angespannte Lage → die Lage ist angespannt.",
+     "hint": "obwohl"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Während des Studiums jobben viele Studierende.",
-     "s": "Während …",
+     "q": "[[Durch den gezielten Ausbau erneuerbarer Energien]] lässt sich die Abhängigkeit von Importen verringern.",
+     "pre": "",
+     "post": ", lässt sich die Abhängigkeit von Importen verringern.",
      "a": [
-      "Während sie studieren, jobben viele Studierende."
+      "Indem man erneuerbare Energien gezielt ausbaut",
+      "Indem erneuerbare Energien gezielt ausgebaut werden",
+      "Dadurch, dass man erneuerbare Energien gezielt ausbaut",
+      "Dadurch, dass erneuerbare Energien gezielt ausgebaut werden"
      ],
-     "ex": ""
+     "ex": "durch + Akkusativ (Mittel) → indem / dadurch, dass. Ausbau → ausbauen, gezielt bleibt Adverb.",
+     "hint": "indem"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Durch regelmäßiges Üben verbessert man seine Aussprache.",
-     "s": "Indem man …",
+     "q": "Das Projekt wurde eingestellt, [[mangels ausreichender finanzieller Unterstützung durch den Bund]].",
+     "pre": "Das Projekt wurde eingestellt, ",
+     "post": ".",
      "a": [
-      "Indem man regelmäßig übt, verbessert man seine Aussprache."
+      "weil der Bund es nicht ausreichend finanziell unterstützt hat",
+      "weil es an ausreichender finanzieller Unterstützung durch den Bund fehlte",
+      "da der Bund das Projekt nicht ausreichend finanziell unterstützte",
+      "weil der Bund das Projekt nicht ausreichend finanziell unterstützt hat",
+      "weil die finanzielle Unterstützung durch den Bund nicht ausreichte"
      ],
-     "ex": "durch → indem."
+     "ex": "mangels + Genitiv = «weil es an … fehlt / nicht genug … gibt». Das Nomen Unterstützung wird wieder zum Verb unterstützen.",
+     "hint": "weil"
     },
     {
-     "t": "tr",
-     "lv": 2,
-     "q": "Seit der Einführung der Studiengebühren ist die Zahl der Studierenden gesunken.",
-     "s": "Seit(dem) …",
-     "a": [
-      "Seitdem die Studiengebühren eingeführt wurden, ist die Zahl der Studierenden gesunken.",
-      "Seit die Studiengebühren eingeführt wurden, ist die Zahl der Studierenden gesunken.",
-      "Seitdem die Studiengebühren eingeführt worden sind, ist die Zahl der Studierenden gesunken.",
-      "Seitdem man Studiengebühren eingeführt hat, ist die Zahl der Studierenden gesunken.",
-      "Seit man Studiengebühren eingeführt hat, ist die Zahl der Studierenden gesunken."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Ohne ausreichende Finanzierung kann das Projekt nicht fortgesetzt werden.",
-     "s": "Wenn …",
-     "a": [
-      "Wenn das Projekt nicht ausreichend finanziert wird, kann es nicht fortgesetzt werden.",
-      "Wenn die Finanzierung nicht ausreicht, kann das Projekt nicht fortgesetzt werden.",
-      "Wenn es keine ausreichende Finanzierung gibt, kann das Projekt nicht fortgesetzt werden."
-     ],
-     "ex": "ohne → wenn … nicht."
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Infolge des starken Regens wurde die Straße gesperrt.",
-     "s": "Weil es …",
-     "a": [
-      "Weil es stark geregnet hatte, wurde die Straße gesperrt.",
-      "Weil es stark regnete, wurde die Straße gesperrt.",
-      "Weil es stark geregnet hat, wurde die Straße gesperrt."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Statt einer Erhöhung der Steuern fordern Ökonomen Einsparungen.",
-     "s": "Statt dass …",
-     "a": [
-      "Statt dass die Steuern erhöht werden, fordern Ökonomen Einsparungen.",
-      "Anstatt dass die Steuern erhöht werden, fordern Ökonomen Einsparungen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Bei der Auswahl der Bewerber spielt das Alter keine Rolle.",
-     "s": "Wenn …",
-     "a": [
-      "Wenn die Bewerber ausgewählt werden, spielt das Alter keine Rolle.",
-      "Wenn man die Bewerber auswählt, spielt das Alter keine Rolle."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Nach Ansicht vieler Experten ist das Gesetz verfassungswidrig.",
-     "s": "Viele Experten …",
-     "a": [
-      "Viele Experten sind der Ansicht, dass das Gesetz verfassungswidrig ist.",
-      "Viele Experten meinen, dass das Gesetz verfassungswidrig ist.",
-      "Viele Experten sind der Meinung, dass das Gesetz verfassungswidrig ist.",
-      "Viele Experten halten das Gesetz für verfassungswidrig."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Zur Vermeidung von Missverständnissen sollte man Vereinbarungen schriftlich festhalten.",
-     "s": "Um …",
-     "a": [
-      "Um Missverständnisse zu vermeiden, sollte man Vereinbarungen schriftlich festhalten."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Mit zunehmendem Alter sinkt die Bereitschaft zum Risiko.",
-     "s": "Je …",
-     "a": [
-      "Je älter man wird, desto geringer wird die Bereitschaft zum Risiko.",
-      "Je älter man wird, desto geringer ist die Bereitschaft zum Risiko.",
-      "Je älter man wird, desto mehr sinkt die Bereitschaft zum Risiko.",
-      "Je älter man wird, desto weniger ist man bereit, ein Risiko einzugehen.",
-      "Je älter man wird, desto weniger risikobereit ist man."
-     ],
-     "ex": "mit zunehmendem … → je …, desto …"
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Nach der Veröffentlichung der Studie kam es zu heftigen Diskussionen.",
-     "s": "Nachdem …",
-     "a": [
-      "Nachdem die Studie veröffentlicht worden war, kam es zu heftigen Diskussionen.",
-      "Nachdem man die Studie veröffentlicht hatte, kam es zu heftigen Diskussionen."
-     ],
-     "ex": "Пассив в Plusquamperfekt: veröffentlicht worden war."
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Trotz der Warnungen der Wissenschaft wurde kaum gehandelt.",
-     "s": "Obwohl …",
-     "a": [
-      "Obwohl die Wissenschaft gewarnt hatte, wurde kaum gehandelt.",
-      "Obwohl die Wissenschaft gewarnt hat, wurde kaum gehandelt.",
-      "Obwohl die Wissenschaft warnte, wurde kaum gehandelt.",
-      "Obwohl Wissenschaftler gewarnt hatten, wurde kaum gehandelt."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Bei Nichteinhaltung der Frist verfällt der Anspruch.",
-     "s": "Wenn …",
-     "a": [
-      "Wenn die Frist nicht eingehalten wird, verfällt der Anspruch.",
-      "Wenn man die Frist nicht einhält, verfällt der Anspruch."
-     ],
-     "ex": "Nicht- → отрицание с глаголом."
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Aufgrund der Zunahme psychischer Erkrankungen fordern Ärzte mehr Therapieplätze.",
-     "s": "Weil …",
-     "a": [
-      "Weil psychische Erkrankungen zunehmen, fordern Ärzte mehr Therapieplätze.",
-      "Weil die psychischen Erkrankungen zunehmen, fordern Ärzte mehr Therapieplätze."
-     ],
-     "ex": "Genitiv-Attribut → Subjekt."
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Durch die Digitalisierung der Verwaltung sollen Wartezeiten verkürzt werden.",
-     "s": "Indem …",
-     "a": [
-      "Indem die Verwaltung digitalisiert wird, sollen Wartezeiten verkürzt werden.",
-      "Indem man die Verwaltung digitalisiert, sollen Wartezeiten verkürzt werden."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Im Falle einer Absage des Fluges erhalten Passagiere eine Entschädigung.",
-     "s": "Falls …",
-     "a": [
-      "Falls der Flug abgesagt wird, erhalten Passagiere eine Entschädigung.",
-      "Falls der Flug abgesagt wird, erhalten die Passagiere eine Entschädigung."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Erst nach der Klärung aller Fragen wird der Vertrag unterschrieben.",
-     "s": "Erst wenn …",
-     "a": [
-      "Erst wenn alle Fragen geklärt sind, wird der Vertrag unterschrieben.",
-      "Erst wenn alle Fragen geklärt worden sind, wird der Vertrag unterschrieben."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Ungeachtet der Proteste der Anrainer wird das Hochhaus gebaut.",
-     "s": "Obwohl …",
-     "a": [
-      "Obwohl die Anrainer protestieren, wird das Hochhaus gebaut.",
-      "Obwohl die Anrainer protestiert haben, wird das Hochhaus gebaut."
-     ],
-     "ex": "ungeachtet = trotz."
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "wegen des Regens → ___ es regnet",
-     "o": [
-      "damit",
-      "weil",
-      "obwohl"
+     "q": "[[Während der gesamten Dauer der Renovierungsarbeiten]] bleibt das Gebäude für Besucher geschlossen.",
+     "pre": "",
+     "post": ", bleibt das Gebäude für Besucher geschlossen.",
+     "a": [
+      "Solange das Gebäude renoviert wird",
+      "Während das Gebäude renoviert wird",
+      "Solange die Renovierungsarbeiten dauern",
+      "Während die Renovierungsarbeiten andauern",
+      "Solange renoviert wird",
+      "Während renoviert wird"
      ],
-     "a": 1,
-     "ex": "wegen → weil."
+     "ex": "während der gesamten Dauer → solange / während. Renovierungsarbeiten → das Gebäude wird renoviert (Passiv).",
+     "hint": "solange / während"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "trotz der Kälte → ___ es kalt ist",
-     "o": [
-      "weil",
-      "obwohl",
-      "wenn"
-     ],
-     "a": 1,
-     "ex": "trotz → obwohl."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "nach dem Essen → ___ wir gegessen hatten",
-     "o": [
-      "während",
-      "nachdem",
-      "bevor"
-     ],
-     "a": 1,
-     "ex": "nach → nachdem."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "vor der Abfahrt → ___ wir abfahren",
-     "o": [
-      "seit",
-      "bevor",
-      "nachdem"
-     ],
-     "a": 1,
-     "ex": "vor → bevor."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "während des Studiums → ___ sie studierte",
-     "o": [
-      "bevor",
-      "während",
-      "obwohl"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "bei Regen → ___ es regnet",
-     "o": [
-      "damit",
-      "weil",
-      "wenn"
-     ],
-     "a": 2,
-     "ex": "bei (Bedingung) → wenn."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "zur Erholung → ___ sich zu erholen",
-     "o": [
-      "um",
-      "indem",
-      "damit"
-     ],
-     "a": 0,
-     "ex": "zu/zur (Ziel) → um … zu."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "durch Üben → ___ man übt",
-     "o": [
-      "indem",
-      "nachdem",
-      "damit"
-     ],
-     "a": 0,
-     "ex": "durch (Mittel) → indem."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "seit seiner Ankunft → ___ er angekommen ist",
-     "o": [
-      "als",
-      "seit",
-      "bevor"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "ohne Hilfe → ___ man ihm hilft",
-     "o": [
-      "ohne dass",
-      "damit",
-      "obwohl"
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Wegen der Krankheit fehlte er. → ___ er krank war, fehlte er.",
+     "q": "[[Beim Verlassen des Gebäudes]] sollte man die Fenster schließen.",
+     "pre": "",
+     "post": ", sollte man die Fenster schließen.",
      "a": [
-      "Weil"
+      "Wenn man das Gebäude verlässt",
+      "Sobald man das Gebäude verlässt",
+      "Wenn man aus dem Gebäude geht",
+      "Immer wenn man das Gebäude verlässt"
      ],
-     "ex": ""
+     "ex": "beim + Infinitiv-Nomen (Verlassen) → wenn / sobald + Verb. Ohne Subjekt: man.",
+     "hint": "wenn / sobald"
     },
     {
-     "t": "gap",
-     "lv": 1,
-     "q": "Trotz des Lärms schlief sie. → ___ es laut war, schlief sie.",
-     "a": [
-      "Obwohl"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Nach dem Unterricht gehen wir ins Café. → ___ der Unterricht vorbei ist, gehen wir ins Café.",
-     "a": [
-      "Wenn",
-      "Nachdem",
-      "Sobald"
-     ],
-     "ex": "wenn/nachdem/sobald."
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Bei schönem Wetter grillen wir. → ___ das Wetter schön ist, grillen wir.",
-     "a": [
-      "Wenn"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Vor dem Schlafengehen liest er. → ___ er schlafen geht, liest er.",
-     "a": [
-      "Bevor"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Wegen des Streiks fallen viele Züge aus.",
-     "s": "Weil …",
-     "a": [
-      "Weil gestreikt wird, fallen viele Züge aus.",
-      "Weil die Bahn streikt, fallen viele Züge aus.",
-      "Weil es einen Streik gibt, fallen viele Züge aus."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Trotz seiner Erkältung ging er zur Arbeit.",
-     "s": "Obwohl …",
-     "a": [
-      "Obwohl er erkältet war, ging er zur Arbeit.",
-      "Obwohl er eine Erkältung hatte, ging er zur Arbeit."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Vor dem Essen wäscht man sich die Hände.",
-     "s": "Bevor …",
-     "a": [
-      "Bevor man isst, wäscht man sich die Hände."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Während der Prüfung ist das Handy verboten.",
-     "s": "Während …",
-     "a": [
-      "Während man die Prüfung schreibt, ist das Handy verboten.",
-      "Während die Prüfung läuft, ist das Handy verboten."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Bei Fragen wenden Sie sich an das Büro.",
-     "s": "Wenn …",
-     "a": [
-      "Wenn Sie Fragen haben, wenden Sie sich an das Büro."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Zum Lernen braucht man Ruhe.",
-     "s": "Um …",
-     "a": [
-      "Um zu lernen, braucht man Ruhe."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "aufgrund der steigenden Preise → weil ___",
-     "o": [
-      "die Preise gestiegen",
-      "steigen die Preise",
-      "die Preise steigen"
+     "q": "[[Infolge der seit Jahren zunehmenden Verdichtung des Straßenverkehrs in den Innenstädten]] sehen sich zahlreiche Kommunen gezwungen, Fahrverbote zu erwägen.",
+     "pre": "",
+     "post": ", sehen sich zahlreiche Kommunen gezwungen, Fahrverbote zu erwägen.",
+     "a": [
+      "Weil der Straßenverkehr in den Innenstädten seit Jahren zunehmend dichter wird",
+      "Weil der Verkehr in den Innenstädten seit Jahren immer dichter wird",
+      "Da der Straßenverkehr in den Innenstädten seit Jahren immer dichter geworden ist",
+      "Weil sich der Straßenverkehr in den Innenstädten seit Jahren zunehmend verdichtet",
+      "Da sich der Straßenverkehr in den Innenstädten seit Jahren zunehmend verdichtet",
+      "Weil sich der Straßenverkehr in den Innenstädten seit Jahren zunehmend verdichtet hat",
+      "Da der Straßenverkehr in den Innenstädten seit Jahren zunehmend dichter wird"
      ],
-     "a": 2,
-     "ex": "Глагол в конце."
+     "ex": "infolge + Genitiv → weil/da. Das Partizip «zunehmenden» wird zum Adverb, die Verdichtung zum Verb (sich verdichten / dichter werden), «seit Jahren» verlangt Präsens oder Perfekt."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "im Falle einer Absage → ___ abgesagt wird",
-     "o": [
-      "falls",
-      "obwohl",
-      "sodass"
+     "q": "Die Behörde erteilte die Genehmigung, [[ungeachtet der noch ausstehenden Prüfung der Umweltverträglichkeit]].",
+     "pre": "Die Behörde erteilte die Genehmigung, ",
+     "post": ".",
+     "a": [
+      "obwohl die Umweltverträglichkeit noch nicht geprüft worden ist",
+      "obwohl die Umweltverträglichkeit noch nicht geprüft wurde",
+      "obwohl die Umweltverträglichkeit noch geprüft werden muss",
+      "obwohl die Umweltverträglichkeit noch geprüft wird",
+      "obwohl man die Umweltverträglichkeit noch nicht geprüft hatte",
+      "obwohl die Prüfung der Umweltverträglichkeit noch aussteht",
+      "obwohl die Prüfung der Umweltverträglichkeit noch nicht abgeschlossen ist",
+      "obwohl man die Umweltverträglichkeit noch nicht geprüft hat"
      ],
-     "a": 0,
-     "ex": "im Falle → falls."
+     "ex": "ungeachtet + Genitiv → obwohl. «ausstehend» = «noch nicht geschehen»: Passiv mit nicht … geprüft worden ist."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "zwecks Verbesserung der Qualität → ___ die Qualität verbessert wird",
-     "o": [
-      "damit",
-      "bevor",
-      "weil"
+     "q": "[[Nach dem Bekanntwerden der Vorwürfe gegen den Vorstand]] trat der Aufsichtsratsvorsitzende umgehend zurück.",
+     "pre": "",
+     "post": ", trat der Aufsichtsratsvorsitzende umgehend zurück.",
+     "a": [
+      "Nachdem die Vorwürfe gegen den Vorstand bekannt geworden waren",
+      "Nachdem die Vorwürfe gegen den Vorstand bekanntgeworden waren",
+      "Sobald die Vorwürfe gegen den Vorstand bekannt geworden waren"
      ],
-     "a": 0,
-     "ex": "Цель, другое подлежащее → damit."
+     "ex": "nach + Dativ → nachdem. Hauptsatz im Präteritum, also Nebensatz im Plusquamperfekt: bekannt geworden waren.",
+     "hint": "nachdem"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "bis zur Fertigstellung des Baus → ___ der Bau fertiggestellt ist",
-     "o": [
-      "bevor",
-      "seit",
-      "bis"
+     "q": "[[Zwecks Gewinnung neuer Mitglieder aus der jüngeren Generation]] hat der Verein die Beiträge gesenkt.",
+     "pre": "",
+     "post": ", hat der Verein die Beiträge gesenkt.",
+     "a": [
+      "Um neue Mitglieder aus der jüngeren Generation zu gewinnen",
+      "Damit neue Mitglieder aus der jüngeren Generation gewonnen werden",
+      "Damit der Verein neue Mitglieder aus der jüngeren Generation gewinnt"
      ],
-     "a": 2,
-     "ex": ""
+     "ex": "zwecks + Genitiv (Zweck) → um … zu / damit. Das Subjekt ist in beiden Teilen der Verein, deshalb geht um … zu.",
+     "hint": "um … zu / damit"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "infolge des Unfalls → ___ es einen Unfall gegeben hatte",
-     "o": [
-      "obwohl",
-      "damit",
-      "weil"
+     "q": "[[Bei gleicher fachlicher Eignung]] werden mehrsprachige Bewerber bevorzugt.",
+     "pre": "",
+     "post": ", werden mehrsprachige Bewerber bevorzugt.",
+     "a": [
+      "Wenn Bewerber fachlich gleich geeignet sind",
+      "Wenn die Bewerber fachlich gleich geeignet sind",
+      "Wenn die fachliche Eignung der Bewerber gleich ist",
+      "Falls Bewerber fachlich gleich geeignet sind",
+      "Sind Bewerber fachlich gleich geeignet",
+      "Sind die Bewerber fachlich gleich geeignet"
      ],
-     "a": 2,
-     "ex": "infolge → weil/da."
+     "ex": "bei + Dativ (Bedingung) → wenn/falls oder Konditionalsatz ohne Konjunktion (Sind … geeignet, …). Eignung → geeignet sein."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "ungeachtet der Kritik → ___ es Kritik gab",
-     "o": [
-      "obwohl",
-      "sodass",
-      "weil"
+     "q": "Die Erträge der Landwirte sind, [[infolge der anhaltenden Trockenheit in den vergangenen Sommermonaten]], deutlich zurückgegangen.",
+     "pre": "Die Erträge der Landwirte sind, ",
+     "post": ", deutlich zurückgegangen.",
+     "a": [
+      "weil es in den vergangenen Sommermonaten anhaltend trocken war",
+      "weil es in den vergangenen Sommermonaten lange trocken war",
+      "da es in den vergangenen Sommermonaten anhaltend trocken gewesen ist",
+      "weil die Trockenheit in den vergangenen Sommermonaten angehalten hat",
+      "weil es in den vergangenen Sommermonaten durchgehend trocken war",
+      "da es in den vergangenen Sommermonaten anhaltend trocken war",
+      "weil es in den vergangenen Sommermonaten anhaltend trocken gewesen ist"
      ],
-     "a": 0,
-     "ex": "ungeachtet → obwohl."
+     "ex": "infolge + Genitiv → weil/da. Trockenheit → es ist trocken; «anhaltend» bleibt als Adverb oder wird zu anhalten."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "mit zunehmendem Alter → ___ älter man wird, desto …",
-     "o": [
-      "als",
-      "je",
-      "wenn"
+     "q": "[[Dank der engen Zusammenarbeit zwischen Forschung und Industrie]] konnte der Impfstoff in Rekordzeit entwickelt werden.",
+     "pre": "",
+     "post": ", konnte der Impfstoff in Rekordzeit entwickelt werden.",
+     "a": [
+      "Weil Forschung und Industrie eng zusammengearbeitet hatten",
+      "Da Forschung und Industrie eng zusammengearbeitet hatten",
+      "Weil Forschung und Industrie eng zusammenarbeiteten",
+      "Da Forschung und Industrie eng zusammenarbeiteten"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "dank + Genitiv/Dativ (positiver Grund) → weil/da. Zusammenarbeit → zusammenarbeiten, enge → eng."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "statt einer Antwort → ___ zu antworten",
-     "o": [
-      "um",
-      "statt",
-      "ohne"
+     "q": "Die Teilnehmer wurden aufgefordert, [[nach Abschluss der Registrierung und vor Beginn der Veranstaltung]] ihre Mobiltelefone auszuschalten.",
+     "pre": "Die Teilnehmer wurden aufgefordert, ",
+     "post": ", ihre Mobiltelefone auszuschalten.",
+     "a": [
+      "nachdem sie sich registriert hatten und bevor die Veranstaltung begann",
+      "nachdem sie die Registrierung abgeschlossen hatten und bevor die Veranstaltung begann",
+      "nachdem die Registrierung abgeschlossen war und bevor die Veranstaltung begann"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "Zwei Zeitpräpositionen: nach → nachdem (Plusquamperfekt), vor → bevor (Präteritum). Beide Nebensätze werden mit und verbunden."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "bei Nichtbeachtung der Regeln → wenn man die Regeln nicht ___",
-     "o": [
-      "beachtete",
-      "beachten",
-      "beachtet"
+     "q": "[[Im Falle eines Verstoßes gegen die Hausordnung]] behält sich der Vermieter das Recht auf fristlose Kündigung vor.",
+     "pre": "",
+     "post": ", behält sich der Vermieter das Recht auf fristlose Kündigung vor.",
+     "a": [
+      "Falls jemand gegen die Hausordnung verstößt",
+      "Wenn jemand gegen die Hausordnung verstößt",
+      "Falls man gegen die Hausordnung verstößt",
+      "Wenn man gegen die Hausordnung verstößt",
+      "Falls gegen die Hausordnung verstoßen wird",
+      "Wenn gegen die Hausordnung verstoßen wird",
+      "Falls ein Mieter gegen die Hausordnung verstößt",
+      "Wenn ein Mieter gegen die Hausordnung verstößt"
      ],
-     "a": 2,
-     "ex": ""
+     "ex": "im Falle + Genitiv → falls. Verstoß → verstoßen gegen + Akk. Subjekt unbekannt: jemand / man oder Passiv."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 2,
-     "q": "Nach der Unterzeichnung des Vertrags begann die Arbeit. → Nachdem der Vertrag ___ worden war, begann die Arbeit.",
+     "q": "[[Ungeachtet aller Bemühungen um eine rasche Einigung]] scheiterten die Verhandlungen.",
+     "pre": "",
+     "post": ", scheiterten die Verhandlungen.",
      "a": [
-      "unterzeichnet"
+      "Obwohl man sich intensiv um eine rasche Einigung bemüht hatte",
+      "Obwohl sich alle Beteiligten um eine rasche Einigung bemüht hatten",
+      "Obwohl alle sich um eine rasche Einigung bemüht hatten",
+      "Obwohl man sich um eine rasche Einigung bemüht hatte",
+      "Obwohl alle Beteiligten sich um eine rasche Einigung bemüht hatten"
      ],
-     "ex": "Passiv Plusquamperfekt."
+     "ex": "ungeachtet → obwohl. Bemühungen → sich bemühen um + Akk. Vorzeitigkeit zum Präteritum: Plusquamperfekt."
     },
     {
-     "t": "gap",
-     "lv": 2,
-     "q": "Zur Senkung der Kosten wurden Stellen gestrichen. → Um die Kosten zu ___, wurden Stellen gestrichen.",
-     "a": [
-      "senken"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Durch regelmäßiges Training verbessert man die Ausdauer. → Indem man regelmäßig ___, verbessert man die Ausdauer.",
-     "a": [
-      "trainiert"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Bei Verlust der Karte informieren Sie die Bank. → Wenn Sie die Karte ___, informieren Sie die Bank.",
-     "a": [
-      "verlieren"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Seit der Einführung des Tickets fahren mehr Menschen Bahn. → Seit das Ticket ___ wurde, fahren mehr Menschen Bahn.",
-     "a": [
-      "eingeführt"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Infolge der Dürre stiegen die Preise. → Weil es eine Dürre ___, stiegen die Preise.",
-     "a": [
-      "gab"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Aufgrund der hohen Nachfrage sind die Tickets ausverkauft.",
-     "s": "Weil …",
-     "a": [
-      "Weil die Nachfrage hoch ist, sind die Tickets ausverkauft.",
-      "Weil die Nachfrage so hoch ist, sind die Tickets ausverkauft.",
-      "Weil die Nachfrage hoch war, sind die Tickets ausverkauft."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Bei Überschreitung der Frist wird eine Gebühr fällig.",
-     "s": "Wenn …",
-     "a": [
-      "Wenn die Frist überschritten wird, wird eine Gebühr fällig.",
-      "Wenn man die Frist überschreitet, wird eine Gebühr fällig."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Nach Abschluss der Renovierung ziehen wir ein.",
-     "s": "Nachdem …",
-     "a": [
-      "Nachdem die Renovierung abgeschlossen ist, ziehen wir ein.",
-      "Nachdem die Renovierung abgeschlossen worden ist, ziehen wir ein."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Zur Vermeidung von Missverständnissen schicke ich eine Mail.",
-     "s": "Um …",
-     "a": [
-      "Um Missverständnisse zu vermeiden, schicke ich eine Mail."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Durch den Ausbau der Radwege sollen mehr Menschen Rad fahren.",
-     "s": "Indem …",
-     "a": [
-      "Indem die Radwege ausgebaut werden, sollen mehr Menschen Rad fahren.",
-      "Indem man die Radwege ausbaut, sollen mehr Menschen Rad fahren."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Trotz intensiver Suche fand man den Schlüssel nicht.",
-     "s": "Obwohl …",
-     "a": [
-      "Obwohl man intensiv suchte, fand man den Schlüssel nicht.",
-      "Obwohl man intensiv gesucht hatte, fand man den Schlüssel nicht."
-     ],
-     "ex": "Adjektiv → Adverb."
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Ohne Zustimmung des Vermieters darf man nicht untervermieten.",
-     "s": "Ohne dass …",
-     "a": [
-      "Ohne dass der Vermieter zustimmt, darf man nicht untervermieten."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 3,
-     "q": "Nach eingehender Prüfung der Unterlagen → nachdem man die Unterlagen ___ hatte",
-     "o": [
-      "eingehend prüfte",
-      "eingehend geprüft",
-      "eingehende geprüft"
-     ],
-     "a": 1,
-     "ex": "Adjektiv → Adverb, Plusquamperfekt."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Mit der Einführung der Maut sank der Verkehr. → ___ die Maut eingeführt wurde, sank der Verkehr.",
-     "o": [
-      "Als",
-      "Bevor",
-      "Wenn"
-     ],
-     "a": 0,
-     "ex": "Einmalig in der Vergangenheit → als."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Nach Angaben der Polizei → ___",
-     "o": [
-      "Weil die Polizei angab, …",
-      "Damit die Polizei angibt, …",
-      "Wie die Polizei angab, …"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Im Zuge der Digitalisierung → ___",
-     "o": [
-      "Obwohl digitalisiert, …",
-      "Während/Indem die Verwaltung digitalisiert wird, …",
-      "Bis die Digitalisierung ist, …"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Bei gleichzeitiger Senkung der Steuern → ___",
-     "o": [
-      "obwohl die Steuern gleich sind",
-      "wenn gleichzeitig die Steuern gesenkt werden",
-      "wenn die gleichzeitige Steuern sinken"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Unter Berücksichtigung aller Faktoren → ___",
-     "o": [
-      "wenn man alle Faktoren berücksichtigt",
-      "obwohl man alle Faktoren berücksichtigt",
-      "weil alle Faktoren berücksichtigen"
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Zur Vermeidung weiterer Verluste → ___",
-     "o": [
-      "um weitere Verluste zu vermeiden",
-      "damit weitere Verluste zu vermeiden",
-      "indem weitere Verluste vermieden"
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Je höher der Verdienst, desto höher die Steuer. → Je mehr man ___, desto mehr Steuern zahlt man.",
-     "o": [
-      "verdienen",
-      "verdient",
-      "verdiente"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 3,
-     "q": "Nach erfolgreicher Verteidigung der Dissertation erhielt sie eine Stelle. → Nachdem sie ihre Dissertation erfolgreich ___ hatte, erhielt sie eine Stelle.",
+     "q": "[[Angesichts der sich seit Monaten verschärfenden Auseinandersetzungen um die Verteilung der knappen Fördermittel]] verzichtete die Fraktion auf einen gemeinsamen Antrag.",
+     "pre": "",
+     "post": ", verzichtete die Fraktion auf einen gemeinsamen Antrag.",
      "a": [
-      "verteidigt"
+      "Da sich die Auseinandersetzungen um die Verteilung der knappen Fördermittel seit Monaten verschärft hatten",
+      "Weil sich die Auseinandersetzungen um die Verteilung der knappen Fördermittel seit Monaten verschärft hatten",
+      "Da sich die Auseinandersetzungen um die Verteilung der knappen Fördermittel seit Monaten verschärften",
+      "Weil sich die Auseinandersetzungen um die Verteilung der knappen Fördermittel seit Monaten verschärften"
      ],
-     "ex": ""
+     "ex": "angesichts + Genitiv → da/weil. Das Partizip-Attribut «sich verschärfenden» wird zum Prädikat; Hauptsatz im Präteritum, deshalb Plusquamperfekt (verschärft hatten)."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Bei Nichterscheinen zur Prüfung gilt diese als nicht bestanden. → Wenn man zur Prüfung nicht ___, gilt diese als nicht bestanden.",
+     "q": "[[Bei Überschreitung der zulässigen Höchstgeschwindigkeit um mehr als dreißig Stundenkilometer]] droht ein vorübergehender Führerscheinentzug.",
+     "pre": "",
+     "post": ", droht ein vorübergehender Führerscheinentzug.",
      "a": [
-      "erscheint"
+      "Wenn man die zulässige Höchstgeschwindigkeit um mehr als dreißig Stundenkilometer überschreitet",
+      "Falls man die zulässige Höchstgeschwindigkeit um mehr als dreißig Stundenkilometer überschreitet",
+      "Wenn die zulässige Höchstgeschwindigkeit um mehr als dreißig Stundenkilometer überschritten wird",
+      "Falls die zulässige Höchstgeschwindigkeit um mehr als dreißig Stundenkilometer überschritten wird"
      ],
-     "ex": ""
+     "ex": "bei + Dativ (Bedingung) → wenn/falls. Das Nomen Überschreitung wird zu überschreiten, der Genitiv zum Akkusativobjekt (oder Passiv)."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Aus Angst vor Arbeitslosigkeit sparen viele. → Weil viele ___ haben, arbeitslos zu werden, sparen sie.",
+     "q": "[[Durch die Verlagerung der Produktion in Länder mit niedrigeren Lohnkosten]] konnten die Unternehmen ihre Gewinne trotz sinkender Nachfrage stabil halten.",
+     "pre": "",
+     "post": ", konnten die Unternehmen ihre Gewinne trotz sinkender Nachfrage stabil halten.",
      "a": [
-      "Angst"
+      "Indem die Unternehmen die Produktion in Länder mit niedrigeren Lohnkosten verlagerten",
+      "Indem die Unternehmen ihre Produktion in Länder mit niedrigeren Lohnkosten verlagerten",
+      "Indem die Unternehmen die Produktion in Länder mit niedrigeren Lohnkosten verlagert hatten",
+      "Indem die Unternehmen ihre Produktion in Länder mit niedrigeren Lohnkosten verlagert hatten",
+      "Dadurch, dass die Unternehmen die Produktion in Länder mit niedrigeren Lohnkosten verlagerten",
+      "Dadurch, dass die Unternehmen ihre Produktion in Länder mit niedrigeren Lohnkosten verlagerten"
      ],
-     "ex": ""
+     "ex": "durch + Akkusativ (Mittel) → indem / dadurch, dass. Verlagerung → verlagern, das Subjekt (die Unternehmen) nennst du neu.",
+     "hint": "indem"
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Ungeachtet aller Warnungen fuhr er weiter. → ___ er gewarnt worden war, fuhr er weiter.",
+     "q": "[[Nach reiflicher Überlegung und eingehender Beratung mit den Mitgliedern des Ausschusses]] zog die Vorsitzende ihre Kandidatur zurück.",
+     "pre": "",
+     "post": ", zog die Vorsitzende ihre Kandidatur zurück.",
      "a": [
-      "Obwohl"
+      "Nachdem sie lange überlegt und sich eingehend mit den Mitgliedern des Ausschusses beraten hatte",
+      "Nachdem sie reiflich überlegt und sich eingehend mit den Mitgliedern des Ausschusses beraten hatte",
+      "Nachdem sie reiflich nachgedacht und sich eingehend mit den Mitgliedern des Ausschusses beraten hatte",
+      "Nachdem sie lange nachgedacht und sich eingehend mit den Mitgliedern des Ausschusses beraten hatte",
+      "Nachdem sie gründlich überlegt und sich eingehend mit den Mitgliedern des Ausschusses beraten hatte"
      ],
-     "ex": ""
+     "ex": "Zwei Nomen mit nach: Überlegung → überlegen, Beratung → sich beraten mit. Beide Verben im Plusquamperfekt mit gemeinsamem Subjekt sie."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Mangels Beweisen wurde er freigesprochen. → Weil es keine Beweise ___, wurde er freigesprochen.",
+     "q": "Die Universität sah sich, [[aufgrund des unerwartet starken Andrangs auf die Studienplätze im Fach Psychologie]], zu einer Aufnahmeprüfung veranlasst.",
+     "pre": "Die Universität sah sich, ",
+     "post": ", zu einer Aufnahmeprüfung veranlasst.",
      "a": [
-      "gab"
+      "weil sich unerwartet viele Bewerber um einen Studienplatz im Fach Psychologie bemühten",
+      "da sich unerwartet viele Bewerber um einen Studienplatz im Fach Psychologie bemühten",
+      "weil sich unerwartet viele Bewerber um die Studienplätze im Fach Psychologie beworben hatten",
+      "weil unerwartet viele Bewerber einen Studienplatz im Fach Psychologie wollten",
+      "da unerwartet viele Bewerber einen Studienplatz im Fach Psychologie wollten",
+      "weil sich unerwartet viele um einen Studienplatz im Fach Psychologie beworben hatten"
      ],
-     "ex": ""
+     "ex": "aufgrund + Genitiv → weil/da. Andrang auf = «viele wollen …»: ein Satz mit Subjekt (Bewerber) und Verb (sich bewerben um / wollen)."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Nach Meinung vieler Fachleute ist die Reform unzureichend. → Viele Fachleute sind der ___, dass die Reform unzureichend ist.",
+     "q": "[[Statt einer Senkung der Steuern]] wurden die Abgaben zum Jahreswechsel erhöht.",
+     "pre": "",
+     "post": ", wurden die Abgaben zum Jahreswechsel erhöht.",
      "a": [
-      "Meinung"
+      "Anstatt dass die Steuern gesenkt wurden",
+      "Statt dass die Steuern gesenkt wurden",
+      "Anstatt dass man die Steuern senkte",
+      "Statt dass man die Steuern senkte",
+      "Anstatt dass die Regierung die Steuern senkte",
+      "Statt dass die Regierung die Steuern senkte",
+      "Statt dass die Regierung die Steuern gesenkt hat",
+      "Anstatt dass die Regierung die Steuern gesenkt hat"
      ],
-     "ex": ""
+     "ex": "statt + Genitiv → (an)statt dass. Senkung → senken (Passiv oder man). Ein Infinitivsatz mit statt … zu geht nur bei gleichem Subjekt.",
+     "hint": "(an)statt dass"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Bei rechtzeitiger Anmeldung erhalten Sie einen Rabatt.",
-     "s": "Wenn …",
+     "q": "[[Mittels einer aufwendigen Auswertung der über Jahrzehnte gesammelten Messdaten]] konnten die Forscher das Phänomen erstmals erklären.",
+     "pre": "",
+     "post": ", konnten die Forscher das Phänomen erstmals erklären.",
      "a": [
-      "Wenn Sie sich rechtzeitig anmelden, erhalten Sie einen Rabatt."
+      "Indem sie die über Jahrzehnte gesammelten Messdaten aufwendig auswerteten",
+      "Indem die Forscher die über Jahrzehnte gesammelten Messdaten aufwendig auswerteten",
+      "Indem sie die über Jahrzehnte gesammelten Messdaten aufwendig ausgewertet hatten",
+      "Dadurch, dass sie die über Jahrzehnte gesammelten Messdaten aufwendig auswerteten",
+      "Dadurch, dass die Forscher die über Jahrzehnte gesammelten Messdaten aufwendig auswerteten"
      ],
-     "ex": ""
+     "ex": "mittels + Genitiv (Mittel) → indem / dadurch, dass. Auswertung → auswerten, aufwendig bleibt Adverb, das Partizip-Attribut bleibt unverändert."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Trotz wiederholter Aufforderungen zahlte der Mieter nicht.",
-     "s": "Obwohl …",
+     "q": "[[Mit der fortschreitenden Digitalisierung der Verwaltung]] verlieren klassische Schalterdienste zunehmend an Bedeutung.",
+     "pre": "",
+     "post": ", verlieren klassische Schalterdienste zunehmend an Bedeutung.",
      "a": [
-      "Obwohl der Mieter wiederholt aufgefordert worden war, zahlte er nicht.",
-      "Obwohl der Mieter wiederholt aufgefordert wurde, zahlte er nicht.",
-      "Obwohl man den Mieter wiederholt aufgefordert hatte, zahlte er nicht."
+      "Während die Verwaltung zunehmend digitalisiert wird",
+      "Während die Verwaltung immer weiter digitalisiert wird",
+      "Während die Verwaltung fortschreitend digitalisiert wird",
+      "In dem Maße, wie die Verwaltung digitalisiert wird",
+      "In dem Maße, in dem die Verwaltung digitalisiert wird",
+      "Indem die Verwaltung zunehmend digitalisiert wird",
+      "Während die Verwaltung immer stärker digitalisiert wird"
      ],
-     "ex": ""
+     "ex": "mit + Dativ (Parallelentwicklung) → während / in dem Maße, wie. Digitalisierung → Passiv: die Verwaltung wird digitalisiert."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Zur Sicherung der Qualität werden regelmäßige Kontrollen durchgeführt.",
-     "s": "Damit …",
+     "q": "[[Ohne die rechtzeitige Vorlage sämtlicher erforderlicher Unterlagen]] kann der Antrag nicht bearbeitet werden.",
+     "pre": "",
+     "post": ", kann der Antrag nicht bearbeitet werden.",
      "a": [
-      "Damit die Qualität gesichert wird, werden regelmäßige Kontrollen durchgeführt.",
-      "Damit die Qualität gesichert ist, werden regelmäßige Kontrollen durchgeführt."
+      "Wenn nicht sämtliche erforderlichen Unterlagen rechtzeitig vorgelegt werden",
+      "Wenn man nicht sämtliche erforderlichen Unterlagen rechtzeitig vorlegt",
+      "Falls nicht sämtliche erforderlichen Unterlagen rechtzeitig vorgelegt werden",
+      "Falls man nicht sämtliche erforderlichen Unterlagen rechtzeitig vorlegt",
+      "Wenn nicht alle erforderlichen Unterlagen rechtzeitig vorgelegt werden",
+      "Wenn man nicht alle erforderlichen Unterlagen rechtzeitig vorlegt",
+      "Wenn der Antragsteller nicht sämtliche erforderlichen Unterlagen rechtzeitig vorlegt",
+      "Wenn nicht sämtliche erforderlichen Unterlagen rechtzeitig eingereicht werden",
+      "Sofern nicht sämtliche erforderlichen Unterlagen rechtzeitig vorgelegt werden"
      ],
-     "ex": ""
+     "ex": "ohne + Akkusativ → wenn … nicht. Vorlage → vorlegen (Passiv oder man), erforderlich → «die erforderlichen Unterlagen»."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Mit steigendem Einkommen wächst die Bereitschaft zu reisen.",
-     "s": "Je …",
+     "q": "[[Trotz der von Fachleuten schon vor Jahren geäußerten Bedenken gegen den Bau des Staudamms]] wurde das Projekt genehmigt.",
+     "pre": "",
+     "post": ", wurde das Projekt genehmigt.",
      "a": [
-      "Je mehr das Einkommen steigt, desto größer wird die Bereitschaft zu reisen.",
-      "Je höher das Einkommen ist, desto größer ist die Bereitschaft zu reisen.",
-      "Je mehr man verdient, desto größer ist die Bereitschaft zu reisen."
+      "Obwohl Fachleute schon vor Jahren Bedenken gegen den Bau des Staudamms geäußert hatten",
+      "Obwohl Fachleute bereits vor Jahren Bedenken gegen den Bau des Staudamms geäußert hatten",
+      "Obwohl Experten schon vor Jahren Bedenken gegen den Bau des Staudamms geäußert hatten",
+      "Obwohl Experten bereits vor Jahren Bedenken gegen den Bau des Staudamms geäußert hatten",
+      "Obwohl Fachleute schon vor Jahren Bedenken gegen den Bau des Staudamms geäußert haben"
      ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Laut Angaben des Ministeriums sind die Kosten gestiegen.",
-     "s": "Wie …",
-     "a": [
-      "Wie das Ministerium angibt, sind die Kosten gestiegen.",
-      "Wie das Ministerium angab, sind die Kosten gestiegen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Infolge der Verlängerung der Öffnungszeiten kamen mehr Besucher.",
-     "s": "Weil …",
-     "a": [
-      "Weil die Öffnungszeiten verlängert wurden, kamen mehr Besucher.",
-      "Weil die Öffnungszeiten verlängert worden waren, kamen mehr Besucher."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Durch die Einführung strengerer Grenzwerte soll die Luftqualität verbessert werden.",
-     "s": "Indem …",
-     "a": [
-      "Indem strengere Grenzwerte eingeführt werden, soll die Luftqualität verbessert werden.",
-      "Indem man strengere Grenzwerte einführt, soll die Luftqualität verbessert werden."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Statt einer Erhöhung der Gebühren wurden Kurse gestrichen.",
-     "s": "Statt …",
-     "a": [
-      "Statt die Gebühren zu erhöhen, wurden Kurse gestrichen.",
-      "Statt dass die Gebühren erhöht wurden, wurden Kurse gestrichen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "aus Angst → ___ er Angst hatte",
-     "o": [
-      "obwohl",
-      "weil",
-      "damit"
-     ],
-     "a": 1,
-     "ex": "aus (Grund) → weil."
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Zur Anmeldung braucht man einen Ausweis. → ___ sich anzumelden, braucht man einen Ausweis.",
-     "a": [
-      "Um"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 2,
-     "q": "bis zum Ende des Semesters → ___ das Semester endet",
-     "o": [
-      "nachdem",
-      "seit",
-      "bis"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Seit der Geburt ihres Sohnes arbeitet sie Teilzeit.",
-     "s": "Seit …",
-     "a": [
-      "Seit ihr Sohn geboren wurde, arbeitet sie Teilzeit.",
-      "Seit ihr Sohn geboren ist, arbeitet sie Teilzeit.",
-      "Seitdem ihr Sohn geboren wurde, arbeitet sie Teilzeit."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "Angesichts der Lage → ___",
-     "o": [
-      "Da die Lage so ist, …",
-      "Damit die Lage …",
-      "Obwohl die Lage, …"
-     ],
-     "a": 0,
-     "ex": "angesichts → da/weil."
-    },
-    {
-     "t": "gap",
-     "lv": 3,
-     "q": "Im Anschluss an die Sitzung gab es ein Buffet. → ___ die Sitzung beendet war, gab es ein Buffet.",
-     "a": [
-      "Nachdem"
-     ],
-     "ex": ""
+     "ex": "trotz + Genitiv → obwohl. Das erweiterte Partizip-Attribut «von Fachleuten … geäußerten Bedenken» wird zum Aktivsatz (Fachleute haben Bedenken geäußert); Vorzeitigkeit: Plusquamperfekt."
     }
    ],
    "write": [
@@ -6465,991 +5891,491 @@
    "ru": "Weil die Preise gestiegen sind → Wegen der gestiegenen Preise: сжимаем придаточное",
    "level": "C1",
    "tag": "Strukturen und Wortschatz",
-   "theory": "\n<p>Обратная операция: придаточное → предложная группа. Нужно знать <b class=\"k\">существительное от глагола</b> и падеж предлога.</p>\n<table>\n<tr><th>Союз</th><th>Предлог</th><th>Пример</th></tr>\n<tr><td>weil, da</td><td>wegen / aufgrund + G</td><td>wegen <b>des starken Regens</b></td></tr>\n<tr><td>obwohl</td><td>trotz + G</td><td>trotz <b>intensiver Vorbereitung</b></td></tr>\n<tr><td>wenn (условие/время)</td><td>bei + D</td><td>bei <b>falscher Bedienung</b></td></tr>\n<tr><td>nachdem</td><td>nach + D</td><td>nach <b>dem Abschluss</b> des Studiums</td></tr>\n<tr><td>bevor</td><td>vor + D</td><td>vor <b>Beginn</b> des Semesters</td></tr>\n<tr><td>um … zu, damit</td><td>zu / zum / zur + D, für + A</td><td><b>zum Schutz</b> der Umwelt</td></tr>\n<tr><td>indem</td><td>durch + A</td><td>durch <b>eine Verkürzung</b> der Arbeitszeit</td></tr>\n<tr><td>seit(dem)</td><td>seit + D</td><td>seit <b>der Öffnung</b> der Grenzen</td></tr>\n<tr><td>falls</td><td>im Falle + G</td><td>im Falle <b>eines Brandes</b></td></tr>\n</table>\n<h3>Глагол → существительное</h3>\n<div class=\"ex\">abschließen → der Abschluss · öffnen → die Öffnung · schützen → der Schutz · beginnen → der Beginn · steigen → der Anstieg · entscheiden → die Entscheidung · sich bewerben → die Bewerbung · fehlen → der Mangel (an)</div>\n<div class=\"tip\">Субъект и объект становятся генитивом: <i>Die Preise steigen</i> → <i>der Anstieg <b>der Preise</b></i>. Наречие → прилагательное: <i>es regnet stark</i> → <i>der <b>starke</b> Regen</i>.</div>\n",
+   "theory": "\n<p>Обратная операция: придаточное → предложная группа. Нужно знать <b class=\"k\">существительное от глагола</b> и падеж предлога.</p>\n<table>\n<tr><th>Союз</th><th>Предлог</th><th>Пример</th></tr>\n<tr><td>weil, da</td><td>wegen / aufgrund + G</td><td>wegen <b>des starken Regens</b></td></tr>\n<tr><td>obwohl</td><td>trotz + G</td><td>trotz <b>intensiver Vorbereitung</b></td></tr>\n<tr><td>wenn (условие/время)</td><td>bei + D</td><td>bei <b>falscher Bedienung</b></td></tr>\n<tr><td>nachdem</td><td>nach + D</td><td>nach <b>dem Abschluss</b> des Studiums</td></tr>\n<tr><td>bevor</td><td>vor + D</td><td>vor <b>Beginn</b> des Semesters</td></tr>\n<tr><td>um … zu, damit</td><td>zu / zum / zur + D, für + A</td><td><b>zum Schutz</b> der Umwelt</td></tr>\n<tr><td>indem</td><td>durch + A</td><td>durch <b>eine Verkürzung</b> der Arbeitszeit</td></tr>\n<tr><td>seit(dem)</td><td>seit + D</td><td>seit <b>der Öffnung</b> der Grenzen</td></tr>\n<tr><td>falls</td><td>im Falle + G</td><td>im Falle <b>eines Brandes</b></td></tr>\n</table>\n<h3>Глагол → существительное</h3>\n<div class=\"ex\">abschließen → der Abschluss · öffnen → die Öffnung · schützen → der Schutz · beginnen → der Beginn · steigen → der Anstieg · entscheiden → die Entscheidung · sich bewerben → die Bewerbung · fehlen → der Mangel (an)</div>\n<div class=\"tip\">Субъект и объект становятся генитивом: <i>Die Preise steigen</i> → <i>der Anstieg <b>der Preise</b></i>. Наречие → прилагательное: <i>es regnet stark</i> → <i>der <b>starke</b> Regen</i>.</div>\n\n<h3>Сложные случаи (C1)</h3>\n<table>\n<tr><th>Союз / оборот (Verbal)</th><th>Предлог (Nominal)</th></tr>\n<tr><td>weil, da</td><td>wegen, aufgrund, infolge, angesichts + G</td></tr>\n<tr><td>obwohl, obgleich</td><td>trotz, ungeachtet + G</td></tr>\n<tr><td>wenn, falls</td><td>bei + D, im Falle + G, ohne + A (wenn … nicht)</td></tr>\n<tr><td>indem, dadurch, dass</td><td>durch, mittels + G/A</td></tr>\n<tr><td>um … zu, damit</td><td>zu / zur + D, zwecks + G</td></tr>\n<tr><td>(an)statt dass</td><td>(an)statt + G</td></tr>\n<tr><td>während, in dem Maße, wie</td><td>mit + D, während + G</td></tr>\n<tr><td>dass-Satz (подлежащее)</td><td>существительное в Nominativ: die Verlagerung der Produktion</td></tr>\n</table>\n<div class=\"ex\">Weil die Lebenserwartung <b>seit Jahrzehnten stetig steigt</b> → wegen der <b>seit Jahrzehnten stetig steigenden</b> Lebenserwartung (глагол → Partizip I как атрибут)</div>\n<div class=\"ex\">nachdem es <b>geprüft und angehört hatte</b> → nach <b>Prüfung … und Anhörung …</b> (два глагола → два существительных, объекты в Genitiv)</div>\n<div class=\"tip\">В упражнении вписывается только подчёркнутая часть. Остаток предложения уже стоит, без запятой, если вместо придаточного идёт предложная группа. Время (Perfekt, Plusquamperfekt) при превращении в существительное исчезает.</div>\n",
    "items": [
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Weil die Preise gestiegen sind, kaufen die Menschen weniger.",
-     "s": "Wegen …",
+     "q": "[[Weil die Studiengebühren kontinuierlich gestiegen sind]], verzichten viele Familien auf ein Studium im Ausland.",
+     "pre": "",
+     "post": " verzichten viele Familien auf ein Studium im Ausland.",
      "a": [
-      "Wegen der gestiegenen Preise kaufen die Menschen weniger.",
-      "Wegen des Anstiegs der Preise kaufen die Menschen weniger.",
-      "Wegen des Preisanstiegs kaufen die Menschen weniger."
+      "Wegen der kontinuierlich gestiegenen Studiengebühren",
+      "Aufgrund der kontinuierlich gestiegenen Studiengebühren",
+      "Wegen des kontinuierlichen Anstiegs der Studiengebühren",
+      "Aufgrund des kontinuierlichen Anstiegs der Studiengebühren",
+      "Wegen der kontinuierlichen Erhöhung der Studiengebühren",
+      "Aufgrund der kontinuierlichen Erhöhung der Studiengebühren",
+      "Infolge des kontinuierlichen Anstiegs der Studiengebühren",
+      "Infolge der kontinuierlich gestiegenen Studiengebühren"
      ],
-     "ex": ""
+     "ex": "weil → wegen/aufgrund + Genitiv. Das Verb steigen wird zum Nomen der Anstieg oder bleibt als Partizip II: die gestiegenen Gebühren.",
+     "hint": "wegen / aufgrund"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Nachdem er die Prüfung bestanden hatte, feierte er mit Freunden.",
-     "s": "Nach …",
+     "q": "Die Teilnehmer erhielten ein Zertifikat, [[nachdem sie den Kurs erfolgreich abgeschlossen hatten]].",
+     "pre": "Die Teilnehmer erhielten ein Zertifikat ",
+     "post": ".",
      "a": [
-      "Nach dem Bestehen der Prüfung feierte er mit Freunden.",
-      "Nach der bestandenen Prüfung feierte er mit Freunden."
+      "nach erfolgreichem Abschluss des Kurses",
+      "nach dem erfolgreichen Abschluss des Kurses",
+      "nach erfolgreichem Kursabschluss",
+      "nach dem erfolgreichen Kursabschluss"
      ],
-     "ex": ""
+     "ex": "nachdem → nach + Dativ. abschließen → der Abschluss, erfolgreich (Adverb) → erfolgreich (Adjektiv, Dativ: erfolgreichem Abschluss).",
+     "hint": "nach"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Obwohl es stark regnete, fand das Konzert statt.",
-     "s": "Trotz …",
+     "q": "[[Obwohl die Kosten erheblich überschritten wurden]], wurde das Bauvorhaben fortgesetzt.",
+     "pre": "",
+     "post": " wurde das Bauvorhaben fortgesetzt.",
      "a": [
-      "Trotz des starken Regens fand das Konzert statt."
+      "Trotz der erheblichen Kostenüberschreitung",
+      "Trotz der erheblichen Überschreitung der Kosten",
+      "Trotz erheblicher Kostenüberschreitungen",
+      "Trotz der erheblichen Kostenüberschreitungen",
+      "Trotz erheblicher Überschreitung der Kosten"
      ],
-     "ex": ""
+     "ex": "obwohl → trotz + Genitiv. überschreiten → die Überschreitung, erheblich wird vom Adverb zum Adjektiv.",
+     "hint": "trotz"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Wenn man das Gerät falsch bedient, können Schäden entstehen.",
-     "s": "Bei …",
+     "q": "Man kann die Wartezeiten verkürzen, [[indem man mehr Personal einstellt]].",
+     "pre": "Man kann die Wartezeiten verkürzen ",
+     "post": ".",
      "a": [
-      "Bei falscher Bedienung des Geräts können Schäden entstehen.",
-      "Bei falscher Bedienung können Schäden entstehen.",
-      "Bei falscher Bedienung des Gerätes können Schäden entstehen."
+      "durch die Einstellung von mehr Personal",
+      "durch die Einstellung zusätzlichen Personals",
+      "durch Einstellung von mehr Personal",
+      "durch die Einstellung weiteren Personals",
+      "durch die Einstellung zusätzlicher Mitarbeiter"
      ],
-     "ex": ""
+     "ex": "indem → durch + Akkusativ. einstellen → die Einstellung; das Objekt steht im Genitiv oder mit von.",
+     "hint": "durch"
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 1,
-     "q": "Um die Umwelt zu schützen, sollte man weniger fliegen.",
-     "s": "Zum …",
+     "q": "[[Bevor das neue Semester beginnt]], müssen sich alle Studierenden zurückmelden.",
+     "pre": "",
+     "post": " müssen sich alle Studierenden zurückmelden.",
      "a": [
-      "Zum Schutz der Umwelt sollte man weniger fliegen.",
-      "Zum Umweltschutz sollte man weniger fliegen."
+      "Vor Beginn des neuen Semesters",
+      "Vor dem Beginn des neuen Semesters",
+      "Vor Beginn des Semesters",
+      "Vor dem Beginn des Semesters",
+      "Vor Semesterbeginn",
+      "Vor dem Semesterbeginn"
      ],
-     "ex": ""
+     "ex": "bevor → vor + Dativ. beginnen → der Beginn, das Subjekt (das Semester) wird zum Genitiv.",
+     "hint": "vor"
     },
     {
-     "t": "tr",
-     "lv": 2,
-     "q": "Bevor das Semester beginnt, muss man sich anmelden.",
-     "s": "Vor …",
-     "a": [
-      "Vor Beginn des Semesters muss man sich anmelden.",
-      "Vor dem Beginn des Semesters muss man sich anmelden.",
-      "Vor Semesterbeginn muss man sich anmelden."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Während sie in Wien studierte, lernte sie ihren Mann kennen.",
-     "s": "Während …",
-     "a": [
-      "Während ihres Studiums in Wien lernte sie ihren Mann kennen."
-     ],
-     "ex": "während + Genitiv."
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Indem man die Arbeitszeit verkürzt, könnte man Burnout vorbeugen.",
-     "s": "Durch …",
-     "a": [
-      "Durch eine Verkürzung der Arbeitszeit könnte man Burnout vorbeugen.",
-      "Durch die Verkürzung der Arbeitszeit könnte man Burnout vorbeugen.",
-      "Durch Verkürzung der Arbeitszeit könnte man Burnout vorbeugen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Seit die Grenzen geöffnet wurden, kommen mehr Touristen.",
-     "s": "Seit …",
-     "a": [
-      "Seit der Öffnung der Grenzen kommen mehr Touristen.",
-      "Seit der Grenzöffnung kommen mehr Touristen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Falls ein Feuer ausbricht, darf der Lift nicht benutzt werden.",
-     "s": "Im Falle …",
-     "a": [
-      "Im Falle eines Brandes darf der Lift nicht benutzt werden.",
-      "Im Falle eines Feuers darf der Lift nicht benutzt werden.",
-      "Im Brandfall darf der Lift nicht benutzt werden."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Weil viele Fachkräfte fehlen, bleiben Stellen unbesetzt.",
-     "s": "Aufgrund …",
-     "a": [
-      "Aufgrund des Fachkräftemangels bleiben Stellen unbesetzt.",
-      "Aufgrund des Mangels an Fachkräften bleiben Stellen unbesetzt.",
-      "Aufgrund fehlender Fachkräfte bleiben Stellen unbesetzt."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Die Regierung hat beschlossen, die Steuern zu senken. Das wurde begrüßt.",
-     "s": "Der …",
-     "a": [
-      "Der Beschluss der Regierung, die Steuern zu senken, wurde begrüßt.",
-      "Der Beschluss der Regierung zur Senkung der Steuern wurde begrüßt.",
-      "Der Beschluss der Regierung zur Steuersenkung wurde begrüßt."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Dass immer mehr Menschen vereinsamen, ist ein ernstes Problem.",
-     "s": "Die …",
-     "a": [
-      "Die zunehmende Vereinsamung der Menschen ist ein ernstes Problem.",
-      "Die zunehmende Vereinsamung vieler Menschen ist ein ernstes Problem.",
-      "Die zunehmende Vereinsamung ist ein ernstes Problem."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Weil die Bevölkerung altert, steigen die Gesundheitskosten.",
-     "s": "Aufgrund …",
-     "a": [
-      "Aufgrund der Alterung der Bevölkerung steigen die Gesundheitskosten.",
-      "Aufgrund der alternden Bevölkerung steigen die Gesundheitskosten."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "weil es regnet → ___ des Regens",
-     "o": [
-      "trotz",
-      "wegen",
-      "während"
+     "q": "[[Während die Bauarbeiten andauerten]], war die Straße für den Verkehr gesperrt.",
+     "pre": "",
+     "post": " war die Straße für den Verkehr gesperrt.",
+     "a": [
+      "Während der Bauarbeiten",
+      "Während der andauernden Bauarbeiten",
+      "Während der Dauer der Bauarbeiten"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "während (Konjunktion) → während + Genitiv. Das Subjekt wird zum Genitiv, andauern wird zum Partizip-Attribut oder fällt weg.",
+     "hint": "während"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "obwohl es kalt ist → ___ der Kälte",
-     "o": [
-      "wegen",
-      "trotz",
-      "bei"
+     "q": "Das Team muss den Bericht überarbeiten, [[falls neue Daten vorliegen]].",
+     "pre": "Das Team muss den Bericht überarbeiten ",
+     "post": ".",
+     "a": [
+      "bei Vorliegen neuer Daten",
+      "im Falle neuer Daten",
+      "im Falle des Vorliegens neuer Daten",
+      "bei neuen Daten"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "falls → bei / im Falle + Genitiv. vorliegen → das Vorliegen, die neuen Daten → Genitiv (neuer Daten).",
+     "hint": "bei / im Falle"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "nachdem wir gegessen hatten → ___ dem Essen",
-     "o": [
-      "nach",
-      "vor",
-      "seit"
+     "q": "[[Seit die Grenzen wieder geöffnet sind]], nimmt der Tourismus deutlich zu.",
+     "pre": "",
+     "post": " nimmt der Tourismus deutlich zu.",
+     "a": [
+      "Seit der Öffnung der Grenzen",
+      "Seit der erneuten Öffnung der Grenzen",
+      "Seit der Wiedereröffnung der Grenzen",
+      "Seit der Wiederöffnung der Grenzen"
      ],
-     "a": 0,
-     "ex": ""
+     "ex": "seit(dem) → seit + Dativ. öffnen → die Öffnung, wieder → erneut / Wieder-.",
+     "hint": "seit"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "bevor die Prüfung beginnt → ___ Beginn der Prüfung",
-     "o": [
-      "nach",
-      "vor",
-      "bis"
+     "q": "Die Firma wurde ausgezeichnet, [[weil sie sich besonders für den Umweltschutz eingesetzt hat]].",
+     "pre": "Die Firma wurde ausgezeichnet ",
+     "post": ".",
+     "a": [
+      "wegen ihres besonderen Einsatzes für den Umweltschutz",
+      "aufgrund ihres besonderen Einsatzes für den Umweltschutz",
+      "für ihren besonderen Einsatz für den Umweltschutz",
+      "wegen ihres besonderen Engagements für den Umweltschutz",
+      "für ihr besonderes Engagement für den Umweltschutz",
+      "aufgrund ihres besonderen Engagements für den Umweltschutz"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "sich einsetzen für → der Einsatz für. Das Subjekt (sie) wird zum Possessivartikel (ihres Einsatzes), besonders → besonderen.",
+     "hint": "wegen / für"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 1,
-     "q": "wenn es regnet → ___ Regen",
-     "o": [
-      "wegen",
-      "bei",
-      "trotz"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "um sich zu erholen → ___ Erholung",
-     "o": [
-      "zur",
-      "für die",
-      "zum"
-     ],
-     "a": 0,
-     "ex": "die Erholung → zur."
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "indem man übt → ___ Üben",
-     "o": [
-      "durch",
-      "mit dem",
-      "bei"
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "während er studierte → ___ seines Studiums",
-     "o": [
-      "seit",
-      "während",
-      "bei"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "seit sie angekommen ist → seit ihrer ___",
-     "o": [
-      "Ankommen",
-      "Ankunft",
-      "Angekommenheit"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "als er geboren wurde → bei seiner ___",
-     "o": [
-      "Geborenheit",
-      "Gebären",
-      "Geburt"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Weil er krank war, fehlte er. → ___ seiner Krankheit fehlte er.",
+     "q": "[[Als der Zug in den Bahnhof einfuhr]], kam es zu einem Tumult.",
+     "pre": "",
+     "post": " kam es zu einem Tumult.",
      "a": [
-      "Wegen"
+      "Bei der Einfahrt des Zuges in den Bahnhof",
+      "Bei Einfahrt des Zuges in den Bahnhof",
+      "Bei der Einfahrt des Zuges",
+      "Bei der Zugeinfahrt in den Bahnhof"
      ],
-     "ex": ""
+     "ex": "als (zeitlich, gleichzeitig) → bei + Dativ. einfahren → die Einfahrt, das Subjekt wird zum Genitiv.",
+     "hint": "bei"
     },
     {
-     "t": "gap",
-     "lv": 1,
-     "q": "Obwohl es laut war, schlief sie. → Trotz des ___ schlief sie.",
-     "a": [
-      "Lärms"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Bevor wir abfahren, tanken wir. → Vor der ___ tanken wir.",
-     "a": [
-      "Abfahrt"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Nachdem sie das Studium abgeschlossen hatte, zog sie nach Graz. → Nach dem ___ des Studiums zog sie nach Graz.",
-     "a": [
-      "Abschluss"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Wenn es dunkel ist, ist der Park geschlossen. → Bei ___ ist der Park geschlossen.",
-     "a": [
-      "Dunkelheit"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Weil es stark schneite, fiel der Unterricht aus.",
-     "s": "Wegen …",
-     "a": [
-      "Wegen des starken Schneefalls fiel der Unterricht aus.",
-      "Wegen des starken Schnees fiel der Unterricht aus."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Obwohl er sich bemüht hatte, scheiterte er.",
-     "s": "Trotz …",
-     "a": [
-      "Trotz seiner Bemühungen scheiterte er.",
-      "Trotz seines Bemühens scheiterte er."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Bevor man das Gerät benutzt, liest man die Anleitung.",
-     "s": "Vor …",
-     "a": [
-      "Vor der Benutzung des Geräts liest man die Anleitung.",
-      "Vor der Benutzung des Gerätes liest man die Anleitung."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Wenn Sie Fragen haben, rufen Sie uns an.",
-     "s": "Bei …",
-     "a": [
-      "Bei Fragen rufen Sie uns an."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Um Energie zu sparen, schalten wir das Licht aus.",
-     "s": "Zum …",
-     "a": [
-      "Zum Energiesparen schalten wir das Licht aus.",
-      "Zum Sparen von Energie schalten wir das Licht aus."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Nachdem der Film zu Ende war, gingen wir essen.",
-     "s": "Nach …",
-     "a": [
-      "Nach dem Ende des Films gingen wir essen.",
-      "Nach dem Film gingen wir essen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "weil die Mieten gestiegen sind → wegen des ___ der Mieten",
-     "o": [
-      "Anstiegs",
-      "Steigerung",
-      "Ansteigens"
+     "q": "[[Weil immer mehr Menschen in die Städte ziehen]], geraten die Wohnungsmärkte unter Druck.",
+     "pre": "",
+     "post": " geraten die Wohnungsmärkte unter Druck.",
+     "a": [
+      "Wegen des zunehmenden Zuzugs in die Städte",
+      "Aufgrund des zunehmenden Zuzugs in die Städte",
+      "Wegen des wachsenden Zuzugs in die Städte",
+      "Aufgrund des wachsenden Zuzugs in die Städte",
+      "Wegen des steigenden Zuzugs in die Städte",
+      "Aufgrund des steigenden Zuzugs in die Städte",
+      "Wegen des zunehmenden Zuzugs von Menschen in die Städte",
+      "Aufgrund des zunehmenden Zuzugs von Menschen in die Städte"
      ],
-     "a": 0,
-     "ex": "steigen → der Anstieg."
+     "ex": "weil → wegen/aufgrund + Genitiv. «immer mehr Menschen ziehen» → der zunehmende Zuzug: Steigerung wird zum Adjektiv zunehmend."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "damit die Qualität verbessert wird → zur ___ der Qualität",
-     "o": [
-      "Verbesserung",
-      "Besserung",
-      "Verbessern"
+     "q": "Der Konzern investiert in neue Technologien, [[damit die Produktion effizienter wird und weniger Energie verbraucht]].",
+     "pre": "Der Konzern investiert in neue Technologien ",
+     "post": ".",
+     "a": [
+      "zur Steigerung der Effizienz der Produktion und zur Senkung des Energieverbrauchs",
+      "zur Effizienzsteigerung der Produktion und zur Senkung des Energieverbrauchs",
+      "zur Steigerung der Produktionseffizienz und zur Senkung des Energieverbrauchs",
+      "zur Effizienzsteigerung der Produktion und zur Reduzierung des Energieverbrauchs",
+      "zur Steigerung der Effizienz der Produktion und zur Reduzierung des Energieverbrauchs",
+      "zur Steigerung der Produktionseffizienz und zur Reduzierung des Energieverbrauchs",
+      "zur Verbesserung der Effizienz der Produktion und zur Senkung des Energieverbrauchs"
      ],
-     "a": 0,
-     "ex": ""
+     "ex": "damit → zu / zur + Dativ (Zweck). effizienter werden → die Steigerung der Effizienz, weniger verbrauchen → die Senkung des Verbrauchs. Zwei Zwecke: zweimal zur.",
+     "hint": "zu / zur"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "falls der Termin abgesagt wird → im Falle einer ___ des Termins",
-     "o": [
-      "Absage",
-      "Absagung",
-      "Absagen"
+     "q": "[[Obwohl die Opposition heftig protestierte]], verabschiedete das Parlament das Gesetz.",
+     "pre": "",
+     "post": " verabschiedete das Parlament das Gesetz.",
+     "a": [
+      "Trotz des heftigen Protests der Opposition",
+      "Trotz heftiger Proteste der Opposition",
+      "Trotz des heftigen Protestes der Opposition",
+      "Trotz heftigen Protests der Opposition",
+      "Trotz der heftigen Proteste der Opposition"
      ],
-     "a": 0,
-     "ex": ""
+     "ex": "obwohl → trotz + Genitiv. protestieren → der Protest, heftig (Adverb) → heftigen (Adjektiv)."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "obwohl viele protestierten → trotz ___ Proteste",
-     "o": [
-      "zahlreichen",
-      "zahlreiche",
-      "zahlreicher"
+     "q": "Die Gemeinde konnte den Park erhalten, [[indem Freiwillige Spenden sammelten und Patenschaften übernahmen]].",
+     "pre": "Die Gemeinde konnte den Park erhalten ",
+     "post": ".",
+     "a": [
+      "durch die Spendensammlung und die Übernahme von Patenschaften durch Freiwillige",
+      "durch das Sammeln von Spenden und die Übernahme von Patenschaften durch Freiwillige",
+      "durch die Sammlung von Spenden und die Übernahme von Patenschaften durch Freiwillige",
+      "durch die Spendensammlung der Freiwilligen und die Übernahme von Patenschaften",
+      "durch die Spendensammlungen und Patenschaften von Freiwilligen"
      ],
-     "a": 2,
-     "ex": "Genitiv Plural ohne Artikel → -er."
+     "ex": "indem → durch + Akkusativ. Zwei Verben → zwei Nomen, das Subjekt (Freiwillige) wird zu «durch Freiwillige» oder Genitiv."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "indem man die Steuern senkt → durch ___ der Steuern",
-     "o": [
-      "Senken",
-      "Senkung",
-      "Senke"
+     "q": "[[Nachdem das Unternehmen restrukturiert worden war]], stieg der Umsatz wieder an.",
+     "pre": "",
+     "post": " stieg der Umsatz wieder an.",
+     "a": [
+      "Nach der Restrukturierung des Unternehmens",
+      "Nach der erfolgten Restrukturierung des Unternehmens",
+      "Nach der Umstrukturierung des Unternehmens"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "nachdem → nach + Dativ. Das Passiv (restrukturiert worden war) wird zum Nomen: die Restrukturierung des Unternehmens (Genitiv)."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "bis der Bau fertig ist → bis zur ___ des Baus",
-     "o": [
-      "Fertigung",
-      "Fertigstellung",
-      "Fertigkeit"
+     "q": "Der Vortrag musste verschoben werden, [[weil der Referent erkrankt war]].",
+     "pre": "Der Vortrag musste verschoben werden ",
+     "post": ".",
+     "a": [
+      "wegen der Erkrankung des Referenten",
+      "aufgrund der Erkrankung des Referenten",
+      "wegen der Krankheit des Referenten",
+      "aufgrund der Krankheit des Referenten",
+      "wegen einer Erkrankung des Referenten",
+      "infolge der Erkrankung des Referenten"
      ],
-     "a": 1,
-     "ex": ""
+     "ex": "weil → wegen/aufgrund/infolge + Genitiv. erkranken → die Erkrankung, das Subjekt wird zum Genitiv (des Referenten)."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "als die Mauer fiel → beim ___ der Mauer",
-     "o": [
-      "Gefälle",
-      "Fall",
-      "Fallen"
+     "q": "[[Wenn die Frist nicht eingehalten wird]], verfällt der Anspruch auf Erstattung.",
+     "pre": "",
+     "post": " verfällt der Anspruch auf Erstattung.",
+     "a": [
+      "Bei Nichteinhaltung der Frist",
+      "Bei Überschreitung der Frist",
+      "Im Falle der Nichteinhaltung der Frist",
+      "Bei einer Überschreitung der Frist",
+      "Bei Fristüberschreitung",
+      "Bei nicht eingehaltener Frist",
+      "Bei Versäumnis der Frist"
      ],
-     "a": 1,
-     "ex": "Auch: mit dem Fall der Mauer."
+     "ex": "wenn (Bedingung) → bei + Dativ / im Falle + Genitiv. Passiv mit nicht → Nichteinhaltung oder nicht eingehaltene Frist."
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "wie die Zeitung berichtet → ___ der Zeitung",
-     "o": [
-      "wegen",
-      "laut",
-      "trotz"
+     "q": "Er nahm das Angebot an, [[ohne dass er lange darüber nachdachte]].",
+     "pre": "Er nahm das Angebot an ",
+     "post": ".",
+     "a": [
+      "ohne langes Nachdenken",
+      "ohne langes Überlegen",
+      "ohne lange Überlegung",
+      "ohne langes Nachdenken darüber"
      ],
-     "a": 1,
-     "ex": "laut + Dativ/Genitiv."
+     "ex": "ohne dass / ohne zu → ohne + Akkusativ. nachdenken → das Nachdenken (Verb als Nomen), lange → langes.",
+     "hint": "ohne"
     },
     {
-     "t": "mc",
+     "t": "nf",
      "lv": 2,
-     "q": "je älter man wird → mit ___ Alter",
-     "o": [
-      "zunehmender",
-      "zunehmenden",
-      "zunehmendem"
+     "q": "[[Da die Regierung die Subventionen gestrichen hat]], mussten viele Landwirte ihre Betriebe aufgeben.",
+     "pre": "",
+     "post": " mussten viele Landwirte ihre Betriebe aufgeben.",
+     "a": [
+      "Aufgrund der Streichung der Subventionen durch die Regierung",
+      "Wegen der Streichung der Subventionen durch die Regierung",
+      "Aufgrund der Streichung der Subventionen",
+      "Wegen der Streichung der Subventionen",
+      "Infolge der Streichung der Subventionen durch die Regierung",
+      "Infolge der Streichung der Subventionen",
+      "Aufgrund der Subventionsstreichung durch die Regierung",
+      "Wegen der Subventionsstreichung durch die Regierung"
      ],
-     "a": 2,
-     "ex": "mit + Dativ neutr. → -em."
+     "ex": "da → aufgrund/wegen/infolge + Genitiv. Aktiv mit Subjekt + Objekt: «durch die Regierung» für das Subjekt, Genitiv für das Objekt."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 2,
-     "q": "Weil die Nachfrage sinkt, werden Stellen abgebaut. → Wegen der ___ Nachfrage werden Stellen abgebaut.",
+     "q": "Die Studierenden sollen sich beraten lassen, [[bevor sie ihr Studienfach wechseln]].",
+     "pre": "Die Studierenden sollen sich beraten lassen ",
+     "post": ".",
      "a": [
-      "sinkenden"
+      "vor einem Wechsel des Studienfachs",
+      "vor dem Wechsel des Studienfachs",
+      "vor einem Studienfachwechsel",
+      "vor dem Studienfachwechsel",
+      "vor einem Fachwechsel",
+      "vor dem Fachwechsel"
      ],
-     "ex": "Partizip als Adjektiv."
+     "ex": "bevor → vor + Dativ. wechseln → der Wechsel; ihr Studienfach wird zum Genitiv des Studienfachs.",
+     "hint": "vor"
     },
     {
-     "t": "gap",
-     "lv": 2,
-     "q": "Wenn man die Regeln nicht beachtet, droht eine Strafe. → Bei ___ der Regeln droht eine Strafe.",
-     "a": [
-      "Nichtbeachtung"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Damit Unfälle vermieden werden, gilt Tempo 30. → Zur ___ von Unfällen gilt Tempo 30.",
-     "a": [
-      "Vermeidung"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Seitdem das Gesetz in Kraft getreten ist, … → Seit dem ___ des Gesetzes …",
-     "a": [
-      "Inkrafttreten"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Indem man die Arbeitszeit verkürzt, … → Durch die ___ der Arbeitszeit …",
-     "a": [
-      "Verkürzung"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Obwohl sie gewarnt worden waren, … → Trotz der ___ …",
-     "a": [
-      "Warnungen"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Weil die Kosten gestiegen sind, wird das Ticket teurer.",
-     "s": "Wegen …",
-     "a": [
-      "Wegen des Anstiegs der Kosten wird das Ticket teurer.",
-      "Wegen der gestiegenen Kosten wird das Ticket teurer.",
-      "Wegen der Kostensteigerung wird das Ticket teurer."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Wenn der Strom ausfällt, springt der Generator an.",
-     "s": "Bei …",
-     "a": [
-      "Bei Stromausfall springt der Generator an.",
-      "Bei einem Stromausfall springt der Generator an."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Damit die Umwelt geschützt wird, gibt es neue Regeln.",
-     "s": "Zum …",
-     "a": [
-      "Zum Schutz der Umwelt gibt es neue Regeln.",
-      "Zum Umweltschutz gibt es neue Regeln."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Als der Vertrag unterzeichnet wurde, waren alle anwesend.",
-     "s": "Bei …",
-     "a": [
-      "Bei der Unterzeichnung des Vertrags waren alle anwesend.",
-      "Bei der Unterzeichnung des Vertrages waren alle anwesend."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Obwohl die Wirtschaft wächst, steigt die Arbeitslosigkeit.",
-     "s": "Trotz …",
-     "a": [
-      "Trotz des Wirtschaftswachstums steigt die Arbeitslosigkeit.",
-      "Trotz des Wachstums der Wirtschaft steigt die Arbeitslosigkeit.",
-      "Trotz wachsender Wirtschaft steigt die Arbeitslosigkeit."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Indem man mehr Wohnungen baut, könnte man die Mieten senken.",
-     "s": "Durch …",
-     "a": [
-      "Durch den Bau von mehr Wohnungen könnte man die Mieten senken.",
-      "Durch den Bau weiterer Wohnungen könnte man die Mieten senken.",
-      "Durch mehr Wohnungsbau könnte man die Mieten senken."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Bis die Ergebnisse veröffentlicht werden, dauert es noch.",
-     "s": "Bis zur …",
-     "a": [
-      "Bis zur Veröffentlichung der Ergebnisse dauert es noch."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
+     "t": "nf",
      "lv": 3,
-     "q": "nachdem man alle Unterlagen eingehend geprüft hatte → nach ___ Prüfung aller Unterlagen",
-     "o": [
-      "eingehenden",
-      "eingehend",
-      "eingehender"
-     ],
-     "a": 2,
-     "ex": "Adverb → Adjektiv; Dativ fem. ohne Artikel → -er."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "wenn man regelmäßig Sport treibt → bei ___ Sport",
-     "o": [
-      "regelmäßigen",
-      "regelmäßiger",
-      "regelmäßigem"
-     ],
-     "a": 2,
-     "ex": "Dativ mask. ohne Artikel → -em."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "weil es an Fachkräften mangelt → ___ Fachkräften",
-     "o": [
-      "mangels",
-      "wegen Mangel",
-      "durch"
-     ],
-     "a": 0,
-     "ex": "mangels + Genitiv/Dativ Pl."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "obwohl man ihn mehrfach gewarnt hatte → ___ mehrfacher Warnungen",
-     "o": [
-      "bei",
-      "wegen",
-      "trotz"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "wie Experten meinen → ___ Experten",
-     "o": [
-      "wegen",
-      "trotz",
-      "nach Ansicht von"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "damit die Versorgung gesichert ist → ___ Sicherung der Versorgung",
-     "o": [
-      "zum",
-      "bei der",
-      "zur"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "falls man nicht erscheint → bei ___",
-     "o": [
-      "Nichterschein",
-      "Nichterscheinen",
-      "Nichterscheinung"
-     ],
-     "a": 1,
-     "ex": "Substantivierter Infinitiv."
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "als die Preise plötzlich stiegen → bei dem ___ Anstieg der Preise",
-     "o": [
-      "plötzlichen",
-      "plötzlicher",
-      "plötzlich"
-     ],
-     "a": 0,
-     "ex": "dem … -en."
-    },
-    {
-     "t": "gap",
-     "lv": 3,
-     "q": "Nachdem man die Lage gründlich analysiert hatte, … → Nach gründlicher ___ der Lage …",
+     "q": "[[Weil sich die Lebenserwartung der Bevölkerung seit Jahrzehnten stetig erhöht]], steht das Rentensystem vor erheblichen Finanzierungsproblemen.",
+     "pre": "",
+     "post": " steht das Rentensystem vor erheblichen Finanzierungsproblemen.",
      "a": [
-      "Analyse"
+      "Wegen der seit Jahrzehnten stetig steigenden Lebenserwartung der Bevölkerung",
+      "Aufgrund der seit Jahrzehnten stetig steigenden Lebenserwartung der Bevölkerung",
+      "Wegen der seit Jahrzehnten stetig zunehmenden Lebenserwartung der Bevölkerung",
+      "Aufgrund der seit Jahrzehnten stetig zunehmenden Lebenserwartung der Bevölkerung",
+      "Wegen der stetigen Erhöhung der Lebenserwartung der Bevölkerung seit Jahrzehnten",
+      "Aufgrund der stetigen Erhöhung der Lebenserwartung der Bevölkerung seit Jahrzehnten",
+      "Wegen der seit Jahrzehnten stetigen Erhöhung der Lebenserwartung der Bevölkerung",
+      "Aufgrund der seit Jahrzehnten stetigen Erhöhung der Lebenserwartung der Bevölkerung",
+      "Wegen der seit Jahrzehnten stetig steigenden Lebenserwartung",
+      "Aufgrund der seit Jahrzehnten stetig steigenden Lebenserwartung"
      ],
-     "ex": ""
+     "ex": "weil → wegen/aufgrund. «sich erhöht» → das erweiterte Partizip-Attribut «der seit Jahrzehnten stetig steigenden Lebenserwartung» oder das Nomen die Erhöhung."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Weil es keine Beweise gab, … → ___ Beweisen …",
+     "q": "[[Obwohl die Verhandlungspartner mehrfach gescheitert waren]], gelang schließlich eine Einigung.",
+     "pre": "",
+     "post": " gelang schließlich eine Einigung.",
      "a": [
-      "Mangels"
+      "Trotz des mehrfachen Scheiterns der Verhandlungspartner",
+      "Trotz des mehrmaligen Scheiterns der Verhandlungspartner",
+      "Trotz mehrfachen Scheiterns der Verhandlungspartner",
+      "Trotz mehrfachen Scheiterns der Verhandlungen",
+      "Trotz des mehrfachen Scheiterns der Verhandlungen"
      ],
-     "ex": ""
+     "ex": "obwohl → trotz + Genitiv. scheitern → das Scheitern (Verb als Nomen), mehrfach (Adverb) → mehrfachen (Adjektiv); das Plusquamperfekt geht verloren."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Wenn man die Daten falsch interpretiert, … → Bei falscher ___ der Daten …",
+     "q": "[[Ohne dass die Behörde die Unterlagen eingehend prüfte]], lehnte sie den Antrag ab.",
+     "pre": "",
+     "post": " lehnte sie den Antrag ab.",
      "a": [
-      "Interpretation"
+      "Ohne eingehende Prüfung der Unterlagen durch die Behörde",
+      "Ohne eingehende Prüfung der Unterlagen",
+      "Ohne die eingehende Prüfung der Unterlagen durch die Behörde",
+      "Ohne eine eingehende Prüfung der Unterlagen",
+      "Ohne eine eingehende Prüfung der Unterlagen durch die Behörde"
      ],
-     "ex": ""
+     "ex": "ohne dass → ohne + Akkusativ. prüfen → die Prüfung, das Akkusativobjekt wird zum Genitiv, das Subjekt zu «durch die Behörde» oder fällt weg."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Indem man erneuerbare Energien ausbaut, … → Durch den ___ erneuerbarer Energien …",
+     "q": "[[Indem man den Datenschutz konsequent in die Entwicklung neuer Produkte einbezieht]], lässt sich das Vertrauen der Kunden langfristig sichern.",
+     "pre": "",
+     "post": " lässt sich das Vertrauen der Kunden langfristig sichern.",
      "a": [
-      "Ausbau"
+      "Durch die konsequente Einbeziehung des Datenschutzes in die Entwicklung neuer Produkte",
+      "Durch die konsequente Einbindung des Datenschutzes in die Entwicklung neuer Produkte",
+      "Durch eine konsequente Einbeziehung des Datenschutzes in die Entwicklung neuer Produkte",
+      "Durch eine konsequente Einbindung des Datenschutzes in die Entwicklung neuer Produkte",
+      "Durch konsequente Einbeziehung des Datenschutzes in die Entwicklung neuer Produkte",
+      "Durch konsequente Einbindung des Datenschutzes in die Entwicklung neuer Produkte"
      ],
-     "ex": ""
+     "ex": "indem → durch + Akkusativ. einbeziehen → die Einbeziehung, konsequent (Adverb) → konsequente; zwei Genitive hintereinander."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Obwohl die Umfragen positiv waren, verlor die Partei. → Trotz ___ Umfragen verlor die Partei.",
+     "q": "[[Seit die Arbeitsbelastung stetig zugenommen hat]], klagen viele Beschäftigte über Erschöpfung.",
+     "pre": "",
+     "post": " klagen viele Beschäftigte über Erschöpfung.",
      "a": [
-      "positiver"
+      "Seit der stetigen Zunahme der Arbeitsbelastung",
+      "Seit der stetigen Zunahme der Arbeitsbelastungen",
+      "Seit der kontinuierlichen Zunahme der Arbeitsbelastung",
+      "Seit der ständigen Zunahme der Arbeitsbelastung",
+      "Seit der stetigen Steigerung der Arbeitsbelastung",
+      "Seit der stetigen Erhöhung der Arbeitsbelastung"
      ],
-     "ex": "Genitiv Pl. ohne Artikel → -er."
+     "ex": "seitdem → seit + Dativ. zunehmen → die Zunahme, stetig (Adverb) → stetigen (Adjektiv); Perfekt (zugenommen hat) fällt weg."
     },
     {
-     "t": "gap",
+     "t": "nf",
      "lv": 3,
-     "q": "Während die Verhandlungen liefen, … → ___ der Verhandlungen …",
+     "q": "Das Gericht entschied zugunsten der Kläger, [[nachdem es die Beweislage ausführlich geprüft und mehrere Zeugen angehört hatte]].",
+     "pre": "Das Gericht entschied zugunsten der Kläger ",
+     "post": ".",
      "a": [
-      "Während"
+      "nach ausführlicher Prüfung der Beweislage und Anhörung mehrerer Zeugen",
+      "nach ausführlicher Prüfung der Beweislage und nach der Anhörung mehrerer Zeugen",
+      "nach der ausführlichen Prüfung der Beweislage und der Anhörung mehrerer Zeugen",
+      "nach der ausführlichen Prüfung der Beweislage und nach der Anhörung mehrerer Zeugen"
      ],
-     "ex": ""
+     "ex": "nachdem → nach + Dativ. Zwei Verben → zwei Nomen: prüfen → die Prüfung, anhören → die Anhörung; Objekte im Genitiv."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Nachdem die Studie veröffentlicht worden war, kam es zu Protesten.",
-     "s": "Nach …",
+     "q": "[[Falls ein Brand ausbricht]], sind die Notausgänge unverzüglich freizuhalten.",
+     "pre": "",
+     "post": " sind die Notausgänge unverzüglich freizuhalten.",
      "a": [
-      "Nach der Veröffentlichung der Studie kam es zu Protesten."
+      "Im Brandfall",
+      "Im Falle eines Brandes",
+      "Im Falle eines Brandausbruchs",
+      "Im Falle des Ausbruchs eines Brandes",
+      "Bei Ausbruch eines Brandes",
+      "Bei einem Brand",
+      "Bei Ausbruch eines Feuers",
+      "Bei Brandausbruch"
      ],
-     "ex": ""
+     "ex": "falls → im Falle + Genitiv / bei + Dativ. ausbrechen → der Ausbruch; kürzer: Zusammensetzung Brandfall."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Weil die Bevölkerung immer älter wird, steigen die Gesundheitskosten.",
-     "s": "Wegen …",
+     "q": "Die Zahl der Beschwerden ist zurückgegangen, [[seit die Stadt die Öffnungszeiten der Ämter verlängert hat]].",
+     "pre": "Die Zahl der Beschwerden ist zurückgegangen ",
+     "post": ".",
      "a": [
-      "Wegen der zunehmenden Alterung der Bevölkerung steigen die Gesundheitskosten.",
-      "Wegen der Alterung der Bevölkerung steigen die Gesundheitskosten.",
-      "Aufgrund der Alterung der Bevölkerung steigen die Gesundheitskosten."
+      "seit der Verlängerung der Öffnungszeiten der Ämter durch die Stadt",
+      "seit der Verlängerung der Öffnungszeiten der Ämter",
+      "seit der Verlängerung der Öffnungszeiten der städtischen Ämter",
+      "seit der Verlängerung der Amtsöffnungszeiten durch die Stadt",
+      "seit der Verlängerung der Amtsöffnungszeiten"
      ],
-     "ex": ""
+     "ex": "seit(dem) → seit + Dativ. verlängern → die Verlängerung; Objekt im Genitiv, Subjekt «durch die Stadt» oder Adjektiv städtisch."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Wenn man die Vorschriften nicht einhält, wird man bestraft.",
-     "s": "Bei …",
+     "q": "[[Dass der Konzern seine Produktion ins Ausland verlagert hat]], löste in der Region große Besorgnis aus.",
+     "pre": "",
+     "post": " löste in der Region große Besorgnis aus.",
      "a": [
-      "Bei Nichteinhaltung der Vorschriften wird man bestraft."
+      "Die Verlagerung der Produktion des Konzerns ins Ausland",
+      "Die Verlagerung der Produktion ins Ausland durch den Konzern",
+      "Die Verlagerung der Konzernproduktion ins Ausland",
+      "Die Auslagerung der Produktion des Konzerns ins Ausland",
+      "Die Auslagerung der Produktion ins Ausland durch den Konzern",
+      "Die Verlagerung der Produktion des Konzerns in das Ausland"
      ],
-     "ex": ""
+     "ex": "dass-Satz als Subjekt → Nomen im Nominativ: verlagern → die Verlagerung. Das Subjekt des dass-Satzes wird zum Genitiv oder zu «durch …»."
     },
     {
-     "t": "tr",
+     "t": "nf",
      "lv": 3,
-     "q": "Damit die Ausbreitung des Virus verhindert wird, gelten strenge Regeln.",
-     "s": "Zur …",
+     "q": "[[Weil die Gesellschaft zunehmend altert und gleichzeitig weniger Kinder geboren werden]], wird sich der Fachkräftemangel weiter verschärfen.",
+     "pre": "",
+     "post": " wird sich der Fachkräftemangel weiter verschärfen.",
      "a": [
-      "Zur Verhinderung der Ausbreitung des Virus gelten strenge Regeln."
+      "Aufgrund der zunehmenden Alterung der Gesellschaft bei gleichzeitig sinkender Geburtenzahl",
+      "Wegen der zunehmenden Alterung der Gesellschaft bei gleichzeitig sinkender Geburtenzahl",
+      "Aufgrund der zunehmenden Alterung der Gesellschaft und der gleichzeitig sinkenden Geburtenzahl",
+      "Wegen der zunehmenden Alterung der Gesellschaft und der gleichzeitig sinkenden Geburtenzahl",
+      "Aufgrund der zunehmenden Alterung der Gesellschaft und der sinkenden Geburtenrate",
+      "Wegen der zunehmenden Alterung der Gesellschaft und der sinkenden Geburtenrate",
+      "Aufgrund der zunehmenden Alterung der Gesellschaft und der gleichzeitig sinkenden Geburtenrate",
+      "Wegen der zunehmenden Alterung der Gesellschaft und der gleichzeitig sinkenden Geburtenrate"
      ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Obwohl man sich intensiv bemüht hatte, wurde keine Lösung gefunden.",
-     "s": "Trotz …",
-     "a": [
-      "Trotz intensiver Bemühungen wurde keine Lösung gefunden."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Indem die Kommunikation verbessert wurde, sanken die Konflikte im Team.",
-     "s": "Durch …",
-     "a": [
-      "Durch die Verbesserung der Kommunikation sanken die Konflikte im Team.",
-      "Durch eine verbesserte Kommunikation sanken die Konflikte im Team."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Wie das Statistische Amt mitteilt, ist die Inflation gesunken.",
-     "s": "Laut …",
-     "a": [
-      "Laut Statistischem Amt ist die Inflation gesunken.",
-      "Laut dem Statistischen Amt ist die Inflation gesunken.",
-      "Laut Mitteilung des Statistischen Amts ist die Inflation gesunken."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Je mehr Menschen das Angebot nutzen, desto günstiger wird es.",
-     "s": "Mit …",
-     "a": [
-      "Mit zunehmender Nutzung des Angebots wird es günstiger.",
-      "Mit steigender Nutzung des Angebots wird es günstiger.",
-      "Mit zunehmender Nutzung wird das Angebot günstiger."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Weil er sich nicht rechtzeitig angemeldet hatte, durfte er nicht teilnehmen.",
-     "s": "Wegen …",
-     "a": [
-      "Wegen der verspäteten Anmeldung durfte er nicht teilnehmen.",
-      "Wegen seiner verspäteten Anmeldung durfte er nicht teilnehmen.",
-      "Wegen der nicht rechtzeitigen Anmeldung durfte er nicht teilnehmen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Während die Wahlen stattfanden, gab es Unruhen.",
-     "s": "Während …",
-     "a": [
-      "Während der Wahlen gab es Unruhen."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 1,
-     "q": "weil er Angst hatte → ___ Angst",
-     "o": [
-      "aus",
-      "bei",
-      "mit"
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Wenn Gefahr besteht, ruft man 112. → Bei ___ ruft man 112.",
-     "a": [
-      "Gefahr"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 1,
-     "q": "Nachdem der Unterricht zu Ende war, … → Nach dem ___ …",
-     "a": [
-      "Unterricht"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 1,
-     "q": "Während wir im Urlaub waren, regnete es ständig.",
-     "s": "Während …",
-     "a": [
-      "Während unseres Urlaubs regnete es ständig."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 2,
-     "q": "weil sie sich verspätet hatte → wegen ihrer ___",
-     "o": [
-      "Verspäten",
-      "Verspätung",
-      "Spätheit"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "gap",
-     "lv": 2,
-     "q": "Falls das Konzert ausfällt, … → Bei ___ des Konzerts …",
-     "a": [
-      "Ausfall"
-     ],
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 2,
-     "q": "Seitdem die Fabrik geschlossen wurde, sind viele arbeitslos.",
-     "s": "Seit …",
-     "a": [
-      "Seit der Schließung der Fabrik sind viele arbeitslos."
-     ],
-     "ex": ""
-    },
-    {
-     "t": "mc",
-     "lv": 3,
-     "q": "ohne dass jemand zustimmte → ohne ___",
-     "o": [
-      "Zustimmerung",
-      "Zustimmung",
-      "Zustimmen"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tr",
-     "lv": 3,
-     "q": "Als die neue Regierung gebildet wurde, hofften viele auf Reformen.",
-     "s": "Bei …",
-     "a": [
-      "Bei der Bildung der neuen Regierung hofften viele auf Reformen.",
-      "Mit der Bildung der neuen Regierung hofften viele auf Reformen."
-     ],
-     "ex": ""
+     "ex": "weil → aufgrund/wegen + Genitiv. altern → die Alterung, «weniger Kinder werden geboren» → die sinkende Geburtenzahl: zwei Gründe, zwei Nomen mit und."
     }
    ],
    "write": [

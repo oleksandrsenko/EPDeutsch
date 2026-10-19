@@ -1,0 +1,85 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "title",
+  "ru",
+  "theory",
+  "items"
+ ],
+ "properties": {
+  "title": {
+   "type": "string"
+  },
+  "ru": {
+   "type": "string"
+  },
+  "theory": {
+   "type": "string"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "t",
+     "q",
+     "o",
+     "ai",
+     "at",
+     "ex",
+     "hint",
+     "s",
+     "task",
+     "two"
+    ],
+    "properties": {
+     "t": {
+      "type": "string",
+      "enum": [
+       "mc",
+       "gap",
+       "tr",
+       "tf",
+       "open"
+      ]
+     },
+     "q": {
+      "type": "string"
+     },
+     "o": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ai": {
+      "type": "integer"
+     },
+     "at": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ex": {
+      "type": "string"
+     },
+     "hint": {
+      "type": "string"
+     },
+     "s": {
+      "type": "string"
+     },
+     "task": {
+      "type": "string"
+     },
+     "two": {
+      "type": "boolean"
+     }
+    }
+   }
+  }
+ }
+}

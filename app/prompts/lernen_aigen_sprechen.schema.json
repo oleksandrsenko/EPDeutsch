@@ -1,0 +1,50 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "title",
+  "ru",
+  "kind",
+  "impulse",
+  "leitfragen",
+  "fragen",
+  "redemittel"
+ ],
+ "properties": {
+  "title": {
+   "type": "string"
+  },
+  "ru": {
+   "type": "string"
+  },
+  "kind": {
+   "type": "string",
+   "enum": [
+    "These",
+    "Text",
+    "Zitat"
+   ]
+  },
+  "impulse": {
+   "type": "string"
+  },
+  "leitfragen": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "fragen": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "redemittel": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

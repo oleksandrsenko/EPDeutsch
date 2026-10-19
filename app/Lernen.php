@@ -211,6 +211,15 @@ class Lernen
             return $res;
         }
 
+        if ($p === '/aigen' && $method === 'POST') {   // тема от студента → теория и задания / текст / аудио / задание для разговора
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::request($d);
+            $res = Ai::ask($u, 'aigen', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 60, 'ИИ сейчас недоступен, попробуй ещё раз');
+            $mode = in_array($d['mode'] ?? '', AiGen::MODES, true) ? $d['mode'] : 'new';
+            return AiGen::normalize((string)$d['module'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2', $mode);
+        }
+
         if ($p === '/gwrite' && $method === 'POST') {
             self::needAiKey();
             $d = Http::json();
@@ -305,7 +314,7 @@ class Lernen
             self::needAiKey('Для разбора нужен ключ Claude (Настройки → Ключи)');
             $d = Http::json();
             $area = ($d['area'] ?? '') === 'frei' ? 'frei' : 'de';
-            $item = self::findItem($area, 'sprechen', Util::str($d['task'] ?? '', 40));
+            $item = ($d['task'] ?? '') === 'ai' ? AiGen::inlineTask($d['item'] ?? null) : self::findItem($area, 'sprechen', Util::str($d['task'] ?? '', 40));
             $text = Util::str($d['text'] ?? '', 4000);
             if (mb_strlen($text) < 3) { throw new ApiError(400, 'Ответ пустой — скажи хотя бы пару предложений'); }
             $hist = [];
@@ -317,7 +326,7 @@ class Lernen
             $phase = Util::str($d['phase'] ?? '', 20);
             $content = "ЗАДАНИЕ\n" . self::taskBrief($item) . "\n\nЭТАП: " . (['monolog' => 'монолог-презентация', 'dialog' => 'диалог с комиссией'][$phase] ?? 'разговор')
                 . "\n\nПРЕДЫДУЩИЙ РАЗГОВОР\n" . ($hist ? implode("\n", $hist) : '—') . "\n\nНОВЫЙ ОТВЕТ СТУДЕНТА (расшифровка)\n" . $text;
-            return Ai::ask($u, 'talk', self::TALK_MODEL, self::prompt($area === 'frei' ? 'lernen_talk_frei' : 'lernen_talk_epd'), $content,
+            return Ai::ask($u, 'talk', ($d['task'] ?? '') === 'ai' ? AiGen::MODEL : self::TALK_MODEL, self::prompt($area === 'frei' ? 'lernen_talk_frei' : 'lernen_talk_epd'), $content,
                 self::schema('lernen_talk'), (int)cfg('talk_max_tokens', 2500), 'low', 120, 'ИИ сейчас недоступен, попробуй ещё раз');
         }
 

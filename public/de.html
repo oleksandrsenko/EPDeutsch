@@ -84,7 +84,12 @@ h3{font-size:16px;margin:18px 0 8px}
 .bar{height:8px;border-radius:9px;background:var(--panel2);overflow:hidden}
 .bar i{display:block;height:100%;background:var(--c,var(--primary));border-radius:9px;transition:width .5s cubic-bezier(.2,.8,.2,1)}
 input[type=text],input[type=date],input[type=password],input:not([type]),select,textarea{border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:12px;padding:10px 12px;font:inherit;font-size:15px;outline:none;transition:border-color .15s}
+select{-webkit-appearance:none;appearance:none;padding-right:36px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238a8f98' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;background-size:16px}
 input:focus,select:focus,textarea:focus{border-color:var(--c,var(--primary))}
+.aibar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0 14px;padding:12px 14px;border:2px solid var(--line);border-radius:16px;background:var(--panel)}
+.aibar .at{flex:1;min-width:180px;font-size:13.5px;color:var(--muted)}.aibar .at b{display:block;color:var(--fg);font-size:15px}
+.aihist{display:flex;flex-direction:column;gap:6px;margin-top:10px}.aihist a{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:2px solid var(--line);border-radius:12px;text-decoration:none;color:var(--fg);font-size:14px}.aihist a:hover{border-color:var(--c,var(--primary))}
+.aihist small{color:var(--muted)}
 textarea{width:100%;resize:vertical;min-height:90px;line-height:1.5}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--fg);color:var(--bg);padding:11px 18px;border-radius:14px;font-weight:700;font-size:14px;opacity:0;transition:.25s;z-index:300;pointer-events:none;max-width:90vw}
 .toast.on{opacity:1;transform:translateX(-50%)}
@@ -580,7 +585,13 @@ async function api(p,o={}){
 // ---------- состояние ----------
 const ST={state:{},keys:{},user:null,me:null};
 const DATA={};
-async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("/data/"+k+".json",{credentials:"same-origin"}).then(r=>r.ok?r.json():{}).catch(()=>({}));return DATA[k]}
+// AIX: пока открыт экран «Практика с ИИ», в данные модуля подмешивается сгенерированный элемент с id "ai" (в списки он не попадает)
+let AIX=null;
+const AILIST={grammatik:"topics",lesen:"texts",hoeren:"items",sprechen:"tasks"};
+async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("/data/"+k+".json",{credentials:"same-origin"}).then(r=>r.ok?r.json():{}).catch(()=>({}));
+  const d=await DATA[k];
+  if(area==="de"&&AIX===name&&/\/aix$/.test(location.hash)){const it=get("aiitem-"+name);if(it)return {...d,[AILIST[name]]:[...(d[AILIST[name]]||[]).filter(x=>x.id!=="ai"),it]}}
+  return d}
 const get=(k,d)=>ST.state[k]===undefined?d:ST.state[k];
 const pend={};
 function save(k,v){
@@ -714,7 +725,8 @@ async function dispatch(a,b,c){
       if(b==="ai")return await vAIPractice(a);
       if(b==="progress")return await vModProgress(a);
       if(["hints","errors"].includes(b))return await vModExtra(a,b);
-      if(b==="all"){LVF=c||null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
+      if(b==="aix")return await vAIRun(a);
+      if(b==="all"){LVF=c?decodeURIComponent(c):null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
     }
     if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
     if(a==="lesen")return b?await vLesen("de",b):await vLesenList("de");
@@ -735,7 +747,7 @@ async function dispatch(a,b,c){
   }catch(e){console.error(e);app.innerHTML='<div class="empty">Не получилось открыть: '+esc(e.message)+'</div>'}
 }
 addEventListener("hashchange",route);
-const page=html=>{app.innerHTML='<div class="page">'+html+'</div>'};
+const page=html=>{app.innerHTML='<div class="page">'+(typeof aiBarHTML==="function"?aiBarHTML():"")+html+'</div>'};
 const crumb=(href,t)=>`<a class="crumb" href="${href}">← ${esc(t)}</a>`;
 
 // ---------- обзор ----------
@@ -965,6 +977,7 @@ function renderGram(){
   const body=$("#gbody");
   if(G.tab==="ai"){gramWrite(body);return}
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
+  if(t.ai&&!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // ИИ-набор: сразу все 10 заданий, без выбора ступени
   if(!G.queue.length||G.done){
     body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень. Задания идут от простых к сложным; ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;
     $$("[data-lv]").forEach(b=>b.onclick=()=>startGram(+b.dataset.lv));
@@ -1189,13 +1202,25 @@ async function vHoeren(area,id){
   bindLookup($("#script"),$("#side"));
   let playing=false,stopFlag=false;
   const setPlays=()=>$$(".plays i").forEach((x,i)=>x.classList.toggle("used",i<plays));
+  // запись от ИИ не лежит на сервере целиком: озвучиваем реплики по одной (голоса OpenAI, кэш по тексту) или голосом браузера
+  async function playAI(){
+    const L=it.lines||[],U={},vm={};let vi=0;
+    const want=i=>U[i]||(U[i]=(ST.keys.openai&&L[i]?api("/de/tts",{method:"POST",body:JSON.stringify({text:L[i][1],voice:(names[L[i][0]]||{}).voice,style:(names[L[i][0]]||{}).style})}).then(r=>r.url||null).catch(()=>null):Promise.resolve(null)));
+    for(let i=0;i<L.length&&!stopFlag;i++){
+      const [s,tx]=L[i];if(i===0)$("#pst").innerHTML='<span class="spin"></span> Готовлю голос…';
+      const u=await want(i);want(i+1);if(stopFlag)break;
+      $("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");
+      if(u){const a=new Audio(u);curAudio=a;await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
+      else{if(vm[s]==null)vm[s]=vi++;await browserSay(tx,vm[s])}
+    }
+  }
   $("#play").onclick=async()=>{
     if(playing){stopFlag=true;stopAudio();playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();return}
     playing=true;stopFlag=false;$("#pl").classList.add("playing");$("#play").innerHTML=pauseIcon();plays++;setPlays();
-    let url=null;
-    if(ST.keys.openai){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{let r;for(let n=0;n<60&&!stopFlag;n++){r=await api("/de/audio/"+area+"/"+id,{method:"POST"});if(!r.pending)break;$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… '+r.done+" из "+r.total}url=r&&r.url}catch(e){toast(e.message)}}
+    let url=null;if(id==="ai")await playAI();
+    if(ST.keys.openai&&id!=="ai"){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{let r;for(let n=0;n<60&&!stopFlag;n++){r=await api("/de/audio/"+area+"/"+id,{method:"POST"});if(!r.pending)break;$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… '+r.done+" из "+r.total}url=r&&r.url}catch(e){toast(e.message)}}
     if(url&&!stopFlag){const a=new Audio(url);curAudio=a;$("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
-    else if(!stopFlag){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
+    else if(!stopFlag&&id!=="ai"){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
     playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";
   };
   const draw=()=>{$("#tq").innerHTML=tasksHTML(it.tasks||[],ans,checked);if(!checked)bindTasks($("#tq"),it.tasks||[],ans,draw);
@@ -1260,7 +1285,7 @@ async function vSprechen(area,id){
   const key="s-"+area+"-"+id;if(area==="de")touchRecent("sprechen",id);
   page(`${crumb(base(area)+"sprechen","Sprechen")}
   <div class="talk" style="margin-top:10px">
-    <aside class="taskcard"><span class="tag lv">${esc(area==="de"?kindRu(t.kind):(t.kind||"Gespräch"))}</span><h2 style="margin:10px 0 4px">${esc(t.title)}</h2><div class="muted" style="font-size:13.5px">${esc(area==="de"?wtName(t.wt):(t.topic||""))}</div>${area==="de"&&KIND_RU[t.kind]?`<p style="font-size:13.5px;margin:8px 0 0"><b>Что делать:</b> ${esc(KIND_RU[t.kind][2])}</p>`:""}
+    <aside class="taskcard"><span class="tag lv">${esc(area==="de"?kindRu(t.kind):(t.kind||"Gespräch"))}</span><h2 style="margin:10px 0 4px">${esc(t.title)}</h2><div class="muted" style="font-size:13.5px">${esc(area==="de"&&t.id!=="ai"?wtName(t.wt):(t.topic||""))}</div>${area==="de"&&KIND_RU[t.kind]?`<p style="font-size:13.5px;margin:8px 0 0"><b>Что делать:</b> ${esc(KIND_RU[t.kind][2])}</p>`:""}
       ${t.situation?`<div class="imp">${esc(t.situation)}</div>`:""}${t.impulse?`<div class="imp">${esc(t.impulse)}</div>`:""}${chartHTML(t.chart)}
       ${t.leitfragen?`<b style="font-size:14px">Leitfragen</b><ol>${t.leitfragen.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
       ${t.redemittel?`<b style="font-size:14px">Redemittel</b><div class="rm">${t.redemittel.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}
@@ -1284,7 +1309,7 @@ async function vSprechen(area,id){
     th.insertAdjacentHTML("beforeend",`<div class="bub me"><div class="who">Ты</div><div class="de">${esc(text)}</div></div><div class="fbk" id="pending"><span class="spin"></span> Разбираю ответ…</div>`);
     $("#pending").scrollIntoView({behavior:"smooth",block:"center"});
     try{
-      const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,text,phase:SP.phase,history:SP.turns})});
+      const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,item:t.id==="ai"?t:undefined,text,phase:SP.phase,history:SP.turns})});
       SP.turns.push({role:"me",text:r.transcript||text});
       $("#pending").outerHTML=fbHTML(r);
       addEx(r.reply_de,r.reply_ru);
@@ -1422,34 +1447,70 @@ async function vModHome(k){
   <h2 class="h-sec">Темы <small>${items.length} тем · ${items.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</small></h2>${gramListHTML("de",{topics:items})}`
   :`${k==="sprechen"?`<h2 class="h-sec">Что бывает на устном экзамене</h2><div class="kindinfo">${["Grafik","Zitat","Text","These"].map(kd=>`<div style="--c:${MOD[k].c}"><span class="ic">${ic(KIND_RU[kd][1],17)}</span><span><b>${KIND_RU[kd][0]}</b><small>${KIND_RU[kd][2]}</small></span></div>`).join("")}</div>`:""}
   <h2 class="h-sec">Темы <small>как в Wörter · ${items.length} ${plural(items.length,...({lesen:["текст","текста","текстов"],hoeren:["аудио","аудио","аудио"],sprechen:["задание","задания","заданий"]}[k]))}</small></h2>${topicCards(k,items)}`}
-  <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему, ИИ придумает сложные задания с подсказками и проверит твой ответ.</p></div></a>`);
+  <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему: ИИ даст теорию или текст или аудио и задания по ней.</p></div></a>`);
 }
-// ---------- практика с ИИ: тема от тебя, задания от ИИ ----------
+// ---------- практика с ИИ: тема от тебя → теория и задания / текст / аудио / разговор (Claude Haiku 5.5) ----------
+// ИИ отдаёт данные в формате обычных заданий модуля, поэтому показывает их тот же экран (id "ai"), а над ним стоит панель «Ещё / Сложнее / Легче».
+const AIM={
+  grammatik:{go:"Создать теорию и 10 заданий",ph:"например: Konjunktiv II в прошедшем, Passiversatz, Relativsätze",lead:"Напиши тему: ИИ коротко объяснит её и даст 10 заданий. Потом можно попросить ещё, сложнее или легче."},
+  lesen:{go:"Создать текст и задания",ph:"например: цифровизация в университете, аренда жилья в Вене",lead:"Напиши тему: ИИ напишет статью в стиле der Standard и задания к ней, как на экзамене. Слова из текста переводятся по выделению."},
+  hoeren:{go:"Создать аудио и задания",ph:"например: тихие часы в доме, стажировка за границей",lead:"Напиши тему: ИИ придумает запись (интервью, репортаж, беседа), озвучит её и даст задания. Слушай два раза."},
+  sprechen:{go:"Создать тему для разговора",ph:"например: социальные сети и подростки, экология в городе",lead:"Напиши тему: получишь задание как на устном экзамене. Говоришь, ИИ разбирает ошибки и задаёт вопросы комиссии, и вы разговариваете дальше."}
+};
+const AIDIFF=["очень легко","легче обычного","обычная","сложнее обычного","очень сложно"];
+const AIKEY={grammatik:"g-de-ai",lesen:"l-de-ai",hoeren:"h-de-ai",sprechen:"s-de-ai"};
+const aiState=k=>{const s=get("ai-"+k,null)||{};return {topic:s.topic||"",level:s.level||"B2",diff:s.diff||0,hist:s.hist||[]}};
+// mode: new | more | harder | easier. Для new тема и уровень берутся из параметров, для остальных остаются прежними
+async function aiGenerate(k,mode,topic,level){
+  const st=aiState(k),old=get("aiitem-"+k,null);
+  if(mode==="new"){st.topic=topic;st.level=level;st.diff=0}
+  else{if(mode==="harder")st.diff=Math.min(2,st.diff+1);if(mode==="easier")st.diff=Math.max(-2,st.diff-1)}
+  const prev=mode==="new"||!old?[]:k==="grammatik"?(old.items||[]).map(x=>x.q):[old.title||""];
+  const r=await api("/de/aigen",{method:"POST",body:JSON.stringify({module:k,topic:st.topic,level:st.level,diff:st.diff,mode,prev})});
+  r.ai=true;
+  if(k==="grammatik"&&mode!=="new"&&old){r.theory=old.theory||"";r.title=old.title||r.title;r.ru=old.ru||r.ru}   // теория та же, меняются только задания
+  save("aiitem-"+k,r);
+  // чистый лист для новых заданий: ответы и отметки прошлых не переносятся
+  if(k==="grammatik")save(AIKEY[k],mode==="new"?{r:{}}:{r:{},seenTheory:1});else if(k==="sprechen")save(AIKEY[k],{n:0,best:null,hist:[]});else save(AIKEY[k],null);
+  st.hist=[{topic:st.topic,level:st.level}].concat(st.hist.filter(x=>x.topic!==st.topic)).slice(0,8);
+  save("ai-"+k,st);
+  return r;
+}
 async function vAIPractice(k){
   header(k);setC(MOD[k].c);
-  const K="ai-"+k,st=get(K,{topic:"",level:"B2",tasks:[],ans:{},res:{}});
-  st.ans=st.ans||{};st.res=st.res||{};
-  const draw=()=>{
-    page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">Назови тему, и ИИ придумает три задания от B2 к C1 с подсказками. Ответ проверяет Claude.</p>
-    <div class="card"><div class="field"><label>Тема</label><input id="aiT" value="${esc(st.topic)}" placeholder="${k==="grammatik"?"например: Konjunktiv II в прошедшем":"например: цифровизация в университете"}"></div>
-     <div class="row"><select id="aiL">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} Придумать задания</button></div></div>
-    ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}
-    <div style="margin-top:16px">${(st.tasks||[]).map((t,i)=>`<div class="card aitask"><span class="tag lv">Задание ${i+1}</span><div class="tk" lang="de">${esc(t.task)}</div><details><summary class="muted" style="cursor:pointer">Перевод</summary><p>${esc(t.ru)}</p></details>
-      <b style="font-size:13.5px">Подсказки</b><ul>${(t.hints||[]).map(h=>`<li>${esc(h)}</li>`).join("")}</ul>
-      <textarea data-i="${i}" lang="de" spellcheck="false" placeholder="Schreib hier deine Antwort …">${esc(st.ans[i]||"")}</textarea>
-      <div class="row" style="margin-top:10px"><button class="btn primary" data-chk="${i}">${ic("spark",16)} Проверить</button></div><div id="aiR${i}">${st.res[i]?resHTML(st.res[i]):""}</div></div>`).join("")}</div>`);
-    $("#aiGo").onclick=async()=>{const topic=$("#aiT").value.trim(),level=$("#aiL").value;if(topic.length<3){toast("Напиши тему хотя бы в пару слов");return}
-      const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ думает…';
-      try{const r=await api("/de/aitasks",{method:"POST",body:JSON.stringify({module:k,topic,level,n:String(Date.now()%1e6)})});st.topic=topic;st.level=level;st.tasks=r.tasks||[];st.ans={};st.res={};save(K,st);draw()}
-      catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" Придумать задания"}};
-    $$(".aitask textarea").forEach(t=>t.oninput=()=>{st.ans[t.dataset.i]=t.value;save(K,st)});
-    $$("[data-chk]").forEach(b=>b.onclick=async()=>{const i=b.dataset.chk,text=($(`textarea[data-i="${i}"]`).value||"").trim();if(text.split(/\s+/).length<5){toast("Напиши хотя бы пару предложений");return}
-      b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
-      try{const r=await api("/de/gwrite",{method:"POST",body:JSON.stringify({topic:st.topic,task:st.tasks[i].task,text})});st.res[i]=r;save(K,st);logDone(k==="grammatik"?"g":"f",1);$("#aiR"+i).innerHTML=resHTML(r)}
-      catch(e){toast(e.message)}finally{b.disabled=false;b.innerHTML=ic("spark",16)+" Проверить"}});
-  };
-  draw();
+  const m=AIM[k],st=aiState(k),cur=get("aiitem-"+k,null);
+  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>
+   <div class="card"><div class="field"><label for="aiT">Тема</label><input id="aiT" value="${esc(st.topic)}" maxlength="200" placeholder="${esc(m.ph)}" autocomplete="off"></div>
+    <div class="row" style="margin-top:12px"><select id="aiL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} ${esc(m.go)}</button></div></div>
+   ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}
+   ${cur?`<h2 class="h-sec">Последнее</h2><div class="aihist" style="--c:${MOD[k].c}"><a href="#/${k}/aix"><span><b>${esc(cur.title||st.topic)}</b></span><small>продолжить →</small></a></div>`:""}
+   ${st.hist.length?`<h2 class="h-sec">Недавние темы</h2><div class="aihist" style="--c:${MOD[k].c}">${st.hist.map((x,i)=>`<a href="#" data-h="${i}"><span>${esc(x.topic)}</span><small>${esc(x.level)}</small></a>`).join("")}</div>`:""}`);
+  $$("[data-h]").forEach(a=>a.onclick=e=>{e.preventDefault();const x=st.hist[+a.dataset.h];$("#aiT").value=x.topic;$("#aiL").value=x.level;$("#aiT").focus()});
+  const go=async()=>{const topic=$("#aiT").value.trim();if(topic.length<3){toast("Напиши тему хотя бы в пару слов");$("#aiT").focus();return}
+    const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит… (10–25 секунд)';
+    try{await aiGenerate(k,"new",topic,$("#aiL").value);location.hash=`#/${k}/aix`}
+    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+m.go}};
+  $("#aiGo").onclick=go;$("#aiT").onkeydown=e=>{if(e.key==="Enter")go()};
 }
+async function vAIRun(k){
+  const it=get("aiitem-"+k,null);
+  if(!it){location.hash=`#/${k}/ai`;return}
+  AIX=k;
+  await ({grammatik:()=>vGram("de","ai"),lesen:()=>vLesen("de","ai"),hoeren:()=>vHoeren("de","ai"),sprechen:()=>vSprechen("de","ai")})[k]();
+}
+// панель над экраном ИИ-задания; page() добавляет её при каждой перерисовке (вкладки теории/упражнений тоже перерисовывают страницу)
+function aiBarHTML(){
+  const k=AIX;if(!k||!/\/aix$/.test(location.hash))return "";
+  const st=aiState(k),more={grammatik:"Ещё 10 заданий",lesen:"Другой текст",hoeren:"Другое аудио",sprechen:"Другое задание"}[k];
+  return `<div class="aibar" style="--c:${MOD[k].c}"><div class="at"><b>${esc(st.topic)}</b>${esc(st.level)} · сложность: ${AIDIFF[st.diff+2]}</div>
+    <button class="btn sm" data-aim="more">${ic("spark",14)} ${more}</button><button class="btn sm" data-aim="harder" ${st.diff>=2?"disabled":""}>Сложнее</button><button class="btn sm" data-aim="easier" ${st.diff<=-2?"disabled":""}>Легче</button><a class="btn sm" href="#/${k}/ai">Другая тема</a></div>`;
+}
+document.addEventListener("click",async e=>{
+  const b=e.target.closest&&e.target.closest("[data-aim]");if(!b||b.disabled)return;
+  const k=AIX,bar=b.parentNode,label=b.innerHTML;bar.querySelectorAll("button").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> ИИ готовит…';
+  try{await aiGenerate(k,b.dataset.aim);await vAIRun(k)}
+  catch(err){toast(err.message);bar.querySelectorAll("button").forEach(x=>x.disabled=false);b.innerHTML=label}
+});
 function resHTML(r){return `<div class="card gwres" style="margin-top:12px"><div class="row" style="gap:14px"><div class="gwsc" style="--p:${r.score*10}"><b>${r.score}</b><small>/10</small></div><div class="muted">${esc(r.comment||"")}</div></div>
   ${r.errors&&r.errors.length?`<h4>Ошибки</h4><div class="err-l">${r.errors.map(e=>`<div><s>${esc(e.wrong)}</s> → <ins>${esc(e.right)}</ins> <span class="muted">${esc(e.why)}</span></div>`).join("")}</div>`:`<p style="color:var(--good);font-weight:700">Ошибок нет!</p>`}
   <h4>Исправленный текст</h4><div class="corr" lang="de">${esc(r.corrected)}</div>${r.better?`<h4>Как сказать на C1</h4><div class="corr" lang="de">${esc(r.better)}</div>`:""}</div>`}

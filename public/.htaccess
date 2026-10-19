@@ -1,4 +1,5 @@
 # EPDeutsch: маршрутизация. Всё, чего нет на диске, идёт в index.php. Файлы (статика, аудио, data/*.json) отдаёт Apache сам.
+DirectorySlash Off
 DirectoryIndex index.php
 Options -Indexes
 

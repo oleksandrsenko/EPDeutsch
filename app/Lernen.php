@@ -248,6 +248,14 @@ class Lernen
             return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
         }
 
+        if ($p === '/gexam' && $method === 'POST') {   // пробный вариант Strukturen und Wortschatz
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::gexamRequest($d);
+            $res = Ai::ask($u, 'gexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 120, 'ИИ сейчас недоступен, попробуй ещё раз');
+            return ['items' => AiGen::gexamNormalize($res)];
+        }
+
         if ($p === '/hexam' && $method === 'POST') {   // пробный Hören (Teil 1 или Teil 2) как на экзамене
             self::needAiKey();
             $d = Http::json();
@@ -408,7 +416,7 @@ class Lernen
             self::needAiKey('Для разбора нужен ключ Claude (Настройки → Ключи)');
             $d = Http::json();
             $area = ($d['area'] ?? '') === 'frei' ? 'frei' : 'de';
-            $item = ($d['task'] ?? '') === 'ai' ? AiGen::inlineTask($d['item'] ?? null) : self::findItem($area, 'sprechen', Util::str($d['task'] ?? '', 40));
+            $item = in_array($d['task'] ?? '', ['ai', 'sex1', 'sex2'], true) ? AiGen::inlineTask($d['item'] ?? null) : self::findItem($area, 'sprechen', Util::str($d['task'] ?? '', 40));
             $text = Util::str($d['text'] ?? '', 4000);
             if (mb_strlen($text) < 3) { throw new ApiError(400, 'Ответ пустой — скажи хотя бы пару предложений'); }
             $hist = [];

@@ -1,0 +1,47 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "items"
+ ],
+ "properties": {
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "kind",
+     "dir",
+     "q",
+     "a",
+     "ex"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "enum": [
+       "nf",
+       "sf"
+      ]
+     },
+     "dir": {
+      "type": "string"
+     },
+     "q": {
+      "type": "string"
+     },
+     "a": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ex": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

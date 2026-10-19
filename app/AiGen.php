@@ -146,6 +146,44 @@ class AiGen
                 'voices' => $voices, 'lines' => $lines, 'tasks' => $tasks, 'words' => $words, 'minutes' => max(2, (int)round($words / 140))];
     }
 
+    /** Пробный вариант Strukturen und Wortschatz: 5 Umformen (nf) и 5 Satzanfänge (tr, свободное продолжение). */
+    public static function gexamRequest(array $d): array
+    {
+        $topic = Util::str($d['topic'] ?? '', 200);
+        $prev = [];
+        foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 20) as $x) { $x = Util::str($x, 160); if ($x !== '') { $prev[] = $x; } }
+        $content = "Тема: " . ($topic !== '' ? $topic : '(не указана)') . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
+        return [Lernen::prompt('lernen_gexam'), $content, Lernen::schema('lernen_gexam'), 5000];
+    }
+
+    public static function gexamNormalize(array $r): array
+    {
+        $nf = []; $sf = [];
+        foreach (array_slice(is_array($r['items'] ?? null) ? $r['items'] : [], 0, 16) as $x) {
+            if (!is_array($x)) { continue; }
+            $q = Util::str($x['q'] ?? '', 600);
+            $a = array_values(array_filter(array_map(fn($v) => Util::str($v, 300), is_array($x['a'] ?? null) ? array_slice($x['a'], 0, 10) : []), fn($v) => $v !== ''));
+            if ($q === '' || !$a) { continue; }
+            $ex = Util::str($x['ex'] ?? '', 400);
+            if (($x['kind'] ?? '') === 'nf') {
+                if (!preg_match('/^(.*?)\[\[(.+?)\]\](.*)$/su', $q, $m)) { continue; }
+                [$pre, $post] = [$m[1], $m[3]];
+                if ((($x['dir'] ?? '') === 'v2n')) {          // в ответ идёт Nominalgruppe: запятая у границы не нужна
+                    if (trim($pre) === '') { $post = ltrim($post, ', '); $post = ' ' . $post; }
+                    $pre = preg_replace('/,\s*$/u', ' ', $pre);
+                } else {                                      // в ответ идёт Nebensatz: запятая нужна
+                    if (trim($pre) === '' && !preg_match('/^\s*,/u', $post)) { $post = ',' . $post; }
+                }
+                if (count($nf) < 5) { $nf[] = ['t' => 'nf', 'lv' => 3, 'q' => $q, 'pre' => $pre, 'post' => $post, 'a' => $a, 'ex' => $ex, 'pts' => 2,
+                    'task' => 'Formen Sie den unterstrichenen Textteil um (Nebensatz, Infinitivkonstruktion, Passiv oder Nominalgruppe), ohne den Inhalt zu verändern']; }
+            } elseif (count($sf) < 5) {
+                $sf[] = ['t' => 'tr', 'lv' => 3, 'q' => $q, 's' => '', 'a' => $a, 'ex' => $ex, 'task' => 'Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.', 'free' => true, 'pts' => 3];
+            }
+        }
+        if (count($nf) < 4 || count($sf) < 4) { throw new ApiError(502, 'ИИ вернул неполный вариант, попробуй ещё раз'); }
+        return array_merge($nf, $sf);
+    }
+
     /** Приводит задания к формату data/de/*.json и отбрасывает битые. */
     private static function tasks($raw, array $types, int $max, bool $lv, bool $two = false, ?string $src = null): array
     {

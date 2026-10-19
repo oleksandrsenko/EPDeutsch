@@ -620,6 +620,7 @@ async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("
   if(area==="de"&&name==="grammatik"&&EXAM_T&&/\/pruefung$/.test(location.hash))return {...d,topics:[...(d.topics||[]).filter(x=>x.id!=="pruefung"),EXAM_T]};
   if(area==="de"&&name==="hoeren"&&/\/hoeren\/ex[12]$/.test(location.hash)){const a=[get("hexam-1",null),get("hexam-2",null)].filter(Boolean);if(a.length)return {...d,items:[...(d.items||[]).filter(x=>x.id!=="ex1"&&x.id!=="ex2"),...a]}}
   if(area==="de"&&name==="lesen"&&/\/lesen\/lex[12]$/.test(location.hash)){const a=[get("lexam-1",null),get("lexam-2",null)].filter(Boolean);if(a.length)return {...d,texts:[...(d.texts||[]).filter(x=>x.id!=="lex1"&&x.id!=="lex2"),...a]}}
+  if(area==="de"&&name==="sprechen"&&/\/sprechen\/sex[12]$/.test(location.hash)){const a=[get("sexam-1",null),get("sexam-2",null)].filter(Boolean);if(a.length)return {...d,tasks:[...(d.tasks||[]).filter(x=>x.id!=="sex1"&&x.id!=="sex2"),...a]}}
   if(area==="de"&&AIX===name&&/\/aix$/.test(location.hash)){const it=get("aiitem-"+name);if(it)return {...d,[AILIST[name]]:[...(d[AILIST[name]]||[]).filter(x=>x.id!=="ai"),it]}}
   return d}
 const get=(k,d)=>ST.state[k]===undefined?d:ST.state[k];
@@ -762,7 +763,7 @@ async function dispatch(a,b,c){
     if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
     if(a==="lesen")return !b||b==="pruefung"?await vLesenExam():await vLesen("de",b);
     if(a==="hoeren")return b==="pruefung"||!b?await vHoerenExam():b?await vHoeren("de",b):await vHoerenList("de");
-    if(a==="sprechen")return b?await vSprechen("de",b):await vSprechenList("de");
+    if(a==="sprechen")return !b||b==="pruefung"?await vSprechenExam():await vSprechen("de",b);
     if(a==="plan")return await vHome({plan:true});   // план теперь на обзоре, в блоке приветствия
     if(a==="settings")return await vSettings();
     if(a==="frei"){
@@ -1337,14 +1338,20 @@ function itemsByLevel(arr,area,kind,pref){
 }
 // «Strukturen und Wortschatz»: пробный вариант как на экзамене VWU (25 баллов): 5 × Umformen (по 2) + 5 × Satzanfänge fortsetzen (по 3)
 async function vPruefung(){
-  const gr=await data("de","grammatik"),pick=(a,n)=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b.slice(0,n)};
-  const nf=[].concat(...(gr.topics||[]).filter(x=>x.id==="nominal"||x.id==="verbal").map(x=>x.items.filter(i=>i.t==="nf"&&i.lv>=2))),fr=((gr.topics||[]).find(x=>x.id==="satzfort")||{items:[]}).items.filter(i=>i.free&&i.lv>=2);
-  const seen=new Set(),uniq=a=>a.filter(i=>!seen.has(i.q)&&seen.add(i.q));
-  const items=pick(uniq(nf),5).map(i=>({...i,pts:2,task:"Formen Sie den unterstrichenen Textteil um (Nebensatz, Infinitivkonstruktion, Passiv oder Nominalgruppe), ohne den Inhalt zu verändern"})).concat(pick(uniq(fr),5).map(i=>({...i,pts:3})));
-  EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 5 заданий Umformen (по 2 балла) и 5 Satzanfänge (по 3 балла), всего 25",level:"B2–C1",tag:"Prüfung",items,
-    theory:"<p>Как на EPD (VWU): <b class='k'>10 заданий, 25 баллов</b>. В первой части (Umformen) перестрой подчёркнутое, вписывая только пропуск. Во второй (Satzanfänge) продолжи предложение: 2 балла за верное простое продолжение, 3 за комплексное. Чтобы сдать, нужно минимум 12 баллов.</p>"};
   header("grammatik");setC(MOD.grammatik.c);
-  return await vGram("de","pruefung");
+  const can=!!(ST.keys&&ST.keys.anthropic),cur=get("gexam",null);
+  const build=items=>{EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 5 заданий Umformen (по 2 балла) и 5 Satzanfänge (по 3 балла), всего 25. Задания создал ИИ",level:"B2–C1",tag:"Prüfung",items,
+    theory:"<p>Как на EPD (VWU): <b class='k'>10 заданий, 25 баллов</b>. В первой части (Umformen) перестрой подчёркнутое, вписывая только пропуск. Во второй (Satzanfänge) продолжи предложение: 2 балла за верное простое продолжение, 3 за комплексное. Чтобы сдать, нужно минимум 12 баллов.</p>"}};
+  const start=()=>{build(get("gexam").items);return vGram("de","pruefung")};
+  page(`${crumb("#/grammatik","Grammatik")}<h1>Пробный вариант: Strukturen und Wortschatz</h1>
+   <p class="lead">10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Каждый вариант ИИ создаёт заново; продолжения тоже оценивает ИИ (2–3 балла).</p>
+   <div class="card"><div class="field"><label for="geT">Тема (необязательно)</label><input id="geT" maxlength="200" placeholder="например: образование, экология, работа. Пусто: ИИ выберет сам" autocomplete="off"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="geGo" ${can?"":"disabled"}>${ic("spark",16)} Создать новый вариант</button>${cur?`<button class="btn" id="geOld">Открыть последний</button>`:""}</div>
+    <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится около минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>`);
+  $("#geGo").onclick=async()=>{const b=$("#geGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ составляет вариант…';
+    try{const prev=cur?cur.items.map(x=>x.q):[];const r=await api("/de/gexam",{method:"POST",body:JSON.stringify({topic:$("#geT").value.trim(),prev})});save("gexam",{items:r.items});save("g-de-pruefung",{r:{}});G=null;await start()}
+    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" Создать новый вариант"}};
+  const o=$("#geOld");if(o)o.onclick=()=>{G=null;start()};
 }
 // виды заданий EPD, которые ИИ добавляет к любому тексту Lesen
 const LKINDS=[["rfb","Richtig / Falsch + Beleg","5 утверждений · 10 б."],["mc3","Single-Choice","6 вопросов · 6 б."],["qs","Kurzantworten","до 4 слов · оценивает ИИ"],["ref","Bezugswörter","на что ссылается слово"],["who","Wer sagt was?","чьё это мнение"],["para","Umschreibungen","найди слово по определению"],["sum","Paralleltext","8 пропусков, слова из текста"],["box","Wortkasten","8 пропусков, 11 слов"],["cl4","Слово a–d","6 пропусков, 4 варианта"]];
@@ -1534,6 +1541,25 @@ const REC={active:false,rec:null,chunks:[],stream:null,sr:null,live:"",
   },
   cancel(){this.active=false;try{this.rec&&this.rec.state!=="inactive"&&this.rec.stop()}catch(e){}try{this.stream&&this.stream.getTracks().forEach(t=>t.stop())}catch(e){}try{this.sr&&this.sr.stop()}catch(e){}}
 };
+// ---------- Пробный вариант Sprechen как на экзамене: два задания на выбор, подготовка, разговор с экзаменатором; задания создаёт ИИ ----------
+async function vSprechenExam(){
+  header("sprechen");setC("var(--c-sp)");
+  const cfg=get("sexam-cfg",{topic:"",level:"B2"}),p1=get("sexam-1",null),p2=get("sexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
+  const row=(n,p)=>{if(!p)return "";const r=get("s-de-sex"+n,null);return `<a href="#/sprechen/sex${n}"><span><b>Задание ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${esc(kindRu(p.kind))}${p.topic?" · "+esc(p.topic):""}</small></span><small>${r&&r.n?`${r.n} ${plural(r.n,"попытка","попытки","попыток")}${r.best?` · лучшая ${r.best}`:""} →`:"выбрать →"}</small></a>`};
+  page(`<h1>Sprechen</h1>
+   <p class="lead">Как на устном экзамене: тебе дают два задания на разные темы (график, цитата, текст или тезис). Выбери одно, подготовься 15–20 минут, потом говоришь и отвечаешь на вопросы комиссии. Задания ИИ создаёт заново для каждого варианта.</p>
+   <div class="card"><div class="field"><label for="sxT">Темы (необязательно)</label><input id="sxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: экология, социальные сети. Пусто: ИИ выберет две разные темы" autocomplete="off"></div>
+    <div class="row" style="margin-top:12px"><select id="sxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="sxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
+    <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится около 30 секунд.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
+   ${p1||p2?`<h2 class="h-sec">Твой вариант: выбери одно из двух</h2><div class="aihist" style="--c:var(--c-sp)">${row(1,p1)}${row(2,p2)}</div>`:""}
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-sp)"><a href="#/sprechen/ai"><span><b>Практика с ИИ: задание по твоей теме</b></span><small>открыть →</small></a><a href="#/sprechen/all"><span><b>Архив старых заданий</b></span><small>открыть →</small></a><a href="#/sprechen/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
+  $("#sxGo").onclick=async()=>{const topic=$("#sxT").value.trim(),level=$("#sxL").value,b=$("#sxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит два задания…';
+    save("sexam-cfg",{topic,level});
+    const rnd=WT.map(t=>t[1]).sort(()=>Math.random()-.5),tp=[topic||rnd[0],topic?topic+" (другой аспект)":rnd[1]],prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
+    try{const [a,c]=await Promise.all(tp.map((t,i)=>api("/de/aigen",{method:"POST",body:JSON.stringify({module:"sprechen",topic:t,level,diff:0,mode:"new",prev})})));
+      a.id="sex1";c.id="sex2";save("sexam-1",a);save("sexam-2",c);save("s-de-sex1",null);save("s-de-sex2",null);vSprechenExam()}
+    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
+}
 async function vSprechenList(area){
   header(area==="frei"?"frei":"sprechen");setC(area==="frei"?"var(--c-f)":"var(--c-sp)");
   const d=await data(area,"sprechen");
@@ -1553,7 +1579,7 @@ async function vSprechen(area,id){
   const key="s-"+area+"-"+id;if(area==="de")touchRecent("sprechen",id);
   page(`${crumb(base(area)+"sprechen","Sprechen")}
   <div class="talk" style="margin-top:10px">
-    <aside class="taskcard"><span class="tag lv">${esc(area==="de"?kindRu(t.kind):(t.kind||"Gespräch"))}</span><h2 style="margin:10px 0 4px">${esc(t.title)}</h2><div class="muted" style="font-size:13.5px">${esc(area==="de"&&t.id!=="ai"?wtName(t.wt):(t.topic||""))}</div>${area==="de"&&KIND_RU[t.kind]?`<p style="font-size:13.5px;margin:8px 0 0"><b>Что делать:</b> ${esc(KIND_RU[t.kind][2])}</p>`:""}
+    <aside class="taskcard"><span class="tag lv">${esc(area==="de"?kindRu(t.kind):(t.kind||"Gespräch"))}</span><h2 style="margin:10px 0 4px">${esc(t.title)}</h2><div class="muted" style="font-size:13.5px">${esc(area==="de"&&!/^(ai|sex[12])$/.test(t.id)?wtName(t.wt):(t.topic||""))}</div>${area==="de"&&KIND_RU[t.kind]?`<p style="font-size:13.5px;margin:8px 0 0"><b>Что делать:</b> ${esc(KIND_RU[t.kind][2])}</p>`:""}
       ${t.situation?`<div class="imp">${esc(t.situation)}</div>`:""}${t.impulse?`<div class="imp">${esc(t.impulse)}</div>`:""}${chartHTML(t.chart)}
       ${t.leitfragen?`<b style="font-size:14px">Leitfragen</b><ol>${t.leitfragen.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
       ${t.redemittel?`<b style="font-size:14px">Redemittel</b><div class="rm">${t.redemittel.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}
@@ -1577,7 +1603,7 @@ async function vSprechen(area,id){
     th.insertAdjacentHTML("beforeend",`<div class="bub me"><div class="who">Ты</div><div class="de">${esc(text)}</div></div><div class="fbk" id="pending"><span class="spin"></span> Разбираю ответ…</div>`);
     $("#pending").scrollIntoView({behavior:"smooth",block:"center"});
     try{
-      const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,item:t.id==="ai"?t:undefined,text,phase:SP.phase,history:SP.turns})});
+      const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,item:/^(ai|sex[12])$/.test(t.id)?t:undefined,text,phase:SP.phase,history:SP.turns})});
       SP.turns.push({role:"me",text:r.transcript||text});
       if(area==="de")(r.errors||[]).slice(0,8).forEach(e=>logErr("sprechen",{ref:t.id,title:t.title,href:"#/sprechen/"+t.id,q:e.wrong,ans:e.wrong,right:e.right,why:e.why}));
       $("#pending").outerHTML=fbHTML(r);

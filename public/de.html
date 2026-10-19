@@ -651,10 +651,13 @@ function save(k,v){
 }
 function flush(k,keep){clearTimeout(pend[k]);delete pend[k];return fetch("/api/de/state/"+k,{method:"PUT",credentials:"same-origin",keepalive:!!keep,headers:{"Content-Type":"application/json","X-USD":"1"},body:JSON.stringify({v:ST.state[k]})}).catch(()=>{})}
 addEventListener("pagehide",()=>Object.keys(pend).forEach(k=>flush(k,true)));
+// XP за занятия: общий счёт по всем модулям (ключ xp в состоянии; сервер суммирует его с Wörter и Schreiben)
+const XP_PER={f:1,g:2,gk:3,s:15,l:20,h:20};
+function addXp(n){if(n>0)save("xp",(+get("xp",0)||0)+n)}
 function logDone(kind,val){
   const L=get("log",{}),t=today(),d=L[t]||(L[t]={});
-  if(kind==="l"||kind==="h"){d[kind]=d[kind]||[];if(!d[kind].includes(val))d[kind].push(val)}
-  else d[kind]=(d[kind]||0)+(val||1);
+  if(kind==="l"||kind==="h"){d[kind]=d[kind]||[];if(!d[kind].includes(val)){d[kind].push(val);addXp(XP_PER[kind])}}
+  else{d[kind]=(d[kind]||0)+(val||1);addXp((XP_PER[kind]||0)*(val||1))}
   Object.keys(L).forEach(x=>{if(+x<t-120)delete L[x]});
   save("log",L);
 }
@@ -678,6 +681,7 @@ async function say(text,opt={}){
 // [ключ, подпись, адрес, иконка] — нижняя панель на телефоне
 const SUB_EPD=[["home","Обзор","#/","home"],["grammatik","Grammatik","#/grammatik","gram"],["lesen","Lesen","#/lesen","book"],["hoeren","Hören","#/hoeren","ear"]];
 const SUB_FREI=[["karten","Карточки","#/frei/karten","cards","var(--c-f)"],["grammatik","Грамматика","#/frei/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/frei/lesen","book","var(--c-l)"],["hoeren","Hören","#/frei/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/frei/sprechen","mic","var(--c-sp)"],["videos","Видео","#/frei/videos","video","var(--c-f)"]];
+const navFriends=c=>`<a href="#" data-ep-friends style="--c:${c}"><span class="ni">${EP.icon("users",18)}</span>Друзья и XP</a>`;
 const navItem=(href,t,i,c,cur,sub)=>`<a href="${href}" style="--c:${c}"${cur?' aria-current="page"':""}><span class="ni">${EP.icon(i,18)}</span>${sub?`<span class="nav-l"><b>${t}</b><small>${sub}</small></span>`:t}</a>`;
 let LASTMOD=null;
 const MODNAV={grammatik:["Grammatik","gram","Конструкции, теория и упражнения"],lesen:["Lesen","book","Тексты и задания как на EPD"],hoeren:["Hören","ear","Аудио и задания"],sprechen:["Sprechen","mic","Монолог и диалог с ИИ"]};
@@ -697,16 +701,16 @@ function header(cur){
   const sw=EP.switcher(k==="settings"?"home":k);
   const foot=`<hr>${EP.tip(inMod?k:k==="settings"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
   let body="";
-  if(frei)body=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","home",mc,h.length===1)+SUB_FREI.map(([key,t,href,i])=>navItem(href,t,i,mc,h.length>1&&key===on)).join("")+`<div class="nav-gt">Мой путь</div>`+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
+  if(frei)body=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","home",mc,h.length===1)+SUB_FREI.map(([key,t,href,i])=>navItem(href,t,i,mc,h.length>1&&key===on)).join("")+`<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
   else if(inMod){
     const [nm,ico]=MODNAV[k];
     const task=at(`#/${k}/all`)||(k==="grammatik"&&/^#\/grammatik\/(?!ai|errors|progress|all|hints)/.test(H))||(k!=="grammatik"&&new RegExp(`^#/${k}/(?!ai|errors|progress|all|hints)`).test(H));
-    body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,"Главная","home",mc,H==="#/"+k)+navItem(`#/${k}/all`,k==="grammatik"?"Темы и упражнения":"Задания по темам",ico,mc,task)+navItem(`#/${k}/hints`,k==="grammatik"?"Как учить грамматику":"Как решать",  "bulb",mc,at(`#/${k}/hints`))+
+    body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,k==="grammatik"?"Главная":"Пробный вариант",k==="grammatik"?"home":"target",mc,H==="#/"+k||H==="#/"+k+"/pruefung")+(k==="grammatik"?navItem("#/grammatik/pruefung","Пробный вариант","target",mc,at("#/grammatik/pruefung")):"")+navItem(`#/${k}/all`,k==="grammatik"?"Темы и упражнения":"Задания по темам",ico,mc,task)+navItem(`#/${k}/hints`,k==="grammatik"?"Как учить грамматику":"Как решать",  "bulb",mc,at(`#/${k}/hints`))+
       `<div class="nav-gt">С ИИ</div>`+navItem(`#/${k}/ai`,"Практика с ИИ","spark",mc,at(`#/${k}/ai`),"дай тему, ИИ придумает задания")+
-      `<div class="nav-gt">Мой путь</div>`+navItem(`#/${k}/errors`,"Ошибки","target",mc,at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс и настройки","chart",mc,at(`#/${k}/progress`));
+      `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem(`#/${k}/errors`,"Ошибки","target",mc,at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс и настройки","chart",mc,at(`#/${k}/progress`));
   }else body=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home",mc,route==="home")+
       `<div class="nav-gt">С ИИ</div>`+navItem("/woerter#tab=practice","Практика слов с ИИ","spark",mc,false,"пиши, ИИ проверит")+
-      `<div class="nav-gt">Мой путь</div>`+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
+      `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
   $("#nav").innerHTML=sw+body+foot;
   $$("#nav a").forEach(a=>{if(a.querySelector(".nav-l")&&/ИИ/.test(a.textContent))a.classList.add("nav-ai")});
   if(ST.user){const ub=ST.user;$("#ubtn").innerHTML=`<span class="ubw">${EP.uava(ub,34)}${ST.me&&ST.me.owner?`<i class="obadge" title="Владелец"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg></i>`:""}</span>`}
@@ -1362,7 +1366,7 @@ async function vPruefung(){
   const build=items=>{EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 5 заданий Umformen (по 2 балла) и 5 Satzanfänge (по 3 балла), всего 25. Задания создал ИИ",level:"B2–C1",tag:"Prüfung",items,
     theory:"<p>Как на EPD (VWU): <b class='k'>10 заданий, 25 баллов</b>. В первой части (Umformen) перестрой подчёркнутое, вписывая только пропуск. Во второй (Satzanfänge) продолжи предложение: 2 балла за верное простое продолжение, 3 за комплексное. Чтобы сдать, нужно минимум 12 баллов.</p>"}};
   const start=()=>{build(get("gexam").items);return vGram("de","pruefung")};
-  page(`${crumb("#/grammatik","Grammatik")}<h1>Пробный вариант: Strukturen und Wortschatz</h1>
+  page(`${crumb("#/grammatik","Grammatik")}<h1>Пробный вариант: Strukturen und Wortschatz</h1>${tutHTML("pruefung")}
    <p class="lead">10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Каждый вариант ИИ создаёт заново; продолжения тоже оценивает ИИ (2–3 балла).</p>
    <div class="card"><div class="field"><label for="geT">Тема (необязательно)</label><input id="geT" maxlength="200" placeholder="например: образование, экология, работа. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><button class="btn primary" id="geGo" ${can?"":"disabled"}>${ic("spark",16)} Создать новый вариант</button>${cur?`<button class="btn" id="geOld">Открыть последний</button>`:""}</div>
@@ -1380,7 +1384,7 @@ async function vLesenExam(){
   const cfg=get("lexam-cfg",{topic:"",level:"B2"}),p1=get("lexam-1",null),p2=get("lexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
   const r1=p1&&get("l-de-lex1",null),r2=p2&&get("l-de-lex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
   const row=(n,p,r)=>p?`<a href="#/lesen/lex${n}"><span><b>Text ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${(p.tasks||[]).length} заданий · ${p.words} слов · ~${p.minutes} мин</small></span><small>${r?`${fmtPts(r.s)}/${fmtPts(r.m)} · пройти снова →`:"начать →"}</small></a>`:"";
-  page(`<h1>Lesen</h1>
+  page(`<h1>Lesen</h1>${tutHTML("pruefung")}
    <p class="lead">Как на экзамене: два текста в стиле der Standard (по 900–1100 слов), к каждому richtig/falsch с Belegsatz, Single-Choice и Kurzantworten, ко второму ещё Wortkasten и Wer sagt was. Тексты и задания ИИ создаёт заново для каждого варианта. Любой текст можно дополнить другими типами заданий.</p>
    <div class="card"><div class="field"><label for="lxT">Темы (необязательно)</label><input id="lxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, образование. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="lxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="lxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
@@ -1453,7 +1457,7 @@ async function vHoerenExam(){
   const cfg=get("hexam-cfg",{topic:"",level:"B2"}),p1=get("hexam-1",null),p2=get("hexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
   const r1=p1&&get("h-de-ex1",null),r2=p2&&get("h-de-ex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
   const row=(n,p,r,what)=>p?`<a href="#/hoeren/ex${n}"><span><b>Teil ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${what} · ~${p.minutes} мин · ${p.words} слов</small></span><small>${r?`${r.s}/${r.m} · пройти снова →`:"начать →"}</small></a>`:"";
-  page(`<h1>Hören</h1>
+  page(`<h1>Hören</h1>${tutHTML("pruefung")}
    <p class="lead">Задания как на экзамене, 15 вопросов, каждый вариант ИИ создаёт заново.  Teil 1: семь коротких записей на разные темы, к каждой вопрос с вариантами a–d («о чём говорится»). Teil 2: одна запись на 7–8 минут и конспект, в который нужно вписать услышанные слова (8 пропусков). Каждую запись слушаешь дважды. Ответы можно проверить, а текст записи открывается после проверки.</p>
    <div class="card"><div class="field"><label for="hxT">Темы (необязательно)</label><input id="hxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, экология. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="hxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="hxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
@@ -1565,7 +1569,7 @@ async function vSprechenExam(){
   header("sprechen");setC("var(--c-sp)");
   const cfg=get("sexam-cfg",{topic:"",level:"B2"}),p1=get("sexam-1",null),p2=get("sexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
   const row=(n,p)=>{if(!p)return "";const r=get("s-de-sex"+n,null);return `<a href="#/sprechen/sex${n}"><span><b>Задание ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${esc(kindRu(p.kind))}${p.topic?" · "+esc(p.topic):""}</small></span><small>${r&&r.n?`${r.n} ${plural(r.n,"попытка","попытки","попыток")}${r.best?` · лучшая ${r.best}`:""} →`:"выбрать →"}</small></a>`};
-  page(`<h1>Sprechen</h1>
+  page(`<h1>Sprechen</h1>${tutHTML("pruefung")}
    <p class="lead">Как на устном экзамене: тебе дают два задания на разные темы (график, цитата, текст или тезис). Выбери одно, подготовься 15–20 минут, потом говоришь и отвечаешь на вопросы комиссии. Задания ИИ создаёт заново для каждого варианта.</p>
    <div class="card"><div class="field"><label for="sxT">Темы (необязательно)</label><input id="sxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: экология, социальные сети. Пусто: ИИ выберет две разные темы" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="sxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="sxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
@@ -1660,6 +1664,18 @@ async function vSprechen(area,id){
 }
 
 // ---------- Свободный немецкий ----------
+// ---------- обучение: подробные подсказки для вкладок без собственного руководства ----------
+const TUT={
+  karten:[["Что это","Колоды карточек с живыми словами и выражениями. Слева немецкое слово или фраза, на обороте перевод, пример и пометка (например, что слово австрийское)."],["Как учить","Открой колоду, нажми «Учить». Прочитай немецкую сторону и вспомни перевод, потом переверни карточку (нажми на неё или пробел). Знаешь: кнопка «Знаю» или 2. Не знаешь: «Ещё раз» или 1, карточка вернётся в конце круга."],["Как работают повторения","Карточка, которую ты знаешь, приходит снова через 1, 3, 7, 14, 30 и 60 дней. Ошибся: она возвращается в тот же день. На сегодня показываем все повторения и не больше 15 новых карточек."],["Разделы","B1 для основы, Österreich для австрийского немецкого, «Общий немецкий» для живой речи. Переключай фильтр над списком."],["Совет","Произноси слово вслух кнопкой «Произнести» и составляй своё предложение с каждым новым словом. Лучше 10 минут каждый день."]],
+  grammatik:[["Что это","Короткие темы с объяснением по-русски и упражнениями. Уровень B1 для начала, дальше разговорные темы и особенности языка."],["Как учить","Сначала прочитай теорию (вкладка «Теория»), потом иди на «Упражнения». Выбери ступень: от простых заданий к сложным. Ответ можно проверить сразу, объяснение покажет, почему так."],["Ошибки","Неверные задания возвращаются в конце круга. Раздел «Ошибки» собирает всё, что ещё не получилось."],["Совет","Решай по 15 заданий за подход и перечитывай таблицу в теории, если ошибаешься два раза подряд."]],
+  lesen:[["Что это","Тексты для чтения с заданиями. Выдели слово или фразу двойным кликом и получишь перевод прямо на месте; слова можно сохранить."],["Как работать","Прочитай заголовок и подводку, потом весь текст. Задания идут по порядку текста: richtig/falsch/нет в тексте, выбор ответа, короткий ответ. Нажми «Проверить»: открытые ответы оценит ИИ."],["Разделы","B1 для спокойного чтения, Österreich для австрийских реалий и «Общий немецкий» для разных тем."],["Совет","Сначала пойми общий смысл, не переводя всё подряд. Незнакомые слова смотри после первого чтения."]],
+  hoeren:[["Что это","Записи с голосами и задания к ним. Первый раз слушаешь для общего смысла, второй для деталей."],["Как работать","Нажми «Слушать». Голоса нейросетевые (нужен ключ OpenAI), без ключа звучит голос браузера. Ответь на задания, нажми «Проверить», потом открой текст записи и сверь."],["Совет","Записывай ключевые слова и цифры. Перед вторым прослушиванием посмотри на вопросы."]],
+  sprechen:[["Что это","Темы для разговора. Ты говоришь в микрофон (или пишешь ответ), ИИ разбирает ошибки, подсказывает обороты и задаёт вопросы."],["Как работать","Выбери тему, прочитай задание, подготовься (есть таймер) и нажми на микрофон. Говори 1–2 минуты, потом нажми ещё раз. Получишь исправленный текст и совет, как сказать лучше."],["Совет","Говори вслух полными предложениями, даже если не уверен. Ошибки нужны для обучения."]],
+  videos:[["Что это","Подборка каналов, радио, фильмов и подкастов для немецкого. Ссылки открываются в новой вкладке."],["Как пользоваться","Начни с материалов своего уровня (пометка рядом с названием). Включай субтитры на немецком, а не на русском, и возвращайся к фразам, которые не поняла."]],
+  ai:[["Что это","Ты называешь тему, ИИ создаёт теорию, текст, запись или тему для разговора под этот модуль."],["Как работать","Напиши тему хотя бы в пару слов и выбери уровень (B2 или C1). После результата можно попросить ещё, сложнее или легче."],["Совет","Темы из экзамена: образование, работа, экология, общество, технологии. Чем конкретнее тема, тем лучше текст."]],
+  pruefung:[["Как это устроено","Пробный вариант создаёт ИИ заново: тексты и задания не повторяются. Объём и типы заданий как на экзамене EPD (VWU)."],["Как проходить","Включи таймер (на часть около часа), не подглядывай в теорию. Сначала прочитай все задания, потом решай. Результат сохраняется в разделе прогресса."],["После проверки","Разбери ошибки: к каждому заданию есть пояснение. Потом создай новый вариант и повтори слабые места."]]
+};
+const tutHTML=(k,open)=>(TUT[k]||[]).length?`<details class="howto" ${open?"open":""}><summary>${ic("bulb",16)}Как пользоваться<span class="muted">${TUT[k].length} советов</span></summary><ol>${TUT[k].map(([t,x])=>`<li><b>${esc(t)}.</b> ${esc(x)}</li>`).join("")}</ol></details>`:"";
 // Свободный немецкий делится на три раздела: B1, Österreich (австрийский уклон) и общий немецкий
 const FGRP=[["b1","B1","простая и понятная речь, основа"],["at","Österreich","австрийский немецкий: слова, реалии, речь"],["de","Общий немецкий","живой язык без привязки к Австрии"]];
 const grpOf=x=>x.grp||(/^(A2|B1)/.test(x.level||"")?"b1":/^(at-|austria$)/.test(x.id||"")?"at":"de");
@@ -1680,6 +1696,7 @@ async function vFrei(tab){
   else if(tab==="videos"){const v=await data("frei","videos");body=(v.groups||[]).map(g=>`<div class="lvl-h">${esc(g.title)}</div><div class="list">${g.items.map(x=>`<a class="vid" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="yt"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 7.5v9l7.5-4.5z"/></svg></span><div><h3>${esc(x.title)}</h3><div class="row" style="gap:6px"><span class="tag">${esc(x.by)}</span>${x.level?`<span class="tag lv">${esc(x.level)}</span>`:""}</div><p>${esc(x.what)}</p></div></a>`).join("")}</div>`).join("")}
   page(`<h1>Свободный немецкий</h1><p class="lead">Всё, что не про экзамен: как говорят на самом деле. Прогресс здесь отдельный и в план подготовки не входит.</p>
    <div class="tabs" style="margin-bottom:14px">${tabs.map(([k,t])=>`<a href="#/frei${k==="karten"?"":"/"+k}" class="${k===tab?"on":""}">${t}</a>`).join("")}</div>
+   ${tutHTML(tab)}
    ${tab==="videos"?"":`<div class="tabs fgrp" style="margin-bottom:18px">${[["all","Всё"]].concat(FGRP.map(g=>[g[0],g[1]])).map(([k,t])=>`<button type="button" data-fg="${k}" class="${(get("frei-grp","all"))===k?"on":""}">${t}</button>`).join("")}</div>`}${body}`);
   $$("[data-fg]").forEach(b=>b.onclick=()=>{save("frei-grp",b.dataset.fg);vFrei(tab)});
 }
@@ -1805,7 +1822,7 @@ async function aiGenerate(k,mode,topic,level){
 async function vAIPractice(k){
   header(k);setC(MOD[k].c);
   const m=AIM[k],st=aiState(k),cur=get("aiitem-"+k,null);
-  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>
+  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>${tutHTML("ai")}
    <div class="card"><div class="field"><label for="aiT">Тема</label><input id="aiT" value="${esc(st.topic)}" maxlength="200" placeholder="${esc(m.ph)}" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="aiL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} ${esc(m.go)}</button></div></div>
    ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}

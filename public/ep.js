@@ -129,6 +129,7 @@ const I={
  star:'<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
  cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>',
  search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+ users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.6"/><path d="M17 14c2.8 0 4.5 1.8 4.5 4.5"/>',
  flame:'<path d="M12 22c4 0 7-2.7 7-6.6 0-3.1-1.8-5.3-3.4-7-.4 1.9-1.5 3-2.6 3.4.3-3.3-1.3-6.6-4.3-8.8.3 3-1.2 5-2.7 6.8C4.8 11.3 5 12.6 5 15.4 5 19.3 8 22 12 22z"/><path d="M12 22c-1.7 0-3-1.2-3-3 0-1.6 1.3-2.6 2-3.6.4 1 1.2 1.5 2 1.6.6-.6 1-1.4 1.1-2.3 1 .9 1.9 2.4 1.9 4.3 0 1.8-1.3 3-4 3z"/>',
  video:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>',
  chev:'<path d="M9 6l6 6-6 6"/>',
@@ -168,7 +169,8 @@ function modbar(cur){
   return `<nav class="ep-mods" aria-label="Модули">${MODS.map(([k,t,h,i,c],n)=>
     (k==="frei"?'<span class="ep-msep" aria-hidden="true"></span>':"")+
     `<a href="${h}" data-m="${k}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span class="ep-ml">${t}</span></a>`).join("")}</nav>`+
-    `<button type="button" class="ep-sbtn" data-ep-search title="Поиск слова (⌘K)" aria-label="Поиск">${ic("search",18)}<span>Поиск</span><kbd>⌘K</kbd></button>`;
+    `<button type="button" class="ep-sbtn" data-ep-search title="Поиск слова (⌘K)" aria-label="Поиск">${ic("search",18)}<span>Поиск</span><kbd>⌘K</kbd></button>`+
+    `<button type="button" class="ep-sbtn ep-fbtn" data-ep-friends title="Друзья и XP" aria-label="Друзья">${ic("users",18)}<span>Друзья</span></button>`;
 }
 const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1 1 auto;padding:4px 2px}
 .ep-mods::-webkit-scrollbar{display:none}
@@ -180,6 +182,24 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 .ep-mods a[aria-current="page"] .ep-mi{background:var(--c);color:#fff;box-shadow:0 4px 12px -4px var(--c)}
 .ep-msep{width:1px;height:24px;background:var(--line);margin:0 6px;flex:none}
 .ep-sbtn{display:inline-flex;align-items:center;gap:8px;flex:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:12px;padding:7px 10px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.ep-frbtn{display:inline-flex;align-items:center;gap:7px;flex:none;border:0;background:var(--panel2);color:var(--fg);border-radius:12px;height:40px;padding:0 12px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer}.ep-frbtn:hover{background:color-mix(in srgb,var(--primary) 16%,var(--panel2))}
+@media (max-width:900px){.ep-frbtn span{display:none}.ep-frbtn{padding:0 10px}}
+.ep-fbtn{margin-left:6px}
+.ep-fr{position:fixed;inset:0;z-index:200;background:rgba(10,8,30,.55);display:grid;place-items:center;padding:16px}
+.ep-fr>div{width:min(620px,100%);max-height:92vh;overflow:auto;background:var(--panel);color:var(--fg);border-radius:24px;padding:22px 22px 24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.ep-fr h2{margin:0 0 4px;font-size:22px}.ep-fr .sub{margin:0 0 14px;color:var(--muted);font-size:14px}
+.ep-fr .fx{float:right;border:0;background:var(--panel2);color:var(--fg);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:18px}
+.ep-fr .fcode{font-weight:800;font-size:26px;letter-spacing:.12em;margin:4px 0 8px}
+.ep-fr .frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ep-fr input{flex:1;min-width:140px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 12px;font:inherit;text-transform:uppercase;outline:none}
+.ep-fr input:focus{border-color:var(--primary)}
+.ep-fr .fb{border:0;background:var(--primary);color:#fff;border-radius:12px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer}.ep-fr .fb.g{background:var(--panel2);color:var(--fg)}
+.ep-fr h3{margin:18px 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ep-fr .lbr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px}.ep-fr .lbr.me{background:color-mix(in srgb,var(--primary) 12%,transparent)}
+.ep-fr .lbn{width:22px;text-align:center;font-weight:800;color:var(--muted)}.ep-fr .lbt{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}.ep-fr .lbt small{color:var(--muted);font-size:12px}
+.ep-fr .lbx{font-weight:800;font-size:15px;white-space:nowrap}
+.ep-fr .race{border:1.5px solid var(--line);border-radius:16px;padding:10px 12px;margin-bottom:8px;font-size:14px}.ep-fr .race b{display:block;margin-bottom:4px}
+.ep-fr .rbar{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;margin:3px 0}.ep-fr .rbar i{display:block;height:100%;background:var(--primary)}
 .ep-sbtn:hover{color:var(--fg);border-color:var(--muted)}
 .ep-sbtn kbd{font:inherit;font-size:11px;background:var(--panel2);border-radius:6px;padding:1px 5px;color:var(--muted)}
 @media (max-width:1480px){.ep-mods .ep-ml{display:none}.ep-mods a{padding:6px}.ep-mods a[aria-current="page"] .ep-ml{display:inline}.ep-mods a[aria-current="page"]{padding-right:10px}}
@@ -264,7 +284,7 @@ function search(val){
   inp.addEventListener("input",render);
 }
 // поле поиска в шапке (вместо полосы модулей); на телефоне — кнопка, открывающая окно поиска
-function searchField(){return `<div class="ep-sf" role="search"><span class="ep-sfi">${ic("search",18)}</span><input type="search" placeholder="Найти слово: по-немецки или по-русски" autocomplete="off" spellcheck="false" aria-label="Поиск слова"><kbd>⌘K</kbd><div class="ep-sdrop" hidden></div></div><button type="button" class="ep-sfbtn" data-ep-search aria-label="Поиск">${ic("search",20)}</button>`}
+function searchField(){return `<div class="ep-sf" role="search"><span class="ep-sfi">${ic("search",18)}</span><input type="search" placeholder="Найти слово: по-немецки или по-русски" autocomplete="off" spellcheck="false" aria-label="Поиск слова"><kbd>⌘K</kbd><div class="ep-sdrop" hidden></div></div><button type="button" class="ep-sfbtn" data-ep-search aria-label="Поиск">${ic("search",20)}</button><button type="button" class="ep-frbtn" data-ep-friends title="Друзья и XP" aria-label="Друзья">${ic("users",20)}<span>Друзья</span></button>`}
 function sfOpen(f,on){const d=f.querySelector(".ep-sdrop");d.hidden=!on;f.classList.toggle("on",on)}
 document.addEventListener("input",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(!f)return;const d=f.querySelector(".ep-sdrop"),v=e.target.value;sfOpen(f,!!v.trim());const r=()=>results(d,e.target.value);need(r);r()});
 document.addEventListener("focusin",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(f){need(()=>{});if(e.target.value.trim())sfOpen(f,true)}});
@@ -299,7 +319,65 @@ async function suggest(tok,lang,n){
   }
   return hits.sort((a,b)=>a.sc-b.sc||a.len-b.len).slice(0,n||6);
 }
-Object.assign(window.EP,{modbar,search,searchField,suggest,icon:ic,MODS});
+
+// ---------- «Друзья и XP»: окно во всех модулях (друзья и забеги общие, XP суммируется по модулям) ----------
+async function friendsOpen(){
+  if(document.querySelector(".ep-fr"))return;
+  const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const api=async(m,p,b)=>{const r=await fetch("/api"+p,{method:m,credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:b?JSON.stringify(b):undefined});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Ошибка "+r.status);return j};
+  const box=document.createElement("div");box.className="ep-fr";box.innerHTML='<div role="dialog" aria-label="Друзья"><button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">Загружаю…</p></div>';
+  document.body.append(box);const dlg=box.firstChild;
+  const close=()=>box.remove();box.onclick=e=>{if(e.target===box||e.target.closest(".fx"))close()};
+  const onKey=e=>{if(e.key==="Escape"){close();removeEventListener("keydown",onKey)}};addEventListener("keydown",onKey);
+  const left=ts=>{const s=ts-Date.now()/1000;if(s<=0)return"финиш";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600);return d?d+" дн"+(h?" "+h+" ч":""):h?h+" ч":"меньше часа"};
+  const draw=async()=>{
+    try{
+      const [me,fr,rc]=await Promise.all([api("GET","/me"),api("GET","/friends"),api("GET","/races")]);
+      const rows=fr.friends.slice().sort((a,b)=>(b.xp_total||0)-(a.xp_total||0));
+      dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">XP считается во всех модулях: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen. Друзья общие для всех.</p>
+      <div class="frow"><div><small class="muted">Твой код друга</small><div class="fcode">${esc(me.user.code)}</div></div><button class="fb g" id="fCp" style="margin-left:auto">Скопировать ссылку</button></div>
+      <form class="frow" id="fAdd" style="margin-top:6px"><input id="fCode" maxlength="8" placeholder="Код друга, например K7M2QX" autocomplete="off"><button class="fb" type="submit">Добавить</button></form>
+      <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${uava(f,36)}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · Schreiben ${f.s_xp||0} · EPD ${f.de_xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp_total||0} XP</span></div>`).join("")}
+      ${rows.length<2?'<p class="muted" style="font-size:13px">Пока здесь только ты. Отправь другу ссылку-приглашение или код.</p>':""}
+      <h3>Забеги</h3>${(rc.races||[]).length?rc.races.map(r=>{const a=r.me.v,b=r.rival.v,mx=Math.max(1,a,b);return `<div class="race"><b>${esc(r.metricName)} · ${r.live?"до финиша "+left(r.end):"забег окончен"}</b>Ты: ${a}<div class="rbar"><i style="width:${a/mx*100}%"></i></div>${esc(r.rival.name)}: ${b}<div class="rbar"><i style="width:${b/mx*100}%;opacity:.6"></i></div></div>`}).join(""):'<p class="muted" style="font-size:13px">Забегов пока нет.</p>'}
+      ${rows.filter(f=>!f.me).length?`<div class="frow" style="margin-top:10px"><select id="rF" style="flex:1;min-width:120px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit">${rows.filter(f=>!f.me).map(f=>`<option value="${f.id}">${esc(f.name)}</option>`).join("")}</select><select id="rD" style="border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit"><option value="3">3 дня</option><option value="7" selected>7 дней</option><option value="14">14 дней</option></select><button class="fb" id="rGo">Забег по XP</button></div>`:""}`;
+      dlg.querySelector("#fCp").onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(location.origin+"/schreiben#friend="+me.user.code).then(()=>{dlg.querySelector("#fCp").textContent="Скопировано"});
+      dlg.querySelector("#fAdd").onsubmit=async e=>{e.preventDefault();const v=dlg.querySelector("#fCode").value.trim();if(!v)return;try{await api("POST","/friends",{code:v});draw()}catch(er){dlg.querySelector("#fCode").value="";dlg.querySelector("#fCode").placeholder=er.message}};
+      const go=dlg.querySelector("#rGo");if(go)go.onclick=async()=>{try{await api("POST","/races",{friend:+dlg.querySelector("#rF").value,metric:"xp",days:+dlg.querySelector("#rD").value});draw()}catch(er){go.textContent=er.message}};
+    }catch(e){dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">${esc(e.message)}</p>`}
+  };
+  draw();
+}
+document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-ep-friends]")){e.preventDefault();friendsOpen()}});
+
+// ---------- Пробный экзамен по словам (Wörter): задания создаёт ИИ, окно открывается из меню ----------
+function wordExamOpen(){
+  if(document.querySelector(".ep-we"))return;
+  const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const norm=t=>String(t||"").toLowerCase().trim().replace(/[.!?,;:]+$/,"").replace(/^(der|die|das)\s+/,"").replace(/\s+/g," ");
+  const box=document.createElement("div");box.className="ep-fr ep-we";document.body.append(box);
+  const dlg=document.createElement("div");dlg.setAttribute("role","dialog");dlg.setAttribute("aria-label","Пробный экзамен по словам");box.append(dlg);
+  const close=()=>box.remove();box.onclick=e=>{if(e.target===box||e.target.closest(".fx"))close()};
+  const start=()=>{dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Пробный экзамен по словам</h2><p class="sub">20 заданий: 12 «слово в контексте» с вариантами a–d и 8 пропусков с подсказкой по-русски. Каждый вариант ИИ создаёт заново.</p>
+    <div class="frow"><input id="weT" maxlength="120" placeholder="Тема (необязательно): например, Umwelt" style="text-transform:none"><select id="weL" style="border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit"><option>B2</option><option>C1</option></select><button class="fb" id="weGo">Начать</button></div><p class="sub" id="weM" style="margin-top:10px"></p>`;
+    dlg.querySelector("#weGo").onclick=async()=>{const b=dlg.querySelector("#weGo");b.disabled=true;b.textContent="ИИ составляет…";
+      try{const r=await fetch("/api/de/wexam",{method:"POST",credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:JSON.stringify({topic:dlg.querySelector("#weT").value.trim(),level:dlg.querySelector("#weL").value})});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Ошибка "+r.status);run(j.items)}
+      catch(e){b.disabled=false;b.textContent="Начать";dlg.querySelector("#weM").textContent=e.message}}};
+  const run=items=>{let i=0,ok=0;const bad=[];
+    const step=()=>{
+      if(i>=items.length){const p=Math.round(ok/items.length*100);dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>${ok} из ${items.length} · ${p}%</h2><p class="sub">${p>=80?"Отлично!":p>=60?"Хороший результат, повтори слабые слова.":"Повтори слова из ошибок и попробуй новый вариант."}</p>${bad.length?`<h3>Над чем поработать</h3>${bad.map(b=>`<div class="race"><b>${esc(b.q.replace("___","…"))}</b>Правильно: ${esc(b.right)}${b.ex?`<br><span class="muted">${esc(b.ex)}</span>`:""}</div>`).join("")}`:""}<div class="frow" style="margin-top:12px"><button class="fb" id="weAgain">Новый вариант</button><button class="fb g" id="weX">Закрыть</button></div>`;
+        dlg.querySelector("#weAgain").onclick=start;dlg.querySelector("#weX").onclick=close;return}
+      const q=items[i],head=`<button class="fx" aria-label="Закрыть">×</button><h2>Задание ${i+1} из ${items.length}</h2><div class="rbar"><i style="width:${i/items.length*100}%"></i></div>`;
+      const fin=(good,right)=>{if(good)ok++;else bad.push({q:q.q,right,ex:q.ex});const fb=dlg.querySelector("#weFb");fb.innerHTML=`<b style="color:${good?"var(--good,#18AE79)":"var(--bad,#D9534F)"}">${good?"Верно":"Неверно"}</b>${good?"":" Правильно: "+esc(right)}${q.ex?`<br><span class="muted">${esc(q.ex)}</span>`:""}<div class="frow" style="margin-top:8px"><button class="fb" id="weNx">Дальше</button></div>`;dlg.querySelector("#weNx").onclick=()=>{i++;step()}};
+      if(q.t==="mc"){dlg.innerHTML=head+`<p style="font-size:17px;line-height:1.5;margin:14px 0">${esc(q.q)}</p><div id="weO">${q.o.map((o,k)=>`<button class="fb g" style="display:block;width:100%;text-align:left;margin-bottom:6px" data-k="${k}">${String.fromCharCode(97+k)}) ${esc(o)}</button>`).join("")}</div><div id="weFb" style="margin-top:8px"></div>`;
+        dlg.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{dlg.querySelectorAll("[data-k]").forEach(x=>x.disabled=true);fin(+b.dataset.k===q.a,q.o[q.a])})}
+      else{dlg.innerHTML=head+`<p style="font-size:17px;line-height:1.5;margin:14px 0">${esc(q.q)}</p><form class="frow" id="weF"><input id="weA" autocomplete="off" spellcheck="false" placeholder="Слово" style="text-transform:none"><button class="fb" type="submit">Проверить</button></form><div id="weFb" style="margin-top:8px"></div>`;
+        dlg.querySelector("#weA").focus();dlg.querySelector("#weF").onsubmit=e=>{e.preventDefault();const v=norm(dlg.querySelector("#weA").value);if(!v)return;dlg.querySelector("#weF").remove();fin((q.a||[]).map(norm).includes(v),(q.a||[])[0])}}
+    };step()};
+  start();
+}
+document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-ep-wexam]")){e.preventDefault();wordExamOpen()}});
+Object.assign(window.EP,{modbar,search,searchField,suggest,icon:ic,MODS,friendsOpen,wordExamOpen});
 })();
 
 /* Общая «рамка» всех страниц: бургер, логотип EPDeutsch с названием модуля, экран загрузки,

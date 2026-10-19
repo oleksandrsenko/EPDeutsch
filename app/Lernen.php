@@ -248,6 +248,14 @@ class Lernen
             return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
         }
 
+        if ($p === '/wexam' && $method === 'POST') {   // пробный экзамен по лексике (Wörter)
+            self::needAiKey();
+            $d = Http::json();
+            [$system, $content, $schema, $tokens] = AiGen::wexamRequest($d);
+            $res = Ai::ask($u, 'wexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 100, 'ИИ сейчас недоступен, попробуй ещё раз');
+            return ['items' => AiGen::wexamNormalize($res)];
+        }
+
         if ($p === '/gexam' && $method === 'POST') {   // пробный вариант Strukturen und Wortschatz
             self::needAiKey();
             $d = Http::json();

@@ -184,6 +184,26 @@ class AiGen
         return array_merge($nf, $sf);
     }
 
+    /** Пробный экзамен по лексике: 12 заданий «слово в контексте» (a–d) и 8 пропусков с русской подсказкой. */
+    public static function wexamRequest(array $d): array
+    {
+        $topic = Util::str($d['topic'] ?? '', 120);
+        $level = in_array($d['level'] ?? '', ['B2', 'C1'], true) ? $d['level'] : 'B2';
+        $prev = [];
+        foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 30) as $x) { $x = Util::str($x, 120); if ($x !== '') { $prev[] = $x; } }
+        $content = "Тема: " . ($topic !== '' ? $topic : '(не указана)') . "\nУровень: $level" . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
+        return [Lernen::prompt('lernen_wexam'), $content, Lernen::schema('lernen_wexam'), 4500];
+    }
+
+    public static function wexamNormalize(array $r): array
+    {
+        $out = self::tasks($r['tasks'] ?? [], ['mc', 'gap'], 20, false);
+        $mc = array_values(array_filter($out, fn($x) => $x['t'] === 'mc' && count($x['o']) === 4));
+        $gp = array_values(array_filter($out, fn($x) => $x['t'] === 'gap'));
+        if (count($mc) < 8 || count($gp) < 5) { throw new ApiError(502, 'ИИ вернул неполный экзамен, попробуй ещё раз'); }
+        return array_merge(array_slice($mc, 0, 12), array_slice($gp, 0, 8));
+    }
+
     /** Приводит задания к формату data/de/*.json и отбрасывает битые. */
     private static function tasks($raw, array $types, int $max, bool $lv, bool $two = false, ?string $src = null): array
     {

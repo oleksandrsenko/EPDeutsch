@@ -2,7 +2,7 @@
 /** Внешние сервисы: Claude, DeepL/MyMemory, LanguageTool, Wiktionary; предохранитель и журнал расходов. */
 class Ai
 {
-    public const MODEL = 'claude-haiku-4-5';
+    public const MODEL = 'claude-haiku-5-5';
     public const PRICE = ['claude-haiku-4-5' => [1, 5], 'claude-haiku-5-5' => [0.1, 0.5], 'claude-sonnet-5-5' => [2, 10], 'claude-opus-5-5' => [4, 20]];  // $ за 1 млн токенов
     public const USER_DAY = 450;        // запросов к ИИ в день на аккаунт
     public const USER_MIN = 30;         // запросов в минуту на аккаунт

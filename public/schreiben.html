@@ -1584,7 +1584,17 @@ function rExam(){
   </div>`;
   let typ="stell";
   $("#exFmt").onclick=e=>{const b=e.target.closest("[data-typ]");if(!b)return;typ=b.dataset.typ;$$("#exFmt [data-typ]").forEach(x=>x.setAttribute("aria-pressed",x===b))};
-  $("#exGo").onclick=()=>{const ids=exPickTasks(typ);if(!ids.length)return toast("Нет заданий");exStart(ids,EXT[typ].mins,ids.length===1?ids[0]:null)};
+  $("#exGo").onclick=async()=>{
+    const b=$("#exGo");let ids=[];
+    // задания пробного экзамена создаёт ИИ заново; если он недоступен, берём из банка
+    if(AI){b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ составляет задания экзамена…';
+      try{const have=(S.gen||[]).map(x=>x.titel).join(", "),mk=(art,thema)=>api("POST","generate",{typ,art,thema:thema||"",have});
+        const T=typ==="stell"?await Promise.all([mk("text"),mk("grafik")]):await Promise.all([mk(""),mk("")]);
+        S.gen=(S.gen||[]).concat(T).slice(-40);save();ids=T.map(t=>t.id)}
+      catch(e){toast("⚠️ "+e.message,"Берём задания из банка")}
+      b.disabled=false;b.innerHTML=ic("clock",18)+"Начать экзамен"}
+    if(!ids.length)ids=exPickTasks(typ);
+    if(!ids.length)return toast("Нет заданий");exStart(ids,EXT[typ].mins,ids.length===1?ids[0]:null)};
 }
 function rExSel(){
   if(!EX||!EX.live){go("exam");return}

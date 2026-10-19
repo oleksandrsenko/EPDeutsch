@@ -3,7 +3,7 @@
 class Schreiben
 {
     const GRADE_MODEL = 'claude-sonnet-5-5';
-    const FAST_MODEL = 'claude-haiku-4-5';
+    const FAST_MODEL = 'claude-haiku-5-5';
     const MAX_STATE = 1048576;
     const TYPES = [
         'stell' => ['name' => 'Stellungnahme', 'min' => 230, 'max' => 250, 'pass' => 12, 'crit' => ['inhalt' => 5, 'aufbau' => 6, 'wortschatz' => 6, 'sprachrichtigkeit' => 8]],

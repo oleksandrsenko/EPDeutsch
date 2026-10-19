@@ -53,6 +53,13 @@ class Users
         return is_array($d) ? Util::int($d['xp'] ?? 0) : 0;
     }
 
+    /** XP, набранный в модулях EPD (Grammatik, Lesen, Hören, Sprechen, Свободный): число лежит в состоянии под ключом xp. */
+    public static function deXp(int $uid): int
+    {
+        $r = Db::one("SELECT v FROM kv WHERE user_id=? AND k='xp'", [$uid]);
+        return $r ? max(0, (int)json_decode((string)$r['v'], true)) : 0;
+    }
+
     /** Для друзей и рейтинга: тексты за неделю и всего, средний процент, XP в Schreiben. */
     public static function schreibenSummary(int $uid): array
     {
@@ -73,7 +80,8 @@ class Users
             foreach (['xp', 'week_xp', 'streak', 'learned', 'acc', 'today', 'updated'] as $k) { $d[$k] = (int)($d[$k] ?? 0); }
             $d['level'] = (int)($d['level'] ?: 1);
             $d['me'] = (int)$r['id'] === $uid;
-            $out[] = $d + self::schreibenSummary((int)$r['id']);
+            $d['de_xp'] = self::deXp((int)$r['id']);
+            $out[] = $d + self::schreibenSummary((int)$r['id']) + ['xp_total' => $d['xp'] + self::schreibenXp((int)$r['id']) + $d['de_xp']];
         }
         return $out;
     }
@@ -82,7 +90,7 @@ class Users
     private static function raceValue(int $uid, string $metric, int $start, int $end): int
     {
         if ($metric === 'texts') { return (int)Db::val('SELECT COUNT(*) FROM schreiben_essays WHERE user_id=? AND ts BETWEEN ? AND ?', [$uid, $start, $end]); }
-        return (int)Db::val('SELECT xp FROM stats WHERE user_id=?', [$uid]) + self::schreibenXp($uid);
+        return (int)Db::val('SELECT xp FROM stats WHERE user_id=?', [$uid]) + self::schreibenXp($uid) + self::deXp($uid);
     }
 
     /** У закончившихся XP-забегов сохраняем итог (иначе после финиша XP продолжал бы расти). */

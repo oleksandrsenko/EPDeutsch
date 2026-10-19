@@ -279,7 +279,26 @@ document.addEventListener("keydown",e=>{
 });
 document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e.preventDefault();search()}
   const a=e.target.closest(".ep-sdrop a");if(a){const f=a.closest(".ep-sf");setTimeout(()=>sfOpen(f,false),0)}});
-Object.assign(window.EP,{modbar,search,searchField,icon:ic,MODS});
+// подсказки слов для переводчика: по началу слова из того же словаря, что и поиск (Wörter, свои наборы, колоды).
+// lang "de": слово по-немецки (с артиклем), подсказка — перевод; "ru": русский вариант, подсказка — немецкое слово.
+async function suggest(tok,lang,n){
+  if(!IDX){if(!loading)loading=buildIndex().then(x=>{IDX=x});await loading}
+  const q=lang==="ru"?fold(tok):strip(tok);if(q.length<2||!IDX)return [];
+  const clean=v=>String(v||"").replace(/\*/g,"").split(/\s+\/\s+/)[0].replace(/,\s*(-|¨|\(|Pl\.)[^,]*$/,"").replace(/\s*\((Plural|Pl\.)\)\s*$/,"").trim();
+  const seen=new Set(),hits=[];
+  for(const o of IDX){
+    if(o.topic)continue;
+    const cands=lang==="ru"?String(o.ru||"").split(/[;,\/]/).map(x=>x.trim()).filter(Boolean).map(x=>[x,fold(x),o.de]):[[clean(o.de),o.fd,o.ru]];
+    for(const [text,f,hint] of cands){
+      const sc=f.startsWith(q)?0:f.split(/[\s\/,\-]+/).some(w=>w.startsWith(q))?1:-1;
+      if(sc<0)continue;
+      const key=text.toLowerCase();if(!text||seen.has(key))continue;seen.add(key);
+      hits.push({sc,text,hint:clean(hint),len:f.length+(f.includes(" ")?6:0)});
+    }
+  }
+  return hits.sort((a,b)=>a.sc-b.sc||a.len-b.len).slice(0,n||6);
+}
+Object.assign(window.EP,{modbar,search,searchField,suggest,icon:ic,MODS});
 })();
 
 /* Общая «рамка» всех страниц: бургер, логотип EPDeutsch с названием модуля, экран загрузки,

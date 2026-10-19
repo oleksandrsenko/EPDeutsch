@@ -462,6 +462,7 @@ html{scrollbar-gutter:stable}
 .trdirs{display:inline-flex;gap:4px;background:var(--panel2);border-radius:14px;padding:4px;margin-left:auto}
 .trdirs button{border:0;background:none;border-radius:10px;padding:7px 12px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;white-space:nowrap}
 .trdirs button.on{background:var(--panel);color:var(--fg);box-shadow:var(--sh)}
+.trinw{display:flex;flex-direction:column;gap:8px;min-width:0}.trinw textarea{flex:1}.trsug{display:flex;flex-wrap:wrap;gap:6px}.trsug button{border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:5px 12px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline;max-width:100%}.trsug button small{color:var(--muted);font-weight:500;font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.trsug button:first-child{border-color:var(--c)}.trsug button:hover{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--panel))}.trsug kbd{font:inherit;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 4px}
 .trbox{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch}
 .trbox textarea{width:100%;min-height:120px;border-radius:16px;border:2px solid var(--line);padding:12px 14px;font:inherit;font-size:16px;background:var(--bg);color:var(--fg);resize:vertical}
 .trbox textarea[readonly]{background:color-mix(in srgb,var(--c) 6%,var(--panel));border-color:color-mix(in srgb,var(--c) 25%,transparent)}
@@ -883,7 +884,7 @@ async function vHome(opt){
     <a class="mod wide" href="#/frei"><span class="ic">${ic("star",24)}</span><div><h3>Свободный немецкий</h3><p>Отдельно от подготовки: разговорная речь, идиомы, австрийские словечки, сленг, свои тексты, аудио и видео.</p></div><span class="go">${ic("chev",18)}</span></a>
   </div>
   <section class="trcard" id="trc"><div class="trhead"><span class="ic">${ic("globe",24)}</span><div><h3>Переводчик</h3><p>Пиши, перевод появится сам. DeepL.</p></div><div class="trdirs" role="tablist">${TR_DIRS.map(([v,t])=>`<button type="button" data-trd="${v}" class="${trDir()===v?"on":""}">${t}</button>`).join("")}</div></div>
-   <div class="trbox"><textarea id="trIn" maxlength="1500" placeholder="Текст для перевода" spellcheck="false"></textarea><button type="button" class="trswap" id="trSwap" title="Поменять языки">${ic("swap",18)}</button><textarea id="trOut" readonly placeholder="Перевод"></textarea></div>
+   <div class="trbox"><div class="trinw"><textarea id="trIn" maxlength="1500" placeholder="Текст для перевода" spellcheck="false" autocomplete="off"></textarea><div class="trsug" id="trSug" hidden></div></div><button type="button" class="trswap" id="trSwap" title="Поменять языки">${ic("swap",18)}</button><textarea id="trOut" readonly placeholder="Перевод"></textarea></div>
    <div class="trmeta"><span id="trProv"></span><button type="button" class="btn sm" id="trSay" style="margin-left:auto" hidden>${ic("speaker",15)}Озвучить</button></div></section>
   `);
   if(PLED){bindPlanEditor();window.scrollTo(0,y)}
@@ -898,7 +899,25 @@ function bindTranslator(){
     const [f,to]=trDir().split("-");$("#trProv").innerHTML='<span class="spin" style="width:14px;height:14px;border-width:2px"></span> перевожу…';
     try{const r=await api("/translate",{method:"POST",body:JSON.stringify({text,from:f,to})});if(my!==seq)return;out.value=r.text;$("#trProv").textContent=r.provider||"";$("#trSay").hidden=to!=="de"&&f!=="de"}
     catch(e){if(my===seq)$("#trProv").textContent=e.message}};
-  inp.oninput=()=>{clearTimeout(t);t=setTimeout(run,650)};
+  // подсказки слов: по началу последнего слова; Tab принимает первую, клик по плашке любую
+  const box=$("#trSug");let sq=0,cur=[],tokR=null;
+  const tokAt=()=>{const pos=inp.selectionStart,v=inp.value;if(pos!==inp.selectionEnd||/[\p{L}]/u.test(v[pos]||""))return null;const m=v.slice(0,pos).match(/[\p{L}ß][\p{L}ß\-]*$/u);return m?{tok:m[0],start:pos-m[0].length,pos}:null};
+  const hideSug=()=>{cur=[];box.hidden=true;box.innerHTML=""};
+  const showSug=async()=>{const [f]=trDir().split("-"),tk=tokAt(),my=++sq;tokR=tk;
+    if(!tk||tk.tok.length<2||f==="en"||!window.EP||!EP.suggest){hideSug();return}
+    const r=await EP.suggest(tk.tok,f==="ru"?"ru":"de",6);if(my!==sq)return;
+    cur=r.filter(x=>x.text.toLowerCase()!==tk.tok.toLowerCase());
+    if(!cur.length){hideSug();return}
+    box.innerHTML=cur.map((x,i)=>`<button type="button" data-si="${i}"><span lang="${f==="ru"?"ru":"de"}">${esc(x.text)}</span>${x.hint?`<small>${esc(x.hint)}</small>`:""}${i===0?"<kbd>Tab</kbd>":""}</button>`).join("");box.hidden=false};
+  const accept=i=>{const x=cur[i];if(!x||!tokR)return;let w=x.text;const v=inp.value,before=v.slice(0,tokR.start);
+    if(/(^|\s)(der|die|das|ein|eine)\s+$/i.test(before))w=w.replace(/^(der|die|das|ein|eine)\s+/i,"");   // артикль уже написан
+    inp.value=before+w+v.slice(tokR.pos);const np=before.length+w.length;inp.setSelectionRange(np,np);inp.focus();hideSug();clearTimeout(t);run()};
+  box.onmousedown=e=>e.preventDefault();
+  box.onclick=e=>{const b=e.target.closest("[data-si]");if(b)accept(+b.dataset.si)};
+  inp.addEventListener("keydown",e=>{if(e.key==="Tab"&&!e.shiftKey&&cur.length&&!box.hidden){e.preventDefault();accept(0)}else if(e.key==="Escape")hideSug()});
+  inp.addEventListener("keyup",e=>{if(["ArrowLeft","ArrowRight","Home","End"].includes(e.key))showSug()});
+  inp.addEventListener("click",showSug);inp.addEventListener("blur",()=>setTimeout(hideSug,150));
+  inp.oninput=()=>{clearTimeout(t);t=setTimeout(run,650);showSug()};
   $$("[data-trd]").forEach(b=>b.onclick=()=>{save("trdir",b.dataset.trd);$$("[data-trd]").forEach(x=>x.classList.toggle("on",x===b));run()});
   $("#trSwap").onclick=()=>{const [f,to]=trDir().split("-"),nd=to+"-"+f;save("trdir",TR_DIRS.some(x=>x[0]===nd)?nd:"de-ru");$$("[data-trd]").forEach(x=>x.classList.toggle("on",x.dataset.trd===trDir()));if(out.value){inp.value=out.value;out.value=""}run()};
   $("#trSay").onclick=()=>{const [f]=trDir().split("-");say(f==="de"?inp.value:out.value)};

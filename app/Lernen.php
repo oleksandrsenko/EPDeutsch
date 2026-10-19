@@ -183,6 +183,26 @@ class Lernen
             return $out;
         }
 
+        if ($p === '/trdict' && $method === 'POST') {   // словарная статья к слову из переводчика: другие значения, синонимы, примеры
+            self::needAiKey();
+            $d = Http::json();
+            $word = Util::str($d['word'] ?? '', 60); $sl = Util::str($d['from'] ?? '', 2); $tl = Util::str($d['to'] ?? '', 2);
+            if ($word === '' || count(preg_split('/\s+/u', $word)) > 4 || !in_array($sl, ['de', 'ru', 'en'], true) || !in_array($tl, ['de', 'ru', 'en'], true) || $sl === $tl) { throw new ApiError(400, 'Нужно слово или короткое выражение'); }
+            $ck = 'trd:' . hash('sha256', json_encode([self::CTX_MODEL, $word, $sl, $tl], JSON_UNESCAPED_UNICODE));
+            if ($c = Ai::cacheGet($ck)) { return $c; }
+            $res = Ai::ask($u, 'trdict', self::CTX_MODEL, self::prompt('lernen_trdict'), "Слово: $word\nЯзык слова: $sl\nЯзык перевода: $tl",
+                self::schema('lernen_trdict'), 900, 'low', 40, 'Словарь сейчас недоступен');
+            $clean = fn($v, $n, $m) => array_values(array_filter(array_map(fn($x) => Util::str($x, $m), array_slice(is_array($v) ? $v : [], 0, $n)), fn($x) => $x !== ''));
+            $ex = [];
+            foreach (array_slice(is_array($res['examples'] ?? null) ? $res['examples'] : [], 0, 4) as $e) {
+                $de = Util::str($e['de'] ?? '', 200); $tr = Util::str($e['tr'] ?? '', 200);
+                if ($de !== '' && $tr !== '') { $ex[] = ['de' => $de, 'tr' => $tr]; }
+            }
+            $out = ['lemma' => Util::str($res['lemma'] ?? '', 80), 'pos' => Util::str($res['pos'] ?? '', 30), 'alts' => $clean($res['alts'] ?? [], 5, 80), 'syn' => $clean($res['syn'] ?? [], 6, 60), 'examples' => $ex];
+            if ($out['alts'] || $out['syn'] || $ex) { Ai::cachePut($ck, $out); }
+            return $out;
+        }
+
         if ($p === '/check' && $method === 'POST') {
             self::needAiKey();
             $d = Http::json();

@@ -1,0 +1,50 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "lemma",
+  "pos",
+  "alts",
+  "syn",
+  "examples"
+ ],
+ "properties": {
+  "lemma": {
+   "type": "string"
+  },
+  "pos": {
+   "type": "string"
+  },
+  "alts": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "syn": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "examples": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "de",
+     "tr"
+    ],
+    "properties": {
+     "de": {
+      "type": "string"
+     },
+     "tr": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

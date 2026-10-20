@@ -639,6 +639,10 @@ img,svg,video,canvas{max-width:100%}
 .fsec .fbody{padding-top:2px}
 .howto .howto-t{margin:0;padding:0 18px 10px;font-size:14px;color:var(--muted);line-height:1.5}
 .frcard{max-width:760px}
+.tmore>summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;padding:10px 14px;border-radius:16px;background:var(--panel);font-weight:700;font-size:14px;box-shadow:var(--sh);user-select:none}
+.tmore>summary::-webkit-details-marker{display:none}.tmore>summary small{margin-left:auto;color:var(--muted);font-weight:600;font-size:12.5px}
+.tmore>summary .fchev{transition:transform .2s}.tmore[open]>summary .fchev{transform:rotate(90deg)}
+.tmore[open]>summary{margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -666,6 +670,7 @@ async function api(p,o={}){
   const r=await fetch("/api"+p,{credentials:"same-origin",...o,headers:{"Content-Type":"application/json","X-USD":"1",...(o.headers||{})}});
   const j=await r.json().catch(()=>({}));
   if(r.status===401){location.href="/";throw new Error("auth")}
+  if(r.status===404&&j.error==="Не найдено")throw new Error("Сервер не знает этого запроса ("+p+"): на сайте старая версия файлов app/. Залей обновление целиком");
   if(!r.ok)throw new Error(j.error||("Ошибка "+r.status));
   return j;
 }
@@ -1092,7 +1097,7 @@ function itemsByTopic(arr,kind,pref){
   const by={};arr.forEach(x=>(by[x.wt||"other"]=by[x.wt||"other"]||[]).push(x));
   const card=x=>{const r=get(pref+"de-"+x.id);const pv=kind==="sprechen"?(x.ru||""):(x.lead||x.intro||(x.paras&&x.paras[0])||"");
     return `<a class="item" href="#/${kind}/${x.id}"><div class="row">${kind==="sprechen"?`<span class="tag lv">${esc(kindRu(x.kind))}</span>`:`<span class="tag lv">${esc(x.level||"")}</span>`}${x.kind&&kind!=="sprechen"?`<span class="tag">${esc(x.kind)}</span>`:""}${r?(kind==="sprechen"?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:`<span class="tag ok">✓ ${r.s}/${r.m}</span>`):""}</div><h3>${esc(x.title)}</h3><p class="pv">${esc(pv.slice(0,260))}</p></a>`};
-  const block=(num,de,ru,a)=>`<section class="tblock"><header><span class="tn" lang="de">${esc(num)}</span><div><b lang="de">${esc(de)}</b><small>${esc(ru)}</small></div><span class="tc">${a.length}</span></header><div class="tlist">${[...a].sort(lvSort).map(card).join("")}</div></section>`;
+  const block=(num,de,ru,a)=>`<section class="tblock"><header><span class="tn" lang="de">${esc(num)}</span><div><b lang="de">${esc(de)}</b><small>${esc(ru)}</small></div><span class="tc">${a.length}</span></header><div class="tlist">${[...a].sort(lvSort).slice(0,1).map(card).join("")}${a.length>1?`<details class="tmore"><summary>${FCH}Ещё ${a.length-1} ${plural(a.length-1,...(kind==="lesen"?["текст","текста","текстов"]:kind==="hoeren"?["аудио","аудио","аудио"]:["задание","задания","заданий"]))}<small>развернуть список</small></summary><div class="tlist">${[...a].sort(lvSort).slice(1).map(card).join("")}</div></details>`:""}</div></section>`;
   const blocks=WT.filter(t=>by[t[0]]).map(t=>block(t[0],t[1],t[2],by[t[0]])).concat(by.other?[block("·","Без темы","универсальные",by.other)]:[]);
   return `<div class="tblocks">${blocks.join("")}</div>`;
 }

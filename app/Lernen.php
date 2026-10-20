@@ -444,12 +444,23 @@ class Lernen
             $day = Util::localDay($now);
             $spent = (float)Db::val('SELECT COALESCE(SUM(cost),0) FROM ai_log WHERE day=?', [$day]) / 1e6;
             $month = (float)Db::val('SELECT COALESCE(SUM(cost),0) FROM ai_log WHERE ts>?', [$now - 30 * 86400]) / 1e6;
+            // расход за сегодня по сервисам: Claude (текст, разбор, словарь) и OpenAI (озвучка, распознавание речи); DeepL бесплатный и не считается
+            $by = ['claude' => ['n' => 0, 'usd' => 0.0, 'kinds' => []], 'openai' => ['n' => 0, 'usd' => 0.0, 'kinds' => []]];
+            foreach (Db::all("SELECT kind, model, COUNT(*) AS n, COALESCE(SUM(cost),0) AS cost FROM ai_log WHERE day=? AND kind<>'block' AND err='' GROUP BY kind, model", [$day]) as $r) {
+                $k = str_starts_with((string)$r['model'], 'claude') ? 'claude' : 'openai';
+                $by[$k]['n'] += (int)$r['n']; $by[$k]['usd'] += (float)$r['cost'] / 1e6;
+                $by[$k]['kinds'][$r['kind']] = ['n' => (int)$r['n'], 'usd' => round((float)$r['cost'] / 1e6, 4)];
+            }
+            foreach ($by as &$b) { $b['usd'] = round($b['usd'], 4); }
+            unset($b);
+            $mine = (int)Db::val("SELECT COUNT(*) FROM ai_log WHERE uid=? AND day=? AND kind<>'block'", [$uid, $day]);
             $inv = [];
             if ($u['role'] === 'owner') {
                 $inv = Db::all('SELECT i.code,i.created,i.used,u.name AS used_name FROM invites i LEFT JOIN users u ON u.id=i.used_by ORDER BY i.created DESC LIMIT 30');
             }
             return ['keys' => self::keyStatus(), 'mine' => Keys::status((int)$u['id']), 'site_keys' => (bool)cfg('site_keys_for_users', false) || $u['role'] === 'owner', 'owner' => $u['role'] === 'owner', 'invites' => $inv,
                     'spent_today' => round($spent, 3), 'spent_month' => round($month, 2), 'budget_day' => Ai::SITE_DAY_USD,
+                    'by_service' => $by, 'my_requests_today' => $mine, 'limits' => ['user_day' => Ai::USER_DAY, 'user_min' => Ai::USER_MIN, 'site_usd' => Ai::SITE_DAY_USD],
                     'models' => ['talk' => self::TALK_MODEL, 'ctx' => self::CTX_MODEL, 'tts' => self::TTS_MODEL, 'stt' => self::STT_MODEL]];
         }
 

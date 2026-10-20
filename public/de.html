@@ -2078,6 +2078,20 @@ const COLS=[["grammatik","Grammatik","--c-g"],["lesen","Lesen","--c-l"],["hoeren
 function applyColors(){const C=get("colors",{}),r=document.documentElement.style;try{localStorage.setItem("ep-colors",JSON.stringify(C))}catch(e){}COLS.forEach(([k,,v])=>{if(C[k])r.setProperty(v,C[k]);else r.removeProperty(v)})}
 const hex=c=>{c=String(c).trim();if(c[0]==="#"&&c.length===7)return c;const m=c.match(/\d+/g);return m&&m.length>=3?"#"+m.slice(0,3).map(n=>(+n).toString(16).padStart(2,"0")).join(""):String(c).trim()};
 let NEWINV=null;
+// расход ИИ за сегодня по сервисам (данные приходят с /api/de/settings)
+const AIK_RU={aigen:"Практика с ИИ",ltasks:"Задания к тексту",htasks:"Вопросы к записи",lcheck:"Проверка ответов Lesen",gcheck:"Проверка ответов",sfort:"Satzanfänge",gwrite:"Письмо с ИИ",talk:"Sprechen",trdict:"Словарь переводчика",ctx:"Слова в тексте",tts:"Озвучка",stt:"Распознавание речи",wexam:"Пробный по словам",gexam:"Пробный Grammatik",hexam:"Пробный Hören",aitasks:"Задания от ИИ",practice:"Практика слов"};
+function spendHTML(s){
+  const b=s.by_service||{},L=s.limits||{},fmt=x=>"$"+(+x||0).toFixed(x<0.1?3:2);
+  if(!b.claude)return "";
+  const row=(name,o)=>`<div class="setrow"><div><b>${name}</b><small>${Object.entries(o.kinds||{}).sort((p,q)=>q[1].usd-p[1].usd).map(([k,v])=>`${esc(AIK_RU[k]||k)}: ${v.n}`).join(" · ")||"сегодня запросов не было"}</small></div><b style="font-variant-numeric:tabular-nums">${fmt(o.usd)}</b><small class="muted">${o.n} зап.</small></div>`;
+  const tot=(b.claude.usd||0)+(b.openai.usd||0),pct=Math.min(100,Math.round(tot/(L.site_usd||3)*100)),mine=s.my_requests_today||0;
+  return `<div class="card" style="margin-top:18px"><h2 style="margin-top:0">Расход ИИ сегодня</h2><p class="muted" style="margin-top:0;font-size:14px">Считается по всему сайту. Счётчик обнуляется ночью. DeepL бесплатный и здесь не учитывается.</p>
+   ${row("Claude (Anthropic)",b.claude)}${row("OpenAI (голос)",b.openai)}
+   <div class="setrow"><div><b>Всего за сегодня</b><small>дневной предел сайта ${fmt(L.site_usd||3)}: после него ИИ отдыхает до завтра</small></div><b style="font-variant-numeric:tabular-nums">${fmt(tot)}</b></div>
+   <div class="bar" style="margin:6px 0 10px"><i style="width:${pct}%;${pct>=80?"background:var(--bad)":""}"></i></div>
+   <div class="setrow"><div><b>Твои запросы к ИИ</b><small>предел ${L.user_day||450} в день и ${L.user_min||30} в минуту</small></div><b style="font-variant-numeric:tabular-nums">${mine} из ${L.user_day||450}</b></div>
+   <div class="setrow"><div><b>За 30 дней</b></div><b style="font-variant-numeric:tabular-nums">${fmt(s.spent_month)}</b></div></div>`;
+}
 async function vSettings(){
   header("settings");setC(LASTMOD?MOD[LASTMOD].c:undefined);
   const s=await api("/de/settings");
@@ -2094,6 +2108,7 @@ async function vSettings(){
      ${COLS.map(([k,n,v])=>{const now=C[k]||cur(v);return `<div class="colrow"><span style="color:${now}">${n}</span><div class="sws">${PRESET.map(x=>`<button type="button" class="sw${x.toLowerCase()===now.toLowerCase()?" on":""}" data-sw="${k}" data-v="${x}" style="background:${x}" aria-label="${x}"></button>`).join("")}<input type="color" data-col="${k}" value="${now}" title="Свой цвет"></div></div>`}).join("")}
      <button class="btn sm" id="colReset" style="margin-top:8px">Сбросить цвета</button></div>
    </div></div>
+   ${spendHTML(s)}
    <div class="card" style="margin-top:18px"><h2 style="margin-top:0">Ключи</h2><p class="muted" style="margin-top:0;font-size:14px">Ключ сохраняется в вашем профиле в зашифрованном виде и используется только для ваших запросов. После сохранения он не показывается, только последние 4 символа.${s.site_keys&&!s.owner?" Если своего ключа нет, работает ключ сайта.":""}</p>${K.map(([k,n,ph])=>{const m=(s.mine||{})[k]||{};return `<div class="keyrow"><div><span class="dot ${m.set?"on":""}"></span><b>${n}</b><br><small class="muted">${m.broken?"Ключ нужно ввести заново":m.set?"задан: …"+esc(m.hint):"не задан"}</small></div><input type="password" id="k_${k}" placeholder="${m.set?"вставь новый, чтобы заменить":ph}" autocomplete="off"><span class="row" style="gap:6px"><button class="btn sm" data-key="${k}">Сохранить</button>${m.set||m.broken?`<button class="btn sm" data-keydel="${k}">Удалить</button>`:""}</span></div>`}).join("")}</div>
    ${s.owner?`<div class="card" style="margin-top:18px"><h2 style="margin-top:0">Приглашения</h2><p class="muted" style="margin-top:0;font-size:14px">Регистрация закрыта. Создай одноразовый код и отправь его другу: он вводит код на странице входа во вкладке «Регистрация».</p>
      ${NEWINV?`<div class="inv-new"><code>${esc(NEWINV)}</code><span class="muted" style="flex:1;min-width:160px">Новый код. Ссылка для друга: <b>${esc(location.origin)}/</b></span><button class="btn sm" id="invCopy">Скопировать</button></div>`:""}

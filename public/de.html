@@ -643,6 +643,22 @@ img,svg,video,canvas{max-width:100%}
 .tmore>summary::-webkit-details-marker{display:none}.tmore>summary small{margin-left:auto;color:var(--muted);font-weight:600;font-size:12.5px}
 .tmore>summary .fchev{transition:transform .2s}.tmore[open]>summary .fchev{transform:rotate(90deg)}
 .tmore[open]>summary{margin-bottom:12px}
+/* ---------- маркер и таймер (Lesen, Grammatik) ---------- */
+.ltools{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin:10px 0 4px}
+.hlbar,.tmr{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border-radius:16px;padding:6px 10px;box-shadow:var(--sh);flex-wrap:wrap}
+.hlbar .hl-l{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:13px;color:var(--muted);padding:0 4px}
+.hlbar button,.tmr button{border:0;background:var(--panel2);color:var(--fg);border-radius:10px;padding:6px 11px;font:inherit;font-weight:700;font-size:13px;cursor:pointer}
+.hlbar button.on,.tmr button.on{background:var(--c,var(--primary));color:#fff}
+.hlbar button.hlc{width:26px;height:26px;padding:0;border-radius:50%;border:2px solid transparent}
+.hlbar button.hlc.on{border-color:var(--fg)}
+.hlbar button.hlc.hl-y{background:#FFD84D}.hlbar button.hlc.hl-g{background:#5BD9A4}.hlbar button.hlc.hl-p{background:#FF8FC0}.hlbar button.hlc.hl-b{background:#74B4FF}
+mark.hl{color:inherit;border-radius:4px;padding:1px 0;cursor:default}
+mark.hl-y{background:rgba(255,205,31,.5)}mark.hl-g{background:rgba(52,211,153,.42)}mark.hl-p{background:rgba(244,114,182,.42)}mark.hl-b{background:rgba(96,165,250,.45)}
+.hl-on{cursor:text}.hl-er mark.hl{cursor:pointer;outline:1.5px dashed var(--bad)}
+.tmr .tmrT{font-variant-numeric:tabular-nums;font-weight:800;font-size:17px;min-width:56px;text-align:center}
+.tmr.over{background:color-mix(in srgb,var(--bad) 16%,var(--panel))}.tmr.over .tmrT{color:var(--bad)}
+.tmr select{border:0;background:var(--panel2);color:var(--fg);border-radius:10px;padding:6px 8px;font:inherit;font-size:13px;font-weight:600}
+.mine-l{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.mine-l mark{font-size:13px;padding:2px 7px;border-radius:8px}
 </style>
 </head>
 <body>
@@ -762,10 +778,10 @@ function header(cur){
   else if(inMod){
     const [nm,ico]=MODNAV[k];
     const exam=at(`#/${k}/pruefung`)||/^#\/(lesen\/lex|hoeren\/ex|sprechen\/sex)[12]$/.test(H);
-    const task=!exam&&(at(`#/${k}/all`)||new RegExp(`^#/${k}/(?!ai|aix|errors|progress|all|hints|pruefung)[^/]+`).test(H));
+    const task=!exam&&(at(`#/${k}/all`)||new RegExp(`^#/${k}/(?!ai|aix|errors|progress|all|hints|pruefung|mine)[^/]+`).test(H));
     body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,"Главная","home",mc,H==="#/"+k)+navItem(`#/${k}/pruefung`,"Пробный вариант","target",mc,exam)+navItem(`#/${k}/all`,k==="grammatik"?"Темы и упражнения":"Задания по темам",ico,mc,task)+
       `<div class="nav-gt">С ИИ</div>`+navItem(`#/${k}/ai`,"Практика с ИИ","spark",mc,at(`#/${k}/ai`)||at(`#/${k}/aix`),"дай тему, ИИ придумает задания")+
-      `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem(`#/${k}/errors`,"Ошибки","target",mc,at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс и настройки","chart",mc,at(`#/${k}/progress`));
+      `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+(k==="lesen"?navItem("#/lesen/mine","Мои тексты","book",mc,at("#/lesen/mine"),"что решал и выделял"):"")+navItem(`#/${k}/errors`,"Ошибки","target",mc,at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс и настройки","chart",mc,at(`#/${k}/progress`));
   }else body=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home",mc,route==="home")+
       `<div class="nav-gt">С ИИ</div>`+navItem("/woerter#tab=practice","Практика слов с ИИ","spark",mc,false,"пиши, ИИ проверит")+
       `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
@@ -838,6 +854,7 @@ async function dispatch(a,b,c){
       if(b==="progress")return await vModProgress(a);
       if(b==="hints"){location.replace("#/"+a+"/ai");return}   // «Как решать» переехало в «Практику с ИИ»
       if(b==="errors")return await vModExtra(a,b);
+      if(b==="mine"&&a==="lesen")return await vLesenMine();
       if(b==="aix")return await vAIRun(a);
       if(b==="pruefung")return await({grammatik:vPruefung,lesen:vLesenExam,hoeren:vHoerenExam,sprechen:vSprechenExam})[a]();
       if(b==="all"){LVF=c?decodeURIComponent(c):null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
@@ -1144,8 +1161,10 @@ function renderGram(){
   const lvName={2:"Stufe 2 · средний",3:"Stufe 3 · сложный, как на экзамене"};
   const back=G.area==="frei"?crumb("#/frei/grammatik","Грамматика (свободный)"):crumb("#/grammatik","Grammatik");
   page(`${back}<h1>${esc(t.title)}</h1><p class="lead">${esc(t.ru||"")}</p>
+   <div class="ltools">${timerHTML()}</div>
    <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button>${t.write?`<button data-gt="ai" class="${G.tab==="ai"?"on":""}">${ic("spark",15)} Письмо с ИИ</button>`:""}</div></div>
    <div class="gsplit${G.tab!=="th"?" on":""}"><div id="gbody"></div>${G.tab!=="th"&&t.theory?`<aside class="gside"><details class="gth" ${matchMedia("(min-width:1021px)").matches?"open":""}><summary>${ic("book",16)}Теория рядом<span class="muted">${G.area==="frei"?"":"шпаргалка к заданиям"}</span></summary><div class="theory">${t.theory}</div></details></aside>`:""}</div>`);
+  bindTimer();
   $$("[data-gt]").forEach(b=>b.onclick=()=>{G.tab=b.dataset.gt;if(G.tab==="ex"){G.st.seenTheory=1;save(gramKey(),G.st)}renderGram()});
   const body=$("#gbody");
   if(G.tab==="ai"){gramWrite(body);return}
@@ -1250,6 +1269,7 @@ function sentenceAround(text,word){const i=text.indexOf(word);if(i<0)return text
 function bindLookup(root,side){
   LOOK={root,side,list:[]};
   const handler=()=>setTimeout(()=>{
+    if(HLMODE!=="tr")return;   // включён маркер или ластик
     const sel=getSelection();if(!sel||sel.isCollapsed)return;
     const txt=sel.toString().replace(/\s+/g," ").trim().replace(/^[„“"«(\[]+|[.,;:!?“”"»)\]]+$/g,"");
     if(!txt||txt.length>60||txt.split(" ").length>5||!root.contains(sel.anchorNode))return;
@@ -1296,6 +1316,70 @@ async function lookup(word,sentence,rect){
 }
 document.addEventListener("mousedown",e=>{if(POP&&!POP.contains(e.target))closePop()});
 
+// ---------- маркер в Lesen: выделения хранятся по тексту и не пропадают после проверки ИИ ----------
+let HLMODE="tr";   // tr: перевод по выделению, y/g/p/b: маркер, er: ластик
+const HLCOL=[["y","Жёлтый"],["g","Зелёный"],["p","Розовый"],["b","Голубой"]];
+const hlSlug=x=>String(x||"").toLowerCase().replace(/[^a-z0-9]+/g,"").slice(0,24);
+const hlKey=(area,id,t)=>"lh-"+area+"-"+(id==="ai"?"ai-"+hlSlug(t&&t.title):id);
+const hlWalker=pa=>document.createTreeWalker(pa,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest(".pn")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+function paText(pa){const w=hlWalker(pa);let t="",n;while(n=w.nextNode())t+=n.nodeValue;return t}
+function selSpan(pa,range){const w=hlWalker(pa);let pos=0,s=-1,e=-1,n;
+  while(n=w.nextNode()){const len=n.nodeValue.length;
+    if(range.intersectsNode(n)){const a=n===range.startContainer?range.startOffset:0,b=n===range.endContainer?range.endOffset:len;if(b>a){if(s<0)s=pos+a;e=pos+b}}
+    pos+=len}
+  return s<0?null:[s,e]}
+function unwrapHL(root){root.querySelectorAll("mark.hl").forEach(m=>{const p=m.parentNode;while(m.firstChild)p.insertBefore(m.firstChild,m);p.removeChild(m);p.normalize()})}
+function wrapRange(pa,s,e,cls,id){const w=hlWalker(pa);let pos=0,n;const todo=[];
+  while(n=w.nextNode()){const len=n.nodeValue.length,a=Math.max(s,pos),b=Math.min(e,pos+len);if(a<b)todo.push([n,a-pos,b-pos]);pos+=len;if(pos>=e)break}
+  todo.forEach(([n2,a,b])=>{const r=document.createRange();r.setStart(n2,a);r.setEnd(n2,b);const m=document.createElement("mark");m.className="hl hl-"+cls;m.dataset.h=id;r.surroundContents(m)})}
+function applyHL(root,list){unwrapHL(root);
+  list.slice().sort((a,b)=>a.p-b.p||a.s-b.s).forEach(h=>{const pa=root.querySelector(`.pa[data-i="${h.p}"]`);if(!pa)return;
+    const full=paText(pa);let s=h.s,e=h.e;if(full.slice(s,e)!==h.t){const i=full.indexOf(h.t);if(i<0)return;s=i;e=i+h.t.length}
+    wrapRange(pa,s,e,h.c,h.id)})}
+const hlBarHTML=()=>`<div class="hlbar" id="hlbar"><span class="hl-l">${ic("edit",15)}Выделение</span><button type="button" data-hm="tr" class="on" title="Выделяешь слово — появляется перевод">Перевод</button>${HLCOL.map(([k,t])=>`<button type="button" data-hm="${k}" class="hlc hl-${k}" title="Маркер: ${t}" aria-label="Маркер: ${t}"></button>`).join("")}<button type="button" data-hm="er" title="Нажми на выделение, чтобы убрать">Ластик</button><small class="muted" id="hlN"></small></div>`;
+function bindMarker(root,key,list){
+  const bar=$("#hlbar");if(!bar)return;
+  const setMode=m=>{HLMODE=m;bar.querySelectorAll("[data-hm]").forEach(b=>b.classList.toggle("on",b.dataset.hm===m));root.classList.toggle("hl-on",m!=="tr"&&m!=="er");root.classList.toggle("hl-er",m==="er")};
+  const redraw=()=>{applyHL(root,list);$("#hlN").textContent=list.length?"выделено: "+list.length:""};
+  bar.onclick=e=>{const b=e.target.closest("[data-hm]");if(b)setMode(b.dataset.hm)};
+  const up=()=>setTimeout(()=>{
+    if(HLMODE==="tr"||HLMODE==="er")return;
+    const sel=getSelection();if(!sel||sel.isCollapsed||!sel.rangeCount)return;
+    const range=sel.getRangeAt(0),c=range.commonAncestorContainer,pa=(c.nodeType===1?c:c.parentElement).closest(".pa");
+    if(!pa||!root.contains(pa))return;
+    const sp=selSpan(pa,range);if(!sp)return;
+    const t=paText(pa).slice(sp[0],sp[1]);if(!t.trim())return;
+    const p=+pa.dataset.i;
+    for(let i=list.length-1;i>=0;i--){const h=list[i];if(h.p===p&&h.s<sp[1]&&sp[0]<h.e)list.splice(i,1)}   // новое выделение заменяет пересекающееся
+    list.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,5),p,s:sp[0],e:sp[1],c:HLMODE,t,d:today()});
+    sel.removeAllRanges();save(key,list);redraw()},10);
+  root.addEventListener("mouseup",up);root.addEventListener("touchend",up);
+  root.addEventListener("click",e=>{if(HLMODE!=="er")return;const m=e.target.closest("mark.hl");if(!m)return;const i=list.findIndex(h=>h.id===m.dataset.h);if(i>=0){list.splice(i,1);save(key,list);redraw()}});
+  setMode("tr");redraw();
+}
+// ---------- таймер (Lesen, Grammatik): секундомер или обратный отсчёт, помнит состояние до закрытия вкладки ----------
+const TM=(()=>{let o={mins:0,run:false,t0:0,acc:0};try{o={...o,...JSON.parse(sessionStorage.getItem("de-tm")||"{}")}}catch(e){}return o})();
+const tmSave=()=>{try{sessionStorage.setItem("de-tm",JSON.stringify(TM))}catch(e){}};
+const tmElapsed=()=>TM.acc+(TM.run?Date.now()-TM.t0:0);
+const tmSec=()=>Math.round(tmElapsed()/1000);
+const tmFmt=ms=>{const t=Math.max(0,Math.round(ms/1000)),h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+":"+String(m).padStart(2,"0"):String(m).padStart(2,"0"))+":"+String(s).padStart(2,"0")};
+const tmShow=()=>TM.mins?TM.mins*60000-tmElapsed():tmElapsed();
+function tmTick(){
+  const over=TM.mins&&tmShow()<=0;
+  if(over&&TM.run){TM.acc=TM.mins*60000;TM.run=false;tmSave();toast("Время вышло")}
+  $$(".tmr").forEach(b=>{b.classList.toggle("over",!!over);const t=b.querySelector(".tmrT");if(t)t.textContent=tmFmt(tmShow());const g=b.querySelector('[data-tm="go"]');if(g)g.textContent=TM.run?"Пауза":(tmElapsed()?"Дальше":"Старт")});
+}
+setInterval(tmTick,500);
+const timerHTML=()=>`<div class="tmr" aria-label="Таймер">${ic("clock",16)}<span class="tmrT">${tmFmt(tmShow())}</span><button type="button" data-tm="go">${TM.run?"Пауза":(tmElapsed()?"Дальше":"Старт")}</button><button type="button" data-tm="rst">Сброс</button><select data-tm="mode" aria-label="Режим таймера"><option value="0" ${TM.mins?"":"selected"}>Секундомер</option>${[10,20,30,45,60].map(m=>`<option value="${m}" ${TM.mins===m?"selected":""}>Отсчёт ${m} мин</option>`).join("")}</select></div>`;
+function bindTimer(){
+  $$(".tmr").forEach(b=>{
+    b.onclick=e=>{const x=e.target.closest("button[data-tm]");if(!x)return;
+      if(x.dataset.tm==="go"){if(TM.run){TM.acc=tmElapsed();TM.run=false}else{if(TM.mins&&tmShow()<=0)TM.acc=0;TM.t0=Date.now();TM.run=true}}
+      else{TM.run=false;TM.acc=0}
+      tmSave();tmTick()};
+    const sel=b.querySelector("select");if(sel)sel.onchange=()=>{TM.mins=+sel.value;TM.run=false;TM.acc=0;tmSave();tmTick()};
+  });tmTick();
+}
 // ---------- задания к текстам (Lesen, Hören) ----------
 // ---------- задания Lesen / Hören: официальные типы EPD (VWU), баллы и оценка открытых ответов ИИ ----------
 // Типы: tf, mc, gap, open / qs (Kurzantworten, оценивает ИИ), short (короткий ответ: Bezugswörter, Wer sagt was, Umschreibungen),
@@ -1481,10 +1565,13 @@ async function vLesen(area,id){
   const T=()=>t.tasks.concat(extra);
   let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):[],res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev;
   const canAdd=area==="de"&&!!(ST.keys&&ST.keys.anthropic);
+  HLMODE="tr";
+  const hKey=hlKey(area,id,t),hList=get(hKey,null)||[];
   page(`${crumb(base(area)+"lesen","Lesen")}
+  <div class="ltools">${hlBarHTML()}${timerHTML()}</div>
   <div class="reader" style="margin-top:10px">
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
-      ${(t.paras||[]).map((p,i)=>`<p class="pa"><span class="pn">${i+1}</span>${gapsHTML(esc(p))}</p>`).join("")}</article>
+      ${(t.paras||[]).map((p,i)=>`<p class="pa" data-i="${i}"><span class="pn">${i+1}</span>${gapsHTML(esc(p))}</p>`).join("")}</article>
     <aside class="side" id="side">
       ${area==="de"?howtoHTML("lesen"):""}
       <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик), перевод DeepL появится прямо у слова.</div></div>
@@ -1494,6 +1581,7 @@ async function vLesen(area,id){
     </aside>
   </div>`);
   bindLookup($("#art"),$("#side"));
+  bindMarker($("#art"),hKey,hList);bindTimer();
   const drawX=()=>{const box=$("#xadd");if(!box)return;
     box.innerHTML=`<div class="xh"><b>Задания как на EPD</b><span class="muted">ИИ добавит официальные типы к этому тексту${extra.length?` · добавлено ${extra.length}`:""}</span></div>
       ${canAdd?`<div class="xk">${LKINDS.map(([k,n,sub])=>`<button class="btn sm" data-xk="${k}" title="${esc(sub)}">${esc(n)}</button>`).join("")}</div>${extra.length?`<button class="btn sm" id="xclear" style="margin-top:8px">Убрать добавленные</button>`:""}`:`<p class="muted" style="margin:6px 0 0;font-size:13px">Нужен ключ Claude (Настройки).</p>`}`;
@@ -1510,11 +1598,26 @@ async function vLesen(area,id){
     $("#lcheck").hidden=checked;$("#lreset").hidden=!checked;drawX()};
   draw();
   $("#lcheck").onclick=async()=>{const b=$("#lcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
-    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,T(),ans,res);logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
+    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today(),ts:Math.floor(Date.now()/1000),sec:tmSec()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,T(),ans,res);logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
   $("#lreset").onclick=()=>{checked=false;ans=[];res={};draw()};
 }
 
 // ---------- Hören ----------
+// «Мои тексты»: что ты решал и выделял в Lesen, по дням; из любой записи можно вернуться в текст с его выделениями и ответами
+async function vLesenMine(){
+  header("lesen");setC(MOD.lesen.c);
+  const d=await data("de","lesen"),texts=d.texts||[];
+  const rows=texts.map(t=>{const r=get("l-de-"+t.id,null),hl=get(hlKey("de",t.id,t),null)||[];
+    if(!r&&!hl.length)return null;
+    const day=Math.max(r&&r.d||0,...hl.map(h=>h.d||0));
+    return {t,r,hl,day}}).filter(Boolean).sort((a,b)=>b.day-a.day);
+  const ago=n=>{const k=today()-n;return k<=0?"сегодня":k===1?"вчера":k+" "+plural(k,"день","дня","дней")+" назад"};
+  const date=n=>new Date(n*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
+  const mmss=sec=>sec?" · "+tmFmt(sec*1000):"";
+  page(`${crumb("#/lesen","Lesen")}<h1>Мои тексты</h1><p class="lead">Здесь остаётся всё, что ты делал в Lesen: результат проверки, ответы и слова с оборотами, которые выделил маркером. Нажми на текст, чтобы вернуться к нему: выделения на месте.</p>
+   ${rows.length?`<div class="list" style="grid-template-columns:1fr">${rows.map(({t,r,hl,day})=>`<a class="item" href="#/lesen/${t.id}" style="min-height:0"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${r?`<span class="tag ok">✓ ${fmtPts(r.s)}/${fmtPts(r.m)}${mmss(r.sec)}</span>`:""}<span class="tag">${ago(day)} · ${date(day)}</span></div><h3>${esc(t.title)}</h3>
+     ${hl.length?`<div class="mine-l">${hl.slice().sort((a,b)=>a.p-b.p||a.s-b.s).slice(0,12).map(h=>`<mark class="hl hl-${h.c}">${esc(h.t.length>60?h.t.slice(0,58)+"…":h.t)}</mark>`).join("")}${hl.length>12?`<small class="muted">и ещё ${hl.length-12}</small>`:""}</div>`:`<p>выделений нет</p>`}</a>`).join("")}</div>`:`<div class="empty">Пока пусто. Открой любой текст: когда проверишь ответы или выделишь слова маркером, он появится здесь.</div>`}`);
+}
 async function vHoerenList(area){
   header(area==="frei"?"frei":"hoeren");setC(area==="frei"?"var(--c-f)":"var(--c-h)");
   const d=await data(area,"hoeren");

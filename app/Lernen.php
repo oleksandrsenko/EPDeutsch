@@ -335,9 +335,9 @@ class Lernen
             $d = Http::json();
             $topic = Util::str($d['topic'] ?? '', 200); $task = Util::str($d['task'] ?? '', 400); $text = Util::str($d['text'] ?? '', 2500);
             if (count(preg_split('/\s+/u', $text, -1, PREG_SPLIT_NO_EMPTY)) < 5) { throw new ApiError(400, 'Напиши хотя бы пару предложений'); }
-            $ck = 'gw:' . hash('sha256', json_encode([self::TALK_MODEL, $topic, $task, $text], JSON_UNESCAPED_UNICODE));
+            $ck = 'gw:' . hash('sha256', json_encode([self::CTX_MODEL, $topic, $task, $text], JSON_UNESCAPED_UNICODE));
             if ($c = Ai::cacheGet($ck)) { return $c; }
-            $res = Ai::ask($u, 'gwrite', self::TALK_MODEL, self::prompt('lernen_gwrite'), "Тема грамматики: $topic\nЗадание: $task\nТекст студента:\n$text",
+            $res = Ai::ask($u, 'gwrite', self::CTX_MODEL, self::prompt('lernen_gwrite'), "Тема грамматики: $topic\nЗадание: $task\nТекст студента:\n$text",
                 self::schema('lernen_gwrite'), 1500, null, 45, 'ИИ сейчас недоступен, попробуй ещё раз');
             Ai::cachePut($ck, $res);
             return $res;

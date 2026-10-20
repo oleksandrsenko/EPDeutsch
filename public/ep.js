@@ -253,12 +253,15 @@ async function buildIndex(){
     const de=Array.isArray(it)?it[0]:it.de,ru=Array.isArray(it)?it[1]:it.ru;
     out.push({g:"EPD · Wörter",de,ru,where:ch.id+" "+ch.title+" › "+s.name,href:"/woerter"})})))}catch(e){}
   const [me,wd,gde,gfr,lde,lfr,hde,hfr]=await Promise.all(["/api/me","/data/frei/wendungen.json","/data/de/grammatik.json","/data/frei/grammatik.json","/data/de/lesen.json","/data/frei/lesen.json","/data/de/hoeren.json","/data/frei/hoeren.json"].map(getJSON));
-  const pr=me&&me.progress;(pr&&pr.usets||[]).forEach(u=>(u.cards||[]).forEach(c=>out.push({g:"Мои наборы",de:c.de,ru:c.ru,where:u.name,href:"/woerter"})));
-  (wd&&wd.decks||[]).forEach(d=>(d.cards||[]).forEach(c=>out.push({g:"Свободный · "+d.title,de:c.de,ru:c.ru,where:d.title,href:"/de#/frei/karten/"+d.id})));
-  [[gde,"EPD · Grammatik","/de#/grammatik/"],[gfr,"Свободный · Grammatik","/de#/frei/grammatik/"]].forEach(([g,n,h])=>(g&&g.topics||[]).forEach(t=>out.push({g:n,de:t.title,ru:t.ru||"",where:t.level||"",href:h+t.id,topic:1})));
-  [[lde,"EPD · Lesen","/de#/lesen/"],[lfr,"Свободный · Lesen","/de#/frei/lesen/"],[hde,"EPD · Hören","/de#/hoeren/"],[hfr,"Свободный · Hören","/de#/frei/hoeren/"]].forEach(([g,n,h])=>(g&&(g.texts||g.items)||[]).forEach(t=>out.push({g:n,de:t.title,ru:t.topic||"",where:t.level||"",href:h+t.id,topic:1})));
-  out.forEach(o=>{o.fd=strip(o.de);o.fr=fold(o.ru)});
-  return out;
+  const arr=v=>Array.isArray(v)?v:[];
+  const part=f=>{try{f()}catch(e){}};   // одна плохая часть данных не должна ломать весь словарь
+  const pr=me&&me.progress;
+  part(()=>arr(pr&&pr.usets).forEach(u=>arr(u&&u.cards).forEach(c=>out.push({g:"Мои наборы",de:c.de,ru:c.ru,where:u.name,href:"/woerter"}))));
+  part(()=>arr(wd&&wd.decks).forEach(d=>arr(d.cards).forEach(c=>out.push({g:"Свободный · "+d.title,de:c.de,ru:c.ru,where:d.title,href:"/de#/frei/karten/"+d.id}))));
+  part(()=>[[gde,"EPD · Grammatik","/de#/grammatik/"],[gfr,"Свободный · Grammatik","/de#/frei/grammatik/"]].forEach(([g,n,h])=>arr(g&&g.topics).forEach(t=>out.push({g:n,de:t.title,ru:t.ru||"",where:t.level||"",href:h+t.id,topic:1}))));
+  part(()=>[[lde,"EPD · Lesen","/de#/lesen/"],[lfr,"Свободный · Lesen","/de#/frei/lesen/"],[hde,"EPD · Hören","/de#/hoeren/"],[hfr,"Свободный · Hören","/de#/frei/hoeren/"]].forEach(([g,n,h])=>arr(g&&(g.texts||g.items)).forEach(t=>out.push({g:n,de:t.title,ru:t.topic||"",where:t.level||"",href:h+t.id,topic:1}))));
+  out.forEach(o=>{o.de=String(o.de==null?"":o.de);o.ru=String(o.ru==null?"":o.ru);o.fd=strip(o.de);o.fr=fold(o.ru)});
+  return out.filter(o=>o.de);
 }
 function hl(s,q){const f=fold(s),i=f.indexOf(q);if(i<0||!q)return esc(s);return esc(s.slice(0,i))+"<mark>"+esc(s.slice(i,i+q.length))+"</mark>"+esc(s.slice(i+q.length))}
 // результаты поиска в любой контейнер: и в окно ⌘K, и в выпадашку под полем в шапке
@@ -271,7 +274,7 @@ function results(res,val){
   const groups={};hits.forEach(([,o])=>(groups[o.g]=groups[o.g]||[]).push(o));
   res.innerHTML=`<div class="ep-sempty" style="padding:6px 10px;text-align:left">Нашлось: ${hits.length}${hits.length===60?"+":""}</div>`+Object.entries(groups).map(([g,a])=>`<div class="ep-sg">${esc(g)}</div>`+a.map(o=>`<a href="${o.href}"><span><b>${hl(o.de,qs)}</b>${o.ru?`<span class="ep-sru">${hl(o.ru,q)}</span>`:""}</span><small>${esc(o.where)}</small></a>`).join("")).join("");
 }
-const need=cb=>{if(IDX)return;if(!loading)loading=buildIndex().then(x=>{IDX=x});loading.then(cb)};
+const need=cb=>{if(IDX)return;if(!loading)loading=buildIndex().then(x=>{IDX=x},()=>{loading=null});loading.then(cb)};
 function search(val){
   if(document.querySelector(".ep-sov"))return;
   const ov=document.createElement("div");ov.className="ep-sov";
@@ -306,7 +309,7 @@ document.addEventListener("click",e=>{if(e.target.closest("[data-ep-search]")){e
 // подсказки слов для переводчика: по началу слова из того же словаря, что и поиск (Wörter, свои наборы, колоды).
 // lang "de": слово по-немецки (с артиклем), подсказка — перевод; "ru": русский вариант, подсказка — немецкое слово.
 async function suggest(tok,lang,n){
-  if(!IDX){if(!loading)loading=buildIndex().then(x=>{IDX=x});await loading}
+  if(!IDX){if(!loading)loading=buildIndex().then(x=>{IDX=x},()=>{loading=null});await loading}   // после сбоя следующая попытка строит индекс заново
   const q=lang==="ru"?fold(tok):strip(tok);if(q.length<2||!IDX)return [];
   const clean=v=>String(v||"").replace(/\*/g,"").split(/\s+\/\s+/)[0].replace(/,\s*(-|¨|\(|Pl\.)[^,]*$/,"").replace(/\s*\((Plural|Pl\.)\)\s*$/,"").trim();
   const seen=new Set(),hits=[];

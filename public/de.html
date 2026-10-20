@@ -1031,7 +1031,7 @@ function bindTranslator(){
   // словарная статья (как в Яндекс Переводчике): другие значения, синонимы, примеры; только для слова или короткого выражения
   const dbox=$("#trDict");
   const dict=async(text,f,to,my)=>{
-    if(text.split(/\s+/).length>4||/[.!?;:]/.test(text)||text.length>60||!(ST.keys&&ST.keys.anthropic)){dbox.hidden=true;return}
+    if(text.split(/\s+/).length>4||/[.!?;:]/.test(text)||text.length>60){dbox.hidden=true;return}
     try{const r=await api("/de/trdict",{method:"POST",body:JSON.stringify({word:text,from:f,to})});if(my!==seq)return;
       const hl=(sn)=>{const w=(f==="de"?text:r.lemma||"").replace(/^(der|die|das)\s+/i,"").trim();let h=esc(sn);if(w.length>=3){const st=w.slice(0,Math.max(3,w.length-2)).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");h=h.replace(new RegExp("("+st+"[\\wäöüßÄÖÜ]*)","i"),"<mark>$1</mark>")}return h};
       const chips=(a,lang,go)=>a.map(x=>`<button type="button" class="trchip" ${go?`data-trgo="${esc(x)}"`:""} lang="${lang}">${esc(x)}</button>`).join("");
@@ -1043,7 +1043,7 @@ function bindTranslator(){
       if(!parts.length){dbox.hidden=true;return}
       dbox.innerHTML=parts.join("");dbox.hidden=false;
       dbox.querySelectorAll("[data-trgo]").forEach(b=>b.onclick=()=>{inp.value=b.dataset.trgo;const [f2]=trDir().split("-");if(f2!=="de"){save("trdir","de-ru");$$("[data-trd]").forEach(x=>x.classList.toggle("on",x.dataset.trd==="de-ru"))}run()})}
-    catch(e){if(my===seq)dbox.hidden=true}};
+    catch(e){if(my===seq){dbox.innerHTML=`<div class="trd-r"><span>Словарь</span><div class="muted" style="font-size:13px">${esc(e.message)}</div></div>`;dbox.hidden=false}}};
   const run=async()=>{const text=inp.value.trim(),my=++seq;dbox.hidden=true;if(!text){out.value="";$("#trProv").textContent="";$("#trSay").hidden=true;return}
     const [f,to]=trDir().split("-");$("#trProv").innerHTML='<span class="spin" style="width:14px;height:14px;border-width:2px"></span> перевожу…';
     try{const r=await api("/translate",{method:"POST",body:JSON.stringify({text,from:f,to})});if(my!==seq)return;out.value=r.text;$("#trProv").textContent=r.provider||"";$("#trSay").hidden=to!=="de"&&f!=="de";dict(text,f,to,my)}
@@ -1054,7 +1054,7 @@ function bindTranslator(){
   const hideSug=()=>{cur=[];box.hidden=true;box.innerHTML=""};
   const showSug=async()=>{const [f]=trDir().split("-"),tk=tokAt(),my=++sq;tokR=tk;
     if(!tk||tk.tok.length<2||f==="en"||!window.EP||!EP.suggest){hideSug();return}
-    const r=await EP.suggest(tk.tok,f==="ru"?"ru":"de",6);if(my!==sq)return;
+    let r=[];try{r=await EP.suggest(tk.tok,f==="ru"?"ru":"de",6)}catch(e){console.error("suggest",e)}if(my!==sq)return;
     cur=r.filter(x=>x.text.toLowerCase()!==tk.tok.toLowerCase());
     if(!cur.length){hideSug();return}
     box.innerHTML=cur.map((x,i)=>`<button type="button" data-si="${i}"><span lang="${f==="ru"?"ru":"de"}">${esc(x.text)}</span>${x.hint?`<small>${esc(x.hint)}</small>`:""}${i===0?"<kbd>Tab</kbd>":""}</button>`).join("");box.hidden=false};

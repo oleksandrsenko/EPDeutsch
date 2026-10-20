@@ -1146,7 +1146,7 @@ const base=area=>area==="frei"?"#/frei/":"#/";
 async function vGramList(area){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
   const gr0=await data(area,"grammatik"),gr={...gr0,topics:lf(gr0.topics,area)};
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"grammatik")}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Темы письменной части: Strukturen und Wortschatz. Внутри каждой темы, короткая теория и задания от простых к сложным."}</p>${gramListHTML(area,gr,true)}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"grammatik")}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Часть Strukturen und Wortschatz (Грамматика и лексика): 15 баллов, C-Test / Lückentext, Umformen, Rektion. В каждой теме короткая теория и задания идут подряд: «средние» и «сложные» подмешиваются сами, оценка как на EPD."}</p>${gramListHTML(area,gr,true)}`);
 }
 function gramListHTML(area,gr,grouped){
   if(grouped&&area==="de"){const g={};(gr.topics||[]).forEach(t=>(g[gk(t)]=g[gk(t)]||[]).push(t));
@@ -1174,7 +1174,7 @@ async function vGram(area,id,sub){
   if(!t){page('<div class="empty">Тема не найдена</div>');return}
   const st=gramSt(area,t);if(!st.r)st.r={};if(area==="de")touchRecent("grammatik",id);
   const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
-  G={area,t,st,tab:sub==="ai"&&t.write?"ai":(st.seenTheory||t.exam)?"ex":"th",lv:null,queue:[],pos:0,ok:0,pts:0,answered:false};
+  G={area,t,st,tab:sub==="ai"&&t.write?"ai":(st.seenTheory||t.exam)?"ex":"th",queue:[],pos:0,ok:0,pts:0,max:GRAM_PTS,answered:false};
   renderGram();
 }
 // ---------- письмо с ИИ: свой текст с конструкцией темы, Claude проверяет ----------
@@ -1205,51 +1205,78 @@ async function vGramAI(){
   <div class="list">${(gr.topics||[]).filter(t=>t.write).map(t=>{const st=get("gw-de-"+t.id);return `<a class="item" href="#/grammatik/${t.id}/ai"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${st&&st.last?`<span class="tag ok">последний: ${st.last.r.score}/10</span>`:""}</div><h3>${esc(t.title)}</h3><p>${t.write.length} ${plural(t.write.length,"задание","задания","заданий")} · ${esc(t.ru||"")}</p></a>`}).join("")}</div>`);
 }
 function gramKey(){return "g-"+G.area+"-"+G.t.id}
+// ---------- «Strukturen und Wortschatz» как на EPD: 15 баллов, задания идут подряд (C-Test, Lückentext, Umformen, Rektion), без выбора уровня ----------
+const GRAM_PTS=15;
+const gWords=a=>String(a||"").split(/\s+/).filter(Boolean);
+// C-Test для короткого ответа: от каждого слова показываем первую половину букв
+const gStub=a=>gWords(a).map(w=>w.length>1?ctStub(w)+"…":"…").join(" ");
+const gPts=q=>q.t==="ct"?q.a.length:1;
+// готовим задание к показу: тест с вариантами превращаем в пропуск, который вписывают сами; в «среднем» уровне даём начало слова (C-Test), в сложном нет
+function prepQ(t,i){
+  t._p=t._p||{};if(t._p[i])return t._p[i];
+  const q=t.items[i];let o=q;
+  if(q.t==="mc"&&/___/.test(q.q)&&q.o&&q.o[q.a]&&gWords(q.o[q.a]).length<=3)o={t:"gap",lv:q.lv,q:q.q,a:[q.o[q.a]],hint:"",ex:q.ex||"",conv:true};
+  if(o.t==="gap"&&(o.lv||2)<3&&!o.ch&&(o.a||[])[0]&&!/\s{2,}/.test(o.a[0]))o={...o,ch:gStub(o.a[0])};
+  return t._p[i]=o;
+}
+// вид задания для подписи
+function gKind(t,q){
+  if(q.t==="ct")return "C-Test";if(q.t==="nf"||q.t==="tr")return "Umformen";
+  if(q.rk||t.id==="rektion"||t.id==="fvg")return "Rektion";
+  return "Lückentext";
+}
 function renderGram(){
   const t=G.t,p=gramPct(G.area,t);
-  const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
-  const lvName={2:"Stufe 2 · средний",3:"Stufe 3 · сложный, как на экзамене"};
   const back=G.area==="frei"?crumb("#/frei/grammatik","Грамматика (свободный)"):crumb("#/grammatik","Grammatik");
   page(`${back}<h1>${esc(t.title)}</h1><p class="lead">${esc(t.ru||"")}</p>
-   <div class="ltools">${timerHTML()}</div>
+   ${G.tab==="ai"?`<div class="ltools">${timerHTML()}</div>`:""}
    <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button>${t.write?`<button data-gt="ai" class="${G.tab==="ai"?"on":""}">${ic("spark",15)} Письмо с ИИ</button>`:""}</div></div>
    <div class="gsplit${G.tab!=="th"?" on":""}"><div id="gbody"></div>${G.tab!=="th"&&t.theory?`<aside class="gside"><details class="gth" ${matchMedia("(min-width:1021px)").matches?"open":""}><summary>${ic("book",16)}Теория рядом<span class="muted">${G.area==="frei"?"":"шпаргалка к заданиям"}</span></summary><div class="theory">${t.theory}</div></details></aside>`:""}</div>`);
-  bindTimer();
+  if(G.tab==="ai")bindTimer();
   $$("[data-gt]").forEach(b=>b.onclick=()=>{G.tab=b.dataset.gt;if(G.tab==="ex"){G.st.seenTheory=1;save(gramKey(),G.st)}renderGram()});
   const body=$("#gbody");
   if(G.tab==="ai"){gramWrite(body);return}
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
-  if((t.ai||t.exam)&&!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // ИИ-набор: сразу все 10 заданий, без выбора ступени
-  if(!G.queue.length||G.done){
-    body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень: средний или сложный (как на экзамене). Ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;
-    $$("[data-lv]").forEach(b=>b.onclick=()=>startGram(+b.dataset.lv));
-    return;
-  }
+  if(!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // сразу в ряд, без выбора ступени
+  if(G.done){body.innerHTML=`<div class="ex-run">${summaryHTML()}</div>`;
+    $("#gAgain").onclick=()=>{G.queue=[];G.done=false;startGram(0)};const er=$("#gErr");if(er)er.onclick=()=>startGram(-1);return}
   renderQ();
 }
-function summaryHTML(){const n=G.queue.length;if(G.t.exam){const mx=G.t.items.reduce((a,x)=>a+(x.pts||1),0),p=G.pts||0,pass=p>=12;return `<div class="card summary"><div class="big">${p}/${mx}</div><p><b>${pass?"Порог пройден":"Ниже порога"}</b>: в части Strukturen und Wortschatz на экзамене нужно минимум 12 из 25. ${pass?"":"Перечитай теорию к заданиям, которые не получились, и повтори пробный вариант."}</p></div>`}return `<div class="card summary"><div class="big">${G.ok}/${n}</div><p>${G.ok===n?"Без ошибок! Можно переходить к следующей ступени.":G.ok/n>=.7?"Хорошо. Ошибки сохранены, повтори их через «Только ошибки».":"Тема ещё не села. Перечитай теорию и пройди ступень ещё раз."}</p></div>`}
-function startGram(lv){
-  const t=G.t;let idx=t.items.map((x,i)=>i);
-  if(lv>0){idx=idx.filter(i=>(t.items[i].lv||1)===lv);
-    // в ступени до 100 заданий: круг — 15 штук, сначала нерешённые, потом ошибки, потом остальные
-    const RN=get("ground",15);if(idx.length>RN){const r=G.st.r||{},rank=i=>r[i]===undefined?0:r[i]===0?1:2;idx=idx.map(i=>[rank(i),Math.random(),i]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).slice(0,RN).map(x=>x[2])}}
-  if(lv===-1)idx=idx.filter(i=>G.st.r[i]===0);
-  if(!idx.length){toast(lv===-1?"Ошибок нет":"Пусто");return}
-  G.queue=idx;G.pos=0;G.ok=0;G.pts=0;G.done=false;G.answered=false;G.retry=[];renderGram();
+function summaryHTML(){
+  const mx=G.max||GRAM_PTS,p=G.pts||0,half=p>=mx/2,bad=Object.values(G.st.r).filter(x=>x===0).length;
+  return `<div class="card summary"><div class="big">${fmtPts(p)}/${mx}</div><p><b>${p>=mx*.8?"Отличный результат":half?"Зачёт: больше половины баллов":"Меньше половины баллов"}</b>. Как на EPD, оценивается точность форм и конструкций: ${p>=mx*.8?"так держать.":half?"повтори ошибки и теорию рядом.":"перечитай теорию и пройди ещё один круг."}</p>
+   <div class="row" style="margin-top:12px"><button class="btn primary" id="gAgain">Ещё круг (${GRAM_PTS} баллов)</button>${bad?`<button class="btn" id="gErr">Повторить ошибки (${bad})</button>`:""}</div></div>`;
+}
+// круг: 15 баллов; сначала нерешённые и ошибки; «средние» и «сложные» вперемешку (примерно 40 на 60), как подбирает экзаменатор
+function startGram(mode){
+  const t=G.t,r=G.st.r||{};let idx=[];
+  if(mode===-1)idx=t.items.map((_,i)=>i).filter(i=>r[i]===0);
+  else if(t.ai||t.exam)idx=t.items.map((_,i)=>i);
+  else{
+    const rank=i=>r[i]===undefined?0:r[i]===0?1:2,pool={m:[],h:[]};
+    t.items.forEach((q,i)=>pool[(q.lv||2)<3?"m":"h"].push(i));
+    Object.keys(pool).forEach(k=>pool[k]=pool[k].map(i=>[rank(i),Math.random(),i]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(x=>x[2]));
+    const pat=["m","h","h","m","h"];let k=0,sum=0,guard=0;
+    while(sum<GRAM_PTS&&guard++<200){let kind=pat[k++%pat.length];if(!pool[kind].length)kind=kind==="m"?"h":"m";if(!pool[kind].length)break;const i=pool[kind].shift();idx.push(i);sum+=gPts(prepQ(t,i))}
+  }
+  if(!idx.length){toast(mode===-1?"Ошибок нет":"Пусто");return}
+  G.queue=idx;G.pos=0;G.ok=0;G.pts=0;G.max=idx.reduce((a,i)=>a+gPts(prepQ(t,i)),0);G.done=false;G.answered=false;renderGram();
 }
 function renderQ(){
-  const t=G.t,i=G.queue[G.pos],q=t.items[i];
+  const t=G.t,i=G.queue[G.pos],q=prepQ(t,i);
   const body=$("#gbody");
-  const nf=q.t==="nf";
-  const qText=nf?esc(q.q).replace(/\[\[(.+?)\]\]/g,'<u class="ul">$1</u>'):esc(q.q).replace(/___/g,'<span class="gap"></span>');
-  body.innerHTML=`<div class="ex-run"><div class="progline"><div class="bar"><i style="width:${G.pos/G.queue.length*100}%"></i></div><small class="muted">${G.pos+1}/${G.queue.length}</small></div>
-  <div class="qcard"><div class="task">${esc(q.task||{mc:"Выбери правильный вариант",gap:"Вставь пропущенное",tr:"Перефразируй",nf:"Перестрой подчёркнутое: впиши только пропуск, остальное уже написано"}[q.t])}</div><div class="q">${qText}</div>
-   ${nf?`${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<div class="nfline"><span>${esc(q.pre||"")}</span><span style="white-space:nowrap"><input class="ansin nfin" id="ans" autocomplete="off" spellcheck="false" placeholder="…">${esc((q.post||"").match(/^[,.;:]/)?q.post[0]:"")}</span><span>${esc((q.post||"").replace(/^[,.;:]/,""))}</span></div>`:q.t==="mc"?`<div class="opts">${q.o.map((o,k)=>`<button class="opt" data-o="${k}"><kbd>${k+1}</kbd>${esc(o)}</button>`).join("")}</div>`:
-     `${q.s?`<div class="start-hint">Начни так: ${esc(q.s)}</div>`:""}${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<input class="ansin" id="ans" autocomplete="off" spellcheck="false" placeholder="${q.t==="gap"?"Пропущенное слово / форма":"Твой вариант…"}">`}
+  const nf=q.t==="nf",ct=q.t==="ct";
+  const qText=nf?esc(q.q).replace(/\[\[(.+?)\]\]/g,'<u class="ul">$1</u>'):ct?"":esc(q.q).replace(/___/g,'<span class="gap"></span>');
+  const taskTxt=q.task||{mc:"Wähle die richtige Form",gap:"Ergänzen Sie die Lücke",tr:"Formen Sie den Satz um",nf:"Formen Sie den unterstrichenen Teil um: schreib nur den Ersatz, der Rest steht schon da",ct:"Ergänzen Sie die fehlenden Buchstaben"}[q.t];
+  body.innerHTML=`<div class="ex-run"><div class="progline"><div class="bar"><i style="width:${G.pos/G.queue.length*100}%"></i></div><small class="muted">${G.pos+1}/${G.queue.length} · ${fmtPts(G.pts||0)} из ${G.max} б.</small></div>
+  <div class="qcard"><div class="task"><b>${esc(gKind(t,q))}</b> · ${esc(taskTxt)}${gPts(q)>1?` · ${gPts(q)} б.`:" · 1 б."}</div><div class="q">${qText}</div>
+   ${ct?`<div class="gaptext ctx" id="ctbox">${ctText(q,0,[],false)}</div>`:nf?`${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<div class="nfline"><span>${esc(q.pre||"")}</span><span style="white-space:nowrap"><input class="ansin nfin" id="ans" autocomplete="off" spellcheck="false" placeholder="…">${esc((q.post||"").match(/^[,.;:]/)?q.post[0]:"")}</span><span>${esc((q.post||"").replace(/^[,.;:]/,""))}</span></div>`:q.t==="mc"?`<div class="opts">${q.o.map((o,k)=>`<button class="opt" data-o="${k}"><kbd>${k+1}</kbd>${esc(o)}</button>`).join("")}</div>`:
+     `${q.s?`<div class="start-hint">Начни так: ${esc(q.s)}</div>`:""}${q.ch?`<div class="start-hint">Начало: <b>${esc(q.ch)}</b></div>`:""}${q.hint?`<div class="start-hint">Подсказка: ${esc(q.hint)}</div>`:""}<input class="ansin" id="ans" autocomplete="off" spellcheck="false" placeholder="${q.t==="gap"?"Пропущенное слово / форма":"Твой вариант…"}">`}
    <div class="row" style="margin-top:14px"><button class="btn primary" id="chk">${q.t==="mc"?"Дальше":"Проверить"}</button><button class="btn" id="skip">Не знаю</button><span class="muted" style="font-size:12.5px;margin-left:auto">Enter: проверить</span></div>
    <div id="fb"></div></div></div>`;
   G.answered=false;G.sel=null;
-  const inp=$("#ans");if(inp){inp.focus();inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#chk").click()}}}
+  const inp=$("#ans")||document.querySelector("#ctbox input");if(inp){inp.focus();if(inp.id==="ans")inp.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();$("#chk").click()}}}
+  $$("#ctbox input").forEach((x,k,all)=>x.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();(all[k+1]||$("#chk")).focus();if(e.key==="Enter"&&!all[k+1])$("#chk").click()}});
   if(inp&&nf)inp.addEventListener("input",()=>{inp.style.width=Math.min(Math.max(inp.value.length*0.95+4,24),80)+"ch"});
   $$(".opt").forEach(b=>b.onclick=()=>{if(G.answered)return;$$(".opt").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");G.sel=+b.dataset.o;checkQ()});
   $("#chk").onclick=()=>{if(G.answered)return nextQ();if(q.t==="mc"&&G.sel==null)return;checkQ()};
@@ -1258,57 +1285,39 @@ function renderQ(){
 document.addEventListener("keydown",e=>{
   if(!G||G.tab!=="ex"||!$("#chk")||location.hash.indexOf("grammatik/")<0)return;
   if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;
-  const q=G.t.items[G.queue[G.pos]];
+  const q=prepQ(G.t,G.queue[G.pos]);
   if(q&&q.t==="mc"&&!G.answered&&/^[1-6]$/.test(e.key)){const b=$$(".opt")[+e.key-1];if(b)b.click()}
   else if(e.key==="Enter"&&G.answered){e.preventDefault();nextQ()}
 });
 function checkQ(skip){
-  const t=G.t,i=G.queue[G.pos],q=t.items[i];G.answered=true;
-  let ok=false,ans="";
-  if(q.t==="mc"){ok=!skip&&G.sel===q.a;$$(".opt").forEach((b,k)=>{if(k===q.a)b.classList.add("right");else if(k===G.sel)b.classList.add("wrong")})}
-  else{ans=($("#ans").value||"").trim();const A=(q.a||[]).map(loose);ok=!skip&&ans&&A.includes(loose(ans));$("#ans").readOnly=true}
+  const t=G.t,i=G.queue[G.pos],q=prepQ(t,i);G.answered=true;
+  const fb=$("#fb");let earned=0,max=gPts(q),ans="",model="";
+  if(q.t==="ct"){
+    const vals=$$("#ctbox input").map(x=>x.value);$$("#ctbox input").forEach(x=>x.readOnly=true);
+    earned=skip?0:q.a.reduce((n,w,k)=>n+(ctOK(q,k,vals[k])?1:0),0);ans=vals.join(", ");model=q.a.join(", ");
+    $$("#ctbox .ctw").forEach((w,k)=>{const ok=!skip&&ctOK(q,k,vals[k]);w.classList.add(ok?"right":"wrong");if(!ok)w.insertAdjacentHTML("beforeend",`<small class="gc">${esc(q.a[k])}</small>`)});
+  }else if(q.t==="mc"){const ok=!skip&&G.sel===q.a;earned=ok?1:0;model=q.o[q.a];$$(".opt").forEach((b,k)=>{if(k===q.a)b.classList.add("right");else if(k===G.sel)b.classList.add("wrong")})}
+  else{ans=($("#ans").value||"").trim();const A=(q.a||[]).map(loose);earned=!skip&&ans&&A.includes(loose(ans))?1:0;$("#ans").readOnly=true}
   const nfFull=a=>((q.pre||"")+a+(q.post||"")).replace(/\s+([,.])/g,"$1").trim();
-  const model=q.t==="mc"?q.o[q.a]:q.t==="nf"?nfFull((q.a||[])[0]):(q.a||[])[0];
-  if(q.free&&!skip&&ans&&ST.keys.anthropic){ // свободное продолжение: оценка ИИ по критериям EPD, 0–3 балла
-    logDone("g",1);const fb0=$("#fb");
-    fb0.innerHTML='<div class="fb ai"><span class="spin"></span> ИИ оценивает по критериям EPD…</div>';$("#chk").disabled=true;$("#skip").hidden=true;
-    api("/de/sfort",{method:"POST",body:JSON.stringify({q:q.q.replace(/…\s*$/,"").trim(),answer:ans,model:(q.a||[])[0]||""})}).then(r=>{
-      const okk=r.points>=2;if(!t.ai){const cq=plainQ(q.q).slice(0,100);if(okk)okErr("grammatik",t.id,cq);else logErr("grammatik",{ref:t.id,title:t.title,href:"#/grammatik/"+t.id,q:cq,ans,right:r.fixed,why:r.why})}G.st.r[i]=okk?1:0;G.st.p=G.st.p||{};G.st.p[i]=r.points;G.st.last=today();save(gramKey(),G.st);
-      if(okk){G.ok++;logDone("gk",1)}G.pts=(G.pts||0)+r.points;
-      fb0.innerHTML=`<div class="fb ${r.points>=3?"ok":r.points>=2?"ai":"no"}"><b class="h">${r.points} из 3 ${r.points>=3?"· комплексное и верное":r.points>=2?"· верно, но просто":r.points>=1?"· есть ошибка":"· не засчитано"}</b><div class="model">${esc(r.fixed)}</div><div style="margin-top:6px">${esc(r.why)}</div><div class="muted" style="font-size:13px;margin-top:6px">Образец: ${esc(q.q.replace(/…\s*$/,"").trim())} ${esc((q.a[0]||"").replace(/^…\s*/,""))}</div></div>`;
-      $("#chk").disabled=false;$("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог"}).catch(e=>{fb0.innerHTML=`<div class="fb no">${esc(e.message)}</div>`;$("#chk").disabled=false;$("#ans").readOnly=false;G.answered=false;$("#skip").hidden=false});
-    return;
-  }
-  if(q.free&&!skip&&ans&&!ok){ // свободный ответ: много верных вариантов, сверка с образцом, «засчитать себе» или проверка ИИ
-    logDone("g",1);
-    $("#fb").innerHTML=`<div class="fb ai"><b class="h">Сравни с образцом</b><div class="model">${esc(q.q.replace(/…\s*$/,""))} ${esc(model.replace(/^…\s*/,""))}</div>${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}<div class="row" style="margin-top:10px"><button class="btn sm" id="selfOk">✓ У меня тоже верно</button><button class="btn sm" id="selfNo">✗ Есть ошибка</button>${ST.keys.anthropic?`<button class="btn sm" id="aiChk">${ic("star",14)} Проверить с ИИ</button>`:""}</div></div>`;
-    const mark=v=>{G.st.r[i]=v;G.st.last=today();save(gramKey(),G.st);if(v){G.ok++;logDone("gk",1)}["selfOk","selfNo","aiChk"].forEach(x=>{const e=$("#"+x);if(e)e.remove()})};
-    $("#selfOk").onclick=()=>mark(1);$("#selfNo").onclick=()=>mark(0);
-    const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
-      try{const r=await api("/de/check",{method:"POST",body:JSON.stringify({task:"Satzfortsetzung: ergänze den Satz sinnvoll und grammatisch korrekt",q:q.q,a:q.a,answer:ans})});mark(r.ok?1:0);
-        $("#fb").insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"no"}"><b class="h">${r.ok?"ИИ: верно ✓":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`)}
-      catch(e){ai.disabled=false;ai.textContent=e.message}};
-    $("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог";$("#skip").hidden=true;return;
-  }
+  if(q.t==="nf")model=nfFull((q.a||[])[0]);else if(q.t==="gap"||q.t==="tr")model=(q.a||[])[0];
+  const ok=earned===max;
   G.st.r[i]=ok?1:0;G.st.last=today();save(gramKey(),G.st);
-  if(!t.ai){const cq=plainQ(q.q).slice(0,100);if(ok)okErr("grammatik",t.id,cq);else logErr("grammatik",{ref:t.id,title:t.title,href:"#/grammatik/"+t.id,q:cq,ans:q.t==="mc"?(G.sel!=null?q.o[G.sel]:""):ans,right:q.t==="nf"?nfFull((q.a||[])[0]):model,why:q.ex||""})}
-  if(ok){G.ok++;G.pts=(G.pts||0)+(q.pts||1)}else if(!skip&&q.t!=="mc"&&!t.exam)G.retry.push(i);
-  logDone("g",1);if(ok)logDone("gk",1);
-  const fb=$("#fb");
-  fb.innerHTML=`<div class="fb ${ok?"ok":"no"}"><b class="h">${ok?"Верно!":skip?"Правильный ответ:":"Не совсем. Правильно:"}</b>${ok&&q.t==="mc"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(x=>esc(q.t==="nf"?nfFull(x):x)).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
-   ${!ok&&!skip&&ans&&q.t!=="mc"&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
+  if(!t.ai){const cq=plainQ(q.q).slice(0,100);if(ok)okErr("grammatik",t.id,cq);else logErr("grammatik",{ref:t.id,title:t.title,href:"#/grammatik/"+t.id,q:cq,ans:q.t==="mc"?(G.sel!=null?q.o[G.sel]:""):ans,right:model,why:q.ex||""})}
+  G.pts=(G.pts||0)+earned;if(ok)G.ok++;
+  logDone("g",max);if(earned)logDone("gk",earned);
+  fb.innerHTML=`<div class="fb ${ok?"ok":earned?"ai":"no"}"><b class="h">${ok?"Верно! +"+max+" б.":skip?"Правильный ответ:":earned?`Частично: ${earned} из ${max} б.`:"Не совсем. Правильно:"}</b>${ok&&q.t!=="ct"?"":`<div class="model">${esc(model)}</div>`}${(q.a||[]).length>1&&q.t!=="mc"&&q.t!=="ct"?`<div class="muted" style="font-size:13px;margin-top:4px">Тоже верно: ${q.a.slice(1).map(x=>esc(q.t==="nf"?nfFull(x):x)).join(" · ")}</div>`:""}${q.ex?`<div style="margin-top:6px">${esc(q.ex)}</div>`:""}
+   ${!ok&&!skip&&ans&&(q.t==="gap"||q.t==="nf"||q.t==="tr")&&ST.keys.anthropic?`<div class="row" style="margin-top:10px"><button class="btn sm" id="aiChk">${ic("star",14)} Мой вариант тоже может быть верным, проверить с ИИ</button></div>`:""}</div>`;
   const ai=$("#aiChk");if(ai)ai.onclick=async()=>{ai.disabled=true;ai.innerHTML='<span class="spin"></span> Проверяю…';
-    try{const r=await api("/de/check",{method:"POST",body:JSON.stringify(q.t==="nf"?{task:"Umformung: ersetze die unterstrichene Wendung; der Rest des Satzes bleibt unverändert",q:q.q.replace(/\[\[|\]\]/g,"")+" → "+(q.pre||"")+"___"+(q.post||""),a:q.a.map(nfFull),answer:nfFull(ans)}:{task:q.task||"",q:q.q,a:q.a,answer:ans})});
-      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.pts=(G.pts||0)+(q.pts||1);G.retry=G.retry.filter(x=>x!==i);if(!t.ai)okErr("grammatik",t.id,plainQ(q.q).slice(0,100))}
-      fb.insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"ai"}"><b class="h">${r.ok?"ИИ: твой вариант верный ✓":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`);ai.remove()}
+    try{const r=await post("/de/check",q.t==="nf"?{task:"Umformung: ersetze die unterstrichene Wendung; der Rest des Satzes bleibt unverändert",q:q.q.replace(/\[\[|\]\]/g,"")+" → "+(q.pre||"")+"___"+(q.post||""),a:q.a.map(nfFull),answer:nfFull(ans)}:{task:q.task||"",q:q.q,a:q.a,answer:ans});
+      if(r.ok){G.st.r[i]=1;save(gramKey(),G.st);G.ok++;G.pts+=1-earned;if(!t.ai)okErr("grammatik",t.id,plainQ(q.q).slice(0,100))}
+      fb.insertAdjacentHTML("beforeend",`<div class="fb ${r.ok?"ok":"ai"}"><b class="h">${r.ok?"ИИ: твой вариант верный ✓ (+1 б.)":"ИИ: есть ошибка"}</b>${r.ok?"":`<div class="model">${esc(r.fixed)}</div>`}<div style="margin-top:4px">${esc(r.why)}</div></div>`);ai.remove()}
     catch(e){ai.disabled=false;ai.textContent=e.message}};
-  $("#chk").textContent=G.pos+1<G.queue.length||G.retry.length?"Дальше →":"Итог";
+  $("#chk").textContent=G.pos+1<G.queue.length?"Дальше →":"Итог";
   $("#skip").hidden=true;
 }
 function nextQ(){
   G.pos++;
-  if(G.pos>=G.queue.length&&G.retry&&G.retry.length&&!G.retried){G.queue=G.queue.concat(G.retry);G.retried=true;G.retry=[];toast("Повторим ошибки")}
-  if(G.pos>=G.queue.length){G.done=true;G.retried=false;renderGram();return}
+  if(G.pos>=G.queue.length){G.done=true;renderGram();return}
   renderQ();
 }
 
@@ -1418,21 +1427,32 @@ function itemsByLevel(arr,area,kind,pref){
   const groups={};[...arr].sort(lvSort).forEach(x=>(groups[x.level||"—"]=groups[x.level||"—"]||[]).push(x));
   return Object.entries(groups).map(([lv,a])=>`<div class="lvl-h">${esc(lv)}</div><div class="list">${a.map(x=>{const r=get(pref+area+"-"+x.id);return `<a class="item" href="${base(area)}${kind}/${x.id}"><div class="row"><span class="tag lv">${esc(x.level||"")}</span>${x.kind?`<span class="tag">${esc(x.kind)}</span>`:""}${r?`<span class="tag ok">✓ ${resTxt(r)}</span>`:""}</div><h3>${esc(x.title)}</h3><p>${esc(x.topic||"")}${x.words?` · ${x.words} слов`:""}${x.minutes?` · ~${x.minutes} мин`:""}</p></a>`}).join("")}</div>`).join("");
 }
-// «Strukturen und Wortschatz»: пробный вариант как на экзамене VWU (25 баллов): 5 × Umformen (по 2) + 5 × Satzanfänge fortsetzen (по 3)
+// «Strukturen und Wortschatz»: пробный вариант как на экзамене VWU, 15 баллов: C-Test / Lückentext (5), Umformen (5), Rektion (5)
+async function buildLocalExam(){
+  const gr=await data("de","grammatik"),all=gr.topics||[],take=(arr,n)=>arr.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).slice(0,n).map(x=>x[1]);
+  const prepAll=(ts,f)=>ts.flatMap(t=>t.items.map((_,i)=>prepQ(t,i)).filter(f));
+  const rk=all.filter(t=>t.id==="rektion"||t.id==="fvg"),other=all.filter(t=>!["rektion","fvg","nominal","verbal"].includes(t.id)&&t.id!=="ai");
+  const g1=take(prepAll(other,q=>q.t==="gap"&&(q.lv||2)>=3),5).map(q=>({...q,ch:gStub(q.a[0])}));
+  const g2=take(prepAll(all.filter(t=>t.id!=="ai"),q=>q.t==="nf"||q.t==="tr"),5);
+  const g3=take(prepAll(rk,q=>q.t==="gap"),5).map(q=>({...q,rk:true,ch:undefined}));
+  return [...g1,...g2,...g3];
+}
 async function vPruefung(){
   header("grammatik");setC(MOD.grammatik.c);
   const can=!!(ST.keys&&ST.keys.anthropic),cur=get("gexam",null);
-  const build=items=>{EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 5 заданий Umformen (по 2 балла) и 5 Satzanfänge (по 3 балла), всего 25. Задания создал ИИ",level:"B2–C1",tag:"Prüfung",items,
-    theory:"<p>Как на EPD (VWU): <b class='k'>10 заданий, 25 баллов</b>. В первой части (Umformen) перестрой подчёркнутое, вписывая только пропуск. Во второй (Satzanfänge) продолжи предложение: 2 балла за верное простое продолжение, 3 за комплексное. Чтобы сдать, нужно минимум 12 баллов.</p>"}};
+  const build=items=>{EXAM_T={id:"pruefung",exam:true,title:"Strukturen und Wortschatz · Prüfung",ru:"Пробный вариант как на экзамене: 15 баллов. C-Test / Lückentext, Umformen, Rektion",level:"B2–C1",tag:"Prüfung",items,
+    theory:"<p>Как на EPD (VWU): <b class='k'>15 баллов</b>, оценивается точность форм и конструкций уровня B2+/C1. <b>C-Test / Lückentext</b>: впиши пропущенное слово (в C-Test начало слова уже дано). <b>Umformen</b>: перестрой подчёркнутую часть (Nominalgruppe ↔ Nebensatz, Passiv, indirekte Rede), смысл не меняется. <b>Rektion</b>: предлоги и падежи после глаголов, прилагательных и существительных.</p>"}};
   const start=()=>{build(get("gexam").items);return vGram("de","pruefung")};
   page(`${crumb("#/grammatik","Grammatik")}<h1>Пробный вариант: Strukturen und Wortschatz</h1>${tutHTML("pruefung")}
-   <p class="lead">10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Каждый вариант ИИ создаёт заново; продолжения тоже оценивает ИИ (2–3 балла).</p>
-   <div class="card"><div class="field"><label for="geT">Тема (необязательно)</label><input id="geT" maxlength="200" placeholder="например: образование, экология, работа. Пусто: ИИ выберет сам" autocomplete="off"></div>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="geGo" ${can?"":"disabled"}>${ic("spark",16)} Создать новый вариант</button>${cur?`<button class="btn" id="geOld">Открыть последний</button>`:""}</div>
-    <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится около минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>`);
-  $("#geGo").onclick=async()=>{const b=$("#geGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ составляет вариант…';
-    try{const prev=cur?cur.items.map(x=>x.q):[];const r=await api("/de/gexam",{method:"POST",body:JSON.stringify({topic:$("#geT").value.trim(),prev})});save("gexam",{items:r.items});save("g-de-pruefung",{r:{}});G=null;await start()}
-    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" Создать новый вариант"}};
+   <p class="lead">15 заданий по 1 баллу: 5 × C-Test / Lückentext, 5 × Umformen, 5 × Rektion. Задания идут подряд, как на экзамене. Можно собрать вариант из готовой базы (мгновенно, без ИИ) или попросить ИИ написать новый.</p>
+   <div class="card"><div class="field"><label for="geT">Тема для варианта ИИ (необязательно)</label><input id="geT" maxlength="200" placeholder="например: образование, экология, работа. Пусто: ИИ выберет сам" autocomplete="off"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="geLoc">Собрать из базы</button><button class="btn primary" id="geGo" ${can?"":"disabled"}>${ic("spark",16)} Новый вариант от ИИ</button>${cur?`<button class="btn" id="geOld">Открыть последний</button>`:""}</div>
+    <div id="geProg"></div><p class="muted" style="margin:10px 0 0;font-size:13px">ИИ готовит вариант около минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>`);
+  const open=async items=>{save("gexam",{items});save("g-de-pruefung",{r:{}});G=null;await start()};
+  $("#geLoc").onclick=async()=>{try{await open(await buildLocalExam())}catch(e){toast(e.message)}};
+  $("#geGo").onclick=async()=>{const b=$("#geGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ составляет вариант…';const ui=genUI($("#geProg"));
+    try{const items=await genGrammItems($("#geT").value.trim(),"B2",0,cur?cur.items.map(x=>x.q).slice(0,15):[],ui.set,"rk",.05,.97);ui.done();await open(items)}
+    catch(e){ui.done();toast(e.message);$("#geProg").innerHTML=`<div class="card" style="border-left:5px solid var(--bad);margin-top:10px">${esc(e.message)}</div>`;b.disabled=false;b.innerHTML=ic("spark",16)+" Новый вариант от ИИ"}};
   const o=$("#geOld");if(o)o.onclick=()=>{G=null;start()};
 }
 // ---------- Пробный вариант Lesen как на экзамене (VWU): два текста, 20 баллов (по 10 на текст), задания разных типов; тексты и задания пишет ИИ короткими шагами ----------
@@ -1941,7 +1961,7 @@ function modAcc(k){
   if(k==="sprechen"){const a=[];Object.keys(ST.state).filter(x=>x.startsWith("s-de-")).forEach(x=>((ST.state[x]||{}).hist||[]).forEach(h=>a.push(h.score)));return a.length?+(a.reduce((p,q)=>p+q,0)/a.length).toFixed(1):null}
   let s=0,m=0;Object.keys(ST.state).filter(x=>x.startsWith(MODX[k][2]+"de-")).forEach(x=>{const r=ST.state[x];if(r&&r.m){s+=r.s;m+=r.m}});return m?Math.round(s/m*100):null;
 }
-const EXAMCARD={grammatik:"10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Продолжения оценивает ИИ (2–3 балла).",lesen:"Два текста в стиле der Standard по 900–1100 слов и задания официальных типов EPD. Каждый вариант ИИ создаёт заново.",hoeren:"15 вопросов: 7 коротких записей с ответами a–d и запись на 7–8 минут с конспектом, куда вписываешь услышанные слова.",sprechen:"Два задания на разные темы: выбираешь одно, готовишься и говоришь, как на устной части."};
+const EXAMCARD={grammatik:"15 баллов, как на экзамене: C-Test / Lückentext, Umformen, Rektion. Вариант можно собрать из базы мгновенно или создать новый с ИИ.",lesen:"20 баллов: два текста в стиле der Standard по 900–1100 слов и задания разных типов (R/F/N, Multiple Choice, Kurzantworten, Zuordnung, Lückentext, Satz einfügen). Каждый вариант ИИ создаёт заново.",hoeren:"15 баллов: одна запись на 7–9 минут и два задания: 7 вопросов с ответами A–D и конспект, куда вписываешь услышанные слова.",sprechen:"Два задания на разные темы: выбираешь одно, готовишься и говоришь, как на устной части."};
 async function vModHome(k){
   header(k);setC(MOD[k].c);
   const [dn,an]=MODX[k],d=await data("de",dn),items=d[an]||[];
@@ -2049,7 +2069,7 @@ const HINTS={
     train:[["Слушай каждый день","Подкасты по дороге: Ö1 Journale, «Easy German», «Deutschlandfunk Nova», «Langsam gesprochene Nachrichten» от DW. 10–15 минут ежедневно дают больше, чем час раз в неделю."],["Активное, а не фоновое","Фоновое радио привыкает ухо к звучанию, но для экзамена нужно активное: слушай кусок 1–2 минуты, перескажи, послушай снова."],["Шэдоуинг","Повторяй за диктором с отставанием в полсекунды. Так ухо и рот привыкают к темпу, ударениям и связной речи."],["Диктант","Возьми минуту аудио и запиши дословно. Потом сверь со скриптом: увидишь, какие слова «съедаются» в речи."],["Сначала без текста","Послушай, ответь на вопросы, проверь, и только потом открой скрипт. Так тренируется ухо, а не глаза."],["Австрийский акцент","На экзамене в Вене звучит австрийский немецкий. Слушай ORF, «FM4», интервью на derstandard.at, чтобы привыкнуть к Jänner, heuer, Paradeiser."]]},
   sprechen:{exam:[["Как проходит устная часть (VWU)","Допуск только после положительной письменной части. Сначала 15–20 минут подготовки: тебе дают два задания по двум темам (график, статистика, короткий текст…), ты выбираешь одно и готовишь короткую презентацию по Leitfragen. Можно пользоваться одноязычным словарём и писать заметки (ключевые слова), читать с листа нельзя."],["Монолог и диалог","Презентация длится около 5 минут. После неё дают импульс для диалога (картинка, график, цитата) и вы разговариваете спонтанно около 5 минут. Комиссия из трёх человек: твой экзаменатор, ещё один учитель VWU и представитель университета."],["Что проверяют","Не знания по теме, а немецкий язык. Не нужно быть экспертом и говорить без ошибок. Нужно: понимать вопросы и реагировать, объяснить, что не понял, сказать, что мнение другое или что по теме нет знаний, исправлять свои ошибки с помощью экзаменатора, говорить понятно. Заученные тексты не принимаются."],["Что подготовить по каждой теме","Своё мнение с обоснованием; проблемы, причины и последствия; плюсы и минусы (pro/contra); ситуация в твоей стране, в Австрии и в других странах. 10 тем: Arbeitswelt, Beziehungen, Gesellschaft, Konsum, Gesundheit, Bildung, Medien, Reisen, Wohnen, Umwelt."],["Структура монолога","Вступление (тема и твой тезис) → 2–3 аргумента с примерами → вывод. Говори по Leitfragen: каждая, 40–60 секунд."],["График","Скажи, что показывает график и откуда данные, выдели самое большое и самое маленькое, сравни, предложи причины."],["Цитата","Объясни цитату своими словами, скажи, согласен ли, приведи пример из жизни или из Австрии."],["Не понял вопрос","Так и скажи: «Könnten Sie die Frage bitte wiederholen?» Это нормально и не снижает оценку."],["Связки и пауза","Zum einen … zum anderen, einerseits … andererseits, daher, dennoch, folglich дают ощущение уровня C1. Забыл слово, перефразируй: «das heißt …», «anders gesagt …». Молчание хуже ошибки."]],
     train:[["Говори вслух каждый день","Хотя бы 5 минут: опиши свой день, перескажи новость, ответь на вопрос из списка. Мозгу нужен регулярный «разгон» речи."],["Записывай себя","Запиши ответ на телефон и послушай: сразу слышно паузы, «ähm» и повторяющиеся ошибки. Здесь же ИИ разбирает каждую запись."],["Готовые блоки","Выучи 10–15 фраз для начала, перехода и вывода (Ich möchte zunächst …, Ein weiterer Aspekt ist …, Abschließend lässt sich sagen …). На экзамене они дают время подумать."],["Таймер","Тренируйся с часами: 15 минут подготовки и 5 минут речи. Так привыкаешь к реальному темпу и не обрываешь мысль."],["Тандем и разговорные клубы","Тандем-партнёр (Tandem, HelloTalk) или разговорный клуб в университете: живой собеседник учит реагировать спонтанно, как в диалоге с комиссией."],["Думай по-немецки","Комментируй про себя то, что делаешь: «Jetzt koche ich Kaffee, weil …». Переводить в голове с русского становится всё реже."]]},
-  grammatik:{exam:[["Как устроена часть Strukturen und Wortschatz (VWU)","25 баллов, около 60 минут. 1) Umformen: 5 предложений с подчёркнутой частью (Nebensatz, Infinitivkonstruktion, Passiv), по 2 балла, содержание не менять. 2) Satzanfänge: 5 начал предложений, продолжи логично и грамотно, 2 балла за простое верное продолжение, 3 за комплексное. Минимум 12 баллов. Пробный вариант: кнопка внизу главной страницы Grammatik."],["Прочитай всё предложение","Перед тем как вставлять форму, найди подлежащее, время и падеж. Ошибка в окончании часто стоит целого балла."],["Перефразирование","В Strukturen смысл должен остаться прежним: проверь время, актив/пассив и отрицание, прежде чем записать ответ."],["Типичные ловушки","Konjunktiv II Vergangenheit: hätte/wäre + Partizip II; Passiversatz: lässt sich + Infinitiv, ist zu + Infinitiv, -bar; Partizip I активно и одновременно, Partizip II пассивно или раньше."]],
+  grammatik:{exam:[["Как устроена часть Strukturen und Wortschatz (VWU)","15 баллов. Проверяется языковая точность и «академический инструментарий» на уровне B2+/C1: C-Test и Lückentext (впиши слово в нужной форме), Umformen (перефразируй: Nominalgruppe ↔ Nebensatz, Passiv, indirekte Rede, смысл тот же), Rektion (управление глаголов, прилагательных и существительных). Пробный вариант: кнопка внизу главной страницы Grammatik."],["Прочитай всё предложение","Перед тем как вставлять форму, найди подлежащее, время и падеж. Ошибка в окончании часто стоит целого балла."],["Перефразирование","В Strukturen смысл должен остаться прежним: проверь время, актив/пассив и отрицание, прежде чем записать ответ."],["Типичные ловушки","Konjunktiv II Vergangenheit: hätte/wäre + Partizip II; Passiversatz: lässt sich + Infinitiv, ist zu + Infinitiv, -bar; Partizip I активно и одновременно, Partizip II пассивно или раньше."]],
     train:[["Сначала правило, потом много примеров","Прочитай теорию, затем сразу 15 заданий. Правило запоминается только через применение."],["Ошибки, твой лучший учитель","Раздел «Ошибки» собирает задания, где ты ошибся. Возвращайся к ним через день и через неделю, пока не будет без ошибок."],["Пиши свои предложения","«Письмо с ИИ»: 4–6 своих предложений с конструкцией темы запоминаются лучше, чем 50 готовых упражнений."],["Учи в контексте","Замечай конструкции в статьях Lesen: Passiversatz и Partizipialattribute в der Standard на каждом шагу. Выписывай 2–3 примера в день."],["Маленькие порции","Одна тема за раз, 15–20 минут в день. Смешивай старые темы с новыми, чтобы не забывались."]]}
 };
 function hintsHTML(k,c,which){const H=HINTS[k]||{};return (which||["exam","train"]).map(w=>(H[w]||[]).length?`<h2 class="h-sec">${w==="exam"?(k==="grammatik"?"На экзамене":"Как решать на экзамене"):"Как тренироваться"}</h2><div class="hints">${H[w].map(([t,x],i)=>`<div class="card hint" style="--c:${c}"><span class="hn">${i+1}</span><div><b>${esc(t)}</b><p>${esc(x)}</p></div></div>`).join("")}</div>`:"").join("")}
@@ -2145,7 +2165,6 @@ async function vModProgress(k){
   <h2>Настройки</h2>
   <div class="card" style="--c:${c}">
    <div class="setrow"><div><b>Цель дня</b><small>${k==="grammatik"?"Сколько заданий решать в день.":k==="sprechen"?"Сколько ответов записывать в день.":`Сколько ${k==="lesen"?"текстов читать":"аудио слушать"} в день.`} День засчитывается в серию, когда хоть что-то сделано.</small></div><div class="seg2">${GOPT.map(n=>`<button type="button" data-goal="${n}" class="${gs===n?"on":""}">${n}</button>`).join("")}</div></div>
-   ${k==="grammatik"?`<div class="setrow"><div><b>Заданий в круге</b><small>Сколько заданий в одной ступени за раз. Ошибки вернутся в конце круга.</small></div><div class="seg2">${[10,15,20,30].map(n=>`<button type="button" data-round="${n}" class="${(get("ground",15))===n?"on":""}">${n}</button>`).join("")}</div></div>`:""}
    ${k==="hoeren"||k==="sprechen"?`<div class="setrow"><div><b>Скорость голоса браузера</b><small>Когда нет ключа OpenAI, звучит голос браузера.</small></div><div class="seg2">${[[.85,"медленно"],[.97,"обычно"],[1.1,"быстро"]].map(([v,tx])=>`<button type="button" data-rate="${v}" class="${(get("rate",.97))===v?"on":""}">${tx}</button>`).join("")}</div></div>`:""}
    ${k==="lesen"?`<div class="setrow"><div><b>Пояснение слова ИИ</b><small>Кроме перевода DeepL, Claude объясняет слово в контексте предложения.</small></div><div class="seg2">${[[1,"включено"],[0,"только перевод"]].map(([v,tx])=>`<button type="button" data-ctx="${v}" class="${(get("ctxai",1))===v?"on":""}">${tx}</button>`).join("")}</div></div>`:""}
    <div class="setrow"><div><b>Профиль, аватар, цвета, ключи</b><small>Общие для всех модулей: аватар и цвета меняются сразу везде.</small></div><a class="btn sm" href="#/settings">${ic("gear",15)}Открыть</a></div>

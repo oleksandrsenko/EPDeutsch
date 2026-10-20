@@ -847,7 +847,11 @@ async function recommend(){
   const sps=(sp.tasks||[]);const s=sps.find(x=>x.topic===tw&&!get("s-de-"+x.id))||sps.find(x=>!get("s-de-"+x.id))||sps[0];
   return {g:gtop&&gtop[0],l,h,s,tw};
 }
-function gramPct(area,t){const r=(get("g-"+area+"-"+t.id,{}).r)||{};const n=(t.items||[]).length;if(!n)return 0;return Math.round(Object.values(r).filter(x=>x===1).length/n*100)}
+// набор заданий темы менялся (rev/remap в grammatik.json): ответы хранятся по номеру задания, переносим их на новые номера
+function gramSt(area,t){const k="g-"+area+"-"+t.id,st=get(k,null);if(!st)return {r:{}};
+  if(t.remap&&st.rev!==t.rev){const nr={};Object.entries(st.r||{}).forEach(([i,v])=>{const n=t.remap[+i];if(n>=0)nr[n]=v});st.r=nr;st.rev=t.rev;save(k,st)}
+  return st}
+function gramPct(area,t){const r=(gramSt(area,t).r)||{};const n=(t.items||[]).length;if(!n)return 0;return Math.round(Object.values(r).filter(x=>x===1).length/n*100)}
 // свой план: какие модули каждый день, сколько времени есть, свои задачи
 const PLAN_MODS=[["woerter","Wörter"],["grammatik","Grammatik"],["lesen","Lesen"],["hoeren","Hören"],["schreiben","Schreiben"],["sprechen","Sprechen"],["frei","Свободный"]];
 const DEF_MODS=["woerter","grammatik","lesen","hoeren","schreiben","sprechen"];
@@ -1052,7 +1056,7 @@ async function vGram(area,id,sub){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
   const gr=await data(area,"grammatik"),t=(gr.topics||[]).find(x=>x.id===id);
   if(!t){page('<div class="empty">Тема не найдена</div>');return}
-  const st=get("g-"+area+"-"+id,{r:{}});if(area==="de")touchRecent("grammatik",id);
+  const st=gramSt(area,t);if(!st.r)st.r={};if(area==="de")touchRecent("grammatik",id);
   const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
   G={area,t,st,tab:sub==="ai"&&t.write?"ai":(st.seenTheory||t.exam)?"ex":"th",lv:null,queue:[],pos:0,ok:0,pts:0,answered:false};
   renderGram();
@@ -1088,7 +1092,7 @@ function gramKey(){return "g-"+G.area+"-"+G.t.id}
 function renderGram(){
   const t=G.t,p=gramPct(G.area,t);
   const lvls=[...new Set(t.items.map(x=>x.lv||1))].sort();
-  const lvName={1:"Stufe 1 · база",2:"Stufe 2 · уверенно",3:"Stufe 3 · как на экзамене"};
+  const lvName={2:"Stufe 2 · средний",3:"Stufe 3 · сложный, как на экзамене"};
   const back=G.area==="frei"?crumb("#/frei/grammatik","Грамматика (свободный)"):crumb("#/grammatik","Grammatik");
   page(`${back}<h1>${esc(t.title)}</h1><p class="lead">${esc(t.ru||"")}</p>
    <div class="row" style="margin-bottom:18px"><div class="tabs"><button data-gt="th" class="${G.tab==="th"?"on":""}">Теория</button><button data-gt="ex" class="${G.tab==="ex"?"on":""}">Упражнения · ${p}%</button>${t.write?`<button data-gt="ai" class="${G.tab==="ai"?"on":""}">${ic("spark",15)} Письмо с ИИ</button>`:""}</div></div>
@@ -1099,7 +1103,7 @@ function renderGram(){
   if(G.tab==="th"){body.innerHTML=`<div class="card theory">${t.theory||""}</div><div class="row" style="margin-top:16px"><button class="btn primary" id="toEx">К упражнениям →</button></div>`;$("#toEx").onclick=()=>{G.tab="ex";G.st.seenTheory=1;save(gramKey(),G.st);renderGram()};return}
   if((t.ai||t.exam)&&!G.queue.length&&!G.done&&t.items.length){startGram(0);return}   // ИИ-набор: сразу все 10 заданий, без выбора ступени
   if(!G.queue.length||G.done){
-    body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень. Задания идут от простых к сложным; ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;
+    body.innerHTML=`<div class="ex-run"><p class="muted" style="margin-top:0">Выбери уровень: средний или сложный (как на экзамене). Ошибки вернутся в конце круга.</p><div class="stufen">${lvls.map(l=>{const its=t.items.filter(x=>(x.lv||1)===l);const ok=its.filter(x=>G.st.r[t.items.indexOf(x)]===1).length;return `<button class="stufe" data-lv="${l}">${lvName[l]||"Stufe "+l}<small>${ok}/${its.length} верно</small></button>`}).join("")}<button class="stufe" data-lv="0">Все подряд<small>${t.items.length} заданий</small></button><button class="stufe" data-lv="-1">Только ошибки<small>${Object.values(G.st.r).filter(x=>x===0).length} шт.</small></button></div>${G.done?summaryHTML():""}</div>`;
     $$("[data-lv]").forEach(b=>b.onclick=()=>startGram(+b.dataset.lv));
     return;
   }
@@ -2070,6 +2074,8 @@ async function loadState(){
   ST.state=s.state||{};ST.keys=s.keys||{};ST.user=s.user;ST.me=me;
   // если запись на сервер не успела уйти (закрыли вкладку), берём локальную копию поновее
   try{Object.keys(localStorage).filter(k=>k.startsWith("de-st:")).forEach(k=>{const key=k.slice(6),v=JSON.parse(localStorage.getItem(k));if(ST.state[key]===undefined){ST.state[key]=v;save(key,v)}})}catch(e){}
+  // перенос сохранённых ответов грамматики на обновлённый набор заданий
+  try{const g=await data("de","grammatik");(g.topics||[]).forEach(t=>gramSt("de",t))}catch(e){}
 }
 (async()=>{
   try{await loadState()}catch(e){EP.ready();return}

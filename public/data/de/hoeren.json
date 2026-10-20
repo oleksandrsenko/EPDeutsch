@@ -7,7 +7,7 @@
    "topic": "Gesellschaft und soziales Engagement",
    "wt": "4.1",
    "title": "Ö-Journal kompakt: Nachrichten am Morgen",
-   "intro": "Sie hören Kurznachrichten aus dem Radio. Zu jeder Meldung gibt es eine Aufgabe.",
+   "intro": "Sie hören ein ausführliches Radiojournal am Morgen mit mehreren Meldungen und einem Hintergrundbericht. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "M": {
      "voice": "sage",
@@ -18,92 +18,176 @@
    "lines": [
     [
      "M",
-     "Guten Morgen, es ist sieben Uhr. Hier sind die Nachrichten."
+     "Guten Morgen, es ist sieben Uhr, Sie hören das Ö-Journal kompakt. Mein Name ist Katharina Leitner. In den nächsten Minuten informiere ich Sie über die wichtigsten Meldungen aus Österreich und der Welt, danach folgt ein ausführlicher Beitrag über die Wohnsituation von Studierenden, und zum Schluss gibt es den Wetterbericht für das Wochenende."
     ],
     [
      "M",
-     "Wien. Die Stadt Wien will bis zum Jahr 2030 rund fünfundzwanzigtausend neue geförderte Wohnungen errichten. Das hat der Wohnbaustadtrat gestern bei einer Pressekonferenz angekündigt. Ziel sei es, den Anstieg der Mieten zu bremsen. Die Opposition kritisiert, das Programm komme zu spät und reiche bei Weitem nicht aus."
+     "Wien. Die Stadt Wien will bis zum Jahr zweitausenddreißig rund fünfundzwanzigtausend neue geförderte Wohnungen errichten. Das hat der Wohnbaustadtrat gestern bei einer Pressekonferenz angekündigt. Ziel sei es, den Anstieg der Mieten zu bremsen, vor allem in den äußeren Bezirken. Die Finanzierung soll zum größten Teil aus dem Budget der Stadt kommen, ein kleinerer Teil aus Mitteln des Bundes. Die Opposition kritisiert, das Programm komme zu spät und reiche bei Weitem nicht aus. Die Grünen fordern stattdessen eine Leerstandsabgabe, die Freiheitlichen wollen die Gemeindebauten für Österreicherinnen und Österreicher reservieren, die Neos verlangen mehr Tempo bei den Bewilligungen."
     ],
     [
      "M",
-     "Bildung. An den österreichischen Universitäten haben sich für das laufende Wintersemester so viele Erstsemestrige angemeldet wie seit zehn Jahren nicht mehr. Besonders gefragt sind Informatik, Psychologie und Lehramtsstudien. Rückläufig sind dagegen die Anmeldungen in den Rechtswissenschaften."
+     "Bildung. An den österreichischen Universitäten haben sich für das laufende Wintersemester so viele Erstsemestrige angemeldet wie seit zehn Jahren nicht mehr. Insgesamt sind es rund fünfundvierzigtausend Personen. Besonders gefragt sind Informatik, Psychologie und die Lehramtsstudien. Rückläufig sind dagegen die Anmeldungen in den Rechtswissenschaften. Das Wissenschaftsministerium führt den Zuwachs unter anderem auf die gute Lage am Arbeitsmarkt für Absolventen technischer Fächer zurück. Die Hochschülerschaft warnt allerdings vor überfüllten Hörsälen und fordert zusätzliches Personal für die Betreuung der Studierenden."
     ],
     [
      "M",
-     "Verkehr. Wegen Bauarbeiten ist die Westbahnstrecke zwischen St. Pölten und Amstetten ab Samstag für zwei Wochen gesperrt. Die ÖBB richten einen Schienenersatzverkehr mit Bussen ein. Reisende müssen mit bis zu vierzig Minuten längeren Fahrzeiten rechnen."
+     "Verkehr. Wegen Bauarbeiten ist die Westbahnstrecke zwischen St. Pölten und Amstetten ab Samstag für zwei Wochen gesperrt. Die ÖBB richten einen Schienenersatzverkehr mit Bussen ein. Reisende müssen mit bis zu vierzig Minuten längeren Fahrzeiten rechnen. Besonders betroffen sind Pendlerinnen und Pendler, die täglich nach Wien fahren. Die Bahn rät, die Verbindungen vorab in der App zu prüfen und früher als gewohnt aufzubrechen. Im Gegenzug werden die Fahrkarten für die betroffene Strecke um zehn Prozent günstiger. Nach Abschluss der Arbeiten sollen die Züge schneller und pünktlicher fahren, weil die Gleise nach mehr als dreißig Jahren erneuert werden."
     ],
     [
      "M",
-     "Gesundheit. Eine neue Studie der Medizinischen Universität Wien zeigt, dass Jugendliche im Durchschnitt fast eine Stunde weniger schlafen, als Fachleute empfehlen. Als wichtigsten Grund nennen die Forscherinnen die Nutzung des Smartphones am Abend. Sie empfehlen, die Geräte mindestens eine Stunde vor dem Schlafengehen wegzulegen."
+     "Gesundheit. Eine neue Studie der Medizinischen Universität Wien zeigt, dass Jugendliche im Durchschnitt fast eine Stunde weniger schlafen, als Fachleute empfehlen. Befragt wurden mehr als zweitausend Schülerinnen und Schüler zwischen vierzehn und achtzehn Jahren. Als wichtigsten Grund nennen die Forscherinnen die Nutzung des Smartphones am Abend. Sie empfehlen, die Geräte mindestens eine Stunde vor dem Schlafengehen wegzulegen. Auch der frühe Schulbeginn spiele eine Rolle: Wer um acht Uhr im Klassenzimmer sitzen muss, könne seinen natürlichen Rhythmus kaum einhalten. Einzelne Schulen in Oberösterreich testen deshalb bereits einen späteren Unterrichtsbeginn."
     ],
     [
      "M",
-     "Und zum Wetter: Im Westen zunächst noch Regen, im Laufe des Tages auch im Osten zunehmend bewölkt. Die Höchstwerte liegen zwischen acht und vierzehn Grad. Am Wochenende wird es deutlich kälter, in höheren Lagen ist Schnee möglich."
+     "Wirtschaft. Die Inflation in Österreich ist im vergangenen Monat auf drei Komma eins Prozent gesunken, nach drei Komma sieben Prozent im Monat davor. Das teilte die Statistik Austria heute früh mit. Hauptgrund für den Rückgang sind die niedrigeren Energiepreise. Teurer geworden sind dagegen Lebensmittel und Restaurantbesuche. Ökonomen erwarten, dass die Teuerung bis zum Frühjahr weiter zurückgeht, warnen aber vor zu viel Optimismus, weil die Löhne stark steigen und viele Betriebe die höheren Kosten an ihre Kundschaft weitergeben."
+    ],
+    [
+     "M",
+     "Ausland. In Brüssel haben sich die Umweltminister der Europäischen Union auf strengere Regeln für Verpackungen geeinigt. Bis zum Jahr zweitausendvierzig soll die Menge an Verpackungsmüll pro Kopf um fünfzehn Prozent sinken. Einwegplastik soll in Restaurants und Cafés schrittweise durch Mehrwegsysteme ersetzt werden. Österreich hat dem Kompromiss zugestimmt, obwohl die heimische Papierindustrie vor höheren Kosten gewarnt hatte."
+    ],
+    [
+     "M",
+     "Kultur. Das Wiener Volkstheater hat seinen Spielplan für die kommende Saison vorgestellt. Insgesamt sind achtzehn Premieren geplant, darunter drei Uraufführungen österreichischer Autorinnen und Autoren. Die Intendantin kündigte an, dass es jeden ersten Sonntag im Monat Karten zum halben Preis für Jugendliche unter dreißig geben wird. Außerdem soll ein neues Programm mit Schulklassen aus den Außenbezirken starten, das Theaterbesuche und Workshops verbindet. Die Eröffnungspremiere im September ist eine Neufassung des Klassikers von Johann Nestroy, die in der Gegenwart spielt."
+    ],
+    [
+     "M",
+     "Und nun zu unserem Hintergrundbericht. Studierende in Wien erleben seit Jahren einen angespannten Wohnungsmarkt. Wir haben mit der Beratungsstelle der Hochschülerschaft gesprochen. Dort melden sich im Herbst täglich mehr als hundert Personen, die dringend ein Zimmer suchen. Die durchschnittliche Miete für ein Zimmer in einer Wohngemeinschaft liegt in Wien inzwischen bei fünfhundertzehn Euro im Monat, vor fünf Jahren waren es noch knapp vierhundert. Wer Glück hat, findet einen Platz in einem Studentenheim, doch die Wartelisten sind lang. In den Heimen der Stadt gibt es etwa zehntausend Plätze, sie decken nur etwa jeden zehnten Studierenden ab."
+    ],
+    [
+     "M",
+     "Viele junge Menschen weichen deshalb auf andere Lösungen aus. Manche pendeln aus dem Umland, etwa aus Niederösterreich oder dem Burgenland, und nehmen dafür täglich eine Fahrzeit von mehr als einer Stunde in Kauf. Andere ziehen länger bei ihren Eltern ein oder teilen sich ein Zimmer. Die Beratungsstelle berichtet außerdem von einem Trend zum Wohnen gegen Hilfe: Ältere Menschen stellen ein Zimmer zur Verfügung, die Studierenden helfen im Gegenzug im Haushalt oder beim Einkaufen. Pro Quadratmeter Wohnfläche übernehmen sie dabei eine Stunde Hilfe im Monat. Dieses Modell wird von der Stadt Wien mit einer Vermittlungsstelle unterstützt und ist besonders im Raum Graz beliebt."
+    ],
+    [
+     "M",
+     "Die Stadtregierung verweist auf ein neues Programm. Ab dem kommenden Jahr sollen Studierende mit geringem Einkommen einen Zuschuss von bis zu zweihundert Euro im Monat zur Miete erhalten. Voraussetzung ist ein Studienerfolg von mindestens zwanzig Credits pro Jahr. Kritiker bemängeln, dass diese Regel junge Menschen unter Druck setze, die nebenbei arbeiten müssen. Die Hochschülerschaft fordert außerdem eine Obergrenze für Mieten bei Neuvermietungen und mehr Studentenheime, die auch Menschen ohne Einkommensnachweis aufnehmen."
+    ],
+    [
+     "M",
+     "Und nun noch eine kurze Meldung aus der Wissenschaft. Forscherinnen der Universität Innsbruck haben ein neues Verfahren entwickelt, mit dem sich Mikroplastik aus Waschmaschinenwasser filtern lässt. Der Filter besteht aus Keramik und kann bis zu neunzig Prozent der Partikel zurückhalten. Erste Geräte sollen in zwei Jahren auf den Markt kommen."
+    ],
+    [
+     "M",
+     "Zum Schluss das Wetter. Im Westen zunächst noch Regen, im Laufe des Tages auch im Osten zunehmend bewölkt. Die Höchstwerte liegen zwischen acht und vierzehn Grad. In der Nacht auf Samstag sinken die Temperaturen auf null bis fünf Grad. Am Wochenende wird es deutlich kälter, in höheren Lagen ist Schnee möglich. Am Sonntag lockert es von Westen her auf, dann scheint zeitweise die Sonne. Das war das Ö-Journal kompakt, ich danke Ihnen fürs Zuhören und wünsche Ihnen einen guten Start in den Tag."
     ]
    ],
    "tasks": [
     {
-     "t": "mc",
-     "q": "Was plant die Stadt Wien?",
-     "o": [
-      "die Mieten per Gesetz zu senken",
-      "bis 2030 rund 25.000 geförderte Wohnungen zu bauen",
-      "alte Gemeindebauten zu verkaufen"
-     ],
-     "a": 1,
-     "ex": ""
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Was kritisiert die Opposition am Wohnbauprogramm der Stadt Wien?",
+       "o": [
+        "Es sei zu teuer.",
+        "Es bevorzuge die Innenbezirke.",
+        "Es komme zu spät und reiche nicht aus.",
+        "Es werde zu schnell umgesetzt."
+       ],
+       "a": 2,
+       "ex": "Die Opposition kritisiert, das Programm komme zu spät und reiche bei Weitem nicht aus."
+      },
+      {
+       "q": "Welche Studienrichtung verzeichnet weniger Anmeldungen?",
+       "o": [
+        "Rechtswissenschaften",
+        "Informatik",
+        "Psychologie",
+        "Lehramt"
+       ],
+       "a": 0,
+       "ex": "Rückläufig sind die Anmeldungen in den Rechtswissenschaften."
+      },
+      {
+       "q": "Was erhalten Reisende auf der gesperrten Westbahnstrecke als Ausgleich?",
+       "o": [
+        "Gratis-Getränke im Bus",
+        "eine kostenlose Parkkarte",
+        "zusätzliche Züge am Abend",
+        "Fahrkarten, die zehn Prozent günstiger sind"
+       ],
+       "a": 3,
+       "ex": "Im Gegenzug werden die Fahrkarten um zehn Prozent günstiger."
+      },
+      {
+       "q": "Welchen Grund für den Schlafmangel nennen die Forscherinnen an erster Stelle?",
+       "o": [
+        "zu viele Hausaufgaben",
+        "die Nutzung des Smartphones am Abend",
+        "Lärm in der Nacht",
+        "zu wenig Bewegung"
+       ],
+       "a": 1,
+       "ex": "Wichtigster Grund ist die Smartphone-Nutzung am Abend."
+      },
+      {
+       "q": "Warum ist die Inflation im vergangenen Monat gesunken?",
+       "o": [
+        "Lebensmittel sind billiger geworden.",
+        "Die Löhne sind gesunken.",
+        "Die Energiepreise sind niedriger.",
+        "Der Staat hat Steuern gesenkt."
+       ],
+       "a": 2,
+       "ex": "Hauptgrund sind die niedrigeren Energiepreise."
+      },
+      {
+       "q": "Wie funktioniert das Modell «Wohnen gegen Hilfe»?",
+       "o": [
+        "Studierende zahlen die halbe Miete und putzen das Haus.",
+        "Studierende betreuen Kinder und bekommen dafür ein Stipendium.",
+        "Die Stadt zahlt den Studierenden ein Zimmer bei Familien.",
+        "Ältere Menschen stellen ein Zimmer zur Verfügung, die Studierenden helfen im Haushalt."
+       ],
+       "a": 3,
+       "ex": "Ältere stellen ein Zimmer zur Verfügung, die Studierenden helfen im Haushalt oder beim Einkaufen."
+      },
+      {
+       "q": "Was kritisieren manche am neuen Zuschuss für Studierende?",
+       "o": [
+        "Die Bedingung beim Studienerfolg setze Berufstätige unter Druck.",
+        "Er gelte nur für Wiener.",
+        "Er sei zu niedrig.",
+        "Er werde zu spät ausgezahlt."
+       ],
+       "a": 0,
+       "ex": "Wer nebenbei arbeitet, schafft die zwanzig Credits oft nicht."
+      }
+     ]
     },
     {
-     "t": "tf",
-     "q": "Die Opposition unterstützt das Wohnbauprogramm.",
-     "a": "f",
-     "two": true,
-     "ex": "Sie kritisiert es."
-    },
-    {
-     "t": "mc",
-     "q": "Welche Studienrichtung verzeichnet weniger Anmeldungen?",
-     "o": [
-      "Informatik",
-      "Psychologie",
-      "Rechtswissenschaften"
-     ],
-     "a": 2,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Die Westbahnstrecke ist für einen Monat gesperrt.",
-     "a": "f",
-     "two": true,
-     "ex": "für zwei Wochen"
-    },
-    {
-     "t": "open",
-     "q": "Wie viel länger dauern die Fahrten mit dem Ersatzverkehr?",
-     "a": "bis zu 40 Minuten"
-    },
-    {
-     "t": "mc",
-     "q": "Was empfehlen die Forscherinnen den Jugendlichen?",
-     "o": [
-      "früher aufzustehen",
-      "das Smartphone eine Stunde vor dem Schlafen wegzulegen",
-      "am Wochenende länger zu schlafen"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Am Wochenende kann es in den Bergen schneien.",
-     "a": "r",
-     "two": true,
-     "ex": ""
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Ö-Journal kompakt: Wien plant bis 2030 etwa [[1]] geförderte Wohnungen. Studienanmeldungen: so viele wie seit zehn Jahren nicht mehr, besonders [[2]] und Psychologie. Westbahn gesperrt für [[3]] Wochen, Ersatz mit Bussen. Jugendliche schlafen zu wenig, vor allem wegen des [[4]]. Inflation sinkt auf [[5]] Prozent. WG-Zimmer in Wien kosten im Schnitt [[6]] Euro im Monat. Zuschuss zur Miete bis zu zweihundert Euro, wenn [[7]] Credits pro Jahr erreicht werden. Neuer Filter aus [[8]] gegen Mikroplastik.",
+     "a": [
+      [
+       "fünfundzwanzigtausend"
+      ],
+      [
+       "Informatik"
+      ],
+      [
+       "zwei"
+      ],
+      [
+       "Smartphones"
+      ],
+      [
+       "drei Komma eins"
+      ],
+      [
+       "fünfhundertzehn"
+      ],
+      [
+       "zwanzig"
+      ],
+      [
+       "Keramik"
+      ]
+     ]
     }
    ],
-   "words": 209,
-   "minutes": 3
+   "words": 1021,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "umfrage",
@@ -112,7 +196,7 @@
    "topic": "Umwelt und Verkehr",
    "wt": "4.4",
    "title": "Umfrage auf der Mariahilfer Straße: Wie kommen Sie zur Arbeit?",
-   "intro": "Ein Radioreporter fragt Passantinnen und Passanten in Wien, wie sie täglich unterwegs sind. Sie hören fünf Personen.",
+   "intro": "Sie hören eine Straßenumfrage für das Radio zum Thema Arbeitsweg. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "R": {
      "voice": "ash",
@@ -148,86 +232,208 @@
    "lines": [
     [
      "R",
-     "Grüß Gott, wir machen eine Umfrage für das Radio. Wie kommen Sie normalerweise zur Arbeit oder zur Uni?"
+     "Grüß Gott, wir machen heute eine Umfrage für das Radio. Das Thema lautet: Wie kommen die Wienerinnen und Wiener zur Arbeit oder zur Universität, und was würde ihnen den Weg erleichtern? Wir stehen hier auf der Mariahilfer Straße, mitten im Verkehr, und sprechen mit fünf Passanten. Entschuldigung, darf ich Sie kurz fragen: Wie kommen Sie normalerweise zur Arbeit oder zur Uni?"
     ],
     [
      "A",
-     "Ich fahre eigentlich immer mit dem Rad, auch im Winter. Von Ottakring bis zur Uni brauche ich zwanzig Minuten, mit der U-Bahn wär's ungefähr gleich lang. Aber am Rad bin ich an der frischen Luft, und ein Fitnessstudio brauch ich dadurch auch nicht."
+     "Ich fahre eigentlich immer mit dem Rad, auch im Winter. Von Ottakring bis zur Uni brauche ich zwanzig Minuten, mit der U-Bahn wäre es ungefähr gleich lang. Aber am Rad bin ich an der frischen Luft, und ein Fitnessstudio brauche ich dadurch auch nicht. Ich spare also Zeit und Geld. Die Monatskarte für die Öffis kostet ja inzwischen auch einiges, auch wenn es das Klimaticket gibt. Natürlich ist es nicht immer angenehm, wenn es regnet oder wenn Schnee liegt, aber mit der richtigen Kleidung geht das schon."
     ],
     [
      "R",
-     "Und Sie?"
+     "Und was stört Sie auf Ihrem Weg am meisten?"
+    ],
+    [
+     "A",
+     "Ganz klar die Autofahrer, die zu knapp überholen, und die Radwege, die plötzlich enden. In der Gegend um den Gürtel gibt es Kreuzungen, die wirklich gefährlich sind. Ich habe mir deshalb ein Fahrrad mit starker Beleuchtung gekauft und fahre lieber eine Umleitung von fünf Minuten, als dort durchzufahren. Und die Abstellplätze sind auch ein Problem: Wer sein Rad vor der Uni anschließt, muss damit rechnen, dass es gestohlen wird. Mir wurde schon einmal der Sattel abmontiert."
+    ],
+    [
+     "R",
+     "Vielen Dank. Und Sie? Wie sind Sie heute hierhergekommen?"
     ],
     [
      "B",
-     "Ich bin seit zwei Jahren in Pension, aber früher bin ich jeden Tag mit dem Auto nach Schwechat gefahren. Mit den Öffis wär das eine halbe Weltreise gewesen. Heute hab ich die Jahreskarte und das Auto steht meistens in der Garage. Eigentlich könnt ich's verkaufen, aber für den Urlaub ist es halt praktisch."
+     "Ich komme aus Niederösterreich, aus Tulln, und fahre jeden Tag mit der Schnellbahn nach Wien. Eine Fahrt dauert fünfunddreißig Minuten, dazu kommen noch zehn Minuten Fußweg zur U-Bahn. Ich arbeite in einer Versicherung im dritten Bezirk. Ich finde das eigentlich sehr angenehm, weil ich im Zug lesen oder E-Mails beantworten kann. Mit dem Auto müsste ich im Stau stehen, und einen Parkplatz in der Innenstadt bekommt man ohnehin nicht, außer man zahlt hundertachtzig Euro im Monat für eine Garage."
+    ],
+    [
+     "R",
+     "Würden Sie sich etwas anderes wünschen?"
+    ],
+    [
+     "B",
+     "Ja, dichtere Intervalle am Abend. Nach einundzwanzig Uhr fährt die Schnellbahn nur noch einmal pro Stunde, und wenn man einen Zug verpasst, steht man lange am Bahnsteig. Außerdem sind die Züge am Morgen sehr voll, im Winter manchmal so voll, dass man stehen muss. Ich würde mir auch wünschen, dass das Ticket noch günstiger wird, aber ehrlich gesagt bin ich mit dem Preis zufrieden. Mit dem Klimaticket Ostregion zahle ich ungefähr gleich viel wie früher für das Benzin allein."
+    ],
+    [
+     "R",
+     "Vielen Dank. Jetzt spreche ich mit einer Dame, die gerade aus der Straßenbahn gestiegen ist. Wie war Ihre Fahrt?"
     ],
     [
      "C",
-     "Ich arbeite im Homeoffice, drei Tage in der Woche. An den anderen zwei Tagen nehme ich die U3. Ehrlich gesagt, seit ich weniger pendle, bin ich viel entspannter. Die Zeit, die ich früher im Verkehr verbracht habe, nutze ich jetzt zum Laufen."
+     "Gut, aber ein bisschen langsam. Ich fahre jeden Tag mit der Linie sechsundvierzig bis zum Ring und steige dann in die U-Bahn um. Das dauert insgesamt fast fünfzig Minuten, obwohl ich nur acht Kilometer entfernt wohne. Ich arbeite als Krankenschwester, und mein Dienst beginnt um sechs Uhr. Da fährt noch nicht alles so häufig wie am Vormittag, und im Winter, wenn es früh dunkel ist, fühle ich mich in der Station nicht immer sicher. Mit dem Auto wäre ich in zwanzig Minuten dort, aber in der Nähe des Spitals gibt es keine Parkplätze für Mitarbeiter."
+    ],
+    [
+     "R",
+     "Und wie sieht es mit Ihrem Heimweg aus?"
+    ],
+    [
+     "C",
+     "Nach einem Nachtdienst fahre ich meistens mit dem Taxi. Das kostet mich fünfundzwanzig Euro, das ist teuer, aber ich bin einfach zu müde, um noch umzusteigen. Ich würde mir wünschen, dass die Nachtbusse häufiger fahren und dass das Spital seinen Mitarbeitern einen Zuschuss für das Ticket zahlt. Einzelne Betriebe machen das schon, bei uns wird gerade darüber verhandelt."
+    ],
+    [
+     "R",
+     "Das klingt nach einem langen Arbeitstag. Dankeschön für Ihre Zeit und gute Besserung für den Heimweg. Dort drüben steht ein junger Mann mit einem Elektroroller. Entschuldigung, ist das Ihr Verkehrsmittel?"
     ],
     [
      "D",
-     "Ich hab einen E-Scooter. Das geht super schnell, aber ich muss zugeben: Wenn's regnet, ist es furchtbar. Dann fahre ich mit dem Bus, und der steht oft im Stau. Ich finde, die Stadt sollte mehr eigene Busspuren bauen."
+     "Ja, genau. Ich habe mir den Roller vor einem halben Jahr gekauft, er kostet etwa neunhundert Euro. Er hat eine Reichweite von dreißig Kilometern und lässt sich zusammenklappen, das heißt, ich kann ihn in die U-Bahn mitnehmen und sogar unter den Schreibtisch im Büro stellen. Ich wohne in Favoriten und arbeite in der Nähe vom Schottentor. Mit dem Roller brauche ich fünfundzwanzig Minuten, mit der U-Bahn wären es auch fünfundzwanzig, aber ich muss nicht auf sie warten."
+    ],
+    [
+     "R",
+     "Gibt es auch Nachteile?"
+    ],
+    [
+     "D",
+     "Ja, bei Regen ist es nicht lustig, und manche Fußgänger regen sich auf, wenn man auf dem Gehsteig fährt, was ich natürlich nicht tue. Auf der Straße ist es dagegen manchmal gefährlich, weil die Autofahrer einen übersehen. Ich trage daher immer einen Helm, obwohl das für Roller nicht vorgeschrieben ist. Und im Winter lasse ich ihn zu Hause, da ist mir das Glatteis zu riskant. Dann fahre ich eben doch wieder mit den Öffis."
+    ],
+    [
+     "R",
+     "Und zum Schluss möchte ich noch mit jemandem sprechen, der vielleicht ein bisschen älter ist. Entschuldigen Sie, wie sind Sie unterwegs?"
     ],
     [
      "E",
-     "Ich wohne in Niederösterreich und pendle mit dem Zug. Das Problem ist der letzte Kilometer: Vom Bahnhof zu meinem Büro gibt's keine gute Verbindung, deshalb hab ich ein Klapprad dabei. Würde der Zug öfter fahren, würden sicher noch mehr Leute das Auto stehen lassen."
+     "Ich bin Pensionist und mache noch einen kleinen Nebenjob in einer Buchhandlung. Ich gehe zu Fuß. Von meiner Wohnung im sechsten Bezirk bis zum Geschäft sind es zwanzig Minuten, das ist mein tägliches Training. Meine Frau und ich haben vor zwei Jahren unser Auto verkauft, und wir haben es keinen Tag bereut. Die Versicherung, das Service, die Parkgebühren, das war alles zusammen beinahe zweitausend Euro im Jahr. Wenn wir einmal ein Auto brauchen, mieten wir eines für einen Tag."
+    ],
+    [
+     "R",
+     "Was würden Sie sich für Wien wünschen?"
+    ],
+    [
+     "E",
+     "Mehr Bäume, mehr Bänke und breitere Gehsteige. Gerade für ältere Leute ist es wichtig, dass man sich ausruhen kann, wenn man unterwegs ist. Und ich wünsche mir, dass die Ampeln länger grün zeigen. Meine Frau geht mit einem Stock, und oft schafft sie es nicht in einer Grünphase über die Straße. Gerade im Sommer ist es in der Innenstadt oft so heiß, dass man ohne Schatten kaum fünf Minuten gehen kann, und das ist für Menschen in meinem Alter ein echtes Problem. Ich finde, eine Stadt wird nicht danach beurteilt, wie schnell die Autos fahren, sondern danach, wie sicher sich Kinder und alte Menschen bewegen können."
+    ],
+    [
+     "R",
+     "Ich danke Ihnen allen für die Gespräche. Fünf Passanten, fünf verschiedene Verkehrsmittel: Rad, Schnellbahn, Straßenbahn, Roller und die eigenen Füße. Eines haben alle gemeinsam, sie wünschen sich mehr Sicherheit und dichtere Intervalle. Das war die Straßenumfrage auf der Mariahilfer Straße, mein Name ist Johannes Kainz."
     ]
    ],
    "tasks": [
     {
-     "t": "tf",
-     "q": "Person 1 ist mit dem Rad schneller als mit der U-Bahn.",
-     "a": "f",
-     "two": true,
-     "ex": "ungefähr gleich lang"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Warum fährt der erste Passant am liebsten mit dem Fahrrad?",
+       "o": [
+        "Es ist die schnellste Möglichkeit.",
+        "Er besitzt kein Klimaticket.",
+        "Er spart Zeit und Geld und braucht kein Fitnessstudio.",
+        "Er mag keine Menschenmengen."
+       ],
+       "a": 2,
+       "ex": "Er sagt, er spare Zeit und Geld und brauche dadurch kein Fitnessstudio."
+      },
+      {
+       "q": "Was wünscht sich der Pendler aus Tulln vor allem?",
+       "o": [
+        "dichtere Intervalle am Abend",
+        "mehr Parkplätze",
+        "günstigere Tickets",
+        "schnellere Züge am Morgen"
+       ],
+       "a": 0,
+       "ex": "Nach einundzwanzig Uhr fährt die Schnellbahn nur noch einmal pro Stunde."
+      },
+      {
+       "q": "Warum nimmt die Krankenschwester nach dem Nachtdienst ein Taxi?",
+       "o": [
+        "Die Straßenbahn fährt nachts nicht.",
+        "Das Taxi ist billiger als die Öffis.",
+        "Das Spital zahlt das Taxi.",
+        "Sie ist zu müde zum Umsteigen."
+       ],
+       "a": 3,
+       "ex": "Sie sei zu müde, um noch umzusteigen."
+      },
+      {
+       "q": "Was ist laut dem Rollerfahrer ein Vorteil seines Verkehrsmittels?",
+       "o": [
+        "Man darf auf dem Gehsteig fahren.",
+        "Man muss nicht auf die U-Bahn warten.",
+        "Der Roller ist im Winter am sichersten.",
+        "Ein Helm ist vorgeschrieben."
+       ],
+       "a": 1,
+       "ex": "Er muss nicht auf die U-Bahn warten und kann den Roller sogar mitnehmen."
+      },
+      {
+       "q": "Was hat das ältere Ehepaar vor zwei Jahren getan?",
+       "o": [
+        "eine Garage gemietet",
+        "in einen anderen Bezirk gezogen",
+        "das Auto verkauft",
+        "ein Elektroauto gekauft"
+       ],
+       "a": 2,
+       "ex": "Sie haben ihr Auto verkauft und es nie bereut."
+      },
+      {
+       "q": "Was wünscht sich der Pensionist für die Stadt?",
+       "o": [
+        "Fahrverbote in der Innenstadt",
+        "mehr Parkplätze",
+        "niedrigere Tarife für Senioren",
+        "mehr Bäume, Bänke und breitere Gehsteige"
+       ],
+       "a": 3,
+       "ex": "Er wünscht sich mehr Bäume, mehr Bänke und breitere Gehsteige."
+      },
+      {
+       "q": "Was haben alle fünf Passanten laut dem Reporter gemeinsam?",
+       "o": [
+        "Sie wünschen sich mehr Sicherheit und dichtere Intervalle.",
+        "Sie fahren alle mit den Öffis.",
+        "Sie wohnen alle im Zentrum.",
+        "Sie besitzen kein Auto."
+       ],
+       "a": 0,
+       "ex": "Der Reporter fasst zusammen: mehr Sicherheit und dichtere Intervalle."
+      }
+     ]
     },
     {
-     "t": "tf",
-     "q": "Person 2 hat sein Auto bereits verkauft.",
-     "a": "f",
-     "two": true,
-     "ex": "Es steht meistens in der Garage."
-    },
-    {
-     "t": "tf",
-     "q": "Person 3 fährt fünf Tage pro Woche mit der U-Bahn.",
-     "a": "f",
-     "two": true,
-     "ex": "nur zwei Tage"
-    },
-    {
-     "t": "tf",
-     "q": "Person 3 fühlt sich durch weniger Pendeln entspannter.",
-     "a": "r",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Was wünscht sich Person 4 von der Stadt?",
-     "a": "mehr eigene Busspuren"
-    },
-    {
-     "t": "mc",
-     "q": "Welches Problem nennt Person 5?",
-     "o": [
-      "Die Züge sind zu teuer.",
-      "Vom Bahnhof zum Büro gibt es keine gute Verbindung.",
-      "Im Zug gibt es keinen Platz für Fahrräder."
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Was würde laut Person 5 mehr Menschen zum Umsteigen bewegen?",
-     "a": "wenn der Zug öfter fahren würde"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Umfrage Mariahilfer Straße: Passant 1 kommt aus Ottakring und fährt in [[1]] Minuten mit dem Rad zur Uni. Pendler aus Tulln: [[2]] Minuten mit der Schnellbahn, ab 21 Uhr nur noch ein Zug pro Stunde. Krankenschwester braucht fast [[3]] Minuten und beginnt um sechs Uhr. Taxi nach dem Nachtdienst kostet [[4]] Euro. Rollerfahrer: Roller kostet etwa [[5]] Euro, Reichweite dreißig Kilometer. Pensionist: Weg zu Fuß dauert [[6]] Minuten, Auto kostete zusammen fast [[7]] Euro im Jahr. Wunsch aller: mehr [[8]] und dichtere Intervalle.",
+     "a": [
+      [
+       "zwanzig"
+      ],
+      [
+       "fünfunddreißig"
+      ],
+      [
+       "fünfzig"
+      ],
+      [
+       "fünfundzwanzig"
+      ],
+      [
+       "neunhundert"
+      ],
+      [
+       "zwanzig"
+      ],
+      [
+       "zweitausend"
+      ],
+      [
+       "Sicherheit"
+      ]
+     ]
     }
    ],
-   "words": 240,
-   "minutes": 3
+   "words": 1029,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "erasmus",
@@ -236,7 +442,7 @@
    "topic": "Tourismus und Reisen",
    "wt": "1.2",
    "title": "Interview: Ein Semester in Lissabon – was Erasmus wirklich bringt",
-   "intro": "Sie hören ein Interview mit einer Studentin, die ein Auslandssemester in Portugal verbracht hat.",
+   "intro": "Sie hören ein Radiointerview mit einer Studentin, die ein Auslandssemester gemacht hat. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "M": {
      "voice": "ash",
@@ -252,100 +458,216 @@
    "lines": [
     [
      "M",
-     "Bei uns im Studio ist heute Sophie Berger. Sie studiert Wirtschaft in Linz und ist gerade von einem Erasmus-Semester in Lissabon zurückgekommen. Frau Berger, warum gerade Portugal?"
+     "Herzlich willkommen bei «Campus aktuell». Bei uns im Studio ist heute Sophie Berger. Sie studiert Wirtschaft in Linz und ist gerade von einem Erasmus-Semester in Lissabon zurückgekommen. Frau Berger, warum gerade Portugal?"
     ],
     [
      "S",
-     "Ehrlich gesagt war Portugal nicht meine erste Wahl. Ich wollte eigentlich nach Spanien, aber dort waren alle Plätze vergeben. Im Nachhinein bin ich aber sehr froh darüber. Lissabon ist eine unglaublich offene Stadt, und weil Portugiesisch für mich völlig neu war, habe ich viel mehr gelernt, als ich erwartet hätte."
+     "Ehrlich gesagt war Portugal nicht meine erste Wahl. Ich wollte eigentlich nach Spanien, aber dort waren alle Plätze vergeben. Im Nachhinein bin ich aber sehr froh darüber. Lissabon ist eine unglaublich offene Stadt, und weil Portugiesisch für mich völlig neu war, habe ich viel mehr gelernt, als ich erwartet hätte. Am Anfang habe ich mit Händen und Füßen kommuniziert, nach drei Monaten konnte ich schon im Supermarkt plaudern."
     ],
     [
      "M",
-     "Viele denken bei Erasmus vor allem an Partys. Wie viel wurde denn tatsächlich studiert?"
+     "Wie sind Sie das Semester organisatorisch angegangen? Man hört ja oft, dass der Papierkram ein Albtraum ist."
     ],
     [
      "S",
-     "Das Klischee stimmt nicht ganz. Natürlich haben wir viel unternommen, aber die Kurse an der Uni waren anspruchsvoll. Der größte Unterschied zu Österreich war, dass es viel mehr Gruppenarbeiten und Präsentationen gab. Am Anfang war das ungewohnt, aber dadurch habe ich gelernt, vor Leuten frei zu sprechen – auf Englisch und am Ende sogar ein bisschen auf Portugiesisch."
+     "Das stimmt zum Teil. Ich habe etwa ein Jahr vorher mit der Bewerbung begonnen. Man braucht ein Motivationsschreiben, ein Sprachzertifikat und eine Bestätigung der Heimatuniversität. Der aufwendigste Teil war das Learning Agreement, also die Liste der Kurse, die man im Ausland besucht und die dann zu Hause anerkannt werden. Ich habe sechs Kurse gewählt, und am Ende wurden mir fünf davon angerechnet. Das ist eigentlich ein gutes Ergebnis, viele Kolleginnen haben weniger Glück gehabt."
     ],
     [
      "M",
-     "Wie war das mit der Finanzierung? Lissabon gilt ja inzwischen als teure Stadt."
+     "Und finanziell? Ein Auslandssemester kostet ja auch Geld."
     ],
     [
      "S",
-     "Das war tatsächlich das größte Problem. Die Mieten sind in den letzten Jahren extrem gestiegen, auch wegen der vielen Ferienwohnungen für Touristen. Ich habe für ein kleines Zimmer fast sechshundert Euro bezahlt. Das Erasmus-Stipendium hat davon nur einen Teil abgedeckt, den Rest habe ich mit Ersparnissen aus meinem Sommerjob finanziert."
+     "Ja, das ist ein wichtiger Punkt. Ich habe ein Erasmus-Stipendium von rund fünfhundert Euro im Monat bekommen. Mein Zimmer in einer Wohngemeinschaft hat vierhundertzwanzig Euro gekostet, es lag im Stadtteil Alfama, mit Blick auf den Fluss. Ohne die Unterstützung meiner Eltern hätte es nicht gereicht, denn Lissabon ist deutlich teurer geworden. Die Mieten steigen dort ähnlich stark wie in Wien. Aber Essen gehen ist günstiger, ein Mittagsmenü kostet nur sieben oder acht Euro."
     ],
     [
      "M",
-     "Hat das Auslandssemester Ihre Pläne für die Zukunft verändert?"
+     "Wie sah denn der Studienalltag aus? Unterscheidet sich das Studieren in Portugal von dem in Österreich?"
     ],
     [
      "S",
-     "Ja, auf jeden Fall. Ich habe gemerkt, dass ich gern international arbeiten möchte, vielleicht in einer Organisation, die mit Südeuropa zu tun hat. Und ich bin selbstständiger geworden. Wenn man in einem fremden Land eine Wohnung suchen, sich bei Behörden anmelden und mit einer neuen Sprache zurechtkommen muss, wächst man einfach."
+     "Sehr sogar. In Linz sitzen wir in großen Vorlesungen und schreiben am Ende eine Prüfung. In Lissabon hatte ich in fast jedem Kurs Gruppenarbeiten und Präsentationen, und die Note setzte sich aus mehreren Teilen zusammen. Das war am Anfang anstrengend, weil man ständig etwas abgeben musste, aber ich habe viel mehr gelernt, auch weil man in kleinen Gruppen arbeitet. Die Professorinnen waren sehr zugänglich, man hat sie mit dem Vornamen angesprochen und konnte jederzeit mit Fragen kommen."
     ],
     [
      "M",
-     "Was würden Sie anderen Studierenden raten?"
+     "Haben Sie dort auch Kontakt zu Einheimischen gefunden? Man hört oft, dass die Erasmus-Studierenden unter sich bleiben."
     ],
     [
      "S",
-     "Sich früh zu bewerben und sich nicht nur auf die beliebtesten Städte zu konzentrieren. Und: nicht nur mit anderen Erasmus-Studierenden zusammen zu sein. Die schönsten Erfahrungen habe ich gemacht, als ich mit Portugiesinnen und Portugiesen in einem Chor gesungen habe. Da habe ich die Sprache und die Kultur wirklich kennengelernt."
+     "Das ist tatsächlich eine Gefahr. In den ersten Wochen habe ich fast nur mit anderen Austauschstudenten gesprochen, mit Leuten aus Deutschland, Italien und Polen. Wir haben uns auf Englisch unterhalten, und das war bequem. Dann habe ich mich einem Chor an der Uni angeschlossen, und dort habe ich portugiesische Freundinnen gefunden. Das hat alles verändert. Ich wurde zu Familienessen eingeladen, habe Fado gehört und Bacalhau gegessen, obwohl ich Fisch eigentlich nicht mag. Heute würde ich jedem raten, gleich in der ersten Woche einen Verein oder eine Gruppe zu suchen."
+    ],
+    [
+     "M",
+     "Gab es auch schwierige Momente?"
+    ],
+    [
+     "S",
+     "Ja, ungefähr im zweiten Monat hatte ich ein Tief. Ich war krank, es regnete drei Wochen lang, und ich vermisste meine Familie. Außerdem hat es ein Missverständnis mit meiner Vermieterin gegeben, weil ich die Kaution nicht rechtzeitig bezahlt hatte. Das war stressig, aber ich habe gelernt, Probleme selbst zu lösen. Ich glaube, das ist der wichtigste Gewinn des Auslandssemesters: Man wird selbstständiger und selbstbewusster."
+    ],
+    [
+     "M",
+     "Sie haben vorhin die Sprache erwähnt. Wie haben Sie Portugiesisch gelernt, ohne Vorkenntnisse?"
+    ],
+    [
+     "S",
+     "Zuerst mit einem Intensivkurs, den die Gastuniversität für Austauschstudierende anbietet. Er hat zwei Wochen vor Semesterbeginn stattgefunden, jeden Tag vier Stunden, und war kostenlos. Danach habe ich einmal pro Woche einen Sprachkurs besucht und dazu eine App verwendet. Am meisten haben mir aber die Gespräche mit meinen Mitbewohnern gebracht, zwei Portugiesen und eine Brasilianerin. Wir haben abends gemeinsam gekocht, und jeder musste in seiner Sprache sagen, was er gerade tut. Das war lustig und sehr effektiv. Der Unterschied zwischen dem Portugiesisch in Portugal und dem in Brasilien war übrigens eine eigene Lektion."
+    ],
+    [
+     "M",
+     "Gab es kulturelle Unterschiede, die Sie überrascht haben?"
+    ],
+    [
+     "S",
+     "Eine ganze Menge. Zum Beispiel das Verhältnis zur Zeit. Wenn man in Portugal um acht Uhr zum Abendessen eingeladen ist, kommt man besser um halb neun, sonst steht man allein vor der Tür. Auch die Mittagspause ist länger, dafür wird abends länger gearbeitet. Außerdem sind die Portugiesen unglaublich gastfreundlich, aber sie sagen selten direkt Nein, das musste ich erst lernen. Und ich habe gemerkt, wie ordentlich und pünktlich wir Österreicher in den Augen der anderen sind. Das ist oft ein Klischee, aber ein bisschen steckt Wahrheit drin."
+    ],
+    [
+     "M",
+     "Wie war es, Ihre Familie und Freunde zu Hause zu vermissen?"
+    ],
+    [
+     "S",
+     "Am Anfang schwierig, aber dank Videoanrufen ging es. Ich habe jeden Sonntag mit meinen Eltern telefoniert. Im November hat mich meine Schwester besucht, und das war wunderschön, weil ich ihr die Stadt zeigen konnte. Wichtig war auch der Kontakt zu meinen Freunden in Linz, die mir geschrieben haben, was an der Uni passiert. So hatte ich nicht das Gefühl, etwas zu verpassen, und der Wiedereinstieg im Heimatsemester ist mir leichtgefallen."
+    ],
+    [
+     "M",
+     "Hat das Semester auch Auswirkungen auf Ihre Karriere?"
+    ],
+    [
+     "S",
+     "Ich hoffe es sehr. Ich möchte später im Außenhandel arbeiten, und da zählen Sprachen und interkulturelle Erfahrung. In Bewerbungsgesprächen werde ich schon heute darauf angesprochen. Mein Praktikum im Herbst habe ich bei einem Unternehmen bekommen, das viel mit Portugal und Brasilien handelt. Der Personalchef hat mir gesagt, dass er mich vor allem wegen meiner Portugiesischkenntnisse eingeladen hat."
+    ],
+    [
+     "M",
+     "Was würden Sie Studierenden raten, die überlegen, ins Ausland zu gehen?"
+    ],
+    [
+     "S",
+     "Erstens: früh planen, am besten ein Jahr vorher. Zweitens: ein Land wählen, dessen Sprache man lernen möchte, auch wenn es nicht das beliebteste ist. Drittens: nicht nur mit anderen Austauschstudenten abhängen. Und viertens: keine Angst vor dem Alleinsein, denn man findet überall schnell Anschluss, wenn man offen ist. Und ganz wichtig, nehmen Sie sich Zeit zum Reisen. Ich habe an den Wochenenden Porto, die Algarve und sogar Marokko gesehen."
+    ],
+    [
+     "M",
+     "Frau Berger, vielen Dank für das Gespräch und alles Gute für Ihr Praktikum. Das war «Campus aktuell», das Magazin mit Informationen und Tipps für Studierende, und wir freuen uns, wenn Sie auch nächste Woche wieder einschalten. Nächste Woche sprechen wir über Stipendien und Förderungen für Studierende mit Kindern."
     ]
    ],
    "tasks": [
     {
-     "t": "tf",
-     "q": "Portugal war von Anfang an Sophies Wunschziel.",
-     "a": "f",
-     "two": true,
-     "ex": "eigentlich Spanien"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Warum ist Sophie Berger nach Portugal gegangen?",
+       "o": [
+        "Sie wollte Portugiesisch lernen.",
+        "Ihre Freundin lebte dort.",
+        "In Spanien waren alle Plätze vergeben.",
+        "Die Mieten sind dort niedrig."
+       ],
+       "a": 2,
+       "ex": "Portugal war nicht ihre erste Wahl, denn in Spanien gab es keine Plätze mehr."
+      },
+      {
+       "q": "Wie viele ihrer Kurse wurden angerechnet?",
+       "o": [
+        "fünf von sechs",
+        "alle sechs",
+        "vier von fünf",
+        "drei von sechs"
+       ],
+       "a": 0,
+       "ex": "Von sechs gewählten Kursen wurden fünf angerechnet."
+      },
+      {
+       "q": "Was hat sie an der Lehre in Lissabon anders erlebt?",
+       "o": [
+        "Die Vorlesungen waren größer.",
+        "Es gab nur schriftliche Prüfungen.",
+        "Die Professoren sprachen sie mit Nachnamen an.",
+        "Es gab viele Gruppenarbeiten, und die Note setzte sich aus mehreren Teilen zusammen."
+       ],
+       "a": 3,
+       "ex": "In Lissabon gab es fast in jedem Kurs Gruppenarbeiten, und die Note bestand aus mehreren Teilen."
+      },
+      {
+       "q": "Was hat ihr geholfen, portugiesische Freunde zu finden?",
+       "o": [
+        "ein Sprachkurs",
+        "der Beitritt zu einem Chor",
+        "ihr Mitbewohner",
+        "die Arbeit in einer Bar"
+       ],
+       "a": 1,
+       "ex": "Sie hat sich einem Chor an der Uni angeschlossen."
+      },
+      {
+       "q": "Was war laut Sophie der wichtigste Gewinn des Auslandssemesters?",
+       "o": [
+        "die Sprachkenntnisse",
+        "ein Stipendium",
+        "mehr Selbstständigkeit und Selbstbewusstsein",
+        "Kontakte zu Unternehmen"
+       ],
+       "a": 2,
+       "ex": "Man wird selbstständiger und selbstbewusster."
+      },
+      {
+       "q": "Warum wurde sie vom Praktikumsgeber eingeladen?",
+       "o": [
+        "wegen ihrer Noten",
+        "wegen ihrer Empfehlungen",
+        "wegen ihres Lebenslaufs",
+        "wegen ihrer Portugiesischkenntnisse"
+       ],
+       "a": 3,
+       "ex": "Der Personalchef lud sie vor allem wegen ihrer Portugiesischkenntnisse ein."
+      },
+      {
+       "q": "Welchen Rat gibt sie Studierenden zuletzt?",
+       "o": [
+        "früh planen und das Reisen nicht vergessen",
+        "nur wenige Kurse belegen",
+        "zu Hause bleiben",
+        "möglichst viel Geld mitnehmen"
+       ],
+       "a": 0,
+       "ex": "Sie rät, früh zu planen, offen zu sein und Zeit zum Reisen zu nehmen."
+      }
+     ]
     },
     {
-     "t": "tf",
-     "q": "Laut Sophie wurde während des Semesters kaum studiert.",
-     "a": "f",
-     "two": true,
-     "ex": "Die Kurse waren anspruchsvoll."
-    },
-    {
-     "t": "mc",
-     "q": "Was war an der Universität in Lissabon anders als in Österreich?",
-     "o": [
-      "Es gab mehr Prüfungen.",
-      "Es gab mehr Gruppenarbeiten und Präsentationen.",
-      "Alle Kurse waren auf Portugiesisch."
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Wie viel kostete Sophies Zimmer ungefähr?",
-     "a": "fast 600 Euro"
-    },
-    {
-     "t": "mc",
-     "q": "Wie hat Sophie ihren Aufenthalt finanziert?",
-     "o": [
-      "nur mit dem Stipendium",
-      "mit dem Stipendium und Ersparnissen aus einem Sommerjob",
-      "mit Unterstützung ihrer Eltern"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie zwei Veränderungen, die das Auslandssemester bei Sophie bewirkt hat.",
-     "a": "möchte international arbeiten; ist selbstständiger geworden"
-    },
-    {
-     "t": "open",
-     "q": "Welche zwei Ratschläge gibt Sophie?",
-     "a": "früh bewerben / nicht nur beliebte Städte; nicht nur mit Erasmus-Studierenden zusammen sein"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Interview mit Sophie Berger (Wirtschaft, Linz): Erasmus in [[1]], Bewerbung etwa ein Jahr vorher. Von sechs Kursen wurden [[2]] angerechnet. Stipendium rund fünfhundert Euro, WG-Zimmer in [[3]] für vierhundertzwanzig Euro. Studium in Portugal: viele Gruppenarbeiten und [[4]]. Kontakt zu Einheimischen durch einen [[5]] an der Uni. Tief im [[6]] Monat: Krankheit und Streit mit der Vermieterin wegen der [[7]]. Ziel: später im [[8]] arbeiten.",
+     "a": [
+      [
+       "Lissabon"
+      ],
+      [
+       "fünf"
+      ],
+      [
+       "Alfama"
+      ],
+      [
+       "Präsentationen"
+      ],
+      [
+       "Chor"
+      ],
+      [
+       "zweiten"
+      ],
+      [
+       "Kaution"
+      ],
+      [
+       "Außenhandel"
+      ]
+     ]
     }
    ],
-   "words": 328,
-   "minutes": 3
+   "words": 1014,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "secondhand",
@@ -354,7 +676,7 @@
    "topic": "Konsumgesellschaft",
    "wt": "4.6",
    "title": "Podcast „Zweite Runde“: Lohnt sich Secondhand wirklich?",
-   "intro": "Sie hören einen Ausschnitt aus einem Podcast. Zwei Moderatoren sprechen über gebrauchte Kleidung und Online-Plattformen.",
+   "intro": "Sie hören einen Podcast über Secondhand-Mode und Konsum. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "J": {
      "voice": "verse",
@@ -370,98 +692,220 @@
    "lines": [
     [
      "J",
-     "Servus und willkommen zu einer neuen Folge von „Zweite Runde“. Heute geht's um ein Thema, über das Lisa und ich schon lange streiten: Secondhand. Lisa, du kaufst ja fast nur noch gebraucht, oder?"
+     "Hallo und willkommen zu «Zweite Runde», dem Podcast über nachhaltigen Konsum. Ich bin Jonas, und wie immer ist meine Kollegin Lisa dabei. Hallo Lisa!"
     ],
     [
      "L",
-     "Ja, seit ungefähr drei Jahren. Angefangen hat es eigentlich aus Geldmangel während des Studiums. Inzwischen mache ich es aber vor allem aus Überzeugung. Für ein neues T-Shirt braucht man unglaublich viel Wasser, und wenn ich eins kaufe, das schon jemand getragen hat, fällt das einfach weg."
+     "Hallo Jonas, hallo an alle, die uns zuhören. Heute geht es um ein Thema, das uns alle betrifft: Secondhand-Kleidung. Ist das wirklich die Lösung gegen die Wegwerfmode, oder ist es nur ein neuer Trend, der das schlechte Gewissen beruhigt?"
     ],
     [
      "J",
-     "Das klingt gut, aber ich sehe da ein Problem. Auf diesen Online-Plattformen kaufen viele Leute nicht weniger, sondern mehr. Sie verkaufen ihre Sachen nach zweimal Tragen und kaufen mit dem Geld gleich wieder Neues. Das ist doch auch nur eine andere Form von Konsum."
+     "Beginnen wir mit ein paar Zahlen. Laut einer Studie kauft jede Person in Österreich im Durchschnitt etwa sechzig Kleidungsstücke pro Jahr, und etwa ein Drittel davon wird weniger als ein Jahr getragen. Gleichzeitig landen jedes Jahr rund siebzigtausend Tonnen Textilien im Müll. Das ist ungefähr so schwer wie siebentausend Autobusse."
     ],
     [
      "L",
-     "Da hast du nicht ganz unrecht. Es gibt Studien, die zeigen, dass ein Teil der Leute die Plattformen genau so nutzt. Aber das ist nicht die Schuld von Secondhand an sich. Entscheidend ist, dass ich ein Kleidungsstück lange trage. Ob es neu oder gebraucht ist, kommt erst danach."
+     "Und da kommt Secondhand ins Spiel. Ich selbst kaufe seit drei Jahren fast nur noch gebrauchte Sachen, auf Flohmärkten, in Secondhandläden und über Apps. Ich habe ausgerechnet, dass ich dadurch etwa vierhundert Euro im Jahr spare. Außerdem finde ich dort Stücke, die es in den Ketten nicht gibt, also eher individuelle Kleidung. Natürlich muss man ein bisschen Zeit mitbringen, weil man nicht gezielt nach einer bestimmten Größe suchen kann."
     ],
     [
      "J",
-     "Und was ist mit dem Versand? Wenn jedes einzelne Teil quer durch Europa geschickt wird, ist die Ökobilanz ja auch nicht mehr so toll."
+     "Ich bin da etwas skeptischer. Ich habe mir letztes Jahr ein paar Hemden über eine Plattform gekauft, und zwei davon haben nicht gepasst, weil die Größenangaben nicht stimmten. Ich habe sie wieder verkauft, aber dabei Gebühren und Versandkosten bezahlt. Unterm Strich war es nicht billiger als im Geschäft. Außerdem frage ich mich, ob diese Plattformen nicht auch dazu führen, dass man mehr kauft, weil es so günstig ist."
     ],
     [
      "L",
-     "Stimmt. Deswegen gehe ich lieber in Secondhand-Läden hier in Wien oder auf Flohmärkte. Da kann ich die Sachen auch anprobieren, und es gibt keine Retouren. Am Naschmarkt-Flohmarkt am Samstag findest du manchmal echte Schätze."
+     "Das nennt man Rebound-Effekt, und er ist tatsächlich ein Problem. Forscherinnen der Universität für Bodenkultur haben untersucht, wie sich das Kaufverhalten bei Menschen verändert, die regelmäßig Secondhand kaufen. Ergebnis: Rund ein Viertel von ihnen kauft insgesamt mehr Kleidung als vorher, weil ihnen der Preis nicht mehr wehtut. Bei den anderen drei Vierteln sinkt dagegen die Zahl der neu gekauften Stücke."
     ],
     [
      "J",
-     "Okay, aber jetzt mal ehrlich: Ist Secondhand überhaupt noch billig? Manche Vintage-Läden verlangen für eine alte Jacke mehr als ein normales Geschäft für eine neue."
+     "Interessant. Dann kommen wir zur Frage der Umwelt. Wie gut ist die Ökobilanz eines gebrauchten T-Shirts im Vergleich zu einem neuen?"
     ],
     [
      "L",
-     "Das ist leider so, gerade bei bekannten Marken oder im angesagten Vintage-Stil. Secondhand ist ein Trend geworden, und das merkt man an den Preisen. Mein Tipp: Sozialmärkte und Läden von Hilfsorganisationen. Dort ist es immer noch günstig, und das Geld geht an einen guten Zweck."
+     "Sie ist deutlich besser, aber nicht perfekt. Für die Produktion eines neuen Baumwoll-T-Shirts werden etwa zweitausend Liter Wasser benötigt. Wenn man ein gebrauchtes Shirt kauft, fällt dieser Verbrauch weg, es gibt nur den Transport und eventuell die Reinigung. Man schätzt, dass der CO₂-Ausstoß um etwa achtzig Prozent sinkt, vorausgesetzt, man bestellt nicht jede Woche etwas aus dem Ausland."
     ],
     [
      "J",
-     "Gut, ich gebe zu, du hast mich ein bisschen überzeugt. Vielleicht probiere ich's beim nächsten Wintermantel aus."
+     "Und was passiert eigentlich mit den Kleidern, die in den Secondhandläden nicht verkauft werden?"
+    ],
+    [
+     "L",
+     "Das ist ein heikles Thema. Ein großer Teil wird exportiert, vor allem nach Afrika und Südasien. In Ghana zum Beispiel kommen jede Woche rund fünfzehn Millionen Kleidungsstücke an, und ein Großteil davon ist von so schlechter Qualität, dass er direkt auf Deponien landet. Das ist keine Lösung, sondern eine Verlagerung des Problems. Deshalb fordern Umweltorganisationen, dass die Hersteller künftig selbst für das Recycling verantwortlich sein sollen, und die EU will ab dem Jahr zweitausendfünfundzwanzig eine getrennte Sammlung von Textilien vorschreiben."
+    ],
+    [
+     "J",
+     "Das ist ein wichtiger Punkt. Ich denke, es gibt auch einen sozialen Aspekt. Früher hatte Secondhand ein negatives Image, man hat sich geschämt, gebrauchte Kleidung zu tragen. Heute ist es für viele junge Leute cool, und trotzdem wird es für Menschen mit wenig Geld schwieriger, weil die Preise in manchen Läden gestiegen sind. Ein Mantel im Vintage-Geschäft kostet manchmal fast so viel wie im Kaufhaus."
+    ],
+    [
+     "L",
+     "Da stimme ich dir zu. Caritas-Läden und der Verein «Soogut» bieten Kleidung noch immer sehr günstig an, aber auch dort ist der Andrang groß, seit das Thema in Mode gekommen ist. Wer es sich leisten kann, sollte deshalb vielleicht eher ausmisten und spenden, als Schnäppchen zu jagen."
+    ],
+    [
+     "J",
+     "Bevor wir zu den Tipps kommen, möchte ich noch eine Hörerfrage vorlesen. Maria aus Salzburg schreibt: Sie arbeitet im Büro und braucht eher klassische Kleidung. Gibt es dafür überhaupt gute Secondhand-Angebote?"
+    ],
+    [
+     "L",
+     "Ja, und zwar mehr, als man denkt. Gerade Blazer, Mäntel und Lederschuhe findet man in sehr guter Qualität, weil sie selten getragen wurden. In größeren Städten gibt es Läden, die sich auf Businesskleidung spezialisiert haben, und dort wird jedes Stück vor dem Verkauf gereinigt und geprüft. Ich habe selbst einen Wollmantel für neunzig Euro gekauft, der neu etwa vierhundert gekostet hätte. Allerdings sollte man ihn anprobieren, denn bei Mänteln sind Schultern und Ärmellänge entscheidend."
+    ],
+    [
+     "J",
+     "Und noch eine Frage, die ich oft höre: Ist es nicht unhygienisch, getragene Kleidung zu kaufen?"
+    ],
+    [
+     "L",
+     "Nein, solange man sie wäscht. Die meisten Stücke werden vor dem Verkauf ohnehin gereinigt, und alles andere gehört einfach einmal in die Waschmaschine bei sechzig Grad. Wichtiger finde ich die Frage, ob die Kleidung schädliche Chemikalien enthält. Das ist bei billiger Neuware tatsächlich häufiger ein Problem als bei Secondhand, weil gebrauchte Stücke schon oft gewaschen wurden."
+    ],
+    [
+     "J",
+     "Gut, was können unsere Zuhörerinnen und Zuhörer konkret tun? Hast du Tipps?"
+    ],
+    [
+     "L",
+     "Ja, vier Stück. Erstens: Vor dem Kauf fragen, ob man das Stück wirklich braucht. Zweitens: Auf Qualität achten, gute Stoffe halten länger, egal ob neu oder gebraucht. Drittens: Kleidung reparieren, zum Beispiel bei einer Änderungsschneiderei, das kostet oft nur ein paar Euro. Und viertens: Tauschpartys organisieren, mit Freundinnen oder in der Nachbarschaft. Bei mir im Haus gibt es zweimal im Jahr einen Kleidertausch, da gehe ich nie mit leeren Händen heim."
+    ],
+    [
+     "J",
+     "Das gefällt mir. Mein Fazit: Secondhand ist besser als Neukauf, aber es ersetzt nicht den Verzicht. Wer weniger kauft, spart am meisten, und zwar Geld, Wasser und Müll."
+    ],
+    [
+     "L",
+     "Genau. Und ich ergänze: Wir sollten nicht nur die Konsumenten in die Pflicht nehmen, sondern auch die Hersteller. Solange billige Ware in riesigen Mengen produziert wird, bleibt Secondhand ein Tropfen auf den heißen Stein."
+    ],
+    [
+     "J",
+     "Noch ein persönlicher Nachtrag von mir: Seit dieser Folge habe ich meinen Kleiderschrank durchgesehen und fast vierzig Stücke aussortiert, die ich seit Jahren nicht getragen habe. Ein Teil geht an die Caritas, den Rest verkaufe ich online. Vielleicht ist das schon der erste Schritt zu weniger Konsum."
+    ],
+    [
+     "L",
+     "Dann hat sich die Vorbereitung ja gelohnt."
+    ],
+    [
+     "J",
+     "Das war «Zweite Runde». Wenn euch die Folge gefallen hat, abonniert uns und erzählt uns in den Kommentaren, was ihr zuletzt Gebrauchtes gekauft habt. Bis zum nächsten Mal!"
+    ],
+    [
+     "L",
+     "Tschüss und bleibt nachhaltig!"
     ]
    ],
    "tasks": [
     {
-     "t": "tf",
-     "q": "Lisa kaufte zunächst aus finanziellen Gründen gebraucht.",
-     "a": "r",
-     "two": true,
-     "ex": ""
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Wie viele Kleidungsstücke kauft laut Studie eine Person in Österreich pro Jahr im Durchschnitt?",
+       "o": [
+        "etwa dreißig",
+        "etwa neunzig",
+        "etwa sechzig",
+        "etwa hundertzwanzig"
+       ],
+       "a": 2,
+       "ex": "Es sind etwa sechzig Stücke, ein Drittel davon wird weniger als ein Jahr getragen."
+      },
+      {
+       "q": "Warum ist Jonas gegenüber Secondhand-Plattformen skeptisch?",
+       "o": [
+        "Die Größenangaben stimmen oft nicht, und am Ende ist es nicht billiger.",
+        "Er bekommt keine Rechnung.",
+        "Die Ware ist immer beschädigt.",
+        "Die Lieferung dauert zu lange."
+       ],
+       "a": 0,
+       "ex": "Zwei Hemden passten nicht, und mit Gebühren und Versand war es nicht billiger als im Geschäft."
+      },
+      {
+       "q": "Was zeigt die Untersuchung der Universität für Bodenkultur?",
+       "o": [
+        "Secondhand-Käufer kaufen alle weniger.",
+        "Die meisten Käufer sind über fünfzig.",
+        "Secondhand ist teurer als Neuware.",
+        "Ein Viertel der Käufer kauft insgesamt mehr Kleidung als vorher."
+       ],
+       "a": 3,
+       "ex": "Rund ein Viertel kauft mehr, weil ihnen der Preis nicht mehr wehtut."
+      },
+      {
+       "q": "Wie stark sinkt laut Lisa der CO₂-Ausstoß beim Kauf eines gebrauchten Shirts?",
+       "o": [
+        "um etwa zwanzig Prozent",
+        "um etwa achtzig Prozent",
+        "um etwa sechzig Prozent",
+        "um etwa vierzig Prozent"
+       ],
+       "a": 1,
+       "ex": "Man schätzt, dass der Ausstoß um etwa achtzig Prozent sinkt."
+      },
+      {
+       "q": "Was passiert mit unverkaufter Secondhand-Kleidung?",
+       "o": [
+        "Sie wird verbrannt.",
+        "Sie wird an Schulen verschenkt.",
+        "Ein Großteil wird exportiert, vor allem nach Afrika und Südasien.",
+        "Sie wird zu neuen Stoffen verarbeitet."
+       ],
+       "a": 2,
+       "ex": "Ein großer Teil geht nach Afrika und Südasien, viel davon landet auf Deponien."
+      },
+      {
+       "q": "Welches Problem sieht Jonas beim Image von Secondhand?",
+       "o": [
+        "Es hat keine Qualität.",
+        "Es gilt als altmodisch.",
+        "Es ist verboten.",
+        "Es ist zu teuer geworden für Menschen mit wenig Geld."
+       ],
+       "a": 3,
+       "ex": "Die Preise sind in manchen Läden gestiegen, das trifft Menschen mit wenig Geld."
+      },
+      {
+       "q": "Welches Fazit ziehen die beiden?",
+       "o": [
+        "Secondhand ist besser, aber weniger kaufen ist am wirksamsten.",
+        "Secondhand löst das Problem vollständig.",
+        "Man sollte nur noch neue Kleidung kaufen.",
+        "Die Hersteller tragen keine Verantwortung."
+       ],
+       "a": 0,
+       "ex": "Wer weniger kauft, spart am meisten; auch die Hersteller müssen in die Pflicht."
+      }
+     ]
     },
     {
-     "t": "mc",
-     "q": "Was kritisiert Jonas an Online-Plattformen?",
-     "o": [
-      "Die Qualität der Kleidung ist schlecht.",
-      "Viele Leute kaufen dadurch sogar mehr.",
-      "Die Plattformen verlangen zu hohe Gebühren."
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Was ist für Lisa wichtiger als die Frage, ob ein Kleidungsstück neu oder gebraucht ist?",
-     "a": "dass man es lange trägt"
-    },
-    {
-     "t": "mc",
-     "q": "Warum kauft Lisa lieber in Läden und auf Flohmärkten?",
-     "o": [
-      "weil es dort billiger ist",
-      "wegen Versand und Retouren beim Online-Kauf",
-      "weil sie dort Freunde trifft"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Laut Lisa sind Vintage-Läden immer günstiger als normale Geschäfte.",
-     "a": "f",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Welchen Tipp gibt Lisa für günstige Secondhand-Kleidung?",
-     "a": "Sozialmärkte und Läden von Hilfsorganisationen"
-    },
-    {
-     "t": "tf",
-     "q": "Am Ende bleibt Jonas komplett bei seiner Meinung.",
-     "a": "f",
-     "two": true,
-     "ex": "Er ist ein bisschen überzeugt."
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Podcast «Zweite Runde»: Jede Person kauft in Österreich etwa [[1]] Kleidungsstücke pro Jahr. Lisa spart durch Secondhand etwa [[2]] Euro im Jahr. Rebound-Effekt: ein [[3]] der Käufer kauft insgesamt mehr. Für ein neues T-Shirt braucht man etwa [[4]] Liter Wasser. Textilexport nach [[5]]: Ein Großteil landet auf Deponien. Die EU schreibt ab [[6]] eine getrennte Textilsammlung vor. Tipps: Qualität, Reparatur bei der [[7]] und [[8]] mit Freundinnen.",
+     "a": [
+      [
+       "sechzig"
+      ],
+      [
+       "vierhundert"
+      ],
+      [
+       "Viertel"
+      ],
+      [
+       "zweitausend"
+      ],
+      [
+       "Ghana"
+      ],
+      [
+       "zweitausendfünfundzwanzig"
+      ],
+      [
+       "Änderungsschneiderei"
+      ],
+      [
+       "Tauschpartys"
+      ]
+     ]
     }
    ],
-   "words": 316,
-   "minutes": 3
+   "words": 1003,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "mieten_diskussion",
@@ -470,7 +914,7 @@
    "topic": "Wohnen",
    "wt": "3.3",
    "title": "Diskussion: Braucht Österreich eine strengere Mietpreisbremse?",
-   "intro": "Sie hören eine Diskussion im Radio. Es sprechen eine Vertreterin einer Mieterorganisation und ein Vertreter der Immobilienwirtschaft.",
+   "intro": "Sie hören eine Radiodiskussion über eine strengere Mietpreisbremse in Österreich. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "M": {
      "voice": "sage",
@@ -491,100 +935,216 @@
    "lines": [
     [
      "M",
-     "Die Mieten in Österreich sind in den vergangenen Jahren deutlich stärker gestiegen als die Löhne. Darüber diskutiere ich heute mit Karin Fuchs von der Mietervereinigung und Thomas Hofer vom Verband der Immobilienwirtschaft. Frau Fuchs, wie dramatisch ist die Lage?"
+     "Guten Abend und willkommen zur Diskussion im Radio. Die Mieten in Österreich steigen seit Jahren schneller als die Löhne. Die Regierung diskutiert deshalb über eine strengere Mietpreisbremse. Bei uns im Studio sind Frau Dr. Karin Fuchs von der Mieterschutz-Organisation und Herr Mag. Thomas Hofer vom Verband der Immobilienwirtschaft. Frau Fuchs, warum brauchen wir eine strengere Bremse?"
     ],
     [
      "K",
-     "Sehr dramatisch. Wir haben in unserer Beratung Familien, die mittlerweile mehr als die Hälfte ihres Einkommens fürs Wohnen ausgeben. Besonders betroffen sind Menschen, die neu einen Mietvertrag abschließen müssen, also junge Leute, Alleinerziehende, Zugewanderte. Und das Problem sind vor allem die befristeten Verträge. Wer nach drei Jahren nicht weiß, ob er bleiben darf, traut sich auch nicht, sich gegen eine überhöhte Miete zu wehren."
+     "Weil der Markt in der jetzigen Form nicht funktioniert. In den letzten fünf Jahren sind die Mieten bei Neuvermietungen im Schnitt um fast dreißig Prozent gestiegen, die Einkommen aber nur um etwa zwölf Prozent. Eine durchschnittliche Familie in Wien gibt inzwischen mehr als ein Drittel ihres Einkommens fürs Wohnen aus, bei Alleinerziehenden ist es mehr als die Hälfte. Wohnen ist ein Grundbedürfnis, und wenn die Kosten derart davonlaufen, dann muss der Staat eingreifen."
     ],
     [
      "M",
-     "Herr Hofer, ist eine strengere Mietpreisbremse die Lösung?"
+     "Herr Hofer, Sie sehen das anders?"
     ],
     [
      "H",
-     "Ich verstehe die Sorgen, aber ich halte das für einen Irrweg. Wenn man die Mieten zu stark deckelt, lohnt es sich für Investoren nicht mehr, neue Wohnungen zu bauen oder alte zu sanieren. Das Ergebnis wäre ein noch kleineres Angebot. Das sieht man in anderen Städten, wo es solche Regelungen gibt: Die Wartelisten werden länger, und am Ende bekommen nur diejenigen eine Wohnung, die die richtigen Kontakte haben."
+     "Ich sehe das Problem natürlich auch, aber ich halte die Mietpreisbremse für das falsche Mittel. Wer Preise deckelt, schafft keine einzige zusätzliche Wohnung. Im Gegenteil: Investoren überlegen dann, ob sie überhaupt noch neue Projekte starten. Die Erfahrung aus Berlin zeigt, dass nach der Einführung des Mietendeckels das Angebot an Mietwohnungen um mehr als ein Drittel zurückgegangen ist, weil viele Eigentümer verkauft haben oder die Wohnungen leer stehen ließen."
     ],
     [
      "K",
-     "Da muss ich widersprechen. Niemand verlangt, dass Vermieter keinen Gewinn mehr machen dürfen. Aber Wohnen ist ein Grundbedürfnis und keine normale Ware. Wien zeigt ja seit Jahrzehnten, dass es anders geht: Der hohe Anteil an Gemeindewohnungen und geförderten Genossenschaftswohnungen dämpft die Mieten in der ganzen Stadt."
-    ],
-    [
-     "H",
-     "Das ist richtig, und ich bin der Letzte, der den sozialen Wohnbau schlechtreden will. Aber gerade deshalb sage ich: Wir brauchen mehr Neubau, schnellere Genehmigungsverfahren und weniger Bürokratie. Ein Bauprojekt dauert in Österreich oft fünf Jahre, bis es überhaupt starten kann. Das ist das eigentliche Problem."
+     "Dieses Beispiel hinkt, Herr Hofer. In Berlin wurde der Deckel vom Verfassungsgericht aufgehoben, und danach sind die Mieten umso stärker gestiegen. Außerdem gibt es in Österreich ein ganz anderes System. Bei uns ist der Richtwertmietzins seit Jahrzehnten gesetzlich geregelt, und trotzdem wird gebaut. Wir fordern keine Preisstarre, sondern eine klare Obergrenze für Erhöhungen, zum Beispiel höchstens zwei Prozent pro Jahr, und zwar für alle Verträge, auch die befristeten."
     ],
     [
      "M",
-     "Frau Fuchs, wären Sie mit schnelleren Verfahren einverstanden?"
+     "Die befristeten Verträge sind ein wichtiges Stichwort. Etwa jede zweite neue Mietwohnung in Österreich wird nur noch befristet vermietet. Herr Hofer, ist das fair?"
+    ],
+    [
+     "H",
+     "Aus Sicht der Eigentümer ist es verständlich. Wenn jemand zum Beispiel eine Wohnung für seine Tochter, die gerade studiert, vermieten möchte, aber nach drei Jahren zurückhaben will, braucht er diese Möglichkeit. Ich räume aber ein, dass es in manchen Fällen missbraucht wird, vor allem von großen Gesellschaften, die ihre Mieter bewusst im Dreijahresrhythmus wechseln, um höhere Preise zu verlangen. Dagegen könnte man mit einer Mindestdauer von fünf Jahren vorgehen."
     ],
     [
      "K",
-     "Grundsätzlich ja, solange dabei der Umweltschutz und die Mitsprache der Anrainer nicht unter die Räder kommen. Aber Neubau allein hilft kurzfristig niemandem, der heute seine Miete nicht zahlen kann. Wir fordern daher zweierlei: ein Ende der befristeten Verträge für große Vermieter und klare Obergrenzen bei Neuvermietungen."
-    ],
-    [
-     "H",
-     "Bei den Befristungen bin ich übrigens gar nicht so weit weg von Ihnen. Für private Kleinvermieter, die vielleicht in ein paar Jahren selbst einziehen wollen, braucht es sie. Für große Gesellschaften könnte man über längere Mindestlaufzeiten durchaus reden."
+     "Das wäre ein erster Schritt, wir würden aber lieber eine Regel sehen, nach der befristete Verträge nur mit einem sachlichen Grund erlaubt sind. Und die Rechtslage ist für die Betroffenen kaum nachvollziehbar. Viele wissen gar nicht, dass sie eine überhöhte Miete zahlen. Eine Untersuchung der Arbeiterkammer hat gezeigt, dass bei etwa jedem dritten Vertrag ein Teil der Miete rechtswidrig ist, aber nur ein Bruchteil der Betroffenen klagt, weil es zu kompliziert und zu riskant ist."
     ],
     [
      "M",
-     "Das ist doch ein Ansatzpunkt. Vielen Dank Ihnen beiden für die Diskussion."
+     "Sprechen wir über Lösungen. Was würde das Angebot tatsächlich erhöhen? Herr Hofer?"
+    ],
+    [
+     "H",
+     "Wir brauchen schnellere Bewilligungsverfahren und mehr Bauland. In Wien dauert es im Schnitt zwei bis drei Jahre, bis ein Wohnbauprojekt genehmigt ist. In dieser Zeit steigen die Baukosten, und am Ende wird es teurer, als geplant. Außerdem sollten wir den Dachgeschossausbau erleichtern und leer stehende Bürogebäude in Wohnungen umwandeln. Allein in Wien stehen rund zwei Millionen Quadratmeter Büroflächen leer."
+    ],
+    [
+     "K",
+     "Dem stimme ich zu, nur reicht das nicht, und es dauert Jahre. In der Zwischenzeit brauchen die Menschen Entlastung. Deshalb halte ich eine Leerstandsabgabe für sinnvoll. In Wien stehen etwa vierzigtausend Wohnungen dauerhaft leer, manche aus Spekulation. Wer eine Wohnung bewusst leer lässt, sollte dafür zahlen. Zusätzlich sollte der gemeinnützige Wohnbau gestärkt werden, denn dort liegen die Mieten durchschnittlich um ein Drittel unter dem Marktniveau."
+    ],
+    [
+     "H",
+     "Da bin ich bei Ihnen, was den gemeinnützigen Bau betrifft. Allerdings sollte er nicht nur Menschen mit sehr geringem Einkommen offenstehen. Wir sehen, dass auch die Mittelschicht Probleme hat, eine Wohnung zu finden. Und bei der Leerstandsabgabe bin ich skeptisch: Viele Wohnungen stehen nicht aus Spekulation leer, sondern weil sie saniert werden oder weil Erbschaftsfragen ungeklärt sind. Das Verwaltungsverfahren wäre sehr aufwendig."
+    ],
+    [
+     "M",
+     "Frau Fuchs, wie würden Sie Eigentümer überzeugen, die Sorge haben, durch eine Bremse unter dem Strich draufzuzahlen?"
+    ],
+    [
+     "K",
+     "Indem man Anreize setzt. Wer sanierte Wohnungen zu fairen Preisen vermietet, kann steuerliche Vorteile bekommen. Und ich möchte betonen: Die meisten Vermieter in Österreich sind keine Konzerne, sondern Privatpersonen, die eine oder zwei Wohnungen besitzen. Für sie ist eine stabile, planbare Einnahme oft wichtiger als maximale Rendite."
+    ],
+    [
+     "M",
+     "Eine Frage aus dem Publikum erreicht uns per E-Mail: Ein Hörer aus Linz fragt, wie es mit den Betriebskosten aussieht, denn auch sie sind stark gestiegen. Frau Fuchs?"
+    ],
+    [
+     "K",
+     "Das ist ein oft unterschätzter Punkt. Die Betriebskosten, also Heizung, Wasser, Müllabfuhr und Hausverwaltung, sind in den vergangenen zwei Jahren um mehr als zwanzig Prozent gestiegen. Für viele Haushalte ist die zweite Miete, wie man sagt, inzwischen genauso belastend wie die erste. Wir fordern daher mehr Transparenz bei den Abrechnungen und das Recht auf Einsicht in alle Belege, und zwar ohne Gebühr."
+    ],
+    [
+     "H",
+     "Dem würde ich zustimmen, solange der Verwaltungsaufwand für kleine Vermieter nicht übertrieben wird. Wir haben ein Interesse an Energieeffizienz, denn eine thermisch sanierte Wohnung spart dem Mieter langfristig Geld. Das Problem ist, dass die Kosten der Sanierung bei der Miete nur teilweise weitergegeben werden dürfen. Hier brauchen wir bessere Förderungen von Bund und Ländern, damit beide Seiten profitieren."
+    ],
+    [
+     "M",
+     "Und wie beurteilen Sie die Situation für junge Menschen, die gerade erst eine Wohnung suchen?"
+    ],
+    [
+     "K",
+     "Sie sind am stärksten betroffen. Sie haben noch kein hohes Einkommen und keine Ersparnisse für Kaution und Provision. Zum Glück ist die Maklerprovision für Mieter seit Kurzem abgeschafft, weil nun nach dem Bestellerprinzip der Auftraggeber zahlt. Das war ein wichtiger Schritt, der Hunderte Euro pro Wohnungswechsel spart."
+    ],
+    [
+     "M",
+     "Zum Schluss ein Blick nach vorn. Herr Hofer, was würden Sie der Politik raten?"
+    ],
+    [
+     "H",
+     "Ein Paket aus mehreren Maßnahmen: mehr Bauland, kürzere Verfahren, steuerliche Anreize für sanierte Wohnungen und gezielte Unterstützung für Haushalte mit geringem Einkommen über das Wohngeld statt pauschaler Preisdeckel. Das wäre treffsicherer und verzerrt den Markt weniger."
+    ],
+    [
+     "K",
+     "Und ich würde ergänzen: Ohne eine verbindliche Grenze für Mietsteigerungen wird kein Paket reichen. Die Menschen können nicht warten, bis in drei Jahren neue Wohnungen gebaut sind. Ein Kompromiss könnte sein, die Bremse zunächst für fünf Jahre einzuführen und dann zu prüfen, wie sie wirkt."
+    ],
+    [
+     "M",
+     "Damit sind wir am Ende unserer Diskussion. Wir danken Frau Dr. Fuchs und Herrn Mag. Hofer für das Gespräch. Gute Nacht und bis zum nächsten Mal."
     ]
    ],
    "tasks": [
     {
-     "t": "mc",
-     "q": "Welche Gruppe ist laut Frau Fuchs besonders betroffen?",
-     "o": [
-      "Menschen mit alten Mietverträgen",
-      "Menschen, die neue Mietverträge abschließen",
-      "Eigentümer von Wohnungen"
-     ],
-     "a": 1,
-     "ex": ""
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Welches Argument bringt Frau Fuchs für eine strengere Bremse vor?",
+       "o": [
+        "Eigentümer verlangen zu wenig Miete.",
+        "Es gibt zu viele Neubauten.",
+        "Die Mieten steigen viel stärker als die Einkommen.",
+        "Die Löhne sind in den letzten Jahren gesunken."
+       ],
+       "a": 2,
+       "ex": "Neuvermietungen wurden um fast dreißig Prozent teurer, Einkommen nur um etwa zwölf Prozent."
+      },
+      {
+       "q": "Was kritisiert Herr Hofer am Beispiel Berlin?",
+       "o": [
+        "Nach dem Deckel sei das Angebot an Mietwohnungen stark zurückgegangen.",
+        "Der Mietendeckel sei nie eingeführt worden.",
+        "Die Mieten seien dort stark gesunken.",
+        "Berlin habe zu viele Wohnungen gebaut."
+       ],
+       "a": 0,
+       "ex": "Das Angebot ging um mehr als ein Drittel zurück."
+      },
+      {
+       "q": "Welche Lösung beim Thema befristete Verträge nennt Herr Hofer?",
+       "o": [
+        "ein Verbot jeder Befristung",
+        "höhere Kautionen",
+        "eine automatische Verlängerung",
+        "eine Mindestdauer von fünf Jahren"
+       ],
+       "a": 3,
+       "ex": "Er schlägt eine Mindestdauer von fünf Jahren vor."
+      },
+      {
+       "q": "Was ergab die Untersuchung der Arbeiterkammer?",
+       "o": [
+        "Fast alle Mieter zahlen zu wenig.",
+        "Etwa bei jedem dritten Vertrag ist ein Teil der Miete rechtswidrig.",
+        "Befristete Verträge sind kaum verbreitet.",
+        "Die meisten Mieter klagen erfolgreich."
+       ],
+       "a": 1,
+       "ex": "Bei etwa jedem dritten Vertrag ist ein Teil der Miete rechtswidrig, aber nur wenige klagen."
+      },
+      {
+       "q": "Warum ist Herr Hofer gegenüber der Leerstandsabgabe skeptisch?",
+       "o": [
+        "Sie sei zu niedrig.",
+        "Sie gelte nur für Wien.",
+        "Viele Wohnungen stehen wegen Sanierungen oder Erbschaftsfragen leer, die Prüfung wäre aufwendig.",
+        "Eigentümer würden sie nie zahlen."
+       ],
+       "a": 2,
+       "ex": "Viele Wohnungen werden saniert oder haben ungeklärte Erbschaftsfragen."
+      },
+      {
+       "q": "Worauf legt Frau Fuchs bei den Vermietern Wert?",
+       "o": [
+        "Die meisten seien große Konzerne.",
+        "Vermieter hätten kein Interesse an Reformen.",
+        "Vermieter wollten nur Rendite.",
+        "Die meisten Vermieter seien Privatpersonen, denen stabile Einnahmen wichtig sind."
+       ],
+       "a": 3,
+       "ex": "Die meisten sind Privatpersonen mit ein bis zwei Wohnungen."
+      },
+      {
+       "q": "Welchen Kompromiss schlägt Frau Fuchs zuletzt vor?",
+       "o": [
+        "die Bremse für fünf Jahre einzuführen und dann zu prüfen",
+        "eine Bremse nur für Wien",
+        "die Bremse sofort abzuschaffen",
+        "Wohngeld für alle"
+       ],
+       "a": 0,
+       "ex": "Die Bremse zunächst für fünf Jahre einführen und anschließend prüfen."
+      }
+     ]
     },
     {
-     "t": "open",
-     "q": "Warum sind befristete Verträge laut Frau Fuchs problematisch?",
-     "a": "Mieter wehren sich nicht gegen überhöhte Mieten, weil sie nicht wissen, ob sie bleiben dürfen."
-    },
-    {
-     "t": "mc",
-     "q": "Welche Folge einer strengen Mietpreisbremse befürchtet Herr Hofer?",
-     "o": [
-      "mehr Leerstand",
-      "weniger Neubau und Sanierung, also ein kleineres Angebot",
-      "höhere Steuern"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Herr Hofer lehnt den sozialen Wohnbau grundsätzlich ab.",
-     "a": "f",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Was ist laut Herrn Hofer das „eigentliche Problem“?",
-     "a": "zu lange Genehmigungsverfahren / zu viel Bürokratie beim Bauen"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie die zwei Forderungen von Frau Fuchs.",
-     "a": "Ende der Befristungen für große Vermieter; Obergrenzen bei Neuvermietungen"
-    },
-    {
-     "t": "tf",
-     "q": "Bei der Frage der Befristungen nähern sich die beiden Positionen an.",
-     "a": "r",
-     "two": true,
-     "ex": ""
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Diskussion zur Mietpreisbremse: Neuvermietungen in fünf Jahren um fast [[1]] Prozent teurer. Alleinerziehende zahlen mehr als die [[2]] ihres Einkommens fürs Wohnen. Fuchs fordert höchstens [[3]] Prozent Erhöhung pro Jahr. Etwa jede zweite neue Mietwohnung wird [[4]] vermietet. Genehmigung eines Wohnbauprojekts dauert in Wien bis zu [[5]] Jahre. In Wien stehen etwa [[6]] Wohnungen leer. Gemeinnützige Mieten liegen um ein [[7]] unter dem Markt. Hofer rät zu [[8]] statt pauschaler Preisdeckel.",
+     "a": [
+      [
+       "dreißig"
+      ],
+      [
+       "Hälfte"
+      ],
+      [
+       "zwei"
+      ],
+      [
+       "befristet"
+      ],
+      [
+       "drei"
+      ],
+      [
+       "vierzigtausend"
+      ],
+      [
+       "Drittel"
+      ],
+      [
+       "Wohngeld"
+      ]
+     ]
     }
    ],
-   "words": 375,
-   "minutes": 3
+   "words": 1032,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "algorithmen",
@@ -593,7 +1153,7 @@
    "topic": "Medien",
    "wt": "4.8",
    "title": "Vortrag: Wie Algorithmen unsere Meinung formen",
-   "intro": "Sie hören einen Ausschnitt aus einem öffentlichen Vortrag an der Universität Wien.",
+   "intro": "Sie hören einen Vortrag über Algorithmen in sozialen Netzwerken. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "D": {
      "voice": "shimmer",
@@ -604,82 +1164,181 @@
    "lines": [
     [
      "D",
-     "Guten Abend, meine Damen und Herren. Wenn Sie heute Morgen Ihr Smartphone in die Hand genommen haben, dann hat innerhalb von Sekunden ein Algorithmus entschieden, welche Nachrichten Sie zuerst sehen. Über diese unsichtbaren Entscheidungen möchte ich heute sprechen – und darüber, was sie mit unserer Demokratie zu tun haben."
+     "Meine sehr geehrten Damen und Herren, liebe Studierende, ich begrüße Sie herzlich zu meinem Vortrag im Rahmen der Ringvorlesung «Digitale Gesellschaft». Mein Thema heute lautet: Wie Algorithmen unsere Meinung formen. Ich möchte Ihnen in den nächsten vierzig Minuten zeigen, wie die Empfehlungssysteme sozialer Netzwerke funktionieren, welche Folgen sie für die öffentliche Meinungsbildung haben und was wir dagegen tun können."
     ],
     [
      "D",
-     "Beginnen wir mit dem Grundprinzip. Plattformen wie Instagram, TikTok oder YouTube verdienen ihr Geld mit Werbung. Je länger wir bleiben, desto mehr Werbung können sie uns zeigen. Die Algorithmen sind daher darauf optimiert, unsere Aufmerksamkeit zu binden. Und was bindet Aufmerksamkeit besonders gut? Inhalte, die starke Gefühle auslösen – Empörung, Angst oder Begeisterung. Sachliche, ausgewogene Beiträge haben es in diesem System schwer."
+     "Beginnen wir mit einer scheinbar harmlosen Frage: Warum sehen Sie in Ihrem Feed genau diese Beiträge und keine anderen? Die Antwort lautet: Weil ein Algorithmus für Sie ausgewählt hat. Plattformen wie Instagram, TikTok oder YouTube erzeugen täglich Milliarden von Inhalten. Niemand könnte sie alle ansehen. Also sortiert ein System vor, und zwar nach dem Prinzip der Aufmerksamkeit: Was Sie länger ansehen, kommentieren oder teilen, wird Ihnen häufiger gezeigt. Das Ziel ist nicht Information, sondern Verweildauer, denn Verweildauer bedeutet Werbeeinnahmen."
     ],
     [
      "D",
-     "Daraus ergibt sich ein zweites Phänomen, das Sie vielleicht unter dem Begriff „Filterblase“ kennen. Die Idee: Weil uns der Algorithmus vor allem zeigt, was zu unseren bisherigen Interessen passt, sehen wir immer seltener andere Meinungen. Ich muss Sie hier allerdings etwas enttäuschen – oder beruhigen. Die Forschung zeigt, dass die Filterblase weniger dicht ist als oft behauptet. Die meisten Menschen begegnen online durchaus unterschiedlichen Positionen. Das Problem ist eher, wie sie ihnen begegnen: nämlich oft in Form von zugespitzten, verzerrten Darstellungen, die die andere Seite lächerlich oder bedrohlich erscheinen lassen."
+     "Dieses Prinzip hat eine unangenehme Nebenwirkung. Untersuchungen zeigen, dass emotionale Inhalte, vor allem solche, die Wut oder Empörung auslösen, deutlich häufiger geteilt werden als sachliche. Eine Studie der Universität New York, die mehr als siebenhunderttausend Beiträge auswertete, kam zu dem Ergebnis, dass jedes moralisch-empörte Wort in einem Beitrag die Wahrscheinlichkeit, geteilt zu werden, um rund zwanzig Prozent erhöht. Der Algorithmus kennt keine Moral, er belohnt schlicht, was Reaktionen erzeugt."
     ],
     [
      "D",
-     "Damit sind wir beim dritten Punkt, der Polarisierung. Wer ständig die extremsten Vertreter der Gegenseite sieht, bekommt ein falsches Bild davon, wie die Menschen mit anderer Meinung wirklich denken. Studien zeigen, dass wir die Gegenseite systematisch für radikaler halten, als sie tatsächlich ist. Das erschwert Kompromisse – und Kompromisse sind das Herzstück jeder Demokratie."
+     "Daraus ergibt sich das Phänomen, das man als Filterblase bezeichnet. Der Begriff stammt von dem amerikanischen Internetaktivisten Eli Pariser und beschreibt die Situation, dass wir überwiegend Inhalte sehen, die zu unseren bisherigen Interessen und Meinungen passen. Wer sich für Kritik an Impfungen interessiert, bekommt mehr davon, und wer Gegenargumente anklickt, bekommt sie seltener. Allerdings muss ich hier eine wissenschaftliche Einschränkung machen: Die empirischen Belege dafür, dass Filterblasen die Gesellschaft tatsächlich stark spalten, sind weniger eindeutig, als oft behauptet wird. Mehrere Untersuchungen, unter anderem am Hans-Bredow-Institut in Hamburg, zeigen, dass die meisten Menschen auch auf anderen Wegen mit abweichenden Meinungen in Kontakt kommen."
     ],
     [
      "D",
-     "Was kann man dagegen tun? Auf politischer Ebene verpflichtet der Digital Services Act der Europäischen Union große Plattformen inzwischen dazu, ihre Empfehlungssysteme transparenter zu machen und Risiken für den öffentlichen Diskurs zu bewerten. Nutzerinnen und Nutzer müssen außerdem die Möglichkeit haben, einen Feed zu wählen, der nicht auf ihrem persönlichen Profil beruht."
+     "Gefährlicher scheint mir ein zweiter Mechanismus: die Radikalisierung durch Empfehlungen. Ein Forscherteam hat dazu Hunderte neue Konten angelegt, die zunächst harmlose Videos über Fitness ansahen. Nach wenigen Tagen schlug die Plattform zunehmend extremere Inhalte vor, bis hin zu Verschwörungstheorien. Der Effekt ist nicht auf eine politische Richtung beschränkt, sondern tritt bei sehr unterschiedlichen Themen auf. Entscheidend ist die Logik der Steigerung: Wer sich für etwas interessiert, bekommt etwas Intensiveres."
     ],
     [
      "D",
-     "Aber auch jede und jeder Einzelne kann etwas tun. Erstens: bewusst Quellen nutzen, die nicht von Algorithmen ausgewählt werden, etwa eine Tageszeitung oder ein Nachrichtenprogramm. Zweitens: innehalten, bevor man etwas teilt, das einen empört. Und drittens – vielleicht das Wichtigste: mit Menschen, die anders denken, auch offline sprechen. Sie werden feststellen, dass sie meist weniger extrem sind als ihr Bild im Netz. Vielen Dank."
+     "Welche Folgen hat das für Demokratien? Erstens verändert es die Reichweite von Information. Früher entschieden Redaktionen, was in den Nachrichten kommt; heute entscheiden die Plattformen, was sichtbar wird, und ihre Kriterien sind nicht öffentlich. Zweitens begünstigt es Desinformation. Eine Auswertung während der letzten Wahlen in Europa zeigte, dass falsche Meldungen im Schnitt sechsmal schneller verbreitet wurden als korrekte. Drittens verändert es das Bild von der Mehrheit. Wenn ein extremer Standpunkt häufig auftaucht, halten wir ihn für weiter verbreitet, als er ist."
+    ],
+    [
+     "D",
+     "Damit kein falscher Eindruck entsteht: Personalisierung hat auch Vorteile. Sie hilft uns, in der Flut von Inhalten das zu finden, was uns tatsächlich interessiert. Wer sich für Kochen oder für Wissenschaft begeistert, wird von Empfehlungen oft zu hervorragenden Kanälen geführt, die er sonst nie entdeckt hätte. Auch kleine Nischen und Minderheiten finden dadurch ein Publikum. Das Problem beginnt dort, wo Empfehlungen ausschließlich auf Reaktionen optimiert werden und nicht auf Qualität, Vielfalt oder Ausgewogenheit."
+    ],
+    [
+     "D",
+     "Ein Wort zur politischen Werbung. Im Wahlkampf nutzen Parteien sogenanntes Microtargeting, das heißt, sie schicken unterschiedlichen Gruppen unterschiedliche Botschaften, passend zu deren Interessen und Ängsten. Bei einer Untersuchung zur letzten Nationalratswahl wurden im Netz über dreihundert verschiedene Varianten einer einzigen Werbeanzeige entdeckt. Das macht es für Außenstehende schwer, die politische Kommunikation zu kontrollieren, denn niemand sieht, was die anderen zu sehen bekommen. Deshalb fordern Fachleute ein öffentliches Archiv für politische Online-Werbung."
+    ],
+    [
+     "D",
+     "Eine weitere Frage ist die Verantwortung der Entwickler. Viele Ingenieurinnen und Ingenieure, die Empfehlungssysteme bauen, sehen sich selbst als neutral, doch jede Entscheidung, welche Kennzahl man optimiert, ist eine Wertentscheidung. Einige ehemalige Mitarbeiter großer Konzerne haben öffentlich gemacht, dass interne Studien die Risiken für Jugendliche längst kannten, die Unternehmen aber aus wirtschaftlichen Gründen wenig änderten. Das zeigt, dass Selbstverpflichtungen allein nicht genügen."
+    ],
+    [
+     "D",
+     "Nun zu den Maßnahmen. Die Europäische Union hat mit dem Gesetz über digitale Dienste, dem sogenannten Digital Services Act, versucht, mehr Transparenz zu schaffen. Große Plattformen müssen seit zweitausendvierundzwanzig offenlegen, nach welchen Hauptparametern ihre Empfehlungen funktionieren, und den Nutzern eine Option anbieten, die nicht auf persönlichen Profilen beruht. Ob das ausreicht, ist umstritten. Kritiker bemängeln, dass die Kontrolle bei den Plattformen selbst liegt und Behörden Zugang zu den Daten brauchen, um das zu prüfen."
+    ],
+    [
+     "D",
+     "Was können Sie als Einzelne tun? Ich nenne fünf Punkte. Erstens: Informieren Sie sich aus mehreren, unabhängigen Quellen und nicht nur über soziale Netzwerke. Zweitens: Prüfen Sie Meldungen, bevor Sie sie teilen, am besten mit Faktencheck-Seiten. Drittens: Nutzen Sie die Einstellungen, um die Personalisierung zu begrenzen und die chronologische Ansicht zu wählen, wo sie angeboten wird. Viertens: Folgen Sie bewusst auch Personen, die anderer Meinung sind. Fünftens: Legen Sie sich Zeiten fest, in denen Sie die Apps nicht nutzen."
+    ],
+    [
+     "D",
+     "Lassen Sie mich noch auf die Rolle der Bildung hinweisen. In Finnland gehört Medienkompetenz seit Jahren zum Lehrplan, schon in der Grundschule lernen Kinder, Quellen zu bewerten. Studien zeigen, dass finnische Jugendliche besonders gut darin sind, Falschmeldungen zu erkennen. In Österreich gibt es erste Schritte, aber meist als freiwilliges Zusatzangebot. Ich halte das für zu wenig, denn die Fähigkeit zur kritischen Prüfung von Informationen ist heute eine Grundkompetenz wie Lesen und Rechnen."
+    ],
+    [
+     "D",
+     "Zwischenfragen aus dem Publikum nehme ich gern am Ende entgegen, aber eine Anmerkung möchte ich schon jetzt machen: Auch Wissenschaftlerinnen und Wissenschaftler sind von diesen Systemen abhängig, weil die meisten Daten von den Plattformen selbst stammen. Deshalb ist der Zugang für unabhängige Forschung eine zentrale Forderung, damit wir überhaupt belegen können, was die Algorithmen tun."
+    ],
+    [
+     "D",
+     "Ich fasse zusammen: Algorithmen sind weder gut noch böse, aber sie sind nicht neutral. Sie sind auf Aufmerksamkeit optimiert, und das beeinflusst, was wir sehen und denken. Die Wirkung auf unsere Meinung ist differenzierter, als es die Schlagworte von der Filterblase vermuten lassen, aber die Risiken durch Radikalisierung und Desinformation sind real. Transparenz, Regulierung und Medienkompetenz sind die drei Hebel, die wir bewegen können. Ich danke Ihnen für Ihre Aufmerksamkeit und freue mich auf Ihre Fragen."
     ]
    ],
    "tasks": [
     {
-     "t": "open",
-     "q": "Worauf sind die Algorithmen der Plattformen laut Vortrag optimiert, und warum?",
-     "a": "auf möglichst lange Aufmerksamkeit, weil die Plattformen mit Werbung Geld verdienen"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Welches Ziel verfolgen die Empfehlungssysteme der Plattformen laut der Vortragenden in erster Linie?",
+       "o": [
+        "möglichst genaue Information",
+        "politische Bildung",
+        "möglichst lange Verweildauer",
+        "Datenschutz"
+       ],
+       "a": 2,
+       "ex": "Das Ziel ist Verweildauer, denn sie bedeutet Werbeeinnahmen."
+      },
+      {
+       "q": "Was ergab die Studie der Universität New York?",
+       "o": [
+        "Jedes moralisch-empörte Wort erhöht die Wahrscheinlichkeit des Teilens um etwa zwanzig Prozent.",
+        "Sachliche Beiträge werden am häufigsten geteilt.",
+        "Nutzer teilen nur Beiträge von Freunden.",
+        "Beiträge mit Bildern werden seltener geteilt."
+       ],
+       "a": 0,
+       "ex": "Jedes moralisch-empörte Wort erhöht die Wahrscheinlichkeit um rund zwanzig Prozent."
+      },
+      {
+       "q": "Wie beurteilt die Vortragende die Belege für die Wirkung von Filterblasen?",
+       "o": [
+        "Sie sind eindeutig und alarmierend.",
+        "Sie betreffen nur junge Menschen.",
+        "Sie fehlen vollständig.",
+        "Sie sind weniger eindeutig, als oft behauptet wird."
+       ],
+       "a": 3,
+       "ex": "Die Belege sind weniger eindeutig, die meisten Menschen kommen auch auf anderen Wegen mit anderen Meinungen in Kontakt."
+      },
+      {
+       "q": "Was zeigte das Experiment mit den neuen Konten?",
+       "o": [
+        "Die Plattform empfahl nur Fitnessvideos.",
+        "Nach wenigen Tagen wurden zunehmend extremere Inhalte vorgeschlagen.",
+        "Die Plattform sperrte die Konten.",
+        "Die Konten bekamen keine Empfehlungen."
+       ],
+       "a": 1,
+       "ex": "Die Empfehlungen wurden extremer, bis hin zu Verschwörungstheorien."
+      },
+      {
+       "q": "Was verlangt der Digital Services Act von großen Plattformen?",
+       "o": [
+        "die Abschaffung der Algorithmen",
+        "ein Verbot politischer Werbung",
+        "Offenlegung der Hauptparameter und eine Option ohne Personalisierung",
+        "Zahlungen an Redaktionen"
+       ],
+       "a": 2,
+       "ex": "Sie müssen die Hauptparameter offenlegen und eine Option ohne persönliches Profil anbieten."
+      },
+      {
+       "q": "Was lobt die Vortragende am finnischen Schulsystem?",
+       "o": [
+        "die kürzeren Schulzeiten",
+        "das Verbot von Smartphones",
+        "die höheren Lehrergehälter",
+        "Medienkompetenz als fixer Teil des Lehrplans"
+       ],
+       "a": 3,
+       "ex": "In Finnland gehört Medienkompetenz seit Jahren zum Lehrplan."
+      },
+      {
+       "q": "Welche Schlussfolgerung zieht die Vortragende?",
+       "o": [
+        "Algorithmen sind nicht neutral, aber Transparenz, Regulierung und Medienkompetenz können helfen.",
+        "Algorithmen sind harmlos.",
+        "Soziale Netzwerke sollten verboten werden.",
+        "Nur Eltern tragen die Verantwortung."
+       ],
+       "a": 0,
+       "ex": "Drei Hebel: Transparenz, Regulierung, Medienkompetenz."
+      }
+     ]
     },
     {
-     "t": "mc",
-     "q": "Welche Inhalte werden besonders häufig verbreitet?",
-     "o": [
-      "sachliche und ausgewogene Beiträge",
-      "Inhalte, die starke Gefühle auslösen",
-      "kurze Nachrichten ohne Bilder"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Die Vortragende bestätigt, dass Menschen online kaum andere Meinungen sehen.",
-     "a": "f",
-     "two": true,
-     "ex": "Die Filterblase ist weniger dicht als behauptet."
-    },
-    {
-     "t": "open",
-     "q": "Was ist laut Vortragender das eigentliche Problem bei der Begegnung mit anderen Meinungen?",
-     "a": "Andere Meinungen erscheinen in zugespitzter, verzerrter Form – die Gegenseite wirkt lächerlich oder bedrohlich."
-    },
-    {
-     "t": "mc",
-     "q": "Welche Folge hat Polarisierung laut Studien?",
-     "o": [
-      "Man hält die Gegenseite für radikaler, als sie ist.",
-      "Man interessiert sich weniger für Politik.",
-      "Man wählt häufiger extreme Parteien."
-     ],
-     "a": 0,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie zwei Pflichten großer Plattformen nach dem Digital Services Act.",
-     "a": "Empfehlungssysteme transparenter machen; Risiken für den Diskurs bewerten; Feed ohne Profiling anbieten"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie die drei Tipps für Einzelne.",
-     "a": "Quellen ohne Algorithmus nutzen; vor dem Teilen innehalten; mit Andersdenkenden offline sprechen"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Vortrag «Wie Algorithmen unsere Meinung formen»: Plattformen sortieren nach [[1]], denn Verweildauer bedeutet Werbeeinnahmen. Eine Studie mit mehr als siebenhunderttausend Beiträgen: Empörung erhöht die Wahrscheinlichkeit des Teilens um [[2]] Prozent. Der Begriff Filterblase stammt von [[3]]. Falsche Meldungen verbreiten sich [[4]] schneller als korrekte. Der Digital Services Act gilt seit [[5]]. Tipp: Informationen aus mehreren [[6]] beziehen. In [[7]] gehört Medienkompetenz zum Lehrplan. Hebel: Transparenz, [[8]] und Medienkompetenz.",
+     "a": [
+      [
+       "Aufmerksamkeit"
+      ],
+      [
+       "zwanzig"
+      ],
+      [
+       "Eli Pariser",
+       "Pariser"
+      ],
+      [
+       "sechsmal"
+      ],
+      [
+       "zweitausendvierundzwanzig"
+      ],
+      [
+       "Quellen"
+      ],
+      [
+       "Finnland"
+      ],
+      [
+       "Regulierung"
+      ]
+     ]
     }
    ],
-   "words": 371,
-   "minutes": 3
+   "words": 1021,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "pflege",
@@ -688,7 +1347,7 @@
    "topic": "Arbeitswelt und Wirtschaft",
    "wt": "3.2",
    "title": "Im Gespräch: Wer pflegt uns morgen?",
-   "intro": "Sie hören ein Gespräch mit einem Gesundheitsökonomen über den Personalmangel in der Pflege.",
+   "intro": "Sie hören ein Expertengespräch über die Zukunft der Pflege in Österreich. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "M": {
      "voice": "sage",
@@ -704,94 +1363,224 @@
    "lines": [
     [
      "M",
-     "In den kommenden Jahren gehen in Österreich zehntausende Pflegekräfte in Pension, gleichzeitig steigt die Zahl der Pflegebedürftigen. Herr Professor, wie groß ist die Lücke tatsächlich?"
+     "Guten Tag und willkommen bei «Im Gespräch». Österreich wird älter, und die Frage, wer uns in Zukunft pflegt, wird immer drängender. Mein Gast ist heute der Gesundheitsökonom Professor Martin Aigner von der Universität Linz. Herr Professor Aigner, wie dramatisch ist die Lage?"
     ],
     [
      "E",
-     "Je nach Berechnung fehlen bis zum Ende des Jahrzehnts mehrere zehntausend Pflegekräfte. Das klingt abstrakt, bedeutet aber ganz konkret: Betten in Pflegeheimen können nicht belegt werden, obwohl sie gebraucht würden, und in Spitälern werden Operationen verschoben, weil das Personal fehlt. Das Problem ist also nicht mehr eines der Zukunft, wir sind bereits mittendrin."
+     "Sie ist ernst, aber nicht aussichtslos. Wir haben in Österreich derzeit etwa vierhunderttausend Menschen, die Pflegegeld beziehen, und bis zum Jahr zweitausendvierzig wird diese Zahl voraussichtlich auf mehr als sechshunderttausend steigen. Gleichzeitig scheiden in den nächsten zehn Jahren rund ein Drittel der heute aktiven Pflegekräfte altersbedingt aus dem Beruf aus. Nach Berechnungen der Gesundheit Österreich GmbH fehlen bis zum Jahr zweitausenddreißig etwa vierundsiebzigtausend zusätzliche Pflegekräfte, wenn man die Pensionierungen berücksichtigt."
     ],
     [
      "M",
-     "Woran liegt es, dass so wenige Menschen in der Pflege arbeiten wollen?"
+     "Das sind enorme Zahlen. Woran liegt es, dass der Beruf so schwer Nachwuchs findet?"
     ],
     [
      "E",
-     "Ich würde die Frage etwas anders stellen. Es wollen gar nicht so wenige Menschen in die Pflege, das Interesse an den Ausbildungen ist durchaus vorhanden. Das Problem ist, dass viele den Beruf nach wenigen Jahren wieder verlassen. Die Gründe sind bekannt: Schichtdienste, hohe körperliche und psychische Belastung und das Gefühl, nie genug Zeit für die Menschen zu haben, die man betreut. Wenn man das ändert, gewinnt man mehr, als wenn man ausschließlich neue Leute ausbildet."
+     "Es sind mehrere Faktoren. Erstens die Arbeitsbedingungen: Schichtdienst, Wochenenddienste, körperlich schwere Arbeit und hohe Verantwortung, und das bei einem Einstiegsgehalt, das in vielen Bundesländern kaum höher ist als in anderen Berufen mit weniger Belastung. Zweitens das Image: Pflege gilt noch immer als Frauenberuf, schlecht bezahlt, mit wenig Aufstiegschancen. Drittens die Ausbildung: Wer Pflegefachassistenz oder Pflegefachkraft werden will, musste lange die Ausbildung selbst finanzieren und monatelang auf Gehalt verzichten."
     ],
     [
      "M",
-     "Die Politik setzt stark auf Pflegekräfte aus dem Ausland. Ist das ein Ausweg?"
+     "Es gab doch Reformen in den letzten Jahren?"
     ],
     [
      "E",
-     "Es ist ein Baustein, aber kein Allheilmittel. Österreich steht hier in Konkurrenz zu Deutschland, der Schweiz und den skandinavischen Ländern, die oft bessere Bedingungen bieten. Hinzu kommt, dass die Anerkennung ausländischer Abschlüsse bei uns noch immer viel zu lange dauert. Ich kenne Fälle, in denen ausgebildete Krankenpflegerinnen anderthalb Jahre als Hilfskräfte gearbeitet haben, bis ihre Ausbildung anerkannt war. Und man muss auch die ethische Frage stellen: Wenn wir Pflegekräfte aus Ländern abwerben, die selbst Personal brauchen, verschieben wir das Problem nur."
+     "Ja, und einige gehen in die richtige Richtung. Die Pflegereform hat zum Beispiel ein Ausbildungsgeld von etwa tausendzweihundert Euro im Monat eingeführt, außerdem zusätzliche Urlaubstage und eine Pflegelehre. Allerdings stehen viele Maßnahmen nur auf dem Papier. In der Praxis hängt es davon ab, ob die Länder und die Träger sie umsetzen. Und die Ergebnisse sind gemischt: Die Zahl der Auszubildenden ist im letzten Jahr um etwa acht Prozent gestiegen, aber das gleicht den Bedarf nicht annähernd aus."
     ],
     [
      "M",
-     "Welche Rolle können Technik und Digitalisierung spielen?"
+     "Viele Familien pflegen ihre Angehörigen zu Hause. Wie groß ist dieser Anteil?"
     ],
     [
      "E",
-     "Eine unterstützende, aber eine begrenzte. Digitale Dokumentation kann viel Zeit sparen, Sensoren können Stürze erkennen, und Roboter können schwere Lasten heben. Was die Technik nicht ersetzen kann, ist die Zuwendung. Pflege ist Beziehungsarbeit. Ich warne davor, die Digitalisierung als Ausrede zu benutzen, um nicht in Personal und bessere Arbeitsbedingungen investieren zu müssen."
+     "Etwa vier von fünf Pflegebedürftigen werden zu Hause betreut, und davon wiederum der größte Teil von Angehörigen, vor allem von Frauen. Das sind fast eine Million Menschen, die unbezahlt oder gering entlohnt Pflegeleistungen erbringen. Dazu kommen rund sechzigtausend Personen aus der sogenannten Vierundzwanzig-Stunden-Betreuung, die meist aus der Slowakei und aus Rumänien stammen. Dieses System ist für die Familien günstiger als ein Heimplatz, aber es ist rechtlich und sozial heikel, weil die Betreuerinnen oft isoliert und überlastet sind."
     ],
     [
      "M",
-     "Wenn Sie drei Wünsche an die Politik frei hätten?"
+     "Wo sehen Sie die größten Hebel für eine Verbesserung?"
     ],
     [
      "E",
-     "Erstens eine verlässliche Personalbemessung, damit nicht eine Pflegekraft in der Nacht für vierzig Menschen zuständig ist. Zweitens schnellere Anerkennungsverfahren. Und drittens mehr Unterstützung für pflegende Angehörige, denn sie tragen heute den Großteil der Pflege, meist unbezahlt und oft bis an die Grenze ihrer Kräfte."
+     "Ich sehe vier. Erstens die Bezahlung und Arbeitszeit. Wenn wir eine Fünfunddreißig-Stunden-Woche bei vollem Lohn einführen, sinkt die Abwanderung nachweislich. Zweitens die Anwerbung aus dem Ausland, gezielt und fair, etwa von den Philippinen oder aus Indien, mit Sprachkursen und raschem Berufsanerkennungsverfahren. Drittens der Ausbau der mobilen Dienste und der Tagesbetreuung, damit mehr Menschen länger zu Hause bleiben können. Und viertens die Technik: Assistenzsysteme, Sensoren gegen Stürze, digitale Dokumentation. Sie ersetzen keine Menschen, aber sie entlasten."
+    ],
+    [
+     "M",
+     "Technik in der Pflege klingt für manche Menschen beunruhigend. Wie sehen Sie das?"
+    ],
+    [
+     "E",
+     "Ich verstehe die Sorge. Entscheidend ist, wofür man die Technik einsetzt. Ein Roboter, der Patienten wäscht, ist eher unrealistisch und ethisch fragwürdig. Aber ein System, das automatisch dokumentiert, was gemacht wurde, spart den Pflegekräften pro Schicht bis zu eine Stunde Schreibarbeit. Diese Zeit können sie dann bei den Menschen verbringen, also für das, wofür sie den Beruf ursprünglich gewählt haben. In einem Pilotprojekt in der Steiermark sank die Fluktuation, weil die Mitarbeiter weniger Überstunden machten."
+    ],
+    [
+     "M",
+     "Wie steht es mit der Qualität der Pflege in den Heimen? Es gab zuletzt Berichte über Missstände."
+    ],
+    [
+     "E",
+     "Solche Fälle sind ein Symptom der Überlastung, nicht der Regel. In einer Befragung der Volksanwaltschaft gaben etwa sechzig Prozent der Heimbewohner an, mit der Betreuung zufrieden zu sein, aber gleichzeitig klagte fast jede zweite Pflegekraft über Zeitdruck. Wenn eine Nachtschicht für vierzig Bewohner nur zwei Personen umfasst, ist Qualität schwer zu halten. Ein verbindlicher Personalschlüssel, der bundesweit gilt, wäre deshalb eine wichtige Maßnahme, auch wenn er zunächst Geld kostet."
+    ],
+    [
+     "M",
+     "Man hört immer wieder, dass es zu wenige Männer in der Pflege gibt. Ist das ein Problem?"
+    ],
+    [
+     "E",
+     "Ja, das ist es, denn rund achtzig Prozent der Beschäftigten sind Frauen. Das verengt den Kreis möglicher Bewerber und verstärkt das Image als typischer Frauenberuf. Länder wie die Niederlande haben gezeigt, dass gezielte Kampagnen den Männeranteil erhöhen können, wenn man auch die Karrierewege sichtbar macht: von der Pflegeassistenz über die Spezialisierung bis hin zur Leitung oder zum Studium der Pflegewissenschaft."
+    ],
+    [
+     "M",
+     "Und die Berufsanerkennung aus dem Ausland? Dauert die nicht viel zu lang?"
+    ],
+    [
+     "E",
+     "Leider ja. Im Schnitt vergehen bis zur Anerkennung einer Qualifikation aus einem Drittstaat mehr als ein Jahr, in dem die Betroffenen oft nur als Hilfskräfte arbeiten dürfen. Das ist für beide Seiten frustrierend. Ein beschleunigtes Verfahren mit klaren Fristen, wie es etwa Deutschland erprobt, würde viel bringen. Genauso wichtig ist, dass die neuen Kolleginnen und Kollegen im Team gut aufgenommen werden und Sprachkurse bezahlt bekommen."
+    ],
+    [
+     "M",
+     "Wer soll das alles bezahlen?"
+    ],
+    [
+     "E",
+     "Das ist die zentrale Frage. Derzeit gibt Österreich etwa eineinhalb Prozent der Wirtschaftsleistung für Pflege aus, bis zum Jahr zweitausendfünfzig könnten es drei Prozent sein. Man kann das über Steuern finanzieren, über eine verpflichtende Pflegeversicherung wie in Deutschland oder über eine Mischung. Ich persönlich halte eine steuerfinanzierte Lösung mit klaren Qualitätsstandards für am gerechtesten, weil sie nicht nur Erwerbstätige belastet. Aber das ist eine politische Entscheidung, die man transparent diskutieren muss."
+    ],
+    [
+     "M",
+     "Gibt es Länder, von denen wir lernen können?"
+    ],
+    [
+     "E",
+     "Ja, zum Beispiel die Niederlande mit dem Modell Buurtzorg. Dort arbeiten kleine, selbstorganisierte Pflegeteams in Stadtvierteln, ohne viele Hierarchieebenen. Die Teams entscheiden selbst, wie sie ihre Zeit einteilen, und die Verwaltung ist schlank. Studien zeigen höhere Zufriedenheit bei Patienten und Mitarbeitern und geringere Kosten, weil weniger Krankenhausaufenthalte nötig sind. Das lässt sich nicht eins zu eins übertragen, aber manche Prinzipien, etwa mehr Entscheidungsfreiheit, würden auch bei uns helfen."
+    ],
+    [
+     "M",
+     "Zum Schluss: Was kann jeder Einzelne tun?"
+    ],
+    [
+     "E",
+     "Sich früh mit dem Thema beschäftigen. Viele Familien sprechen erst darüber, wenn die Krise da ist. Es hilft, rechtzeitig zu klären, wer was übernehmen kann, welche Hilfen es gibt und was sich die Betroffenen selbst wünschen. Und wir sollten als Gesellschaft Pflegeberufe wertschätzen, nicht nur mit Applaus, sondern mit besseren Bedingungen."
+    ],
+    [
+     "M",
+     "Professor Aigner, vielen Dank für das Gespräch. Das war «Im Gespräch» im Radio, wir hören uns nächste Woche wieder."
     ]
    ],
    "tasks": [
     {
-     "t": "open",
-     "q": "Nennen Sie zwei konkrete Folgen des Personalmangels, die der Experte erwähnt.",
-     "a": "Pflegeheimbetten können nicht belegt werden; Operationen werden verschoben"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Wie viele Pflegekräfte fehlen laut Berechnungen bis zum Jahr 2030?",
+       "o": [
+        "etwa zweihunderttausend",
+        "etwa vierzigtausend",
+        "etwa vierundsiebzigtausend",
+        "etwa zwölftausend"
+       ],
+       "a": 2,
+       "ex": "Es fehlen etwa vierundsiebzigtausend zusätzliche Pflegekräfte."
+      },
+      {
+       "q": "Welchen Faktor nennt Professor Aigner nicht als Grund für den Nachwuchsmangel?",
+       "o": [
+        "die geringe Nachfrage nach Pflege",
+        "das Image des Berufs",
+        "die lange, selbst finanzierte Ausbildung",
+        "die Arbeitsbedingungen"
+       ],
+       "a": 0,
+       "ex": "Er nennt Arbeitsbedingungen, Image und Ausbildung, nicht aber eine geringe Nachfrage."
+      },
+      {
+       "q": "Wie beurteilt er die Pflegereform?",
+       "o": [
+        "Sie sei gescheitert.",
+        "Sie betreffe nur die Heime.",
+        "Sie habe alle Probleme gelöst.",
+        "Einige Maßnahmen gingen in die richtige Richtung, deckten den Bedarf aber nicht ab."
+       ],
+       "a": 3,
+       "ex": "Die Auszubildenden stiegen um acht Prozent, das reicht nicht."
+      },
+      {
+       "q": "Wer betreut den größten Teil der Pflegebedürftigen?",
+       "o": [
+        "Pflegeheime",
+        "Angehörige zu Hause",
+        "Mobile Dienste",
+        "Betreuerinnen aus dem Ausland"
+       ],
+       "a": 1,
+       "ex": "Etwa vier von fünf werden zu Hause betreut, meist von Angehörigen."
+      },
+      {
+       "q": "Was bewirkt die digitale Dokumentation laut dem Experten?",
+       "o": [
+        "Sie ersetzt Pflegekräfte.",
+        "Sie verlängert die Arbeitszeit.",
+        "Sie spart pro Schicht bis zu eine Stunde Schreibarbeit.",
+        "Sie erhöht die Kosten."
+       ],
+       "a": 2,
+       "ex": "Sie spart bis zu eine Stunde pro Schicht."
+      },
+      {
+       "q": "Welche Finanzierung hält er für am gerechtesten?",
+       "o": [
+        "eine rein private Vorsorge",
+        "eine Versicherung nur für Erwerbstätige",
+        "höhere Eigenbeiträge der Betroffenen",
+        "eine steuerfinanzierte Lösung mit klaren Qualitätsstandards"
+       ],
+       "a": 3,
+       "ex": "Eine steuerfinanzierte Lösung, weil sie nicht nur Erwerbstätige belastet."
+      },
+      {
+       "q": "Was rät er den Familien?",
+       "o": [
+        "sich früh mit dem Thema zu beschäftigen",
+        "abzuwarten",
+        "nur auf Heimplätze zu setzen",
+        "auf die Politik zu warten"
+       ],
+       "a": 0,
+       "ex": "Man sollte rechtzeitig klären, wer was übernehmen kann."
+      }
+     ]
     },
     {
-     "t": "tf",
-     "q": "Laut dem Experten interessieren sich kaum Menschen für eine Pflegeausbildung.",
-     "a": "f",
-     "two": true,
-     "ex": "Das Interesse ist vorhanden; viele verlassen den Beruf aber wieder."
-    },
-    {
-     "t": "mc",
-     "q": "Was wäre laut dem Experten am wirksamsten?",
-     "o": [
-      "mehr Werbung für den Beruf",
-      "die Arbeitsbedingungen so verbessern, dass Pflegekräfte bleiben",
-      "die Ausbildung verkürzen"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie zwei Probleme bei der Anwerbung ausländischer Pflegekräfte.",
-     "a": "Konkurrenz mit anderen Ländern mit besseren Bedingungen; lange Anerkennung der Abschlüsse; ethisches Problem der Abwerbung"
-    },
-    {
-     "t": "tf",
-     "q": "Der Experte hält Roboter für einen vollwertigen Ersatz für Pflegekräfte.",
-     "a": "f",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Wovor warnt der Experte in Bezug auf die Digitalisierung?",
-     "a": "sie als Ausrede zu nutzen, um nicht in Personal und Arbeitsbedingungen zu investieren"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie die drei Wünsche des Experten an die Politik.",
-     "a": "verlässliche Personalbemessung; schnellere Anerkennungsverfahren; mehr Unterstützung für pflegende Angehörige"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Gespräch über Pflege: Derzeit beziehen etwa [[1]] Menschen Pflegegeld. Ein Drittel der aktiven Pflegekräfte geht in den nächsten [[2]] Jahren in Pension. Ausbildungsgeld: etwa tausendzweihundert Euro im [[3]]. Etwa [[4]] von fünf Pflegebedürftigen werden zu Hause betreut. Die Vierundzwanzig-Stunden-Betreuerinnen stammen meist aus der [[5]] und aus Rumänien. Mögliche Hebel: bessere Bezahlung, Anwerbung aus dem [[6]], mobile Dienste und Technik. Pilotprojekt in der [[7]] senkte die Fluktuation. Bis 2050 könnten die Ausgaben [[8]] Prozent der Wirtschaftsleistung erreichen.",
+     "a": [
+      [
+       "vierhunderttausend"
+      ],
+      [
+       "zehn"
+      ],
+      [
+       "Monat"
+      ],
+      [
+       "vier"
+      ],
+      [
+       "Slowakei"
+      ],
+      [
+       "Ausland"
+      ],
+      [
+       "Steiermark"
+      ],
+      [
+       "drei"
+      ]
+     ]
     }
    ],
-   "words": 371,
-   "minutes": 3
+   "words": 1009,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "alt_h1",
@@ -800,7 +1589,7 @@
    "topic": "Arbeitswelt und Wirtschaft",
    "wt": "3.2",
    "title": "Jobben neben dem Studium",
-   "intro": "Sie hören einen Vortrag über die Erwerbstätigkeit von Studierenden. Sie hören den Text zweimal. Beim ersten Hören dürfen Sie nur Notizen machen. Beantworten Sie die Fragen nach dem zweiten Hören.",
+   "intro": "Sie hören einen Vortrag über Nebenjobs von Studierenden. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "D": {
      "voice": "shimmer",
@@ -811,87 +1600,180 @@
    "lines": [
     [
      "D",
-     "Meine Damen und Herren, ich begrüße Sie herzlich zu unserem heutigen Vortrag. Das Thema lautet: Jobben neben dem Studium – Notwendigkeit oder Chance?"
+     "Liebe Kolleginnen und Kollegen, liebe Studierende, herzlich willkommen zu meinem Vortrag über ein Thema, das fast jeden von Ihnen betrifft: das Jobben neben dem Studium. Ich spreche heute über Zahlen und Motive, über Vor- und Nachteile und über rechtliche Fragen. Am Ende gebe ich Ihnen einige praktische Empfehlungen."
     ],
     [
      "D",
-     "Lassen Sie mich mit einigen Zahlen beginnen. Nach Angaben des Deutschen Studentenwerks gehen heute etwa zwei Drittel aller Studierenden neben ihrem Studium einer Erwerbstätigkeit nach. Vor zwanzig Jahren lag dieser Anteil noch bei ungefähr der Hälfte. Im Durchschnitt arbeiten die Studierenden etwa fünfzehn Stunden pro Woche, also fast zwei volle Arbeitstage."
+     "Beginnen wir mit den Fakten. Laut der letzten Studierenden-Sozialerhebung arbeiten etwa sechzig Prozent der Studierenden in Österreich neben dem Studium. Im Durchschnitt sind es rund zwanzig Stunden pro Woche, bei Studierenden, die schon älter als fünfundzwanzig sind, sogar fast dreißig Stunden. Das bedeutet, dass der Nebenjob für viele keine Nebensache mehr ist, sondern der Hauptteil der Woche. Die Studiendauer verlängert sich dadurch häufig um ein bis zwei Semester."
     ],
     [
      "D",
-     "Warum jobben so viele junge Menschen? Der wichtigste Grund ist ohne Zweifel die Finanzierung des Lebensunterhalts. Vor allem die Mieten in den Universitätsstädten sind in den letzten Jahren stark gestiegen. In München oder Frankfurt kostet ein Zimmer in einer Wohngemeinschaft heute oft mehr als fünfhundert Euro im Monat. Nicht alle Eltern sind in der Lage, ihre Kinder finanziell ausreichend zu unterstützen, und nur etwa elf Prozent der Studierenden erhalten BAföG."
+     "Warum arbeiten Studierende? Auf die Frage antworten drei von vier, dass sie das Geld zum Leben brauchen, vor allem für Miete und Lebensmittel. Etwa die Hälfte gibt an, dass sie auch Berufserfahrung sammeln möchte, und rund ein Drittel nennt den Wunsch, finanziell unabhängig von den Eltern zu sein. Interessant ist, dass Studierende aus Familien mit niedrigerem Bildungsniveau deutlich häufiger arbeiten müssen, nämlich rund achtzig Prozent, als diejenigen, deren Eltern einen Hochschulabschluss haben."
     ],
     [
      "D",
-     "Es gibt aber auch andere Motive. Viele Studierende möchten bereits während des Studiums Berufserfahrung sammeln. Wer als Werkstudent in einem Unternehmen arbeitet, lernt den Arbeitsalltag kennen, knüpft Kontakte und hat nach dem Abschluss bessere Chancen auf dem Arbeitsmarkt. Personalleiter bestätigen, dass sie Bewerber mit praktischer Erfahrung bevorzugen."
+     "Welche Jobs sind besonders beliebt? An erster Stelle stehen Tätigkeiten in der Gastronomie und im Handel, also Kellnern, Barista oder Verkauf. Das liegt daran, dass sie flexibel sind und oft abends oder am Wochenende stattfinden. An zweiter Stelle folgen Nachhilfe und Tutorien an der Universität, die besser bezahlt werden, sich aber kaum in Wartezeiten lohnen. An dritter Stelle stehen Bürojobs und Praktika, die teilweise fachlich zum Studium passen. Besonders begehrt sind sogenannte Werkstudentenstellen in Unternehmen, bei denen man zwanzig Stunden pro Woche arbeitet und dabei einen Einblick in die spätere Branche bekommt."
     ],
     [
      "D",
-     "Allerdings hat das Jobben auch Schattenseiten. Wer mehr als zwanzig Stunden pro Woche arbeitet, überschreitet häufig die Regelstudienzeit. Außerdem zeigen Untersuchungen, dass erwerbstätige Studierende ihr Studium öfter abbrechen. Die Doppelbelastung führt bei manchen zu Stress und Erschöpfung, besonders in der Prüfungszeit."
+     "Was spricht für den Nebenjob? Erstens das Einkommen, das ein selbstbestimmtes Leben ermöglicht. Zweitens die Erfahrung: Wer früh arbeitet, lernt Verantwortung zu übernehmen, im Team zu arbeiten und Termine einzuhalten. Drittens die Kontakte, die später bei der Jobsuche helfen können. Arbeitgeber schätzen es, wenn Bewerberinnen schon während des Studiums etwas geleistet haben. Und viertens die Struktur: Manche Studierende berichten, dass sie gerade durch den festen Rhythmus der Arbeit besser organisiert sind und ihre freie Zeit effizienter nutzen."
     ],
     [
      "D",
-     "Was kann man also empfehlen? Erstens sollte die Arbeit möglichst einen Bezug zum Studienfach haben. Ein Job als wissenschaftliche Hilfskraft oder ein Werkstudentenvertrag im eigenen Fachgebiet ist sinnvoller als eine Tätigkeit ohne jeden Bezug zum Studium. Zweitens sollte man die Arbeitszeit begrenzen und in der Prüfungsphase reduzieren. Und drittens lohnt es sich, sich über Stipendien zu informieren: Viele Studierende wissen gar nicht, dass sie sich um ein Stipendium bewerben könnten."
+     "Es gibt aber auch Nachteile. Zeitmangel steht an erster Stelle, denn wer zwanzig Stunden arbeitet und zwanzig Stunden Lehrveranstaltungen besucht, hat wenig Raum für das Selbststudium. Dazu kommt die Belastung: Eine Umfrage zeigt, dass fast jeder dritte berufstätige Studierende sich häufig erschöpft fühlt. Ein weiteres Problem sind schlechte Noten oder verpasste Prüfungen, die zum Verlust der Familienbeihilfe oder des Stipendiums führen können, weil beide an einen Studienerfolg gebunden sind."
     ],
     [
      "D",
-     "Zusammenfassend lässt sich sagen: Das Jobben neben dem Studium ist für viele eine finanzielle Notwendigkeit, es kann aber auch eine Chance sein – vorausgesetzt, man findet die richtige Balance. Vielen Dank für Ihre Aufmerksamkeit."
+     "Das bringt mich zu den rechtlichen Fragen, die oft unterschätzt werden. Erstens: Die Zuverdienstgrenze. Wer Familienbeihilfe bezieht, darf pro Kalenderjahr nur bis zu einer bestimmten Grenze dazuverdienen, derzeit sind es fünfzehntausend Euro. Wird sie überschritten, muss man einen Teil der Beihilfe zurückzahlen. Zweitens: Die Sozialversicherung. Geringfügig Beschäftigte, die bis etwa fünfhundert Euro im Monat verdienen, sind nicht voll versichert. Wer mehr verdient, ist automatisch kranken- und pensionsversichert. Drittens: Der Arbeitsvertrag. Sie haben das Recht auf einen schriftlichen Dienstzettel, auf bezahlten Urlaub und auf Entgeltfortzahlung im Krankheitsfall."
+    ],
+    [
+     "D",
+     "Besonders vorsichtig sollten Sie bei sogenannten freien Dienstverträgen und Werkverträgen sein. Dabei gelten Sie als selbstständig, haben keinen Anspruch auf Urlaub und müssen die Sozialversicherung selbst abrechnen. Oft werden solche Verträge missbräuchlich verwendet, obwohl die Tätigkeit eigentlich ein normales Dienstverhältnis wäre. Die Arbeiterkammer bietet dazu kostenlose Beratung an, und ich empfehle jedem, vor der Unterschrift dort anzurufen."
+    ],
+    [
+     "D",
+     "Lassen Sie mich ein Beispiel aus meiner Beratungspraxis erzählen. Eine Studentin der Betriebswirtschaft, nennen wir sie Anna, arbeitete dreißig Stunden pro Woche in einem Supermarkt, um sich ein Zimmer in Wien leisten zu können. Nach vier Semestern hatte sie erst zwei Drittel der geplanten Prüfungen abgelegt und verlor die Studienbeihilfe. Gemeinsam haben wir einen Plan erarbeitet: Sie reduzierte auf fünfzehn Stunden, wechselte in eine Stelle als studentische Mitarbeiterin am Institut und beantragte einen Zuschuss bei der Hochschülerschaft. Zwei Semester später lag sie wieder im Plan. Das Beispiel zeigt, dass es meistens Lösungen gibt, wenn man früh Hilfe sucht."
+    ],
+    [
+     "D",
+     "Ein Blick ins Ausland ist ebenfalls aufschlussreich. In Skandinavien erhalten Studierende ein staatliches Grundstipendium, sodass nur etwa ein Viertel regelmäßig arbeitet. In Großbritannien und den USA finanzieren dagegen viele ihr Studium mit Krediten und Studiengebühren und arbeiten trotzdem. Das österreichische Modell liegt dazwischen: Es gibt keine Studiengebühren für die meisten Studierenden, aber auch eine eher bescheidene Unterstützung, sodass der Nebenjob zur Normalität geworden ist."
+    ],
+    [
+     "D",
+     "Auch der Berufseinstieg wird vom Nebenjob geprägt. Arbeitgeber geben in Umfragen an, dass sie bei Bewerbungen auf relevante Erfahrungen achten, und eine Tätigkeit in der Branche wiegt schwerer als ein sehr guter Notendurchschnitt. Gleichzeitig beklagen viele Absolventen, dass sie zwar viel gearbeitet, aber wenig fachlich Verwertbares gelernt haben. Deshalb lohnt es sich, bei der Wahl des Jobs nicht nur auf den Stundenlohn zu schauen, sondern auch auf die Lernmöglichkeiten."
+    ],
+    [
+     "D",
+     "Wie lässt sich der Nebenjob sinnvoll organisieren? Ich gebe Ihnen fünf Empfehlungen. Erstens: Planen Sie Ihre Woche realistisch und rechnen Sie Pufferzeiten für Prüfungsphasen ein. Zweitens: Versuchen Sie, einen Job zu finden, der fachlich zum Studium passt, auch wenn er weniger Geld bringt. Drittens: Sprechen Sie mit Ihrem Arbeitgeber früh über Prüfungstermine, viele sind flexibler, als Sie glauben. Viertens: Informieren Sie sich über Stipendien und Beihilfen, bevor Sie zu viele Stunden annehmen. Fünftens: Achten Sie auf Ihre Gesundheit und schaffen Sie bewusst freie Tage."
+    ],
+    [
+     "D",
+     "Noch ein Hinweis zur Steuer: Wer im Jahr nicht mehr als etwa elftausend Euro verdient, zahlt in der Regel keine Lohnsteuer, und zu viel gezahlte Steuern können Sie über die Arbeitnehmerveranlagung zurückholen. Viele Studierende wissen das nicht und verschenken dadurch jedes Jahr mehrere hundert Euro. Der Antrag lässt sich online in wenigen Minuten stellen."
+    ],
+    [
+     "D",
+     "Abschließend möchte ich betonen, dass der Nebenjob weder gut noch schlecht ist. Entscheidend ist das Maß. Studien deuten darauf hin, dass bis zu zehn Wochenstunden den Studienerfolg kaum beeinträchtigen, ab etwa fünfzehn Stunden nimmt die Wahrscheinlichkeit einer Studienverzögerung deutlich zu. Es lohnt sich also, bewusst zu entscheiden, wie viel Zeit man dem Beruf und wie viel dem Studium widmet. Vielen Dank für Ihre Aufmerksamkeit, ich freue mich auf Ihre Fragen."
     ]
    ],
    "tasks": [
     {
-     "t": "open",
-     "q": "Wie hoch ist heute der Anteil der Studierenden, die neben dem Studium arbeiten?",
-     "a": "etwa zwei Drittel (vor zwanzig Jahren etwa die Hälfte)"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Wie viele Studierende arbeiten laut Sozialerhebung neben dem Studium?",
+       "o": [
+        "etwa ein Viertel",
+        "etwa die Hälfte",
+        "etwa sechzig Prozent",
+        "etwa neunzig Prozent"
+       ],
+       "a": 2,
+       "ex": "Etwa sechzig Prozent arbeiten neben dem Studium."
+      },
+      {
+       "q": "Welchen Grund für die Arbeit nennt die Mehrheit der Studierenden?",
+       "o": [
+        "Sie brauchen das Geld zum Leben.",
+        "Sie wollen Karriere machen.",
+        "Sie haben zu viel Freizeit.",
+        "Sie müssen für das Studium bezahlen."
+       ],
+       "a": 0,
+       "ex": "Drei von vier brauchen das Geld zum Leben."
+      },
+      {
+       "q": "Welche Jobs sind laut dem Vortrag besonders beliebt?",
+       "o": [
+        "Tätigkeiten im Ausland",
+        "Fabrikarbeit",
+        "Tätigkeiten in der Landwirtschaft",
+        "Tätigkeiten in der Gastronomie und im Handel"
+       ],
+       "a": 3,
+       "ex": "Gastronomie und Handel stehen an erster Stelle."
+      },
+      {
+       "q": "Was kann bei schlechtem Studienerfolg passieren?",
+       "o": [
+        "Man verliert den Studienplatz.",
+        "Man verliert unter Umständen Familienbeihilfe oder Stipendium.",
+        "Man muss den Job aufgeben.",
+        "Man muss die Uni wechseln."
+       ],
+       "a": 1,
+       "ex": "Beihilfe und Stipendium sind an Studienerfolg gebunden."
+      },
+      {
+       "q": "Was gilt für geringfügig Beschäftigte?",
+       "o": [
+        "Sie zahlen keine Steuern.",
+        "Sie haben keinen Anspruch auf Urlaub.",
+        "Sie sind nicht voll versichert.",
+        "Sie sind pensionsversichert."
+       ],
+       "a": 2,
+       "ex": "Bis etwa fünfhundert Euro im Monat sind sie nicht voll versichert."
+      },
+      {
+       "q": "Wovor warnt der Vortragende bei freien Dienstverträgen?",
+       "o": [
+        "Sie sind zu gut bezahlt.",
+        "Man darf nur eine Stunde pro Woche arbeiten.",
+        "Sie sind verboten.",
+        "Man hat keinen Anspruch auf Urlaub und muss die Sozialversicherung selbst abrechnen."
+       ],
+       "a": 3,
+       "ex": "Man gilt als selbstständig, ohne Urlaubsanspruch."
+      },
+      {
+       "q": "Was zeigen Studien über die Arbeitsstunden?",
+       "o": [
+        "Ab etwa fünfzehn Stunden steigt das Risiko einer Studienverzögerung deutlich.",
+        "Zehn Stunden sind zu viel.",
+        "Arbeit verbessert immer die Noten.",
+        "Arbeit hat keinen Einfluss."
+       ],
+       "a": 0,
+       "ex": "Bis zu zehn Stunden beeinträchtigen kaum, ab etwa fünfzehn steigt das Risiko."
+      }
+     ]
     },
     {
-     "t": "open",
-     "q": "Wie viele Stunden pro Woche arbeiten Studierende im Durchschnitt?",
-     "a": "etwa fünfzehn Stunden (fast zwei Arbeitstage)"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie den wichtigsten Grund für das Jobben und eine Ursache dafür.",
-     "a": "Finanzierung des Lebensunterhalts; stark gestiegene Mieten / Eltern können nicht ausreichend unterstützen / nur 11 % erhalten BAföG"
-    },
-    {
-     "t": "mc",
-     "q": "Warum bevorzugen Personalleiter manche Bewerber?",
-     "o": [
-      "Weil sie jünger sind.",
-      "Weil sie praktische Erfahrung haben.",
-      "Weil sie ein Stipendium hatten."
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Wer mehr als 20 Stunden pro Woche arbeitet, schließt das Studium meist schneller ab.",
-     "a": "f",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "tf",
-     "q": "Erwerbstätige Studierende brechen das Studium häufiger ab.",
-     "a": "r",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie die drei Empfehlungen der Referentin / des Referenten.",
-     "a": "1) Job mit Bezug zum Studienfach; 2) Arbeitszeit begrenzen, in der Prüfungsphase reduzieren; 3) sich über Stipendien informieren"
-    },
-    {
-     "t": "open",
-     "q": "Welches Fazit zieht der Vortrag?",
-     "a": "Jobben ist oft finanzielle Notwendigkeit, kann aber eine Chance sein, wenn man die richtige Balance findet"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Vortrag zum Nebenjob: Rund [[1]] Prozent der Studierenden arbeiten, im Schnitt zwanzig Stunden pro Woche. Das Studium verlängert sich oft um ein bis [[2]] Semester. Beliebt: Gastronomie, Handel und [[3]]. Zuverdienstgrenze bei Familienbeihilfe: [[4]] Euro pro Jahr. Geringfügig Beschäftigte verdienen bis etwa [[5]] Euro im Monat. Beratung bietet die [[6]] kostenlos an. Empfehlung: Prüfungstermine früh mit dem [[7]] besprechen. Ab etwa [[8]] Stunden steigt das Risiko einer Studienverzögerung.",
+     "a": [
+      [
+       "sechzig"
+      ],
+      [
+       "zwei"
+      ],
+      [
+       "Nachhilfe"
+      ],
+      [
+       "fünfzehntausend"
+      ],
+      [
+       "fünfhundert"
+      ],
+      [
+       "Arbeiterkammer"
+      ],
+      [
+       "Arbeitgeber"
+      ],
+      [
+       "fünfzehn"
+      ]
+     ]
     }
    ],
-   "words": 336,
-   "minutes": 3
+   "words": 1008,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "alt_h2",
@@ -900,7 +1782,7 @@
    "topic": "Umwelt und Verkehr",
    "wt": "5.1",
    "title": "Wasser – ein knappes Gut",
-   "intro": "Sie hören ein Interview mit einer Hydrologin über Wasserknappheit. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+   "intro": "Sie hören ein Radiointerview über Wasserknappheit und Wasserverbrauch. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "S1": {
      "voice": "ash",
@@ -916,93 +1798,232 @@
    "lines": [
     [
      "S1",
-     "Frau Dr. Lehmann, Sie sind Hydrologin und beschäftigen sich seit zwanzig Jahren mit dem Thema Wasser. Viele Menschen in Deutschland glauben, Wasser sei bei uns unbegrenzt verfügbar. Stimmt das?"
+     "Guten Abend, meine Damen und Herren, und herzlich willkommen zu unserem Wissenschaftsmagazin. Heute sprechen wir über ein Thema, das in Österreich lange als selbstverständlich galt: Wasser. Mein Gesprächspartner ist Dr. Johannes Lehmann, Hydrologe an der Universität für Bodenkultur in Wien. Herr Dr. Lehmann, in Österreich gibt es ja Seen, Flüsse und Gebirge. Wieso sprechen Sie von einem knappen Gut?"
     ],
     [
      "S2",
-     "Leider nicht mehr. Deutschland galt lange als wasserreiches Land, und im internationalen Vergleich stehen wir immer noch gut da. Aber in den trockenen Sommern der letzten Jahre ist der Grundwasserspiegel in vielen Regionen deutlich gesunken. In einigen Gemeinden in Brandenburg und Niedersachsen musste die Wasserentnahme bereits eingeschränkt werden. Man durfte zum Beispiel tagsüber keine Gärten mehr bewässern."
+     "Das ist eine berechtigte Frage, denn im internationalen Vergleich geht es uns hervorragend. Österreich nutzt nur rund drei Prozent seiner Wasserressourcen. Trotzdem ändert sich die Lage. Die Sommer werden heißer und trockener, der Grundwasserspiegel sinkt in einigen Regionen, vor allem im Osten des Landes. Im Burgenland und in Teilen Niederösterreichs ist der Grundwasserspiegel in den letzten zwanzig Jahren um mehr als einen Meter gefallen. Das merken Landwirte, aber auch Gemeinden, die ihre Brunnen vertiefen müssen."
     ],
     [
      "S1",
-     "Woran liegt das?"
+     "Wie viel Wasser verbraucht denn ein Haushalt?"
     ],
     [
      "S2",
-     "Es gibt mehrere Ursachen. Die wichtigste ist der Klimawandel: Die Niederschläge verteilen sich anders über das Jahr. Im Winter regnet es zwar mehr, aber im Sommer gibt es lange Dürreperioden, und bei hohen Temperaturen verdunstet ein großer Teil des Wassers, bevor es ins Grundwasser gelangt. Hinzu kommt, dass immer mehr Flächen versiegelt werden, also mit Beton oder Asphalt bedeckt sind. Dort kann der Regen nicht versickern."
+     "Im Durchschnitt verbraucht jede Person in Österreich etwa hundertdreißig Liter Trinkwasser pro Tag. Davon entfallen fast vierzig Liter auf die Toilettenspülung, etwa vierzig auf Duschen und Baden, rund zwanzig auf Wäsche und Geschirr, und nur drei bis vier Liter werden tatsächlich getrunken oder zum Kochen verwendet. Was viele nicht wissen: Der indirekte Verbrauch ist viel höher. Für die Produktion unserer Lebensmittel, Kleider und Geräte werden pro Person und Tag mehrere Tausend Liter Wasser benötigt, meist im Ausland."
     ],
     [
      "S1",
-     "Und wie viel Wasser verbrauchen wir eigentlich?"
+     "Können Sie dafür ein Beispiel nennen?"
     ],
     [
      "S2",
-     "Im Haushalt verbraucht jeder Deutsche etwa 125 Liter pro Tag. Das klingt viel, ist aber nur ein kleiner Teil. Viel größer ist das sogenannte virtuelle Wasser, also das Wasser, das für die Herstellung von Produkten benötigt wird. Für ein Kilogramm Rindfleisch braucht man rund 15.000 Liter, für eine Baumwoll-Jeans etwa 8.000 Liter. Rechnet man das mit ein, liegt der tägliche Verbrauch pro Person bei über 7.000 Litern."
+     "Sehr gern. Für ein Kilo Rindfleisch werden etwa fünfzehntausend Liter Wasser gebraucht, für ein Kilo Weizen rund tausend, für ein Baumwoll-T-Shirt etwa zweitausendsiebenhundert Liter. Ein Smartphone kommt auf etwa dreizehntausend Liter, vor allem durch den Bergbau und die Herstellung der Bauteile. Man spricht vom virtuellen Wasser. Wer weniger Fleisch isst oder Kleider länger trägt, spart mehr Wasser als durch kürzeres Duschen."
     ],
     [
      "S1",
-     "Was kann der Einzelne tun?"
+     "Welche Rolle spielt die Landwirtschaft in Österreich?"
     ],
     [
      "S2",
-     "Natürlich sollte man kein Wasser verschwenden. Aber wirkungsvoller ist ein bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel. Gleichzeitig ist die Politik gefordert. Wir brauchen Regeln, wer in Krisenzeiten Vorrang hat – die Trinkwasserversorgung, die Landwirtschaft oder die Industrie. Außerdem müssen Städte so umgebaut werden, dass sie Regenwasser speichern können, statt es in die Kanalisation abzuleiten. Man spricht von der „Schwammstadt“."
+     "Eine große, besonders in den trockeneren Gebieten. Etwa vierzig Prozent des entnommenen Wassers gehen in die Bewässerung, vor allem für Gemüse, Obst und Mais. In den letzten Jahren nimmt die Bewässerung deutlich zu, in manchen Regionen hat sich die bewässerte Fläche in zehn Jahren verdoppelt. Das führt zu Konflikten zwischen Bauern, Gemeinden und Naturschutz. In Teilen des Marchfelds gab es deshalb schon Verbote, im Sommer Wasser aus Bächen zu entnehmen."
     ],
     [
      "S1",
-     "Frau Dr. Lehmann, vielen Dank für das Gespräch."
+     "Und die Industrie?"
+    ],
+    [
+     "S2",
+     "Die Industrie braucht ebenfalls viel Wasser, vor allem als Kühlwasser in Kraftwerken und in der Papier- und Stahlherstellung. Hier gibt es allerdings Fortschritte. Viele Betriebe haben ihren Verbrauch in den letzten zwanzig Jahren um mehr als die Hälfte reduziert, indem sie das Wasser im Kreislauf führen. Das lohnt sich auch wirtschaftlich, weil Wasser und Abwasser Geld kosten."
+    ],
+    [
+     "S1",
+     "Wie können Haushalte Wasser sparen, ohne auf Komfort zu verzichten?"
+    ],
+    [
+     "S2",
+     "Es gibt einige einfache Maßnahmen. Wassersparende Armaturen und Duschköpfe verringern den Verbrauch um bis zu dreißig Prozent. Eine Zwei-Mengen-Spülung spart pro Spülgang mehrere Liter. Regenwasser lässt sich für den Garten und die Toilette nutzen. Und wer eine Waschmaschine oder einen Geschirrspüler erst dann einschaltet, wenn er voll ist, nutzt das Wasser am besten. Alle diese Maßnahmen zusammen können den Verbrauch eines Haushalts um ein Viertel reduzieren."
+    ],
+    [
+     "S1",
+     "Wie steht es mit Leckagen im Leitungsnetz? Man hört, dass viel Wasser verloren geht."
+    ],
+    [
+     "S2",
+     "In Österreich sind die Verluste im internationalen Vergleich gering, im Schnitt etwa acht Prozent. In anderen Ländern Europas sind es zwanzig bis vierzig Prozent, in manchen Städten sogar mehr als die Hälfte. Trotzdem sind auch bei uns viele Rohre über fünfzig Jahre alt und müssen erneuert werden. Die Gemeinden investieren dafür Millionen, was am Ende über die Wassergebühren auf die Haushalte umgelegt wird."
+    ],
+    [
+     "S1",
+     "Viele Menschen kaufen Mineralwasser in Flaschen, obwohl das Leitungswasser in Österreich ausgezeichnet ist. Was sagen Sie dazu?"
+    ],
+    [
+     "S2",
+     "Das ist ein Paradox. Leitungswasser wird streng kontrolliert, kostet nur etwa einen halben Cent pro Liter und kommt ohne Verpackung ins Haus. Mineralwasser aus der Flasche kostet das Hundertfache und verursacht Plastikmüll und Transportemissionen. Zwar gibt es Situationen, in denen Mineralwasser sinnvoll sein kann, zum Beispiel, wenn man in Altbauten mit Bleirohren wohnt, aber für den Normalfall ist der Wasserhahn die bessere Wahl. In Wien kommt das Wasser sogar direkt aus den Alpen und gilt als eines der besten der Welt."
+    ],
+    [
+     "S1",
+     "Welche Rolle spielen die Gletscher für unsere Wasserversorgung?"
+    ],
+    [
+     "S2",
+     "Sie sind natürliche Speicher, die im Sommer Schmelzwasser an die Flüsse abgeben. Die österreichischen Gletscher haben seit dem Jahr neunzehnhundertfünfzig etwa die Hälfte ihrer Fläche verloren, und bis zum Ende des Jahrhunderts könnten die meisten verschwunden sein. Für die Trinkwasserversorgung ist das zunächst kein Problem, weil wir viel Regen und Quellwasser haben, aber die Flüsse führen im Hochsommer weniger Wasser, und das betrifft Kraftwerke, Landwirtschaft und die Schifffahrt auf der Donau."
+    ],
+    [
+     "S1",
+     "Und wie sieht es mit dem Preis des Wassers aus? Sollte man mehr dafür bezahlen?"
+    ],
+    [
+     "S2",
+     "In Österreich zahlt man für Wasser und Abwasser im Durchschnitt knapp vier Euro pro Kubikmeter, also vier Euro für tausend Liter. Das deckt im Wesentlichen die Kosten für Leitungen und Kläranlagen. Eine höhere Gebühr würde den Verbrauch kaum senken, wohl aber eine gestaffelte Preisgestaltung, bei der die Grundversorgung günstig bleibt und sehr hoher Verbrauch, etwa für Pools oder Rasenbewässerung, teurer wird. Solche Modelle gibt es bereits in einzelnen Gemeinden in Italien und Spanien."
+    ],
+    [
+     "S1",
+     "Gibt es einen Konflikt zwischen Trinkwasser und Wasserkraft, die ja für Österreich so wichtig ist?"
+    ],
+    [
+     "S2",
+     "Ja, durchaus. Die Wasserkraft liefert fast sechzig Prozent unseres Stroms und ist ein wichtiger Pfeiler der Energiewende. Gleichzeitig verändern Kraftwerke die Flüsse, behindern Fische beim Wandern und beeinflussen den Grundwasserhaushalt. Wir müssen daher bei jedem neuen Projekt abwägen, was Vorrang hat. Ich plädiere dafür, bestehende Kraftwerke zu modernisieren und den Ausbau auf ökologisch weniger sensible Strecken zu konzentrieren."
+    ],
+    [
+     "S1",
+     "Eine letzte Frage aus dem Studio: Was kann ein Garten oder Balkon zum Wassersparen beitragen?"
+    ],
+    [
+     "S2",
+     "Viel. Wer morgens oder abends gießt, verliert weniger durch Verdunstung, und Mulch aus Laub oder Rindenstücken hält die Feuchtigkeit im Boden. Heimische Pflanzen brauchen deutlich weniger Wasser als empfindliche Zierpflanzen."
+    ],
+    [
+     "S1",
+     "Zum Abschluss: Ihre wichtigste Botschaft?"
+    ],
+    [
+     "S2",
+     "Wasser ist in Österreich nicht knapp, aber es wird ungleich verteilt und wertvoller. Wir sollten es als kostbare Ressource behandeln, bevor wir es als Mangel erleben. Das beginnt bei kleinen Gewohnheiten und reicht bis zu politischen Entscheidungen über Bewässerung und Energie."
+    ],
+    [
+     "S1",
+     "Dr. Lehmann, ich danke Ihnen für das informative Gespräch. Das war unser Wissenschaftsmagazin, bleiben Sie neugierig und sparsam mit Wasser. Gute Nacht."
     ]
    ],
    "tasks": [
     {
-     "t": "tf",
-     "q": "Deutschland hat im internationalen Vergleich große Wasserprobleme.",
-     "a": "f",
-     "two": true,
-     "ex": ""
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Welchen Anteil seiner Wasserressourcen nutzt Österreich?",
+       "o": [
+        "etwa dreißig Prozent",
+        "etwa zehn Prozent",
+        "etwa drei Prozent",
+        "etwa neunzig Prozent"
+       ],
+       "a": 2,
+       "ex": "Österreich nutzt nur rund drei Prozent seiner Wasserressourcen."
+      },
+      {
+       "q": "Wofür verbrauchen Haushalte den größten Teil des Trinkwassers?",
+       "o": [
+        "Toilettenspülung",
+        "Trinken und Kochen",
+        "Waschen der Autos",
+        "Gartenbewässerung"
+       ],
+       "a": 0,
+       "ex": "Fast vierzig Liter pro Tag entfallen auf die Toilettenspülung, ähnlich viel auf Duschen."
+      },
+      {
+       "q": "Was versteht man unter «virtuellem Wasser»?",
+       "o": [
+        "Wasser aus dem Internet",
+        "Regenwasser",
+        "Wasser in Flaschen",
+        "das Wasser, das bei der Produktion von Waren benötigt wird"
+       ],
+       "a": 3,
+       "ex": "Es ist das Wasser, das für die Produktion von Lebensmitteln und Waren gebraucht wird."
+      },
+      {
+       "q": "Wie viel Wasser geht in Österreich in die Bewässerung?",
+       "o": [
+        "etwa zehn Prozent",
+        "etwa vierzig Prozent",
+        "etwa neunzig Prozent",
+        "fast nichts"
+       ],
+       "a": 1,
+       "ex": "Etwa vierzig Prozent des entnommenen Wassers."
+      },
+      {
+       "q": "Was bringen wassersparende Armaturen laut Dr. Lehmann?",
+       "o": [
+        "eine höhere Gebühr",
+        "gar nichts",
+        "bis zu dreißig Prozent weniger Verbrauch",
+        "doppelt so viel Wasserdruck"
+       ],
+       "a": 2,
+       "ex": "Der Verbrauch sinkt um bis zu dreißig Prozent."
+      },
+      {
+       "q": "Wie hoch sind die Wasserverluste im österreichischen Leitungsnetz?",
+       "o": [
+        "über fünfzig Prozent",
+        "etwa zwanzig Prozent",
+        "etwa vierzig Prozent",
+        "etwa acht Prozent"
+       ],
+       "a": 3,
+       "ex": "Im Schnitt etwa acht Prozent."
+      },
+      {
+       "q": "Welche Position vertritt Dr. Lehmann zur Wasserkraft?",
+       "o": [
+        "Bestehende Kraftwerke modernisieren und den Ausbau auf weniger sensible Strecken konzentrieren.",
+        "Man sollte sofort viele neue Kraftwerke bauen.",
+        "Man sollte alle Kraftwerke abschalten.",
+        "Die Wasserkraft ist unwichtig."
+       ],
+       "a": 0,
+       "ex": "Er plädiert für Modernisierung und gezielten Ausbau."
+      }
+     ]
     },
     {
-     "t": "open",
-     "q": "Welche Maßnahme mussten einige Gemeinden ergreifen?",
-     "a": "Wasserentnahme einschränken, z. B. tagsüber keine Gärten bewässern"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie zwei Ursachen für den sinkenden Grundwasserspiegel.",
-     "a": "Klimawandel (andere Verteilung der Niederschläge, Dürre im Sommer, Verdunstung); Versiegelung von Flächen"
-    },
-    {
-     "t": "mc",
-     "q": "Wie viel Wasser verbraucht ein Deutscher täglich im Haushalt?",
-     "o": [
-      "etwa 15 Liter",
-      "etwa 125 Liter",
-      "etwa 7.000 Liter"
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Was versteht man unter „virtuellem Wasser“?",
-     "a": "Wasser, das für die Herstellung von Produkten benötigt wird"
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie ein Beispiel für virtuelles Wasser mit Zahl.",
-     "a": "1 kg Rindfleisch ≈ 15.000 l; eine Jeans ≈ 8.000 l"
-    },
-    {
-     "t": "open",
-     "q": "Was ist laut Dr. Lehmann wirkungsvoller als Wassersparen im Haushalt?",
-     "a": "bewusster Konsum: weniger Fleisch, langlebige Kleidung, regionale Lebensmittel"
-    },
-    {
-     "t": "open",
-     "q": "Was bedeutet der Begriff „Schwammstadt“?",
-     "a": "eine Stadt, die Regenwasser speichert, statt es in die Kanalisation abzuleiten"
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Interview mit Dr. Lehmann: Österreich nutzt nur etwa [[1]] Prozent der Wasserressourcen. Im Osten sank das Grundwasser in zwanzig Jahren um mehr als einen [[2]]. Ein Haushalt verbraucht im Schnitt [[3]] Liter pro Person und Tag. Für ein Kilo Rindfleisch braucht man etwa [[4]] Liter virtuelles Wasser. Rund vierzig Prozent gehen in die [[5]]. Industrie senkte den Verbrauch durch [[6]]. Leitungsverluste in Österreich etwa [[7]] Prozent. Die Wasserkraft liefert fast [[8]] Prozent des Stroms.",
+     "a": [
+      [
+       "drei"
+      ],
+      [
+       "Meter"
+      ],
+      [
+       "hundertdreißig"
+      ],
+      [
+       "fünfzehntausend"
+      ],
+      [
+       "Bewässerung"
+      ],
+      [
+       "Kreislauf"
+      ],
+      [
+       "acht"
+      ],
+      [
+       "sechzig"
+      ]
+     ]
     }
    ],
-   "words": 303,
-   "minutes": 3
+   "words": 1026,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "alt_h3",
@@ -1011,7 +2032,7 @@
    "topic": "Gesundheit",
    "wt": "2.3",
    "title": "Warum wir mehr schlafen sollten",
-   "intro": "Sie hören einen populärwissenschaftlichen Vortrag über Schlaf. Sie hören den Text zweimal. Machen Sie beim ersten Hören Notizen.",
+   "intro": "Sie hören einen Vortrag über die Bedeutung des Schlafs für die Gesundheit. Zu der Aufnahme gibt es zwei Aufgaben.",
    "voices": {
     "D": {
      "voice": "echo",
@@ -1022,83 +2043,184 @@
    "lines": [
     [
      "D",
-     "Guten Abend, meine Damen und Herren. Wir verbringen ungefähr ein Drittel unseres Lebens im Schlaf – und trotzdem wissen die meisten von uns erstaunlich wenig darüber. Heute möchte ich Ihnen zeigen, warum Schlaf keine verlorene Zeit ist, sondern eine der wichtigsten Voraussetzungen für Gesundheit und Lernen."
+     "Sehr geehrte Damen und Herren, ich freue mich, dass so viele von Ihnen zu diesem Abendvortrag der Volkshochschule gekommen sind. Mein Thema lautet «Warum wir mehr schlafen sollten». Ich bin Schlafmedizinerin und arbeite seit fünfzehn Jahren in einem Schlaflabor in Graz. In dieser Zeit habe ich mehrere Tausend Menschen untersucht, und eines kann ich Ihnen sagen: Kaum ein Bereich der Gesundheit wird so unterschätzt wie der Schlaf. Ich möchte Ihnen heute erklären, was im Schlaf passiert, warum zu wenig Schlaf krank machen kann und wie Sie Ihre Nächte verbessern können."
     ],
     [
      "D",
-     "Beginnen wir mit dem Gedächtnis. Während wir schlafen, ist unser Gehirn keineswegs untätig. Im Gegenteil: In bestimmten Schlafphasen werden die Informationen, die wir tagsüber aufgenommen haben, verarbeitet und mit bereits vorhandenem Wissen verknüpft. In einem bekannten Experiment lernten Probanden am Abend eine Liste von Vokabeln. Die eine Gruppe schlief danach acht Stunden, die andere blieb wach. Am nächsten Morgen konnte die ausgeschlafene Gruppe sich an rund zwanzig bis dreißig Prozent mehr Wörter erinnern. Wer also vor einer Prüfung die Nacht durcharbeitet, schadet sich eher, als dass er sich nützt."
+     "Beginnen wir mit einer Zahl. Nach einer Erhebung der österreichischen Gesellschaft für Schlafmedizin schläft etwa jeder dritte Erwachsene weniger als sechs Stunden pro Nacht. Empfohlen werden für Erwachsene sieben bis neun Stunden, für Jugendliche acht bis zehn. Die Folgen kennen Sie vermutlich aus eigener Erfahrung: Müdigkeit, Konzentrationsprobleme, schlechte Laune. Doch die Folgen reichen viel weiter, als wir im Alltag bemerken."
     ],
     [
      "D",
-     "Zweitens stärkt Schlaf das Immunsystem. Menschen, die regelmäßig weniger als sechs Stunden schlafen, erkranken deutlich häufiger an Erkältungen. Langfristig steigt bei chronischem Schlafmangel außerdem das Risiko für Übergewicht, Diabetes und Herz-Kreislauf-Erkrankungen."
+     "Was passiert eigentlich im Schlaf? Unser Schlaf verläuft in Zyklen von etwa neunzig Minuten, und pro Nacht durchlaufen wir vier bis sechs davon. Jeder Zyklus besteht aus Leichtschlaf, Tiefschlaf und der sogenannten REM-Phase, in der wir träumen. Im Tiefschlaf, der vor allem in der ersten Nachthälfte stattfindet, erholt sich der Körper: Das Immunsystem wird gestärkt, Wachstumshormone werden ausgeschüttet, Zellen werden repariert. In der REM-Phase, die gegen Morgen länger wird, verarbeitet das Gehirn Emotionen und festigt das Gelernte."
     ],
     [
      "D",
-     "Drittens beeinflusst Schlaf unsere Psyche. Nach einer schlaflosen Nacht reagieren wir gereizter, sind weniger konzentriert und nehmen Probleme als bedrohlicher wahr. Studien zeigen einen engen Zusammenhang zwischen dauerhaftem Schlafmangel und Depressionen."
+     "Hier liegt der Zusammenhang zu Ihrem Studium oder Beruf. In Experimenten wurden Versuchspersonen gebeten, Vokabeln zu lernen. Eine Gruppe durfte danach schlafen, die andere blieb wach. Am nächsten Tag konnte sich die Schlafgruppe an etwa zwanzig Prozent mehr Wörter erinnern. Wer vor einer Prüfung die Nacht durchlernt, schadet sich also eher, als dass er nützt. Das Gehirn braucht den Schlaf, um Erlerntes vom Kurzzeit- ins Langzeitgedächtnis zu übertragen."
     ],
     [
      "D",
-     "Warum schlafen wir trotzdem so wenig? Ein Hauptgrund ist das Smartphone. Viele Menschen nutzen ihr Handy bis unmittelbar vor dem Einschlafen. Das blaue Licht des Bildschirms hemmt die Ausschüttung des Hormons Melatonin, das uns müde macht. Hinzu kommt, dass Nachrichten und soziale Netzwerke unser Gehirn aktiv halten."
+     "Welche gesundheitlichen Folgen hat chronischer Schlafmangel? Zahlreiche Studien zeigen ein erhöhtes Risiko für Übergewicht, weil das Hormon Leptin, das Sättigung signalisiert, abnimmt und das Hungerhormon Ghrelin zunimmt. Wer schlecht schläft, isst im Durchschnitt etwa dreihundert Kalorien mehr pro Tag. Dazu kommen ein höheres Risiko für Bluthochdruck, Diabetes und Herz-Kreislauf-Erkrankungen. Auch die psychische Gesundheit leidet: Menschen mit Schlafstörungen haben ein doppelt so hohes Risiko, an einer Depression zu erkranken."
     ],
     [
      "D",
-     "Was empfehlen Schlafforscher? Gehen Sie möglichst zur gleichen Zeit ins Bett, auch am Wochenende. Legen Sie das Handy mindestens eine Stunde vor dem Schlafen weg. Halten Sie das Schlafzimmer kühl und dunkel. Und verzichten Sie am Abend auf Kaffee und schwere Mahlzeiten. Schlaf, meine Damen und Herren, ist kein Luxus – er ist eine Investition in Ihre Gesundheit. Vielen Dank."
+     "Besonders kritisch ist der Schlafmangel im Straßenverkehr. Eine Studie hat gezeigt, dass nach siebzehn Stunden ohne Schlaf die Reaktionsfähigkeit etwa so beeinträchtigt ist wie bei einem Blutalkoholwert von null Komma fünf Promille. Ein Sekundenschlaf auf der Autobahn kann tödlich enden. Nach Schätzungen des Verkehrsclubs ist Übermüdung bei etwa jedem zehnten schweren Unfall auf österreichischen Autobahnen im Spiel."
+    ],
+    [
+     "D",
+     "Warum schlafen wir eigentlich so wenig? Ein wichtiger Grund ist das künstliche Licht, insbesondere das blaue Licht von Bildschirmen. Es hemmt die Ausschüttung des Schlafhormons Melatonin und verschiebt unsere innere Uhr nach hinten. Wer abends im Bett noch auf das Handy schaut, braucht im Durchschnitt zwanzig Minuten länger zum Einschlafen. Dazu kommen Stress, Schichtarbeit, Koffein am Nachmittag und unregelmäßige Schlafzeiten."
+    ],
+    [
+     "D",
+     "Nun zu den praktischen Tipps. Erstens: Gehen Sie möglichst jeden Tag zur gleichen Zeit ins Bett und stehen Sie zur gleichen Zeit auf, auch am Wochenende. Zweitens: Verzichten Sie ab dem frühen Nachmittag auf Kaffee und schwarzen Tee. Drittens: Legen Sie spätestens eine Stunde vor dem Zubettgehen das Handy weg. Viertens: Sorgen Sie für ein kühles, dunkles und ruhiges Schlafzimmer, ideal sind achtzehn Grad. Fünftens: Treiben Sie regelmäßig Sport, aber nicht in den letzten drei Stunden vor dem Schlafen. Und sechstens: Vermeiden Sie schwere Mahlzeiten am Abend."
+    ],
+    [
+     "D",
+     "Noch ein Wort zum Mittagsschlaf. Ein kurzer Powernap von zehn bis zwanzig Minuten kann die Leistungsfähigkeit deutlich steigern, ohne den Nachtschlaf zu stören. Länger sollten Sie nicht schlafen, denn sonst geraten Sie in den Tiefschlaf und fühlen sich danach noch müder. Einige Unternehmen in Österreich haben bereits Ruheräume eingerichtet, in denen sich Mitarbeiter nach dem Mittagessen kurz hinlegen können."
+    ],
+    [
+     "D",
+     "Ein Thema, das mir besonders am Herzen liegt, sind die Jugendlichen. In der Pubertät verschiebt sich die innere Uhr um etwa zwei Stunden nach hinten. Das bedeutet, dass ein Sechzehnjähriger biologisch erst gegen Mitternacht müde wird, aber um sechs Uhr aufstehen muss, wenn die Schule um acht beginnt. Man spricht von einem sozialen Jetlag. Mehrere Länder, etwa Frankreich und einzelne Bundesstaaten in den USA, haben den Schulbeginn deshalb nach hinten verlegt und anschließend bessere Noten und weniger Fehlzeiten festgestellt."
+    ],
+    [
+     "D",
+     "Auch die Frage nach dem Chronotyp ist wichtig. Es gibt Frühaufsteher, die sogenannten Lerchen, und Nachtmenschen, die Eulen. Etwa ein Viertel der Menschen gehört deutlich zu einem der beiden Extreme, der Rest liegt dazwischen. Der Chronotyp ist teilweise genetisch bedingt und lässt sich nur begrenzt verändern. Wer als Eule in einem Beruf mit frühem Arbeitsbeginn arbeitet, leidet langfristig oft unter Schlafmangel. Wenn möglich, sollten Arbeitszeiten stärker auf den individuellen Rhythmus Rücksicht nehmen."
+    ],
+    [
+     "D",
+     "Ein kurzer Blick auf Schichtarbeit: In Österreich arbeiten rund fünfzehn Prozent der Beschäftigten regelmäßig nachts oder in wechselnden Schichten. Bei ihnen ist das Risiko für Magen-Darm-Beschwerden, Schlafstörungen und Herzerkrankungen erhöht. Es hilft, die Schichten vorwärts rotieren zu lassen, also von Früh- über Spät- zu Nachtschicht, und danach genügend Erholungszeit einzuplanen. Dunkle Vorhänge und eine feste Schlafroutine am Tag sind für Nachtarbeiter besonders wichtig."
+    ],
+    [
+     "D",
+     "Und was ist mit Schlafmitteln? Viele Menschen greifen bei Schlafproblemen zu Tabletten. Kurzfristig können sie helfen, aber Beruhigungsmittel können abhängig machen und verlieren mit der Zeit ihre Wirkung. Das Mittel der ersten Wahl bei chronischer Schlaflosigkeit ist eine kognitive Verhaltenstherapie, in der man lernt, den Schlaf wieder mit dem Bett zu verbinden und Grübeln zu begrenzen. Studien zeigen, dass sie bei etwa siebzig Prozent der Betroffenen wirkt, und zwar dauerhafter als Medikamente."
+    ],
+    [
+     "D",
+     "Wann sollten Sie einen Arzt aufsuchen? Wenn Sie länger als vier Wochen mindestens dreimal pro Woche nicht einschlafen oder durchschlafen können, wenn Sie nachts oft Atemaussetzer haben oder laut schnarchen, oder wenn Sie tagsüber trotz ausreichend Schlaf extrem müde sind. Solche Beschwerden können auf Schlafapnoe oder andere Erkrankungen hinweisen, die gut behandelbar sind. Die Kosten für eine Untersuchung im Schlaflabor übernimmt in der Regel die Krankenkasse."
+    ],
+    [
+     "D",
+     "Ich fasse zusammen: Schlaf ist keine verlorene Zeit, sondern eine biologische Notwendigkeit. Er stärkt Immunsystem, Gedächtnis und Psyche, und wer ihn dauerhaft vernachlässigt, zahlt mit seiner Gesundheit. Betrachten Sie Ihre Nachtruhe als Investition, nicht als Luxus. Vielen Dank für Ihre Aufmerksamkeit, und nun beantworte ich gern Ihre Fragen."
     ]
    ],
    "tasks": [
     {
-     "t": "open",
-     "q": "Welchen Anteil unseres Lebens verbringen wir im Schlaf?",
-     "a": "etwa ein Drittel"
+     "t": "mcg",
+     "q": "Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",
+     "items": [
+      {
+       "q": "Wie viel Schlaf wird Erwachsenen empfohlen?",
+       "o": [
+        "sechs bis sieben Stunden",
+        "acht bis zehn Stunden",
+        "sieben bis neun Stunden",
+        "neun bis elf Stunden"
+       ],
+       "a": 2,
+       "ex": "Erwachsenen werden sieben bis neun Stunden empfohlen."
+      },
+      {
+       "q": "Was passiert im Tiefschlaf hauptsächlich?",
+       "o": [
+        "Der Körper erholt sich: Immunsystem und Zellreparatur.",
+        "Das Gehirn träumt intensiv.",
+        "Der Blutdruck steigt.",
+        "Das Gedächtnis wird gelöscht."
+       ],
+       "a": 0,
+       "ex": "Im Tiefschlaf wird das Immunsystem gestärkt und es werden Zellen repariert."
+      },
+      {
+       "q": "Was zeigte das Experiment mit den Vokabeln?",
+       "o": [
+        "Die Wachgruppe erinnerte sich besser.",
+        "Beide Gruppen lernten gleich schnell.",
+        "Es gab keinen Unterschied.",
+        "Die Schlafgruppe erinnerte sich an etwa zwanzig Prozent mehr Wörter."
+       ],
+       "a": 3,
+       "ex": "Die Schlafgruppe konnte sich an etwa zwanzig Prozent mehr Wörter erinnern."
+      },
+      {
+       "q": "Was bewirkt Schlafmangel laut der Vortragenden bei den Hormonen?",
+       "o": [
+        "Sättigung nimmt zu, Hunger nimmt ab.",
+        "Das Hormon Leptin nimmt ab, das Hungerhormon Ghrelin nimmt zu.",
+        "Beide bleiben gleich.",
+        "Es werden mehr Wachstumshormone ausgeschüttet."
+       ],
+       "a": 1,
+       "ex": "Das Sättigungshormon Leptin nimmt ab, Ghrelin nimmt zu."
+      },
+      {
+       "q": "Womit vergleicht die Vortragende die Wirkung von siebzehn Stunden Wachsein?",
+       "o": [
+        "mit einer Erkältung",
+        "mit einem Kaffee",
+        "mit einem Blutalkoholwert von null Komma fünf Promille",
+        "mit Dauerlauf"
+       ],
+       "a": 2,
+       "ex": "Die Reaktionsfähigkeit ist so beeinträchtigt wie bei null Komma fünf Promille."
+      },
+      {
+       "q": "Welchen Tipp gibt sie NICHT?",
+       "o": [
+        "zur gleichen Zeit ins Bett gehen",
+        "das Handy eine Stunde vor dem Schlafen weglegen",
+        "das Zimmer kühl halten",
+        "abends schwer essen"
+       ],
+       "a": 3,
+       "ex": "Sie rät, schwere Mahlzeiten am Abend zu vermeiden."
+      },
+      {
+       "q": "Wie lange sollte ein Mittagsschlaf dauern?",
+       "o": [
+        "höchstens zehn bis zwanzig Minuten",
+        "zwei Stunden",
+        "eine Stunde",
+        "vierzig Minuten"
+       ],
+       "a": 0,
+       "ex": "Ein Powernap von zehn bis zwanzig Minuten."
+      }
+     ]
     },
     {
-     "t": "open",
-     "q": "Was geschieht laut Vortrag im Schlaf mit den Informationen des Tages?",
-     "a": "sie werden verarbeitet und mit vorhandenem Wissen verknüpft"
-    },
-    {
-     "t": "open",
-     "q": "Beschreiben Sie kurz das Experiment und sein Ergebnis.",
-     "a": "Probanden lernten abends Vokabeln; eine Gruppe schlief 8 Stunden, die andere blieb wach; die ausgeschlafene Gruppe erinnerte sich an 20–30 % mehr Wörter"
-    },
-    {
-     "t": "tf",
-     "q": "Wer vor einer Prüfung die Nacht durcharbeitet, lernt effektiver.",
-     "a": "f",
-     "two": true,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie zwei langfristige Risiken von chronischem Schlafmangel.",
-     "a": "Übergewicht, Diabetes, Herz-Kreislauf-Erkrankungen, Depressionen, häufigere Erkältungen"
-    },
-    {
-     "t": "mc",
-     "q": "Warum stört das Smartphone den Schlaf?",
-     "o": [
-      "Es erzeugt Lärm.",
-      "Das blaue Licht hemmt die Ausschüttung von Melatonin.",
-      "Es erhöht die Temperatur im Schlafzimmer."
-     ],
-     "a": 1,
-     "ex": ""
-    },
-    {
-     "t": "open",
-     "q": "Nennen Sie drei Empfehlungen der Schlafforscher.",
-     "a": "gleiche Schlafenszeit; Handy 1 Stunde vorher weglegen; Schlafzimmer kühl und dunkel; abends kein Kaffee, keine schweren Mahlzeiten"
-    },
-    {
-     "t": "tf",
-     "q": "Der Referent bezeichnet Schlaf als Luxus.",
-     "a": "f",
-     "two": true,
-     "ex": ""
+     "t": "sum",
+     "q": "Aufgabe 2: Hören Sie den Beitrag noch einmal und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).",
+     "text": "Vortrag zum Schlaf: Jeder dritte Erwachsene schläft weniger als [[1]] Stunden. Ein Schlafzyklus dauert etwa [[2]] Minuten. Wer nach dem Lernen schläft, behält etwa [[3]] Prozent mehr. Schlafmangel erhöht das Risiko für Übergewicht, Bluthochdruck und [[4]]. Blaues Licht hemmt das Hormon [[5]]. Ideale Temperatur im Schlafzimmer: [[6]] Grad. Ein Powernap darf höchstens [[7]] Minuten dauern. Zum Arzt, wenn die Probleme länger als [[8]] Wochen bestehen.",
+     "a": [
+      [
+       "sechs"
+      ],
+      [
+       "neunzig"
+      ],
+      [
+       "zwanzig"
+      ],
+      [
+       "Diabetes"
+      ],
+      [
+       "Melatonin"
+      ],
+      [
+       "achtzehn"
+      ],
+      [
+       "zwanzig"
+      ],
+      [
+       "vier"
+      ]
+     ]
     }
    ],
-   "words": 304,
-   "minutes": 3
+   "words": 1026,
+   "minutes": 7,
+   "ver": 2
   },
   {
    "id": "h_nachhilfe",

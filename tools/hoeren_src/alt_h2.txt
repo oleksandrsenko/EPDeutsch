@@ -1,0 +1,48 @@
+#INTRO
+Sie hören ein Radiointerview über Wasserknappheit und Wasserverbrauch. Zu der Aufnahme gibt es zwei Aufgaben.
+@S1 Guten Abend, meine Damen und Herren, und herzlich willkommen zu unserem Wissenschaftsmagazin. Heute sprechen wir über ein Thema, das in Österreich lange als selbstverständlich galt: Wasser. Mein Gesprächspartner ist Dr. Johannes Lehmann, Hydrologe an der Universität für Bodenkultur in Wien. Herr Dr. Lehmann, in Österreich gibt es ja Seen, Flüsse und Gebirge. Wieso sprechen Sie von einem knappen Gut?
+@S2 Das ist eine berechtigte Frage, denn im internationalen Vergleich geht es uns hervorragend. Österreich nutzt nur rund drei Prozent seiner Wasserressourcen. Trotzdem ändert sich die Lage. Die Sommer werden heißer und trockener, der Grundwasserspiegel sinkt in einigen Regionen, vor allem im Osten des Landes. Im Burgenland und in Teilen Niederösterreichs ist der Grundwasserspiegel in den letzten zwanzig Jahren um mehr als einen Meter gefallen. Das merken Landwirte, aber auch Gemeinden, die ihre Brunnen vertiefen müssen.
+@S1 Wie viel Wasser verbraucht denn ein Haushalt?
+@S2 Im Durchschnitt verbraucht jede Person in Österreich etwa hundertdreißig Liter Trinkwasser pro Tag. Davon entfallen fast vierzig Liter auf die Toilettenspülung, etwa vierzig auf Duschen und Baden, rund zwanzig auf Wäsche und Geschirr, und nur drei bis vier Liter werden tatsächlich getrunken oder zum Kochen verwendet. Was viele nicht wissen: Der indirekte Verbrauch ist viel höher. Für die Produktion unserer Lebensmittel, Kleider und Geräte werden pro Person und Tag mehrere Tausend Liter Wasser benötigt, meist im Ausland.
+@S1 Können Sie dafür ein Beispiel nennen?
+@S2 Sehr gern. Für ein Kilo Rindfleisch werden etwa fünfzehntausend Liter Wasser gebraucht, für ein Kilo Weizen rund tausend, für ein Baumwoll-T-Shirt etwa zweitausendsiebenhundert Liter. Ein Smartphone kommt auf etwa dreizehntausend Liter, vor allem durch den Bergbau und die Herstellung der Bauteile. Man spricht vom virtuellen Wasser. Wer weniger Fleisch isst oder Kleider länger trägt, spart mehr Wasser als durch kürzeres Duschen.
+@S1 Welche Rolle spielt die Landwirtschaft in Österreich?
+@S2 Eine große, besonders in den trockeneren Gebieten. Etwa vierzig Prozent des entnommenen Wassers gehen in die Bewässerung, vor allem für Gemüse, Obst und Mais. In den letzten Jahren nimmt die Bewässerung deutlich zu, in manchen Regionen hat sich die bewässerte Fläche in zehn Jahren verdoppelt. Das führt zu Konflikten zwischen Bauern, Gemeinden und Naturschutz. In Teilen des Marchfelds gab es deshalb schon Verbote, im Sommer Wasser aus Bächen zu entnehmen.
+@S1 Und die Industrie?
+@S2 Die Industrie braucht ebenfalls viel Wasser, vor allem als Kühlwasser in Kraftwerken und in der Papier- und Stahlherstellung. Hier gibt es allerdings Fortschritte. Viele Betriebe haben ihren Verbrauch in den letzten zwanzig Jahren um mehr als die Hälfte reduziert, indem sie das Wasser im Kreislauf führen. Das lohnt sich auch wirtschaftlich, weil Wasser und Abwasser Geld kosten.
+@S1 Wie können Haushalte Wasser sparen, ohne auf Komfort zu verzichten?
+@S2 Es gibt einige einfache Maßnahmen. Wassersparende Armaturen und Duschköpfe verringern den Verbrauch um bis zu dreißig Prozent. Eine Zwei-Mengen-Spülung spart pro Spülgang mehrere Liter. Regenwasser lässt sich für den Garten und die Toilette nutzen. Und wer eine Waschmaschine oder einen Geschirrspüler erst dann einschaltet, wenn er voll ist, nutzt das Wasser am besten. Alle diese Maßnahmen zusammen können den Verbrauch eines Haushalts um ein Viertel reduzieren.
+@S1 Wie steht es mit Leckagen im Leitungsnetz? Man hört, dass viel Wasser verloren geht.
+@S2 In Österreich sind die Verluste im internationalen Vergleich gering, im Schnitt etwa acht Prozent. In anderen Ländern Europas sind es zwanzig bis vierzig Prozent, in manchen Städten sogar mehr als die Hälfte. Trotzdem sind auch bei uns viele Rohre über fünfzig Jahre alt und müssen erneuert werden. Die Gemeinden investieren dafür Millionen, was am Ende über die Wassergebühren auf die Haushalte umgelegt wird.
+@S1 Viele Menschen kaufen Mineralwasser in Flaschen, obwohl das Leitungswasser in Österreich ausgezeichnet ist. Was sagen Sie dazu?
+@S2 Das ist ein Paradox. Leitungswasser wird streng kontrolliert, kostet nur etwa einen halben Cent pro Liter und kommt ohne Verpackung ins Haus. Mineralwasser aus der Flasche kostet das Hundertfache und verursacht Plastikmüll und Transportemissionen. Zwar gibt es Situationen, in denen Mineralwasser sinnvoll sein kann, zum Beispiel, wenn man in Altbauten mit Bleirohren wohnt, aber für den Normalfall ist der Wasserhahn die bessere Wahl. In Wien kommt das Wasser sogar direkt aus den Alpen und gilt als eines der besten der Welt.
+@S1 Welche Rolle spielen die Gletscher für unsere Wasserversorgung?
+@S2 Sie sind natürliche Speicher, die im Sommer Schmelzwasser an die Flüsse abgeben. Die österreichischen Gletscher haben seit dem Jahr neunzehnhundertfünfzig etwa die Hälfte ihrer Fläche verloren, und bis zum Ende des Jahrhunderts könnten die meisten verschwunden sein. Für die Trinkwasserversorgung ist das zunächst kein Problem, weil wir viel Regen und Quellwasser haben, aber die Flüsse führen im Hochsommer weniger Wasser, und das betrifft Kraftwerke, Landwirtschaft und die Schifffahrt auf der Donau.
+@S1 Und wie sieht es mit dem Preis des Wassers aus? Sollte man mehr dafür bezahlen?
+@S2 In Österreich zahlt man für Wasser und Abwasser im Durchschnitt knapp vier Euro pro Kubikmeter, also vier Euro für tausend Liter. Das deckt im Wesentlichen die Kosten für Leitungen und Kläranlagen. Eine höhere Gebühr würde den Verbrauch kaum senken, wohl aber eine gestaffelte Preisgestaltung, bei der die Grundversorgung günstig bleibt und sehr hoher Verbrauch, etwa für Pools oder Rasenbewässerung, teurer wird. Solche Modelle gibt es bereits in einzelnen Gemeinden in Italien und Spanien.
+@S1 Gibt es einen Konflikt zwischen Trinkwasser und Wasserkraft, die ja für Österreich so wichtig ist?
+@S2 Ja, durchaus. Die Wasserkraft liefert fast sechzig Prozent unseres Stroms und ist ein wichtiger Pfeiler der Energiewende. Gleichzeitig verändern Kraftwerke die Flüsse, behindern Fische beim Wandern und beeinflussen den Grundwasserhaushalt. Wir müssen daher bei jedem neuen Projekt abwägen, was Vorrang hat. Ich plädiere dafür, bestehende Kraftwerke zu modernisieren und den Ausbau auf ökologisch weniger sensible Strecken zu konzentrieren.
+@S1 Eine letzte Frage aus dem Studio: Was kann ein Garten oder Balkon zum Wassersparen beitragen?
+@S2 Viel. Wer morgens oder abends gießt, verliert weniger durch Verdunstung, und Mulch aus Laub oder Rindenstücken hält die Feuchtigkeit im Boden. Heimische Pflanzen brauchen deutlich weniger Wasser als empfindliche Zierpflanzen.
+@S1 Zum Abschluss: Ihre wichtigste Botschaft?
+@S2 Wasser ist in Österreich nicht knapp, aber es wird ungleich verteilt und wertvoller. Wir sollten es als kostbare Ressource behandeln, bevor wir es als Mangel erleben. Das beginnt bei kleinen Gewohnheiten und reicht bis zu politischen Entscheidungen über Bewässerung und Energie.
+@S1 Dr. Lehmann, ich danke Ihnen für das informative Gespräch. Das war unser Wissenschaftsmagazin, bleiben Sie neugierig und sparsam mit Wasser. Gute Nacht.
+#MC
+Welchen Anteil seiner Wasserressourcen nutzt Österreich? | etwa dreißig Prozent | etwa zehn Prozent | etwa drei Prozent | etwa neunzig Prozent | c | Österreich nutzt nur rund drei Prozent seiner Wasserressourcen.
+Wofür verbrauchen Haushalte den größten Teil des Trinkwassers? | Trinken und Kochen | Toilettenspülung | Waschen der Autos | Gartenbewässerung | b | Fast vierzig Liter pro Tag entfallen auf die Toilettenspülung, ähnlich viel auf Duschen.
+Was versteht man unter «virtuellem Wasser»? | Wasser aus dem Internet | Regenwasser | das Wasser, das bei der Produktion von Waren benötigt wird | Wasser in Flaschen | c | Es ist das Wasser, das für die Produktion von Lebensmitteln und Waren gebraucht wird.
+Wie viel Wasser geht in Österreich in die Bewässerung? | etwa vierzig Prozent | etwa zehn Prozent | etwa neunzig Prozent | fast nichts | a | Etwa vierzig Prozent des entnommenen Wassers.
+Was bringen wassersparende Armaturen laut Dr. Lehmann? | bis zu dreißig Prozent weniger Verbrauch | gar nichts | eine höhere Gebühr | doppelt so viel Wasserdruck | a | Der Verbrauch sinkt um bis zu dreißig Prozent.
+Wie hoch sind die Wasserverluste im österreichischen Leitungsnetz? | etwa acht Prozent | etwa zwanzig Prozent | etwa vierzig Prozent | über fünfzig Prozent | a | Im Schnitt etwa acht Prozent.
+Welche Position vertritt Dr. Lehmann zur Wasserkraft? | Man sollte alle Kraftwerke abschalten. | Man sollte sofort viele neue Kraftwerke bauen. | Bestehende Kraftwerke modernisieren und den Ausbau auf weniger sensible Strecken konzentrieren. | Die Wasserkraft ist unwichtig. | c | Er plädiert für Modernisierung und gezielten Ausbau.
+#NOTES
+Interview mit Dr. Lehmann: Österreich nutzt nur etwa [[1]] Prozent der Wasserressourcen. Im Osten sank das Grundwasser in zwanzig Jahren um mehr als einen [[2]]. Ein Haushalt verbraucht im Schnitt [[3]] Liter pro Person und Tag. Für ein Kilo Rindfleisch braucht man etwa [[4]] Liter virtuelles Wasser. Rund vierzig Prozent gehen in die [[5]]. Industrie senkte den Verbrauch durch [[6]]. Leitungsverluste in Österreich etwa [[7]] Prozent. Die Wasserkraft liefert fast [[8]] Prozent des Stroms.
+#GAPS
+1 | drei
+2 | Meter
+3 | hundertdreißig
+4 | fünfzehntausend
+5 | Bewässerung
+6 | Kreislauf
+7 | acht
+8 | sechzig

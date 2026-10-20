@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 <script src="/ep.js"></script>
+<script src="/de-core.js?v=20261020"></script>
+<script src="/de-tasks.js?v=20261020"></script>
 <style>
 :root{
   --bg:#F6F7FB;--panel:#FFFFFF;--panel2:#EDEFF4;--hover:#F0F2FA;--fg:#282E3E;--muted:#586380;--line:#D9DDE8;--line2:#EDEFF4;
@@ -658,7 +660,48 @@ mark.hl-y{background:rgba(255,205,31,.5)}mark.hl-g{background:rgba(52,211,153,.4
 .tmr .tmrT{font-variant-numeric:tabular-nums;font-weight:800;font-size:17px;min-width:56px;text-align:center}
 .tmr.over{background:color-mix(in srgb,var(--bad) 16%,var(--panel))}.tmr.over .tmrT{color:var(--bad)}
 .tmr select{border:0;background:var(--panel2);color:var(--fg);border-radius:10px;padding:6px 8px;font:inherit;font-size:13px;font-weight:600}
-.mine-l{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.mine-l mark{font-size:13px;padding:2px 7px;border-radius:8px}
+.mine-row{display:flex;flex-direction:column;gap:6px}.mine-act{display:flex;gap:8px;flex-wrap:wrap;margin:0 4px 6px}.mine-l{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.mine-l mark{font-size:13px;padding:2px 7px;border-radius:8px}
+/* ---------- задания как на EPD: выбор блоков, перетаскивание, C-Test, таймер ---------- */
+.tpick{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.bchip{display:inline-flex;align-items:center;gap:7px;border:2px solid var(--line);background:var(--panel);color:var(--fg);border-radius:12px;padding:5px 10px 5px 7px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;text-align:left}
+.bchip .bck{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;border:2px solid var(--line);color:#fff;flex:none}
+.bchip.on{border-color:var(--c,var(--primary));background:color-mix(in srgb,var(--c,var(--primary)) 9%,var(--panel))}.bchip.on .bck{background:var(--c,var(--primary));border-color:var(--c,var(--primary))}
+.bchip em{font-style:normal;font-size:11.5px;color:var(--muted);background:var(--panel2);border-radius:8px;padding:0 6px;font-weight:800}
+.bchip:disabled{opacity:.6;cursor:default}
+.aitag{display:inline-flex;align-items:center;gap:3px;font-size:10.5px;font-weight:800;color:var(--c,var(--primary));text-decoration:none;margin-left:2px}
+.tq .aitag{margin-bottom:4px}
+.tgrp{margin:16px 0 0;font-size:14px;display:flex;flex-direction:column;gap:1px;padding-top:12px;border-top:2px solid var(--line)}.tgrp:first-child{margin-top:4px;border-top:0;padding-top:0}.tgrp small{font-weight:600;color:var(--muted);font-size:12px}
+.xmore{margin-top:8px}.xmore summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--muted)}.xmore .xk{margin-top:8px}
+.genp{margin:12px 0}.genp .bar{height:8px}.genp small{display:block;margin-top:6px}
+/* перетаскивание */
+.dchip{display:inline-flex;align-items:baseline;gap:6px;background:color-mix(in srgb,var(--c,var(--primary)) 12%,var(--panel));border:2px solid color-mix(in srgb,var(--c,var(--primary)) 40%,transparent);border-radius:10px;padding:3px 10px;font-weight:700;font-size:13.5px;line-height:1.4;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;max-width:100%}
+.dchip b{color:var(--c,var(--primary));font-weight:800}
+.dchip.sel{outline:3px solid var(--c,var(--primary));outline-offset:1px;background:color-mix(in srgb,var(--c,var(--primary)) 24%,var(--panel))}
+.dchip.dragging{opacity:.35}
+.dghost{position:fixed;z-index:500;pointer-events:none;transform:translate(-50%,-50%);box-shadow:0 12px 28px -8px rgba(10,9,45,.5);cursor:grabbing;opacity:.96}
+.dtray{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:10px;border:2px dashed var(--line);border-radius:12px;min-height:44px}
+.dtray .dchip{font-weight:600;border-radius:11px}
+.dgap{display:inline-flex;align-items:center;gap:6px;min-width:64px;min-height:28px;vertical-align:middle;margin:2px 3px;padding:0 4px;border-radius:10px;border:2px dashed color-mix(in srgb,var(--c,var(--primary)) 55%,transparent);background:color-mix(in srgb,var(--c,var(--primary)) 6%,transparent)}
+.dgap .gn{font-size:11px;color:var(--c,var(--primary));font-weight:800;padding:0 5px}
+.dgap.full{border-style:solid}.dgap.over{background:color-mix(in srgb,var(--c,var(--primary)) 22%,transparent);border-color:var(--c,var(--primary))}
+.picking .dgap{border-color:var(--c,var(--primary));animation:dgp 1.1s ease-in-out infinite}
+@keyframes dgp{50%{background:color-mix(in srgb,var(--c,var(--primary)) 20%,transparent)}}
+.dgap.right{border-color:var(--good);background:var(--good-soft)}.dgap.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.pa .dgap.lgap{display:inline-flex;height:auto;padding:2px 4px;min-width:84px;font-size:inherit}.pa .dgap .dchip{font-weight:600;font-size:inherit;white-space:normal;text-align:left}
+.dslots{display:flex;flex-direction:column;gap:6px}.dslot{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.dslot .sn{width:24px;height:24px;border-radius:50%;background:var(--c,var(--primary));color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+.dslot .dgap{flex:1;min-width:0;padding:3px 6px}
+.dslot .dgap i{font-size:12.5px}
+.gaptext.pl{white-space:pre-line}
+.gc{display:block;font-size:11.5px;color:var(--good);font-weight:800;line-height:1.1}
+.ctx{line-height:2.4}.ctw{display:inline-flex;align-items:baseline;margin:0 2px;padding:0 2px;border-bottom:2px solid var(--line);border-radius:4px}.ctw b{font-weight:800}
+.ctw input{border:0;border-bottom:2px dashed var(--c,var(--primary));background:transparent;font:inherit;font-weight:700;padding:0 2px;border-radius:0;min-width:3ch;color:var(--fg);outline:0}
+.ctw input:focus{border-bottom-style:solid}.ctw.right{background:var(--good-soft)}.ctw.wrong{background:var(--bad-soft)}
+.ctw small.gc{position:absolute}
+.sq{padding:8px 0;border-top:1px dashed var(--line2)}.sq:first-child{border-top:0}
+/* таймер: только обратный отсчёт, минуты вводишь сам */
+.tmr.run .tmrT{color:var(--c,var(--primary))}
+.tmr .tmm{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--muted)}
+.tmr .tmm input{width:58px;border:0;background:var(--panel2);color:var(--fg);border-radius:10px;padding:6px 8px;font:inherit;font-size:14px;font-weight:700;text-align:center}
 </style>
 </head>
 <body>
@@ -683,11 +726,18 @@ const dateToDay=s=>{if(!s)return null;const d=new Date(s+"T12:00:00");return isN
 function plural(n,a,b,c){const m=n%10,h=n%100;return m===1&&h!==11?a:m>=2&&m<=4&&(h<12||h>14)?b:c}
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),2600)}
 async function api(p,o={}){
-  const r=await fetch("/api"+p,{credentials:"same-origin",...o,headers:{"Content-Type":"application/json","X-USD":"1",...(o.headers||{})}});
-  const j=await r.json().catch(()=>({}));
+  let r;
+  try{r=await fetch("/api"+p,{credentials:"same-origin",...o,headers:{"Content-Type":"application/json","X-USD":"1",...(o.headers||{})}})}
+  catch(e){const er=new Error("Нет связи с сервером. Проверь интернет и попробуй ещё раз");er.retry=true;throw er}
+  const j=await r.json().catch(()=>({__bad:1}));
   if(r.status===401){location.href="/";throw new Error("auth")}
   if(r.status===404&&j.error==="Не найдено")throw new Error("Сервер не знает этого запроса ("+p+"): на сайте старая версия файлов app/. Залей обновление целиком");
-  if(!r.ok)throw new Error(j.error||("Ошибка "+r.status));
+  if(!r.ok){
+    // __bad: хостинг оборвал долгий запрос и вернул не JSON. 502/504/500 и короткая пауза ИИ: стоит повторить
+    const er=new Error(j.error||(j.__bad?"Хостинг оборвал запрос (код "+r.status+"). Попробуй ещё раз":"Ошибка "+r.status));
+    er.status=r.status;er.retry=(r.status>=500||(r.status===429&&/минуту/.test(j.error||"")))&&j.retry!==false;if(r.status===429)er.wait=12000;
+    throw er;
+  }
   return j;
 }
 // ---------- состояние ----------
@@ -699,7 +749,7 @@ const AILIST={grammatik:"topics",lesen:"texts",hoeren:"items",sprechen:"tasks"};
 async function data(area,name){const k=area+"/"+name;if(!DATA[k])DATA[k]=fetch("/data/"+k+".json",{credentials:"same-origin"}).then(r=>r.ok?r.json():{}).catch(()=>({}));
   const d=await DATA[k];
   if(area==="de"&&name==="grammatik"&&EXAM_T&&/\/pruefung$/.test(location.hash))return {...d,topics:[...(d.topics||[]).filter(x=>x.id!=="pruefung"),EXAM_T]};
-  if(area==="de"&&name==="hoeren"&&/\/hoeren\/ex[12]$/.test(location.hash)){const a=[get("hexam-1",null),get("hexam-2",null)].filter(Boolean);if(a.length)return {...d,items:[...(d.items||[]).filter(x=>x.id!=="ex1"&&x.id!=="ex2"),...a]}}
+  if(area==="de"&&name==="hoeren"&&/\/hoeren\/ex1$/.test(location.hash)){const a=[get("hexam-1",null)].filter(Boolean);if(a.length)return {...d,items:[...(d.items||[]).filter(x=>x.id!=="ex1"),...a]}}
   if(area==="de"&&name==="lesen"&&/\/lesen\/lex[12]$/.test(location.hash)){const a=[get("lexam-1",null),get("lexam-2",null)].filter(Boolean);if(a.length)return {...d,texts:[...(d.texts||[]).filter(x=>x.id!=="lex1"&&x.id!=="lex2"),...a]}}
   if(area==="de"&&name==="sprechen"&&/\/sprechen\/sex[12]$/.test(location.hash)){const a=[get("sexam-1",null),get("sexam-2",null)].filter(Boolean);if(a.length)return {...d,tasks:[...(d.tasks||[]).filter(x=>x.id!=="sex1"&&x.id!=="sex2"),...a]}}
   if(area==="de"&&AIX===name&&/\/aix$/.test(location.hash)){const it=get("aiitem-"+name);if(it)return {...d,[AILIST[name]]:[...(d[AILIST[name]]||[]).filter(x=>x.id!=="ai"),it]}}
@@ -1113,7 +1163,7 @@ const lfHead=(area,k)=>area==="de"?crumb("#/"+k,MODNAV[k][0])+(LVF?`<span class=
 function itemsByTopic(arr,kind,pref){
   const by={};arr.forEach(x=>(by[x.wt||"other"]=by[x.wt||"other"]||[]).push(x));
   const card=x=>{const r=get(pref+"de-"+x.id);const pv=kind==="sprechen"?(x.ru||""):(x.lead||x.intro||(x.paras&&x.paras[0])||"");
-    return `<a class="item" href="#/${kind}/${x.id}"><div class="row">${kind==="sprechen"?`<span class="tag lv">${esc(kindRu(x.kind))}</span>`:`<span class="tag lv">${esc(x.level||"")}</span>`}${x.kind&&kind!=="sprechen"?`<span class="tag">${esc(x.kind)}</span>`:""}${r?(kind==="sprechen"?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:`<span class="tag ok">✓ ${r.s}/${r.m}</span>`):""}</div><h3>${esc(x.title)}</h3><p class="pv">${esc(pv.slice(0,260))}</p></a>`};
+    return `<a class="item" href="#/${kind}/${x.id}"><div class="row">${kind==="sprechen"?`<span class="tag lv">${esc(kindRu(x.kind))}</span>`:`<span class="tag lv">${esc(x.level||"")}</span>`}${x.kind&&kind!=="sprechen"?`<span class="tag">${esc(x.kind)}</span>`:""}${r?(kind==="sprechen"?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:`<span class="tag ok">✓ ${resTxt(r)}</span>`):""}</div><h3>${esc(x.title)}</h3><p class="pv">${esc(pv.slice(0,260))}</p></a>`};
   const block=(num,de,ru,a)=>`<section class="tblock"><header><span class="tn" lang="de">${esc(num)}</span><div><b lang="de">${esc(de)}</b><small>${esc(ru)}</small></div><span class="tc">${a.length}</span></header><div class="tlist">${[...a].sort(lvSort).slice(0,1).map(card).join("")}${a.length>1?`<details class="tmore"><summary>${FCH}Ещё ${a.length-1} ${plural(a.length-1,...(kind==="lesen"?["текст","текста","текстов"]:kind==="hoeren"?["аудио","аудио","аудио"]:["задание","задания","заданий"]))}<small>развернуть список</small></summary><div class="tlist">${[...a].sort(lvSort).slice(1).map(card).join("")}</div></details>`:""}</div></section>`;
   const blocks=WT.filter(t=>by[t[0]]).map(t=>block(t[0],t[1],t[2],by[t[0]])).concat(by.other?[block("·","Без темы","универсальные",by.other)]:[]);
   return `<div class="tblocks">${blocks.join("")}</div>`;
@@ -1356,162 +1406,17 @@ function bindMarker(root,key,list){
   root.addEventListener("mouseup",up);root.addEventListener("touchend",up);
   root.addEventListener("click",e=>{if(HLMODE!=="er")return;const m=e.target.closest("mark.hl");if(!m)return;const i=list.findIndex(h=>h.id===m.dataset.h);if(i>=0){list.splice(i,1);save(key,list);redraw()}});
   setMode("tr");redraw();
+  return redraw;
 }
-// ---------- таймер (Lesen, Grammatik): секундомер или обратный отсчёт, помнит состояние до закрытия вкладки ----------
-const TM=(()=>{let o={mins:0,run:false,t0:0,acc:0};try{o={...o,...JSON.parse(sessionStorage.getItem("de-tm")||"{}")}}catch(e){}return o})();
-const tmSave=()=>{try{sessionStorage.setItem("de-tm",JSON.stringify(TM))}catch(e){}};
-const tmElapsed=()=>TM.acc+(TM.run?Date.now()-TM.t0:0);
-const tmSec=()=>Math.round(tmElapsed()/1000);
-const tmFmt=ms=>{const t=Math.max(0,Math.round(ms/1000)),h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+":"+String(m).padStart(2,"0"):String(m).padStart(2,"0"))+":"+String(s).padStart(2,"0")};
-const tmShow=()=>TM.mins?TM.mins*60000-tmElapsed():tmElapsed();
-function tmTick(){
-  const over=TM.mins&&tmShow()<=0;
-  if(over&&TM.run){TM.acc=TM.mins*60000;TM.run=false;tmSave();toast("Время вышло")}
-  $$(".tmr").forEach(b=>{b.classList.toggle("over",!!over);const t=b.querySelector(".tmrT");if(t)t.textContent=tmFmt(tmShow());const g=b.querySelector('[data-tm="go"]');if(g)g.textContent=TM.run?"Пауза":(tmElapsed()?"Дальше":"Старт")});
-}
-setInterval(tmTick,500);
-const timerHTML=()=>`<div class="tmr" aria-label="Таймер">${ic("clock",16)}<span class="tmrT">${tmFmt(tmShow())}</span><button type="button" data-tm="go">${TM.run?"Пауза":(tmElapsed()?"Дальше":"Старт")}</button><button type="button" data-tm="rst">Сброс</button><select data-tm="mode" aria-label="Режим таймера"><option value="0" ${TM.mins?"":"selected"}>Секундомер</option>${[10,20,30,45,60].map(m=>`<option value="${m}" ${TM.mins===m?"selected":""}>Отсчёт ${m} мин</option>`).join("")}</select></div>`;
-function bindTimer(){
-  $$(".tmr").forEach(b=>{
-    b.onclick=e=>{const x=e.target.closest("button[data-tm]");if(!x)return;
-      if(x.dataset.tm==="go"){if(TM.run){TM.acc=tmElapsed();TM.run=false}else{if(TM.mins&&tmShow()<=0)TM.acc=0;TM.t0=Date.now();TM.run=true}}
-      else{TM.run=false;TM.acc=0}
-      tmSave();tmTick()};
-    const sel=b.querySelector("select");if(sel)sel.onchange=()=>{TM.mins=+sel.value;TM.run=false;TM.acc=0;tmSave();tmTick()};
-  });tmTick();
-}
-// ---------- задания к текстам (Lesen, Hören) ----------
-// ---------- задания Lesen / Hören: официальные типы EPD (VWU), баллы и оценка открытых ответов ИИ ----------
-// Типы: tf, mc, gap, open / qs (Kurzantworten, оценивает ИИ), short (короткий ответ: Bezugswörter, Wer sagt was, Umschreibungen),
-// rfb (richtig/falsch + первые 4 слова предложения-доказательства), head, sent, match (выпадающие списки),
-// sum (Paralleltext, слова из оригинала), box (Wortkasten), cl4 (слово a–d в пропуск).
-const uMark=h=>h.replace(/\[\[(.+?)\]\]/g,'<u class="ul">$1</u>');
-const wordsOf=s=>String(s||"").toLowerCase().replace(/[^\p{L}\p{N}\s]+/gu," ").split(/\s+/).filter(Boolean);
-const AI_T=q=>q.t==="qs"||q.t==="open";
-function evOK(q,a){
-  const e=wordsOf(a&&a.e).slice(0,6),w=wordsOf(q.ev).slice(0,4);
-  if(!w.length||e.length<3)return false;
-  let n=0;for(let i=0;i<w.length&&i<e.length;i++){if(e[i]===w[i])n++;else break}
-  return n>=Math.min(3,w.length)||e.join(" ").includes(w.join(" "));
-}
-// [набрано, максимум] по одному заданию; r — результат ИИ или самооценка {score}
-function taskCalc(q,a,r){
-  const sc=r&&typeof r.score==="number"?r.score:0;
-  switch(q.t){
-    case "mc":case "tf":return [a===q.a?1:0,1];
-    case "gap":return [(Array.isArray(q.a)?q.a:[q.a]).map(loose).includes(loose(a||""))?1:0,1];
-    case "short":return [a&&(q.a||[]).map(loose).includes(loose(a))?1:sc,1];
-    case "qs":case "open":return [sc,1];
-    case "rfb":{const ev=evOK(q,a);return [(ev?1:0)+(ev&&a&&a.v===q.a?1:0),2]}
-    case "head":case "sent":case "match":return [q.a.reduce((n,x,k)=>n+(a&&a[k]===x?1:0),0),q.a.length];
-    case "sum":return [q.a.reduce((n,f,k)=>n+(a&&a[k]&&f.map(loose).includes(loose(a[k]))?1:0),0),q.a.length];
-    case "box":case "cl4":return [q.a.reduce((n,x,k)=>n+(a&&a[k]===x?1:0),0),q.a.length];
-  }
-  return [0,0];
-}
-function taskScore(tasks,ans,res){let s=0,m=0;tasks.forEach((q,i)=>{const [x,y]=taskCalc(q,ans[i],res&&res[i]);s+=x;m+=y});return [s,m]}
-const fmtPts=n=>String(Math.round(n*2)/2).replace(".",",");
-function taskRight(q,a){const [s,m]=taskCalc(q,a);return s===m}
-const LETTER=i=>String.fromCharCode(65+i);
-// пропуски [[n]] в связном тексте: поля ввода (sum), выпадающие слова из ящика (box) или варианты a–d (cl4)
-function gapText(q,i,a,checked){
-  a=a||[];const res=[];
-  return esc(q.text).replace(/\[\[(\d+)\]\]/g,(m,n)=>{
-    const k=+n-1,v=a[k];let ok=null,corr="";
-    if(checked){
-      if(q.t==="sum"){ok=!!v&&q.a[k].map(loose).includes(loose(v));corr=q.a[k][0]}
-      else if(q.t==="box"){ok=v===q.a[k];corr=q.a[k]}
-      else{ok=v===q.a[k];corr=String.fromCharCode(97+q.a[k])+") "+q.o[k][q.a[k]]}
-    }
-    const cls=checked?(ok?" right":" wrong"):"";
-    let el;
-    if(q.t==="sum")el=`<input class="gi${cls}" data-q="${i}" data-g="${k}" value="${esc(v||"")}" ${checked?"readonly":""} style="width:${Math.max(9,Math.min(22,(v||"").length+4))}ch" autocomplete="off" spellcheck="false" aria-label="Lücke ${n}">`;
-    else if(q.t==="box")el=`<select class="gs${cls}" data-q="${i}" data-g="${k}" ${checked?"disabled":""} aria-label="Lücke ${n}"><option value="">(${n})</option>${q.words.map(w=>`<option ${v===w?"selected":""}>${esc(w)}</option>`).join("")}</select>`;
-    else el=`<select class="gs${cls}" data-q="${i}" data-g="${k}" data-n="1" ${checked?"disabled":""} aria-label="Lücke ${n}"><option value="">(${n})</option>${q.o[k].map((w,j)=>`<option value="${j}" ${v===j?"selected":""}>${String.fromCharCode(97+j)}) ${esc(w)}</option>`).join("")}</select>`;
-    return `<span class="gw">${el}${checked&&!ok?`<small class="gc">${esc(corr)}</small>`:""}</span>`;
-  });
-}
-function aiBlock(q,i,r,checked,hasKey){
-  if(!checked||!AI_T(q)&&q.t!=="short")return "";
-  const a=q.a,models=Array.isArray(a)?a:[a];
-  if(q.t==="short")return "";
-  if(r&&typeof r.score==="number")return `<div class="airow"><span class="sc s${String(r.score).replace(".","")}">${fmtPts(r.score)}</span><span>${esc(r.why||"")}${r.self?'<i class="muted"> · твоя оценка</i>':""}</span></div><div class="why"><b>Образец:</b> ${models.map(esc).join(" / ")}</div>`;
-  return `<div class="why"><b>Образец:</b> ${models.map(esc).join(" / ")}</div>${hasKey?"":`<div class="row" style="margin-top:6px"><span class="muted" style="font-size:12.5px">Нет ключа Claude, оцени сам:</span><button class="btn sm" data-self="${i}" data-v="1">✓ верно</button><button class="btn sm" data-self="${i}" data-v="0.5">½</button><button class="btn sm" data-self="${i}" data-v="0">✗ неверно</button></div>`}`;
-}
-function tasksHTML(tasks,ans,checked,res){
-  const hasKey=!!(ST.keys&&ST.keys.anthropic);
-  return tasks.map((q,i)=>{
-    const a=ans[i],r=res&&res[i];let body="",why="",head="";
-    if(q.task&&!q.t.match(/^(head|sent|match)$/))head=`<div class="ttask">${esc(q.task)}${q.sec?` · Absatz ${q.sec}`:""}</div>`;
-    if(q.t==="tf"){const L=[["r","richtig"],["f","falsch"],["n","nicht im Text"]].filter(x=>q.two?x[0]!=="n":true);
-      body=`<div class="seg">${L.map(([v,t])=>`<button data-q="${i}" data-v="${v}" class="${a===v?"sel":""} ${checked?(v===q.a?"right":a===v?"wrong":""):""}">${t}</button>`).join("")}</div>`}
-    else if(q.t==="rfb"){const L=[["r","richtig"],["f","falsch"]];const evOk=checked&&evOK(q,a);
-      body=`<div class="seg">${L.map(([v,t])=>`<button data-q="${i}" data-v="${v}" class="${a&&a.v===v?"sel":""} ${checked?(v===q.a?"right":a&&a.v===v?"wrong":""):""}">${t}</button>`).join("")}</div>
-        <input class="evin${checked?(evOk?" right":" wrong"):""}" data-q="${i}" data-e="1" value="${esc((a&&a.e)||"")}" ${checked?"readonly":""} placeholder="Erste vier Wörter des Beweissatzes" autocomplete="off" spellcheck="false">`}
-    else if(q.t==="mc")body=`<div class="mco">${q.o.map((o,k)=>`<button data-q="${i}" data-v="${k}" class="${a===k?"sel":""} ${checked?(k===q.a?"right":a===k?"wrong":""):""}">${String.fromCharCode(97+k)}) ${esc(o)}</button>`).join("")}</div>`;
-    else if(q.t==="open")body=`<textarea data-q="${i}" placeholder="Kurze Antwort auf Deutsch" ${checked?"readonly":""}>${esc(a||"")}</textarea>`;
-    else if(q.t==="qs")body=`<input class="evin${checked&&r&&typeof r.score==="number"?(r.score>=1?" right":r.score>0?"":" wrong"):""}" data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} placeholder="Maximal 4 Wörter" autocomplete="off" spellcheck="false">`;
-    else if(q.t==="short")body=`<input class="evin${checked?(taskCalc(q,a,r)[0]>=1?" right":taskCalc(q,a,r)[0]>0?"":" wrong"):""}" data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} placeholder="Antwort" autocomplete="off" spellcheck="false">`;
-    else if(q.t==="sum"||q.t==="box"||q.t==="cl4")body=`${q.t==="box"?`<div class="wbox">${q.words.map(w=>`<span class="${checked?"":(a||[]).includes(w)?"used":""}">${esc(w)}</span>`).join("")}</div>`:""}<div class="gaptext">${gapText(q,i,a,checked)}</div>`;
-    else if(q.t==="head"||q.t==="sent"||q.t==="match"){
-      // много выпадающих списков: заголовок к абзацу, предложение в пропуск, высказывание к человеку
-      const rows=q.t==="head"?q.paras.map(pn=>"Absatz "+pn):q.t==="sent"?q.a.map((x,k)=>"Lücke "+(k+1)):q.items,opts=q.t==="head"?q.heads:q.t==="sent"?q.sents:q.opts;
-      const lab=hi=>q.t==="match"?esc(opts[hi]):String.fromCharCode(65+hi);
-      body=(q.t==="sent"?`<div class="sents">${q.sents.map((x,hi)=>`<div><b>${String.fromCharCode(65+hi)}</b>${esc(x)}</div>`).join("")}</div>`:"")+
-        rows.map((rw,k)=>`<div class="mrow${q.t==="match"?" wide":""}"><span class="ml">${q.t==="match"?`${k+1}. `:""}${esc(rw)}</span><span class="mr"><select data-q="${i}" data-k="${k}" ${checked?"disabled":""}><option value="">—</option>${opts.map((h,hi)=>`<option value="${hi}" ${a&&a[k]===hi?"selected":""}>${q.t==="head"?String.fromCharCode(65+hi)+") "+esc(h):q.t==="sent"?String.fromCharCode(65+hi)+") "+esc(h.length>60?h.slice(0,58)+"…":h):esc(h)}</option>`).join("")}</select>${checked?(a&&a[k]===q.a[k]?' <span class="ok">✓</span>':` <span class="no">→ ${lab(q.a[k])}</span>`):""}</span></div>`).join("");}
-    else if(q.t==="gap")body=`<input data-q="${i}" value="${esc(a||"")}" ${checked?"readonly":""} style="width:100%">`;
-    if(checked){
-      const [s,m]=taskCalc(q,a,r);
-      if(q.t==="open"||q.t==="qs")why=aiBlock(q,i,r,true,hasKey)+(q.ex?`<div class="why">${esc(q.ex)}</div>`:"");
-      else if(q.t==="short")why=`${s>=1?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':s>0?'<div class="why" style="color:var(--warn,#c77f00);font-weight:800">½</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>'}<div class="why"><b>Ответ:</b> ${esc((q.a||[]).join(" / "))}${r&&r.why&&s<1?`<br>${esc(r.why)}`:""}</div>`;
-      else if(q.t==="rfb")why=`${s>=2?'<div class="why" style="color:var(--good);font-weight:800">✓ верно, 2 балла</div>':`<div class="why" style="color:var(--bad);font-weight:800">${s>=1?"Доказательство верно, но ответ нет: 1 балл":"✗ 0 баллов (нужны и ответ, и первые слова доказательства)"}</div>`}<div class="why"><b>Beweissatz:</b> «${esc(q.ev)} …»${q.ex?`<br>${esc(q.ex)}`:""}</div>`;
-      else if(q.t==="sum"||q.t==="box"||q.t==="cl4")why=`<div class="why"><b>${fmtPts(s)} из ${m}.</b> Неверные пропуски подписаны правильным ответом.</div>`;
-      else if(q.t==="head"||q.t==="sent"||q.t==="match")why=`<div class="why">${fmtPts(s)} из ${m}${q.ex?" · "+esc(q.ex):""}</div>`;
-      else why=(s>=1?'<div class="why" style="color:var(--good);font-weight:800">✓ верно</div>':'<div class="why" style="color:var(--bad);font-weight:800">✗ неверно</div>')+`<div class="why">${q.t==="gap"?`<b>Ответ:</b> ${esc(Array.isArray(q.a)?q.a.join(" / "):q.a)}<br>`:""}${q.ex?esc(q.ex):""}</div>`;
-    }
-    const qt=q.t==="sum"||q.t==="box"||q.t==="cl4"?esc(q.q):uMark(esc(q.q));
-    return `<div class="tq">${head}<div class="qt"><span class="qn">${i+1}.</span>${qt}</div>${body}${why}</div>`;
-  }).join("");
-}
-const gapsHTML=h=>h.replace(/\[\[(\d+)\]\]/g,(m,n)=>`<span class="lgap" data-gap="${n}">${n}</span>`);
-function bindTasks(root,tasks,ans,onChange,persist){
-  const sv=()=>{if(persist)persist()};
-  root.querySelectorAll("button[data-q]").forEach(b=>b.onclick=()=>{const i=+b.dataset.q,q=tasks[i];
-    if(q.t==="rfb")ans[i]=Object.assign({},ans[i],{v:b.dataset.v});else ans[i]=q.t==="mc"?+b.dataset.v:b.dataset.v;sv();onChange()});
-  root.querySelectorAll("textarea[data-q],input[data-q]").forEach(t=>t.oninput=()=>{const i=+t.dataset.q;
-    if(t.dataset.e)ans[i]=Object.assign({},ans[i],{e:t.value});
-    else if(t.dataset.g!=null){ans[i]=ans[i]||[];ans[i][+t.dataset.g]=t.value}
-    else ans[i]=t.value;sv()});
-  root.querySelectorAll("select[data-q]").forEach(s=>s.onchange=()=>{const i=+s.dataset.q;ans[i]=ans[i]||[];
-    if(s.dataset.g!=null){const k=+s.dataset.g;ans[i][k]=s.value===""?null:(s.dataset.n?+s.value:s.value);sv();if(tasks[i].t==="box")onChange()}
-    else{ans[i][+s.dataset.k]=s.value===""?null:+s.value;sv()}});
-}
-// оценка открытых ответов ИИ одним запросом; без ключа или при ошибке оценивает пользователь сам (кнопки ✓ / ½ / ✗)
-async function gradeOpen(tasks,ans,res,paras){
-  const pend=[];
-  tasks.forEach((q,i)=>{
-    if(res[i]&&typeof res[i].score==="number")return;
-    const a=ans[i];
-    if(AI_T(q)&&String(a||"").trim())pend.push([i,q]);
-    else if(q.t==="short"&&a&&!(q.a||[]).map(loose).includes(loose(a)))pend.push([i,q]);
-  });
-  if(!pend.length||!(ST.keys&&ST.keys.anthropic))return false;
-  try{
-    const r=await api("/de/lcheck",{method:"POST",body:JSON.stringify({paras,items:pend.map(([i,q])=>({q:(q.task?q.task+": ":"")+String(q.q).replace(/\[\[|\]\]/g,""),models:Array.isArray(q.a)?q.a:[q.a],ans:String(ans[i]),max:q.t==="qs"?4:0}))})});
-    (r.results||[]).forEach((x,n)=>{res[pend[n][0]]={score:x.score,why:x.why}});
-    return true;
-  }catch(e){toast(e.message);return false}
-}
-
 // ---------- Lesen ----------
 async function vLesenList(area){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"lesen")}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете, для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам Wörter, от B2 к C1. Задания как на EPD (VWU, 25 баллов): richtig/falsch с Belegsatz, Single-Choice, Kurzantworten, Satzteile, Wer sagt was. Любой текст можно дополнить другими официальными типами (Wortkasten, Paralleltext, Bezugswörter, Umschreibungen): ИИ составит задания, а открытые ответы оценит."} Выдели любое слово, перевод появится прямо у слова.</p>${area==="de"?itemsByTopic(lf(d.texts,area),"lesen","l-"):itemsByLevel(lf(d.texts,area),area,"lesen","l-")}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"lesen")}<h1>Lesen</h1><p class="lead">${area==="frei"?"Тексты обо всём на свете, для удовольствия и живой лексики.":"Тексты в стиле der Standard по темам Wörter, от B2 к C1. Lesen на EPD оценивается в 20 баллов: каждое верное задание 1 балл, наполовину верное 0,5. К каждому тексту есть готовые задания, а сбоку от текста можно выбрать любые типы (Richtig/Falsch/Nicht im Text, Zuordnung, Multiple Choice, Kurzantworten, Lückentext и Satz einfügen с перетаскиванием) и попросить ИИ составить новые."} Выдели любое слово, перевод появится прямо у слова.</p>${area==="de"?itemsByTopic(lf(d.texts,area),"lesen","l-"):itemsByLevel(lf(d.texts,area),area,"lesen","l-")}`);
 }
 function itemsByLevel(arr,area,kind,pref){
   const groups={};[...arr].sort(lvSort).forEach(x=>(groups[x.level||"—"]=groups[x.level||"—"]||[]).push(x));
-  return Object.entries(groups).map(([lv,a])=>`<div class="lvl-h">${esc(lv)}</div><div class="list">${a.map(x=>{const r=get(pref+area+"-"+x.id);return `<a class="item" href="${base(area)}${kind}/${x.id}"><div class="row"><span class="tag lv">${esc(x.level||"")}</span>${x.kind?`<span class="tag">${esc(x.kind)}</span>`:""}${r?`<span class="tag ok">✓ ${r.s}/${r.m}</span>`:""}</div><h3>${esc(x.title)}</h3><p>${esc(x.topic||"")}${x.words?` · ${x.words} слов`:""}${x.minutes?` · ~${x.minutes} мин`:""}</p></a>`}).join("")}</div>`).join("");
+  return Object.entries(groups).map(([lv,a])=>`<div class="lvl-h">${esc(lv)}</div><div class="list">${a.map(x=>{const r=get(pref+area+"-"+x.id);return `<a class="item" href="${base(area)}${kind}/${x.id}"><div class="row"><span class="tag lv">${esc(x.level||"")}</span>${x.kind?`<span class="tag">${esc(x.kind)}</span>`:""}${r?`<span class="tag ok">✓ ${resTxt(r)}</span>`:""}</div><h3>${esc(x.title)}</h3><p>${esc(x.topic||"")}${x.words?` · ${x.words} слов`:""}${x.minutes?` · ~${x.minutes} мин`:""}</p></a>`}).join("")}</div>`).join("");
 }
 // «Strukturen und Wortschatz»: пробный вариант как на экзамене VWU (25 баллов): 5 × Umformen (по 2) + 5 × Satzanfänge fortsetzen (по 3)
 async function vPruefung(){
@@ -1530,77 +1435,120 @@ async function vPruefung(){
     catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" Создать новый вариант"}};
   const o=$("#geOld");if(o)o.onclick=()=>{G=null;start()};
 }
-// виды заданий EPD, которые ИИ добавляет к любому тексту Lesen
-const LKINDS=[["rfb","Richtig / Falsch + Beleg","5 утверждений · 10 б."],["mc3","Single-Choice","6 вопросов · 6 б."],["qs","Kurzantworten","до 4 слов · оценивает ИИ"],["ref","Bezugswörter","на что ссылается слово"],["who","Wer sagt was?","чьё это мнение"],["para","Umschreibungen","найди слово по определению"],["sum","Paralleltext","8 пропусков, слова из текста"],["box","Wortkasten","8 пропусков, 11 слов"],["cl4","Слово a–d","6 пропусков, 4 варианта"]];
-// ---------- Пробный вариант Lesen как на экзамене (VWU): два текста, задания официальных типов, всё генерирует ИИ ----------
+// ---------- Пробный вариант Lesen как на экзамене (VWU): два текста, 20 баллов (по 10 на текст), задания разных типов; тексты и задания пишет ИИ короткими шагами ----------
 async function vLesenExam(){
   header("lesen");setC("var(--c-l)");
   const cfg=get("lexam-cfg",{topic:"",level:"B2"}),p1=get("lexam-1",null),p2=get("lexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
-  const r1=p1&&get("l-de-lex1",null),r2=p2&&get("l-de-lex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
-  const row=(n,p,r)=>p?`<a href="#/lesen/lex${n}"><span><b>Text ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${(p.tasks||[]).length} заданий · ${p.words} слов · ~${p.minutes} мин</small></span><small>${r?`${fmtPts(r.s)}/${fmtPts(r.m)} · пройти снова →`:"начать →"}</small></a>`:"";
+  const r1=p1&&get("l-de-lex1",null),r2=p2&&get("l-de-lex2",null),sc=(r1?r1.p:0)+(r2?r2.p:0),done=(r1?1:0)+(r2?1:0);
+  const row=(n,p,r)=>p?`<a href="#/lesen/lex${n}"><span><b>Text ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${(p.tasks||[]).length} заданий · ${p.words} слов · ~${p.minutes} мин</small></span><small>${r?`${resTxt(r)} · пройти снова →`:"начать →"}</small></a>`:"";
   page(`<h1>Lesen</h1>${tutHTML("pruefung")}
-   <p class="lead">Как на экзамене: два текста в стиле der Standard (по 900–1100 слов), к каждому richtig/falsch с Belegsatz, Single-Choice и Kurzantworten, ко второму ещё Wortkasten и Wer sagt was. Тексты и задания ИИ создаёт заново для каждого варианта. Любой текст можно дополнить другими типами заданий.</p>
+   <p class="lead">Как на экзамене: <b>20 баллов</b>, два текста в стиле der Standard (по 900–1100 слов) и по 10 баллов за каждый. Каждое верное задание — 1 балл, наполовину верное — 0,5; в коротких ответах не по теме или с грубыми ошибками — 0. Типы заданий: Richtig/Falsch/Nicht im Text с Belegsatz, Multiple Choice, Kurzantworten, Zuordnung, Lückentext (перетаскиваешь слова), Satz einfügen (перетаскиваешь предложения в текст). ИИ создаёт тексты и задания заново для каждого варианта.</p>
    <div class="card"><div class="field"><label for="lxT">Темы (необязательно)</label><input id="lxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, образование. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="lxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="lxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
-    <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится до двух минут.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
-   ${p1||p2?`<h2 class="h-sec">Твой вариант${mx?` <small>${fmtPts(sc)} из ${fmtPts(mx)} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-l)">${row(1,p1,r1)}${row(2,p2,r2)}</div>`:""}
-   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-l)"><a href="#/lesen/ai"><span><b>Практика с ИИ: один текст по твоей теме</b></span><small>открыть →</small></a><a href="#/lesen/all"><span><b>Архив старых текстов</b></span><small>открыть →</small></a></div>`);
-  $("#lxGo").onclick=async()=>{const topic=$("#lxT").value.trim(),level=$("#lxL").value,b=$("#lxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ пишет два текста… (до двух минут)';
-    save("lexam-cfg",{topic,level});
+    <div id="lxProg"></div><p class="muted" style="margin:10px 0 0;font-size:13px">Готовится 1–2 минуты: ИИ пишет текст по абзацам и составляет задания.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
+   ${p1||p2?`<h2 class="h-sec">Твой вариант${done?` <small>${fmtPts(sc)} из ${done*10} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-l)">${row(1,p1,r1)}${row(2,p2,r2)}</div>`:""}
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-l)"><a href="#/lesen/ai"><span><b>Практика с ИИ: один текст по твоей теме</b></span><small>открыть →</small></a><a href="#/lesen/all"><span><b>Архив готовых текстов</b></span><small>открыть →</small></a></div>`);
+  $("#lxGo").onclick=async()=>{const topic=$("#lxT").value.trim(),level=$("#lxL").value,b=$("#lxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит два текста…';
+    save("lexam-cfg",{topic,level});const ui=genUI($("#lxProg"));
     const rnd=WT.map(t=>t[1]).sort(()=>Math.random()-.5),tp=[topic||rnd[0],topic?topic+" (другой аспект)":rnd[1]],prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
-    const gen=(t,pv)=>api("/de/aigen",{method:"POST",body:JSON.stringify({module:"lesen",topic:t,level,diff:0,mode:"new",prev:pv})});
     try{
-      const [a,c]=await Promise.all([gen(tp[0],prev),gen(tp[1],prev)]);
-      // второй текст дополняем Wortkasten и Wer sagt was (как на экзамене)
-      const more=await Promise.all(["box","who"].map(kind=>api("/de/ltasks",{method:"POST",body:JSON.stringify({kind,paras:c.paras})}).then(r=>r.tasks||[]).catch(()=>[])));
-      a.id="lex1";a.src="Probe-Text 1 · "+a.src;c.id="lex2";c.src="Probe-Text 2 · "+c.src;c.tasks=c.tasks.concat(...more);
-      save("lexam-1",a);save("lexam-2",c);save("l-de-lex1",null);save("l-de-lex2",null);save("lx-de-lex1",null);save("lx-de-lex2",null);vLesenExam()}
-    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
+      const a=await genLesen(tp[0],level,0,prev,(m,f)=>ui.set("Текст 1 из 2 · "+m,f*.5),["rfb","mc3","qs"]);
+      const c=await genLesen(tp[1],level,0,prev.concat(a.title),(m,f)=>ui.set("Текст 2 из 2 · "+m,.5+f*.5),["tf","head","box"]);
+      const sx=localSent(c.paras,foreignSents((await data("de","lesen")).texts||[],"lex2",2));if(sx)c.tasks.push({...sx,gid:++GID});
+      a.id="lex1";a.src="Probe-Text 1 · "+a.src;c.id="lex2";c.src="Probe-Text 2 · "+c.src;
+      save("lexam-1",a);save("lexam-2",c);["l-de-lex1","l-de-lex2","lx-de-lex1","lx-de-lex2","ld-de-lex1","ld-de-lex2","lsel-de-lex1","lsel-de-lex2"].forEach(k=>save(k,null));ui.done();vLesenExam()}
+    catch(e){ui.done();$("#lxProg").innerHTML=`<div class="card" style="border-left:5px solid var(--bad);margin-top:10px">${esc(e.message)}</div>`;b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
+}
+// результат Lesen хранится как {s,m,p,...}: p — баллы по шкале Lesen (из 20, в пробном варианте из 10 на текст)
+const resTxt=r=>r?(r.p!=null?`${fmtPts(r.p)}/${r.sc||20}`:`${fmtPts(r.s)}/${fmtPts(r.m)}`):"";
+function unlogDone(kind,val){const L=get("log",{});let hit=0;Object.keys(L).forEach(d=>{const a=L[d]&&L[d][kind];if(Array.isArray(a)){const i=a.indexOf(val);if(i>=0){a.splice(i,1);hit++}}});if(hit){save("log",L);save("xp",Math.max(0,(+get("xp",0)||0)-(XP_PER[kind]||0)))}}
+// удалить результат: баллы, ответы, отметка в плане дня и ошибки этого задания пропадают (маркер и свои задания от ИИ остаются)
+function delResult(k,area,id){
+  const pref=MODX[k][2];
+  save(pref+area+"-"+id,null);save((k==="lesen"?"ld-":"hd-")+area+"-"+id,null);
+  unlogDone(k==="lesen"?"l":"h",area+":"+id);
+  if(area==="de")save(ERRK(k),errList(k).filter(x=>x.ref!==id));
 }
 async function vLesen(area,id){
   header(area==="frei"?"frei":"lesen");setC(area==="frei"?"var(--c-f)":"var(--c-l)");
   const d=await data(area,"lesen"),t=(d.texts||[]).find(x=>x.id===id);
   if(!t){page('<div class="empty">Текст не найден</div>');return}
-  const key="l-"+area+"-"+id,xk="lx-"+area+"-"+id,dk="ld-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("lesen",id);
+  const key="l-"+area+"-"+id,xk="lx-"+area+"-"+id,dk="ld-"+area+"-"+id,sk="lsel-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("lesen",id);
+  const EXLEX=/^lex[12]$/.test(id),SCALE=EXLEX?10:20;
   let extra=((get(xk,null)||{}).tasks)||[];
   const T=()=>t.tasks.concat(extra);
   let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):(!prev&&(get(dk,null)||{}).ans?JSON.parse(JSON.stringify(get(dk).ans)):[]),res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev;
   const canAdd=area==="de"&&!!(ST.keys&&ST.keys.anthropic);
   HLMODE="tr";
   const hKey=hlKey(area,id,t),hList=get(hKey,null)||[];
+  // какие блоки заданий включены (сбоку от текста); по умолчанию все, что есть
+  let sel=get(sk,null);
+  const present=()=>{const m={};T().forEach((q,i)=>{(m[blockOf(q)]=m[blockOf(q)]||[]).push(i)});return m};
+  const selOn=b=>!sel||sel.includes(b);
+  // активные задания: все выбранные; из «Satz einfügen» показываем одно, самое новое (у каждого свой вариант пропусков в тексте)
+  const active=()=>{const m=present(),o=[];LBLK.forEach(([b])=>{if(!m[b]||!selOn(b))return;if(b==="si")o.push(m[b][m[b].length-1]);else o.push(...m[b])});return o};
+  const sentIdx=()=>active().find(i=>T()[i].t==="sent");
   page(`${crumb(base(area)+"lesen","Lesen")}
   <div class="ltools">${hlBarHTML()}${timerHTML()}</div>
-  <div class="reader" style="margin-top:10px">
+  <div class="reader" id="reader" style="margin-top:10px">
     <article class="article" id="art"><div class="kicker">${esc(t.kicker||t.topic||"")}</div><h1>${esc(t.title)}</h1>${t.lead?`<p class="alead">${esc(t.lead)}</p>`:""}<div class="meta">${esc(t.src||"")} · ${esc(t.level)} · ${t.words||""} слов · ~${t.minutes||15} мин</div>
-      ${(t.paras||[]).map((p,i)=>`<p class="pa" data-i="${i}"><span class="pn">${i+1}</span>${gapsHTML(esc(p))}</p>`).join("")}</article>
+      <div id="paras"></div></article>
     <aside class="side" id="side">
       ${area==="de"?howtoHTML("lesen"):""}
       <div class="wordbox"><div class="ph">Выдели слово или фразу в тексте (двойной клик), перевод DeepL появится прямо у слова.</div></div>
-      <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px" id="tcnt"></span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" ${checked?"":"hidden"}>Пройти заново</button></div>
+      <div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px" id="tcnt"></span></div>
+        <div class="tpick" id="tpick"></div><div id="score"></div><div id="tq"></div>
+        <div class="row" style="margin-top:10px"><button class="btn primary" id="lcheck">Проверить</button><button class="btn sm" id="lreset" hidden>Пройти заново</button><button class="btn sm" id="ldel" hidden title="Убрать результат из прогресса">${ic("x",14)} Удалить результат</button></div>
         ${area==="de"?`<div class="xadd" id="xadd"></div>`:""}</div>
       <div class="wordbox"><b style="font-size:14px">Слова из этого текста</b><div class="vlist"><div><span>пока пусто</span></div></div></div>
     </aside>
   </div>`);
+  const reader=$("#reader");
   bindLookup($("#art"),$("#side"));
-  bindMarker($("#art"),hKey,hList);bindTimer();
+  const hlRedraw=bindMarker($("#art"),hKey,hList);bindTimer();
+  const persist=()=>save(dk,{ans});
+  const drawArt=()=>{const si=sentIdx(),st=si!=null?T()[si]:null;
+    $("#paras").innerHTML=artParasHTML(st&&st.paras2?st.paras2:t.paras,st,si,ans,checked);if(hlRedraw)hlRedraw()};
+  const drawPick=()=>{const m=present();
+    $("#tpick").innerHTML=LBLK.filter(([b])=>m[b]).map(([b,n,sub])=>{const on=selOn(b),ai=m[b].some(i=>T()[i].src==="ai"||T()[i].src==="local");
+      return `<button type="button" class="bchip${on?" on":""}" data-b="${b}" ${checked?"disabled":""} title="${esc(sub)}"><i class="bck">${on?ic("check",13):""}</i><span>${esc(n)}</span><em>${m[b].reduce((k,i)=>k+taskCount(T()[i]),0)}</em>${ai?`<s class="aitag">${ic("spark",11)}</s>`:""}</button>`}).join("")||'<p class="muted" style="font-size:13px">У этого текста пока нет заданий. Добавь их ниже.</p>';
+    $$(".bchip").forEach(b=>b.onclick=()=>{const k=b.dataset.b,all=Object.keys(present());let cur=sel||all;cur=cur.includes(k)?cur.filter(x=>x!==k):cur.concat(k);if(!cur.length){toast("Оставь хотя бы один тип заданий");return}sel=cur.length===all.length?null:cur;save(sk,sel);draw()})};
   const drawX=()=>{const box=$("#xadd");if(!box)return;
-    box.innerHTML=`<div class="xh"><b>Задания как на EPD</b><span class="muted">ИИ добавит официальные типы к этому тексту${extra.length?` · добавлено ${extra.length}`:""}</span></div>
-      ${canAdd?`<div class="xk">${LKINDS.map(([k,n,sub])=>`<button class="btn sm" data-xk="${k}" title="${esc(sub)}">${esc(n)}</button>`).join("")}</div>${extra.length?`<button class="btn sm" id="xclear" style="margin-top:8px">Убрать добавленные</button>`:""}`:`<p class="muted" style="margin:6px 0 0;font-size:13px">Нужен ключ Claude (Настройки).</p>`}`;
-    $$("[data-xk]").forEach(b=>b.onclick=async()=>{const kd=b.dataset.xk,label=b.textContent;$$("[data-xk]").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> '+esc(label);
-      try{const r=await api("/de/ltasks",{method:"POST",body:JSON.stringify({kind:kd,paras:t.paras})});extra=extra.concat(r.tasks||[]);save(xk,{tasks:extra});checked=false;draw()}
-      catch(e){toast(e.message);drawX()}});
-    const xc=$("#xclear");if(xc)xc.onclick=()=>{extra=[];save(xk,{tasks:[]});ans.length=Math.min(ans.length,t.tasks.length);Object.keys(res).forEach(k=>{if(+k>=t.tasks.length)delete res[k]});checked=false;draw()};
+    const btn=(b,label)=>`<button class="btn sm" data-xb="${b}" ${b==="lt:local"||b==="si"||canAdd?"":"disabled"}>${esc(label)}</button>`;
+    box.innerHTML=`<div class="xh"><b>Ещё задания</b><span class="muted">ИИ придумает не меньше 8 заданий нужного типа${canAdd?"":" (нужен ключ Claude в настройках; «Satz einfügen» и «Lückentext из текста» работают без него)"}${extra.length?` · добавлено ${extra.length}`:""}</span></div>
+      <div class="xk">${LBLK.map(([b,n])=>btn(b,n)).join("")}${btn("lt:local","Lückentext из текста")}</div>
+      <details class="xmore"><summary>Другие типы EPD</summary><div class="xk">${LKINDS_MORE.map(([k,n,sub])=>`<button class="btn sm" data-xk="${k}" title="${esc(sub)}" ${canAdd?"":"disabled"}>${esc(n)}</button>`).join("")}</div></details>
+      ${extra.length?`<button class="btn sm" id="xclear" style="margin-top:8px">Убрать добавленные</button>`:""}`;
+    const add=async(b,label,fn)=>{$$("[data-xb],[data-xk]").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> '+esc(label);
+      try{const list=await fn();extra=extra.concat(list);save(xk,{tasks:extra});const bl=[...new Set(list.map(blockOf))];if(sel)sel=[...new Set(sel.concat(bl))];save(sk,sel);checked=false;draw();toast("Добавлено заданий: "+list.length)}
+      catch(e){toast(e.message);drawX()}};
+    $$("[data-xb]").forEach(b=>b.onclick=()=>{const k=b.dataset.xb,label=b.textContent;
+      if(k==="lt:local")return add(b,label,async()=>{const x=localBox(t.paras,extra.length+hashStr(id)%7);if(!x)throw new Error("Из этого текста не получилось собрать Lückentext");x.gid=++GID;return [x]});
+      if(k==="si"&&!canAdd)return add(b,label,async()=>{const x=localSent(t.paras,foreignSents(d.texts||[],id,2));if(!x)throw new Error("В этом тексте нельзя убрать предложения: пропуски уже есть или он короткий");x.gid=++GID;return [x]});
+      add(b,label,()=>genBlockTasks(k,t.paras,d.texts,id))});
+    $$("[data-xk]").forEach(b=>b.onclick=()=>{const kd=b.dataset.xk,label=b.textContent;add(b,label,async()=>{const r=await post("/de/ltasks",{kind:kd,paras:t.paras});const g=++GID;return (r.tasks||[]).map(x=>({...x,src:"ai",gid:g}))})});
+    const xc=$("#xclear");if(xc)xc.onclick=()=>{extra=[];save(xk,{tasks:[]});sel=null;save(sk,null);ans.length=Math.min(ans.length,t.tasks.length);Object.keys(res).forEach(k=>{if(+k>=t.tasks.length)delete res[k]});checked=false;draw()};
   };
-  const draw=()=>{const tasks=T();$("#tq").innerHTML=tasksHTML(tasks,ans,checked,res);if(!checked)bindTasks($("#tq"),tasks,ans,draw,()=>save(dk,{ans}));
-    const [s,m]=taskScore(tasks,ans,res);$("#tcnt").textContent=`${tasks.length} шт. · ${fmtPts(m)} б.`;
-    if(checked){$("#score").innerHTML=`<div class="score"><b>${fmtPts(s)}/${fmtPts(m)}</b><span>${m?`≈ ${fmtPts(Math.round(s/m*25*2)/2)} из 25 по шкале Lesen. `:""}${s/m>=.8?"Отлично!":s/m>=.48?"Порог пройден: на экзамене нужно минимум 12 из 25.":"Ниже порога (12 из 25). Перечитай абзацы с ошибками."}</span></div>`;
-      $$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,tasks,ans,res);draw()})}
+  const draw=()=>{const tasks=T(),idx=active();
+    reader.dataset.locked=checked?"1":"0";
+    $("#tq").innerHTML=tasksHTML(tasks,ans,checked,res,{idx,group:true});
+    if(!checked){bindTasks($("#tq"),tasks,ans,draw,persist)}
+    const [s,m]=taskScore(tasks,ans,res,idx),p=norm20(s,m)*SCALE/20;
+    $("#tcnt").textContent=`${idx.length} ${plural(idx.length,"задание","задания","заданий")} · ${fmtPts(m)} б.`;
+    if(checked){$("#score").innerHTML=`<div class="score"><b>${fmtPts(p)}/${SCALE}</b><span>${fmtPts(s)} из ${fmtPts(m)} пунктов${SCALE===20?" → шкала Lesen: 20 баллов":""}. ${m?(s/m>=.8?"Отлично!":s/m>=.5?"Зачёт: набрано больше половины баллов.":"Меньше половины баллов. Перечитай абзацы с ошибками."):""}</span></div>`;
+      $$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res,idx);save(key,{s:s2,m:m2,p:norm20(s2,m2)*SCALE/20,sc:SCALE,ans,res,d:today(),sel});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,tasks,ans,res);draw()})}
     else $("#score").innerHTML="";
-    $("#lcheck").hidden=checked;$("#lreset").hidden=!checked;drawX()};
+    $("#lcheck").hidden=checked;$("#lreset").hidden=!checked;$("#ldel").hidden=!(checked||prev||get(key,null));
+    drawArt();drawPick();drawX()};
+  bindDnd(reader,()=>T(),()=>ans,()=>draw(),persist);
   draw();
-  $("#lcheck").onclick=async()=>{const b=$("#lcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
-    checked=true;await gradeOpen(T(),ans,res,t.paras);const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today(),ts:Math.floor(Date.now()/1000),sec:tmSec()});if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,T(),ans,res);logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
+  $("#lcheck").onclick=async()=>{const b=$("#lcheck"),idx=active();b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';
+    checked=true;await gradeOpen(T(),ans,res,t.paras,idx);const [s,m]=taskScore(T(),ans,res,idx);
+    save(key,{s,m,p:norm20(s,m)*SCALE/20,sc:SCALE,ans,res,d:today(),ts:Math.floor(Date.now()/1000),sec:tmSec(),sel});
+    if(area==="de")logTaskErrors("lesen",id,t.title,"#/lesen/"+id,T(),ans,res);logDone("l",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();$("#score").scrollIntoView({behavior:"smooth",block:"nearest"})};
   $("#lreset").onclick=()=>{checked=false;ans=[];res={};save(dk,null);draw()};
+  $("#ldel").onclick=()=>{if(!confirm("Удалить результат этого текста? Баллы, ответы и ошибки из этого задания пропадут из прогресса."))return;
+    delResult("lesen",area,id);checked=false;ans=[];res={};toast("Результат удалён");draw()};
 }
 
 // ---------- Hören ----------
@@ -1615,92 +1563,116 @@ async function vLesenMine(){
   const ago=n=>{const k=today()-n;return k<=0?"сегодня":k===1?"вчера":k+" "+plural(k,"день","дня","дней")+" назад"};
   const date=n=>new Date(n*864e5).toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
   const mmss=sec=>sec?" · "+tmFmt(sec*1000):"";
-  page(`${crumb("#/lesen","Lesen")}<h1>Мои тексты</h1><p class="lead">Здесь остаётся всё, что ты делал в Lesen: результат проверки, ответы и слова с оборотами, которые выделил маркером. Нажми на текст, чтобы вернуться к нему: выделения на месте.</p>
-   ${rows.length?`<div class="list" style="grid-template-columns:1fr">${rows.map(({t,r,hl,day})=>`<a class="item" href="#/lesen/${t.id}" style="min-height:0"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${r?`<span class="tag ok">✓ ${fmtPts(r.s)}/${fmtPts(r.m)}${mmss(r.sec)}</span>`:""}<span class="tag">${ago(day)} · ${date(day)}</span></div><h3>${esc(t.title)}</h3>
-     ${hl.length?`<div class="mine-l">${hl.slice().sort((a,b)=>a.p-b.p||a.s-b.s).slice(0,12).map(h=>`<mark class="hl hl-${h.c}">${esc(h.t.length>60?h.t.slice(0,58)+"…":h.t)}</mark>`).join("")}${hl.length>12?`<small class="muted">и ещё ${hl.length-12}</small>`:""}</div>`:`<p>выделений нет</p>`}</a>`).join("")}</div>`:`<div class="empty">Пока пусто. Открой любой текст: когда проверишь ответы или выделишь слова маркером, он появится здесь.</div>`}`);
+  page(`${crumb("#/lesen","Lesen")}<h1>Мои тексты</h1><p class="lead">Здесь остаётся всё, что ты делал в Lesen: результат проверки, ответы и слова с оборотами, которые выделил маркером. Нажми на текст, чтобы вернуться к нему: выделения на месте. Если случайно отправил текст на проверку и результат испортил статистику, нажми «Удалить результат»: баллы и ошибки из этого задания пропадут.</p>
+   ${rows.length?`<div class="list" style="grid-template-columns:1fr">${rows.map(({t,r,hl,day})=>`<div class="mine-row"><a class="item" href="#/lesen/${t.id}" style="min-height:0"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${r?`<span class="tag ok">✓ ${resTxt(r)}${mmss(r.sec)}</span>`:""}<span class="tag">${ago(day)} · ${date(day)}</span></div><h3>${esc(t.title)}</h3>
+     ${hl.length?`<div class="mine-l">${hl.slice().sort((a,b)=>a.p-b.p||a.s-b.s).slice(0,12).map(h=>`<mark class="hl hl-${h.c}">${esc(h.t.length>60?h.t.slice(0,58)+"…":h.t)}</mark>`).join("")}${hl.length>12?`<small class="muted">и ещё ${hl.length-12}</small>`:""}</div>`:`<p>выделений нет</p>`}</a>
+     <div class="mine-act">${r?`<button class="btn sm" data-dr="${t.id}">${ic("x",14)} Удалить результат</button>`:""}${hl.length?`<button class="btn sm" data-dh="${t.id}">Стереть выделения</button>`:""}</div></div>`).join("")}</div>`:`<div class="empty">Пока пусто. Открой любой текст: когда проверишь ответы или выделишь слова маркером, он появится здесь.</div>`}`);
+  $$("[data-dr]").forEach(b=>b.onclick=()=>{if(!confirm("Удалить результат этого текста? Баллы, ответы и ошибки из этого задания пропадут из прогресса."))return;delResult("lesen","de",b.dataset.dr);toast("Результат удалён");vLesenMine()});
+  $$("[data-dh]").forEach(b=>b.onclick=()=>{if(!confirm("Стереть все выделения в этом тексте?"))return;const t=texts.find(x=>x.id===b.dataset.dh);save(hlKey("de",t.id,t),[]);vLesenMine()});
 }
 async function vHoerenList(area){
   header(area==="frei"?"frei":"hoeren");setC(area==="frei"?"var(--c-f)":"var(--c-h)");
   const d=await data(area,"hoeren");
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"hoeren")}<h1>Hören</h1><p class="lead">${area==="frei"?"Живые разговоры: кафе, вечеринка, подкаст, жалобы соседа.":"Радиорепортажи, интервью, доклады и дискуссии. На экзамене текст звучит дважды: сначала только заметки, потом ответы."} ${ST.keys.openai?"Голоса, нейросетевые (OpenAI), каждое аудио генерируется один раз и сохраняется.":"Сейчас звучит голос браузера. Добавь ключ OpenAI в настройках, будут живые голоса."}</p>${area==="de"?itemsByTopic(lf(d.items,area),"hoeren","h-"):itemsByLevel(lf(d.items,area),area,"hoeren","h-")}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"hoeren")}<h1>Hören</h1><p class="lead">${area==="frei"?"Живые разговоры: кафе, вечеринка, подкаст, жалобы соседа.":"Радиорепортажи, интервью, доклады и дискуссии, каждая запись звучит 7–9 минут. Два задания, 15 баллов: Aufgabe 1 (7 вопросов, ответ A, B, C или D) и Aufgabe 2 (конспект, куда вписываешь услышанные слова). На экзамене запись звучит дважды."} ${ST.keys.openai?"Голоса нейросетевые (OpenAI), каждое аудио генерируется один раз и сохраняется.":"Сейчас звучит голос браузера. Добавь ключ OpenAI в настройках, будут живые голоса."}</p>${area==="de"?itemsByTopic(lf(d.items,area),"hoeren","h-"):itemsByLevel(lf(d.items,area),area,"hoeren","h-")}`);
 }
-// ---------- Пробный вариант Hören как на экзамене: Teil 1 (7 коротких записей, вопросы a–d) и Teil 2 (запись и конспект, 8 пропусков) ----------
+// ---------- Пробный вариант Hören как на экзамене: одна запись на 7–9 минут и два задания (вопросы A–D и конспект), 15 баллов ----------
 async function vHoerenExam(){
   header("hoeren");setC("var(--c-h)");
-  const cfg=get("hexam-cfg",{topic:"",level:"B2"}),p1=get("hexam-1",null),p2=get("hexam-2",null),can=!!(ST.keys&&ST.keys.anthropic);
-  const r1=p1&&get("h-de-ex1",null),r2=p2&&get("h-de-ex2",null),sc=(r1?r1.s:0)+(r2?r2.s:0),mx=(r1?r1.m:0)+(r2?r2.m:0);
-  const row=(n,p,r,what)=>p?`<a href="#/hoeren/ex${n}"><span><b>Teil ${n}: ${esc(p.title)}</b><br><small style="font-weight:400">${what} · ~${p.minutes} мин · ${p.words} слов</small></span><small>${r?`${r.s}/${r.m} · пройти снова →`:"начать →"}</small></a>`:"";
+  const cfg=get("hexam-cfg",{topic:"",level:"B2"}),p1=get("hexam-1",null),can=!!(ST.keys&&ST.keys.anthropic);
+  const r1=p1&&p1.ver===2?get("h-de-ex1",null):null;
+  const row=p=>p?`<a href="#/hoeren/ex1"><span><b>${esc(p.title)}</b><br><small style="font-weight:400">${esc(p.kind||"")} · ~${p.minutes} мин · ${p.words} слов · 2 задания, 15 баллов</small></span><small>${r1?`${fmtPts(r1.s)}/${fmtPts(r1.m)} · пройти снова →`:"начать →"}</small></a>`:"";
   page(`<h1>Hören</h1>${tutHTML("pruefung")}
-   <p class="lead">Задания как на экзамене, 15 вопросов, каждый вариант ИИ создаёт заново.  Teil 1: семь коротких записей на разные темы, к каждой вопрос с вариантами a–d («о чём говорится»). Teil 2: одна запись на 7–8 минут и конспект, в который нужно вписать услышанные слова (8 пропусков). Каждую запись слушаешь дважды. Ответы можно проверить, а текст записи открывается после проверки.</p>
-   <div class="card"><div class="field"><label for="hxT">Темы (необязательно)</label><input id="hxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, экология. Пусто: ИИ выберет сам" autocomplete="off"></div>
+   <p class="lead">Как на экзамене: <b>15 баллов</b>, одна запись на 7–9 минут и только два задания. Aufgabe 1: 7 вопросов с ответами A, B, C или D. Aufgabe 2: конспект (Notizen), в который нужно вписать слова, которые ты слышишь (по одному-два слова в каждый из 8 пропусков). Запись слушаешь дважды. Каждый вариант ИИ создаёт заново.</p>
+   <div class="card"><div class="field"><label for="hxT">Тема (необязательно)</label><input id="hxT" value="${esc(cfg.topic)}" maxlength="200" placeholder="например: жильё, работа, экология. Пусто: ИИ выберет сам" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="hxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="hxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
-    <p class="muted" style="margin:10px 0 0;font-size:13px">ИИ готовит обе части сразу, это занимает до минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
-   ${p1||p2?`<h2 class="h-sec">${p1||p2?"Твой вариант":""}${mx?` <small>${fmtPts(sc)} из ${mx} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-h)">${row(1,p1,r1,"7 вопросов a–d")}${row(2,p2,r2,"8 пропусков")}</div>`:""}
-   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-h)"><a href="#/hoeren/ai"><span><b>Практика с ИИ: одна запись по твоей теме</b></span><small>открыть →</small></a><a href="#/hoeren/all"><span><b>Архив старых записей</b></span><small>открыть →</small></a></div>`);
-  $("#hxGo").onclick=async()=>{const topic=$("#hxT").value.trim(),level=$("#hxL").value,b=$("#hxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит обе части… (до минуты)';
-    save("hexam-cfg",{topic,level});
-    const prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
-    try{const [a,c]=await Promise.all([1,2].map(part=>api("/de/hexam",{method:"POST",body:JSON.stringify({part,topic,level,prev})})));
-      save("hexam-1",a);save("hexam-2",c);save("h-de-ex1",null);save("h-de-ex2",null);vHoerenExam()}
-    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
+    <div id="hxProg"></div><p class="muted" style="margin:10px 0 0;font-size:13px">Готовится около минуты: ИИ пишет запись по блокам и составляет задания.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
+   ${p1?`<h2 class="h-sec">Твой вариант</h2><div class="aihist" style="--c:var(--c-h)">${row(p1)}</div>`:""}
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-h)"><a href="#/hoeren/ai"><span><b>Практика с ИИ: одна запись по твоей теме</b></span><small>открыть →</small></a><a href="#/hoeren/all"><span><b>Архив готовых записей</b></span><small>открыть →</small></a></div>`);
+  $("#hxGo").onclick=async()=>{const topic=$("#hxT").value.trim(),level=$("#hxL").value,b=$("#hxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит запись…';
+    save("hexam-cfg",{topic,level});const ui=genUI($("#hxProg"));
+    try{const a=await genHoeren(topic,level,0,p1?[p1.title]:[],ui.set);a.id="ex1";a.ver=2;a.kind=a.kind||"Hörverstehen";
+      save("hexam-1",a);save("hexam-2",null);["h-de-ex1","h-de-ex2","hd-de-ex1","hx-de-ex1"].forEach(k=>save(k,null));ui.done();vHoerenExam()}
+    catch(e){ui.done();$("#hxProg").innerHTML=`<div class="card" style="border-left:5px solid var(--bad);margin-top:10px">${esc(e.message)}</div>`;b.disabled=false;b.innerHTML=ic("spark",16)+" "+(p1?"Новый вариант":"Создать вариант")}};
 }
+const fmtClock=sec=>{sec=Math.max(0,Math.round(sec||0));return Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0")};
 async function vHoeren(area,id){
   header(area==="frei"?"frei":"hoeren");setC(area==="frei"?"var(--c-f)":"var(--c-h)");
   const d=await data(area,"hoeren"),it=(d.items||[]).find(x=>x.id===id);
   if(!it){page('<div class="empty">Аудио не найдено</div>');return}
-  const key="h-"+area+"-"+id,dk="hd-"+area+"-"+id,prev=get(key);if(area==="de")touchRecent("hoeren",id);
+  const key="h-"+area+"-"+id,dk="hd-"+area+"-"+id,EXAMIT=id==="ex1",LIVE=id==="ai"||EXAMIT;
+  // записи в новом формате (ver 2: два задания, 15 баллов) не сравниваем со старыми ответами
+  const prev0=get(key),prev=prev0&&(it.ver?prev0.v===it.ver:true)?prev0:null;if(area==="de")touchRecent("hoeren",id);
   let ans=prev&&prev.ans?JSON.parse(JSON.stringify(prev.ans)):(!prev&&(get(dk,null)||{}).ans?JSON.parse(JSON.stringify(get(dk).ans)):[]),res=prev&&prev.res?JSON.parse(JSON.stringify(prev.res)):{},checked=!!prev,plays=0,showScript=!!prev;
   const names=it.voices||{};
-  // дополнительные вопросы от ИИ хранятся отдельно; у записи от ИИ (id "ai") ключ привязан к названию
-  const xk="hx-"+area+"-"+id+(id==="ai"?":"+(it.title||""):""),EXAMIT=/^ex[12]$/.test(id),LIVE=id==="ai"||EXAMIT;
-  let extra=((get(xk,null)||{}).tasks)||[];
-  const T=()=>(it.tasks||[]).concat(extra);
-  const canAdd=!!(ST.keys&&ST.keys.anthropic);
+  // «новые задания» (ИИ) хранятся отдельно и заменяют оба задания записи
+  const xk="hx-"+area+"-"+(id==="ai"?"ai-"+hlSlug(it.title):id);
+  let ov=((get(xk,null)||{}).tasks)||null;
+  const T=()=>ov||it.tasks||[];
+  const canAdd=area==="de"&&!!(ST.keys&&ST.keys.anthropic)&&(it.lines||[]).length>6;
+  const mins=it.minutes||Math.round((it.words||0)/145);
   page(`${crumb(EXAMIT?"#/hoeren/pruefung":base(area)+"hoeren",EXAMIT?"Пробный вариант":"Hören")}<h1>${esc(it.title)}</h1><p class="lead">${esc(it.intro||"")}</p>
-   <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене, два прослушивания"><i></i><i></i></div></div></div>
-   <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button></div><div class="xadd" id="xadd"></div></div>
+   <div class="player" id="pl"><button class="pbtn" id="play" aria-label="Слушать">${playIcon()}</button><div class="pinfo"><b>${esc(it.kind||"Audio")} · ${esc(it.level||"")}${mins?` · ≈ ${mins} мин`:""}</b><small id="pst">${ST.keys.openai?"Нажми, чтобы слушать (первый раз запись готовится, потом звучит сразу)":"Голос браузера · добавь ключ OpenAI для живых голосов"}</small><div class="wave">${Array.from({length:40},(_,i)=>`<i style="animation-delay:${(i%7)*.09}s"></i>`).join("")}</div></div><div><div class="plays" title="На экзамене запись звучит два раза"><i></i><i></i></div></div></div>
+   <div class="reader"><div><div class="tasks"><div class="row" style="justify-content:space-between"><b>Задания</b><span class="muted" style="font-size:12.5px">отвечай после второго прослушивания</span></div><div id="score"></div><div id="tq"></div><div class="row" style="margin-top:10px"><button class="btn primary" id="hcheck">Проверить</button><button class="btn sm" id="hreset">Заново</button><button class="btn sm" id="hscript">${showScript?"Скрыть текст":"Показать текст"}</button><button class="btn sm" id="hdel" hidden>${ic("x",14)} Удалить результат</button></div>
+       ${canAdd?`<div class="xadd" id="xadd"></div>`:""}</div>
      <div class="script" id="script" style="margin-top:16px" ${showScript?"":"hidden"}>${(it.lines||[]).map(([s,tx])=>`<p><b>${esc((names[s]||{}).name||s)}</b>${esc(tx)}</p>`).join("")}</div></div>
-   <aside class="side" id="side">${area==="de"?howtoHTML("hoeren"):""}<div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте, перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
+    <aside class="side" id="side">${area==="de"?howtoHTML("hoeren"):""}<div class="wordbox"><div class="ph">Выделяй незнакомые слова в тексте, перевод появится прямо у слова.</div></div><div class="wordbox"><b style="font-size:14px">Слова</b><div class="vlist"><div><span>пока пусто</span></div></div></div></aside></div>`);
   bindLookup($("#script"),$("#side"));
-  let playing=false,stopFlag=false;
+  let playing=false,stopFlag=false,ready=null;
   const setPlays=()=>$$(".plays i").forEach((x,i)=>x.classList.toggle("used",i<plays));
-  // запись от ИИ не лежит на сервере целиком: озвучиваем реплики по одной (голоса OpenAI, кэш по тексту) или голосом браузера
-  async function playAI(){
-    const L=it.lines||[],U={},vm={};let vi=0;
-    const want=i=>U[i]||(U[i]=(ST.keys.openai&&L[i]?api("/de/tts",{method:"POST",body:JSON.stringify({text:L[i][1],voice:(names[L[i][0]]||{}).voice,style:(names[L[i][0]]||{}).style})}).then(r=>r.url||null).catch(()=>null):Promise.resolve(null)));
-    for(let i=0;i<L.length&&!stopFlag;i++){
-      const [s,tx]=L[i];if(i===0)$("#pst").innerHTML='<span class="spin"></span> Готовлю голос…';
-      const u=await want(i);want(i+1);if(stopFlag)break;
-      $("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");
-      if(u){const a=new Audio(u);curAudio=a;await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
-      else{if(vm[s]==null)vm[s]=vi++;await browserSay(tx,vm[s])}
-    }
+  // готовый звук: запись целиком одним файлом (куски озвучиваются на сервере по несколько секунд и кэшируются)
+  async function fetchAudio(){
+    if(!ST.keys.openai)return {fallback:true};
+    $("#pst").innerHTML='<span class="spin"></span> Готовлю голоса… (первый раз до нескольких минут, потом мгновенно)';
+    try{
+      for(let n=0;n<120&&!stopFlag;n++){
+        const r=await apiR(LIVE?"/de/audiolines":"/de/audio/"+area+"/"+id,{method:"POST",body:LIVE?JSON.stringify({lines:it.lines,voices:names}):undefined},2);
+        if(r.nokey)return {fallback:true};
+        if(!r.pending&&r.url)return {url:r.url};
+        $("#pst").innerHTML='<span class="spin"></span> Готовлю голоса… '+Math.round((r.done||0)/Math.max(1,r.total||1)*100)+" %";
+      }
+    }catch(e){return {fallback:true,reason:e.message}}
+    return {fallback:true,reason:stopFlag?"":"озвучка заняла слишком много времени"};
+  }
+  const finishUI=()=>{playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз"};
+  async function playFile(a){
+    curAudio=a;a.ontimeupdate=()=>{$("#pst").textContent="Слушаем… "+fmtClock(a.currentTime)+" / "+fmtClock(a.duration)+" "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)")};
+    try{await a.play()}catch(e){ready=a;playing=false;plays=Math.max(0,plays-1);setPlays();$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();$("#pst").textContent="Звук готов: нажми ▶, чтобы начать";return false}
+    await new Promise(ok=>{a.onended=ok;a.onerror=()=>{toast("Не получилось воспроизвести файл звука. Включаю голос браузера");ok()};a.onpause=()=>{if(stopFlag)ok()}});
+    return true;
   }
   $("#play").onclick=async()=>{
-    if(playing){stopFlag=true;stopAudio();playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();return}
+    if(playing){stopFlag=true;stopAudio();finishUI();return}
+    if(ready){const a=ready;ready=null;playing=true;stopFlag=false;plays++;setPlays();$("#pl").classList.add("playing");$("#play").innerHTML=pauseIcon();await playFile(a);finishUI();return}
     playing=true;stopFlag=false;$("#pl").classList.add("playing");$("#play").innerHTML=pauseIcon();plays++;setPlays();
-    let url=null;if(LIVE)await playAI();
-    if(ST.keys.openai&&!LIVE){$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… (первый раз до минуты, потом мгновенно)';try{let r;for(let n=0;n<60&&!stopFlag;n++){r=await api("/de/audio/"+area+"/"+id,{method:"POST"});if(!r.pending)break;$("#pst").innerHTML='<span class="spin"></span> Готовлю аудио… '+r.done+" из "+r.total}url=r&&r.url}catch(e){toast(e.message)}}
-    if(url&&!stopFlag){const a=new Audio(url);curAudio=a;$("#pst").textContent="Слушаем… "+(plays===1?"(первое прослушивание, только заметки)":"(второе, отвечай)");await a.play().catch(()=>{});await new Promise(ok=>{a.onended=ok;a.onerror=ok;a.onpause=()=>{if(stopFlag)ok()}})}
-    else if(!stopFlag&&!LIVE){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)…";for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
-    playing=false;$("#pl").classList.remove("playing");$("#play").innerHTML=playIcon();if(!stopFlag)$("#pst").textContent=plays>=2?"Прослушано дважды, проверь ответы":"Можно прослушать ещё раз";
+    const r=await fetchAudio();
+    if(stopFlag){finishUI();return}
+    if(r.url){const ok=await playFile(new Audio(r.url));if(ok===false)return;
+      if(!stopFlag&&curAudio&&curAudio.error){/* файл не заиграл: ниже голос браузера */}else{finishUI();return}}
+    if(r.reason)toast("Озвучка OpenAI недоступна: "+r.reason+". Играет голос браузера");
+    if(!stopFlag){const vmap={};let vi=0;$("#pst").textContent="Слушаем (голос браузера)… "+(plays===1?"первое прослушивание, только заметки":"второе, отвечай");for(const [s,tx] of it.lines||[]){if(stopFlag)break;if(vmap[s]==null)vmap[s]=vi++;await browserSay(tx,vmap[s])}}
+    finishUI();
   };
-  const draw=()=>{$("#tq").innerHTML=tasksHTML(T(),ans,checked,res);if(!checked)bindTasks($("#tq"),T(),ans,draw,()=>save(dk,{ans}));
-    if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(T(),ans,res);save(key,{s:s2,m:m2,ans,res,d:today()});draw()});const [s,m]=taskScore(T(),ans,res);$("#score").innerHTML=`<div class="score"><b>${s}/${m}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.34?"Порог пройден.":"Послушай ещё раз с текстом."}</span></div>`}else $("#score").innerHTML="";
-    $("#hcheck").hidden=checked;drawX()};
-  const HK=[["mix","Ещё вопросы (смешанные)","3 richtig/falsch · 3 выбор · 2 коротких"],["tf","Richtig / Falsch","8 утверждений"],["mc","Выбор из трёх","6 вопросов"],["open","Короткие ответы","6 вопросов, 1–4 слова"]];
-  const drawX=()=>{const box=$("#xadd");if(!box)return;if(EXAMIT){box.innerHTML="";return}
-    box.innerHTML=`<div class="xh"><b>Ещё вопросы к записи</b><span class="muted">ИИ добавит новые, более сложные вопросы${extra.length?` · добавлено ${extra.length}`:""}</span></div>
-      ${canAdd?`<div class="xk">${HK.map(([k,n,sub])=>`<button class="btn sm" data-hk="${k}" title="${esc(sub)}">${esc(n)}</button>`).join("")}</div>${extra.length?`<button class="btn sm" id="hxclear" style="margin-top:8px">Убрать добавленные</button>`:""}`:`<p class="muted" style="margin:6px 0 0;font-size:13px">Нужен ключ Claude (Настройки).</p>`}`;
-    $$("[data-hk]").forEach(b=>b.onclick=async()=>{const kd=b.dataset.hk,label=b.textContent;$$("[data-hk]").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> '+esc(label);
-      try{const r=await api("/de/htasks",{method:"POST",body:JSON.stringify({kind:kd,lines:it.lines,voices:names,had:T().map(x=>x.q)})});extra=extra.concat(r.tasks||[]);save(xk,{tasks:extra});checked=false;draw()}
-      catch(e){toast(e.message);drawX()}});
-    const xc=$("#hxclear");if(xc)xc.onclick=()=>{extra=[];save(xk,{tasks:[]});const n=(it.tasks||[]).length;ans.length=Math.min(ans.length,n);Object.keys(res).forEach(k=>{if(+k>=n)delete res[k]});checked=false;draw()};
+  const persist=()=>save(dk,{ans});
+  const draw=()=>{const tasks=T();
+    $("#tq").innerHTML=tasksHTML(tasks,ans,checked,res);
+    if(!checked){bindTasks($("#tq"),tasks,ans,draw,persist)}
+    if(checked){$$("[data-self]").forEach(b=>b.onclick=()=>{res[b.dataset.self]={score:+b.dataset.v,self:true};const [s2,m2]=taskScore(tasks,ans,res);save(key,{s:s2,m:m2,ans,res,d:today(),v:it.ver});draw()});
+      const [s,m]=taskScore(tasks,ans,res);$("#score").innerHTML=`<div class="score"><b>${fmtPts(s)}/${fmtPts(m)}</b><span>${m&&s/m>=.8?"Отлично!":m&&s/m>=.5?"Зачёт: набрано больше половины баллов.":"Меньше половины. Послушай ещё раз с текстом."}${m===15?" Hören на EPD: 15 баллов.":""}</span></div>`}else $("#score").innerHTML="";
+    $("#hcheck").hidden=checked;$("#hdel").hidden=!(checked||prev);drawX()};
+  const drawX=()=>{const box=$("#xadd");if(!box)return;
+    box.innerHTML=`<div class="xh"><b>Новые задания к этой записи</b><span class="muted">ИИ составит другие 7 вопросов A–D и другой конспект с 8 пропусками по тому же тексту${ov?" · сейчас показаны новые":""}</span></div>
+      <div class="xk"><button class="btn sm" id="hnew">${ic("spark",14)} Создать новые задания</button>${ov?`<button class="btn sm" id="hold">Вернуть исходные</button>`:""}</div>`;
+    $("#hnew").onclick=async()=>{const b=$("#hnew");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ составляет…';
+      try{const [mc,notes]=await Promise.all([post("/de/gen",{step:"hmc",voices:names,lines:it.lines}),post("/de/gen",{step:"hnotes",voices:names,lines:it.lines})]);
+        ov=[{t:"mcg",q:"Aufgabe 1: Wählen Sie die richtige Antwort (A–D).",items:mc.items},notes.task];save(xk,{tasks:ov});checked=false;ans=[];res={};save(dk,null);draw();toast("Новые задания готовы")}
+      catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",14)+" Создать новые задания"}};
+    const ho=$("#hold");if(ho)ho.onclick=()=>{ov=null;save(xk,null);checked=false;ans=[];res={};save(dk,null);draw()};
   };
   draw();
-  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(T(),ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today()});if(area==="de")logTaskErrors("hoeren",id,it.title,"#/hoeren/"+id,T(),ans,res);logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
+  $("#hcheck").onclick=async()=>{const b=$("#hcheck");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ проверяет…';checked=true;await gradeOpen(T(),ans,res,(it.lines||[]).map(l=>l[1]));const [s,m]=taskScore(T(),ans,res);save(key,{s,m,ans,res,d:today(),v:it.ver});if(area==="de")logTaskErrors("hoeren",id,it.title,"#/hoeren/"+id,T(),ans,res);logDone("h",area+":"+id);b.disabled=false;b.textContent="Проверить";draw();showScript=true;$("#script").hidden=false;$("#hscript").textContent="Скрыть текст"};
   $("#hreset").onclick=()=>{checked=false;ans=[];res={};plays=0;setPlays();save(dk,null);draw()};
   $("#hscript").onclick=()=>{showScript=!showScript;$("#script").hidden=!showScript;$("#hscript").textContent=showScript?"Скрыть текст":"Показать текст"};
+  $("#hdel").onclick=()=>{if(!confirm("Удалить результат этой записи? Баллы, ответы и ошибки из этого задания пропадут из прогресса."))return;delResult("hoeren",area,id);checked=false;ans=[];res={};toast("Результат удалён");draw()};
 }
 const playIcon=()=>'<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>';
 const pauseIcon=()=>'<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><rect x="6" y="5" width="4.5" height="14" rx="1.5"/><rect x="13.5" y="5" width="4.5" height="14" rx="1.5"/></svg>';
@@ -1997,26 +1969,32 @@ async function vModHome(k){
 // ---------- практика с ИИ: тема от тебя → теория и задания / текст / аудио / разговор (Claude Haiku 5.5) ----------
 // ИИ отдаёт данные в формате обычных заданий модуля, поэтому показывает их тот же экран (id "ai"), а над ним стоит панель «Ещё / Сложнее / Легче».
 const AIM={
-  grammatik:{go:"Создать теорию и 10 заданий",ph:"например: Konjunktiv II в прошедшем, Passiversatz, Relativsätze",lead:"Напиши тему: ИИ коротко объяснит её и даст 10 заданий. Потом можно попросить ещё, сложнее или легче."},
-  lesen:{go:"Создать текст и задания",ph:"например: цифровизация в университете, аренда жилья в Вене",lead:"Напиши тему: ИИ напишет статью в стиле der Standard и задания к ней, как на экзамене. Слова из текста переводятся по выделению."},
-  hoeren:{go:"Создать аудио и задания",ph:"например: тихие часы в доме, стажировка за границей",lead:"Напиши тему: ИИ придумает запись (интервью, репортаж, беседа), озвучит её и даст задания. Слушай два раза."},
+  grammatik:{go:"Создать теорию и 15 заданий",ph:"например: Konjunktiv II в прошедшем, Passiversatz, Relativsätze",lead:"Напиши тему: ИИ коротко объяснит её и даст 15 заданий как в части Strukturen und Wortschatz (C-Test, Umformen, Lückentext). Потом можно попросить ещё, сложнее или легче."},
+  lesen:{go:"Создать текст и задания",ph:"например: цифровизация в университете, аренда жилья в Вене",lead:"Напиши тему: ИИ напишет статью в стиле der Standard (около 1000 слов) и составит к ней задания, как на экзамене: Richtig/Falsch/Nicht im Text, Multiple Choice, Kurzantworten, Zuordnung. Любые другие типы можно добавить сбоку от текста. Слова из текста переводятся по выделению."},
+  hoeren:{go:"Создать аудио и задания",ph:"например: тихие часы в доме, стажировка за границей",lead:"Напиши тему: ИИ придумает запись на 7–9 минут (интервью, репортаж, беседа) и два задания: вопросы A–D и конспект, куда вписываешь услышанные слова. Слушай два раза."},
   sprechen:{go:"Создать тему для разговора",ph:"например: социальные сети и подростки, экология в городе",lead:"Напиши тему: получишь задание как на устном экзамене. Говоришь, ИИ разбирает ошибки и задаёт вопросы комиссии, и вы разговариваете дальше."}
 };
 const AIDIFF=["очень легко","легче обычного","обычная","сложнее обычного","очень сложно"];
 const AIKEY={grammatik:"g-de-ai",lesen:"l-de-ai",hoeren:"h-de-ai",sprechen:"s-de-ai"};
 const aiState=k=>{const s=get("ai-"+k,null)||{};return {topic:s.topic||"",level:s.level||"B2",diff:s.diff||0,hist:s.hist||[]}};
-// mode: new | more | harder | easier. Для new тема и уровень берутся из параметров, для остальных остаются прежними
-async function aiGenerate(k,mode,topic,level){
+// mode: new | more | harder | easier. Для new тема и уровень берутся из параметров, для остальных остаются прежними.
+// Текст, запись и набор заданий ИИ собирает короткими шагами (ui показывает, на каком шаге): один длинный запрос хостинг оборвал бы.
+async function aiGenerate(k,mode,topic,level,ui){
   const st=aiState(k),old=get("aiitem-"+k,null);
   if(mode==="new"){st.topic=topic;st.level=level;st.diff=0}
   else{if(mode==="harder")st.diff=Math.min(2,st.diff+1);if(mode==="easier")st.diff=Math.max(-2,st.diff-1)}
-  const prev=mode==="new"||!old?[]:k==="grammatik"?(old.items||[]).map(x=>x.q):[old.title||""];
-  const r=await api("/de/aigen",{method:"POST",body:JSON.stringify({module:k,topic:st.topic,level:st.level,diff:st.diff,mode,prev})});
+  const prev=mode==="new"||!old?[]:k==="grammatik"?(old.items||[]).map(x=>x.q).filter(Boolean).slice(0,12):[old.title||""];
+  let r;
+  if(k==="lesen")r=await genLesen(st.topic,st.level,st.diff,prev,ui);
+  else if(k==="hoeren")r=await genHoeren(st.topic,st.level,st.diff,prev,ui);
+  else if(k==="grammatik")r=await genGramm(st.topic,st.level,st.diff,prev,ui,mode==="new");
+  else r=await post("/de/aigen",{module:k,topic:st.topic,level:st.level,diff:st.diff,mode,prev});
   r.ai=true;
   if(k==="grammatik"&&mode!=="new"&&old){r.theory=old.theory||"";r.title=old.title||r.title;r.ru=old.ru||r.ru}   // теория та же, меняются только задания
   save("aiitem-"+k,r);
   // чистый лист для новых заданий: ответы и отметки прошлых не переносятся
   if(k==="grammatik")save(AIKEY[k],mode==="new"?{r:{}}:{r:{},seenTheory:1});else if(k==="sprechen")save(AIKEY[k],{n:0,best:null,hist:[]});else save(AIKEY[k],null);
+  save(({lesen:"lx-de-ai",hoeren:"hx-de-ai"}[k]||"x-none"),null);
   st.hist=[{topic:st.topic,level:st.level}].concat(st.hist.filter(x=>x.topic!==st.topic)).slice(0,8);
   save("ai-"+k,st);
   return r;
@@ -2026,16 +2004,16 @@ async function vAIPractice(k){
   const m=AIM[k],st=aiState(k),cur=get("aiitem-"+k,null);
   page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>${tutHTML("ai",true)}
    <div class="card"><div class="field"><label for="aiT">Тема</label><input id="aiT" value="${esc(st.topic)}" maxlength="200" placeholder="${esc(m.ph)}" autocomplete="off"></div>
-    <div class="row" style="margin-top:12px"><select id="aiL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} ${esc(m.go)}</button></div></div>
+    <div class="row" style="margin-top:12px"><select id="aiL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} ${esc(m.go)}</button></div><div id="aiProg"></div></div>
    ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}
    ${cur?`<h2 class="h-sec">Последнее</h2><div class="aihist" style="--c:${MOD[k].c}"><a href="#/${k}/aix"><span><b>${esc(cur.title||st.topic)}</b></span><small>продолжить →</small></a></div>`:""}
    ${st.hist.length?`<h2 class="h-sec">Недавние темы</h2><div class="aihist" style="--c:${MOD[k].c}">${st.hist.map((x,i)=>`<a href="#" data-h="${i}"><span>${esc(x.topic)}</span><small>${esc(x.level)}</small></a>`).join("")}</div>`:""}
    ${foldSec("hints-"+k,k==="grammatik"?"Как учить грамматику":"Как решать и как тренироваться","советы преподавателей",hintsHTML(k,MOD[k].c))}`);
   $$("[data-h]").forEach(a=>a.onclick=e=>{e.preventDefault();const x=st.hist[+a.dataset.h];$("#aiT").value=x.topic;$("#aiL").value=x.level;$("#aiT").focus()});
   const go=async()=>{const topic=$("#aiT").value.trim();if(topic.length<3){toast("Напиши тему хотя бы в пару слов");$("#aiT").focus();return}
-    const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит… (10–25 секунд)';
-    try{await aiGenerate(k,"new",topic,$("#aiL").value);location.hash=`#/${k}/aix`}
-    catch(e){toast(e.message);b.disabled=false;b.innerHTML=ic("spark",16)+" "+m.go}};
+    const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит…';const ui=genUI($("#aiProg"));
+    try{await aiGenerate(k,"new",topic,$("#aiL").value,ui.set);ui.done();location.hash=`#/${k}/aix`}
+    catch(e){ui.done();toast(e.message);$("#aiProg").innerHTML=`<div class="card" style="border-left:5px solid var(--bad);margin-top:10px">${esc(e.message)}</div>`;b.disabled=false;b.innerHTML=ic("spark",16)+" "+m.go}};
   $("#aiGo").onclick=go;$("#aiT").onkeydown=e=>{if(e.key==="Enter")go()};
 }
 async function vAIRun(k){
@@ -2054,7 +2032,7 @@ function aiBarHTML(){
 document.addEventListener("click",async e=>{
   const b=e.target.closest&&e.target.closest("[data-aim]");if(!b||b.disabled)return;
   const k=AIX,bar=b.parentNode,label=b.innerHTML;bar.querySelectorAll("button").forEach(x=>x.disabled=true);b.innerHTML='<span class="spin"></span> ИИ готовит…';
-  try{await aiGenerate(k,b.dataset.aim);await vAIRun(k)}
+  try{await aiGenerate(k,b.dataset.aim,undefined,undefined,(msg)=>{b.innerHTML='<span class="spin"></span> '+esc(msg)});await vAIRun(k)}
   catch(err){toast(err.message);bar.querySelectorAll("button").forEach(x=>x.disabled=false);b.innerHTML=label}
 });
 function resHTML(r){return `<div class="card gwres" style="margin-top:12px"><div class="row" style="gap:14px"><div class="gwsc" style="--p:${r.score*10}"><b>${r.score}</b><small>/10</small></div><div class="muted">${esc(r.comment||"")}</div></div>

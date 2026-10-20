@@ -523,6 +523,13 @@ html{scrollbar-gutter:stable}
 .rcard .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--c);color:#fff;flex:none}
 .rcard b{display:block;font-weight:800;font-size:15.5px;line-height:1.3}.rcard small{color:var(--muted);font-size:13px;font-weight:500}
 .rcard .go{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--c)}
+.rcw{position:relative}
+.rcw.bye{animation:rcBye .26s ease-in forwards}
+@keyframes rcBye{to{opacity:0;transform:scale(.94)}}
+.rc-x{position:absolute;top:-8px;right:-8px;z-index:1;width:28px;height:28px;border-radius:50%;border:0;background:var(--panel);color:var(--muted);display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .2s,background .2s,color .2s;box-shadow:var(--sh)}
+.rcw:hover .rc-x,.rc-x:focus-visible{opacity:1}
+.rc-x:hover{background:var(--bad-soft);color:var(--bad)}
+@media (hover:none){.rc-x{opacity:1}}
 .tch{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px;font-weight:800;font-size:16px}
 .tch small{font-weight:600;font-size:13px;color:var(--muted)}
 .tch::after{content:"";flex:1;height:1px;background:var(--line2);align-self:center}
@@ -1943,6 +1950,15 @@ function itemDone(k,x){const pref=MODX[k][2];if(k==="grammatik")return gramPct("
 const oliC=(c,mood,size)=>`<span class="hero-oli" style="--oli:${c};--oli-d:color-mix(in srgb,${c} 78%,#1a1a2e)">${EP.mascot(mood,size||76)}</span>`;
 // недавно открытые задания модуля (для блока «Недавние»)
 function touchRecent(k,id){const K="rec-"+k,a=get(K,[]).filter(x=>x!==id);a.unshift(id);save(K,a.slice(0,6))}
+// крестик на карточке «Недавние»: убрать из списка, не открывая задание
+document.addEventListener("click",e=>{
+  const x=e.target.closest&&e.target.closest("[data-rcx]");if(!x)return;
+  e.preventDefault();e.stopPropagation();
+  const [k,id]=x.dataset.rcx.split("|"),K="rec-"+k;
+  save(K,get(K,[]).filter(v=>v!==id));
+  const card=x.closest(".rcw");card.classList.add("bye");
+  setTimeout(()=>{const box=card.parentElement;card.remove();if(box&&!box.querySelector(".rcw")){box.previousElementSibling?.remove();box.remove()}},260);
+});
 const KIND_RU={Grafik:["Описать график","bars","Расскажи, что показывает график, сравни цифры и объясни причины."],Zitat:["Обсудить цитату","quote","Объясни, как понимаешь цитату, согласен ли ты и почему, приведи примеры."],Text:["Короткий текст","doc","Перескажи главную мысль текста и выскажи своё мнение."],These:["Отстоять мнение","chat","Тебе дают тезис: соглашайся или спорь, обосновывай и отвечай на вопросы."],Bild:["Описать картинку","star","Опиши ситуацию на картинке и свяжи её с темой."]};
 const kindRu=k=>(KIND_RU[k]||[k||"Gespräch"])[0];
 const itemHref=(k,x)=>k==="grammatik"?"#/grammatik/"+x.id:`#/${k}/${x.id}`;
@@ -1981,7 +1997,7 @@ async function vModHome(k){
     <div class="hgoal${gd?" done":""}"><div class="hg-t"><span>Цель дня</span><b>${g.n} из ${g.of}</b></div><div class="bar"><i style="width:${Math.min(100,Math.round(g.n/g.of*100))}%"></i></div></div>
     <div class="hfacts" style="margin-top:0;padding-top:0;border-top:0"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><span class="hf">${ic("check",17)}Пройдено <b>${done}</b> из ${items.length}</span>${acc!=null?`<span class="hf">${ic("target",17)}${k==="sprechen"?`Средняя оценка <b>${acc}</b>`:`Точность <b>${acc}%</b>`}</span>`:""}${errList(k).filter(x=>!x.fixed).length?`<a class="hf" href="#/${k}/errors" style="text-decoration:none">${ic("target",17)}Ошибок: <b>${errList(k).filter(x=>!x.fixed).length}</b></a>`:""}<a class="hf-more" href="#/${k}/progress">Прогресс и настройки ${ic("chev",16)}</a></div>
   </section>
-  ${rec.length?`<h2 class="h-sec">Недавние</h2><div class="recent">${rec.map(x=>`<a class="rcard" href="${itemHref(k,x)}" style="--c:${MOD[k].c}"><span class="ic">${ic(MOD[k].i,22)}</span><span style="min-width:0"><b>${esc(x.title)}</b><small>${esc(itemSub(k,x))}</small></span><span class="go">${ic("chev",15)}</span></a>`).join("")}</div>`:""}
+  ${rec.length?`<h2 class="h-sec">Недавние</h2><div class="recent">${rec.map(x=>`<div class="rcw" data-rcw><a class="rcard" href="${itemHref(k,x)}" style="--c:${MOD[k].c}"><span class="ic">${ic(MOD[k].i,22)}</span><span style="min-width:0"><b>${esc(x.title)}</b><small>${esc(itemSub(k,x))}</small></span><span class="go">${ic("chev",15)}</span></a><button class="rc-x" data-rcx="${esc(k)}|${esc(x.id)}" aria-label="Убрать из недавних" title="Убрать из недавних">${ic("x",15,2.4)}</button></div>`).join("")}</div>`:""}
   ${k==="grammatik"?`<details class="fsec" data-fs="g-lv" ${fo("g-lv")}><summary class="h-sec">${FCH}Уровни <small>${groupsOf(k,items).length} ${plural(groupsOf(k,items).length,"уровень","уровня","уровней")}</small></summary><div class="fbody"><div class="lvgrid">${groupsOf(k,items).map(([g2,a],i)=>{const n=a.filter(x=>itemDone(k,x)).length,pct=Math.round(n/a.length*100);return `<a class="lvcard" href="#/${k}/all/${encodeURIComponent(g2)}" style="--c:${MOD[k].c}"><span class="pic">${PICS[i%PICS.length](MOD[k].c)}</span><h3>${esc(g2)}</h3><p>${esc(GDESC[g2]||"")}</p><div class="meta"><span class="tag">${a.length} ${plural(a.length,"тема","темы","тем")}</span><span class="tag">${a.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</span></div><div class="bar"><i style="width:${pct}%"></i></div></a>`}).join("")}</div></div></details>
   <details class="fsec" data-fs="g-tp" ${fo("g-tp")}><summary class="h-sec">${FCH}Темы <small>${items.length} тем · ${items.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</small></summary><div class="fbody">${gramListHTML("de",{topics:items})}</div></details>`
   :`${k==="sprechen"?`<h2 class="h-sec">Что бывает на устном экзамене</h2><div class="kindinfo">${["Grafik","Zitat","Text","These"].map(kd=>`<div style="--c:${MOD[k].c}"><span class="ic">${ic(KIND_RU[kd][1],17)}</span><span><b>${KIND_RU[kd][0]}</b><small>${KIND_RU[kd][2]}</small></span></div>`).join("")}</div>`:""}

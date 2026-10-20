@@ -5,12 +5,12 @@
 class AiGen
 {
     const MODEL = 'claude-haiku-5-5';
-    const MODULES = ['grammatik', 'lesen', 'hoeren', 'sprechen'];
+    const MODULES = ['sprechen'];
     const MODES = ['new', 'more', 'harder', 'easier'];
     const FEMALE = ['sage', 'coral', 'nova'];
     const MALE = ['onyx', 'echo', 'ash'];
 
-    /** @return array{0:string,1:string,2:array,3:int} [system, user, schema, max_tokens] */
+    /** Практика с ИИ для Sprechen (Lesen, Hören и Grammatik идут короткими шагами через Gen). @return array{0:string,1:string,2:array,3:int} */
     public static function request(array $d): array
     {
         $mod = Util::str($d['module'] ?? '', 20);
@@ -23,8 +23,7 @@ class AiGen
         foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 12) as $x) { $s = Util::str($x, 160); if ($s !== '') { $prev[] = $s; } }
         $content = "Тема: $topic\nУровень: $level\nСложность: $diff\nРежим: $mode"
             . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
-        $tokens = ['grammatik' => 4500, 'lesen' => 11000, 'hoeren' => 8500, 'sprechen' => 1800][$mod];
-        return [Lernen::prompt('lernen_aigen_' . $mod), $content, Lernen::schema('lernen_aigen_' . $mod), $tokens];
+        return [Lernen::prompt('lernen_aigen_' . $mod), $content, Lernen::schema('lernen_aigen_' . $mod), 1800];
     }
 
     public static function normalize(string $mod, array $r, string $topic, string $level, string $mode): array
@@ -32,156 +31,12 @@ class AiGen
         $s = fn($v, $n = 600) => Util::str($v, $n);
         $list = fn($v, $n, $m) => array_values(array_filter(array_map(fn($x) => $s($x, $m), array_slice(is_array($v) ? $v : [], 0, $n)), fn($x) => $x !== ''));
         $title = $s($r['title'] ?? '', 140) ?: $topic;
-        if ($mod === 'grammatik') {
-            $items = self::tasks($r['items'] ?? [], ['mc', 'gap', 'tr'], 10, true);
-            if (count($items) < 6) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
-            return ['id' => 'ai', 'title' => $title, 'ru' => $s($r['ru'] ?? '', 200), 'level' => $level, 'tag' => 'ИИ', 'theory' => $mode === 'new' ? self::cleanHtml((string)($r['theory'] ?? '')) : '', 'items' => $items];
-        }
-        if ($mod === 'lesen') {
-            $paras = $list($r['paras'] ?? [], 8, 1800);
-            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open', 'rfb', 'qs'], 18, false, false, implode(' ', $paras));
-            if (count($paras) < 3 || count($tasks) < 5) { throw new ApiError(502, 'ИИ вернул неполный текст, попробуй ещё раз'); }
-            $words = array_sum(array_map(fn($p) => count(preg_split('/\s+/u', $p, -1, PREG_SPLIT_NO_EMPTY)), $paras));
-            return ['id' => 'ai', 'level' => $level, 'topic' => $topic, 'kicker' => $s($r['kicker'] ?? '', 60) ?: $topic, 'title' => $title, 'lead' => $s($r['lead'] ?? '', 400),
-                    'paras' => $paras, 'tasks' => $tasks, 'src' => 'Текст от ИИ в стиле der Standard', 'words' => $words, 'minutes' => max(5, (int)round($words / 28))];
-        }
-        if ($mod === 'hoeren') {
-            [$voices, $lines] = self::script($r, 3, 40);
-            $tasks = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 14, false, true);
-            if (count($lines) < 3 || count($tasks) < 3) { throw new ApiError(502, 'ИИ вернул неполную запись, попробуй ещё раз'); }
-            $words = array_sum(array_map(fn($l) => count(preg_split('/\s+/u', $l[1], -1, PREG_SPLIT_NO_EMPTY)), $lines));
-            return ['id' => 'ai', 'level' => $level, 'kind' => $s($r['kind'] ?? '', 40) ?: 'Audio', 'topic' => $topic, 'title' => $title, 'intro' => $s($r['intro'] ?? '', 300),
-                    'voices' => $voices, 'lines' => $lines, 'tasks' => $tasks, 'words' => $words, 'minutes' => max(2, (int)round($words / 130))];
-        }
-        // sprechen
         $kind = in_array($r['kind'] ?? '', ['These', 'Text', 'Zitat'], true) ? $r['kind'] : 'These';
         $imp = $s($r['impulse'] ?? '', 1200);
         $lf = $list($r['leitfragen'] ?? [], 6, 300);
         if ($imp === '' || count($lf) < 2) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
         return ['id' => 'ai', 'topic' => $topic, 'kind' => $kind, 'title' => $title, 'ru' => $s($r['ru'] ?? '', 240), 'impulse' => $imp,
                 'leitfragen' => $lf, 'fragen' => $list($r['fragen'] ?? [], 6, 300), 'redemittel' => $list($r['redemittel'] ?? [], 10, 120)];
-    }
-
-    /** Голоса (speakers) и реплики (lines) записи от ИИ → [voices, lines] */
-    private static function script(array $r, int $maxSp, int $maxLines): array
-    {
-        $s = fn($v, $n = 600) => Util::str($v, $n);
-        $voices = []; $f = 0; $m = 0;
-        foreach (array_slice(is_array($r['speakers'] ?? null) ? $r['speakers'] : [], 0, $maxSp) as $sp) {
-            if (!is_array($sp)) { continue; }
-            $id = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($sp['id'] ?? '')), 0, 1);
-            if ($id === '' || isset($voices[$id])) { continue; }
-            $fem = !empty($sp['female']);
-            $voices[$id] = ['voice' => $fem ? self::FEMALE[$f++ % 3] : self::MALE[$m++ % 3], 'name' => $s($sp['name'] ?? '', 40) ?: $id,
-                            'style' => 'Sprich natürliches Hochdeutsch mit leichter österreichischer Färbung, lebendig wie in einem echten Gespräch oder Radiobeitrag.'];
-        }
-        $lines = [];
-        foreach (array_slice(is_array($r['lines'] ?? null) ? $r['lines'] : [], 0, $maxLines) as $ln) {
-            $sp = mb_substr(preg_replace('/[^A-Za-z]/', '', (string)($ln['s'] ?? '')), 0, 1); $tx = $s($ln['text'] ?? '', 1200);
-            if ($tx === '') { continue; }
-            if (!isset($voices[$sp])) { $sp = array_key_first($voices) ?? 'A'; if (!isset($voices[$sp])) { $voices[$sp] = ['voice' => 'sage', 'name' => 'Sprecher', 'style' => '']; } }
-            $lines[] = [$sp, $tx];
-        }
-        return [$voices, $lines];
-    }
-
-    const HEXAM = [1, 2];
-
-    /** Пробный Hören как на экзамене: Teil 1 (7 записей, вопросы a–d) и Teil 2 (запись и конспект с 8 пропусками). */
-    public static function hexamRequest(array $d): array
-    {
-        $part = (int)($d['part'] ?? 0);
-        if (!in_array($part, self::HEXAM, true)) { throw new ApiError(400, 'Неизвестная часть'); }
-        $topic = Util::str($d['topic'] ?? '', 200);
-        $level = in_array($d['level'] ?? '', ['B2', 'C1'], true) ? $d['level'] : 'B2';
-        $diff = max(-2, min(2, (int)($d['diff'] ?? 0)));
-        $prev = [];
-        foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 12) as $x) { $x = Util::str($x, 160); if ($x !== '') { $prev[] = $x; } }
-        $content = "Тема: " . ($topic !== '' ? $topic : '(не указана, выбери сам)') . "\nУровень: $level\nСложность: $diff"
-            . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
-        return [Lernen::prompt('lernen_hexam' . $part), $content, Lernen::schema('lernen_hexam' . $part), 8000];
-    }
-
-    public static function hexamNormalize(int $part, array $r, string $topic, string $level): array
-    {
-        $s = fn($v, $n = 600) => Util::str($v, $n);
-        [$voices, $lines] = self::script($r, 4, $part === 1 ? 60 : 40);
-        $src = implode(' ', array_map(fn($l) => $l[1], $lines));
-        if (count($lines) < ($part === 1 ? 14 : 8) || mb_strlen($src) < 2500) { throw new ApiError(502, 'ИИ вернул слишком короткую запись, попробуй ещё раз'); }
-        if ($part === 1) {
-            $tasks = [];
-            foreach (array_slice(is_array($r['tasks'] ?? null) ? $r['tasks'] : [], 0, 9) as $x) {
-                if (!is_array($x)) { continue; }
-                $o = array_values(array_filter(array_map(fn($a) => $s($a, 300), is_array($x['o'] ?? null) ? array_slice($x['o'], 0, 6) : []), fn($a) => $a !== ''));
-                $ai = is_numeric($x['ai'] ?? null) ? (int)$x['ai'] : -1; $q = $s($x['q'] ?? '', 400);
-                if ($q === '' || count($o) !== 4 || $ai < 0 || $ai > 3) { continue; }
-                $tasks[] = ['t' => 'mc', 'q' => $q, 'o' => $o, 'a' => $ai, 'ex' => $s($x['ex'] ?? '', 400)];
-            }
-            if (count($tasks) < 6) { throw new ApiError(502, 'ИИ вернул неполные вопросы, попробуй ещё раз'); }
-            $tasks = array_slice($tasks, 0, 7);
-        } else {
-            $srcWords = array_flip(self::words($src));
-            $inText = fn(string $form) => $form !== '' && !array_diff(self::words($form), array_keys($srcWords));
-            $notes = $s($r['notes'] ?? '', 2000);
-            preg_match_all('/\[\[(\d+)\]\]/', $notes, $mm);
-            $gapsRaw = array_values(array_filter(is_array($r['gaps'] ?? null) ? $r['gaps'] : [], 'is_array'));
-            if (count($mm[1]) < 6 || count($mm[1]) !== count($gapsRaw)) { throw new ApiError(502, 'ИИ вернул неполный конспект, попробуй ещё раз'); }
-            $keep = []; $gaps = [];
-            foreach ($gapsRaw as $k => $x) {
-                $at = array_values(array_filter(array_map(fn($a) => $s($a, 60), is_array($x['at'] ?? null) ? array_slice($x['at'], 0, 3) : []), fn($a) => $a !== ''));
-                $forms = array_values(array_filter($at, fn($a) => $inText($a) && count(self::words($a)) <= 3));
-                if ($forms) { $gaps[] = $forms; $keep[$k + 1] = count($gaps); }
-                else { $keep[$k + 1] = $at[0] ?? false; }   // слова нет в записи: подставляем в текст готовым
-            }
-            if (count($gaps) < 6) { throw new ApiError(502, 'ИИ вернул неполный конспект, попробуй ещё раз'); }
-            $notes = preg_replace_callback('/\[\[(\d+)\]\]/', function ($m) use ($keep) {
-                $v = $keep[(int)$m[1]] ?? false;
-                return is_int($v) ? '[[' . $v . ']]' : (string)$v;
-            }, $notes);
-            $tasks = [['t' => 'sum', 'q' => 'Hören Sie den Beitrag und ergänzen Sie die Notizen. Schreiben Sie das Wort oder die Wörter, die Sie hören (höchstens zwei).', 'text' => $notes, 'a' => $gaps]];
-        }
-        $words = array_sum(array_map(fn($l) => count(preg_split('/\s+/u', $l[1], -1, PREG_SPLIT_NO_EMPTY)), $lines));
-        return ['id' => 'ex' . $part, 'part' => $part, 'level' => $level, 'kind' => $s($r['kind'] ?? '', 40) ?: 'Hörverstehen Teil ' . $part, 'topic' => $topic,
-                'title' => $s($r['title'] ?? '', 140) ?: 'Hörverstehen Teil ' . $part, 'intro' => $s($r['intro'] ?? '', 300),
-                'voices' => $voices, 'lines' => $lines, 'tasks' => $tasks, 'words' => $words, 'minutes' => max(2, (int)round($words / 140))];
-    }
-
-    /** Пробный вариант Strukturen und Wortschatz: 5 Umformen (nf) и 5 Satzanfänge (tr, свободное продолжение). */
-    public static function gexamRequest(array $d): array
-    {
-        $topic = Util::str($d['topic'] ?? '', 200);
-        $prev = [];
-        foreach (array_slice(is_array($d['prev'] ?? null) ? $d['prev'] : [], 0, 20) as $x) { $x = Util::str($x, 160); if ($x !== '') { $prev[] = $x; } }
-        $content = "Тема: " . ($topic !== '' ? $topic : '(не указана)') . ($prev ? "\nУже было (не повторяй):\n- " . implode("\n- ", $prev) : '');
-        return [Lernen::prompt('lernen_gexam'), $content, Lernen::schema('lernen_gexam'), 5000];
-    }
-
-    public static function gexamNormalize(array $r): array
-    {
-        $nf = []; $sf = [];
-        foreach (array_slice(is_array($r['items'] ?? null) ? $r['items'] : [], 0, 16) as $x) {
-            if (!is_array($x)) { continue; }
-            $q = Util::str($x['q'] ?? '', 600);
-            $a = array_values(array_filter(array_map(fn($v) => Util::str($v, 300), is_array($x['a'] ?? null) ? array_slice($x['a'], 0, 10) : []), fn($v) => $v !== ''));
-            if ($q === '' || !$a) { continue; }
-            $ex = Util::str($x['ex'] ?? '', 400);
-            if (($x['kind'] ?? '') === 'nf') {
-                if (!preg_match('/^(.*?)\[\[(.+?)\]\](.*)$/su', $q, $m)) { continue; }
-                [$pre, $post] = [$m[1], $m[3]];
-                if ((($x['dir'] ?? '') === 'v2n')) {          // в ответ идёт Nominalgruppe: запятая у границы не нужна
-                    if (trim($pre) === '') { $post = ltrim($post, ', '); $post = ' ' . $post; }
-                    $pre = preg_replace('/,\s*$/u', ' ', $pre);
-                } else {                                      // в ответ идёт Nebensatz: запятая нужна
-                    if (trim($pre) === '' && !preg_match('/^\s*,/u', $post)) { $post = ',' . $post; }
-                }
-                if (count($nf) < 5) { $nf[] = ['t' => 'nf', 'lv' => 3, 'q' => $q, 'pre' => $pre, 'post' => $post, 'a' => $a, 'ex' => $ex, 'pts' => 2,
-                    'task' => 'Formen Sie den unterstrichenen Textteil um (Nebensatz, Infinitivkonstruktion, Passiv oder Nominalgruppe), ohne den Inhalt zu verändern']; }
-            } elseif (count($sf) < 5) {
-                $sf[] = ['t' => 'tr', 'lv' => 3, 'q' => $q, 's' => '', 'a' => $a, 'ex' => $ex, 'task' => 'Ergänzen Sie den Satz sinnvoll und grammatisch korrekt.', 'free' => true, 'pts' => 3];
-            }
-        }
-        if (count($nf) < 4 || count($sf) < 4) { throw new ApiError(502, 'ИИ вернул неполный вариант, попробуй ещё раз'); }
-        return array_merge($nf, $sf);
     }
 
     /** Пробный экзамен по лексике: 12 заданий «слово в контексте» (a–d) и 8 пропусков с русской подсказкой. */
@@ -205,7 +60,7 @@ class AiGen
     }
 
     /** Приводит задания к формату data/de/*.json и отбрасывает битые. */
-    private static function tasks($raw, array $types, int $max, bool $lv, bool $two = false, ?string $src = null): array
+    public static function tasks($raw, array $types, int $max, bool $lv, bool $two = false, ?string $src = null): array
     {
         $out = [];
         foreach (array_slice(is_array($raw) ? $raw : [], 0, $max + 4) as $x) {
@@ -224,6 +79,7 @@ class AiGen
                 $a = $at[0] ?? ''; if (!in_array($a, ['r', 'f', 'n'], true)) { continue; }
                 if ($two && $a === 'n') { continue; }
                 $o['a'] = $a; if ($two) { $o['two'] = true; }
+                if ($src !== null) { $ev = self::evidence($x['ev'] ?? '', $src); if ($ev !== null) { $o['ev'] = $ev; } }
             } elseif ($t === 'rfb') {
                 $a = $at[0] ?? ''; if (!in_array($a, ['r', 'f'], true)) { continue; }
                 $ev = self::evidence($x['ev'] ?? '', $src); if ($ev === null) { continue; }
@@ -248,13 +104,13 @@ class AiGen
         return array_slice($out, 0, $max);
     }
 
-    private static function norm(string $s): string
+    public static function norm(string $s): string
     {
         return trim(preg_replace('/\s+/u', ' ', preg_replace('/[^\p{L}\p{N} ]+/u', ' ', mb_strtolower($s))));
     }
 
     /** Опорная фраза (первые слова предложения) должна стоять в тексте буква в букву; иначе null. Без текста принимаем как есть. */
-    private static function evidence($ev, ?string $src): ?string
+    public static function evidence($ev, ?string $src): ?string
     {
         $ev = Util::str($ev, 120);
         if (count(preg_split('/\s+/u', $ev, -1, PREG_SPLIT_NO_EMPTY)) < 3) { return null; }
@@ -278,37 +134,7 @@ class AiGen
     }
 
     // ---------- «Задания как на EPD» к готовому тексту Lesen ----------
-    const LKINDS = ['rfb', 'mc3', 'cl4', 'box', 'sum', 'ref', 'who', 'para', 'qs'];
-
-    /** @return array{0:string,1:string,2:array,3:int} */
-    const HKINDS = ['mix', 'tf', 'mc', 'open'];
-
-    /** Дополнительные вопросы к записи Hören: транскрипт → задания. */
-    public static function htasksRequest(array $d): array
-    {
-        $kind = Util::str($d['kind'] ?? '', 10);
-        if (!in_array($kind, self::HKINDS, true)) { throw new ApiError(400, 'Неизвестный тип задания'); }
-        $voices = is_array($d['voices'] ?? null) ? $d['voices'] : [];
-        $txt = '';
-        foreach (array_slice(is_array($d['lines'] ?? null) ? $d['lines'] : [], 0, 40) as $ln) {
-            if (!is_array($ln) || count($ln) < 2) { continue; }
-            $name = Util::str(is_array($voices[$ln[0]] ?? null) ? ($voices[$ln[0]]['name'] ?? $ln[0]) : $ln[0], 40);
-            $t = Util::str($ln[1], 1200);
-            if ($t !== '') { $txt .= $name . ': ' . $t . "\n"; }
-        }
-        if (mb_strlen($txt) < 200) { throw new ApiError(400, 'Нужен текст записи'); }
-        $had = [];
-        foreach (array_slice(is_array($d['had'] ?? null) ? $d['had'] : [], 0, 30) as $q) { $q = Util::str($q, 160); if ($q !== '') { $had[] = $q; } }
-        $content = "kind: $kind\n\nТранскрипт:\n" . $txt . ($had ? "\nУже заданные вопросы (не повторяй):\n- " . implode("\n- ", $had) : '');
-        return [Lernen::prompt('lernen_htasks'), $content, Lernen::schema('lernen_htasks'), 3200];
-    }
-
-    public static function htasksNormalize(array $r): array
-    {
-        $out = self::tasks($r['tasks'] ?? [], ['mc', 'tf', 'open'], 8, false, true);
-        if (count($out) < 3) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
-        return $out;
-    }
+    const LKINDS = ['tf', 'rfb', 'mc3', 'qs', 'head', 'zu2', 'box', 'cl4', 'sum', 'ref', 'who', 'para', 'sdis'];
 
     public static function ltasksRequest(array $d): array
     {
@@ -318,18 +144,25 @@ class AiGen
         if (count($paras) < 2) { throw new ApiError(400, 'Нужен текст'); }
         $txt = '';
         foreach ($paras as $i => $p) { $txt .= 'Absatz ' . ($i + 1) . ': ' . $p . "\n"; }
-        $tokens = ['rfb' => 1600, 'mc3' => 2000, 'cl4' => 1800, 'box' => 1800, 'sum' => 1800, 'ref' => 900, 'who' => 900, 'para' => 1000, 'qs' => 1500][$kind];
-        return [Lernen::prompt('lernen_ltasks'), "kind: $kind\n\nText:\n" . $txt, Lernen::schema('lernen_ltasks'), $tokens];
+        $tokens = ['tf' => 2000, 'rfb' => 2000, 'mc3' => 2400, 'qs' => 2000, 'head' => 1500, 'zu2' => 1500, 'box' => 2200, 'cl4' => 2200, 'sum' => 2200,
+                   'ref' => 1200, 'who' => 1200, 'para' => 1500, 'sdis' => 700][$kind];
+        $extra = '';
+        if ($kind === 'sdis') {
+            $rm = array_values(array_filter(array_map(fn($x) => Util::str($x, 400), array_slice(is_array($d['removed'] ?? null) ? $d['removed'] : [], 0, 12)), fn($x) => $x !== ''));
+            if (count($rm) < 3) { throw new ApiError(400, 'Нужны вынесенные предложения'); }
+            $extra = "\nEntfernte Sätze (stammen aus dem Text):\n- " . implode("\n- ", $rm) . "\n";
+        }
+        return [Gen::sys('lernen_ltasks'), "kind: $kind\n\nText:\n" . $txt . $extra, Lernen::schema('lernen_ltasks'), $tokens];
     }
 
     public static function paras($v): array
     {
         $out = [];
-        foreach (array_slice(is_array($v) ? $v : [], 0, 8) as $p) { $p = Util::str($p, 1800); if ($p !== '') { $out[] = $p; } }
+        foreach (array_slice(is_array($v) ? $v : [], 0, 16) as $p) { $p = Util::str($p, 1800); if ($p !== '') { $out[] = $p; } }
         return $out;
     }
 
-    private static function words(string $s): array
+    public static function words(string $s): array
     {
         return array_values(array_filter(preg_split('/\s+/u', self::norm($s)), fn($w) => $w !== ''));
     }
@@ -338,19 +171,53 @@ class AiGen
     public static function ltasksNormalize(string $kind, array $r, array $paras): array
     {
         $src = implode(' ', $paras);
+        $np = count($paras);
         $srcWords = array_flip(self::words($src));
         $items = array_values(array_filter(is_array($r['items'] ?? null) ? $r['items'] : [], 'is_array'));
         $out = [];
         $at = fn($x) => array_values(array_filter(array_map(fn($a) => Util::str($a, 200), is_array($x['at'] ?? null) ? array_slice($x['at'], 0, 4) : []), fn($a) => $a !== ''));
         $inText = fn(string $form) => $form !== '' && !array_diff(self::words($form), array_keys($srcWords));
-        if ($kind === 'rfb' || $kind === 'mc3' || $kind === 'qs') {
-            $map = ['rfb' => ['rfb'], 'mc3' => ['mc'], 'qs' => ['qs']][$kind][0];
+        $few = fn() => new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз');
+        $shuf = function (array $a, string $seed): array { mt_srand((int)(crc32($seed) & 0x7fffffff)); shuffle($a); mt_srand(); return $a; };
+        if ($kind === 'sdis') {
+            $out = array_values(array_filter(array_map(fn($x) => Util::str($x['q'] ?? '', 400), $items), fn($x) => mb_strlen($x) > 25));
+            if (count($out) < 2) { throw $few(); }
+            return array_slice($out, 0, 3);
+        }
+        if (in_array($kind, ['tf', 'rfb', 'mc3', 'qs'], true)) {
+            $map = ['tf' => 'tf', 'rfb' => 'rfb', 'mc3' => 'mc', 'qs' => 'qs'][$kind];
             $out = self::tasks(array_map(function ($x) use ($map, $at) {
                 return ['t' => $map, 'q' => $x['q'] ?? '', 'o' => $x['o'] ?? [], 'ai' => $x['ai'] ?? -1, 'at' => $at($x), 'ev' => $x['ev'] ?? '', 'ex' => ''];
             }, $items), [$map], 10, false, false, $src);
-            if (count($out) < ($kind === 'rfb' ? 3 : 3)) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
-            foreach ($out as &$o) { if ($kind === 'mc3' && count($o['o']) !== 3) { $o['o'] = array_slice($o['o'], 0, max(2, count($o['o']))); } }
+            if (count($out) < 6) { throw $few(); }
+            foreach ($out as &$o) { if ($kind === 'mc3' && count($o['o']) > 3) { $o['o'] = array_slice($o['o'], 0, max(3, $o['a'] + 1)); } }
             return $out;
+        }
+        if ($kind === 'head' || $kind === 'zu2') {
+            $byPara = []; $dist = [];
+            foreach ($items as $x) {
+                $q = Util::str($x['q'] ?? '', 300); $n = is_numeric($x['ai'] ?? null) ? (int)$x['ai'] : 0;
+                if ($q === '') { continue; }
+                if ($n >= 1 && $n <= $np && !isset($byPara[$n])) { $byPara[$n] = $q; } elseif ($n === 0) { $dist[] = $q; }
+            }
+            if (count($byPara) < 6) { throw $few(); }
+            ksort($byPara);
+            $nums = array_keys($byPara);
+            if ($kind === 'head') {
+                $heads = array_merge(array_values($byPara), array_slice($dist, 0, 2));
+                $heads = $shuf($heads, implode('|', $heads));
+                $a = array_map(fn($n) => array_search($byPara[$n], $heads, true), $nums);
+                return [['t' => 'head', 'q' => 'Welche Überschrift passt zu welchem Absatz? Zwei Überschriften bleiben übrig.', 'paras' => $nums, 'heads' => $heads, 'a' => $a, 'ex' => '']];
+            }
+            // Aussagen → Absätze: варианты ответа — номера абзацев (выбранные и пара лишних)
+            $opts = $nums;
+            foreach (range(1, $np) as $n) { if (count($opts) >= count($nums) + 2) { break; } if (!in_array($n, $opts, true)) { $opts[] = $n; } }
+            sort($opts);
+            $stm = array_values($byPara);
+            $ord = $shuf(array_keys($stm), implode('|', $stm));
+            $items2 = array_map(fn($i) => $stm[$i], $ord);
+            $a = array_map(fn($i) => array_search($nums[$i], $opts, true), $ord);
+            return [['t' => 'match', 'q' => 'Ordnen Sie jede Aussage dem passenden Absatz zu. Einige Absätze bleiben übrig.', 'items' => $items2, 'opts' => array_map(fn($n) => 'Absatz ' . $n, $opts), 'a' => $a, 'ex' => '']];
         }
         if ($kind === 'ref' || $kind === 'who' || $kind === 'para') {
             foreach ($items as $x) {
@@ -363,14 +230,14 @@ class AiGen
                 if ($kind === 'para' && (int)($r['sec'] ?? 0) > 0) { $o['sec'] = (int)$r['sec']; }
                 $out[] = $o;
             }
-            if (count($out) < 3) { throw new ApiError(502, 'ИИ вернул слишком мало заданий, попробуй ещё раз'); }
-            return array_slice($out, 0, $kind === 'para' ? 8 : 5);
+            if (count($out) < 4) { throw $few(); }
+            return array_slice($out, 0, $kind === 'para' ? 8 : 6);
         }
         // sum / box / cl4: связный текст с пропусками [[n]]
         $text = Util::str($r['text'] ?? '', 2600);
         preg_match_all('/\[\[(\d+)\]\]/', $text, $mm);
         $n = count($mm[1]);
-        if ($n < 4 || $n !== count($items)) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
+        if ($n < 6 || $n !== count($items)) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
         if ($kind === 'cl4') {
             $O = []; $A = [];
             foreach ($items as $x) {
@@ -386,8 +253,8 @@ class AiGen
             $A = [];
             foreach ($items as $x) { $a = $at($x)[0] ?? ''; if ($a === '' || !in_array($a, $words, true)) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); } $A[] = $a; }
             if (count(array_unique($A)) !== count($A) || count($words) < $n) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
-            mt_srand((int)(crc32($text) & 0x7fffffff)); shuffle($words); mt_srand();
-            return [['t' => 'box', 'q' => 'Fügen Sie aus dem Wortkasten die passenden Wörter in den Text ein. Zwei oder mehr Wörter bleiben übrig.', 'text' => $text, 'words' => $words, 'a' => $A]];
+            $words = $shuf($words, $text);
+            return [['t' => 'box', 'q' => 'Fügen Sie aus dem Wortkasten die passenden Wörter in den Text ein. Einige Wörter bleiben übrig.', 'text' => $text, 'words' => $words, 'a' => $A]];
         }
         // sum: слова из оригинального текста; пропуски с «не из текста» ответом заполняем сразу и перенумеровываем
         $keep = []; $gaps = [];
@@ -396,7 +263,7 @@ class AiGen
             if ($forms) { $gaps[] = $forms; $keep[$k + 1] = count($gaps); }
             else { $f = $at($x)[0] ?? ''; $keep[$k + 1] = $f === '' ? false : $f; }
         }
-        if (count($gaps) < 4) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
+        if (count($gaps) < 5) { throw new ApiError(502, 'ИИ вернул неполное задание, попробуй ещё раз'); }
         $text = preg_replace_callback('/\[\[(\d+)\]\]/', function ($m) use ($keep) {
             $v = $keep[(int)$m[1]] ?? false;
             return is_int($v) ? '[[' . $v . ']]' : (string)$v;

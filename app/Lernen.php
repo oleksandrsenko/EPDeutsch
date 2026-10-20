@@ -60,8 +60,33 @@ class Lernen
         return substr(hash('sha256', json_encode([self::TTS_MODEL, $voice, $style, $text], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)), 0, 32) . '.mp3';
     }
 
-    /** mp3 для текста: из кэша или новый запрос. Возвращает [имя файла, был ли платный запрос]. */
-    public static function ttsFile(string $text, ?string $voice, ?string $style): array
+    /** Папка с озвучкой должна существовать и принимать запись: иначе сайт отдаёт ссылку на несуществующий файл, и плеер падает с «ошибкой воспроизведения». */
+    private static function audioDir(): void
+    {
+        if (!is_dir(EPD_AUDIO)) { @mkdir(EPD_AUDIO, 0775, true); }
+        if (!is_dir(EPD_AUDIO) || !is_writable(EPD_AUDIO)) { throw new RuntimeException('на сервере нет доступа к папке audio (нужны права на запись)'); }
+    }
+
+    /** Реплика режется на куски до ~420 символов по границам предложений: каждый кусок озвучивается за несколько секунд и кэшируется отдельно. */
+    public static function ttsSplit(string $text, int $max = 420): array
+    {
+        $text = trim((string)preg_replace('/\s+/u', ' ', $text));
+        if (mb_strlen($text) <= $max) { return $text === '' ? [] : [$text]; }
+        $out = []; $cur = '';
+        foreach (preg_split('/(?<=[.!?…:;])\s+/u', $text, -1, PREG_SPLIT_NO_EMPTY) as $sn) {
+            if ($cur !== '' && mb_strlen($cur) + 1 + mb_strlen($sn) > $max) { $out[] = $cur; $cur = ''; }
+            $cur = $cur === '' ? $sn : $cur . ' ' . $sn;
+            while (mb_strlen($cur) > $max) {
+                $cut = mb_strrpos(mb_substr($cur, 0, $max), ' ') ?: $max;
+                $out[] = trim(mb_substr($cur, 0, $cut)); $cur = trim(mb_substr($cur, $cut));
+            }
+        }
+        if ($cur !== '') { $out[] = $cur; }
+        return $out;
+    }
+
+    /** mp3 для куска текста: из кэша или новый запрос. Возвращает [имя файла, был ли платный запрос]. */
+    public static function ttsFile(string $text, ?string $voice, ?string $style, int $timeout = 25): array
     {
         $voice = in_array($voice, self::VOICES, true) ? $voice : 'sage';
         $style = $style ?: self::DEFAULT_STYLE;
@@ -70,14 +95,74 @@ class Lernen
         if (is_file($fp) && filesize($fp) > 0) { return [$name, false]; }
         $key = Ai::openaiKey();
         if (!$key) { throw new LogicException('no key'); }
-        if (!is_dir(EPD_AUDIO)) { @mkdir(EPD_AUDIO, 0775, true); }
+        self::audioDir();
         $body = json_encode(['model' => self::TTS_MODEL, 'voice' => $voice, 'input' => $text, 'instructions' => $style, 'response_format' => 'mp3'], JSON_UNESCAPED_UNICODE);
-        [$code, $audio] = Ai::http(cfg('openai_base', 'https://api.openai.com') . '/v1/audio/speech', $body, ['Authorization: Bearer ' . $key, 'Content-Type: application/json'], Ai::timeout(60), 'POST');
+        [$code, $audio] = Ai::http(cfg('openai_base', 'https://api.openai.com') . '/v1/audio/speech', $body, ['Authorization: Bearer ' . $key, 'Content-Type: application/json'], Ai::timeout($timeout), 'POST');
         if ($code !== 200) { throw new RuntimeException('OpenAI HTTP ' . $code . ': ' . mb_substr($audio, 0, 300)); }
+        if (strlen($audio) < 200) { throw new RuntimeException('OpenAI вернул пустой звук'); }
         $tmp = $fp . '.part';
-        file_put_contents($tmp, $audio);
-        rename($tmp, $fp);
+        if (@file_put_contents($tmp, $audio) === false || !@rename($tmp, $fp)) { @unlink($tmp); throw new RuntimeException('не удалось сохранить звук в папку audio'); }
         return [$name, true];
+    }
+
+    /** Озвучивает куски по порядку, пока хватает времени запроса (хостинг обрывает долгие). [готовые имена, символов оплачено, ошибка]. */
+    private static function ttsBatch(array $chunks, array $u, float $t0): array
+    {
+        $limit = (float)cfg('request_limit', 24);
+        $names = []; $chars = 0; $err = null; $guarded = false;
+        foreach ($chunks as [$text, $voice, $style]) {
+            $name = self::ttsName($text, $voice, $style);
+            $fp = EPD_AUDIO . '/' . $name;
+            if (!(is_file($fp) && filesize($fp) > 0)) {
+                $left = $limit - (microtime(true) - $t0);
+                if ($left < 7) { break; }
+                if (!$guarded) { Ai::guard($u); Db::commit(); $guarded = true; }
+                try { self::ttsFile($text, $voice, $style, (int)min(25, $left + 3)); $chars += mb_strlen($text); }
+                catch (Throwable $e) { $err = $e; break; }
+            }
+            $names[] = $name;
+        }
+        return [$names, $chars, $err];
+    }
+
+    /** Реплики [[спикер, текст]] + голоса → куски для озвучки; потом сборка одного mp3. Ответ: url или pending (страница повторяет запрос). */
+    private static function ttsScript(array $u, array $lines, array $voices): array
+    {
+        $uid = (int)$u['id'];
+        if (!Ai::openaiKey()) { return ['url' => null, 'nokey' => true]; }
+        $chunks = [];
+        foreach ($lines as $ln) {
+            if (!is_array($ln) || count($ln) < 2) { continue; }
+            $v = is_array($voices[$ln[0]] ?? null) ? $voices[$ln[0]] : [];
+            foreach (self::ttsSplit((string)$ln[1]) as $part) { $chunks[] = [$part, $v['voice'] ?? null, $v['style'] ?? null]; }
+        }
+        if (!$chunks) { throw new ApiError(400, 'Пустой текст'); }
+        $t0 = microtime(true);
+        try { self::audioDir(); } catch (Throwable $e) { throw Ai::failure($e, 'Озвучка сейчас недоступна'); }
+        [$names, $chars, $err] = self::ttsBatch($chunks, $u, $t0);
+        $ms = (int)((microtime(true) - $t0) * 1000);
+        if ($chars) { Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, $ms, '', $chars * self::TTS_MICRO_PER_CHAR); }
+        if ($err) {
+            Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, $ms, $err->getMessage(), 0);
+            Db::commit();
+            throw Ai::failure($err, 'Озвучка сейчас недоступна');
+        }
+        if (count($names) < count($chunks)) { return ['url' => null, 'pending' => true, 'done' => count($names), 'total' => count($chunks)]; }
+        if (count($names) === 1) { return ['url' => '/audio/' . $names[0]]; }
+        $name = 's' . substr(hash('sha256', implode('|', $names)), 0, 32) . '.mp3';
+        $fp = EPD_AUDIO . '/' . $name;
+        if (!(is_file($fp) && filesize($fp) > 0)) {
+            $out = @fopen($fp . '.part', 'wb');
+            if (!$out) { throw new ApiError(502, 'Озвучка сейчас недоступна (не удалось собрать файл в папке audio)'); }
+            foreach ($names as $part) {
+                $data = @file_get_contents(EPD_AUDIO . '/' . $part);
+                if ($data === false || $data === '') { fclose($out); @unlink($fp . '.part'); throw new ApiError(502, 'Озвучка сейчас недоступна (потерялся кусок записи, попробуй ещё раз)'); }
+                fwrite($out, $data);
+            }
+            fclose($out);
+            if (!@rename($fp . '.part', $fp)) { @unlink($fp . '.part'); throw new ApiError(502, 'Озвучка сейчас недоступна (не удалось сохранить файл)'); }
+        }
+        return ['url' => '/audio/' . $name];
     }
 
     private static function transcribe(string $audio, string $mime): string
@@ -126,6 +211,34 @@ class Lernen
     private static function needAiKey(string $msg = 'Нужен ключ Claude (Настройки → Ключи)'): void
     {
         if (!Ai::key()) { throw new ApiError(400, $msg); }
+    }
+
+    /** Проверка связи с ИИ: короткий запрос к Claude и к озвучке; показывает точную причину сбоя и скорость. */
+    private static function diag(array $u): array
+    {
+        $out = [];
+        $t0 = microtime(true);
+        $key = Ai::key();
+        if (!$key) { $out[] = ['name' => 'Claude', 'ok' => false, 'msg' => 'ключ не найден: добавь его в Настройки → Ключи']; }
+        else {
+            try {
+                Ai::guard($u);
+                [$res, $inp, $outp] = Ai::claude('Antworte nur im vorgegebenen JSON-Format.', 'Gib das Wort "bereit" im Feld w zurück.', ['type' => 'object', 'additionalProperties' => false, 'required' => ['w'], 'properties' => ['w' => ['type' => 'string']]], 80, AiGen::MODEL, 'low', 20);
+                $ms = (int)((microtime(true) - $t0) * 1000);
+                Ai::log((int)$u['id'], 'diag', AiGen::MODEL, $inp, $outp, $ms);
+                $out[] = ['name' => 'Claude (' . AiGen::MODEL . ')', 'ok' => true, 'msg' => "работает, ответ за {$ms} мс"];
+            } catch (Throwable $e) {
+                Ai::log((int)$u['id'], 'diag', AiGen::MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), $e->getMessage());
+                $out[] = ['name' => 'Claude (' . AiGen::MODEL . ')', 'ok' => false, 'msg' => $e instanceof ApiError ? $e->getMessage() : Ai::reason($e)];
+            }
+        }
+        $dir = is_dir(EPD_AUDIO) ? (is_writable(EPD_AUDIO) ? 'есть, запись разрешена' : 'есть, но запись запрещена') : 'нет (будет создана)';
+        $okDir = !is_dir(EPD_AUDIO) ? is_writable(dirname(EPD_AUDIO)) : is_writable(EPD_AUDIO);
+        $out[] = ['name' => 'Папка audio', 'ok' => $okDir, 'msg' => $dir . ($okDir ? '' : ': без записи озвучка не сохранится')];
+        $okk = Ai::openaiKey() !== '';
+        $out[] = ['name' => 'Озвучка OpenAI', 'ok' => $okk, 'msg' => $okk ? 'ключ есть' : 'ключа нет, звучит голос браузера'];
+        $out[] = ['name' => 'Лимит хостинга', 'ok' => true, 'msg' => 'один запрос не дольше ' . (int)cfg('ai_timeout', 28) . ' с, длинные тексты собираются из коротких шагов'];
+        return ['checks' => $out];
     }
 
     // ---------- маршрутизатор /api/de/* ----------
@@ -231,20 +344,29 @@ class Lernen
             return $res;
         }
 
-        if ($p === '/aigen' && $method === 'POST') {   // тема от студента → теория и задания / текст / аудио / задание для разговора
+        if ($p === '/aigen' && $method === 'POST') {   // тема от студента → задание для разговора (Sprechen)
             self::needAiKey();
             $d = Http::json();
             [$system, $content, $schema, $tokens] = AiGen::request($d);
-            $res = Ai::ask($u, 'aigen', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 150, 'ИИ сейчас недоступен, попробуй ещё раз');
+            $res = Ai::ask($u, 'aigen', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 25, 'ИИ сейчас недоступен, попробуй ещё раз');
             $mode = in_array($d['mode'] ?? '', AiGen::MODES, true) ? $d['mode'] : 'new';
             return AiGen::normalize((string)$d['module'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2', $mode);
+        }
+
+        if ($p === '/gen' && $method === 'POST') {   // Lesen, Hören и Grammatik: один шаг генерации (план, абзац, блок записи, задания), браузер собирает результат
+            self::needAiKey();
+            return Gen::route($u, Http::json());
+        }
+
+        if ($p === '/aidiag' && $method === 'POST') {   // проверка связи: что именно отвечают Claude и OpenAI и как быстро
+            return self::diag($u);
         }
 
         if ($p === '/ltasks' && $method === 'POST') {   // задания официальных типов EPD к тексту Lesen
             self::needAiKey();
             $d = Http::json();
             [$system, $content, $schema, $tokens] = AiGen::ltasksRequest($d);
-            $res = Ai::ask($u, 'ltasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 60, 'ИИ сейчас недоступен, попробуй ещё раз');
+            $res = Ai::ask($u, 'ltasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 25, 'ИИ сейчас недоступен, попробуй ещё раз');
             return ['tasks' => AiGen::ltasksNormalize((string)$d['kind'], $res, AiGen::paras($d['paras'] ?? []))];
         }
 
@@ -254,30 +376,6 @@ class Lernen
             [$system, $content, $schema, $tokens] = AiGen::wexamRequest($d);
             $res = Ai::ask($u, 'wexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 100, 'ИИ сейчас недоступен, попробуй ещё раз');
             return ['items' => AiGen::wexamNormalize($res)];
-        }
-
-        if ($p === '/gexam' && $method === 'POST') {   // пробный вариант Strukturen und Wortschatz
-            self::needAiKey();
-            $d = Http::json();
-            [$system, $content, $schema, $tokens] = AiGen::gexamRequest($d);
-            $res = Ai::ask($u, 'gexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 120, 'ИИ сейчас недоступен, попробуй ещё раз');
-            return ['items' => AiGen::gexamNormalize($res)];
-        }
-
-        if ($p === '/hexam' && $method === 'POST') {   // пробный Hören (Teil 1 или Teil 2) как на экзамене
-            self::needAiKey();
-            $d = Http::json();
-            [$system, $content, $schema, $tokens] = AiGen::hexamRequest($d);
-            $res = Ai::ask($u, 'hexam', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 150, 'ИИ сейчас недоступен, попробуй ещё раз');
-            return AiGen::hexamNormalize((int)$d['part'], $res, Util::str($d['topic'] ?? '', 200), ($d['level'] ?? '') === 'C1' ? 'C1' : 'B2');
-        }
-
-        if ($p === '/htasks' && $method === 'POST') {   // дополнительные вопросы к записи Hören
-            self::needAiKey();
-            $d = Http::json();
-            [$system, $content, $schema, $tokens] = AiGen::htasksRequest($d);
-            $res = Ai::ask($u, 'htasks', AiGen::MODEL, $system, $content, $schema, $tokens, 'low', 90, 'ИИ сейчас недоступен, попробуй ещё раз');
-            return ['tasks' => AiGen::htasksNormalize($res)];
         }
 
         if ($p === '/lcheck' && $method === 'POST') {   // оценка открытых ответов Lesen (Kurzantworten и т.п.): 0 / 0,5 / 1
@@ -347,58 +445,32 @@ class Lernen
             $d = Http::json();
             $text = Util::str($d['text'] ?? '', 1500);
             if ($text === '') { throw new ApiError(400, 'Пустой текст'); }
-            if (!Ai::openaiKey()) { return ['url' => null, 'nokey' => true]; }
-            Ai::guard($u);
-            Db::commit();
-            $t0 = microtime(true);
-            try { [$name, $fresh] = self::ttsFile($text, Util::str($d['voice'] ?? '', 20), Util::str($d['style'] ?? '', 400)); }
-            catch (Throwable $e) {
-                Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), $e->getMessage(), 0);
-                Db::commit();
-                throw Ai::failure($e, 'Озвучка сейчас недоступна');
+            $v = Util::str($d['voice'] ?? '', 20);
+            return self::ttsScript($u, [['x', $text]], ['x' => ['voice' => $v, 'style' => Util::str($d['style'] ?? '', 400)]]);
+        }
+
+        if ($p === '/audiolines' && $method === 'POST') {   // запись от ИИ (реплики приходят из браузера): тот же путь, что и у готовых записей
+            $d = Http::json();
+            $voices = [];
+            foreach (is_array($d['voices'] ?? null) ? array_slice($d['voices'], 0, 6, true) : [] as $k => $v) {
+                if (is_array($v)) { $voices[mb_substr((string)$k, 0, 1)] = ['voice' => Util::str($v['voice'] ?? '', 20), 'style' => Util::str($v['style'] ?? '', 400)]; }
             }
-            if ($fresh) { Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), '', mb_strlen($text) * self::TTS_MICRO_PER_CHAR); }
-            return ['url' => '/audio/' . $name];
+            $lines = []; $total = 0;
+            foreach (array_slice(is_array($d['lines'] ?? null) ? $d['lines'] : [], 0, 80) as $ln) {
+                if (!is_array($ln) || count($ln) < 2) { continue; }
+                $t = Util::str($ln[1], 1500); $total += mb_strlen($t);
+                if ($t !== '') { $lines[] = [mb_substr((string)$ln[0], 0, 1), $t]; }
+            }
+            if (!$lines || $total > 14000) { throw new ApiError(400, 'Нужна запись до 14 000 знаков'); }
+            return self::ttsScript($u, $lines, $voices);
         }
 
         if ($method === 'POST' && preg_match('#^/audio/(de|frei)/([a-z0-9_-]{1,40})$#', $p, $m)) {
-            // Сценарий из нескольких реплик. Хостинг обрывает долгие запросы, поэтому за один вызов делаем столько реплик, сколько успеваем
-            // (бюджет audio_budget, по умолчанию 20 с), и отвечаем pending=true — страница повторяет запрос, готовые реплики берутся из кэша.
+            // Готовая запись из нескольких реплик. Хостинг обрывает долгие запросы, поэтому за один вызов озвучиваем столько кусков, сколько успеваем,
+            // и отвечаем pending=true — страница повторяет запрос, готовые куски берутся из кэша.
             $item = self::findItem($m[1], 'hoeren', $m[2]);
             if (!$item) { throw new ApiError(404, 'Нет такого аудио'); }
-            if (!Ai::openaiKey()) { return ['url' => null, 'nokey' => true]; }
-            $lines = $item['lines'] ?? [];
-            $voices = $item['voices'] ?? [];
-            $budget = (int)cfg('audio_budget', 20);
-            $t0 = microtime(true);
-            $parts = []; $chars = 0; $guarded = false; $lastErr = null;
-            foreach ($lines as [$spk, $text]) {
-                $v = $voices[$spk] ?? [];
-                $name = self::ttsName($text, $v['voice'] ?? null, $v['style'] ?? null);
-                if (!(is_file(EPD_AUDIO . '/' . $name) && filesize(EPD_AUDIO . '/' . $name) > 0)) {
-                    if ((microtime(true) - $t0) > $budget) { break; }
-                    if (!$guarded) { Ai::guard($u); Db::commit(); $guarded = true; }
-                    try { self::ttsFile($text, $v['voice'] ?? null, $v['style'] ?? null); $chars += mb_strlen($text); }
-                    catch (Throwable $e) { $lastErr = $e; break; }
-                }
-                $parts[] = $name;
-            }
-            if ($chars) { Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), '', $chars * self::TTS_MICRO_PER_CHAR); }
-            if ($lastErr) {
-                Ai::log($uid, 'tts', self::TTS_MODEL, 0, 0, (int)((microtime(true) - $t0) * 1000), $lastErr->getMessage(), 0);
-                Db::commit();
-                throw Ai::failure($lastErr, 'Озвучка сейчас недоступна');
-            }
-            if (count($parts) < count($lines)) { return ['url' => null, 'pending' => true, 'done' => count($parts), 'total' => count($lines)]; }
-            $name = 's' . substr(hash('sha256', implode('|', $parts)), 0, 32) . '.mp3';
-            $fp = EPD_AUDIO . '/' . $name;
-            if (!is_file($fp)) {
-                $out = fopen($fp . '.part', 'wb');
-                foreach ($parts as $part) { fwrite($out, (string)file_get_contents(EPD_AUDIO . '/' . $part)); }
-                fclose($out);
-                rename($fp . '.part', $fp);
-            }
-            return ['url' => '/audio/' . $name];
+            return self::ttsScript($u, $item['lines'] ?? [], $item['voices'] ?? []);
         }
 
         if ($p === '/stt' && $method === 'POST') {
@@ -436,8 +508,19 @@ class Lernen
             $phase = Util::str($d['phase'] ?? '', 20);
             $content = "ЗАДАНИЕ\n" . self::taskBrief($item) . "\n\nЭТАП: " . (['monolog' => 'монолог-презентация', 'dialog' => 'диалог с комиссией'][$phase] ?? 'разговор')
                 . "\n\nПРЕДЫДУЩИЙ РАЗГОВОР\n" . ($hist ? implode("\n", $hist) : '—') . "\n\nНОВЫЙ ОТВЕТ СТУДЕНТА (расшифровка)\n" . $text;
-            return Ai::ask($u, 'talk', ($d['task'] ?? '') === 'ai' ? AiGen::MODEL : self::TALK_MODEL, self::prompt($area === 'frei' ? 'lernen_talk_frei' : 'lernen_talk_epd'), $content,
-                self::schema('lernen_talk'), (int)cfg('talk_max_tokens', 2500), 'low', 120, 'ИИ сейчас недоступен, попробуй ещё раз');
+            // разбор и реплика экзаменатора просим двумя короткими запросами (клиент шлёт part=review и part=reply одновременно): один длинный не успевает за лимит хостинга
+            $part = Util::str($d['part'] ?? '', 6);
+            $sys = self::prompt($area === 'frei' ? 'lernen_talk_frei' : 'lernen_talk_epd');
+            if ($part === 'review') {
+                $sys .= "\n\nСЕЙЧАС ТОЛЬКО ЧАСТЬ 1 (разбор): заполни transcript, corrected, errors, better, redemittel, content, score. Поля reply_de и reply_ru верни пустыми строками.";
+                return Ai::ask($u, 'talk', ($d['task'] ?? '') === 'ai' ? AiGen::MODEL : self::TALK_MODEL, $sys, $content, self::schema('lernen_talk'), 1800, 'low', 25, 'ИИ сейчас недоступен, попробуй ещё раз');
+            }
+            if ($part === 'reply') {
+                $sys .= "\n\nСЕЙЧАС ТОЛЬКО ЧАСТЬ 2 (реплика): заполни reply_de и reply_ru. Остальные строки верни пустыми, массивы пустыми, score = 3.";
+                return Ai::ask($u, 'talk', self::CTX_MODEL, $sys, $content, self::schema('lernen_talk'), 700, 'low', 25, 'ИИ сейчас недоступен, попробуй ещё раз');
+            }
+            return Ai::ask($u, 'talk', ($d['task'] ?? '') === 'ai' ? AiGen::MODEL : self::TALK_MODEL, $sys, $content,
+                self::schema('lernen_talk'), (int)cfg('talk_max_tokens', 2500), 'low', 25, 'ИИ сейчас недоступен, попробуй ещё раз');
         }
 
         if ($p === '/settings' && $method === 'GET') {

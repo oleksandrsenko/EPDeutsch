@@ -1,0 +1,28 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "lines"
+ ],
+ "properties": {
+  "lines": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "s",
+     "text"
+    ],
+    "properties": {
+     "s": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "title",
+  "kicker",
+  "lead",
+  "paras"
+ ],
+ "properties": {
+  "title": {
+   "type": "string"
+  },
+  "kicker": {
+   "type": "string"
+  },
+  "lead": {
+   "type": "string"
+  },
+  "paras": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

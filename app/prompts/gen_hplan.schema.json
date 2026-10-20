@@ -1,0 +1,51 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "kind",
+  "title",
+  "intro",
+  "speakers",
+  "segments"
+ ],
+ "properties": {
+  "kind": {
+   "type": "string"
+  },
+  "title": {
+   "type": "string"
+  },
+  "intro": {
+   "type": "string"
+  },
+  "speakers": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "name",
+     "female"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "female": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "segments": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

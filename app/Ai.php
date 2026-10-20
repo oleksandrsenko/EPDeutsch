@@ -4,8 +4,8 @@ class Ai
 {
     public const MODEL = 'claude-haiku-5-5';
     public const PRICE = ['claude-haiku-4-5' => [1, 5], 'claude-haiku-5-5' => [0.1, 0.5], 'claude-sonnet-5-5' => [2, 10], 'claude-opus-5-5' => [4, 20]];  // $ за 1 млн токенов
-    public const USER_DAY = 450;        // запросов к ИИ в день на аккаунт
-    public const USER_MIN = 30;         // запросов в минуту на аккаунт
+    public const USER_DAY = 900;        // запросов к ИИ в день на аккаунт (один текст или запись — это 10–20 коротких запросов)
+    public const USER_MIN = 90;         // запросов в минуту на аккаунт
     public const SITE_DAY_USD = 3.0;    // общий дневной бюджет сайта
     public const NEED_CLAUDE = 'Нужен ключ Claude (Настройки → Ключи)';
     public const BLOCK_MSG = [
@@ -83,14 +83,35 @@ class Ai
                 'site_budget' => sprintf('исчерпан дневной бюджет сайта $%.2f', self::SITE_DAY_USD)];
     }
 
-    /** Превращает исключение внешнего вызова в ApiError: таймаут хостинга получает понятное сообщение. */
+    /** Короткая причина сбоя по-русски: чтобы вместо «ИИ недоступен» было видно, что именно не так (ключ, лимит, обрыв, связь). Секреты вырезаются. */
+    public static function reason(Throwable $e): string
+    {
+        $m = self::redact($e->getMessage());
+        if ($e->getCode() === 28 || str_contains($m, 'timed out')) { return 'не успел ответить за отведённое время'; }
+        if (preg_match('/(Claude|OpenAI) HTTP (\d{3})/', $m, $x)) {
+            $who = $x[1]; $c = (int)$x[2];
+            if ($c === 401 || $c === 403) { return "ключ $who не принят (HTTP $c): проверь ключ в настройках"; }
+            if ($c === 404) { return "$who не нашёл модель или адрес (HTTP 404)"; }
+            if ($c === 400) { return "$who отклонил запрос (HTTP 400): " . mb_substr(trim(preg_replace('/^.*?\{/s', '{', $m)), 0, 140); }
+            if ($c === 429) { return "лимит запросов $who исчерпан (HTTP 429): подожди минуту или проверь баланс"; }
+            if ($c >= 500) { return "$who временно недоступен (HTTP $c)"; }
+            return "$who ответил HTTP $c";
+        }
+        if (str_contains($m, 'stop_reason=max_tokens')) { return 'ответ ИИ оборвался: слишком длинный'; }
+        if (str_contains($m, 'stop_reason=refusal')) { return 'ИИ отказался отвечать на запрос'; }
+        if (str_contains($m, 'не JSON')) { return 'ИИ вернул ответ не в том формате'; }
+        if (str_starts_with($m, 'curl:')) { return 'нет связи с сервисом ИИ (' . mb_substr($m, 6, 90) . ')'; }
+        return mb_substr(trim($m), 0, 120);
+    }
+
+    /** Превращает исключение внешнего вызова в ApiError: таймаут хостинга и причина сбоя называются прямо. */
     public static function failure(Throwable $e, string $msg): ApiError
     {
         if ($e instanceof ApiError) { return $e; }
         if ($e->getCode() === 28) {
-            return new ApiError(504, 'ИИ не успел ответить: на бесплатном хостинге время запроса ограничено. Попробуй ещё раз, а если повторяется — сделай текст короче.');
+            return new ApiError(504, 'ИИ не успел ответить: на бесплатном хостинге время запроса ограничено. Попробуй ещё раз.');
         }
-        return new ApiError(502, $msg);
+        return new ApiError(502, rtrim($msg, '.') . ' (' . self::reason($e) . ')', ['retry' => !preg_match('/HTTP (400|401|403|404)/', $e->getMessage())]);
     }
 
     // ---------- Claude ----------

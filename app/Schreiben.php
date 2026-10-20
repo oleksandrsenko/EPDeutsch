@@ -7,7 +7,7 @@ class Schreiben
     const MAX_STATE = 1048576;
     const TYPES = [
         'stell' => ['name' => 'Stellungnahme', 'min' => 230, 'max' => 250, 'pass' => 12, 'crit' => ['inhalt' => 5, 'aufbau' => 6, 'wortschatz' => 6, 'sprachrichtigkeit' => 8]],
-        'eroert' => ['name' => 'Erörterung', 'min' => 200, 'max' => 220, 'pass' => 10, 'crit' => ['inhalt' => 4, 'aufbau' => 5, 'wortschatz' => 5, 'sprachrichtigkeit' => 6]],
+        'eroert' => ['name' => 'Erörterung', 'min' => 200, 'max' => 220, 'pass' => 12, 'crit' => ['inhalt' => 5, 'aufbau' => 6, 'wortschatz' => 6, 'sprachrichtigkeit' => 8]],
     ];
     const LANG_DE = ['ru' => 'Russisch', 'en' => 'Englisch'];
 
@@ -72,11 +72,11 @@ class Schreiben
         return $t;
     }
 
+    /** Schreiben — всегда 25 баллов (Inhalt 5, Aufbau 6, Wortschatz 6, Sprachrichtigkeit 8); оценка по шкале всей письменной части (75 баллов). */
     private static function noteFor(float $points, string $typ): int
     {
-        if ($typ === 'stell') { $p = $points / 25 * 75; return $p >= 69 ? 1 : ($p >= 61 ? 2 : ($p >= 53 ? 3 : ($p >= 45 ? 4 : 5))); }
-        $p = $points / 20 * 55;
-        return $p >= 51 ? 1 : ($p >= 45 ? 2 : ($p >= 39 ? 3 : ($p >= 33 ? 4 : 5)));
+        $p = $points / 25 * 75;
+        return $p >= 69 ? 1 : ($p >= 61 ? 2 : ($p >= 53 ? 3 : ($p >= 45 ? 4 : 5)));
     }
 
     private static function lang(array $u, array $d): string

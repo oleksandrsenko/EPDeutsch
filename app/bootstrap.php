@@ -45,7 +45,13 @@ set_exception_handler(function (Throwable $e) {
     if ($e instanceof ApiError) { Http::fail($e); }
     error_log('EPD error: ' . $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine());
     if (!headers_sent()) { http_response_code(500); header('Content-Type: application/json; charset=utf-8'); }
-    echo json_encode(['error' => 'Ошибка сервера'] + (cfg('debug') ? ['debug' => $e->getMessage()] : []), JSON_UNESCAPED_UNICODE);
+    // в учебных запросах (/api/de/*) к «Ошибке сервера» добавляем короткую причину: без путей к файлам и без секретов
+    $detail = '';
+    if (str_starts_with((string)parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/api/de/') || cfg('debug')) {
+        $detail = get_class($e) . ': ' . preg_replace('#/[\w./-]+#', '…', mb_substr($e->getMessage(), 0, 160));
+        $detail = class_exists('Ai', false) || class_exists('Ai') ? Ai::redact($detail) : $detail;
+    }
+    echo json_encode(['error' => 'Ошибка сервера' . ($detail !== '' ? ' (' . $detail . ')' : '')] + (cfg('debug') ? ['debug' => $e->getMessage()] : []), JSON_UNESCAPED_UNICODE);
     exit;
 });
 

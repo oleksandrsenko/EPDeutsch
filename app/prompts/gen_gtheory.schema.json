@@ -1,0 +1,20 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "title",
+  "ru",
+  "theory"
+ ],
+ "properties": {
+  "title": {
+   "type": "string"
+  },
+  "ru": {
+   "type": "string"
+  },
+  "theory": {
+   "type": "string"
+  }
+ }
+}

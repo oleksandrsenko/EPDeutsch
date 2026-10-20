@@ -1,0 +1,39 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "items"
+ ],
+ "properties": {
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "q",
+     "o",
+     "ai",
+     "ex"
+    ],
+    "properties": {
+     "q": {
+      "type": "string"
+     },
+     "o": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "ai": {
+      "type": "integer"
+     },
+     "ex": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

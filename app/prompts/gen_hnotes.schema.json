@@ -1,0 +1,31 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "notes",
+  "gaps"
+ ],
+ "properties": {
+  "notes": {
+   "type": "string"
+  },
+  "gaps": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "at"
+    ],
+    "properties": {
+     "at": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ }
+}

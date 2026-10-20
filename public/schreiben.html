@@ -1012,7 +1012,7 @@ const plain=it=>it.de.replace(/\[([^\]]+)\]/g,"$1");
 const norm=s=>s.toLowerCase().replace(/ae/g,"ä").replace(/oe/g,"ö").replace(/ue/g,"ü").replace(/ss/g,"ß").replace(/[^a-zäöüß0-9]/g,"");
 const artOf=t=>t.typ==="eroert"?"eroert":(t.impuls||{}).art==="grafik"?"grafik":"text";
 const THEMA_RU={arbeit:"Работа и экономика",bez:"Отношения и равноправие",ges:"Общество и волонтёрство",konsum:"Общество потребления",gesund:"Тело и психика",bildung:"Учёба, образование, наука",medien:"Медиа и ИИ",reisen:"Туризм и путешествия",wohnen:"Жильё",umwelt:"Экология и транспорт"};
-const TYP={stell:{n:"EPD · Stellungnahme",s:"230–250 слов · 60 минут · 25 баллов",min:230,max:250,mins:60,cls:"s"},eroert:{n:"Бонус-тест 1 · Erörterung",s:"200–220 слов · 20 баллов",min:200,max:220,mins:50,cls:"e"}};
+const TYP={stell:{n:"EPD · Stellungnahme",s:"230–250 слов · 60 минут · 25 баллов",min:230,max:250,mins:60,cls:"s"},eroert:{n:"Бонус-тест 1 · Erörterung",s:"200–220 слов · 25 баллов",min:200,max:220,mins:50,cls:"e"}};
 const KIND={text:{n:"Аргументативный текст",sub:"импульс: отрывок статьи",ic:"doc",tag:"📰 Текст"},grafik:{n:"График",sub:"импульс: диаграмма",ic:"chart",tag:"📊 График"},eroert:{n:"Erörterung",sub:"бонус-тест 1",ic:"flag",tag:"⚖️ Erörterung"}};
 function bestFor(id){const es=ESSAYS.filter(e=>e.task_id===id);return es.length?Math.max(...es.map(e=>e.points/e.max_points)):null}
 const draftOf=id=>{try{return localStorage.getItem("eps_draft_"+id)||""}catch(e){return ""}};
@@ -1193,7 +1193,7 @@ function rHome(){
       <div class="row"><button class="btn pri" data-goto="theory">${ic("book",17)}Как писать на высокий балл</button><button class="btn" data-goto="exam">${ic("clock",17)}Пробный экзамен</button></div></div>
     <div class="panel info-card"><div class="ic-h"><span class="ic-ico" style="--c:var(--c2)">${ic("flag",22)}</span><div><h2>Бонус-тесты VWU</h2><p class="muted">Курсовые тесты в FF2 / FF1plus. Сдал оба хорошо — письменную EPD можно не писать</p></div></div>
       <ul class="facts">
-        <li><b>Бонус-тест 1</b><span>Erörterung: за и против, потом своя позиция. 200–220 слов, 20 баллов</span></li>
+        <li><b>Бонус-тест 1</b><span>Erörterung: за и против, потом своя позиция. 200–220 слов, 25 баллов</span></li>
         <li><b>Бонус-тест 2</b><span>Stellungnahme, как на EPD: 230–250 слов, 25 баллов</span></li>
         <li><b>Условие</b><span>средняя оценка двух тестов не хуже 4, второй не отрицательный, посещаемость от 70 %</span></li>
         <li><b>Что делать</b><span>готовься в формате EPD — он закрывает бонус-тест 2. Для первого тренируй Erörterung</span></li>
@@ -1321,7 +1321,7 @@ function rTheory(anchor){
   <section class="th-sec" id="t-bonus"><h2><span class="num">7</span>Бонус-тесты</h2>
     <div class="tcards">
       <div class="tcard"><b>Что это</b><p>Два письменных теста внутри курса VWU (FF2 и FF1plus). Если средняя оценка двух тестов не хуже 4, второй тест не отрицательный и посещаемость от 70 %, письменную EPD можно не сдавать. Зарегистрироваться на EPD всё равно нужно, устная часть остаётся.</p></div>
-      <div class="tcard"><b>Бонус-тест 1 · Erörterung</b><p>200–220 слов, 20 баллов, минимум 10. Спорный вопрос: сначала аргументы за и против, потом взвешиваешь и даёшь свою позицию. Здесь нет «описания импульса».</p></div>
+      <div class="tcard"><b>Бонус-тест 1 · Erörterung</b><p>200–220 слов, 25 баллов, минимум 12. Спорный вопрос: сначала аргументы за и против, потом взвешиваешь и даёшь свою позицию. Здесь нет «описания импульса».</p></div>
       <div class="tcard"><b>Бонус-тест 2 · Stellungnahme</b><p>Тот же формат, что на EPD: 230–250 слов, 25 баллов, импульс-текст или график. Всё, что ты тренируешь здесь для EPD, работает и для него.</p></div>
       <div class="tcard"><b>Как готовиться</b><p>Основное время — формат EPD. За 1–2 недели до бонус-теста 1 напиши 3–4 Erörterung: главное — честно показать обе стороны и только потом свою.</p></div>
     </div>
@@ -1343,7 +1343,7 @@ let TF={thema:"all"};
 const TASK_HEAD={
   text:["Аргументативный текст","Импульс — короткий газетный текст в стиле der Standard. Перескажи главную мысль своими словами, займи позицию и предложи меры. Формат EPD и бонус-теста 2."],
   grafik:["Текст по графику","Импульс — диаграмма. Главное правило: график не описываем подробно. Тема, 1–2 ярких факта — и сразу к своему мнению. Формат EPD и бонус-теста 2."],
-  eroert:["Erörterung · бонус-тест 1","Спорный вопрос: аргументы за и против, взвешивание и твоя позиция. 200–220 слов, 20 баллов."],
+  eroert:["Erörterung · бонус-тест 1","Спорный вопрос: аргументы за и против, взвешивание и твоя позиция. 200–220 слов, 25 баллов."],
   all:["Задания с ИИ","Все задания в одном месте. Пиши, отправляй — ИИ проверит как экзаменатор VWU: баллы по четырём критериям, ошибки на полях и разбор."]};
 function rTasks(kind){
   kind=["text","grafik","eroert"].includes(kind)?kind:"all";
@@ -1407,7 +1407,7 @@ function rWrite(id){
   <div class="write${sheetOpen?" with-sheet":""}" id="writeBox">
     <div class="etool" id="etool">
       <div class="wc" id="wc"><svg viewBox="0 0 36 36" width="34" height="34"><circle cx="18" cy="18" r="14" fill="none" stroke="var(--line2)" stroke-width="4"/><circle id="wcArc" cx="18" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="87.96" stroke-dashoffset="87.96" transform="rotate(-90 18 18)"/></svg><span><b id="wcN">0</b><small>/${ty.min}–${ty.max}</small></span></div>
-      <label class="timer" id="tmBox" title="Таймер запускается с первой буквы"><span id="tm">${ty.mins}:00</span><select id="tmSel" aria-label="Время">${[0,30,45,50,60,75].map(m=>`<option value="${m}"${m===ty.mins?" selected":""}>${m?m+" мин":"без таймера"}</option>`).join("")}</select></label>
+      <label class="timer" id="tmBox" title="Таймер запускается с первой буквы"><span id="tm">${ty.mins}:00</span><input id="tmSel" type="number" min="1" max="240" step="1" inputmode="numeric" value="${ty.mins}" aria-label="Минут на текст" style="width:64px"><span style="font-weight:700;font-size:13px">мин</span></label>
       ${umKeys("wUm")}
       <div class="sp"></div>
       <button class="iconb" id="sheetBtn" aria-pressed="${sheetOpen}" aria-label="Открыть шпаргалку" title="Шпаргалка: заготовки по абзацам">${ic("sheet",20)}</button>
@@ -1434,7 +1434,7 @@ function rWrite(id){
   const tick=()=>{if(!W_STATE.mins){tm.textContent="∞";return}const el=Math.floor((Date.now()-W_STATE.start)/1000),left=W_STATE.mins*60-el;
     tm.textContent=(left<0?"−":"")+Math.floor(Math.abs(left)/60)+":"+String(Math.abs(left)%60).padStart(2,"0");$("#tmBox").classList.toggle("warn",left<600&&left>=0);$("#tmBox").classList.toggle("over",left<0)};
   const startTimer=()=>{W_STATE.start=Date.now();stopTimer();TIMER=setInterval(tick,1000);tick()};
-  $("#tmSel").onchange=e=>{W_STATE.mins=+e.target.value;W_STATE.start=W_STATE.start&&W_STATE.mins?Date.now():null;tm.textContent=W_STATE.mins?W_STATE.mins+":00":"∞";stopTimer();if(W_STATE.start)startTimer()};
+  $("#tmSel").onchange=e=>{const v=Math.max(1,Math.min(240,Math.round(+e.target.value)||1));e.target.value=v;W_STATE.mins=v;W_STATE.start=W_STATE.start&&W_STATE.mins?Date.now():null;tm.textContent=W_STATE.mins?W_STATE.mins+":00":"∞";stopTimer();if(W_STATE.start)startTimer()};
   $("#asExam").onclick=()=>{if(!confirm("Начать экзамен по этому заданию? Таймер "+ty.mins+" минут без паузы, подсказок не будет, уходы со страницы записываются в протокол."))return;W_STATE.dirty=false;exStart([t.id],ty.mins,t.id)};
   $("#sheetBtn").onclick=()=>toggleSheet();
   $("#send").onclick=()=>submit(t,ta.value);
@@ -1472,7 +1472,7 @@ async function sendGrade(t,text,mins,prot,onFail){
   let k=0;const st=$$(".lsteps div");st[0].classList.add("on");const iv=setInterval(()=>{if(k<st.length-1){st[k].classList.replace("on","done");k++;st[k].classList.add("on")}},11000);
   try{
     const body={task_id:t.id,text,minutes:mins,lang:LANG};if(t.gen)body.task=t;if(prot)body.protokoll=prot;
-    const r=await api("POST","grade",body);clearInterval(iv);
+    const r=await gradeParts(body);clearInterval(iv);
     try{localStorage.removeItem("eps_draft_"+t.id)}catch(e){}
     if(W_STATE)W_STATE.dirty=false;
     if(prot){S.exm=S.exm||{};S.exm[r.id]=violCount(prot.ev)}
@@ -1489,6 +1489,15 @@ async function sendGrade(t,text,mins,prot,onFail){
     go("result",{r,t,text,fresh:true});
     checkAch();
   }catch(e){clearInterval(iv);toast("⚠️ "+e.message);onFail&&onFail()}
+}
+// оценка частями: баллы (Sonnet), ошибки по половинам текста и исправленный текст параллельно (Haiku); каждая часть короткая и успевает за лимит хостинга
+async function gradeParts(body){
+  const call=async(b,tries=2)=>{for(let k=0;;k++){try{return await api("POST","grade",b)}catch(e){if(k>=tries||/ключ|HTTP 40|Слишком короткий/.test(e.message))throw e;await new Promise(r=>setTimeout(r,1500*(k+1)))}}};
+  const r=await call(body),id=r.id,pc={};
+  await Promise.allSettled([call({id,part:"errors",half:1,lang:LANG}).then(x=>pc.f1=x.fehler),call({id,part:"errors",half:2,lang:LANG}).then(x=>pc.f2=x.fehler),call({id,part:"rewrite",lang:LANG}).then(x=>{pc.k=x.korrigiert;pc.b=x.besser})]);
+  r.fehler=[...(pc.f1||[]),...(pc.f2||[])];r.korrigiert=pc.k||"";r.besser=pc.b||[];
+  call({id,part:"save",fehler:r.fehler,korrigiert:r.korrigiert,besser:r.besser},1).catch(()=>{});
+  return r;
 }
 const critOf=r=>Object.fromEntries(Object.entries(r.kriterien).map(([k,v])=>[k,[v.punkte,v.max]]));
 function addErrors(r,t){
@@ -1591,7 +1600,7 @@ function rExam(){
     <div class="panel"><h2>Формат</h2>
       <div class="ex-fmt" id="exFmt">
         <button class="fmt" data-typ="stell" aria-pressed="true"><b>EPD · Textproduktion</b><small>Stellungnahme, 230–250 слов, 60 минут, 25 баллов. Так же в бонус-тесте 2.</small></button>
-        <button class="fmt" data-typ="eroert" aria-pressed="false"><b>Бонус-тест 1 · Erörterung</b><small>200–220 слов, 50 минут (ориентир), 20 баллов.</small></button>
+        <button class="fmt" data-typ="eroert" aria-pressed="false"><b>Бонус-тест 1 · Erörterung</b><small>200–220 слов, 50 минут (ориентир), 25 баллов.</small></button>
       </div>
       <button class="btn pri big" id="exGo" style="width:100%">${ic("clock",18)}Начать экзамен</button>
       <p class="muted" style="font-size:13px;margin:10px 0 0">Браузер попросит разрешить полноэкранный режим.</p>
@@ -1692,14 +1701,14 @@ function rResult(arg){
   </div>
   <div class="panel sec"><h3>${ic("spark",18)}Как сказать на C1</h3><div class="better">${(r.besser||[]).map(b=>`<div><s lang="de">${esc(b.original)}</s><b lang="de">${esc(b.besser)}</b><small class="muted">${esc(b.warum)}</small></div>`).join("")}</div></div>
   ${r.protokoll?`<div class="panel sec">${protHTML(r.protokoll)}</div>`:""}
-  ${t.typ==="eroert"?'<p class="muted" style="font-size:12px">Распределение 20 баллов Erörterung по критериям VWU не публикует. Здесь шкала EPD × 0,8.</p>':""}
   <details class="panel sec"><summary style="cursor:pointer;font-weight:800">Исправленный текст целиком</summary><div class="korr" lang="de">${esc(r.korrigiert)}</div></details>
-  <div class="res-next"><button class="btn" data-goto="fehler">${ic("target",17)}Мои ошибки (${S.err.length})</button><button class="btn pri" id="nextTask">${ic("pen",17)}Следующее задание</button></div>`;
+  <div class="res-next">${r.id?`<button class="btn" id="delRes">${ic("x",17)}Удалить результат</button>`:""}<button class="btn" data-goto="fehler">${ic("target",17)}Мои ошибки (${S.err.length})</button><button class="btn pri" id="nextTask">${ic("pen",17)}Следующее задание</button></div>`;
   // анимации: кольцо, баллы, полоски критериев, слова учителя
   requestAnimationFrame(()=>{const rv=$(".rh-ring .ring-v");if(rv)rv.style.strokeDashoffset=(+rv.dataset.c*(1-pct)).toFixed(1);countUp($("#rhN"),r.gesamt,1200);$$(".rh-crit .bar i").forEach((b,i)=>setTimeout(()=>b.style.width=b.dataset.w+"%",250+i*140))});
   const fz=r.fazit||r.pruefer_kommentar||"";setTimeout(()=>typeInto($("#fazit"),fz,18),700);
   if(arg.fresh){if(r.bestanden&&pct>=.7||r._best)setTimeout(()=>confetti(),900);if(r._goal)setTimeout(()=>toast("🎯 Цель дня выполнена!","Так держать. Серия засчитана"),2200);else if(r._best)setTimeout(()=>toast("🏆 Новый личный рекорд по этому заданию"),2200)}
   $("#again").onclick=()=>go("write",t.id);
+  const dr=$("#delRes");if(dr)dr.onclick=()=>delEssay(r.id,()=>go("hist"));
   $("#nextTask").onclick=()=>{const n=pickTask(artOf(t)==="eroert"?"eroert":artOf(t)==="grafik"?"text":"grafik");if(n)go("write",n.id)};
   startReview(errs);
   attachTr($("#paper"));
@@ -1759,12 +1768,19 @@ function ftNext(){
 
 /* ---------- ИСТОРИЯ ---------- */
 function rHist(){
-  const n=ESSAYS.length,avg=n?Math.round(ESSAYS.reduce((a,e)=>a+e.points/e.max_points,0)/n*100):0,pass=ESSAYS.filter(e=>e.points>=(e.typ==="stell"?12:10)).length;
+  const n=ESSAYS.length,avg=n?Math.round(ESSAYS.reduce((a,e)=>a+e.points/e.max_points,0)/n*100):0,pass=ESSAYS.filter(e=>e.points>=12).length;
   $("#main").innerHTML=`<h1>Мой прогресс</h1><p class="sub">Все проверенные тексты. Нажми на текст, чтобы снова открыть разбор.</p>
   ${n?`<div class="stats4"><div><b>${n}</b><small>${plural(n,"текст","текста","текстов")} проверено</small></div><div><b>${avg} %</b><small>средний балл</small></div><div><b>${pass}</b><small>${plural(pass,"зачёт","зачёта","зачётов")}</small></div><div><b>${streak()}</b><small>${plural(streak(),"день","дня","дней")} подряд</small></div></div>
-  <div class="panel" style="margin-bottom:18px"><h3>Динамика</h3>${trend()}</div><div class="panel" style="margin-bottom:18px"><h3>По критериям</h3>${critBars(ESSAYS.slice(0,10))}</div><div class="hist">${ESSAYS.map(e=>{const p=e.points/e.max_points;return `<div class="hi" data-id="${e.id}">${ring(p,48,p>=.7?"var(--good)":p>=.48?"var(--mid)":"var(--bad)")}<div class="t"><b>${esc(e.title)}</b><small class="muted">${S.exm&&S.exm[e.id]!=null?(S.exm[e.id]?"⏱ экзамен · ⚠ "+S.exm[e.id]+" · ":"⏱ экзамен · ✓ · "):""}${TYP[e.typ]?TYP[e.typ].n:""} · ${new Date(e.ts*1000).toLocaleDateString("ru-RU",{day:"numeric",month:"short"})} · ${e.words} слов${e.minutes?" · "+e.minutes+" мин":""}</small></div><span class="pts">${fmt(e.points)}/${e.max_points}</span></div>`}).join("")}</div>`
+  <div class="panel" style="margin-bottom:18px"><h3>Динамика</h3>${trend()}</div><div class="panel" style="margin-bottom:18px"><h3>По критериям</h3>${critBars(ESSAYS.slice(0,10))}</div><div class="hist">${ESSAYS.map(e=>{const p=e.points/e.max_points;return `<div class="hi" data-id="${e.id}">${ring(p,48,p>=.7?"var(--good)":p>=.48?"var(--mid)":"var(--bad)")}<div class="t"><b>${esc(e.title)}</b><small class="muted">${S.exm&&S.exm[e.id]!=null?(S.exm[e.id]?"⏱ экзамен · ⚠ "+S.exm[e.id]+" · ":"⏱ экзамен · ✓ · "):""}${TYP[e.typ]?TYP[e.typ].n:""} · ${new Date(e.ts*1000).toLocaleDateString("ru-RU",{day:"numeric",month:"short"})} · ${e.words} слов${e.minutes?" · "+e.minutes+" мин":""}</small></div><span class="pts">${fmt(e.points)}/${e.max_points}</span><button class="btn sm" data-edel="${e.id}" title="Удалить результат">✕</button></div>`}).join("")}</div>`
   :`<div class="empty">${mascot("sleep",110)}<h2>Здесь пока тихо</h2><p>После первого проверенного текста появятся оценки, график роста и разбор по критериям.</p><button class="btn pri" data-goto="tasks">Написать первый текст</button></div>`}`;
-  $$(".hi").forEach(h=>h.onclick=async()=>{try{const e=await api("GET","essay/"+h.dataset.id);go("result",{r:e.result,t:e.task,text:e.text})}catch(er){toast("⚠️ "+er.message)}});
+  $$(".hi").forEach(h=>h.onclick=async ev=>{if(ev.target.closest("[data-edel]"))return;try{const e=await api("GET","essay/"+h.dataset.id);e.result.id=e.id;go("result",{r:e.result,t:e.task,text:e.text})}catch(er){toast("⚠️ "+er.message)}});
+  $$("[data-edel]").forEach(b=>b.onclick=ev=>{ev.stopPropagation();delEssay(+b.dataset.edel,rHist)});
+}
+// удалить проверенный текст: пропадает из истории, средних баллов и «по критериям»
+async function delEssay(id,after){
+  if(!confirm("Удалить этот текст и его оценку? Результат пропадёт из истории и статистики."))return;
+  try{await api("DELETE","essay/"+id);ESSAYS=ESSAYS.filter(e=>e.id!==id);if(S.crit)delete S.crit[id];if(S.exm)delete S.exm[id];save();toast("Результат удалён");if(after)after()}
+  catch(er){toast("⚠️ "+er.message)}
 }
 function trend(){
   const es=ESSAYS.slice().reverse().slice(-20),W=600,H=130,n=es.length;if(n<2)return '<p class="muted">После второго текста здесь появится график.</p>';

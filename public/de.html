@@ -1791,7 +1791,10 @@ async function vSprechen(area,id){
     th.insertAdjacentHTML("beforeend",`<div class="bub me"><div class="who">Ты</div><div class="de">${esc(text)}</div></div><div class="fbk" id="pending"><span class="spin"></span> Разбираю ответ…</div>`);
     $("#pending").scrollIntoView({behavior:"smooth",block:"center"});
     try{
-      const r=await api("/de/talk",{method:"POST",body:JSON.stringify({area,task:t.id,item:/^(ai|sex[12])$/.test(t.id)?t:undefined,text,phase:SP.phase,history:SP.turns})});
+      const tb={area,task:t.id,item:/^(ai|sex[12])$/.test(t.id)?t:undefined,text,phase:SP.phase,history:SP.turns};
+      // разбор и реплика экзаменатора — два коротких запроса одновременно (один длинный хостинг оборвал бы)
+      const [rv,rp]=await Promise.all([post("/de/talk",{...tb,part:"review"}),post("/de/talk",{...tb,part:"reply"})]);
+      const r={...rv,reply_de:rp.reply_de,reply_ru:rp.reply_ru};
       SP.turns.push({role:"me",text:r.transcript||text});
       if(area==="de")(r.errors||[]).slice(0,8).forEach(e=>logErr("sprechen",{ref:t.id,title:t.title,href:"#/sprechen/"+t.id,q:e.wrong,ans:e.wrong,right:e.right,why:e.why}));
       $("#pending").outerHTML=fbHTML(r);
@@ -2182,7 +2185,7 @@ function applyColors(){const C=get("colors",{}),r=document.documentElement.style
 const hex=c=>{c=String(c).trim();if(c[0]==="#"&&c.length===7)return c;const m=c.match(/\d+/g);return m&&m.length>=3?"#"+m.slice(0,3).map(n=>(+n).toString(16).padStart(2,"0")).join(""):String(c).trim()};
 let NEWINV=null;
 // расход ИИ за сегодня по сервисам (данные приходят с /api/de/settings)
-const AIK_RU={aigen:"Практика с ИИ",ltasks:"Задания к тексту",htasks:"Вопросы к записи",lcheck:"Проверка ответов Lesen",gcheck:"Проверка ответов",sfort:"Satzanfänge",gwrite:"Письмо с ИИ",talk:"Sprechen",trdict:"Словарь переводчика",ctx:"Слова в тексте",tts:"Озвучка",stt:"Распознавание речи",wexam:"Пробный по словам",gexam:"Пробный Grammatik",hexam:"Пробный Hören",aitasks:"Задания от ИИ",practice:"Практика слов"};
+const AIK_RU={lplan:"План текста",lpara:"Абзац текста",hplan:"План записи",hseg:"Блок записи",hmc:"Вопросы A–D",hnotes:"Конспект",gtheory:"Теория",gitems:"Задания Grammatik",schreiben_err:"Schreiben: ошибки",schreiben_rew:"Schreiben: исправленный текст",diag:"Проверка связи",aigen:"Практика с ИИ",ltasks:"Задания к тексту",htasks:"Вопросы к записи",lcheck:"Проверка ответов Lesen",gcheck:"Проверка ответов",sfort:"Satzanfänge",gwrite:"Письмо с ИИ",talk:"Sprechen",trdict:"Словарь переводчика",ctx:"Слова в тексте",tts:"Озвучка",stt:"Распознавание речи",wexam:"Пробный по словам",gexam:"Пробный Grammatik",hexam:"Пробный Hören",aitasks:"Задания от ИИ",practice:"Практика слов"};
 function spendHTML(s){
   const b=s.by_service||{},L=s.limits||{},fmt=x=>"$"+(+x||0).toFixed(x<0.1?3:2);
   if(!b.claude)return "";
@@ -2212,11 +2215,16 @@ async function vSettings(){
      <button class="btn sm" id="colReset" style="margin-top:8px">Сбросить цвета</button></div>
    </div></div>
    ${spendHTML(s)}
+   <div class="card" style="margin-top:18px"><h2 style="margin-top:0">Проверка связи с ИИ</h2><p class="muted" style="margin-top:0;font-size:14px">Если ИИ пишет «недоступен» или озвучка не играет, нажми: покажу, что именно отвечают Claude и озвучка и почему.</p><button class="btn primary sm" id="diagGo">${ic("spark",15)}Проверить</button><div id="diagOut" style="margin-top:12px"></div></div>
    <div class="card" style="margin-top:18px"><h2 style="margin-top:0">Ключи</h2><p class="muted" style="margin-top:0;font-size:14px">Ключ сохраняется в вашем профиле в зашифрованном виде и используется только для ваших запросов. После сохранения он не показывается, только последние 4 символа.${s.site_keys&&!s.owner?" Если своего ключа нет, работает ключ сайта.":""}</p>${K.map(([k,n,ph])=>{const m=(s.mine||{})[k]||{};return `<div class="keyrow"><div><span class="dot ${m.set?"on":""}"></span><b>${n}</b><br><small class="muted">${m.broken?"Ключ нужно ввести заново":m.set?"задан: …"+esc(m.hint):"не задан"}</small></div><input type="password" id="k_${k}" placeholder="${m.set?"вставь новый, чтобы заменить":ph}" autocomplete="off"><span class="row" style="gap:6px"><button class="btn sm" data-key="${k}">Сохранить</button>${m.set||m.broken?`<button class="btn sm" data-keydel="${k}">Удалить</button>`:""}</span></div>`}).join("")}</div>
    ${s.owner?`<div class="card" style="margin-top:18px"><h2 style="margin-top:0">Приглашения</h2><p class="muted" style="margin-top:0;font-size:14px">Регистрация закрыта. Создай одноразовый код и отправь его другу: он вводит код на странице входа во вкладке «Регистрация».</p>
      ${NEWINV?`<div class="inv-new"><code>${esc(NEWINV)}</code><span class="muted" style="flex:1;min-width:160px">Новый код. Ссылка для друга: <b>${esc(location.origin)}/</b></span><button class="btn sm" id="invCopy">Скопировать</button></div>`:""}
      <button class="btn primary sm" id="invNew">${ic("plus",15)}Создать приглашение</button>
      ${inv.length?`<div style="margin-top:12px">${inv.map(x=>`<div class="inv"><code>${esc(x.code)}</code><span class="muted" style="flex:1">${x.used?`использован: ${esc(x.used_name||"")} · ${dt(x.used)}`:`создан ${dt(x.created)} · свободен`}</span>${x.used?"":`<button class="btn sm" data-invdel="${esc(x.code)}">Удалить</button>`}</div>`).join("")}</div>`:""}</div>`:""}`);
+  $("#diagGo").onclick=async()=>{const b=$("#diagGo");b.disabled=true;b.innerHTML='<span class="spin"></span> Проверяю…';
+    try{const r=await api("/de/aidiag",{method:"POST",body:"{}"});$("#diagOut").innerHTML=r.checks.map(c=>`<div class="setrow"><div><b>${esc(c.name)}</b><small>${esc(c.msg)}</small></div><b style="color:var(--${c.ok?"good":"bad"})">${c.ok?"✓":"✕"}</b></div>`).join("")}
+    catch(e){$("#diagOut").innerHTML=`<div class="card" style="border-left:5px solid var(--bad)">${esc(e.message)}</div>`}
+    b.disabled=false;b.innerHTML=ic("spark",15)+"Проверить"};
   $$("[data-key]").forEach(b=>b.onclick=async()=>{const k=b.dataset.key,v=$("#k_"+k).value.trim();if(!v){toast("Вставь ключ");return}try{await api("/keys",{method:"POST",body:JSON.stringify({provider:k,value:v})});toast("Ключ сохраняется в вашем профиле");await loadState();vSettings()}catch(e){toast(e.message)}});
   $$("[data-keydel]").forEach(b=>b.onclick=async()=>{try{await api("/keys/"+b.dataset.keydel,{method:"DELETE"});toast("Ключ удалён");await loadState();vSettings()}catch(e){toast(e.message)}});
   let av=+ST.user.avatar||0;

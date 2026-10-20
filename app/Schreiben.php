@@ -33,6 +33,14 @@ class Schreiben
         return $s;
     }
 
+    /** Схема оценки только с нужными полями (оценка идёт частями, чтобы каждая часть успевала за лимит хостинга). */
+    private static function partSchema(array $crit, array $keys): array
+    {
+        $full = self::gradeSchema($crit);
+        $props = array_intersect_key($full['properties'], array_flip($keys));
+        return ['type' => 'object', 'additionalProperties' => false, 'required' => array_keys($props), 'properties' => $props];
+    }
+
     private static function taskText(array $t): string
     {
         $imp = $t['impuls'] ?? [];
@@ -91,8 +99,45 @@ class Schreiben
         return $lang === 'ru' ? $system : str_replace(['Russisch', 'по-русски'], [self::LANG_DE[$lang], 'по-английски'], $system);
     }
 
+    /** Части оценки: errors (ошибки в половине текста), rewrite (исправленный текст и «как на C1»), save (склейка в сохранённый разбор). */
+    private static function gradePart(array $u, array $d, string $part): array
+    {
+        $id = Util::int($d['id'] ?? 0, 0, 2000000000);
+        $row = Db::one('SELECT * FROM schreiben_essays WHERE id=? AND user_id=?', [$id, $u['id']]);
+        if (!$row) { throw new ApiError(404, 'Текст не найден'); }
+        $t = Util::jd($row['task']);
+        $typ = $row['typ'];
+        $spec = self::TYPES[$typ] ?? self::TYPES['stell'];
+        if ($part === 'save') {
+            $res = Util::jd($row['result']);
+            foreach (['fehler', 'korrigiert', 'besser'] as $k) { if (array_key_exists($k, $d)) { $res[$k] = $d[$k]; } }
+            Db::run('UPDATE schreiben_essays SET result=? WHERE id=? AND user_id=?', [json_encode($res, JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION), $id, $u['id']]);
+            return ['ok' => true];
+        }
+        $text = (string)$row['text'];
+        $sys = self::inLang(Lernen::prompt('schreiben_grade'), self::lang($u, $d));
+        $head = 'Aufgabe:\n' . self::taskText($t) . "\n\n--- Text des Kandidaten ---\n" . $text . "\n--- Ende ---\n";
+        if ($part === 'errors') {
+            $half = max(1, min(2, (int)($d['half'] ?? 1)));
+            $sents = preg_split('/(?<=[.!?])\s+/u', $text, -1, PREG_SPLIT_NO_EMPTY);
+            $cut = (int)ceil(count($sents) / 2);
+            $section = implode(' ', $half === 1 ? array_slice($sents, 0, $cut) : array_slice($sents, $cut));
+            $content = $head . "\nNUR TEIL «fehler»: Suche sprachliche Fehler ausschließlich im folgenden Abschnitt (Abschnitt $half von 2), höchstens 14, in der Reihenfolge des Textes. Alle anderen Felder bleiben leer.\n--- Abschnitt ---\n" . $section . "\n--- Ende ---";
+            $res = Ai::ask($u, 'schreiben_err', self::FAST_MODEL, $sys, $content, self::partSchema($spec['crit'], ['fehler']), 2600, 'low', 25, 'ИИ сейчас не отвечает, попробуй ещё раз');
+            return ['fehler' => $res['fehler'] ?? []];
+        }
+        if ($part === 'rewrite') {
+            $content = $head . "\nNUR TEIL «korrigiert» und «besser»: korrigiere den ganzen Text mit minimalen Eingriffen (Absätze beibehalten) und gib 3–5 Stellen für «besser». Alle anderen Felder bleiben leer.";
+            $res = Ai::ask($u, 'schreiben_rew', self::FAST_MODEL, $sys, $content, self::partSchema($spec['crit'], ['korrigiert', 'besser']), 2800, 'low', 25, 'ИИ сейчас не отвечает, попробуй ещё раз');
+            return ['korrigiert' => $res['korrigiert'] ?? '', 'besser' => $res['besser'] ?? []];
+        }
+        throw new ApiError(400, 'Неизвестная часть оценки');
+    }
+
     private static function grade(array $u, array $d): array
     {
+        $part = Util::str($d['part'] ?? 'score', 8);
+        if ($part !== 'score') { return self::gradePart($u, $d, $part); }
         $t = self::findTask($d);
         $typ = $t['typ'];
         $spec = self::TYPES[$typ];
@@ -106,7 +151,8 @@ class Schreiben
             $spec['name'], $spec['min'], $spec['max'], array_sum($spec['crit']), implode(', ', $crit), $spec['pass'], $words,
             $minutes ? " in $minutes Minuten" : '', self::taskText($t), $text);
         $res = Ai::ask($u, 'schreiben_grade', cfg('grade_model', self::GRADE_MODEL), self::inLang(Lernen::prompt('schreiben_grade'), self::lang($u, $d)),
-            $content, self::gradeSchema($spec['crit']), (int)cfg('grade_max_tokens', 6000), cfg('grade_effort', 'medium'), 150,
+            $content . "\n\nNUR TEIL «Bewertung»: fülle kriterien, leitpunkte, staerken, tipps, schablone, pruefer_kommentar und fazit. Die Felder fehler, korrigiert und besser werden separat erstellt: gib dafür leere Werte zurück.",
+            self::partSchema($spec['crit'], ['kriterien', 'leitpunkte', 'staerken', 'tipps', 'schablone', 'pruefer_kommentar', 'fazit']), (int)cfg('grade_max_tokens', 3000), cfg('grade_effort', 'low'), 25,
             'ИИ сейчас не отвечает, попробуй ещё раз через минуту');
         $total = 0.0;
         foreach ($spec['crit'] as $k => $mx) {      // ИИ не может выйти за рамки шкалы
@@ -116,7 +162,7 @@ class Schreiben
             $res['kriterien'][$k] = $p;
             $total += $p['punkte'];
         }
-        $res = array_merge($res, ['gesamt' => $total, 'max' => array_sum($spec['crit']), 'bestanden' => $total >= $spec['pass'], 'mindest' => $spec['pass'],
+        $res = array_merge(['fehler' => [], 'korrigiert' => '', 'besser' => []], $res, ['gesamt' => $total, 'max' => array_sum($spec['crit']), 'bestanden' => $total >= $spec['pass'], 'mindest' => $spec['pass'],
             'note' => self::noteFor($total, $typ), 'words' => $words, 'min_words' => $spec['min'], 'max_words' => $spec['max'], 'typ' => $typ]);
         $pr = $d['protokoll'] ?? null;
         if (is_array($pr)) {       // пробный экзамен: протокол честности хранится вместе с разбором

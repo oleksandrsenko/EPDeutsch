@@ -169,8 +169,7 @@ function modbar(cur){
   return `<nav class="ep-mods" aria-label="Модули">${MODS.map(([k,t,h,i,c],n)=>
     (k==="frei"?'<span class="ep-msep" aria-hidden="true"></span>':"")+
     `<a href="${h}" data-m="${k}" style="--c:${c}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,16)}</span><span class="ep-ml">${t}</span></a>`).join("")}</nav>`+
-    `<button type="button" class="ep-sbtn" data-ep-search title="Поиск слова (⌘K)" aria-label="Поиск">${ic("search",18)}<span>Поиск</span><kbd>⌘K</kbd></button>`+
-    `<button type="button" class="ep-sbtn ep-fbtn" data-ep-friends title="Друзья и XP" aria-label="Друзья">${ic("users",18)}<span>Друзья</span></button>`;
+    `<button type="button" class="ep-sbtn" data-ep-search title="Поиск слова (⌘K)" aria-label="Поиск">${ic("search",18)}<span>Поиск</span><kbd>⌘K</kbd></button>`;
 }
 const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1 1 auto;padding:4px 2px}
 .ep-mods::-webkit-scrollbar{display:none}
@@ -186,22 +185,24 @@ const css=`.ep-mods{display:flex;align-items:center;gap:2px;min-width:0;overflow
 @media (max-width:900px){.ep-frbtn span{display:none}.ep-frbtn{padding:0 10px}}
 @media (max-width:640px){.ep-frbtn{display:none}}
 .ep-fbtn{margin-left:6px}
+.ep-frp{max-width:720px;margin:0 auto;background:var(--panel);color:var(--fg);border-radius:24px;padding:24px 24px 26px;box-shadow:var(--sh,0 10px 30px -18px rgba(0,0,0,.4))}
+.ep-frp .frow{gap:12px}.ep-frp .fb{padding:10px 16px}
 .ep-fr{position:fixed;inset:0;z-index:200;background:rgba(10,8,30,.55);display:grid;place-items:center;padding:16px}
 .ep-fr>div{width:min(620px,100%);max-height:92vh;overflow:auto;background:var(--panel);color:var(--fg);border-radius:24px;padding:22px 22px 24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
-.ep-fr h2{margin:0 0 4px;font-size:22px}.ep-fr .sub{margin:0 0 14px;color:var(--muted);font-size:14px}
-.ep-fr .fx{float:right;border:0;background:var(--panel2);color:var(--fg);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:18px}
-.ep-fr .fcode{font-weight:800;font-size:26px;letter-spacing:.12em;margin:4px 0 8px}
-.ep-fr .frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.ep-fr input{flex:1;min-width:140px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 12px;font:inherit;text-transform:uppercase;outline:none}
-.ep-fr input:focus{border-color:var(--primary)}
-.ep-fr input::placeholder{text-transform:none}
-.ep-fr .fb{border:0;background:var(--primary);color:#fff;border-radius:12px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer}.ep-fr .fb.g{background:var(--panel2);color:var(--fg)}
-.ep-fr h3{margin:18px 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.ep-fr .lbr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px}.ep-fr .lbr.me{background:color-mix(in srgb,var(--primary) 12%,transparent)}
-.ep-fr .lbn{width:22px;text-align:center;font-weight:800;color:var(--muted)}.ep-fr .lbt{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}.ep-fr .lbt small{color:var(--muted);font-size:12px}
-.ep-fr .lbx{font-weight:800;font-size:15px;white-space:nowrap}
-.ep-fr .race{border:1.5px solid var(--line);border-radius:16px;padding:10px 12px;margin-bottom:8px;font-size:14px}.ep-fr .race b{display:block;margin-bottom:4px}
-.ep-fr .rbar{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;margin:3px 0}.ep-fr .rbar i{display:block;height:100%;background:var(--primary)}
+:is(.ep-fr,.ep-frp) h2{margin:0 0 4px;font-size:22px}:is(.ep-fr,.ep-frp) .sub{margin:0 0 14px;color:var(--muted);font-size:14px}
+:is(.ep-fr,.ep-frp) .fx{float:right;border:0;background:var(--panel2);color:var(--fg);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:18px}
+:is(.ep-fr,.ep-frp) .fcode{font-weight:800;font-size:26px;letter-spacing:.12em;margin:4px 0 8px}
+:is(.ep-fr,.ep-frp) .frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+:is(.ep-fr,.ep-frp) input{flex:1;min-width:140px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 12px;font:inherit;text-transform:uppercase;outline:none}
+:is(.ep-fr,.ep-frp) input:focus{border-color:var(--primary)}
+:is(.ep-fr,.ep-frp) input::placeholder{text-transform:none}
+:is(.ep-fr,.ep-frp) .fb{border:0;background:var(--primary);color:#fff;border-radius:12px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer}:is(.ep-fr,.ep-frp) .fb.g{background:var(--panel2);color:var(--fg)}
+:is(.ep-fr,.ep-frp) h3{margin:18px 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+:is(.ep-fr,.ep-frp) .lbr{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px}:is(.ep-fr,.ep-frp) .lbr.me{background:color-mix(in srgb,var(--primary) 12%,transparent)}
+:is(.ep-fr,.ep-frp) .lbn{width:22px;text-align:center;font-weight:800;color:var(--muted)}:is(.ep-fr,.ep-frp) .lbt{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}:is(.ep-fr,.ep-frp) .lbt small{color:var(--muted);font-size:12px}
+:is(.ep-fr,.ep-frp) .lbx{font-weight:800;font-size:15px;white-space:nowrap}
+:is(.ep-fr,.ep-frp) .race{border:1.5px solid var(--line);border-radius:16px;padding:10px 12px;margin-bottom:8px;font-size:14px}:is(.ep-fr,.ep-frp) .race b{display:block;margin-bottom:4px}
+:is(.ep-fr,.ep-frp) .rbar{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;margin:3px 0}:is(.ep-fr,.ep-frp) .rbar i{display:block;height:100%;background:var(--primary)}
 .ep-sbtn:hover{color:var(--fg);border-color:var(--muted)}
 .ep-sbtn kbd{font:inherit;font-size:11px;background:var(--panel2);border-radius:6px;padding:1px 5px;color:var(--muted)}
 @media (max-width:1480px){.ep-mods .ep-ml{display:none}.ep-mods a{padding:6px}.ep-mods a[aria-current="page"] .ep-ml{display:inline}.ep-mods a[aria-current="page"]{padding-right:10px}}
@@ -286,7 +287,7 @@ function search(val){
   inp.addEventListener("input",render);
 }
 // поле поиска в шапке (вместо полосы модулей); на телефоне — кнопка, открывающая окно поиска
-function searchField(){return `<div class="ep-sf" role="search"><span class="ep-sfi">${ic("search",18)}</span><input type="search" placeholder="Найти слово: по-немецки или по-русски" autocomplete="off" spellcheck="false" aria-label="Поиск слова"><kbd>⌘K</kbd><div class="ep-sdrop" hidden></div></div><button type="button" class="ep-sfbtn" data-ep-search aria-label="Поиск">${ic("search",20)}</button><button type="button" class="ep-frbtn" data-ep-friends title="Друзья и XP" aria-label="Друзья">${ic("users",20)}<span>Друзья</span></button>`}
+function searchField(){return `<div class="ep-sf" role="search"><span class="ep-sfi">${ic("search",18)}</span><input type="search" placeholder="Найти слово: по-немецки или по-русски" autocomplete="off" spellcheck="false" aria-label="Поиск слова"><kbd>⌘K</kbd><div class="ep-sdrop" hidden></div></div><button type="button" class="ep-sfbtn" data-ep-search aria-label="Поиск">${ic("search",20)}</button>`}
 function sfOpen(f,on){const d=f.querySelector(".ep-sdrop");d.hidden=!on;f.classList.toggle("on",on)}
 document.addEventListener("input",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(!f)return;const d=f.querySelector(".ep-sdrop"),v=e.target.value;sfOpen(f,!!v.trim());const r=()=>results(d,e.target.value);need(r);r()});
 document.addEventListener("focusin",e=>{const f=e.target.closest&&e.target.closest(".ep-sf");if(f){need(()=>{});if(e.target.value.trim())sfOpen(f,true)}});
@@ -323,20 +324,30 @@ async function suggest(tok,lang,n){
 }
 
 // ---------- «Друзья и XP»: окно во всех модулях (друзья и забеги общие, XP суммируется по модулям) ----------
+// страница «Друзья и XP» — отдельная вкладка во всех модулях (кнопки «Друзья» в шапке больше нет)
+function friendsPage(host){
+  host.classList.add("ep-frp");
+  friendsFill(host,false);
+}
 async function friendsOpen(){
   if(document.querySelector(".ep-fr"))return;
-  const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const api=async(m,p,b)=>{const r=await fetch("/api"+p,{method:m,credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:b?JSON.stringify(b):undefined});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Ошибка "+r.status);return j};
-  const box=document.createElement("div");box.className="ep-fr";box.innerHTML='<div role="dialog" aria-label="Друзья"><button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">Загружаю…</p></div>';
+  const box=document.createElement("div");box.className="ep-fr";box.innerHTML='<div role="dialog" aria-label="Друзья"></div>';
   document.body.append(box);const dlg=box.firstChild;
   const close=()=>box.remove();box.onclick=e=>{if(e.target===box||e.target.closest(".fx"))close()};
   const onKey=e=>{if(e.key==="Escape"){close();removeEventListener("keydown",onKey)}};addEventListener("keydown",onKey);
+  friendsFill(dlg,true);
+}
+async function friendsFill(dlg,modal){
+  const X=modal?'<button class="fx" aria-label="Закрыть">×</button>':"";
+  const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const api=async(m,p,b)=>{const r=await fetch("/api"+p,{method:m,credentials:"same-origin",headers:{"Content-Type":"application/json","X-USD":"1"},body:b?JSON.stringify(b):undefined});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Ошибка "+r.status);return j};
+  dlg.innerHTML=X+'<h2>Друзья и XP</h2><p class="sub">Загружаю…</p>';
   const left=ts=>{const s=ts-Date.now()/1000;if(s<=0)return"финиш";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600);return d?d+" дн"+(h?" "+h+" ч":""):h?h+" ч":"меньше часа"};
   const draw=async()=>{
     try{
       const [me,fr,rc]=await Promise.all([api("GET","/me"),api("GET","/friends"),api("GET","/races")]);
       const rows=fr.friends.slice().sort((a,b)=>(b.xp_total||0)-(a.xp_total||0));
-      dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">XP считается во всех модулях: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen. Друзья общие для всех.</p>
+      dlg.innerHTML=`${X}<h2>Друзья и XP</h2><p class="sub">XP считается во всех модулях: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen. Друзья общие для всех.</p>
       <div class="frow"><div><small class="muted">Твой код друга</small><div class="fcode">${esc(me.user.code)}</div></div><button class="fb g" id="fCp" style="margin-left:auto">Скопировать ссылку</button></div>
       <form class="frow" id="fAdd" style="margin-top:6px"><input id="fCode" maxlength="8" placeholder="Код друга, например K7M2QX" autocomplete="off"><button class="fb" type="submit">Добавить</button></form>
       <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${window.EP.uava?window.EP.uava(f,36):""}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · Schreiben ${f.s_xp||0} · EPD ${f.de_xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp_total||0} XP</span></div>`).join("")}
@@ -346,7 +357,7 @@ async function friendsOpen(){
       dlg.querySelector("#fCp").onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(location.origin+"/schreiben#friend="+me.user.code).then(()=>{dlg.querySelector("#fCp").textContent="Скопировано"});
       dlg.querySelector("#fAdd").onsubmit=async e=>{e.preventDefault();const v=dlg.querySelector("#fCode").value.trim();if(!v)return;try{await api("POST","/friends",{code:v});draw()}catch(er){dlg.querySelector("#fCode").value="";dlg.querySelector("#fCode").placeholder=er.message}};
       const go=dlg.querySelector("#rGo");if(go)go.onclick=async()=>{try{await api("POST","/races",{friend:+dlg.querySelector("#rF").value,metric:"xp",days:+dlg.querySelector("#rD").value});draw()}catch(er){go.textContent=er.message}};
-    }catch(e){dlg.innerHTML=`<button class="fx" aria-label="Закрыть">×</button><h2>Друзья и XP</h2><p class="sub">${esc(e.message)}</p>`}
+    }catch(e){dlg.innerHTML=`${X}<h2>Друзья и XP</h2><p class="sub">${esc(e.message)}</p>`}
   };
   draw();
 }
@@ -379,7 +390,7 @@ function wordExamOpen(){
   start();
 }
 document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-ep-wexam]")){e.preventDefault();wordExamOpen()}});
-Object.assign(window.EP,{modbar,search,searchField,suggest,icon:ic,MODS,friendsOpen,wordExamOpen});
+Object.assign(window.EP,{modbar,search,searchField,suggest,icon:ic,MODS,friendsOpen,friendsPage,wordExamOpen});
 })();
 
 /* Общая «рамка» всех страниц: бургер, логотип EPDeutsch с названием модуля, экран загрузки,

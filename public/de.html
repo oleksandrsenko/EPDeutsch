@@ -614,6 +614,31 @@ img,svg,video,canvas{max-width:100%}
   .lead{font-size:15px}
   .lbr{flex-wrap:wrap;gap:8px}.lb-t{min-width:0;flex:1 1 140px}.lb-t small{white-space:normal;overflow-wrap:anywhere}.lbr .lb-v{margin-left:auto}
 }
+/* ---------- правки 20.10: блоки тем по два в ряд, сворачивание разделов, больше воздуха между кнопками ---------- */
+.row{gap:14px}.item .row{gap:6px}
+.btn.sm+.btn.sm{margin-left:2px}
+.xk{gap:10px}.aibar{gap:12px}.uwrap{gap:14px}.fbtns{gap:16px}.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.nav-chips{display:flex;flex-wrap:wrap;gap:8px;padding:2px 8px 6px}
+.nav .nav-chips a{width:auto;padding:6px 12px;border-radius:999px;font-size:13px;border:1.5px solid var(--line)}
+.nav .nav-chips a[aria-current="page"]{background:var(--c);border-color:var(--c);color:#fff}
+.tblocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start;margin-top:6px}
+.tblock{background:color-mix(in srgb,var(--c) 5%,var(--panel2));border-radius:26px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tblock>header{display:flex;align-items:center;gap:12px;padding:2px 4px 0}
+.tblock .tn{flex:none;min-width:44px;height:36px;border-radius:12px;background:var(--c);color:#fff;font-weight:800;font-size:13.5px;display:grid;place-items:center;padding:0 8px}
+.tblock>header div{flex:1;min-width:0;line-height:1.25}.tblock>header b{display:block;font-size:16px}.tblock>header small{color:var(--muted);font-size:13px;font-weight:600}
+.tblock .tc{flex:none;font-size:12.5px;font-weight:800;color:var(--muted)}
+.tlist{display:grid;gap:12px}
+.tblock .item{min-height:0;padding:16px 44px 38px 18px}
+.item p.pv{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(3 * 1.45em);line-height:1.45}
+@media (max-width:900px){.tblocks{grid-template-columns:minmax(0,1fr)}}
+.fsec{margin-top:6px}
+.fsec>summary{cursor:pointer;list-style:none;user-select:none}.fsec>summary::-webkit-details-marker{display:none}
+.fsec>summary .fchev{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--panel2);color:var(--muted);transition:transform .2s}
+.fsec[open]>summary .fchev{transform:rotate(90deg)}
+.fsec>summary:hover .fchev{color:var(--fg)}
+.fsec .fbody{padding-top:2px}
+.howto .howto-t{margin:0;padding:0 18px 10px;font-size:14px;color:var(--muted);line-height:1.5}
+.frcard{max-width:760px}
 </style>
 </head>
 <body>
@@ -697,32 +722,44 @@ async function say(text,opt={}){
 // [ключ, подпись, адрес, иконка] — нижняя панель на телефоне
 const SUB_EPD=[["home","Обзор","#/","home"],["grammatik","Grammatik","#/grammatik","gram"],["lesen","Lesen","#/lesen","book"],["hoeren","Hören","#/hoeren","ear"]];
 const SUB_FREI=[["karten","Карточки","#/frei/karten","cards","var(--c-f)"],["grammatik","Грамматика","#/frei/grammatik","gram","var(--c-g)"],["lesen","Lesen","#/frei/lesen","book","var(--c-l)"],["hoeren","Hören","#/frei/hoeren","ear","var(--c-h)"],["sprechen","Sprechen","#/frei/sprechen","mic","var(--c-sp)"],["videos","Видео","#/frei/videos","video","var(--c-f)"]];
-const navFriends=c=>`<a href="#" data-ep-friends style="--c:${c}"><span class="ni">${EP.icon("users",18)}</span>Друзья и XP</a>`;
+const navFriends=c=>`<a href="#/friends" style="--c:${c}"${location.hash==="#/friends"?' aria-current="page"':""}><span class="ni">${EP.icon("users",18)}</span>Друзья и XP</a>`;
 const navItem=(href,t,i,c,cur,sub)=>`<a href="${href}" style="--c:${c}"${cur?' aria-current="page"':""}><span class="ni">${EP.icon(i,18)}</span>${sub?`<span class="nav-l"><b>${t}</b><small>${sub}</small></span>`:t}</a>`;
-let LASTMOD=null;
+let LASTMOD=null;try{LASTMOD=sessionStorage.getItem("de-lastmod")||null}catch(e){}
 const MODNAV={grammatik:["Grammatik","gram","Конструкции, теория и упражнения"],lesen:["Lesen","book","Тексты и задания как на EPD"],hoeren:["Hören","ear","Аудио и задания"],sprechen:["Sprechen","mic","Монолог и диалог с ИИ"]};
 // куда ведёт огонёк: в «Прогресс и настройки» того модуля, где ты сейчас (никуда не перекидывает)
+// сворачиваемые разделы («закрыть вкладку»): состояние помним
+const fkey=id=>"fold-"+String(id).toLowerCase().replace(/[^a-z0-9]+/g,"_").slice(0,40);   // ключи состояния на сервере: только a–z, 0–9, _ . -
+const fo=id=>get(fkey(id),1)===0?"":"open";
+const FCH=`<span class="fchev">${ic("chev",16)}</span>`;
+function foldSec(id,title,small,body){return `<details class="fsec" data-fs="${id}" ${fo(id)}><summary class="h-sec">${FCH}${title}${small?` <small>${small}</small>`:""}</summary><div class="fbody">${body}</div></details>`}
+document.addEventListener("toggle",e=>{const d=e.target;if(d&&d.matches&&d.matches("details.fsec"))save(fkey(d.dataset.fs),d.open?1:0)},true);
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("[data-fgn]");if(!a)return;e.preventDefault();save("frei-grp",a.dataset.fgn);if(location.hash.startsWith("#/frei/")&&location.hash.split("/").length>3)location.hash="#/frei";else route()});
 const progHref=k=>MODNAV[k]?`#/${k}/progress`:"#/settings";
 function header(cur){
   let k=cur||"home";const route=k;
-  if(MODNAV[k])LASTMOD=k;else if(k==="home"||k==="frei")LASTMOD=null;
-  if(k==="settings"&&LASTMOD)k=LASTMOD;   // профиль не выкидывает из модуля
+  if(MODNAV[k]||k==="frei")LASTMOD=k;else if(k==="home")LASTMOD=null;
+  try{sessionStorage.setItem("de-lastmod",LASTMOD||"")}catch(e){}
+  if((k==="settings"||k==="friends")&&LASTMOD)k=LASTMOD;   // профиль и друзья не выкидывают из модуля
+  const kk=k==="settings"||k==="friends"?"home":k;
   const h=(location.hash||"#/").slice(1).split("/").filter(Boolean),frei=k==="frei",H=location.hash||"#/";
   const on=frei?(h[1]||"karten"):(h[0]||"home");
-  $("#logo").innerHTML=EP.logo(k==="settings"?"home":k,frei?"#/frei":MODNAV[k]?"#/"+k:"#/");
+  $("#logo").innerHTML=EP.logo(kk,frei?"#/frei":MODNAV[k]?"#/"+k:"#/");
   const tb=frei?SUB_FREI.slice(0,4):SUB_EPD;
   $("#tabbar").innerHTML=tb.map(([key,t,href,i,c])=>`<a href="${href}" style="--c:${c||(MOD[key]||{}).c||"var(--primary)"}"${key===on?' aria-current="page"':""}>${EP.icon(i,22)}${t}</a>`).join("")+`<button type="button" data-nav-toggle>${EP.icon("menu",22)}Меню</button>`;
   const inMod=!!MODNAV[k],at=x=>H===x||H.startsWith(x+"/");
   const mc=inMod?MOD[k].c:frei?"var(--c-f)":"var(--primary)";
-  const sw=EP.switcher(k==="settings"?"home":k);
-  const foot=`<hr>${EP.tip(inMod?k:k==="settings"?"home":k)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
+  const sw=EP.switcher(kk);
+  const foot=`<hr>${EP.tip(kk)}<button type="button" class="fold" data-ep-theme>${EP.icon("moon",18)}<span>Сменить тему</span></button>`;
   let body="";
-  if(frei)body=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","home",mc,h.length===1)+SUB_FREI.map(([key,t,href,i])=>navItem(href,t,i,mc,h.length>1&&key===on)).join("")+`<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
+  if(frei)body=`<div class="nav-gt">Свободный немецкий</div>`+navItem("#/frei","Обзор","home",mc,route==="frei"&&h.length===1)+SUB_FREI.map(([key,t,href,i])=>navItem(href,t,i,mc,route==="frei"&&h.length>1&&key===on)).join("")+
+      `<div class="nav-gt">Раздел</div><div class="nav-chips">${[["all","Всё"]].concat(FGRP.map(g=>[g[0],g[1]])).map(([v,t])=>`<a href="#" data-fgn="${v}" style="--c:${mc}"${get("frei-grp","all")===v?' aria-current="page"':""}>${t}</a>`).join("")}</div>`+
+      `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem("#/settings","Прогресс и настройки","chart",mc,route==="settings");
   else if(inMod){
     const [nm,ico]=MODNAV[k];
-    const task=at(`#/${k}/all`)||(k==="grammatik"&&/^#\/grammatik\/(?!ai|errors|progress|all|hints)/.test(H))||(k!=="grammatik"&&new RegExp(`^#/${k}/(?!ai|errors|progress|all|hints)`).test(H));
-    body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,k==="grammatik"?"Главная":"Пробный вариант",k==="grammatik"?"home":"target",mc,H==="#/"+k||H==="#/"+k+"/pruefung")+(k==="grammatik"?navItem("#/grammatik/pruefung","Пробный вариант","target",mc,at("#/grammatik/pruefung")):"")+navItem(`#/${k}/all`,k==="grammatik"?"Темы и упражнения":"Задания по темам",ico,mc,task)+navItem(`#/${k}/hints`,k==="grammatik"?"Как учить грамматику":"Как решать",  "bulb",mc,at(`#/${k}/hints`))+
-      `<div class="nav-gt">С ИИ</div>`+navItem(`#/${k}/ai`,"Практика с ИИ","spark",mc,at(`#/${k}/ai`),"дай тему, ИИ придумает задания")+
+    const exam=at(`#/${k}/pruefung`)||/^#\/(lesen\/lex|hoeren\/ex|sprechen\/sex)[12]$/.test(H);
+    const task=!exam&&(at(`#/${k}/all`)||new RegExp(`^#/${k}/(?!ai|aix|errors|progress|all|hints|pruefung)[^/]+`).test(H));
+    body=`<div class="nav-gt">${nm}</div>`+navItem(`#/${k}`,"Главная","home",mc,H==="#/"+k)+navItem(`#/${k}/pruefung`,"Пробный вариант","target",mc,exam)+navItem(`#/${k}/all`,k==="grammatik"?"Темы и упражнения":"Задания по темам",ico,mc,task)+
+      `<div class="nav-gt">С ИИ</div>`+navItem(`#/${k}/ai`,"Практика с ИИ","spark",mc,at(`#/${k}/ai`)||at(`#/${k}/aix`),"дай тему, ИИ придумает задания")+
       `<div class="nav-gt">Мой путь</div>`+navFriends(mc)+navItem(`#/${k}/errors`,"Ошибки","target",mc,at(`#/${k}/errors`))+navItem(`#/${k}/progress`,"Прогресс и настройки","chart",mc,at(`#/${k}/progress`));
   }else body=`<div class="nav-gt">Сегодня</div>`+navItem("#/","План на сегодня","home",mc,route==="home")+
       `<div class="nav-gt">С ИИ</div>`+navItem("/woerter#tab=practice","Практика слов с ИИ","spark",mc,false,"пиши, ИИ проверит")+
@@ -791,12 +828,13 @@ async function dispatch(a,b,c){
     LVF=null;
     if(!a)return await vHome();
     if(MODNAV[a]){
-      if(!b)return await ({lesen:vLesenExam,hoeren:vHoerenExam,sprechen:vSprechenExam}[a]||vModHome)(a);
+      if(!b)return await vModHome(a);
       if(b==="ai")return await vAIPractice(a);
       if(b==="progress")return await vModProgress(a);
-      if(["hints","errors"].includes(b))return await vModExtra(a,b);
+      if(b==="hints"){location.replace("#/"+a+"/ai");return}   // «Как решать» переехало в «Практику с ИИ»
+      if(b==="errors")return await vModExtra(a,b);
       if(b==="aix")return await vAIRun(a);
-      if(b==="pruefung"&&a==="grammatik")return await vPruefung();
+      if(b==="pruefung")return await({grammatik:vPruefung,lesen:vLesenExam,hoeren:vHoerenExam,sprechen:vSprechenExam})[a]();
       if(b==="all"){LVF=c?decodeURIComponent(c):null;return await({grammatik:vGramList,lesen:vLesenList,hoeren:vHoerenList,sprechen:vSprechenList})[a]("de")}
     }
     if(a==="grammatik")return b?await vGram("de",b,c):await vGramList("de");
@@ -805,8 +843,9 @@ async function dispatch(a,b,c){
     if(a==="sprechen")return !b||b==="pruefung"?await vSprechenExam():await vSprechen("de",b);
     if(a==="plan")return await vHome({plan:true});   // план теперь на обзоре, в блоке приветствия
     if(a==="settings")return await vSettings();
+    if(a==="friends")return await vFriends();
     if(a==="frei"){
-      if(!b)return await vFrei();
+      if(!b)return await vFreiHome();
       if(b==="karten")return c?await vDeck(c):await vFrei("karten");
       if(b==="grammatik")return c?await vGram("frei",c):await vFrei("grammatik");
       if(b==="lesen")return c?await vLesen("frei",c):await vFrei("lesen");
@@ -1035,9 +1074,11 @@ const base=area=>area==="frei"?"#/frei/":"#/";
 async function vGramList(area){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
   const gr0=await data(area,"grammatik"),gr={...gr0,topics:lf(gr0.topics,area)};
-  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"grammatik")}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Темы письменной части: Strukturen und Wortschatz. Внутри каждой темы, короткая теория и задания от простых к сложным."}</p>${gramListHTML(area,gr)}`);
+  page(`${area==="frei"?crumb("#/frei","Свободный немецкий"):lfHead(area,"grammatik")}<h1>Grammatik</h1><p class="lead">${area==="frei"?"Грамматика для живого языка: то, что не нужно на экзамене, но нужно в жизни.":"Темы письменной части: Strukturen und Wortschatz. Внутри каждой темы, короткая теория и задания от простых к сложным."}</p>${gramListHTML(area,gr,true)}`);
 }
-function gramListHTML(area,gr){
+function gramListHTML(area,gr,grouped){
+  if(grouped&&area==="de"){const g={};(gr.topics||[]).forEach(t=>(g[gk(t)]=g[gk(t)]||[]).push(t));
+    return Object.entries(g).sort((a,b)=>(LV_ORDER[a[0]]??9)-(LV_ORDER[b[0]]??9)).map(([lv,a])=>foldSec("gl-"+lv,esc(lv),`${a.length} ${plural(a.length,"тема","темы","тем")}`,gramListHTML(area,{topics:a}))).join("")}
   return `<div class="list">${(gr.topics||[]).map(t=>{const p=gramPct(area,t);return `<a class="item" href="${base(area)}grammatik/${t.id}"><div class="row"><span class="tag lv">${esc(t.level||"")}</span>${t.tag?`<span class="tag">${esc(t.tag)}</span>`:""}${p>=90?'<span class="tag ok">✓ освоено</span>':""}</div><h3>${esc(t.title)}</h3><p>${esc(t.ru||"")}</p><div class="row" style="margin-top:4px"><div class="bar" style="flex:1"><i style="width:${p}%"></i></div><small class="muted">${p}% · ${(t.items||[]).length}</small></div></a>`}).join("")}</div>`;
 }
 const norm=s=>String(s||"").toLowerCase().replace(/[„“”"«»‚‘’']/g,"").replace(/[.!?;:,]+(?=\s|$)/g,"").replace(/\s+/g," ").replace(/\s*[,]\s*/g,", ").trim().replace(/[.!?]+$/,"");
@@ -1046,11 +1087,14 @@ let G=null,LVF=null;
 const gk=x=>x.level||"—";
 const lf=(arr,area)=>area==="de"&&LVF?(arr||[]).filter(x=>x.level===LVF||(x.wt||"other")===LVF):(arr||[]);
 const lfHead=(area,k)=>area==="de"?crumb("#/"+k,MODNAV[k][0])+(LVF?`<span class="tag lv" style="margin-left:8px">${esc(wtOf(LVF)?LVF+" "+wtOf(LVF)[1]:LVF==="other"?"Без темы":LVF)}</span>`:""):"";
-// список заданий модуля по темам Wörter: глава → тема → карточки
+// список заданий модуля по темам Wörter: блоки по две темы в ряд, внутри блока его задания
 function itemsByTopic(arr,kind,pref){
   const by={};arr.forEach(x=>(by[x.wt||"other"]=by[x.wt||"other"]||[]).push(x));
-  const card=x=>{const r=get(pref+"de-"+x.id);return `<a class="item" href="#/${kind}/${x.id}"><div class="row">${kind==="sprechen"?`<span class="tag lv">${esc(kindRu(x.kind))}</span>`:`<span class="tag lv">${esc(x.level||"")}</span>`}${x.kind&&kind!=="sprechen"?`<span class="tag">${esc(x.kind)}</span>`:""}${r?(kind==="sprechen"?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:`<span class="tag ok">✓ ${r.s}/${r.m}</span>`):""}</div><h3>${esc(x.title)}</h3><p>${esc(kind==="sprechen"?(x.ru||""):(x.lead||x.intro||"").slice(0,120)+((x.lead||x.intro||"").length>120?"…":""))}</p></a>`};
-  return WT.filter(t=>by[t[0]]).map(t=>`<div class="lvl-h"><span lang="de">${esc(t[0]+" "+t[1])}</span> · ${esc(t[2])}</div><div class="list">${[...by[t[0]]].sort(lvSort).map(card).join("")}</div>`).join("")+(by.other?`<div class="lvl-h">Без темы · универсальные</div><div class="list">${by.other.map(card).join("")}</div>`:"");
+  const card=x=>{const r=get(pref+"de-"+x.id);const pv=kind==="sprechen"?(x.ru||""):(x.lead||x.intro||(x.paras&&x.paras[0])||"");
+    return `<a class="item" href="#/${kind}/${x.id}"><div class="row">${kind==="sprechen"?`<span class="tag lv">${esc(kindRu(x.kind))}</span>`:`<span class="tag lv">${esc(x.level||"")}</span>`}${x.kind&&kind!=="sprechen"?`<span class="tag">${esc(x.kind)}</span>`:""}${r?(kind==="sprechen"?`<span class="tag ok">✓ ${r.n} ${plural(r.n,"раз","раза","раз")}${r.best?` · лучшая ${r.best}`:""}</span>`:`<span class="tag ok">✓ ${r.s}/${r.m}</span>`):""}</div><h3>${esc(x.title)}</h3><p class="pv">${esc(pv.slice(0,260))}</p></a>`};
+  const block=(num,de,ru,a)=>`<section class="tblock"><header><span class="tn" lang="de">${esc(num)}</span><div><b lang="de">${esc(de)}</b><small>${esc(ru)}</small></div><span class="tc">${a.length}</span></header><div class="tlist">${[...a].sort(lvSort).map(card).join("")}</div></section>`;
+  const blocks=WT.filter(t=>by[t[0]]).map(t=>block(t[0],t[1],t[2],by[t[0]])).concat(by.other?[block("·","Без темы","универсальные",by.other)]:[]);
+  return `<div class="tblocks">${blocks.join("")}</div>`;
 }
 async function vGram(area,id,sub){
   header(area==="frei"?"frei":"grammatik");setC(area==="frei"?"var(--c-f)":"var(--c-g)");
@@ -1410,7 +1454,7 @@ async function vLesenExam(){
     <div class="row" style="margin-top:12px"><select id="lxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="lxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
     <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится до двух минут.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
    ${p1||p2?`<h2 class="h-sec">Твой вариант${mx?` <small>${fmtPts(sc)} из ${fmtPts(mx)} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-l)">${row(1,p1,r1)}${row(2,p2,r2)}</div>`:""}
-   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-l)"><a href="#/lesen/ai"><span><b>Практика с ИИ: один текст по твоей теме</b></span><small>открыть →</small></a><a href="#/lesen/all"><span><b>Архив старых текстов</b></span><small>открыть →</small></a><a href="#/lesen/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-l)"><a href="#/lesen/ai"><span><b>Практика с ИИ: один текст по твоей теме</b></span><small>открыть →</small></a><a href="#/lesen/all"><span><b>Архив старых текстов</b></span><small>открыть →</small></a></div>`);
   $("#lxGo").onclick=async()=>{const topic=$("#lxT").value.trim(),level=$("#lxL").value,b=$("#lxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ пишет два текста… (до двух минут)';
     save("lexam-cfg",{topic,level});
     const rnd=WT.map(t=>t[1]).sort(()=>Math.random()-.5),tp=[topic||rnd[0],topic?topic+" (другой аспект)":rnd[1]],prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
@@ -1483,7 +1527,7 @@ async function vHoerenExam(){
     <div class="row" style="margin-top:12px"><select id="hxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="hxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
     <p class="muted" style="margin:10px 0 0;font-size:13px">ИИ готовит обе части сразу, это занимает до минуты.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
    ${p1||p2?`<h2 class="h-sec">${p1||p2?"Твой вариант":""}${mx?` <small>${fmtPts(sc)} из ${mx} баллов</small>`:""}</h2><div class="aihist" style="--c:var(--c-h)">${row(1,p1,r1,"7 вопросов a–d")}${row(2,p2,r2,"8 пропусков")}</div>`:""}
-   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-h)"><a href="#/hoeren/ai"><span><b>Практика с ИИ: одна запись по твоей теме</b></span><small>открыть →</small></a><a href="#/hoeren/all"><span><b>Архив старых записей</b></span><small>открыть →</small></a><a href="#/hoeren/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-h)"><a href="#/hoeren/ai"><span><b>Практика с ИИ: одна запись по твоей теме</b></span><small>открыть →</small></a><a href="#/hoeren/all"><span><b>Архив старых записей</b></span><small>открыть →</small></a></div>`);
   $("#hxGo").onclick=async()=>{const topic=$("#hxT").value.trim(),level=$("#hxL").value,b=$("#hxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит обе части… (до минуты)';
     save("hexam-cfg",{topic,level});
     const prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
@@ -1595,7 +1639,7 @@ async function vSprechenExam(){
     <div class="row" style="margin-top:12px"><select id="sxL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${cfg.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="sxGo" ${can?"":"disabled"}>${ic("spark",16)} ${p1?"Новый вариант":"Создать вариант"}</button></div>
     <p class="muted" style="margin:10px 0 0;font-size:13px">Готовится около 30 секунд.${can?"":" Нужен ключ Claude (Настройки)."}</p></div>
    ${p1||p2?`<h2 class="h-sec">Твой вариант: выбери одно из двух</h2><div class="aihist" style="--c:var(--c-sp)">${row(1,p1)}${row(2,p2)}</div>`:""}
-   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-sp)"><a href="#/sprechen/ai"><span><b>Практика с ИИ: задание по твоей теме</b></span><small>открыть →</small></a><a href="#/sprechen/all"><span><b>Архив старых заданий</b></span><small>открыть →</small></a><a href="#/sprechen/hints"><span><b>Как решать и как тренироваться</b></span><small>открыть →</small></a></div>`);
+   <h2 class="h-sec">Ещё</h2><div class="aihist" style="--c:var(--c-sp)"><a href="#/sprechen/ai"><span><b>Практика с ИИ: задание по твоей теме</b></span><small>открыть →</small></a><a href="#/sprechen/all"><span><b>Архив старых заданий</b></span><small>открыть →</small></a></div>`);
   $("#sxGo").onclick=async()=>{const topic=$("#sxT").value.trim(),level=$("#sxL").value,b=$("#sxGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит два задания…';
     save("sexam-cfg",{topic,level});
     const rnd=WT.map(t=>t[1]).sort(()=>Math.random()-.5),tp=[topic||rnd[0],topic?topic+" (другой аспект)":rnd[1]],prev=[p1&&p1.title,p2&&p2.title].filter(Boolean);
@@ -1683,6 +1727,33 @@ async function vSprechen(area,id){
   addEventListener("hashchange",()=>{if(SP&&SP.prep){clearInterval(SP.prep);SP.prep=null}},{once:true});
 }
 
+async function vFriends(){
+  header("friends");setC((MOD[LASTMOD]||{}).c);
+  page(`<div class="frcard" id="frHost"></div>`);
+  EP.friendsPage($("#frHost"));
+}
+// главная «Свободного немецкого»: приветствие, цель дня, разделы, колоды выбранного раздела
+async function vFreiHome(){
+  header("frei");setC("var(--c-f)");
+  const [w,g,le,ho,sp]=await Promise.all([data("frei","wendungen"),data("frei","grammatik"),data("frei","lesen"),data("frei","hoeren"),data("frei","sprechen")]);
+  const decks=w.decks||[],L=todayLog(),goal=15,n=Math.min(goal,L.f||0),gd=n>=goal,sk=streak(),nm=(ST.user.name||"").split(" ")[0];
+  const sel=get("frei-grp","all"),inG=x=>sel==="all"||grpOf(x)===sel;
+  const dueDeck=decks.filter(inG).map(dk=>({dk,n:dueCards(dk,get("k-"+dk.id,{})).length})).find(x=>x.n);
+  const cnt=a=>(a||[]).length;
+  const sect=[["karten","Карточки","cards",`${cnt(decks)} колод`],["grammatik","Грамматика","gram",`${cnt(g.topics)} тем`],["lesen","Lesen","book",`${cnt(le.texts)} текстов`],["hoeren","Hören","ear",`${cnt(ho.items)} аудио`],["sprechen","Sprechen","mic",`${cnt(sp.tasks)} заданий`],["videos","Видео","video","каналы и фильмы"]];
+  const card=dk=>{const st=get("k-"+dk.id,{});const due=dueCards(dk,st).length;const known=Object.values(st).filter(x=>x[0]>=3).length;return `<a class="item" href="#/frei/karten/${dk.id}" style="--c:${dk.color||"var(--c-f)"}"><div class="row"><span class="tag lv">${dk.cards.length} карточек</span>${due?`<span class="tag">${due} на сегодня</span>`:'<span class="tag ok">✓ на сегодня всё</span>'}</div><h3>${esc(dk.title)}</h3><p class="pv">${esc(dk.ru||"")}</p><div class="row"><div class="bar" style="flex:1"><i style="width:${known/dk.cards.length*100}%"></i></div><small class="muted">${known} знаю</small></div></a>`};
+  page(`<section class="hero">
+    <div class="hero-top"><div class="hero-l">${oliC("var(--c-f)",gd?"cheer":n?"happy":"think")}<div><h1>${helloRu()}, ${esc(nm)}!</h1><p class="hero-sub">${gd?"Цель дня выполнена. Можно отдохнуть или позаниматься ещё.":"Свободный немецкий: как говорят на самом деле. Не экзамен, а удовольствие."}</p></div></div>
+      <div class="hero-cta">${dueDeck?`<a class="btn cta" href="#/frei/karten/${dueDeck.dk.id}" style="--c:var(--c-f)">${ic("cards",18)}Дальше: ${esc(dueDeck.dk.title.length>26?dueDeck.dk.title.slice(0,24).replace(/\s+\S*$/,"")+"…":dueDeck.dk.title)}</a>`:`<a class="btn cta" href="#/frei/lesen" style="--c:var(--c-f)">${ic("book",18)}Почитать что-нибудь</a>`}</div></div>
+    <div class="hgoal${gd?" done":""}"><div class="hg-t"><span>Цель дня: 15 карточек</span><b>${n} из ${goal}</b></div><div class="bar"><i style="width:${Math.round(n/goal*100)}%"></i></div></div>
+    <div class="hfacts" style="margin-top:0;padding-top:0;border-top:0"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><a class="hf-more" href="#/settings">Прогресс и настройки ${ic("chev",16)}</a></div>
+  </section>
+  <h2 class="h-sec">Разделы</h2>
+  <div class="tgrid">${sect.map(([k,t,i,sub])=>`<a class="tcard" href="#/frei${k==="karten"?"/karten":"/"+k}" style="--c:var(--c-f)"><b>${t}</b><span class="ru">${esc(sub)}</span><span class="tags"><span class="pill">${ic(i,13)}${t}</span></span></a>`).join("")}</div>
+  <div class="tabs fgrp" style="margin:24px 0 8px">${[["all","Всё"]].concat(FGRP.map(g2=>[g2[0],g2[1]])).map(([k,t])=>`<button type="button" data-fg="${k}" class="${sel===k?"on":""}">${t}</button>`).join("")}</div>
+  ${foldSec("frei-decks","Колоды карточек","",byGrp(decks,a=>`<div class="list">${a.map(card).join("")}</div>`))}`);
+  $$("[data-fg]").forEach(b=>b.onclick=()=>{save("frei-grp",b.dataset.fg);vFreiHome()});
+}
 // ---------- Свободный немецкий ----------
 // ---------- обучение: подробные подсказки для вкладок без собственного руководства ----------
 const TUT={
@@ -1695,7 +1766,8 @@ const TUT={
   ai:[["Что это","Ты называешь тему, ИИ создаёт теорию, текст, запись или тему для разговора под этот модуль."],["Как работать","Напиши тему хотя бы в пару слов и выбери уровень (B2 или C1). После результата можно попросить ещё, сложнее или легче."],["Совет","Темы из экзамена: образование, работа, экология, общество, технологии. Чем конкретнее тема, тем лучше текст."]],
   pruefung:[["Как это устроено","Пробный вариант создаёт ИИ заново: тексты и задания не повторяются. Объём и типы заданий как на экзамене EPD (VWU)."],["Как проходить","Включи таймер (на часть около часа), не подглядывай в теорию. Сначала прочитай все задания, потом решай. Результат сохраняется в разделе прогресса."],["После проверки","Разбери ошибки: к каждому заданию есть пояснение. Потом создай новый вариант и повтори слабые места."]]
 };
-const tutHTML=(k,open)=>(TUT[k]||[]).length?`<details class="howto" ${open?"open":""}><summary>${ic("bulb",16)}Как пользоваться<span class="muted">${TUT[k].length} советов</span></summary><ol>${TUT[k].map(([t,x])=>`<li><b>${esc(t)}.</b> ${esc(x)}</li>`).join("")}</ol></details>`:"";
+const TUTLEAD={ai:"Коротко: вписываешь тему, нажимаешь кнопку, и через 10–25 секунд готово. Дальше можно просить ещё, сложнее или легче. Ниже советы, как решать задания и как тренироваться."};
+const tutHTML=(k,open)=>(TUT[k]||[]).length?`<details class="howto" ${open?"open":""}><summary>${ic("bulb",16)}Как пользоваться<span class="muted">${TUT[k].length} советов</span></summary>${TUTLEAD[k]?`<p class="howto-t">${esc(TUTLEAD[k])}</p>`:""}<ol>${TUT[k].map(([t,x])=>`<li><b>${esc(t)}.</b> ${esc(x)}</li>`).join("")}</ol></details>`:"";
 // Свободный немецкий делится на три раздела: B1, Österreich (австрийский уклон) и общий немецкий
 const FGRP=[["b1","B1","простая и понятная речь, основа"],["at","Österreich","австрийский немецкий: слова, реалии, речь"],["de","Общий немецкий","живой язык без привязки к Австрии"]];
 const grpOf=x=>x.grp||(/^(A2|B1)/.test(x.level||"")?"b1":/^(at-|austria$)/.test(x.id||"")?"at":"de");
@@ -1786,6 +1858,7 @@ function modAcc(k){
   if(k==="sprechen"){const a=[];Object.keys(ST.state).filter(x=>x.startsWith("s-de-")).forEach(x=>((ST.state[x]||{}).hist||[]).forEach(h=>a.push(h.score)));return a.length?+(a.reduce((p,q)=>p+q,0)/a.length).toFixed(1):null}
   let s=0,m=0;Object.keys(ST.state).filter(x=>x.startsWith(MODX[k][2]+"de-")).forEach(x=>{const r=ST.state[x];if(r&&r.m){s+=r.s;m+=r.m}});return m?Math.round(s/m*100):null;
 }
+const EXAMCARD={grammatik:"10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Продолжения оценивает ИИ (2–3 балла).",lesen:"Два текста в стиле der Standard по 900–1100 слов и задания официальных типов EPD. Каждый вариант ИИ создаёт заново.",hoeren:"15 вопросов: 7 коротких записей с ответами a–d и запись на 7–8 минут с конспектом, куда вписываешь услышанные слова.",sprechen:"Два задания на разные темы: выбираешь одно, готовишься и говоришь, как на устной части."};
 async function vModHome(k){
   header(k);setC(MOD[k].c);
   const [dn,an]=MODX[k],d=await data("de",dn),items=d[an]||[];
@@ -1803,14 +1876,12 @@ async function vModHome(k){
     <div class="hfacts" style="margin-top:0;padding-top:0;border-top:0"><span class="hf">${ic("flame",17)}<b>${sk}</b> ${plural(sk,"день","дня","дней")} подряд</span><span class="hf">${ic("check",17)}Пройдено <b>${done}</b> из ${items.length}</span>${acc!=null?`<span class="hf">${ic("target",17)}${k==="sprechen"?`Средняя оценка <b>${acc}</b>`:`Точность <b>${acc}%</b>`}</span>`:""}${errList(k).filter(x=>!x.fixed).length?`<a class="hf" href="#/${k}/errors" style="text-decoration:none">${ic("target",17)}Ошибок: <b>${errList(k).filter(x=>!x.fixed).length}</b></a>`:""}<a class="hf-more" href="#/${k}/progress">Прогресс и настройки ${ic("chev",16)}</a></div>
   </section>
   ${rec.length?`<h2 class="h-sec">Недавние</h2><div class="recent">${rec.map(x=>`<a class="rcard" href="${itemHref(k,x)}" style="--c:${MOD[k].c}"><span class="ic">${ic(MOD[k].i,22)}</span><span style="min-width:0"><b>${esc(x.title)}</b><small>${esc(itemSub(k,x))}</small></span><span class="go">${ic("chev",15)}</span></a>`).join("")}</div>`:""}
-  ${k==="grammatik"?`<h2 class="h-sec">Уровни <small>${groupsOf(k,items).length} ${plural(groupsOf(k,items).length,"уровень","уровня","уровней")}</small></h2>
-  <div class="lvgrid">${groupsOf(k,items).map(([g2,a],i)=>{const n=a.filter(x=>itemDone(k,x)).length,pct=Math.round(n/a.length*100);return `<a class="lvcard" href="#/${k}/all/${encodeURIComponent(g2)}" style="--c:${MOD[k].c}"><span class="pic">${PICS[i%PICS.length](MOD[k].c)}</span><h3>${esc(g2)}</h3><p>${esc(GDESC[g2]||"")}</p><div class="meta"><span class="tag">${a.length} ${plural(a.length,"тема","темы","тем")}</span><span class="tag">${a.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</span></div><div class="bar"><i style="width:${pct}%"></i></div></a>`}).join("")}</div>
-  <h2 class="h-sec">Темы <small>${items.length} тем · ${items.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</small></h2>${gramListHTML("de",{topics:items})}`
+  ${k==="grammatik"?`<details class="fsec" data-fs="g-lv" ${fo("g-lv")}><summary class="h-sec">${FCH}Уровни <small>${groupsOf(k,items).length} ${plural(groupsOf(k,items).length,"уровень","уровня","уровней")}</small></summary><div class="fbody"><div class="lvgrid">${groupsOf(k,items).map(([g2,a],i)=>{const n=a.filter(x=>itemDone(k,x)).length,pct=Math.round(n/a.length*100);return `<a class="lvcard" href="#/${k}/all/${encodeURIComponent(g2)}" style="--c:${MOD[k].c}"><span class="pic">${PICS[i%PICS.length](MOD[k].c)}</span><h3>${esc(g2)}</h3><p>${esc(GDESC[g2]||"")}</p><div class="meta"><span class="tag">${a.length} ${plural(a.length,"тема","темы","тем")}</span><span class="tag">${a.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</span></div><div class="bar"><i style="width:${pct}%"></i></div></a>`}).join("")}</div></div></details>
+  <details class="fsec" data-fs="g-tp" ${fo("g-tp")}><summary class="h-sec">${FCH}Темы <small>${items.length} тем · ${items.reduce((s2,t)=>s2+(t.items||[]).length,0)} заданий</small></summary><div class="fbody">${gramListHTML("de",{topics:items})}</div></details>`
   :`${k==="sprechen"?`<h2 class="h-sec">Что бывает на устном экзамене</h2><div class="kindinfo">${["Grafik","Zitat","Text","These"].map(kd=>`<div style="--c:${MOD[k].c}"><span class="ic">${ic(KIND_RU[kd][1],17)}</span><span><b>${KIND_RU[kd][0]}</b><small>${KIND_RU[kd][2]}</small></span></div>`).join("")}</div>`:""}
-  <h2 class="h-sec">Темы <small>как в Wörter · ${items.length} ${plural(items.length,...({lesen:["текст","текста","текстов"],hoeren:["аудио","аудио","аудио"],sprechen:["задание","задания","заданий"]}[k]))}</small></h2>${topicCards(k,items)}`}
+  <details class="fsec" data-fs="${k}-tp" ${fo(k+"-tp")}><summary class="h-sec">${FCH}Темы <small>как в Wörter · ${items.length} ${plural(items.length,...({lesen:["текст","текста","текстов"],hoeren:["аудио","аудио","аудио"],sprechen:["задание","задания","заданий"]}[k]))}</small></summary><div class="fbody">${topicCards(k,items)}</div></details>`}
   <a class="ai-card" href="#/${k}/ai"><span class="ic">${ic("spark",24)}</span><div><h3>Практика с ИИ</h3><p>Назови тему: ИИ даст теорию или текст или аудио и задания по ней.</p></div></a>
-  ${k==="hoeren"?`<a class="ai-card" href="#/hoeren/pruefung"><span class="ic">${ic("target",24)}</span><div><h3>Пробный вариант как на экзамене</h3><p>15 вопросов: 7 коротких записей с ответами a–d и запись на 7–8 минут с конспектом, куда вписываешь услышанные слова.</p></div></a>`:""}
-  ${k==="grammatik"?`<a class="ai-card" href="#/grammatik/pruefung"><span class="ic">${ic("target",24)}</span><div><h3>Пробный вариант: Strukturen und Wortschatz</h3><p>10 заданий как на экзамене VWU: 5 Umformen и 5 Satzanfänge, 25 баллов. Продолжения оценивает ИИ (2–3 балла).</p></div></a>`:""}`);
+  <a class="ai-card" href="#/${k}/pruefung"><span class="ic">${ic("target",24)}</span><div><h3>Пробный вариант как на экзамене</h3><p>${EXAMCARD[k]}</p></div></a>`);
 }
 // ---------- практика с ИИ: тема от тебя → теория и задания / текст / аудио / разговор (Claude Haiku 5.5) ----------
 // ИИ отдаёт данные в формате обычных заданий модуля, поэтому показывает их тот же экран (id "ai"), а над ним стоит панель «Ещё / Сложнее / Легче».
@@ -1842,12 +1913,13 @@ async function aiGenerate(k,mode,topic,level){
 async function vAIPractice(k){
   header(k);setC(MOD[k].c);
   const m=AIM[k],st=aiState(k),cur=get("aiitem-"+k,null);
-  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>${tutHTML("ai")}
+  page(`${crumb("#/"+k,MODNAV[k][0])}<h1>Практика с ИИ</h1><p class="lead">${esc(m.lead)}</p>${tutHTML("ai",true)}
    <div class="card"><div class="field"><label for="aiT">Тема</label><input id="aiT" value="${esc(st.topic)}" maxlength="200" placeholder="${esc(m.ph)}" autocomplete="off"></div>
     <div class="row" style="margin-top:12px"><select id="aiL" aria-label="Уровень">${["B2","C1"].map(l=>`<option ${st.level===l?"selected":""}>${l}</option>`).join("")}</select><button class="btn primary" id="aiGo">${ic("spark",16)} ${esc(m.go)}</button></div></div>
    ${!ST.keys.anthropic?`<div class="card" style="margin-top:14px;border-left:5px solid var(--bad)">Нужен ключ Claude. <a href="#/settings">Добавить в настройках</a></div>`:""}
    ${cur?`<h2 class="h-sec">Последнее</h2><div class="aihist" style="--c:${MOD[k].c}"><a href="#/${k}/aix"><span><b>${esc(cur.title||st.topic)}</b></span><small>продолжить →</small></a></div>`:""}
-   ${st.hist.length?`<h2 class="h-sec">Недавние темы</h2><div class="aihist" style="--c:${MOD[k].c}">${st.hist.map((x,i)=>`<a href="#" data-h="${i}"><span>${esc(x.topic)}</span><small>${esc(x.level)}</small></a>`).join("")}</div>`:""}`);
+   ${st.hist.length?`<h2 class="h-sec">Недавние темы</h2><div class="aihist" style="--c:${MOD[k].c}">${st.hist.map((x,i)=>`<a href="#" data-h="${i}"><span>${esc(x.topic)}</span><small>${esc(x.level)}</small></a>`).join("")}</div>`:""}
+   ${foldSec("hints-"+k,k==="grammatik"?"Как учить грамматику":"Как решать и как тренироваться","советы преподавателей",hintsHTML(k,MOD[k].c))}`);
   $$("[data-h]").forEach(a=>a.onclick=e=>{e.preventDefault();const x=st.hist[+a.dataset.h];$("#aiT").value=x.topic;$("#aiL").value=x.level;$("#aiT").focus()});
   const go=async()=>{const topic=$("#aiT").value.trim();if(topic.length<3){toast("Напиши тему хотя бы в пару слов");$("#aiT").focus();return}
     const b=$("#aiGo");b.disabled=true;b.innerHTML='<span class="spin"></span> ИИ готовит… (10–25 секунд)';

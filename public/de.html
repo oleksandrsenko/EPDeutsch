@@ -1024,7 +1024,7 @@ async function bindAtWord(){
     $("#atSay").onclick=()=>say((c.de.replace(/\s*\/\s*.*$/,"")+". "+(c.ex||"")).trim());$("#atNext").onclick=()=>{AT_I++;draw()}};
   draw();
 }
-const TR_DIRS=[["de-ru","DE → RU"],["ru-de","RU → DE"],["en-de","EN → DE"],["de-en","DE → EN"]];
+const TR_DIRS=[["de-ru","DE → RU"],["ru-de","RU → DE"]];
 const trDir=()=>{const v=get("trdir","de-ru");return TR_DIRS.some(x=>x[0]===v)?v:"de-ru"};
 function bindTranslator(){
   const inp=$("#trIn"),out=$("#trOut");let t=0,seq=0;

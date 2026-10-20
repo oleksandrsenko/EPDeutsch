@@ -111,12 +111,6 @@ input:focus{border-color:var(--primary)}
         <div class="chips" id="deChips"><span class="chip">B2 → C1</span></div>
         <span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
-      <div class="lang soon" style="--c:var(--en);animation-delay:.12s" aria-disabled="true">
-        <span class="badge">Скоро</span>
-        <div class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2.4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg></div>
-        <h2>English</h2>
-        <p>Отдельная категория. Наполним позже: что именно учить, решим вместе.</p>
-      </div>
     </div>
   </section>
 </main>
@@ -151,6 +145,7 @@ $("#form").onsubmit=async e=>{
     if(window.EP)$("#authOli").innerHTML=EP.mascot("happy",84);
     $("#auth").hidden=false;setTab(regOpen?"reg":"login");
   }else{
+    location.replace("/de");return;   // сайт только для немецкого: сразу на «Обзор»
     const u=me.user;
     $("#hi").textContent="Привет, "+u.name.split(" ")[0]+"!";
     $("#me").innerHTML='<span>'+esc(u.name)+'</span>'+(window.EP?EP.uava(u,34):"")+'<button class="ghost" id="out">Выйти</button>';

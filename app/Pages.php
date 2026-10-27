@@ -4,7 +4,9 @@ class Pages
 {
     const YEAR = 31536000;
     const OLD_PAGES = ['/index.html', '/en', '/epd', '/terms', '/privacy', '/start', '/admin.html'];
-    const FILES = ['/' => 'start.html', '/de' => 'de.html', '/schreiben' => 'schreiben.html', '/admin' => 'admin.html'];
+    /** Модули, скрытые на сайте: ведут на Wörter. Файлы и API остаются на месте, вернуть модуль можно, убрав адрес отсюда. */
+    const HIDDEN_MODULES = ['/de', '/schreiben'];
+    const FILES = ['/' => 'start.html', '/admin' => 'admin.html'];
 
     /** woerter.html → страница без словаря, js словаря и его хэш. Результат кэшируется в storage/cache. */
     public static function woerter(): array
@@ -70,6 +72,7 @@ class Pages
     {
         $site = Http::siteUrl();
         if ($path === '/woerter') { self::send(self::woerterPage($site), 'text/html; charset=utf-8', 'no-cache', $head); return; }
+        if (in_array(rtrim($path, '/'), self::HIDDEN_MODULES, true)) { self::redirect('/woerter'); return; }
         if ($path !== '/' && str_ends_with($path, '/') && ($path === '/woerter/' || isset(self::FILES[rtrim($path, '/')]))) { self::redirect(rtrim($path, '/'), 301); return; }
         if (in_array($path, self::OLD_PAGES, true)) { self::redirect('/', $path === '/index.html' ? 301 : 302); return; }
         if (isset(self::FILES[$path])) {

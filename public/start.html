@@ -145,7 +145,7 @@ $("#form").onsubmit=async e=>{
     if(window.EP)$("#authOli").innerHTML=EP.mascot("happy",84);
     $("#auth").hidden=false;setTab(regOpen?"reg":"login");
   }else{
-    location.replace("/de");return;   // сайт только для немецкого: сразу на «Обзор»
+    location.replace("/woerter");return;   // пока открыт только модуль Wörter
     const u=me.user;
     $("#hi").textContent="Привет, "+u.name.split(" ")[0]+"!";
     $("#me").innerHTML='<span>'+esc(u.name)+'</span>'+(window.EP?EP.uava(u,34):"")+'<button class="ghost" id="out">Выйти</button>';

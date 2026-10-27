@@ -156,14 +156,7 @@ const I={
 const ic=(n,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
 // [ключ, подпись, адрес, иконка, цвет]
 const MODS=[
- ["home","Обзор","/de#/","home","#0E8C7F"],
- ["woerter","Wörter","/woerter","cards","#7E6FB8"],
- ["schreiben","Schreiben","/schreiben","pen","#C4687A"],
- ["grammatik","Grammatik","/de#/grammatik","gram","#F28C28"],
- ["lesen","Lesen","/de#/lesen","book","#3D7BF7"],
- ["hoeren","Hören","/de#/hoeren","ear","#0EA5B7"],
- ["sprechen","Sprechen","/de#/sprechen","mic","#18AE79"],
- ["frei","Свободный","/de#/frei","star","#E8505B"]
+ ["woerter","Wörter","/woerter","cards","#7E6FB8"]
 ];
 function modbar(cur){
   return `<nav class="ep-mods" aria-label="Модули">${MODS.map(([k,t,h,i,c],n)=>
@@ -252,14 +245,11 @@ async function buildIndex(){
   try{if(typeof BOOK!=="undefined")BOOK.forEach(ch=>(ch.sets||[]).forEach(s=>(s.items||[]).forEach(it=>{
     const de=Array.isArray(it)?it[0]:it.de,ru=Array.isArray(it)?it[1]:it.ru;
     out.push({g:"EPD · Wörter",de,ru,where:ch.id+" "+ch.title+" › "+s.name,href:"/woerter"})})))}catch(e){}
-  const [me,wd,gde,gfr,lde,lfr,hde,hfr]=await Promise.all(["/api/me","/data/frei/wendungen.json","/data/de/grammatik.json","/data/frei/grammatik.json","/data/de/lesen.json","/data/frei/lesen.json","/data/de/hoeren.json","/data/frei/hoeren.json"].map(getJSON));
+  const me=await getJSON("/api/me");
   const arr=v=>Array.isArray(v)?v:[];
   const part=f=>{try{f()}catch(e){}};   // одна плохая часть данных не должна ломать весь словарь
   const pr=me&&me.progress;
   part(()=>arr(pr&&pr.usets).forEach(u=>arr(u&&u.cards).forEach(c=>out.push({g:"Мои наборы",de:c.de,ru:c.ru,where:u.name,href:"/woerter"}))));
-  part(()=>arr(wd&&wd.decks).forEach(d=>arr(d.cards).forEach(c=>out.push({g:"Свободный · "+d.title,de:c.de,ru:c.ru,where:d.title,href:"/de#/frei/karten/"+d.id}))));
-  part(()=>[[gde,"EPD · Grammatik","/de#/grammatik/"],[gfr,"Свободный · Grammatik","/de#/frei/grammatik/"]].forEach(([g,n,h])=>arr(g&&g.topics).forEach(t=>out.push({g:n,de:t.title,ru:t.ru||"",where:t.level||"",href:h+t.id,topic:1}))));
-  part(()=>[[lde,"EPD · Lesen","/de#/lesen/"],[lfr,"Свободный · Lesen","/de#/frei/lesen/"],[hde,"EPD · Hören","/de#/hoeren/"],[hfr,"Свободный · Hören","/de#/frei/hoeren/"]].forEach(([g,n,h])=>arr(g&&(g.texts||g.items)).forEach(t=>out.push({g:n,de:t.title,ru:t.topic||"",where:t.level||"",href:h+t.id,topic:1}))));
   out.forEach(o=>{o.de=String(o.de==null?"":o.de);o.ru=String(o.ru==null?"":o.ru);o.fd=strip(o.de);o.fr=fold(o.ru)});
   return out.filter(o=>o.de);
 }
@@ -349,15 +339,15 @@ async function friendsFill(dlg,modal){
   const draw=async()=>{
     try{
       const [me,fr,rc]=await Promise.all([api("GET","/me"),api("GET","/friends"),api("GET","/races")]);
-      const rows=fr.friends.slice().sort((a,b)=>(b.xp_total||0)-(a.xp_total||0));
-      dlg.innerHTML=`${X}<h2>Друзья и XP</h2><p class="sub">XP считается во всех модулях: Wörter, Schreiben, Grammatik, Lesen, Hören, Sprechen. Друзья общие для всех.</p>
+      const rows=fr.friends.slice().sort((a,b)=>(b.xp||0)-(a.xp||0));
+      dlg.innerHTML=`${X}<h2>Друзья и XP</h2><p class="sub">XP считается за слова в Wörter. Друзья общие для всех.</p>
       <div class="frow"><div><small class="muted">Твой код друга</small><div class="fcode">${esc(me.user.code)}</div></div><button class="fb g" id="fCp" style="margin-left:auto">Скопировать ссылку</button></div>
       <form class="frow" id="fAdd" style="margin-top:6px"><input id="fCode" maxlength="8" placeholder="Код друга, например K7M2QX" autocomplete="off"><button class="fb" type="submit">Добавить</button></form>
-      <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${window.EP.uava?window.EP.uava(f,36):""}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · Schreiben ${f.s_xp||0} · EPD ${f.de_xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp_total||0} XP</span></div>`).join("")}
+      <h3>Рейтинг по XP</h3>${rows.map((f,i)=>`<div class="lbr${f.me?" me":""}"><span class="lbn">${i+1}</span>${window.EP.uava?window.EP.uava(f,36):""}<span class="lbt"><b>${esc(f.name)}${f.me?" (ты)":""}</b><small>Wörter ${f.xp||0} · серия ${f.streak||0}</small></span><span class="lbx">${f.xp||0} XP</span></div>`).join("")}
       ${rows.length<2?'<p class="muted" style="font-size:13px">Пока здесь только ты. Отправь другу ссылку-приглашение или код.</p>':""}
       <h3>Забеги</h3>${(rc.races||[]).length?rc.races.map(r=>{const a=r.me.v,b=r.rival.v,mx=Math.max(1,a,b);return `<div class="race"><b>${esc(r.metricName)} · ${r.live?"до финиша "+left(r.end):"забег окончен"}</b>Ты: ${a}<div class="rbar"><i style="width:${a/mx*100}%"></i></div>${esc(r.rival.name)}: ${b}<div class="rbar"><i style="width:${b/mx*100}%;opacity:.6"></i></div></div>`}).join(""):'<p class="muted" style="font-size:13px">Забегов пока нет.</p>'}
       ${rows.filter(f=>!f.me).length?`<div class="frow" style="margin-top:10px"><select id="rF" style="flex:1;min-width:120px;border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit">${rows.filter(f=>!f.me).map(f=>`<option value="${f.id}">${esc(f.name)}</option>`).join("")}</select><select id="rD" style="border:2px solid var(--line);background:var(--bg);color:var(--fg);border-radius:12px;padding:9px 10px;font:inherit"><option value="3">3 дня</option><option value="7" selected>7 дней</option><option value="14">14 дней</option></select><button class="fb" id="rGo">Забег по XP</button></div>`:""}`;
-      dlg.querySelector("#fCp").onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(location.origin+"/schreiben#friend="+me.user.code).then(()=>{dlg.querySelector("#fCp").textContent="Скопировано"});
+      dlg.querySelector("#fCp").onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(location.origin+"/woerter#friend="+me.user.code).then(()=>{dlg.querySelector("#fCp").textContent="Скопировано"});
       dlg.querySelector("#fAdd").onsubmit=async e=>{e.preventDefault();const v=dlg.querySelector("#fCode").value.trim();if(!v)return;try{await api("POST","/friends",{code:v});draw()}catch(er){dlg.querySelector("#fCode").value="";dlg.querySelector("#fCode").placeholder=er.message}};
       const go=dlg.querySelector("#rGo");if(go)go.onclick=async()=>{try{await api("POST","/races",{friend:+dlg.querySelector("#rF").value,metric:"xp",days:+dlg.querySelector("#rD").value});draw()}catch(er){go.textContent=er.message}};
     }catch(e){dlg.innerHTML=`${X}<h2>Друзья и XP</h2><p class="sub">${esc(e.message)}</p>`}
@@ -412,12 +402,12 @@ const color=k=>{const h=(modOf(k)||[])[4]||"#0E8C7F";return CV[k]?`var(${CV[k]},
 // знак EPDeutsch: буква D и жёлтая галочка, цвет квадрата — цвет модуля
 const mark=s=>`<svg class="ep-mark" viewBox="0 0 34 34" width="${s||32}" height="${s||32}" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="8" fill="var(--c)"/><path class="ep-md" d="M10.5 8h3.5a7 7 0 0 1 0 14h-3.5z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><g class="ep-mb"><circle cx="26.5" cy="26.5" r="6.5" fill="#FFCD1F" stroke="var(--panel,#fff)" stroke-width="2.5"/><path d="M23.7 26.6l2 2 3.5-4" fill="none" stroke="#282E3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>`;
 function logo(k,href,attrs){const n=NAME[k]||k;
-  return `<a class="ep-logo" href="${href||"/de#/"}" style="--c:${color(k)}" aria-label="EPDeutsch ${esc(n)}, на главную"${attrs||""}>${mark(32)}<span class="ep-lt"><span class="ep-ln">EP<b>Deutsch</b></span>${k==="home"||k==="start"?"":`<small class="ep-ls" lang="de">${esc(n)}</small>`}</span></a>`}
+  return `<a class="ep-logo" href="${href||"/woerter"}" style="--c:${color(k)}" aria-label="EPDeutsch ${esc(n)}, на главную"${attrs||""}>${mark(32)}<span class="ep-lt"><span class="ep-ln">EP<b>Deutsch</b></span>${k==="home"||k==="start"?"":`<small class="ep-ls" lang="de">${esc(n)}</small>`}</span></a>`}
 function burger(id,label){return `<button type="button" class="ep-burger" id="${id||"burger"}" aria-label="${label||"Меню"}" aria-controls="nav"><span class="bm">${ic("menu",22)}</span><span class="bx">${ic("x",22)}</span></button>`}
 function modlist(cur){return `<div class="ep-modlist" aria-label="Модули">${MODS.map(([k,t,h,i,c])=>`<a href="${h}" style="--c:${color(k)}"${k===cur?' aria-current="page"':""}><span class="ep-mi">${ic(i,22)}</span><span><b>${t}</b><small>${DESC[k]||""}</small></span>${k===cur?`<span class="ep-mnow">сейчас</span>`:ic("chev",16)}</a>`).join("")}</div>`}
 
 // ---------- бургер: «Выбрать модуль» → вторая панель со списком модулей ----------
-function switcher(cur){const m=modOf(cur)||modOf("home"),n=cur==="home"?"Обзор":(NAME[cur]||m[1]);
+function switcher(cur){if(MODS.length<2)return"";const m=modOf(cur)||modOf("home"),n=cur==="home"?"Обзор":(NAME[cur]||m[1]);
   return `<button type="button" class="ep-swbtn" data-ep-sw style="--c:${color(cur)}"><span class="ep-mi">${ic(m[3],18)}</span><span class="ep-swt"><small>Модуль</small><b>${esc(n)}</b></span><span class="ep-swgo">Выбрать${ic("chev",16)}</span></button>`+
     `<div class="ep-swpanel"><button type="button" class="ep-swback" data-ep-swback>${ic("chev",16)}Назад</button><div class="ep-dgt">Выбери модуль</div>${modlist(cur)}</div>`}
 const TIPS={

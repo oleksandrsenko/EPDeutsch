@@ -2990,7 +2990,7 @@ function renderAcct(){
         const toHub=!EN;if(toHub)document.documentElement.classList.add("boot");
         j=await api("POST",reg?"/register":"/login",body);adopt(j);
         if(S.pendingFriend){const c=S.pendingFriend;delete S.pendingFriend;save();await addFriend(c)}
-        if(toHub&&S.acct===ME.id){await pushProgress();location.href="/de";return}
+        if(toHub&&S.acct===ME.id){await pushProgress();location.href="/woerter";return}
         document.documentElement.classList.remove("boot"); // нужно выбрать, чей прогресс оставить, — остаёмся здесь
         if(!reg)toast("👋 Привет, "+j.user.name+"!");
         go("home");if(reg&&!S.tourDone)setTimeout(startTour,350)}
@@ -3033,7 +3033,7 @@ async function renderFriends(){
   $("#newRace").onclick=raceDlg;
   try{await pushProgress();const [j,r]=await Promise.all([api("GET","/friends"),api("GET","/races")]);friendsCache=j.friends;racesCache=r.races;drawLB();drawRaces()}catch(e){$("#lb").innerHTML='<p class="aerr">'+esc(e.message)+"</p>"}
 }
-// ---------- забеги: соревнование с другом на 3–14 дней, общее для всех модулей ----------
+// ---------- забеги: соревнование с другом на 3–14 дней ----------
 let racesCache=null;
 function raceLeft(ts){const sec=ts-Date.now()/1000;if(sec<=0)return"финиш";const d=Math.floor(sec/86400),h=Math.floor(sec%86400/3600);return d?d+" "+plural(d,"день","дня","дней")+(h?" "+h+" ч":""):h?h+" ч":Math.max(1,Math.floor(sec/60))+" мин"}
 function drawRaces(){
@@ -3050,7 +3050,7 @@ function drawRaces(){
 function raceDlg(){
   const fr=(friendsCache||[]).filter(f=>!f.me);if(!fr.length){toast("Сначала добавь друга","Поделись кодом или ссылкой-приглашением");return}
   ask("Новый забег",'<p class="muted" style="margin-top:0">Соревнуетесь с этого момента. Друг увидит забег у себя.</p><p class="acc-h">С кем</p><div class="seg race-seg" id="rF">'+fr.map((f,i)=>'<button type="button" data-v="'+f.id+'" aria-pressed="'+(i===0)+'">'+esc(f.name)+"</button>").join("")+
-    '</div><p class="acc-h">Что считаем</p><div class="seg race-seg" id="rM"><button type="button" data-v="xp" aria-pressed="true">XP во всех модулях</button><button type="button" data-v="texts" aria-pressed="false">Тексты в Schreiben</button></div>'+
+    '</div><p class="acc-h">Что считаем</p><div class="seg race-seg" id="rM"><button type="button" data-v="xp" aria-pressed="true">XP</button></div>'+
     '<p class="acc-h">Сколько дней</p><div class="seg race-seg" id="rD"><button type="button" data-v="3" aria-pressed="false">3 дня</button><button type="button" data-v="7" aria-pressed="true">7 дней</button><button type="button" data-v="14" aria-pressed="false">14 дней</button></div>',async()=>{
       const v=id=>$("#"+id+' [aria-pressed="true"]').dataset.v;
       try{const j=await api("POST","/races",{friend:+v("rF"),metric:v("rM"),days:+v("rD")});racesCache=j.races;drawRaces();toast("🏁 Забег начался!","Удачи!");confetti()}catch(e){toast("⚠️ "+e.message)}
@@ -3062,7 +3062,7 @@ function drawLB(){
   const unit=LB.find(x=>x[0]===lbSort)[2],rows=friendsCache.slice().sort((a,b)=>b[lbSort]-a[lbSort]||b.xp-a.xp);
   const ago=ts=>{if(!ts)return"ещё не занимался";const m=Math.floor((Date.now()/1000-ts)/60);return m<2?"только что":m<60?m+" мин назад":m<1440?Math.floor(m/60)+" ч назад":Math.floor(m/1440)+" дн назад"};
   el.innerHTML=(rows.length<2?'<p class="muted">Пока здесь только ты. Отправь другу ссылку-приглашение или код и соревнуйтесь.</p>':"")+'<div class="lb">'+rows.map((f,i)=>{const op=openFriend===f.id;
-    return'<div class="lbr'+(f.me?" me":"")+(op?" open":"")+'"><button class="lb-h" data-fr="'+f.id+'"><span class="lb-n'+(i<3?" top t"+i:"")+'">'+(i+1)+"</span>"+uava(f,38)+'<span class="lb-t"><b>'+esc(f.name)+(f.me?" (ты)":"")+ownerTag(f)+"</b><small>ур. "+f.level+" · "+EP.icon("flame",12)+" "+f.streak+(f.s_total?" · ✍️ "+f.s_total+" "+plural(f.s_total,"текст","текста","текстов"):"")+" · "+ago(f.updated)+'</small></span><span class="lb-v">'+f[lbSort]+" <small>"+unit+"</small></span></button>"+
+    return'<div class="lbr'+(f.me?" me":"")+(op?" open":"")+'"><button class="lb-h" data-fr="'+f.id+'"><span class="lb-n'+(i<3?" top t"+i:"")+'">'+(i+1)+"</span>"+uava(f,38)+'<span class="lb-t"><b>'+esc(f.name)+(f.me?" (ты)":"")+ownerTag(f)+"</b><small>ур. "+f.level+" · "+EP.icon("flame",12)+" "+f.streak+" · "+ago(f.updated)+'</small></span><span class="lb-v">'+f[lbSort]+" <small>"+unit+"</small></span></button>"+
       (op?'<div class="lb-d"><div class="rep-g"><div><small>Серия</small><b>'+EP.icon("flame",16)+' '+f.streak+'</b></div><div><small>XP за неделю</small><b>'+f.week_xp+'</b></div><div><small>Всего XP</small><b>'+f.xp+'</b></div><div><small>Выучено слов</small><b>'+f.learned+'</b></div><div><small>Точность</small><b>'+f.acc+'%</b></div><div><small>Ответов сегодня</small><b>'+f.today+"</b></div></div>"+(f.me?"":'<button class="btn sm danger" data-unfriend="'+f.id+'" style="margin-top:12px">'+ic("trash",16)+"Удалить из друзей</button>")+"</div>":"")+"</div>"}).join("")+"</div>";
   el.querySelectorAll("[data-fr]").forEach(b=>b.onclick=()=>{openFriend=openFriend===+b.dataset.fr?null:+b.dataset.fr;drawLB()});
   el.querySelectorAll("[data-unfriend]").forEach(b=>b.onclick=async()=>{const f=friendsCache.find(x=>x.id===+b.dataset.unfriend);if(!confirm("Удалить "+f.name+" из друзей?"))return;try{await api("DELETE","/friends/"+f.id);friendsCache=friendsCache.filter(x=>x!==f);drawLB()}catch(e){toast("⚠️ "+e.message)}});
